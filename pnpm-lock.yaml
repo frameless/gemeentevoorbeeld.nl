@@ -399,8 +399,8 @@ importers:
         specifier: workspace:*
         version: link:../components-css
       '@stencil/react-output-target':
-        specifier: 0.4.0
-        version: 0.4.0(@stencil/core@3.2.0)
+        specifier: 0.5.3
+        version: 0.5.3(@stencil/core@3.2.0)
       '@stencil/sass':
         specifier: 2.0.4
         version: 2.0.4(@stencil/core@3.2.0)
@@ -4832,10 +4832,10 @@ packages:
     engines: {node: '>=14.10.0', npm: '>=6.0.0'}
     hasBin: true
 
-  /@stencil/react-output-target@0.4.0(@stencil/core@3.2.0):
-    resolution: {integrity: sha512-X7XW6aHSU7ZypkFj4wX/XL7ROj2GXcdTL+Emo1mKNg5laBcuTVtt8zPR4ERG/grq8ec8wav+FxBuSlQ3cH0qcg==}
+  /@stencil/react-output-target@0.5.3(@stencil/core@3.2.0):
+    resolution: {integrity: sha512-68jwRp35CjAcwhTJ9yFD/3n+jrHOqvEH2jreVuPVvZK+4tkhPlYlwz0d1E1RlF3jyifUSfdkWUGgXIEy8Fo3yw==}
     peerDependencies:
-      '@stencil/core': ^2.9.0 || ^3.0.0-beta.0
+      '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
       '@stencil/core': 3.2.0
     dev: true
