@@ -294,7 +294,7 @@ importers:
         version: 7.0.26(react-dom@18.2.0)(react@18.2.0)
       '@storybook/preset-scss':
         specifier: 1.0.3
-        version: 1.0.3(css-loader@6.7.3)(sass-loader@13.2.1)(style-loader@3.3.2)
+        version: 1.0.3(css-loader@6.8.1)(sass-loader@13.2.1)(style-loader@3.3.2)
       '@storybook/react':
         specifier: 7.0.26
         version: 7.0.26(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
@@ -320,8 +320,8 @@ importers:
         specifier: 9.1.2
         version: 9.1.2(@babel/core@7.21.3)(webpack@5.76.3)
       css-loader:
-        specifier: 6.7.3
-        version: 6.7.3(webpack@5.76.3)
+        specifier: 6.8.1
+        version: 6.8.1(webpack@5.76.3)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -5196,7 +5196,7 @@ packages:
       babel-plugin-named-exports-order: 0.0.2
       browser-assert: 1.2.1
       case-sensitive-paths-webpack-plugin: 2.4.0
-      css-loader: 6.7.3(webpack@5.76.3)
+      css-loader: 6.8.1(webpack@5.76.3)
       express: 4.18.2
       fork-ts-checker-webpack-plugin: 7.3.0(typescript@4.9.5)(webpack@5.76.3)
       fs-extra: 11.1.1
@@ -5613,14 +5613,14 @@ packages:
       - webpack-plugin-serve
     dev: true
 
-  /@storybook/preset-scss@1.0.3(css-loader@6.7.3)(sass-loader@13.2.1)(style-loader@3.3.2):
+  /@storybook/preset-scss@1.0.3(css-loader@6.8.1)(sass-loader@13.2.1)(style-loader@3.3.2):
     resolution: {integrity: sha512-o9Iz6wxPeNENrQa2mKlsDKynBfqU2uWaRP80HeWp4TkGgf7/x3DVF2O7yi9N0x/PI1qzzTTpxlQ90D62XmpiTw==}
     peerDependencies:
       css-loader: '*'
       sass-loader: '*'
       style-loader: '*'
     dependencies:
-      css-loader: 6.7.3(webpack@5.76.3)
+      css-loader: 6.8.1(webpack@5.76.3)
       sass-loader: 13.2.1(sass@1.59.3)(webpack@5.76.3)
       style-loader: 3.3.2(webpack@5.76.3)
     dev: true
@@ -8252,8 +8252,8 @@ packages:
     engines: {node: '>=12.22'}
     dev: true
 
-  /css-loader@6.7.3(webpack@5.76.3):
-    resolution: {integrity: sha512-qhOH1KlBMnZP8FzRO6YCH9UHXQhVMcEGLyNdb7Hv2cpcmJbW0YrddO+tG1ab5nT41KpHIYGsbeHqxB9xPu1pKQ==}
+  /css-loader@6.8.1(webpack@5.76.3):
+    resolution: {integrity: sha512-xDAXtEVGlD0gJ07iclwWVkLoZOpEvAWaSyf6W18S2pOC//K8+qUDIx8IIT3D+HjnmkJPQeesOPv5aiUaJsCM2g==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
       webpack: ^5.0.0
