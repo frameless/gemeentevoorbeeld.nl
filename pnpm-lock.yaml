@@ -411,8 +411,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
       node-sass-package-importer:
-        specifier: 5.3.2
-        version: 5.3.2
+        specifier: 5.3.3
+        version: 5.3.3
       npm-run-all:
         specifier: 4.1.5
         version: 4.1.5
@@ -13336,8 +13336,8 @@ packages:
       resolve: 1.22.2
     dev: true
 
-  /node-sass-package-importer@5.3.2:
-    resolution: {integrity: sha512-PPHzGlwgt3JT8NO/IqBf2HgGB8Ld6OhEZmgJ9UPw20ft2OCTy8RvjRftYwwbEu2L7j4kbuovVisqXZV+XnLw8A==}
+  /node-sass-package-importer@5.3.3:
+    resolution: {integrity: sha512-alXHd4/QzsUH6Aao8Wg5zm1uhz4Ujt9AgRG3LLjPYBlbW8lg7TtMsbCz2G+QgtdSba0A0wmZ3+8FAD+QjP5kHw==}
     engines: {node: '>=6.11.1', npm: '>=3.0.0'}
     dependencies:
       node-sass-magic-importer: 5.3.3
