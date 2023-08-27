@@ -94,8 +94,8 @@ importers:
         specifier: 7.21.3
         version: 7.21.3
       '@mdx-js/react':
-        specifier: 1.6.22
-        version: 1.6.22(react@18.2.0)
+        specifier: 2.3.0
+        version: 2.3.0(react@18.2.0)
       '@storybook/addon-docs':
         specifier: 7.0.26
         version: 7.0.26(react-dom@18.2.0)(react@18.2.0)
@@ -4398,14 +4398,6 @@ packages:
       - '@lerna-lite/version'
       - '@lerna-lite/watch'
       - supports-color
-    dev: true
-
-  /@mdx-js/react@1.6.22(react@18.2.0):
-    resolution: {integrity: sha512-TDoPum4SHdfPiGSAaRBw7ECyI8VaHpK8GJugbJIJuqyh6kzw9ZLJZW3HGL3NNrJGxcAixUvqROm+YuQOo5eXtg==}
-    peerDependencies:
-      react: ^16.13.1 || ^17.0.0
-    dependencies:
-      react: 18.2.0
     dev: true
 
   /@mdx-js/react@2.3.0(react@18.2.0):
