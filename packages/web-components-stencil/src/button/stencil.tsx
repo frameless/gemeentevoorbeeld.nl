@@ -1,6 +1,6 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2021 Community for NL Design System
+ * Copyright (c) 2021 Frameless
  */
 
 import { Component, h } from '@stencil/core';

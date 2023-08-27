@@ -1,9 +1,9 @@
 {
   "version": "1.0.0-alpha.0",
-  "author": "Community for NL Design System",
+  "author": "Frameless",
   "description": "Stencil web components bundle based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@example/web-components-stencil",
+  "name": "@frameless/nlds-templates-web-components-stencil",
   "keywords": [
     "nl-design-system"
   ],
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/example.git"
+    "url": "git@github.frameless/nl-design-system-templates.git"
   },
   "scripts": {
     "prebuild": "npm run clean",
@@ -36,7 +36,7 @@
     "generate": "stencil generate"
   },
   "devDependencies": {
-    "@example/components-css": "workspace:*",
+    "@frameless/nlds-templates-components-css": "workspace:*",
     "@stencil/react-output-target": "0.5.3",
     "@stencil/sass": "3.0.5",
     "@types/jest": "29.5.4",

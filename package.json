@@ -1,9 +1,9 @@
 {
   "version": "1.0.0-alpha.0",
-  "author": "Community for NL Design System",
+  "author": "Frameless",
   "description": "Design system based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@example/design-system",
+  "name": "@frameless/nl-design-system-templates",
   "keywords": [
     "nl-design-system"
   ],
@@ -45,6 +45,7 @@
   "scripts": {
     "build": "lerna run build",
     "clean": "lerna run clean",
+    "dev": "npm-run-all --parallel watch:**",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' --report-unused-disable-directives .",
@@ -61,15 +62,15 @@
     "prettier": "prettier --write .",
     "publish": "lerna publish from-package --yes",
     "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
-    "start": "",
+    "start": "npm run --workspace packages/next-templates start",
     "test": "npm run test-workspaces",
     "test-update": "npm-run-all --sequential clean lint build test",
     "test-workspaces": "lerna run --no-bail test",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && pnpm install",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && pnpm install",
     "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && pnpm install",
-    "prewatch": "lerna run build:stencil && lerna run build:style-dictionary",
-    "watch": "npm-run-all --parallel watch:**",
+    "prewatch:next-templates": "lerna run build:stencil && lerna run build:style-dictionary",
+    "watch:next-templates": "npm run --workspace packages/next-templates dev",
     "watch:style-dictionary": "lerna run watch:style-dictionary"
   },
   "dependencies": {

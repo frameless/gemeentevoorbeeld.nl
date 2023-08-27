@@ -1,19 +1,15 @@
 {
   "version": "1.0.0-alpha.0",
-  "author": "Community for NL Design System",
+  "author": "Frameless",
   "description": "CSS Components for a design system based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@example/components-css",
+  "name": "@frameless/nlds-templates-components-css",
   "keywords": [
     "nl-design-system"
   ],
   "private": true,
   "devDependencies": {
     "@babel/core": "7.22.11",
-    "@mdx-js/react": "1.6.22",
-    "@storybook/addon-docs": "7.3.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
     "typescript": "5.2.2",
     "webpack": "5.88.2"
   }

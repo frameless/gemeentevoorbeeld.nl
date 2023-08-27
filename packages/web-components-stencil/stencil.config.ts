@@ -15,8 +15,8 @@ export const config: Config = {
       customElementsExportBehavior: 'bundle',
     },
     reactOutputTarget({
-      componentCorePackage: '@example/web-components-stencil',
-      proxiesFile: '../web-components-react/src/components.ts',
+      componentCorePackage: '@frameless/nlds-templates-web-components-stencil',
+      proxiesFile: '../template-web-components-react/src/components.ts',
     }),
   ],
   plugins: [sass()],
