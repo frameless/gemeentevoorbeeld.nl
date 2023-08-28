@@ -3264,42 +3264,6 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@utrecht/component-library-css@1.0.0-alpha.547:
-    resolution: {integrity: sha512-Ezi60wh3LGb+1FG3E7zIOX6WklkKDwTIziDYa9S2Klykosv7o881o9WoR3wZDM+mUPPsrtvYgjwISd8QywsJQQ==}
-    dev: true
-
-  /@utrecht/component-library-react@1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-QITfPXJaxLO5BLIs4WPGjz8653jcYJyMGYXwcWFyGSvOhPVtFw1frT5aJzwvfCAiu0laWlUadc6rdGB44wOfPw==}
-    peerDependencies:
-      react: '18'
-      react-dom: '18'
-    dependencies:
-      clsx: 1.2.1
-      date-fns: 2.30.0
-      lodash.chunk: 4.2.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: true
-
-  /@utrecht/design-tokens@1.0.0-alpha.540:
-    resolution: {integrity: sha512-qT12YTZWkGwTyrza2O4k+lzAnAhDY1NYEJWc4Qk+Th1Fpb1pzJOsBdp4np4xsjJ3mtGaCS7QGA6so9qrxJ0OjA==}
-    dev: true
-
-  /@utrecht/web-component-library-react@1.0.0-alpha.549:
-    resolution: {integrity: sha512-YCCBnKJ5bOIyvefXSEIhi/Gqh4XRJbqGPxCBsurfLL7KtTTLanz1Mwas8fISaOWEr8Nssrv8y0XG3ZtfxCnGzQ==}
-    peerDependencies:
-      react: 16 - 18
-      react-dom: 16 - 18
-    dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.549
-    dev: true
-
-  /@utrecht/web-component-library-stencil@1.0.0-alpha.549:
-    resolution: {integrity: sha512-EtjkBtJ/LKeqeNhGmgeT8rhgtgV9SgngOckcPkpp0iiJ4Wl2CSxdY8t/BwBEz17wPlPsJ5I3fNxYL8po+jKf4g==}
-    dependencies:
-      '@stencil/core': 3.4.2
-    dev: true
-
   /@vitejs/plugin-react@4.0.4(vite@4.4.9):
     resolution: {integrity: sha512-7wU921ABnNYkETiMaZy7XqpueMnpu5VxvVps13MjmCo+utBdD79sZzrApHawHtVX66cCJQQTXFcjH0y9dSUK8g==}
     engines: {node: ^14.18.0 || >=16.0.0}
