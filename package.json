@@ -50,7 +50,7 @@
     "dev": "npm-run-all --parallel watch:**",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
-    "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' --report-unused-disable-directives .",
+    "lint:js": "eslint --ext '.js,.jsx,.mdx,.ts,.tsx' --report-unused-disable-directives .",
     "lint:html": "find . -type d \\( -name coverage -or -name dist -or -name node_modules -or -name build -or -name tmp \\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
     "lint:md": "markdownlint '**/*.md'",
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
