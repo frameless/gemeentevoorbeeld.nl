@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@utrecht/component-library-react';
 import Image from 'next/image';
 import styles from './page.module.css';
 
@@ -11,6 +12,7 @@ export default function Home() {
           Get started by editing&nbsp;
           <code className={styles['example-code']}>src/app/page.tsx</code>
         </p>
+        <Button appearance="primary-action-button">Hello World!±</Button>
         <div className={styles['example-description__illustration']}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -30,7 +32,6 @@ export default function Home() {
           </a>
         </div>
       </div>
-
       <div className={styles['example-layout--center']}>
         <Image
           className={styles['example-logo--nextjs']}
@@ -41,7 +42,6 @@ export default function Home() {
           priority
         />
       </div>
-
       <div className={styles['example-grid']}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
