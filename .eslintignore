@@ -7,6 +7,7 @@ build/
 coverage/
 dist/
 tmp/
+.next/
 
 # Ignore generated files from Stencil
 components/components.d.ts
