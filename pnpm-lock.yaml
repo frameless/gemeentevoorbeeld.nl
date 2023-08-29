@@ -269,6 +269,12 @@ importers:
       '@utrecht/design-tokens':
         specifier: 1.0.0-alpha.540
         version: 1.0.0-alpha.540
+      '@utrecht/web-component-library-react':
+        specifier: 1.0.0-alpha.547
+        version: 1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0)
+      '@utrecht/web-component-library-stencil':
+        specifier: 1.0.0-alpha.547
+        version: 1.0.0-alpha.547
       clsx:
         specifier: 2.0.0
         version: 2.0.0
@@ -3262,6 +3268,44 @@ packages:
     dependencies:
       '@typescript-eslint/types': 6.4.1
       eslint-visitor-keys: 3.4.3
+    dev: true
+
+  /@utrecht/component-library-css@1.0.0-alpha.547:
+    resolution: {integrity: sha512-Ezi60wh3LGb+1FG3E7zIOX6WklkKDwTIziDYa9S2Klykosv7o881o9WoR3wZDM+mUPPsrtvYgjwISd8QywsJQQ==}
+    dev: true
+
+  /@utrecht/component-library-react@1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-QITfPXJaxLO5BLIs4WPGjz8653jcYJyMGYXwcWFyGSvOhPVtFw1frT5aJzwvfCAiu0laWlUadc6rdGB44wOfPw==}
+    peerDependencies:
+      react: '18'
+      react-dom: '18'
+    dependencies:
+      clsx: 1.2.1
+      date-fns: 2.30.0
+      lodash.chunk: 4.2.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
+  /@utrecht/design-tokens@1.0.0-alpha.540:
+    resolution: {integrity: sha512-qT12YTZWkGwTyrza2O4k+lzAnAhDY1NYEJWc4Qk+Th1Fpb1pzJOsBdp4np4xsjJ3mtGaCS7QGA6so9qrxJ0OjA==}
+    dev: true
+
+  /@utrecht/web-component-library-react@1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-vDDdKMzF9arJOsqGdGEZKy8Pb9SzMgTmN1hoQTDtm2wQ/QFMA+OPFpCC8NSr1+xo/KhaWeuqWp+HHgl4n4aGsw==}
+    peerDependencies:
+      react: 16 - 18
+      react-dom: 16 - 18
+    dependencies:
+      '@utrecht/web-component-library-stencil': 1.0.0-alpha.547
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
+  /@utrecht/web-component-library-stencil@1.0.0-alpha.547:
+    resolution: {integrity: sha512-bOSQXx3PohvMsaKGQhf578wvy8u/UXn+Pvx6DgZ5CjYA07rMGueMwgjdMxH5EiQEsxVJpH7iYERR12AHo3XhbA==}
+    dependencies:
+      '@stencil/core': 3.4.2
     dev: true
 
   /@vitejs/plugin-react@4.0.4(vite@4.4.9):
