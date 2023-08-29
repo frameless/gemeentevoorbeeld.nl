@@ -1,4 +1,6 @@
 import './globals.css';
+import '@utrecht/component-library-css';
+import '@utrecht/design-tokens/dist/index.css';
 import type { Metadata } from 'next';
 import React from 'react';
 
