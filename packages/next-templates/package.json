@@ -23,6 +23,9 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@utrecht/component-library-css": "1.0.0-alpha.547",
+    "@utrecht/component-library-react": "1.0.0-alpha.356",
+    "@utrecht/design-tokens": "1.0.0-alpha.540",
     "clsx": "2.0.0"
   }
 }
