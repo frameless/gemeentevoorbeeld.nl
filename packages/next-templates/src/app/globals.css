@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --example-max-width: 1100px;
   --example-border-radius: 12px;
   --example-font-mono: ui-monospace, menlo, monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono",
@@ -22,9 +22,9 @@
   --example-callout-border-rgb: 172, 175, 176;
   --example-card-rgb: 180, 185, 188;
   --example-card-border-rgb: 131, 134, 135;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --example-foreground-rgb: 255, 255, 255;
     --example-background-start-rgb: 0, 0, 0;
@@ -79,4 +79,15 @@ a {
   html {
     color-scheme: dark;
   }
+} */
+
+/* NLDS CSS Variables */
+.utrecht-theme {
+  --utrecht-space-around: 1;
+
+  /* HACK: these tokens are not set in utrecht-theme */
+  --utrecht-button-group-margin-block-end: 16px;
+  --utrecht-button-group-margin-block-start: 16px;
+
+  /* --utrecht-button-link-primary-action-color: ; */
 }
