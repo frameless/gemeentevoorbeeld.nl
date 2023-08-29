@@ -41,8 +41,11 @@ export default function Home() {
         </Link>
       </Paragraph>
       <ButtonGroup>
-        <ButtonLink appearance="primary-action-button" href="#https://www.utrecht.nl/wonen-en-leven/verloren-sokken">
-          Meld hier een gevonden sok <UtrechtIconArrow></UtrechtIconArrow>
+        <ButtonLink appearance="primary-action-button" href="form-gevonden">
+          Meld je gevonden sok<UtrechtIconArrow></UtrechtIconArrow>
+        </ButtonLink>
+        <ButtonLink appearance="primary-action-button" href="form-kwijt">
+          Meld je verloren sok <UtrechtIconArrow></UtrechtIconArrow>
         </ButtonLink>
       </ButtonGroup>
       <Heading2>Hoe werkt het?</Heading2>
