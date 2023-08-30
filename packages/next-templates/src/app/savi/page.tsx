@@ -24,25 +24,27 @@ export default function Home() {
   return (
     <Page>
       <PageContent>
-        <BreadcrumbNav appearance="arrows" label="Kruimelpad">
-          {' '}
-          <BreadcrumbLink href="/" index={0} rel="home">
-            Home
-          </BreadcrumbLink>
-          <BreadcrumbLink href="/a/" index={1}>
-            Online loket
-          </BreadcrumbLink>
-          <BreadcrumbLink href="/a/b/" index={2} rel="up">
-            Producten
-          </BreadcrumbLink>
-        </BreadcrumbNav>
+        <Paragraph>
+          <BreadcrumbNav appearance="arrows" label="Kruimelpad">
+            {' '}
+            <BreadcrumbLink href="/" index={0} rel="home">
+              Home
+            </BreadcrumbLink>
+            <BreadcrumbLink href="/a/" index={1}>
+              Online loket
+            </BreadcrumbLink>
+            <BreadcrumbLink href="/a/b/" index={2} rel="up">
+              Producten
+            </BreadcrumbLink>
+          </BreadcrumbNav>
+        </Paragraph>
         <Article>
           <Heading1>Aanhanger of bakfiets lenen</Heading1>
           <Paragraph>
             Bij de{' '}
             <Link href="https://www.utrecht.nl/wonen-en-leven/afval/afvalscheidingsstations/">
               afvalscheidingsstations
-            </Link>
+            </Link>{' '}
             kunt u gratis een aanhanger of een bakfiets lenen voor het wegbrengen van uw grofvuil of snoeiafval. Of voor
             de aanleg van een geveltuin.
           </Paragraph>
@@ -127,7 +129,7 @@ export default function Home() {
             </UnorderedListItem>
             <UnorderedListItem>De maximale belading van de aanhanger is 500 kg.</UnorderedListItem>
           </UnorderedList>
-          <Paragraph>
+          {/* <Paragraph>
             <Link
               href="https://www.kcmsurvey.com/qSwudd733b9c27c2e91ba8c7b598MaSd?webpagina=Product%20-%20Aanhanger%20of%20bakfiets%20lenen"
               target="_blank"
@@ -137,7 +139,7 @@ export default function Home() {
           </Paragraph>
           <Paragraph>
             <Link href="#body-main">Naar boven</Link>
-          </Paragraph>
+          </Paragraph> */}
         </Article>
       </PageContent>
     </Page>
