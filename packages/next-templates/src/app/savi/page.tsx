@@ -16,8 +16,9 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
-// import Image from 'next/image';
-// import styles from './page.module.css';
+import '@utrecht/component-library-css';
+import '@utrecht/design-tokens/dist/index.css';
+import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 
 export default function Home() {
   return (
@@ -58,15 +59,8 @@ export default function Home() {
             geveltuin? Reserveer dan altijd de hele dag, dus 2 dagdelen.
           </Paragraph>
           <Paragraph>
-            {/* <ButtonGroup>
-              <Button appearance="primary-action-button">
-                <Link href="https://asp3.lvp.nl/amisweb/utrecht/amis3/amis.php?action=schema1">
-                  Reserveer aanhanger of bakfiets
-                </Link>
-              </Button>
-            </ButtonGroup> */}
             <ButtonLink appearance="primary-action-button" href="#">
-              Read more...
+              Reserveer aanhanger of bakfiets <UtrechtIconArrow></UtrechtIconArrow>
             </ButtonLink>
           </Paragraph>
           <Heading2>Afmetingen</Heading2>
