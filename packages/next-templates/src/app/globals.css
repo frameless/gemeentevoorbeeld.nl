@@ -88,6 +88,9 @@ a {
   /* HACK: these tokens are not set in utrecht-theme */
   --utrecht-button-group-margin-block-end: 16px;
   --utrecht-button-group-margin-block-start: 16px;
+  --utrecht-link-icon-size: 18px !important;
+}
 
-  /* --utrecht-button-link-primary-action-color: ; */
+.utrecht-link {
+  --utrecht-icon-inset-block-start: 0.2em;
 }
