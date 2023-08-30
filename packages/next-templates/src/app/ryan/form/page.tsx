@@ -1,21 +1,19 @@
 'use client';
 
 import {
-  Page,
-  Button,
+  ButtonLink,
   Heading1,
+  Page,
   Paragraph,
-  Textbox,
   Textarea,
-  FormLabel,
-  FieldsetLegend,
+  Textbox,
   Fieldset,
+  FieldsetLegend,
+  FormLabel,
   RadioButton,
   FormField,
   Document,
 } from '@utrecht/component-library-react';
-import Image from 'next/image';
-import styles from './page.module.css';
 
 export default function Home() {
   return (
@@ -44,7 +42,7 @@ export default function Home() {
         </FormField>
         <FormField>
           <Paragraph>
-            <FormLabel htmlFor="enclosed-aerial-view">Bijgevoegde luchtfoto's:</FormLabel>
+            <FormLabel htmlFor="enclosed-aerial-view">Bijgevoegde luchtfoto&apos;s:</FormLabel>
           </Paragraph>
           <Textbox
             id="enclosed-aerial-view"
@@ -110,7 +108,9 @@ export default function Home() {
         <Textbox placeholder="Vul hier uw e-mailadres in"></Textbox>
         <br />
         <br />
-        <Button appearance="primary-action-button">Dien uw melding in</Button>
+        <ButtonLink appearance="primary-action-button" href="./confirmed">
+          Dien uw melding in
+        </ButtonLink>
         <Paragraph>
           Dank u voor het deelnemen aan ons absurde meldpunt. Hoewel we geen garanties kunnen geven over de snelheid
           waarmee roze eenhoornparkeerzones worden gerealiseerd, waarderen we uw levendige verbeelding en deelname aan
