@@ -1,7 +1,7 @@
 'use client';
 
 import {
-  ButtonLink,
+  Button,
   Heading1,
   Page,
   Paragraph,
@@ -9,13 +9,21 @@ import {
   Textbox,
   Fieldset,
   FieldsetLegend,
+  FormField,
   FormLabel,
   RadioButton,
-  FormField,
   Document,
 } from '@utrecht/component-library-react';
+import { useForm } from 'react-hook-form';
 
 export default function Home() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<{ [key: string]: string }>();
+  console.log(watch());
   return (
     <Document>
       <Page>
@@ -28,27 +36,56 @@ export default function Home() {
           Dan bent u op de juiste plek! Melding: Ontbreken van een Roze Eenhoornparkeerzone
         </Paragraph>
         <br />
-        <FormField>
-          <Paragraph>
-            <FormLabel htmlFor="location">Locatie:</FormLabel>
-          </Paragraph>
-          <Textbox id="location" placeholder="Vul hier de straatnaam, postcode of specifieke locatie in"></Textbox>
-        </FormField>
-        <FormField>
-          <Paragraph>
-            <FormLabel htmlFor="description">Beschrijving:</FormLabel>
-          </Paragraph>
-          <Textarea id="description" placeholder="Vul hier de straatnaam, postcode of specifieke locatie in"></Textarea>
-        </FormField>
-        <FormField>
-          <Paragraph>
-            <FormLabel htmlFor="enclosed-aerial-view">Bijgevoegde luchtfoto&apos;s:</FormLabel>
-          </Paragraph>
-          <Textbox
-            id="enclosed-aerial-view"
-            placeholder="Vul hier de straatnaam, postcode of specifieke locatie in"
-          ></Textbox>
-        </FormField>
+        <Paragraph></Paragraph>
+        <form
+          onSubmit={handleSubmit((data) => {
+            console.log(data);
+          })}
+        >
+          <FormField>
+            <Paragraph>
+              <FormLabel htmlFor="location">Locatie:</FormLabel>
+            </Paragraph>
+            <Textbox
+              id="location"
+              {...register('location', {
+                required: 'Dit is verplicht',
+                minLength: { value: 4, message: 'Min length is 4' },
+              })}
+              placeholder="Vul hier de straatnaam, postcode of specifieke locatie in"
+              invalid={!!errors.location}
+            ></Textbox>
+            <Paragraph>{errors.location?.message}</Paragraph>
+          </FormField>
+          <FormField>
+            <Paragraph>
+              <FormLabel htmlFor="description">Beschrijving:</FormLabel>
+            </Paragraph>
+            <Textarea
+              id="description"
+              {...register('description', {
+                required: 'Dit is verplicht',
+                minLength: { value: 4, message: 'Min length is 4' },
+              })}
+              placeholder="Vul hier de straatnaam, postcode of specifieke locatie in"
+            ></Textarea>
+            <Paragraph>{errors.description?.message}</Paragraph>
+          </FormField>
+          <FormField>
+            <Paragraph>
+              <FormLabel htmlFor="enclosed-aerial-view">Bijgevoegde luchtfoto&apos;s:</FormLabel>
+            </Paragraph>
+            <Textbox
+              id="enclosed-aerial-view"
+              {...register('enclosedAerialView', {
+                required: 'Dit is verplicht',
+                minLength: { value: 4, message: 'Min length is 4' },
+              })}
+              placeholder="Vul hier de straatnaam, postcode of specifieke locatie in"
+            ></Textbox>
+            <Paragraph>{errors.enclosedAerialView?.message}</Paragraph>
+          </FormField>
+        </form>
         <Fieldset id="df861ef1-844a-42df-8365-b54f59474fb8" role="radiogroup">
           <FieldsetLegend>Hoe snel denkt u dat de eenhoorns en vliegende huisdieren hulp nodig hebben?</FieldsetLegend>
           <FormField type="radio">
@@ -92,25 +129,42 @@ export default function Home() {
           </FormField>
         </Fieldset>
         <br />
-        <FormLabel>Contactgegevens:</FormLabel>
+        <Paragraph>Contactgegevens:</Paragraph>
         <Paragraph>
           Laat uw naam en e-mailadres achter, zodat we u op de hoogte kunnen houden van eventuele magische
           ontwikkelingen.
         </Paragraph>
-        <br />
-        <FormLabel>Volledige naam:</FormLabel>
-        <br />
-        <Textbox placeholder="Vul hier uw volledige naam in"></Textbox>
-        <br />
-        <br />
-        <FormLabel>E-mailadres:</FormLabel>
-        <br />
-        <Textbox placeholder="Vul hier uw e-mailadres in"></Textbox>
-        <br />
-        <br />
-        <ButtonLink appearance="primary-action-button" href="./confirmed">
-          Dien uw melding in
-        </ButtonLink>
+        <form
+          onSubmit={handleSubmit((data) => {
+            console.log(data);
+          })}
+        >
+          <br />
+          <FormField invalid>
+            <FormLabel>Volledige naam:</FormLabel>
+            <br />
+            <Textbox
+              {...register('fullName', {
+                required: 'Dit is verplicht',
+                minLength: { value: 4, message: 'Min length is 4' },
+              })}
+              placeholder="Vul hier uw volledige naam in"
+            ></Textbox>
+          </FormField>
+          <Paragraph>{errors.fullName?.message}</Paragraph>
+          <br />
+          <FormLabel>E-mailadres:</FormLabel>
+          <br />
+          <Textbox
+            {...register('emailAdress', { required: 'Dit is verplicht' })}
+            placeholder="Vul hier uw e-mailadres in"
+          ></Textbox>
+          <Paragraph>{errors.emailAdress?.message}</Paragraph>
+          <br />
+          <Button type="submit" appearance="primary-action-button" formAction="./confirmed">
+            Dien uw melding in
+          </Button>
+        </form>
         <Paragraph>
           Dank u voor het deelnemen aan ons absurde meldpunt. Hoewel we geen garanties kunnen geven over de snelheid
           waarmee roze eenhoornparkeerzones worden gerealiseerd, waarderen we uw levendige verbeelding en deelname aan
