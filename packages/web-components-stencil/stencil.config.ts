@@ -16,7 +16,7 @@ export const config: Config = {
     },
     reactOutputTarget({
       componentCorePackage: '@frameless/nlds-templates-web-components-stencil',
-      proxiesFile: '../template-web-components-react/src/components.ts',
+      proxiesFile: '../web-components-react/src/components.ts',
     }),
   ],
   plugins: [sass()],
