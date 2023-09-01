@@ -42,7 +42,7 @@ export default function Home() {
             console.log(data);
           })}
         >
-          <FormField>
+          <FormField invalid={!!errors.location}>
             <Paragraph>
               <FormLabel htmlFor="location">Locatie:</FormLabel>
             </Paragraph>
@@ -52,36 +52,38 @@ export default function Home() {
                 required: 'Dit is verplicht',
                 minLength: { value: 4, message: 'Min length is 4' },
               })}
-              placeholder="Vul hier de straatnaam, postcode of specifieke locatie in"
+              placeholder="Vul hier een locatie in"
               invalid={!!errors.location}
             ></Textbox>
             <Paragraph>{errors.location?.message}</Paragraph>
           </FormField>
-          <FormField>
+          <FormField invalid={!!errors.description}>
             <Paragraph>
               <FormLabel htmlFor="description">Beschrijving:</FormLabel>
             </Paragraph>
             <Textarea
               id="description"
+              invalid={!!errors.description}
               {...register('description', {
                 required: 'Dit is verplicht',
                 minLength: { value: 4, message: 'Min length is 4' },
               })}
-              placeholder="Vul hier de straatnaam, postcode of specifieke locatie in"
+              placeholder="Vul hier een beschrijving in"
             ></Textarea>
             <Paragraph>{errors.description?.message}</Paragraph>
           </FormField>
-          <FormField>
+          <FormField invalid={!!errors.enclosedAerialView}>
             <Paragraph>
               <FormLabel htmlFor="enclosed-aerial-view">Bijgevoegde luchtfoto&apos;s:</FormLabel>
             </Paragraph>
             <Textbox
               id="enclosed-aerial-view"
+              invalid={!!errors.enclosedAerialView}
               {...register('enclosedAerialView', {
                 required: 'Dit is verplicht',
                 minLength: { value: 4, message: 'Min length is 4' },
               })}
-              placeholder="Vul hier de straatnaam, postcode of specifieke locatie in"
+              placeholder="Upload hier uw luchtfoto's"
             ></Textbox>
             <Paragraph>{errors.enclosedAerialView?.message}</Paragraph>
           </FormField>
@@ -140,10 +142,11 @@ export default function Home() {
           })}
         >
           <br />
-          <FormField invalid>
+          <FormField invalid={!!errors.fullName}>
             <FormLabel>Volledige naam:</FormLabel>
             <br />
             <Textbox
+              invalid={!!errors.fullName}
               {...register('fullName', {
                 required: 'Dit is verplicht',
                 minLength: { value: 4, message: 'Min length is 4' },
@@ -153,12 +156,15 @@ export default function Home() {
           </FormField>
           <Paragraph>{errors.fullName?.message}</Paragraph>
           <br />
-          <FormLabel>E-mailadres:</FormLabel>
-          <br />
-          <Textbox
-            {...register('emailAdress', { required: 'Dit is verplicht' })}
-            placeholder="Vul hier uw e-mailadres in"
-          ></Textbox>
+          <FormField invalid={!!errors.emailAdress}>
+            <FormLabel>E-mailadres:</FormLabel>
+            <br />
+            <Textbox
+              invalid={!!errors.emailAdress}
+              {...register('emailAdress', { required: 'Dit is verplicht' })}
+              placeholder="Vul hier uw e-mailadres in"
+            ></Textbox>
+          </FormField>
           <Paragraph>{errors.emailAdress?.message}</Paragraph>
           <br />
           <Button type="submit" appearance="primary-action-button" formAction="./confirmed">
