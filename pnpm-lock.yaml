@@ -3312,8 +3312,23 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
+  /@utrecht/web-component-library-react@1.0.0-alpha.549:
+    resolution: {integrity: sha512-YCCBnKJ5bOIyvefXSEIhi/Gqh4XRJbqGPxCBsurfLL7KtTTLanz1Mwas8fISaOWEr8Nssrv8y0XG3ZtfxCnGzQ==}
+    peerDependencies:
+      react: 16 - 18
+      react-dom: 16 - 18
+    dependencies:
+      '@utrecht/web-component-library-stencil': 1.0.0-alpha.549
+    dev: true
+
   /@utrecht/web-component-library-stencil@1.0.0-alpha.547:
     resolution: {integrity: sha512-bOSQXx3PohvMsaKGQhf578wvy8u/UXn+Pvx6DgZ5CjYA07rMGueMwgjdMxH5EiQEsxVJpH7iYERR12AHo3XhbA==}
+    dependencies:
+      '@stencil/core': 3.4.2
+    dev: true
+
+  /@utrecht/web-component-library-stencil@1.0.0-alpha.549:
+    resolution: {integrity: sha512-EtjkBtJ/LKeqeNhGmgeT8rhgtgV9SgngOckcPkpp0iiJ4Wl2CSxdY8t/BwBEz17wPlPsJ5I3fNxYL8po+jKf4g==}
     dependencies:
       '@stencil/core': 3.4.2
     dev: true
