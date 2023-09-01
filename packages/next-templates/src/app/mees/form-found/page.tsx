@@ -77,8 +77,8 @@ export default function Home() {
               <FormLabel htmlFor="Beschrijving">Beschrijving sok en/of sokken</FormLabel>
             </Paragraph>
             <FormFieldDescription>
-              Geef zo goed mogelijk de kenmerken van de sok aan,<Paragraph></Paragraph> zodat we hem zo snel mogelijk
-              met zijn vriendje kunnen herenigen.
+              Geef zo goed mogelijk de kenmerken van de sok aan, zodat we hem zo snel mogelijk met zijn vriendje kunnen
+              herenigen.
             </FormFieldDescription>
             <Paragraph>
               <Textarea {...register('Beschrijving')} id="Beschrijving" name="beschrijving" />
