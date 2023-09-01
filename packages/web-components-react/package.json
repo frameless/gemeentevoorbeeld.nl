@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@frameless/nlds-templates-web-components-stencil": "workspace:*",
-    "@types/node": "20.5.6",
+    "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "react": "18.2.0",
