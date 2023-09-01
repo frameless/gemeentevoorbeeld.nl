@@ -101,7 +101,7 @@ export default function Home() {
             </FormField>
           </FormField>
           <ButtonGroup>
-            <Button onClick={() => 'Home'} type="submit" appearance="primary-action-button">
+            <Button type="submit" appearance="primary-action-button">
               Versturen
             </Button>
           </ButtonGroup>

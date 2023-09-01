@@ -15,9 +15,6 @@ import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
 import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 
-// import Image from 'next/image';
-// import styles from './page.module.css';
-
 export default function Home() {
   return (
     <Page>
