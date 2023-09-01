@@ -5,8 +5,8 @@ import type { Metadata } from 'next';
 import React from 'react';
 
 export const metadata: Metadata = {
-  title: 'Aanhanger of bakfiets lenen',
-  description: 'Reservering van een aanhanger of bakfiets bij de afvalscheidingsstations',
+  title: 'Demo Utrecht Formulieren',
+  description: 'Demo van Utrecht formulieren voor verchillende services,',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
