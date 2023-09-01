@@ -25,7 +25,7 @@ export default function Home() {
         een heuveltje op.
       </Paragraph>
 
-      <form class="utrecht-form" method="GET" action="/savi/form/bevestiging/">
+      <form className="utrecht-form" method="GET" action="/savi/form/bevestiging/">
         <FormField type="text">
           <Paragraph>
             <FormLabel htmlFor="1111">Aanhanger/bakfiets</FormLabel>
@@ -35,10 +35,10 @@ export default function Home() {
               <SelectOption disabled selected value="--- Toon alle aanhangers/bakfietsen ---">
                 --- Toon alle aanhangers/bakfietsen ---
               </SelectOption>
-              <SelectOption value="1000000001">Aanhanger 1Tractieweg</SelectOption>
-              <SelectOption value="1000000003">Aanhanger De Stits</SelectOption>
-              <SelectOption value="1000000002">Aanhanger Lunetten</SelectOption>
-              <SelectOption value="1000000004">Bakfiets De Stits</SelectOption>
+              <SelectOption value="a">Aanhanger 1Tractieweg</SelectOption>
+              <SelectOption value="b">Aanhanger De Stits</SelectOption>
+              <SelectOption value="c">Aanhanger Lunetten</SelectOption>
+              <SelectOption value="d">Bakfiets De Stits</SelectOption>
             </Select>
           </Paragraph>
         </FormField>
