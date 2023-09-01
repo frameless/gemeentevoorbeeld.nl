@@ -256,10 +256,16 @@ importers:
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
+      react-hook-form:
+        specifier: 7.45.4
+        version: 7.45.4(react@18.2.0)
       typescript:
         specifier: 5.2.2
         version: 5.2.2
     devDependencies:
+      '@nl-design-system-unstable/voorbeeld-design-tokens':
+        specifier: 1.0.0-alpha.88
+        version: 1.0.0-alpha.88
       '@utrecht/component-library-css':
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547
@@ -2497,6 +2503,10 @@ packages:
   /@nicolo-ribaudo/semver-v6@6.3.3:
     resolution: {integrity: sha512-3Yc1fUTs69MG/uZbJlLSI3JISMn2UV2rg+1D/vROUqZyh3l6iYHCs7GMp+M40ZD7yOdDbYjJcU1oTJhrc+dGKg==}
     hasBin: true
+    dev: true
+
+  /@nl-design-system-unstable/voorbeeld-design-tokens@1.0.0-alpha.88:
+    resolution: {integrity: sha512-FXrt3ITXD0T7npD5tjohRj+64llDJBI6hWOskSEgTN8WY6JlCPIXkOaEUXAeHmkjYufTCBxrS79fm8pHER+tTw==}
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -10333,6 +10343,15 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+
+  /react-hook-form@7.45.4(react@18.2.0):
+    resolution: {integrity: sha512-HGDV1JOOBPZj10LB3+OZgfDBTn+IeEsNOKiq/cxbQAIbKaiJUe/KV8DBUzsx0Gx/7IG/orWqRRm736JwOfUSWQ==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
