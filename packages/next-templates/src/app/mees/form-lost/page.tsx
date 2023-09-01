@@ -95,7 +95,7 @@ export default function Home() {
           </Paragraph>
         </FormField>
         <ButtonGroup>
-          <ButtonLink href="conformation-lost" appearance="primary-action-button">
+          <ButtonLink href="mees/conformation-lost" appearance="primary-action-button">
             Versturen
           </ButtonLink>
         </ButtonGroup>
