@@ -14,7 +14,6 @@ import {
   Paragraph,
   RadioButton,
 } from '@utrecht/component-library-react';
-// import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 
 export default function Home() {
   return (
