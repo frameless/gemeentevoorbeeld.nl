@@ -27,13 +27,13 @@ export default function Home() {
         <Paragraph>
           <BreadcrumbNav appearance="arrows" label="Kruimelpad">
             {' '}
-            <BreadcrumbLink href="/" index={0} rel="home">
+            <BreadcrumbLink href="https://www.utrecht.nl/" index={0} rel="home">
               Home
             </BreadcrumbLink>
-            <BreadcrumbLink href="/a/" index={1}>
+            <BreadcrumbLink href="https://pki.utrecht.nl/Loket/start.do" index={1}>
               Online loket
             </BreadcrumbLink>
-            <BreadcrumbLink href="/a/b/" index={2} rel="up">
+            <BreadcrumbLink href="https://pki.utrecht.nl/Loket/products/alphabet" index={2} rel="up">
               Producten
             </BreadcrumbLink>
           </BreadcrumbNav>
