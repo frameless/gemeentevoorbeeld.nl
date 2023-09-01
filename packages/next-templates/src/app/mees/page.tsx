@@ -36,15 +36,17 @@ export default function Home() {
         </UnorderedList>
         <Paragraph>
           <Link href="https://www.utrecht.nl/wonen-en-leven/gevonden-voorwerpen/">
-            <UtrechtIconArrow></UtrechtIconArrow>Meer over gevonden voorwerpen
+            <UtrechtIconArrow />
+            Meer over gevonden voorwerpen
           </Link>
         </Paragraph>
         <ButtonGroup>
-          <ButtonLink appearance="primary-action-button" href="form-found">
-            Meld je gevonden sok<UtrechtIconArrow></UtrechtIconArrow>
+          <ButtonLink appearance="primary-action-button" href="mees/form-found">
+            Meld je gevonden sok
+            <UtrechtIconArrow />
           </ButtonLink>
-          <ButtonLink appearance="primary-action-button" href="form-lost">
-            Meld je verloren sok <UtrechtIconArrow></UtrechtIconArrow>
+          <ButtonLink appearance="primary-action-button" href="mees/form-lost">
+            Meld je verloren sok <UtrechtIconArrow />
           </ButtonLink>
         </ButtonGroup>
         <Heading2>Hoe werkt het?</Heading2>
