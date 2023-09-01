@@ -11,7 +11,6 @@ import {
 } from '@utrecht/component-library-react';
 import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
-// import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 
 export default function Home() {
   return (
