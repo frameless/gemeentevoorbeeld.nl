@@ -263,15 +263,15 @@ importers:
         specifier: 5.2.2
         version: 5.2.2
     devDependencies:
-      '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 1.0.0-alpha.88
-        version: 1.0.0-alpha.88
       '@next/eslint-plugin-next':
         specifier: 13.4.19
         version: 13.4.19
+      '@nl-design-system-unstable/voorbeeld-design-tokens':
+        specifier: 1.0.0-alpha.88
+        version: 1.0.0-alpha.88
       '@utrecht/component-library-css':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547
+        specifier: 1.0.0-alpha.553
+        version: 1.0.0-alpha.553
       '@utrecht/component-library-react':
         specifier: 1.0.0-alpha.356
         version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
@@ -3289,8 +3289,8 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@utrecht/component-library-css@1.0.0-alpha.547:
-    resolution: {integrity: sha512-Ezi60wh3LGb+1FG3E7zIOX6WklkKDwTIziDYa9S2Klykosv7o881o9WoR3wZDM+mUPPsrtvYgjwISd8QywsJQQ==}
+  /@utrecht/component-library-css@1.0.0-alpha.553:
+    resolution: {integrity: sha512-0PDOHkiCF8vVctI0lso9UolpwDz/1EVwpCKiV2t5tK9RGsibGxF8CFPggnoPxrNz8SQgwERjBlF+l08Tg5r8Gg==}
     dev: true
 
   /@utrecht/component-library-react@1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0):
