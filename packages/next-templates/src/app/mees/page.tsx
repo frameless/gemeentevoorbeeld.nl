@@ -27,13 +27,11 @@ export default function Home() {
           emotioneel gemis veroorzaken. Met dit programma streven wij ernaar deze waardevolle kledingstukken hun weg
           naar huis terug te laten vinden.
         </Paragraph>
-        <UnorderedList>
-          <UnorderedListItem>
-            Let op: dit meldpunt onderscheidt zich van een algemeen &ldquo;gevonden voorwerpen&ldquo; meldpunt. Hier
-            richten wij ons uitsluitend op het melden van verloren sokken. Voor informatie over gevonden voorwerpen,
-            verwijzen wij u graag naar onze sectie &ldquo;Gevonden voorwerpen.&ldquo;
-          </UnorderedListItem>
-        </UnorderedList>
+        <Paragraph>
+          Let op: dit meldpunt onderscheidt zich van een algemeen &ldquo;gevonden voorwerpen&ldquo; meldpunt. Hier
+          richten wij ons uitsluitend op het melden van verloren sokken. Voor informatie over gevonden voorwerpen,
+          verwijzen wij u graag naar onze sectie &ldquo;Gevonden voorwerpen.&ldquo;
+        </Paragraph>
         <Paragraph>
           <Link href="https://www.utrecht.nl/wonen-en-leven/gevonden-voorwerpen/">
             <UtrechtIconArrow />
@@ -70,7 +68,6 @@ export default function Home() {
             worden gecombineerd.
           </UnorderedListItem>
         </UnorderedList>
-
         <Heading2>Waarom Het Meldpunt voor Verdwaalde Sokken?</Heading2>
         <Paragraph>
           Dit programma benadrukt het belang van sokken in ons dagelijks leven, geeft hen de erkenning die ze verdienen
@@ -78,7 +75,6 @@ export default function Home() {
           textielafval te verminderen,Eveneens bevordert het &ldquo;Meldpunt voor Verdwaalde Sokken&ldquo; de
           betrokkenheid van de gemeenschap en moedigt het de deelname aan een positieve en vermakelijke inspanning aan.
         </Paragraph>
-
         <Heading2>Spoed</Heading2>
         <Paragraph>
           In geval van een spoedeisende situatie, zoals een dringende behoefte om de eigenaar van de sok te bereiken of
