@@ -12,8 +12,9 @@ export default function Home() {
           essentiële faciliteit in onze gemeente: een parkeerzone speciaal voor roze eenhoorns. We erkennen de unieke
           behoeften van deze betoverende wezens en hun metgezellen, de vliegende huisdieren. Terwijl dit meldpunt vooral
           dient voor lichtvoetige absurditeit, willen we u graag een plek bieden om uw creativiteit te uiten.
-          <br />
-          <br />
+        </Paragraph>
+        <br />
+        <Paragraph>
           Ons doel is om een glimlach op uw gezicht te toveren en uw gevoel voor avontuur aan te wakkeren. Dus voel u
           vrij om uw gedachten, visuele kunstwerken en eenhoornverhalen met ons te delen. Vergeet niet dat terwijl we
           misschien niet in staat zijn om een echte roze eenhoornparkeerzone te creëren, we altijd genieten van uw
