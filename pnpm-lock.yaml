@@ -28,8 +28,8 @@ importers:
         specifier: 6.4.1
         version: 6.4.1(eslint@8.48.0)(typescript@5.2.2)
       '@utrecht/component-library-react':
-        specifier: 1.0.0-alpha.356
-        version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.362
+        version: 1.0.0-alpha.362(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-react':
         specifier: 1.0.0-alpha.549
         version: 1.0.0-alpha.549
@@ -263,18 +263,18 @@ importers:
         specifier: 5.2.2
         version: 5.2.2
     devDependencies:
-      '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 1.0.0-alpha.88
-        version: 1.0.0-alpha.88
       '@next/eslint-plugin-next':
         specifier: 13.4.19
         version: 13.4.19
+      '@nl-design-system-unstable/voorbeeld-design-tokens':
+        specifier: 1.0.0-alpha.88
+        version: 1.0.0-alpha.88
       '@utrecht/component-library-css':
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547
       '@utrecht/component-library-react':
-        specifier: 1.0.0-alpha.356
-        version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.362
+        version: 1.0.0-alpha.362(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/design-tokens':
         specifier: 1.0.0-alpha.540
         version: 1.0.0-alpha.540
@@ -3293,8 +3293,8 @@ packages:
     resolution: {integrity: sha512-Ezi60wh3LGb+1FG3E7zIOX6WklkKDwTIziDYa9S2Klykosv7o881o9WoR3wZDM+mUPPsrtvYgjwISd8QywsJQQ==}
     dev: true
 
-  /@utrecht/component-library-react@1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-QITfPXJaxLO5BLIs4WPGjz8653jcYJyMGYXwcWFyGSvOhPVtFw1frT5aJzwvfCAiu0laWlUadc6rdGB44wOfPw==}
+  /@utrecht/component-library-react@1.0.0-alpha.362(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-fWkpVx6aaFhdaZ8hLS4emSEyuhx6Kua/+/yCFbWKRjg/vCP7RoY19BnBs9y8NclUc0EaiDlobbwiET2Qc7AWrw==}
     peerDependencies:
       react: '18'
       react-dom: '18'
