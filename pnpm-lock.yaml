@@ -263,12 +263,12 @@ importers:
         specifier: 5.2.2
         version: 5.2.2
     devDependencies:
-      '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 1.0.0-alpha.88
-        version: 1.0.0-alpha.88
       '@next/eslint-plugin-next':
         specifier: 13.4.19
         version: 13.4.19
+      '@nl-design-system-unstable/voorbeeld-design-tokens':
+        specifier: 1.0.0-alpha.88
+        version: 1.0.0-alpha.88
       '@utrecht/component-library-css':
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547
@@ -276,8 +276,8 @@ importers:
         specifier: 1.0.0-alpha.356
         version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/design-tokens':
-        specifier: 1.0.0-alpha.540
-        version: 1.0.0-alpha.540
+        specifier: 1.0.0-alpha.546
+        version: 1.0.0-alpha.546
       '@utrecht/web-component-library-react':
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0)
@@ -3306,8 +3306,8 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@utrecht/design-tokens@1.0.0-alpha.540:
-    resolution: {integrity: sha512-qT12YTZWkGwTyrza2O4k+lzAnAhDY1NYEJWc4Qk+Th1Fpb1pzJOsBdp4np4xsjJ3mtGaCS7QGA6so9qrxJ0OjA==}
+  /@utrecht/design-tokens@1.0.0-alpha.546:
+    resolution: {integrity: sha512-1xNAi7YgUFjSdeoWZEp7dzqnnEh3ULcPxnZfJbodiLMV1AO35CbLQbCNo40+2eDBNpYZW67k+taYJIrOAwvekA==}
     dev: true
 
   /@utrecht/web-component-library-react@1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0):
