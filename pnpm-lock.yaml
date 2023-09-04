@@ -263,12 +263,12 @@ importers:
         specifier: 5.2.2
         version: 5.2.2
     devDependencies:
-      '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 1.0.0-alpha.88
-        version: 1.0.0-alpha.88
       '@next/eslint-plugin-next':
         specifier: 13.4.19
         version: 13.4.19
+      '@nl-design-system-unstable/voorbeeld-design-tokens':
+        specifier: 1.0.0-alpha.88
+        version: 1.0.0-alpha.88
       '@utrecht/component-library-css':
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547
@@ -282,8 +282,8 @@ importers:
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-stencil':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547
+        specifier: 1.0.0-alpha.552
+        version: 1.0.0-alpha.552
       clsx:
         specifier: 2.0.0
         version: 2.0.0
@@ -3338,6 +3338,12 @@ packages:
 
   /@utrecht/web-component-library-stencil@1.0.0-alpha.549:
     resolution: {integrity: sha512-EtjkBtJ/LKeqeNhGmgeT8rhgtgV9SgngOckcPkpp0iiJ4Wl2CSxdY8t/BwBEz17wPlPsJ5I3fNxYL8po+jKf4g==}
+    dependencies:
+      '@stencil/core': 3.4.2
+    dev: true
+
+  /@utrecht/web-component-library-stencil@1.0.0-alpha.552:
+    resolution: {integrity: sha512-LfizreBLWrmr7Tr3GAQ+l/tSguLs++xkwMVp3tZ/6ZqRqZTxQdCq5EZnyd2rUMz3vYnZn8P4afCdbEJUk9O7vA==}
     dependencies:
       '@stencil/core': 3.4.2
     dev: true
