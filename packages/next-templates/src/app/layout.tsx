@@ -7,8 +7,8 @@ import '@utrecht/design-tokens/dist/index.css';
 import React from 'react';
 
 export const metadata: Metadata = {
-  title: 'Demo Utrecht Formulieren',
-  description: 'Demo van Utrecht formulieren voor verchillende services,',
+  title: 'Demo Utrecht formulieren',
+  description: 'Demo van Utrecht formulieren voor verschillende services',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
