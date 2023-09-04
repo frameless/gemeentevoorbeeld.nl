@@ -13,7 +13,6 @@ export default function Home() {
           behoeften van deze betoverende wezens en hun metgezellen, de vliegende huisdieren. Terwijl dit meldpunt vooral
           dient voor lichtvoetige absurditeit, willen we u graag een plek bieden om uw creativiteit te uiten.
         </Paragraph>
-        <br />
         <Paragraph>
           Ons doel is om een glimlach op uw gezicht te toveren en uw gevoel voor avontuur aan te wakkeren. Dus voel u
           vrij om uw gedachten, visuele kunstwerken en eenhoornverhalen met ons te delen. Vergeet niet dat terwijl we

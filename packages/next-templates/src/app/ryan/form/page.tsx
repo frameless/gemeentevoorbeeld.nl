@@ -129,7 +129,6 @@ export default function Home() {
             </Paragraph>
           </FormField>
         </Fieldset>
-        <br />
         <Paragraph>Contactgegevens:</Paragraph>
         <Paragraph>
           Laat uw naam en e-mailadres achter, zodat we u op de hoogte kunnen houden van eventuele magische
