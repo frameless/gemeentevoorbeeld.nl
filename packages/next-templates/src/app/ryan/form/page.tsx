@@ -2,17 +2,17 @@
 
 import {
   Button,
-  Heading1,
-  Page,
-  Paragraph,
-  Textarea,
-  Textbox,
+  Document,
   Fieldset,
   FieldsetLegend,
   FormField,
   FormLabel,
+  Heading1,
+  Page,
+  Paragraph,
   RadioButton,
-  Document,
+  Textarea,
+  Textbox,
 } from '@utrecht/component-library-react';
 import { useForm } from 'react-hook-form';
 
@@ -36,7 +36,6 @@ export default function Home() {
           Dan bent u op de juiste plek! Melding: Ontbreken van een Roze Eenhoornparkeerzone
         </Paragraph>
         <br />
-        <Paragraph></Paragraph>
         <form
           onSubmit={handleSubmit((data) => {
             console.log(data);
