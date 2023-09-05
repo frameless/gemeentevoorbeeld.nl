@@ -31,6 +31,8 @@ export default function Home() {
           alt="Meneer Corgi is tevreden met uw aanvraag."
           style={{ marginInline: 'auto', display: 'block' }}
         />
+        </strong>
+        <strong> Om {searchParams.get('dagdeel')}</strong>
       </Paragraph>
     </Page>
   );
