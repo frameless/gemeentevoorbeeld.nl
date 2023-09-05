@@ -24,7 +24,7 @@ export default function Home() {
         een heuveltje op.
       </Paragraph>
 
-      <form className="utrecht-form" method="GET" action="/savi/form/bevestiging/">
+      <form className="utrecht-form" method="GET" action="/savi/form/bevestiging">
         <FormField type="text">
           <Paragraph>
             <FormLabel htmlFor="1111">Aanhanger/bakfiets</FormLabel>
@@ -34,12 +34,28 @@ export default function Home() {
               <SelectOption disabled selected value="--- Toon alle aanhangers/bakfietsen ---">
                 --- Toon alle aanhangers/bakfietsen ---
               </SelectOption>
-              <SelectOption value="a">Aanhanger 1Tractieweg</SelectOption>
-              <SelectOption value="b">Aanhanger De Stits</SelectOption>
-              <SelectOption value="c">Aanhanger Lunetten</SelectOption>
-              <SelectOption value="d">Bakfiets De Stits</SelectOption>
+
+              <SelectOption value="Aanhanger 1Tractieweg">Aanhanger 1Tractieweg</SelectOption>
+              <SelectOption value="Aanhanger De Stits">Aanhanger De Stits</SelectOption>
+              <SelectOption value="Aanhanger Lunetten">Aanhanger Lunetten</SelectOption>
+              <SelectOption value="Bakfiets De Stits">Bakfiets De Stits</SelectOption>
             </Select>
           </Paragraph>
+          {/* <Paragraph>
+            <label for="1112">Aanhanger/bakfiets</label>
+          </Paragraph>
+          <Paragraph>
+            <select size="10" id="1112" name="aanhangerbakfiets" required>
+              <option disabled value="--- Toon alle aanhangers/bakfietsen ---">
+                --- Toon alle aanhangers/bakfietsen ---
+              </option>
+
+              <option value="a">Aanhanger 1Tractieweg</option>
+              <option value="b">Aanhanger De Stits</option>
+              <option value="c">Aanhanger Lunetten</option>
+              <option value="d">Bakfiets De Stits</option>
+            </select>
+          </Paragraph> */}
         </FormField>
 
         <FormField type="text">

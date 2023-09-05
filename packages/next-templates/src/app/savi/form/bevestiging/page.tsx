@@ -10,17 +10,37 @@ import {
   FormField,
   FormLabel,
   Heading3,
+  Link,
   Page,
   Paragraph,
   RadioButton,
 } from '@utrecht/component-library-react';
+import { useSearchParams } from 'next/navigation';
+import { DateValue } from '@/components-savi/DateValue';
+import { EmptyIndicator } from '@/components-savi/EmptyIndicator';
 
 export default function Home() {
+  const searchParams = useSearchParams();
+
   return (
     <Page>
       <Heading3>Gegevens Bevestiging</Heading3>
       <Paragraph>
-        Beschikbaarheid <b> op donderdag 31 augustus 2023</b>.<br />
+        {/* {searchParams.get('aanhangerbakfiets')}
+        {searchParams.get('datums beschikbaarheid')} */}
+        Beschikbaarheid van{' '}
+        <Link>
+          <strong>{searchParams.get('aanhangerbakfiets')}</strong>
+        </Link>
+        {' op '}
+        <strong>
+          {searchParams.get('datums beschikbaarheid') ? (
+            <DateValue dateTime={searchParams.get('datums beschikbaarheid')} locale="nl" />
+          ) : (
+            <EmptyIndicator title="No date given" />
+          )}
+        </strong>
+        .<br />
         Voor meer informatie over de aanhanger of bakfiets klikt u op de blauwe info- button achter de locatie.
         <br />
         <br />
