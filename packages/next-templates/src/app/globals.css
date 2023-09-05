@@ -5,7 +5,18 @@
   /* HACK: these tokens are not set in utrecht-theme */
   --utrecht-button-group-margin-block-end: 16px;
   --utrecht-button-group-margin-block-start: 16px;
-  --utrecht-link-icon-size: 18px !important;
+  --utrecht-link-icon-size: 18px;
+}
+
+.voorbeeld-theme {
+  --utrecht-space-around: 1;
+
+  /* HACK: these tokens are not set in utrecht-theme */
+  --utrecht-button-group-margin-block-end: 16px;
+  --utrecht-button-group-margin-block-start: 16px;
+  --utrecht-link-icon-size: 18px;
+  --utrecht-radio-button-size: 1em;
+  --utrecht-form-field-margin-block-end: 20px;
 }
 
 .utrecht-link {
