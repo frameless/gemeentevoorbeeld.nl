@@ -176,9 +176,7 @@ export default function Home() {
           waarmee roze eenhoornparkeerzones worden gerealiseerd, waarderen we uw levendige verbeelding en deelname aan
           dit absurde avontuur.
         </Paragraph>
-        <PageFooter>
-          <Logo />
-        </PageFooter>
+        <PageFooter></PageFooter>
       </Page>
     </Document>
   );
