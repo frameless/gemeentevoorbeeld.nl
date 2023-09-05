@@ -3,7 +3,6 @@ import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
 import type { Metadata } from 'next';
 import '@utrecht/component-library-css';
-// import '@utrecht/design-tokens/dist/index.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/index.css';
 import React from 'react';
 
