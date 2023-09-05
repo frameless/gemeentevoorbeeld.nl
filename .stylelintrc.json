@@ -119,7 +119,7 @@
     "scss/operator-no-newline-after": null,
     "scss/percent-placeholder-pattern": "^(example|frameless|nl|utrecht)-[a-z0-9-]+$",
     "selector-attribute-quotes": ["always"],
-    "selector-class-pattern": "^(voorbeeld|frameless|nl|utrecht)-[a-z0-9_-]+$",
+    "selector-class-pattern": "^(example|frameless|nl|utrecht)-[a-z0-9_-]+$",
     "selector-combinator-space-after": null,
     "selector-combinator-space-before": null,
     "selector-descendant-combinator-no-non-space": null,
