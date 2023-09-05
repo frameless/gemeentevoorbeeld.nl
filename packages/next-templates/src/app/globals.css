@@ -8,7 +8,7 @@
   --utrecht-link-icon-size: 18px;
 }
 
-.voorbeeld-theme {
+.example-theme {
   --utrecht-space-around: 1;
 
   /* HACK: these tokens are not set in utrecht-theme */
