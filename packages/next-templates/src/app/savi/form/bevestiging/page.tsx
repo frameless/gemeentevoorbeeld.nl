@@ -70,13 +70,19 @@ export default function Home() {
         <br /> Klik in het gewenste dagdeel in de tijdsbalk hieronder om de reservering te starten.
       </Paragraph>
       <hr className="utrecht-separator" />
-      <form className="utrecht-form" method="GET" action=".">
+      <form className="utrecht-form" method="GET" action="/savi/form/bevestiging/succes">
         <Fieldset id="only" role="radiogroup">
           <FieldsetLegend>Selecteer uw gewenste dagdeel</FieldsetLegend>
           <FormField type="radio">
             <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
               <FormLabel htmlFor="aaaa" type="radio">
-                <RadioButton className="utrecht-form-field__input" id="aaaa" name="dagdeel" value="1" required />
+                <RadioButton
+                  className="utrecht-form-field__input"
+                  id="aaaa"
+                  name="dagdeel"
+                  value="10.00 - 13.00 uur"
+                  required
+                />
                 10.00 - 13.00 uur
               </FormLabel>
             </Paragraph>
@@ -84,12 +90,26 @@ export default function Home() {
           <FormField type="radio">
             <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
               <FormLabel htmlFor="bbbb" type="radio">
-                <RadioButton className="utrecht-form-field__input" id="bbbb" name="dagdeel" value="2" required />
+                <RadioButton
+                  className="utrecht-form-field__input"
+                  id="bbbb"
+                  name="dagdeel"
+                  value="13.30 - 16.30 uur"
+                  required
+                />
                 13.30 - 16.30 uur
               </FormLabel>
             </Paragraph>
           </FormField>
         </Fieldset>
+
+        <input type="hidden" id="1111" name="aanhangerbakfiets" value={searchParams.get('aanhangerbakfiets')} />
+        <input
+          type="hidden"
+          id="2222"
+          name="datums beschikbaarheid"
+          value={searchParams.get('datums beschikbaarheid')}
+        />
 
         <ButtonGroup>
           <Button appearance="primary-action-button" type="submit">
