@@ -39,6 +39,7 @@ export default function Home() {
               <SelectOption value="Aanhanger De Stits">Aanhanger De Stits</SelectOption>
               <SelectOption value="Aanhanger Lunetten">Aanhanger Lunetten</SelectOption>
               <SelectOption value="Bakfiets De Stits">Bakfiets De Stits</SelectOption>
+              <SelectOption value="Bakfiets Tractieweg">Bakfiets Tractieweg</SelectOption>
             </Select>
           </Paragraph>
           {/* <Paragraph>
