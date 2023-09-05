@@ -1,13 +1,11 @@
 'use client';
 import { Button, Link, PageHeader, Textbox } from '@utrecht/component-library-react';
-import Logo from './voorbeeld';
 
 export default function Home() {
   return (
     <main className="voorbeeld-theme">
       <PageHeader>
         {/* SVGR gebruiken ipv react-component*/}
-        <Logo />
 
         <Link>Mijn omgeving</Link>
         <Link>Contact</Link>
