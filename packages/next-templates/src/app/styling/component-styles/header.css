@@ -1,9 +1,14 @@
 .example--header-home-page {
+  align-items: center;
   display: flex;
   justify-content: space-around;
+  margin-block-start: 2em;
 }
+
+/* block-size moet nog voor het search component toegevoegd worden */
 .example--header-items {
   display: flex;
+  height: 48px;
   justify-content: space-evenly;
 }
 .example--search-box {
@@ -16,8 +21,8 @@
   margin-inline: 1em;
 }
 .utrecht-link {
-  margin-inline: 1em;
+  margin-inline-end: 32px;
 }
 .utrecht-textbox {
-  margin-inline: 0.5em;
+  margin-inline: 8px;
 }
