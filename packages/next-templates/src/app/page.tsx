@@ -18,7 +18,7 @@ export default function Home() {
           </div>
           <div className="example--search-box">
             <Textbox placeholder="Bijvoorbeeld zwembad of grofvuil" />
-            <Button>Zoeken</Button>
+            <Button appearance="secondary-action-button">Zoeken</Button>
           </div>
         </div>
       </PageHeader>
