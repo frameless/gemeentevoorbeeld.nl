@@ -3,34 +3,6 @@ body {
   margin-inline: 0;
 }
 
-.utrecht-page-content {
-  margin-block: 18px;
-  margin-inline: 18px;
-}
-
-.utrecht-page-footer {
-  --utrecht-page-footer-padding-block-end: 16px;
-  --utrecht-page-footer-padding-block-start: 16px;
-  --utrecht-page-footer-padding-inline-end: 48px;
-  --utrecht-page-footer-padding-inline-start: 80px;
-  --utrecht-heading-5-color: white;
-  --utrecht-link-color: white !important;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.utrecht-link-list {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-}
-
-.utrecht-link-list__item {
-  display: inline-block;
-  width: calc(100% / 4);
-}
-
 /* NLDS CSS Variables */
 .utrecht-theme {
   --utrecht-space-around: 1;

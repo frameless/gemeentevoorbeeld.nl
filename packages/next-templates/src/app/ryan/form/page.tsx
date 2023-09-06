@@ -18,6 +18,7 @@ import {
   Textbox,
 } from '@utrecht/component-library-react';
 import Logo from '../../styling/assets/voorbeeld-footer.svg';
+import '../../styling/component-styles/footer.css';
 import { useForm } from 'react-hook-form';
 
 export default function Home() {
@@ -184,10 +185,8 @@ export default function Home() {
           </Paragraph>
         </PageContent>
         <PageFooter>
-          <div className="example-logo-container">
-            <Logo />
-          </div>
           <div className="example-link-list-container">
+            <Logo />
             <ul className="utrecht-link-list utrecht-link-list--html-ul">
               <Heading5>Heading</Heading5>
               <li className="utrecht-link-list__item">
@@ -205,6 +204,13 @@ export default function Home() {
                   Navigatie item
                 </a>
               </li>
+              <li className="utrecht-link-list__item">
+                <a href="#" className="utrecht-link">
+                  Navigatie item
+                </a>
+              </li>
+            </ul>
+            <ul className="utrecht-link-list utrecht-link-list--html-ul">
               <Heading5>Heading</Heading5>
               <li className="utrecht-link-list__item">
                 <a href="#" className="utrecht-link">
@@ -222,7 +228,17 @@ export default function Home() {
                 </a>
               </li>
               <li className="utrecht-link-list__item">
-                <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+                <a href="#" className="utrecht-link">
+                  Navigatie item
+                </a>
+              </li>
+            </ul>
+            <ul className="utrecht-link-list utrecht-link-list--html-ul">
+              <Heading5>Heading</Heading5>
+              <li className="utrecht-link-list__item">
+                <Paragraph className="utrecht-footer-paragraph">
+                  Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
+                </Paragraph>
               </li>
             </ul>
           </div>

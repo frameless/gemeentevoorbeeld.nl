@@ -1,0 +1,36 @@
+.utrecht-page-content {
+  margin-block: 18px;
+  margin-inline: 18px;
+}
+
+.utrecht-page-footer {
+  --utrecht-page-footer-padding-block-end: 50px;
+  --utrecht-page-footer-padding-block-start: 50px;
+  --utrecht-page-footer-padding-inline-end: 48px;
+  --utrecht-page-footer-padding-inline-start: 80px;
+  --utrecht-heading-5-color: white;
+  --utrecht-link-color: white !important;
+  --utrecht-link-visited-color: white;
+}
+
+.example-link-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.utrecht-link-list {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+}
+
+.utrecht-link-list__item {
+  --utrecht-paragraph-color: white;
+
+  line-height: 2em;
+}
+
+.utrecht-link-list__item:last-child {
+  max-width: 35ch;
+}
