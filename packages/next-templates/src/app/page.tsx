@@ -6,17 +6,17 @@ import './styling/component-styles/header.css';
 export default function Home() {
   return (
     <main className="voorbeeld-theme">
-      <PageHeader className="header--home-page">
+      <PageHeader className="example--header-home-page">
         {/* SVGR gebruiken ipv react-component*/}
         <div className="logo">
           <Logo />
         </div>
-        <div className="header-items">
-          <div className="nav-links">
+        <div className="example--header-items">
+          <div className="example--nav-links">
             <Link>Mijn omgeving</Link>
             <Link>Contact</Link>
           </div>
-          <div className="search-box">
+          <div className="example--search-box">
             <Textbox placeholder="Bijvoorbeeld zwembad of grofvuil" />
             <Button>Zoeken</Button>
           </div>
