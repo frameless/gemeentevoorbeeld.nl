@@ -1,0 +1,17 @@
+.example--header-home-page {
+  display: flex;
+  justify-content: space-around;
+}
+.example--header-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+.example--search-box {
+  display: flex;
+  margin-inline: 1em;
+}
+.example--nav-links {
+  align-items: center;
+  display: flex;
+  margin-inline: 1em;
+}
