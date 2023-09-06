@@ -1,6 +1,6 @@
 'use client';
 import { Button, Link, PageHeader, Textbox } from '@utrecht/component-library-react';
-import Logo from './styling/assets/voorbeeld.svg';
+import Logo from './styling/assets/voorbeeld-footer.svg';
 import './styling/component-styles/header.css';
 
 export default function Home() {
