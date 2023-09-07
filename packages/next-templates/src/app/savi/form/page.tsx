@@ -24,13 +24,13 @@ export default function Home() {
         een heuveltje op.
       </Paragraph>
 
-      <form className="utrecht-form" method="GET" action="/savi/form/bevestiging">
+      <form className="utrecht-form" method="GET" action="/savi/form/bevestiging" required>
         <FormField type="text">
           <Paragraph>
             <FormLabel htmlFor="1111">Aanhanger/bakfiets</FormLabel>
           </Paragraph>
           <Paragraph>
-            <Select size={10} id="1111" name="aanhanger bakfiets">
+            <Select size={10} id="1111" name="aanhanger bakfiets" required>
               <SelectOption disabled selected value="--- Toon alle aanhangers/bakfietsen ---">
                 --- Toon alle aanhangers/bakfietsen ---
               </SelectOption>
@@ -42,6 +42,7 @@ export default function Home() {
               <SelectOption value="Bakfiets Tractieweg">Bakfiets Tractieweg</SelectOption>
             </Select>
           </Paragraph>
+
           {/* <Paragraph>
             <label for="1112">Aanhanger/bakfiets</label>
           </Paragraph>
@@ -64,7 +65,7 @@ export default function Home() {
             <FormLabel htmlFor="2222">Datum</FormLabel>
           </Paragraph>
           <Paragraph>
-            <Textbox id="2222" name="datums beschikbaarheid" type="date" autoComplete="off" />
+            <Textbox id="2222" name="datums beschikbaarheid" type="date" autoComplete="off" required />
           </Paragraph>
         </FormField>
 

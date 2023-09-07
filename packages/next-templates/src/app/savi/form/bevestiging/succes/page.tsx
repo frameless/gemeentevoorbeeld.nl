@@ -13,7 +13,7 @@ export default function Home() {
     <Page>
       <Heading3>Gegevens Bevestiging</Heading3>
       <Paragraph>
-        U hebt gekozen voor: <strong>{searchParams.get('aanhangerbakfiets')}</strong>
+        U hebt gekozen voor: <strong>{searchParams.get('aanhanger bakfiets')}</strong>
         {' op '}
         <strong>
           {searchParams.get('datums beschikbaarheid') ? (
@@ -24,16 +24,16 @@ export default function Home() {
         </strong>{' '}
         om <strong>{searchParams.get('dagdeel')}</strong>
       </Paragraph>
-      <Paragraph>
+      {/* <Paragraph>
         <img
           width="50%"
           src="/business_corgi.jpeg"
           alt="Meneer Corgi is tevreden met uw aanvraag."
-          style={{ marginInline: 'auto', display: 'block' }}
+          style={ marginInline: 'auto', display: 'block' }
         />
         </strong>
         <strong> Om {searchParams.get('dagdeel')}</strong>
-      </Paragraph>
+      </Paragraph> */}
     </Page>
   );
 }
