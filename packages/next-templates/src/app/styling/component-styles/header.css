@@ -22,13 +22,21 @@
   display: flex;
   flex: 1;
 }
-.example--nav-links {
+.example--header-links-container {
   align-items: center;
   display: flex;
 }
-.utrecht-link {
+
+.example--header-links {
+  align-items: center;
+  display: flex;
   margin-inline-end: 32px;
 }
+
+.example--header-user-icon {
+  margin-inline-end: 4px;
+}
+
 .utrecht-textbox {
   margin-inline: 8px;
 }
