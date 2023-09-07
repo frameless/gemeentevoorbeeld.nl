@@ -1,6 +1,8 @@
 'use client';
 import { Button, Link, Page, PageHeader, Textbox } from '@utrecht/component-library-react';
-import Logo from './styling/assets/voorbeeld.svg';
+import Logo from './styling/assets/voorbeeld-header.svg';
+import Search from './styling/assets/searchbar-icon.svg';
+import User from './styling/assets/user-icon.svg';
 import './styling/component-styles/header.css';
 
 export default function Home() {
@@ -13,12 +15,16 @@ export default function Home() {
         </div>
         <div className="example--header-items">
           <div className="example--nav-links">
-            <Link>Mijn omgeving</Link>
+            <Link>
+              <User /> Mijn omgeving
+            </Link>
             <Link>Contact</Link>
           </div>
           <div className="example--search-box">
             <Textbox placeholder="Bijvoorbeeld zwembad of grofvuil" />
-            <Button appearance="secondary-action-button">Zoeken</Button>
+            <Button appearance="secondary-action-button">
+              <Search /> Zoeken
+            </Button>
           </div>
         </div>
       </PageHeader>
