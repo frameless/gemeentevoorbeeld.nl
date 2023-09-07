@@ -8,7 +8,7 @@ export default function Home() {
     <Page>
       <PageHeader className="example--header-home-page">
         {/* SVGR gebruiken ipv react-component*/}
-        <div className="logo">
+        <div className="example--logo">
           <Logo />
         </div>
         <div className="example--header-items">
