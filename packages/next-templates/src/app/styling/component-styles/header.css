@@ -13,12 +13,10 @@
 }
 .example--search-box {
   display: flex;
-  margin-inline: 1em;
 }
 .example--nav-links {
   align-items: center;
   display: flex;
-  margin-inline: 1em;
 }
 .utrecht-link {
   margin-inline-end: 32px;
