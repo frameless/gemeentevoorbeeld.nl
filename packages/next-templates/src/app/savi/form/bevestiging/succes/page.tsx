@@ -17,7 +17,7 @@ export default function Home() {
         {' op '}
         <strong>
           {searchParams.get('datums beschikbaarheid') ? (
-            <DateValue dateTime={searchParams.get('datums beschikbaarheid')} locale="nl" />
+            <DateValue dateTime={searchParams.get('datums beschikbaarheid')!} locale="nl" />
           ) : (
             <EmptyIndicator title="No date given" />
           )}

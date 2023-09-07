@@ -58,7 +58,7 @@ export default function Home() {
         {' op '}
         <strong>
           {searchParams.get('datums beschikbaarheid') ? (
-            <DateValue dateTime={searchParams.get('datums beschikbaarheid')} locale="nl" />
+            <DateValue dateTime={searchParams.get('datums beschikbaarheid')!} locale="nl" />
           ) : (
             <EmptyIndicator title="No date given" />
           )}
@@ -103,12 +103,12 @@ export default function Home() {
           </FormField>
         </Fieldset>
 
-        <input type="hidden" id="1111" name="aanhanger bakfiets" value={searchParams.get('aanhanger bakfiets')} />
+        <input type="hidden" id="1111" name="aanhanger bakfiets" value={searchParams.get('aanhanger bakfiets')!} />
         <input
           type="hidden"
           id="2222"
           name="datums beschikbaarheid"
-          value={searchParams.get('datums beschikbaarheid')}
+          value={searchParams.get('datums beschikbaarheid')!}
         />
 
         <ButtonGroup>
