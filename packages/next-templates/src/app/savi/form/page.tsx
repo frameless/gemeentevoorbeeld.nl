@@ -24,7 +24,7 @@ export default function Home() {
         een heuveltje op.
       </Paragraph>
 
-      <form className="utrecht-form" method="GET" action="/savi/form/bevestiging" required>
+      <form className="utrecht-form" method="GET" action="/savi/form/bevestiging">
         <FormField type="text">
           <Paragraph>
             <FormLabel htmlFor="1111">Aanhanger/bakfiets</FormLabel>
