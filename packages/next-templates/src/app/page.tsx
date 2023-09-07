@@ -14,11 +14,11 @@ export default function Home() {
           <Logo />
         </div>
         <div className="example--header-items">
-          <div className="example--nav-links">
-            <Link>
-              <User /> Mijn omgeving
+          <div className="example--header-links-container">
+            <Link className="example--header-links">
+              <User className="example--header-user-icon" /> Mijn omgeving
             </Link>
-            <Link>Contact</Link>
+            <Link className="example--header-links">Contact</Link>
           </div>
           <div className="example--search-box">
             <Textbox placeholder="Bijvoorbeeld zwembad of grofvuil" />
