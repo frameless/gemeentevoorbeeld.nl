@@ -114,7 +114,7 @@ export default function Home() {
       </PageContent>
       <PageFooter>
         <div className="example-link-list-container">
-          <Logo CLassName="example--footer-logo" />
+          <Logo className="example--footer-logo" />
           <ul className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
             <Heading5>Heading</Heading5>
             <li className="utrecht-link-list-focus__item">

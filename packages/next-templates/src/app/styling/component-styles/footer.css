@@ -39,10 +39,6 @@
   max-width: 35ch;
 }
 
-.example--footer-logo {
-  width: 100%;
-}
-
 @media screen and (width <= 600px) {
   .example-link-list-container {
     align-items: start;
