@@ -8,12 +8,16 @@ import {
   FormFieldDescription,
   FormLabel,
   Heading1,
+  Heading5,
   Page,
   PageContent,
+  PageFooter,
   Paragraph,
   Textarea,
   Textbox,
 } from '@utrecht/component-library-react';
+import Logo from '../../styling/assets/voorbeeld-footer.svg';
+import '../../styling/component-styles/footer.css';
 
 export default function Home() {
   return (
@@ -89,11 +93,24 @@ export default function Home() {
           </Paragraph>
         </FormField>
         <ButtonGroup>
-          <ButtonLink href="mees/conformation-lost" appearance="primary-action-button">
+          <ButtonLink href="conformation-lost" appearance="primary-action-button">
             Versturen
           </ButtonLink>
         </ButtonGroup>
       </PageContent>
+      <PageFooter>
+        <div className="example-link-list-container">
+          <Logo CLassName="example--footer-logo" />
+          <ul className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
+            <Heading5>Heading</Heading5>
+            <li className="utrecht-link-list-focus__item">
+              <Paragraph className="utrecht-footer-paragraph">
+                Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
+              </Paragraph>
+            </li>
+          </ul>
+        </div>
+      </PageFooter>
     </Page>
   );
 }
