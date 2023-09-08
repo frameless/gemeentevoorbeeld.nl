@@ -25,6 +25,10 @@
   column-count: 1;
 }
 
+.utrecht-link-list-focus__item {
+  --utrecht-paragraph-color: white;
+}
+
 .utrecht-link-list__item {
   --utrecht-paragraph-color: white;
 
@@ -33,4 +37,16 @@
 
 .utrecht-link-list__item:last-child {
   max-width: 35ch;
+}
+
+.example--footer-logo {
+  width: 100%;
+}
+
+@media screen and (width <= 600px) {
+  .example-link-list-container {
+    align-items: start;
+    flex-direction: column;
+    gap: 1em;
+  }
 }
