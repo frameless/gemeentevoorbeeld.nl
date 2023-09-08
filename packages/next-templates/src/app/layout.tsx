@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="nl">
       {/* <body className="voorbeeld-theme">{children}</body> */}
-      <body className="utrecht-theme">{children}</body>
+      <body className="voorbeeld-theme">{children}</body>
     </html>
   );
 }
