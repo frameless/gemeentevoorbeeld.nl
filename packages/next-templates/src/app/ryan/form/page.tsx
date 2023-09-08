@@ -33,9 +33,11 @@ export default function Home() {
             Meldpunt om een roze eenhoornparkeerzone op straat te creëren voor inwoners met vliegende huisdieren
           </Heading1>
           <Paragraph>
+            <br />
             Welkom bij het Absurde Meldpunt van de Gemeente Utrecht Heeft u onlangs gemerkt dat er een schrijnend tekort
             is aan parkeerzones voor roze eenhoorns? Zijn uw vliegende huisdieren in de war over waar ze moeten landen?
             Dan bent u op de juiste plek! Melding: Ontbreken van een Roze Eenhoornparkeerzone
+            <br />
           </Paragraph>
           <br />
           <form
@@ -143,10 +145,10 @@ export default function Home() {
               console.log(data);
             })}
           >
-            <br />
             <FormField invalid={!!errors.fullName}>
-              <FormLabel>Volledige naam:</FormLabel>
-              <br />
+              <Paragraph>
+                <FormLabel>Volledige naam:</FormLabel>
+              </Paragraph>
               <Textbox
                 invalid={!!errors.fullName}
                 {...register('fullName', {
@@ -157,10 +159,10 @@ export default function Home() {
               ></Textbox>
             </FormField>
             <Paragraph>{errors.fullName?.message}</Paragraph>
-            <br />
             <FormField invalid={!!errors.emailAdress}>
-              <FormLabel>E-mailadres:</FormLabel>
-              <br />
+              <Paragraph>
+                <FormLabel>E-mailadres:</FormLabel>
+              </Paragraph>
               <Textbox
                 invalid={!!errors.emailAdress}
                 {...register('emailAdress', { required: 'Dit is verplicht' })}
@@ -168,12 +170,10 @@ export default function Home() {
               ></Textbox>
             </FormField>
             <Paragraph>{errors.emailAdress?.message}</Paragraph>
-            <br />
             <Button type="submit" appearance="primary-action-button" formAction="./confirmed">
               Dien uw melding in
             </Button>
           </form>
-          <br />
           <Paragraph>
             Dank u voor het deelnemen aan ons absurde meldpunt. Hoewel we geen garanties kunnen geven over de snelheid
             waarmee roze eenhoornparkeerzones worden gerealiseerd, waarderen we uw levendige verbeelding en deelname aan
