@@ -16,8 +16,8 @@ import {
   RadioButton,
 } from '@utrecht/component-library-react';
 import { useSearchParams } from 'next/navigation';
-import { DateValue } from '@/components-savi/DateValue';
-import { EmptyIndicator } from '@/components-savi/EmptyIndicator';
+import { DateValue } from '@/components/DateValue';
+import { EmptyIndicator } from '@/components/EmptyIndicator';
 
 export default function Home() {
   const searchParams = useSearchParams();
