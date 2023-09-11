@@ -20,6 +20,8 @@ import {
 import Logo from '../../styling/assets/voorbeeld-footer.svg';
 import '../../styling/component-styles/footer.css';
 import { useForm } from 'react-hook-form';
+import { NavigationList } from '../../../components/NavigationList/Navigationlist';
+import { NavigationListItem } from '../../../components/NavigationList/NavigationListIItem';
 
 export default function Home() {
   const {
@@ -233,6 +235,20 @@ export default function Home() {
                 </a>
               </li>
             </ul>
+            <NavigationList>
+              <Heading5>Heading</Heading5>
+              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
+              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
+              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
+              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
+            </NavigationList>
+            <NavigationList>
+              <Heading5>Heading</Heading5>
+              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
+              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
+              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
+              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
+            </NavigationList>
             <ul className="utrecht-link-list utrecht-link-list--html-ul">
               <Heading5>Heading</Heading5>
               <li className="utrecht-link-list__item">
