@@ -105,60 +105,60 @@ export default function Home() {
         <PageFooter>
           <div className="example-link-list-container">
             <Logo className="example--footer-logo" />
-            <ul className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
+            <UnorderedList className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
               <Heading5>Heading</Heading5>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
+              <UnorderedListItem className="utrecht-link-list__item">
+                <Link href="#" className="utrecht-link">
                   Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
+                </Link>
+              </UnorderedListItem>
+              <UnorderedListItem className="utrecht-link-list__item">
+                <Link href="#" className="utrecht-link">
                   Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
+                </Link>
+              </UnorderedListItem>
+              <UnorderedListItem className="utrecht-link-list__item">
+                <Link href="#" className="utrecht-link">
                   Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
+                </Link>
+              </UnorderedListItem>
+              <UnorderedListItem className="utrecht-link-list__item">
+                <Link href="#" className="utrecht-link">
                   Navigatie item
-                </a>
-              </li>
-            </ul>
-            <ul className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
+                </Link>
+              </UnorderedListItem>
+            </UnorderedList>
+            <UnorderedList className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
+              <Heading5 className="example--footer-head">Heading</Heading5>
+              <UnorderedListItem className="utrecht-link-list__item">
+                <Link href="#" className="utrecht-link">
+                  Navigatie item
+                </Link>
+              </UnorderedListItem>
+              <UnorderedListItem className="utrecht-link-list__item">
+                <Link href="#" className="utrecht-link">
+                  Navigatie item
+                </Link>
+              </UnorderedListItem>
+              <UnorderedListItem className="utrecht-link-list__item">
+                <Link href="#" className="utrecht-link">
+                  Navigatie item
+                </Link>
+              </UnorderedListItem>
+              <UnorderedListItem className="utrecht-link-list__item">
+                <Link href="#" className="utrecht-link">
+                  Navigatie item
+                </Link>
+              </UnorderedListItem>
+            </UnorderedList>
+            <UnorderedList className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
               <Heading5>Heading</Heading5>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-            </ul>
-            <ul className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
-              <Heading5>Heading</Heading5>
-              <li className="utrecht-link-list__item">
+              <UnorderedListItem className="utrecht-link-list__item">
                 <Paragraph className="utrecht-footer-paragraph">
                   Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
                 </Paragraph>
-              </li>
-            </ul>
+              </UnorderedListItem>
+            </UnorderedList>
           </div>
         </PageFooter>
       </Page>
