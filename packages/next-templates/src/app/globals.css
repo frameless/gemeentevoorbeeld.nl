@@ -34,8 +34,47 @@ body {
   --utrecht-radio-button-size: 1em;
   --utrecht-form-field-margin-block-end: 20px;
   --utrecht-page-footer-background-color: var(--voorbeeld-color-violet-700);
+
+  /* SAVI testing how to get the var values to show. With !important they do show! SO there are cascading issues
+  --utrecht-breadcrumb-link-margin-inline-start: 20px;
+  --utrecht-paragraph-lead-color: red !important;
+  */
+
+  /* WHY DOESN;T THIS WORK?
+   --utrecht-heading-1-color: red;
+  --utrecht-heading-1-font-size: 8px; */
+
+  --utrecht-spotlight-section-background-color: #f5f2ff;
+  --utrecht-spotlight-section-color: #0a2750;
+
+  /* --utrecht-link-color: #5315f6 !important; */
+
+  --utrecht-heading-1-margin-block-start: 24px;
+  --utrecht-heading-1-margin-block-end: 24px;
+
+  /*
+  --utrecht-page-content-padding-block-start: 24px;
+  --utrecht-page-content-padding-block-end: 24px; */
+  --utrecht-page-max-inline-size: 1024px;
+  --utrecht-paragraph-lead-line-height: 1.5;
 }
 
-.utrecht-link {
+.voorbeeld-theme .utrecht-link {
   --utrecht-icon-inset-block-start: 0.2em;
+}
+
+/* IF I HAVE THESE INSIDE .VOORBEELD-THEME, THEIR VALUE DOESN'T SHOW */
+.voorbeeld-theme .utrecht-heading-1 {
+  --utrecht-heading-1-color: red;
+  --utrecht-heading-1-font-size: 8px;
+}
+
+/* HAD THIS HERE OUTSIDE AT FIRST, THEN MOVED IT TO .VOORBEELD-THEME AND IT STILL WORKED
+.utrecht-paragraph {
+  --utrecht-paragraph-lead-line-height: 1.5;
+} */
+
+/* THIS DOESN'T WORK EVEN WITH !IMPORTANT */
+.voorbeeld-theme .utrecht-unordered-list {
+  --utrecht-unordered-list-color: red !important;
 }
