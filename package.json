@@ -16,7 +16,7 @@
     "./proprietary/*"
   ],
   "devDependencies": {
-    "@lerna-lite/cli": "2.5.0",
+    "@lerna-lite/cli": "2.5.1",
     "@lerna-lite/run": "2.5.0",
     "@types/node": "20.5.6",
     "@typescript-eslint/eslint-plugin": "6.4.1",
