@@ -1,0 +1,11 @@
+.voorbeeld-navigation-list {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+}
+
+.voorbeeld-navigation-list__item {
+  --utrecht-paragraph-color: white;
+
+  line-height: 2em;
+}
