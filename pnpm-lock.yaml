@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: false
@@ -31,8 +31,8 @@ importers:
         specifier: 1.0.0-alpha.356
         version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-react':
-        specifier: 1.0.0-alpha.549
-        version: 1.0.0-alpha.549
+        specifier: 1.0.0-alpha.555
+        version: 1.0.0-alpha.555(react-dom@18.2.0)(react@18.2.0)
       eslint:
         specifier: 8.48.0
         version: 8.48.0
@@ -282,8 +282,8 @@ importers:
         specifier: 1.0.0-alpha.540
         version: 1.0.0-alpha.540
       '@utrecht/web-component-library-react':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.555
+        version: 1.0.0-alpha.555(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-stencil':
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547
@@ -3476,24 +3476,15 @@ packages:
     resolution: {integrity: sha512-qT12YTZWkGwTyrza2O4k+lzAnAhDY1NYEJWc4Qk+Th1Fpb1pzJOsBdp4np4xsjJ3mtGaCS7QGA6so9qrxJ0OjA==}
     dev: true
 
-  /@utrecht/web-component-library-react@1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-vDDdKMzF9arJOsqGdGEZKy8Pb9SzMgTmN1hoQTDtm2wQ/QFMA+OPFpCC8NSr1+xo/KhaWeuqWp+HHgl4n4aGsw==}
+  /@utrecht/web-component-library-react@1.0.0-alpha.555(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-I1OINhvelsBaaCMeLjrctZWgU4k6FZ/7r/ur6vCr8fNnHRNJ5zcvafPponZWlOyHty1SfzO3aww5bGHl9ozCVw==}
     peerDependencies:
       react: 16 - 18
       react-dom: 16 - 18
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.547
+      '@utrecht/web-component-library-stencil': 1.0.0-alpha.555
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-    dev: true
-
-  /@utrecht/web-component-library-react@1.0.0-alpha.549:
-    resolution: {integrity: sha512-YCCBnKJ5bOIyvefXSEIhi/Gqh4XRJbqGPxCBsurfLL7KtTTLanz1Mwas8fISaOWEr8Nssrv8y0XG3ZtfxCnGzQ==}
-    peerDependencies:
-      react: 16 - 18
-      react-dom: 16 - 18
-    dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.549
     dev: true
 
   /@utrecht/web-component-library-stencil@1.0.0-alpha.547:
@@ -3502,8 +3493,8 @@ packages:
       '@stencil/core': 3.4.2
     dev: true
 
-  /@utrecht/web-component-library-stencil@1.0.0-alpha.549:
-    resolution: {integrity: sha512-EtjkBtJ/LKeqeNhGmgeT8rhgtgV9SgngOckcPkpp0iiJ4Wl2CSxdY8t/BwBEz17wPlPsJ5I3fNxYL8po+jKf4g==}
+  /@utrecht/web-component-library-stencil@1.0.0-alpha.555:
+    resolution: {integrity: sha512-vP5dChCAdViA9xV1BSM+PTShlygJoYpbBp4ta/P8P6uuw0thjwoQhrjE2VUsSLUEopA77T3+otBAgeMzZY4OqQ==}
     dependencies:
       '@stencil/core': 3.4.2
     dev: true
