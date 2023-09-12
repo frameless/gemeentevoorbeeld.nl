@@ -13,7 +13,7 @@ export default function Home() {
         </div>
         <div className="example--header-items">
           <div className="example--nav-links">
-            <Link>Mijn omgevingg</Link>
+            <Link>Mijn omgeving</Link>
             <Link>Contact</Link>
           </div>
           <div className="example--search-box">
