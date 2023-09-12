@@ -12,6 +12,7 @@ import {
 } from '@utrecht/component-library-react';
 import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
+import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 export default function Home() {
   return (
     <Page>
@@ -44,6 +45,7 @@ export default function Home() {
           </ButtonLink>
         </ButtonGroup>
       </PageContent>
+      <ExampleFooter />
     </Page>
   );
 }

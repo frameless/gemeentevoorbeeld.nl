@@ -8,13 +8,13 @@ import {
   FormFieldDescription,
   FormLabel,
   Heading1,
-  Heading5,
   Page,
   PageContent,
   Paragraph,
   Textarea,
   Textbox,
 } from '@utrecht/component-library-react';
+import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 
 export default function Home() {
   return (
@@ -95,6 +95,7 @@ export default function Home() {
           </ButtonLink>
         </ButtonGroup>
       </PageContent>
+      <ExampleFooter />
     </Page>
   );
 }
