@@ -3,6 +3,17 @@ body {
   margin-inline: 0;
 }
 
+.voorbeeld-placeholder-paragraph {
+  --utrecht-form-label-color: darkgrey;
+}
+
+.voorbeeld-back-link {
+  text-decoration: none;
+}
+.voorbeeld-underlined {
+  text-decoration: underline;
+}
+
 /* NLDS CSS Variables */
 .utrecht-theme {
   --utrecht-space-around: 1;

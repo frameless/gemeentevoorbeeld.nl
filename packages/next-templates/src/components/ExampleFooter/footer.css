@@ -13,7 +13,7 @@
   --utrecht-link-visited-color: white;
 }
 
-.example-link-list-container {
+.example-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -45,7 +45,7 @@
 }
 
 @media screen and (width <= 600px) {
-  .example-link-list-container {
+  .example-footer {
     align-items: start;
     flex-direction: column;
     gap: 1em;

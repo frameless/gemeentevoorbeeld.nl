@@ -1,6 +1,17 @@
 'use client';
 
-import { Document, Heading1, Heading5, Page, PageFooter, Paragraph } from '@utrecht/component-library-react';
+import {
+  Document,
+  Heading1,
+  Heading5,
+  Page,
+  PageFooter,
+  Paragraph,
+  UnorderedList,
+  UnorderedListItem,
+} from '@utrecht/component-library-react';
+import { NavigationList } from '../../../components/NavigationList';
+import { NavigationListItem } from '../../../components/NavigationList/NavigationListItem';
 import '../../styling/component-styles/footer.css';
 import Logo from '../../styling/assets/voorbeeld-footer.svg';
 
@@ -29,64 +40,65 @@ export default function Home() {
         </Paragraph>
         <Paragraph>Met vriendelijke groet,</Paragraph>
         <Paragraph>Het Team van het Gemeente Utrecht Absurde Meldpunt</Paragraph>
-        <PageFooter>
-          <div className="example-link-list-container">
-            <Logo className="example--footer-logo" />
-            <ul className="utrecht-link-list utrecht-link-list--html-ul">
-              <Heading5>Heading</Heading5>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-            </ul>
-            <ul className="utrecht-link-list utrecht-link-list--html-ul">
-              <Heading5>Heading</Heading5>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-            </ul>
-            <ul className="utrecht-link-list utrecht-link-list--html-ul">
-              <Heading5>Heading</Heading5>
-              <li className="utrecht-link-list__item">
-                <Paragraph className="utrecht-footer-paragraph">
-                  Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
-                </Paragraph>
-              </li>
-            </ul>
-          </div>
+        <PageFooter className="example-footer">
+          <Logo className="example--footer-logo" />
+          <NavigationList className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
+            <Heading5>Heading</Heading5>
+            <NavigationListItem
+              href="#"
+              label="Navigatie item"
+              className="utrecht-link-list-focus__item"
+            ></NavigationListItem>
+            <NavigationListItem
+              href="#"
+              label="Navigatie item"
+              className="utrecht-link-list-focus__item"
+            ></NavigationListItem>
+            <NavigationListItem
+              href="#"
+              label="Navigatie item"
+              className="utrecht-link-list-focus__item"
+            ></NavigationListItem>
+            <NavigationListItem
+              href="#"
+              label="Navigatie item"
+              className="utrecht-link-list-focus__item"
+            ></NavigationListItem>
+          </NavigationList>
+          <NavigationList className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
+            <Heading5>Heading</Heading5>
+            <NavigationListItem
+              href="#"
+              label="Navigatie item"
+              className="utrecht-link-list-focus__item"
+            ></NavigationListItem>
+            <NavigationListItem
+              href="#"
+              label="Navigatie item"
+              className="utrecht-link-list-focus__item"
+            ></NavigationListItem>
+            <NavigationListItem
+              href="#"
+              label="Navigatie item"
+              className="utrecht-link-list-focus__item"
+            ></NavigationListItem>
+            <NavigationListItem
+              href="#"
+              label="Navigatie item"
+              className="utrecht-link-list-focus__item"
+            ></NavigationListItem>
+          </NavigationList>
+          <UnorderedList className="utrecht-link-list utrecht-link-list--html-ul">
+            <UnorderedListItem className="utrecht-link-list__item">
+              <Heading5>
+                <br />
+                Heading
+              </Heading5>
+              <Paragraph className="utrecht-footer-paragraph">
+                Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
+              </Paragraph>
+            </UnorderedListItem>
+          </UnorderedList>
         </PageFooter>
       </Page>
     </Document>
