@@ -1,7 +1,7 @@
 import Logo from '../../app/styling/assets/voorbeeld-footer.svg';
 import { NavigationList } from '../NavigationList/Navigationlist';
 import { NavigationListItem } from '../NavigationList/NavigationListIItem';
-import { Heading5, PageFooter, Paragraph, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
+import { Heading5, PageFooter, Paragraph } from '@utrecht/component-library-react';
 import React, { HTMLAttributes } from 'react';
 import './footer.css';
 
@@ -24,12 +24,12 @@ export const ExampleFooter = ({ ...props }: ExampleFooterProps) => (
         <NavigationListItem className="utrecht-link-list__item" href="example.com" label="example" />
         <NavigationListItem className="utrecht-link-list__item" href="example.com" label="example" />
       </NavigationList>
-      <div>
+      <section>
         <Heading5>Heading</Heading5>
         <Paragraph className="utrecht-link-list__item">
           Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
         </Paragraph>
-      </div>
+      </section>
     </div>
   </PageFooter>
 );
