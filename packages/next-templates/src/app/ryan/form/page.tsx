@@ -2,10 +2,12 @@
 
 import {
   Button,
+  ButtonLink,
   Document,
   Fieldset,
   FieldsetLegend,
   FormField,
+  FormFieldDescription,
   FormLabel,
   Heading1,
   Heading2,
@@ -21,11 +23,7 @@ import {
   Textarea,
   Textbox,
 } from '@utrecht/component-library-react';
-import { UtrechtIcon } from '@utrecht/web-component-library-react';
-import { NavigationList } from '@/components/NavigationList';
-import { NavigationListItem } from '@/components/NavigationList/NavigationListItem';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import Logo from '../../styling/assets/voorbeeld-footer.svg';
 import { useForm } from 'react-hook-form';
 
 export default function Home() {
@@ -121,14 +119,14 @@ export default function Home() {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
-                placeholder="Vul hier een beschrijving in"
+                placeholder=""
               ></Textarea>
               <Paragraph>{errors.description?.message}</Paragraph>
             </FormField>
             <Heading4>Op welke locatie heeft de melding betrekking?</Heading4>
             <FormField invalid={!!errors.place}>
               <Paragraph>
-                <FormLabel htmlFor="place">Plaats:</FormLabel>
+                <FormLabel htmlFor="place">Plaats</FormLabel>
               </Paragraph>
               <Textbox
                 id="place"
@@ -141,95 +139,89 @@ export default function Home() {
               ></Textbox>
               <Paragraph>{errors.description?.message}</Paragraph>
             </FormField>
-          </form>
-          <Fieldset id="df861ef1-844a-42df-8365-b54f59474fb8" role="radiogroup">
-            <FieldsetLegend>
-              Hoe snel denkt u dat de eenhoorns en vliegende huisdieren hulp nodig hebben?
-            </FieldsetLegend>
-            <FormField type="radio" className="radio-field">
-              <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
-                <FormLabel htmlFor="right-now" type="radio">
-                  <RadioButton
-                    className="utrecht-form-field__input"
-                    id="right-now"
-                    name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                    value="1"
-                  />
-                  Nu meteen
-                </FormLabel>
-              </Paragraph>
-            </FormField>
-            <FormField type="radio" className="radio-field">
-              <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
-                <FormLabel htmlFor="shortly" type="radio">
-                  <RadioButton
-                    className="utrecht-form-field__input"
-                    id="shortly"
-                    name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                    value="2"
-                  />
-                  Binnenkort
-                </FormLabel>
-              </Paragraph>
-            </FormField>
-            <FormField type="radio" className="radio-field">
-              <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
-                <FormLabel htmlFor="when-pigs-can-fly" type="radio">
-                  <RadioButton
-                    className="utrecht-form-field__input"
-                    id="when-pigs-can-fly"
-                    name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                    value="3"
-                  />
-                  Wanneer varkens kunnen vliegen
-                </FormLabel>
-              </Paragraph>
-            </FormField>
-          </Fieldset>
-          <Paragraph>Contactgegevens:</Paragraph>
-          <Paragraph>
-            Laat uw naam en e-mailadres achter, zodat we u op de hoogte kunnen houden van eventuele magische
-            ontwikkelingen.
-          </Paragraph>
-          <form
-            onSubmit={handleSubmit((data) => {
-              console.log(data);
-            })}
-          >
-            <FormField invalid={!!errors.fullName}>
+            <FormField invalid={!!errors.street}>
               <Paragraph>
-                <FormLabel>Volledige naam:</FormLabel>
+                <FormLabel htmlFor="place">Straat</FormLabel>
               </Paragraph>
               <Textbox
-                invalid={!!errors.fullName}
-                {...register('fullName', {
+                id="street"
+                invalid={!!errors.street}
+                {...register('street', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
-                placeholder="Vul hier uw volledige naam in"
+                placeholder=""
               ></Textbox>
+              <Paragraph>{errors.street?.message}</Paragraph>
             </FormField>
-            <Paragraph>{errors.fullName?.message}</Paragraph>
-            <FormField invalid={!!errors.emailAdress}>
+            <FormField invalid={!!errors.height}>
               <Paragraph>
-                <FormLabel>E-mailadres:</FormLabel>
+                <FormLabel htmlFor="height">Ter hoogte van</FormLabel>
               </Paragraph>
-              <Textbox
-                invalid={!!errors.emailAdress}
-                {...register('emailAdress', { required: 'Dit is verplicht' })}
-                placeholder="Vul hier uw e-mailadres in"
-              ></Textbox>
+              <Paragraph className="example--placeholder-paragraph">
+                <FormLabel htmlFor="height">Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormLabel>
+              </Paragraph>
+              <Textarea
+                id="height"
+                invalid={!!errors.height}
+                {...register('height', {
+                  required: 'Dit is verplicht',
+                  minLength: { value: 4, message: 'Min length is 4' },
+                })}
+                placeholder=""
+              ></Textarea>
+              <Paragraph>{errors.height?.message}</Paragraph>
             </FormField>
-            <Paragraph>{errors.emailAdress?.message}</Paragraph>
-            <Button type="submit" appearance="primary-action-button" formAction="./confirmed">
-              Dien uw melding in
-            </Button>
+            <Heading4>Hoe kunnen we u bereiken voor meer informatie?</Heading4>
+            <Fieldset role="radiogroup">
+              <FieldsetLegend>Anoniem Melden?</FieldsetLegend>
+              <FormFieldDescription>
+                Als u iets anoniem meld kunnen we u niet informeren over het verloop van de afhandeling voor deze
+                melding.
+              </FormFieldDescription>
+              <FormField type="radio">
+                <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                  <FormLabel htmlFor="anoniem-ja" type="radio">
+                    <RadioButton className="utrecht-form-field__input" id="anoniem-ja" name="anoniem" value="1" />
+                    Ja
+                  </FormLabel>
+                </Paragraph>
+              </FormField>
+              <FormField type="radio">
+                <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                  <FormLabel htmlFor="anoniem-nee" type="radio">
+                    <RadioButton className="utrecht-form-field__input" id="anoniem-nee" name="anoniem" value="2" />
+                    Nee
+                  </FormLabel>
+                </Paragraph>
+              </FormField>
+            </Fieldset>
+            <FormField type="text">
+              <Paragraph>
+                <FormLabel htmlFor="Naam">Naam</FormLabel>
+              </Paragraph>
+              <Paragraph>
+                <Textbox autoComplete="name" id="Naam" name="Naam" type="text" />
+              </Paragraph>
+            </FormField>
+            <FormField type="text">
+              <Paragraph>
+                <FormLabel htmlFor="Email">E-mail</FormLabel>
+              </Paragraph>
+              <Paragraph>
+                <Textbox autoComplete="email" id="Email" name="Email" type="text" />
+              </Paragraph>
+            </FormField>
+            <FormField type="text">
+              <Paragraph>
+                <FormLabel htmlFor="Telefoon">Telefoon</FormLabel>
+              </Paragraph>
+              <Paragraph>
+                <Textbox autoComplete="tel" id="Telefoon" name="Telefoon" type="text" />
+              </Paragraph>
+            </FormField>
+            <ButtonLink appearance="primary-action-button">Versturen</ButtonLink>
           </form>
-          <Paragraph>
-            Dank u voor het deelnemen aan ons absurde meldpunt. Hoewel we geen garanties kunnen geven over de snelheid
-            waarmee roze eenhoornparkeerzones worden gerealiseerd, waarderen we uw levendige verbeelding en deelname aan
-            dit absurde avontuur.
-          </Paragraph>
         </PageContent>
         <ExampleFooter />
       </Page>
