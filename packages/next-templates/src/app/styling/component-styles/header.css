@@ -16,7 +16,7 @@
   flex: 1;
   height: 48px;
   justify-content: center;
-  padding-inline-end: 1em;
+  padding-inline-end: 5em;
 }
 .example--search-box {
   display: flex;
