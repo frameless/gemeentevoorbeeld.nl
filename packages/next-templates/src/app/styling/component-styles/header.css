@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   justify-content: space-around;
-  margin-block-start: 2em;
+  margin-block: 16px;
 }
 
 .example--logo {
