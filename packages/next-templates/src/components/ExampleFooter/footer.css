@@ -45,7 +45,7 @@
 }
 
 @media screen and (width <= 600px) {
-  .example-footer {
+  .example-link-list-container {
     align-items: start;
     flex-direction: column;
     gap: 1em;
