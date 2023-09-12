@@ -1,5 +1,5 @@
 import Logo from '../../app/styling/assets/voorbeeld-footer.svg';
-import { Heading5, PageFooter, Paragraph, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
+import { Heading5, PageFooter, Paragraph, UnorderedList } from '@utrecht/component-library-react';
 import React, { HTMLAttributes } from 'react';
 import './footer.css';
 
