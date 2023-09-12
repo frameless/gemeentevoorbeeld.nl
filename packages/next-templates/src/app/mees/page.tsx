@@ -9,7 +9,6 @@ import {
   Link,
   Page,
   PageContent,
-  PageFooter,
   Paragraph,
   UnorderedList,
   UnorderedListItem,
@@ -102,7 +101,6 @@ export default function Home() {
             </UnorderedListItem>
           </UnorderedList>
         </PageContent>
-        <PageFooter>{/* <ExampleFooter /> */}</PageFooter>
       </Page>
     </Document>
   );

@@ -11,12 +11,10 @@ import {
   Heading5,
   Page,
   PageContent,
-  PageFooter,
   Paragraph,
   Textarea,
   Textbox,
 } from '@utrecht/component-library-react';
-import Logo from '../../styling/assets/voorbeeld-footer.svg';
 
 export default function Home() {
   return (
@@ -97,19 +95,6 @@ export default function Home() {
           </ButtonLink>
         </ButtonGroup>
       </PageContent>
-      <PageFooter>
-        <div className="example-link-list-container">
-          <Logo className="example--footer-logo" />
-          <ul className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
-            <Heading5>Heading</Heading5>
-            <li className="utrecht-link-list-focus__item">
-              <Paragraph className="utrecht-footer-paragraph">
-                Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
-              </Paragraph>
-            </li>
-          </ul>
-        </div>
-      </PageFooter>
     </Page>
   );
 }

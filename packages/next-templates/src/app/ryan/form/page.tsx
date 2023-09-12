@@ -8,19 +8,14 @@ import {
   FormField,
   FormLabel,
   Heading1,
-  Heading5,
   Page,
   PageContent,
-  PageFooter,
   Paragraph,
   RadioButton,
   Textarea,
   Textbox,
 } from '@utrecht/component-library-react';
-import Logo from '../../styling/assets/voorbeeld-footer.svg';
 import { useForm } from 'react-hook-form';
-import { NavigationList } from '../../../components/NavigationList/Navigationlist';
-import { NavigationListItem } from '../../../components/NavigationList/NavigationListIItem';
 
 export default function Home() {
   const {
@@ -185,79 +180,6 @@ export default function Home() {
             dit absurde avontuur.
           </Paragraph>
         </PageContent>
-        <PageFooter>
-          <div className="example-link-list-container">
-            <Logo />
-            <ul className="utrecht-link-list utrecht-link-list--html-ul">
-              <Heading5>Heading</Heading5>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-            </ul>
-            <ul className="utrecht-link-list utrecht-link-list--html-ul">
-              <Heading5>Heading</Heading5>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-              <li className="utrecht-link-list__item">
-                <a href="#" className="utrecht-link">
-                  Navigatie item
-                </a>
-              </li>
-            </ul>
-            <NavigationList>
-              <Heading5>Heading</Heading5>
-              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
-              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
-              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
-              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
-            </NavigationList>
-            <NavigationList>
-              <Heading5>Heading</Heading5>
-              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
-              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
-              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
-              <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Meesje" />
-            </NavigationList>
-            <ul className="utrecht-link-list utrecht-link-list--html-ul">
-              <Heading5>Heading</Heading5>
-              <li className="utrecht-link-list__item">
-                <Paragraph className="utrecht-footer-paragraph">
-                  Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
-                </Paragraph>
-              </li>
-            </ul>
-          </div>
-        </PageFooter>
       </Page>
     </Document>
   );

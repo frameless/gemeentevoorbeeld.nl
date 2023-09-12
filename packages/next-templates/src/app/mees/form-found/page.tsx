@@ -2,7 +2,6 @@
 import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
 import {
-  Button,
   ButtonGroup,
   ButtonLink,
   FormField,
@@ -12,12 +11,10 @@ import {
   Heading5,
   Page,
   PageContent,
-  PageFooter,
   Paragraph,
   Textarea,
   Textbox,
 } from '@utrecht/component-library-react';
-import Logo from '../../styling/assets/voorbeeld-footer.svg';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 interface Inputs {
@@ -111,19 +108,6 @@ export default function Home() {
           </ButtonGroup>
         </form>
       </PageContent>
-      <PageFooter>
-        <div className="example-link-list-container">
-          <Logo className="example--footer-logo" />
-          <ul className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
-            <Heading5>Heading</Heading5>
-            <li className="utrecht-link-list-focus__item">
-              <Paragraph className="utrecht-footer-paragraph">
-                Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
-              </Paragraph>
-            </li>
-          </ul>
-        </div>
-      </PageFooter>
     </Page>
   );
 }
