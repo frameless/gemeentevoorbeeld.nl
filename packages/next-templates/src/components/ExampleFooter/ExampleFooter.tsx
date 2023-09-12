@@ -26,7 +26,6 @@ export const ExampleFooter = ({ ...props }: ExampleFooterProps) => (
       </NavigationList>
       <UnorderedList>
         <Heading5>Heading</Heading5>
-        <UnorderedListItem className="utrecht-link-list__item" />
         <Paragraph className="utrecht-link-list__item">
           Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
         </Paragraph>
