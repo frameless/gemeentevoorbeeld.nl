@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import React, { HTMLAttributes } from 'react';
 import './Navigationlist.css';
 
 interface NavigationListProps extends HTMLAttributes<HTMLUListElement> {}
