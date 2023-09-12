@@ -13,7 +13,7 @@
   --utrecht-link-visited-color: white;
 }
 
-.example-footer {
+.example-link-list-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

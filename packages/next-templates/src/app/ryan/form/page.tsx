@@ -22,10 +22,10 @@ import {
   Textbox,
 } from '@utrecht/component-library-react';
 import { UtrechtIcon } from '@utrecht/web-component-library-react';
-import { NavigationList } from '../../../components/NavigationList';
-import { NavigationListItem } from '../../../components/NavigationList/NavigationListItem';
+import { NavigationList } from '@/components/NavigationList';
+import { NavigationListItem } from '@/components/NavigationList/NavigationListItem';
+import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import Logo from '../../styling/assets/voorbeeld-footer.svg';
-import '../../styling/component-styles/footer.css';
 import { useForm } from 'react-hook-form';
 
 export default function Home() {
@@ -231,6 +231,7 @@ export default function Home() {
             dit absurde avontuur.
           </Paragraph>
         </PageContent>
+        <ExampleFooter />
       </Page>
     </Document>
   );
