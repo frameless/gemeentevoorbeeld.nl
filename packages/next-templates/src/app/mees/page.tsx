@@ -19,6 +19,7 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 export default function Home() {
   return (
     <Document>
+      <Header />
       <Page>
         <PageContent>
           <Heading1>Meldpunt voor Verdwaalde Sokken</Heading1>
