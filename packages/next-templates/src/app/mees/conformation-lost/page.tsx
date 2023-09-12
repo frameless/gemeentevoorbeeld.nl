@@ -10,6 +10,7 @@ import {
   Paragraph,
   Separator,
 } from '@utrecht/component-library-react';
+import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
 
@@ -44,6 +45,7 @@ export default function Home() {
           </ButtonLink>
         </ButtonGroup>
       </PageContent>
+      <ExampleFooter />
     </Page>
   );
 }

@@ -17,6 +17,7 @@ import '@utrecht/component-library-css';
 import '../../components/ExampleFooter/footer.css';
 import '@utrecht/design-tokens/dist/index.css';
 import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
+import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 // import { ExampleFooter } from '../../components/ExampleFooter/ExampleFooter';
 
 export default function Home() {
@@ -101,6 +102,7 @@ export default function Home() {
             </UnorderedListItem>
           </UnorderedList>
         </PageContent>
+        <ExampleFooter />
       </Page>
     </Document>
   );

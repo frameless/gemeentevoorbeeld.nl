@@ -15,6 +15,7 @@ import {
   Textarea,
   Textbox,
 } from '@utrecht/component-library-react';
+import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 interface Inputs {
@@ -108,6 +109,7 @@ export default function Home() {
           </ButtonGroup>
         </form>
       </PageContent>
+      <ExampleFooter />
     </Page>
   );
 }
