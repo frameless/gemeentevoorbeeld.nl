@@ -40,7 +40,7 @@ export default function Home() {
     <Document>
       <Page>
         <PageContent>
-          <Link className="voorbeeld-back-link" href="./detail-page">
+          <Link className="example--back-link" href="./detail-page">
             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
               <path
                 fill-rule="evenodd"
@@ -49,7 +49,7 @@ export default function Home() {
                 fill="#5315F6"
               />
             </svg>
-            &nbsp;&nbsp;<span className="voorbeeld-underlined">Terug</span>
+            &nbsp;&nbsp;<span className="example--underlined">Terug</span>
           </Link>
           <Heading2>Melding openbare ruimte</Heading2>
           <Paragraph>Vul alle velden in. Als een veld optioneel is, staat dit erbij</Paragraph>
@@ -109,7 +109,7 @@ export default function Home() {
               <Paragraph>
                 <FormLabel htmlFor="description">Beschrijving:</FormLabel>
               </Paragraph>
-              <Paragraph className="voorbeeld-placeholder-paragraph">
+              <Paragraph className="example--placeholder-paragraph">
                 <FormLabel htmlFor="description">
                   Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden.
                 </FormLabel>

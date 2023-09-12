@@ -3,14 +3,14 @@ body {
   margin-inline: 0;
 }
 
-.voorbeeld-placeholder-paragraph {
+.example--placeholder-paragraph {
   --utrecht-form-label-color: darkgrey;
 }
 
-.voorbeeld-back-link {
-  text-decoration: none;
+.example--back-link {
+  --utrecht-link-text-decoration: none;
 }
-.voorbeeld-underlined {
+.example--underlined {
   text-decoration: underline;
 }
 
