@@ -14,7 +14,6 @@ import {
 import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
 import Logo from '../../styling/assets/voorbeeld-footer.svg';
-import '../../styling/component-styles/footer.css';
 export default function Home() {
   return (
     <Page>

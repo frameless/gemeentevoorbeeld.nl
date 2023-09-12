@@ -17,7 +17,6 @@ import {
   Textbox,
 } from '@utrecht/component-library-react';
 import Logo from '../../styling/assets/voorbeeld-footer.svg';
-import '../../styling/component-styles/footer.css';
 
 export default function Home() {
   return (
