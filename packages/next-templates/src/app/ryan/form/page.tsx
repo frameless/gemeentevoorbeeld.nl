@@ -18,7 +18,6 @@ import {
   Textbox,
 } from '@utrecht/component-library-react';
 import Logo from '../../styling/assets/voorbeeld-footer.svg';
-import '../../styling/component-styles/footer.css';
 import { useForm } from 'react-hook-form';
 import { NavigationList } from '../../../components/NavigationList/Navigationlist';
 import { NavigationListItem } from '../../../components/NavigationList/NavigationListIItem';
