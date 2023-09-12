@@ -15,11 +15,12 @@ import {
 } from '@utrecht/component-library-react';
 import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 
 export default function Home() {
   return (
     <Document>
-      <Header />
+      <ExampleHeader />
       <Page>
         <PageContent>
           <Heading1>Meldpunt voor Verdwaalde Sokken</Heading1>
