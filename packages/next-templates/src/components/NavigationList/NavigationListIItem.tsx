@@ -1,6 +1,6 @@
 import { Link } from '@utrecht/component-library-react';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
-import './index.css';
+import './Navigationlist.css';
 
 interface NavigationListItemProps extends PropsWithChildren<HTMLAttributes<HTMLElement>> {
   href: string;

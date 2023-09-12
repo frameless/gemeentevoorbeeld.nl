@@ -15,10 +15,10 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react';
 import '@utrecht/component-library-css';
-import Logo from '../styling/assets/voorbeeld-footer.svg';
-import '../styling/component-styles/footer.css';
+import '../../components/ExampleFooter/footer.css';
 import '@utrecht/design-tokens/dist/index.css';
 import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
+import { ExampleFooter } from '../../components/ExampleFooter/ExampleFooter';
 
 export default function Home() {
   return (
@@ -103,63 +103,7 @@ export default function Home() {
           </UnorderedList>
         </PageContent>
         <PageFooter>
-          <div className="example-link-list-container">
-            <Logo className="example--footer-logo" />
-            <UnorderedList className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
-              <Heading5>Heading</Heading5>
-              <UnorderedListItem className="utrecht-link-list__item">
-                <Link href="#" className="utrecht-link">
-                  Navigatie item
-                </Link>
-              </UnorderedListItem>
-              <UnorderedListItem className="utrecht-link-list__item">
-                <Link href="#" className="utrecht-link">
-                  Navigatie item
-                </Link>
-              </UnorderedListItem>
-              <UnorderedListItem className="utrecht-link-list__item">
-                <Link href="#" className="utrecht-link">
-                  Navigatie item
-                </Link>
-              </UnorderedListItem>
-              <UnorderedListItem className="utrecht-link-list__item">
-                <Link href="#" className="utrecht-link">
-                  Navigatie item
-                </Link>
-              </UnorderedListItem>
-            </UnorderedList>
-            <UnorderedList className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
-              <Heading5 className="example--footer-head">Heading</Heading5>
-              <UnorderedListItem className="utrecht-link-list__item">
-                <Link href="#" className="utrecht-link">
-                  Navigatie item
-                </Link>
-              </UnorderedListItem>
-              <UnorderedListItem className="utrecht-link-list__item">
-                <Link href="#" className="utrecht-link">
-                  Navigatie item
-                </Link>
-              </UnorderedListItem>
-              <UnorderedListItem className="utrecht-link-list__item">
-                <Link href="#" className="utrecht-link">
-                  Navigatie item
-                </Link>
-              </UnorderedListItem>
-              <UnorderedListItem className="utrecht-link-list__item">
-                <Link href="#" className="utrecht-link">
-                  Navigatie item
-                </Link>
-              </UnorderedListItem>
-            </UnorderedList>
-            <UnorderedList className="example--footer-list utrecht-link-list utrecht-link-list--html-ul">
-              <Heading5>Heading</Heading5>
-              <UnorderedListItem className="utrecht-link-list__item">
-                <Paragraph className="utrecht-footer-paragraph">
-                  Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
-                </Paragraph>
-              </UnorderedListItem>
-            </UnorderedList>
-          </div>
+          <ExampleFooter />
         </PageFooter>
       </Page>
     </Document>
