@@ -1,0 +1,30 @@
+.example--header-home-page {
+  align-items: center;
+  border-bottom: solid 4px #5315f6;
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 1em;
+  padding-block-end: 1em;
+  padding-inline-start: 2em;
+}
+
+/* block-size moet nog voor het search component toegevoegd worden */
+.example--header-items {
+  display: flex;
+  height: 48px;
+  justify-content: space-evenly;
+}
+.example--search-box {
+  align-items: center;
+  display: flex;
+}
+.example--nav-links {
+  align-items: center;
+  display: flex;
+}
+.utrecht-link {
+  margin-inline-end: 32px;
+}
+.utrecht-textbox {
+  margin-inline: 8px;
+}
