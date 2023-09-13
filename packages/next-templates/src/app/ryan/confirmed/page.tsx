@@ -1,21 +1,7 @@
 'use client';
 
-import {
-  Document,
-  Heading1,
-  Heading5,
-  Page,
-  PageFooter,
-  PageContent,
-  Paragraph,
-  UnorderedList,
-  UnorderedListItem,
-} from '@utrecht/component-library-react';
-import { NavigationList } from '@/components/NavigationList';
-import { NavigationListItem } from '@/components/NavigationList/NavigationListItem';
+import { Document, Heading1, Page, PageContent, Paragraph } from '@utrecht/component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import '../../styling/component-styles/footer.css';
-import Logo from '../../styling/assets/voorbeeld-footer.svg';
 
 export default function Home() {
   return (
