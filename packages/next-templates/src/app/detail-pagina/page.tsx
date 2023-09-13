@@ -47,7 +47,7 @@ export default function Home() {
           </Paragraph>
 
           <SpotlightSection>
-            <Paragraph>Op deze pagina</Paragraph>
+            <Heading2>Op deze pagina</Heading2>
             <OrderedList>
               <OrderedListItem>Eerst toestemming geven</OrderedListItem>
               <OrderedListItem>Dan vervuiling melden</OrderedListItem>
