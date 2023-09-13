@@ -19,10 +19,13 @@ import {
 import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
 import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 
 export default function Home() {
   return (
     <Page>
+      <ExampleHeader />
       <PageContent>
         <Paragraph>
           <BreadcrumbNav appearance="arrows" label="Kruimelpad">
@@ -142,6 +145,7 @@ export default function Home() {
           </Paragraph> */}
         </Article>
       </PageContent>
+      <ExampleFooter />
     </Page>
   );
 }
