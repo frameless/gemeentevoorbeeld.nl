@@ -9,3 +9,7 @@
 
   line-height: 2em;
 }
+
+.utrecht-link {
+  --utrecht-link-text-decoration-color: white;
+}
