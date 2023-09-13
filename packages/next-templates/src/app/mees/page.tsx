@@ -14,7 +14,6 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react';
 import '@utrecht/component-library-css';
-import '../../components/ExampleFooter/footer.css';
 import '@utrecht/design-tokens/dist/index.css';
 import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
