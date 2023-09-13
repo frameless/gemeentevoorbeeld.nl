@@ -1,8 +1,8 @@
-import './globals.css';
 import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
 import type { Metadata } from 'next';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/index.css';
+import './globals.css';
 import React from 'react';
 
 export const metadata: Metadata = {
