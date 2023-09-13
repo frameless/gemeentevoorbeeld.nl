@@ -1,6 +1,8 @@
 'use client';
 
 import {
+  Article,
+  Button,
   ButtonLink,
   Document,
   Fieldset,
@@ -10,6 +12,7 @@ import {
   FormLabel,
   Heading2,
   Heading4,
+  Heading6,
   Link,
   Page,
   PageContent,
@@ -19,6 +22,8 @@ import {
   SelectOption,
   Textarea,
   Textbox,
+  UnorderedList,
+  UnorderedListItem,
 } from '@utrecht/component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { useForm } from 'react-hook-form';
@@ -119,7 +124,16 @@ export default function Home() {
                 })}
                 placeholder=""
               ></Textarea>
-              <Paragraph>{errors.description?.message}</Paragraph>
+              <Article>
+                <Heading6>Bijlage</Heading6>
+                <Paragraph>(optioneel)</Paragraph>
+                <UnorderedList>
+                  <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
+                  <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
+                </UnorderedList>
+                <Button appearance="primary-action-button">Bestand kiezen</Button>
+                <Paragraph>Geen bestand gekozen</Paragraph>
+              </Article>
             </FormField>
             <Heading4>Op welke locatie heeft de melding betrekking?</Heading4>
             <FormField invalid={!!errors.place}>
