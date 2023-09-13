@@ -25,17 +25,22 @@ body {
 }
 
 .voorbeeld-theme {
+  /* HACK: these tokens are not set in voorbeeld-theme */
   --utrecht-space-around: 1;
+  --utrecht-button-group-margin-block-end: 16px;
+  --utrecht-button-group-margin-block-start: 16px;
+  --utrecht-link-icon-size: 18px;
+  --utrecht-radio-button-size: 1em;
+  --utrecht-form-field-margin-block-end: 20px;
+  --utrecht-page-footer-background-color: var(--voorbeeld-color-violet-700);
   --utrecht-spotlight-section-background-color: #f5f2ff;
   --utrecht-spotlight-section-color: #0a2750;
-  --utrecht-link-color: #5315f6;
   --utrecht-heading-1-margin-block-start: 24px;
   --utrecht-heading-1-margin-block-end: 24px;
   --utrecht-page-content-padding-block-start: 24px;
   --utrecht-page-content-padding-block-end: 24px;
   --utrecht-page-padding-inline-start: 50px;
   --utrecht-page-padding-inline-end: 50px;
-  --utrecht-page-max-inline-size: 1024px;
   --utrecht-paragraph-lead-line-height: 1.5;
   --utrecht-paragraph-margin-block-end: 24px;
   --utrecht-spotlight-section-padding-inline-end: 24px;
@@ -44,24 +49,7 @@ body {
   --utrecht-spotlight-section-padding-block-start: 24px;
   --utrecht-spotlight-section-margin-block-start: 24px;
   --utrecht-spotlight-section-margin-block-end: 24px;
-  --utrecht-heading-1-color: #0a2750;
-  --utrecht-heading-1-font-size: 40px;
-  --utrecht-heading-1-font-family: "Source Serif pro";
-  --utrecht-heading-2-margin-block-end: 24px;
-  --utrecht-heading-3-margin-block-end: 16px;
-
-  margin-inline: 0;
-
-  /* --utrecht-unordered-list-marker-color: red; */
-}
-
-.utrecht-paragraph {
-  max-width: 496px;
-}
-
-.utrecht-paragraph--lead {
-  font-size: 20px;
-  max-width: 622px;
+  --utrecht-paragraph-lead-font-size: 20px;
 }
 
 .utrecht-ordered-list__item {
@@ -72,13 +60,10 @@ body {
   color: #0a2750;
 }
 
-.utrecht-spotlight-section .utrecht-paragraph {
-  --utrecht-paragraph-margin-block-end: 16px;
-  --utrecht-paragraph-font-weight: 700;
-  --utrecht-paragraph-font-family: "Source Serif pro";
-}
-
-.voorbeeld-theme section {
-  margin-block: 24px;
-  padding-block-end: 48px;
+/* HACK  should be a component 
+https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliotheek?type=design&node-id=13-254&mode=dev */
+.utrecht-spotlight-section {
+  --utrecht-heading-2-margin-block-end: 16px;
+  --utrecht-heading-2-font-size: 20px;
+  --utrecht-spotlight-section-padding-block-end: 24px;
 }
