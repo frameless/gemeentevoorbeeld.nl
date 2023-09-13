@@ -1,7 +1,7 @@
-import Logo from '../../app/styling/assets/voorbeeld-footer.svg';
+import Logo from '../../../app/styling/assets/voorbeeld-footer.svg';
 import { Heading5, PageFooter, Paragraph } from '@utrecht/component-library-react';
 import React, { HTMLAttributes } from 'react';
-import './footer.css';
+import '../footer.css';
 
 interface ExampleFooterFocusProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleFooterFocus = ({ ...props }: ExampleFooterFocusProps) => (
