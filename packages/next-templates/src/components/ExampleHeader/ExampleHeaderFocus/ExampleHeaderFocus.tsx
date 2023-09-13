@@ -6,19 +6,16 @@ import '@/components/ExampleHeaderFocus/exampleheaderfocus.css';
 
 interface ExampleHeaderFocusProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeaderFocus = ({ ...props }: ExampleHeaderFocusProps) => (
-  <Page>
-    <PageHeader className="example--header-home-page">
-      <div className="logo">
-        <Logo />
+  <PageHeader className="example--header-home-page">
+    <div className="logo">
+      <Logo />
+    </div>
+    <div className="example--header-items">
+      <div className="example--search-box">
+        <Link>Terug naar voorbeeld.nl</Link>
       </div>
-      <div className="example--header-items">
-        <div className="example--search-box">
-          <Link>Terug naar voorbeeld.nl</Link>
-        </div>
-      </div>
-    </PageHeader>
-    <main></main>
-  </Page>
+    </div>
+  </PageHeader>
 );
 
 ExampleHeaderFocus.displayName = 'ExampleHeaderFocus';
