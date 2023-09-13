@@ -7,26 +7,35 @@ import './header.css';
 
 interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
-  <PageHeader className="example--header-home-page">
-    {/* SVGR gebruiken ipv react-component*/}
-    <div className="example--logo">
-      <Logo />
-    </div>
-    <div className="example--header-items">
-      <div className="example--header-links-container">
-        <Link className="example--header-links">
-          <User className="example--header-user-icon" /> Mijn omgeving
-        </Link>
-        <Link className="example--header-links">Contact</Link>
+  <Page>
+    <PageHeader className="example--header-home-page">
+      {/* SVGR gebruiken ipv react-component*/}
+      <div className="example--logo">
+        <Logo />
       </div>
-      <div className="example--search-box">
-        <Textbox placeholder="Bijvoorbeeld zwembad of grofvuil" />
-        <Button appearance="secondary-action-button">
-          <Search /> Zoeken
-        </Button>
+      <div className="example--header-items">
+        <div className="example--header-links-container">
+          <Link className="example--header-links">
+            <User className="example--header-user-icon" /> Mijn omgeving
+          </Link>
+          <Link className="example--header-links">Contact</Link>
+        </div>
+        <div className="example--search-box">
+          <Textbox placeholder="Bijvoorbeeld zwembad of grofvuil" />
+          <Button appearance="secondary-action-button">
+            <Search /> Zoeken
+          </Button>
+        </div>
       </div>
+    </PageHeader>
+    <div className="navbar">
+      <Link className="active">Home</Link>
+      <Link>About</Link>
+      <Link>Services</Link>
+      <Link>Portfolio</Link>
+      <Link>Contact</Link>
     </div>
-  </PageHeader>
+  </Page>
 );
 
 ExampleHeader.displayName = 'ExampleHeader';
