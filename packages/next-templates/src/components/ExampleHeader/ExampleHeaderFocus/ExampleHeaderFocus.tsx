@@ -8,7 +8,6 @@ interface ExampleHeaderFocusProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeaderFocus = ({ ...props }: ExampleHeaderFocusProps) => (
   <Page>
     <PageHeader className="example--header-home-page">
-      {/* SVGR gebruiken ipv react-component*/}
       <div className="logo">
         <Logo />
       </div>
