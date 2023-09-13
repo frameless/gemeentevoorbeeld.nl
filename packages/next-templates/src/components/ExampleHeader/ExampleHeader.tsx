@@ -9,7 +9,6 @@ interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
   <Page>
     <PageHeader className="example--header-home-page">
-      {/* SVGR gebruiken ipv react-component*/}
       <div className="example--logo">
         <Logo />
       </div>
