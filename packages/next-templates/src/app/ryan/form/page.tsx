@@ -50,7 +50,6 @@ export default function Home() {
           <Paragraph>Vul alle velden in. Als een veld optioneel is, staat dit erbij</Paragraph>
           <Heading4>Wat wilt u melden?</Heading4>
           <Paragraph>Kies een categorie die bij uw melding past.</Paragraph>
-          <br />
           <form
             onSubmit={handleSubmit((data) => {
               console.log(data);
