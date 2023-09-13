@@ -1,6 +1,4 @@
 'use client';
-import '@utrecht/component-library-css';
-import '@utrecht/design-tokens/dist/index.css';
 import {
   ButtonGroup,
   ButtonLink,
