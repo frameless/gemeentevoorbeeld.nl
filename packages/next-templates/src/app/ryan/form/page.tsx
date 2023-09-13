@@ -12,6 +12,7 @@ import {
   FormLabel,
   Heading2,
   Heading4,
+  Heading6,
   Link,
   Page,
   PageContent,
