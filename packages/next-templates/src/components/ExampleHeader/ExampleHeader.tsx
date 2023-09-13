@@ -28,8 +28,8 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         </div>
       </div>
     </PageHeader>
-    <div className="navbar">
-      <Link className="active">Home</Link>
+    <div className="example--header-navbar">
+      <Link className="example--header-navbar-active">Home</Link>
       <Link>About</Link>
       <Link>Services</Link>
       <Link>Portfolio</Link>
