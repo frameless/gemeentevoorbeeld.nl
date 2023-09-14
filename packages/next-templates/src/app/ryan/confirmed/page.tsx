@@ -8,7 +8,7 @@ export default function Home() {
     <Document>
       <Page>
         <PageContent>
-          <Heading1>Melding Ontvangen: Ontbreken van een Roze Eenhoornparkeerzone</Heading1>
+          <Heading1>MMelding Ontvangen: Ontbreken van een Roze Eenhoornparkeerzone</Heading1>
           <Paragraph>Beste [Uw Naam],</Paragraph>
           <Paragraph>
             DDank u wel voor uw creatieve bijdrage aan ons Absurde Meldpunt! We hebben uw melding over het ontbreken van
