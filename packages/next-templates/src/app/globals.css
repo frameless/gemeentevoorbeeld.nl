@@ -42,7 +42,7 @@ body {
   --utrecht-page-padding-inline-start: 50px;
   --utrecht-page-padding-inline-end: 50px;
   --utrecht-paragraph-lead-line-height: 1.5;
-  --utrecht-paragraph-margin-block-end: 24px;
+  --utrecht-paragraph-margin-block-end: 8px;
   --utrecht-spotlight-section-padding-inline-end: 24px;
   --utrecht-spotlight-section-padding-inline-start: 24px;
   --utrecht-spotlight-section-padding-block-end: 24px;
@@ -58,6 +58,14 @@ body {
   background-position: calc(100% - 10px);
   background-repeat: no-repeat;
   background-size: auto 1.4em;
+}
+
+.voorbeeld-begin-of-block {
+  --utrecht-heading-4-margin-block-start: 4.5em;
+}
+
+.voorbeeld-last-of-block {
+  margin-block-start: 4.5em;
 }
 
 .voorbeeld-form-label {
