@@ -19,7 +19,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         <Link className="example--header-links">Contact</Link>
       </div>
       <div className="example--search-box">
-        <Textbox placeholder="Bijvoorbeeld zwembad of grofvuil" />
+        <Textbox className="example--header-text-box" placeholder="Bijvoorbeeld zwembad of grofvuil" />
         <Button appearance="secondary-action-button">
           <Search /> Zoeken
         </Button>
