@@ -4,8 +4,8 @@ import Logo from '@/app/styling/assets/voorbeeld-header.svg';
 import React, { HTMLAttributes } from 'react';
 import './exampleheaderfocus.css';
 
-interface ExampleHeaderFocusProps extends HTMLAttributes<HTMLDivElement> {}
-export const ExampleHeaderFocus = ({ ...props }: ExampleHeaderFocusProps) => (
+interface ExampleHeaderFunnelProps extends HTMLAttributes<HTMLDivElement> {}
+export const ExampleHeaderFunnel = ({ ...props }: ExampleHeaderFunnelProps) => (
   <PageHeader className="example--header-home-page">
     <div className="logo">
       <Logo />
@@ -18,4 +18,4 @@ export const ExampleHeaderFocus = ({ ...props }: ExampleHeaderFocusProps) => (
   </PageHeader>
 );
 
-ExampleHeaderFocus.displayName = 'ExampleHeaderFocus';
+ExampleHeaderFunnel.displayName = 'ExampleHeaderFunnel';
