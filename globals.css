@@ -1,0 +1,41 @@
+body {
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.example--placeholder-paragraph {
+  --utrecht-form-label-color: darkgrey;
+}
+
+.example--back-link {
+  --utrecht-link-text-decoration: none;
+}
+.example--underlined {
+  text-decoration: underline;
+}
+
+/* NLDS CSS Variables */
+.utrecht-theme {
+  --utrecht-space-around: 1;
+
+  /* HACK: these tokens are not set in utrecht-theme */
+  --utrecht-button-group-margin-block-end: 16px;
+  --utrecht-button-group-margin-block-start: 16px;
+  --utrecht-link-icon-size: 18px;
+}
+
+.voorbeeld-theme {
+  --utrecht-space-around: 1;
+
+  /* HACK: these tokens are not set in utrecht-theme */
+  --utrecht-button-group-margin-block-end: 16px;
+  --utrecht-button-group-margin-block-start: 16px;
+  --utrecht-link-icon-size: 18px;
+  --utrecht-radio-button-size: 1em;
+  --utrecht-form-field-margin-block-end: 20px;
+  --utrecht-page-footer-background-color: var(--voorbeeld-color-violet-700);
+}
+
+.utrecht-link {
+  --utrecht-icon-inset-block-start: 0.2em;
+}
