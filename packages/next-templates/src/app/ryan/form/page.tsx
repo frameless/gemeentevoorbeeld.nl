@@ -123,6 +123,7 @@ export default function Home() {
                 })}
                 placeholder=""
               ></Textarea>
+              {/*Going to make this a component soon (ExampleBijlageToevoegen) everything between the Article */}
               <Article>
                 <Paragraph>Bijlage</Paragraph>
                 <Paragraph>(optioneel)</Paragraph>
