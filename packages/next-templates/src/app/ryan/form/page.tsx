@@ -23,7 +23,7 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react';
 import { useForm } from 'react-hook-form';
-import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <Document>
       <Page>
-        <ExampleHeader />
+        <ExampleHeaderFocus />
         <PageContent>
           <Link className="example--back-link" href="./detail-page">
             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
@@ -72,6 +72,7 @@ export default function Home() {
                 })}
                 placeholder="Kies een hoofdcategorie"
                 invalid={!!errors.mainCategory}
+                className="voorbeeld-svg-arrow"
               >
                 <SelectOption selected disabled value="">
                   Kies een hoofdcategorie
@@ -98,6 +99,7 @@ export default function Home() {
                 })}
                 placeholder="Kies een subcategorie"
                 invalid={!!errors.subCategory}
+                className="voorbeeld-svg-arrow"
               >
                 <SelectOption selected disabled value="">
                   Kies een subcategorie
