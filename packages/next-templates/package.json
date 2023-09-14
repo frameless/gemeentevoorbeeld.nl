@@ -34,8 +34,6 @@
     "@utrecht/design-tokens": "1.0.0-alpha.540",
     "@utrecht/web-component-library-react": "1.0.0-alpha.547",
     "@utrecht/web-component-library-stencil": "1.0.0-alpha.547",
-    "clsx": "2.0.0",
-    "install": "0.13.0",
-    "npm": "10.1.0"
+    "clsx": "2.0.0"
   }
 }
