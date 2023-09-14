@@ -12,7 +12,6 @@ import {
   FormLabel,
   Heading2,
   Heading4,
-  Heading6,
   Link,
   Page,
   PageContent,
@@ -125,7 +124,7 @@ export default function Home() {
                 placeholder=""
               ></Textarea>
               <Article>
-                <Heading6>Bijlage</Heading6>
+                <Paragraph>Bijlage</Paragraph>
                 <Paragraph>(optioneel)</Paragraph>
                 <UnorderedList>
                   <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
