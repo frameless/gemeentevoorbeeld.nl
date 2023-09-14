@@ -109,11 +109,9 @@ export default function Home() {
               <Paragraph>
                 <FormLabel htmlFor="description">Beschrijving:</FormLabel>
               </Paragraph>
-              <Paragraph className="example--placeholder-paragraph">
-                <FormLabel htmlFor="description">
-                  Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden.
-                </FormLabel>
-              </Paragraph>
+              <FormFieldDescription>
+                Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden.
+              </FormFieldDescription>
               <Textarea
                 id="description"
                 invalid={!!errors.description}
@@ -170,9 +168,7 @@ export default function Home() {
               <Paragraph>
                 <FormLabel htmlFor="height">Ter hoogte van</FormLabel>
               </Paragraph>
-              <Paragraph className="example--placeholder-paragraph">
-                <FormLabel htmlFor="height">Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormLabel>
-              </Paragraph>
+              <FormFieldDescription>Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormFieldDescription>
               <Textarea
                 id="height"
                 invalid={!!errors.height}
