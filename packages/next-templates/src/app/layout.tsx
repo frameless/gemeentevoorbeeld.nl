@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/index.css';
 import './globals.css';
 import React from 'react';
+import './font';
 
 export const metadata: Metadata = {
   title: 'Demo Utrecht formulieren',
