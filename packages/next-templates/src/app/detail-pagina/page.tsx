@@ -124,13 +124,13 @@ export default function Home() {
 
           <section>
             <Heading2>Goed om te weten</Heading2>
-            <Heading3>Professioneel verwijderd</Heading3>
+            <Heading2>Professioneel verwijderd</Heading2>
             <Paragraph>
               Het schoonmaken wordt altijd gedaan door een professioneel en gekwalificeerd schoonmaakbedrijf. Dat is
               belangrijk, omdat graffiti- en wildplakverwijdering specialistisch werk is en uw pand niet mag worden
               beschadigd. Naast schoonmaakspecialist zijn de schoonmakers daarom ook schilder en gevelspecialist.
             </Paragraph>
-            <Heading3>Aangifte bij de politie</Heading3>
+            <Heading2>Aangifte bij de politie</Heading2>
             <Paragraph>
               Als de graffiti te lezen is doet het Meldpunt Graffiti, namens u, aangifte bij de politie.
             </Paragraph>
@@ -147,10 +147,10 @@ export default function Home() {
           <section>
             <Heading2>Contact</Heading2>
             <Paragraph>
-              Het{' '}
+              Het
               <Link href="https://www.figma.com/file/OlnanjplmeO3aWYzNKnNTo/Voorbeeld---Templates?type=design&node-id=501-1396&mode=dev">
                 Meldpunt Graffiti
-              </Link>{' '}
+              </Link>
               van de gemeente coördineert het schoonmaken van de gevels en werkt samen met verschillende organisaties om
               de stad zoveel mogelijk vrij van graffiti te houden.
             </Paragraph>
