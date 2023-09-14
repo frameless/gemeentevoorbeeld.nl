@@ -129,7 +129,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: next-templates
-          path: packages/next-templates/src/
+          path: packages/next-templates/
           retention-days: 1
 
   test:
@@ -184,13 +184,13 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: next-templates
-          path: packages/next-templates/src/
+          path: packages/next-templates/
 
       - name: Continuous Deployment to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           branch: gh-pages
-          folder: packages/next-templates/src/
+          folder: packages/next-templates/
 
   publish-npm:
     runs-on: ubuntu-latest
