@@ -1,5 +1,5 @@
 'use client';
-import { Button, Link, Page, PageHeader, Textbox } from '@utrecht/component-library-react';
+import { Link, PageHeader } from '@utrecht/component-library-react';
 import Logo from '@/app/styling/assets/voorbeeld-header.svg';
 import React, { HTMLAttributes } from 'react';
 import './exampleheaderfocus.css';
