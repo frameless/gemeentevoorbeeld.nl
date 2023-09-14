@@ -61,7 +61,9 @@ export default function Home() {
           >
             <FormField invalid={!!errors.mainCategory}>
               <Paragraph>
-                <FormLabel htmlFor="mainCategory">Hoofdcategorie</FormLabel>
+                <FormLabel className="voorbeeld-form-label" htmlFor="mainCategory">
+                  Hoofdcategorie
+                </FormLabel>
               </Paragraph>
               <Select
                 id="mainCategory"
@@ -85,7 +87,9 @@ export default function Home() {
             </FormField>
             <FormField invalid={!!errors.subCategory}>
               <Paragraph>
-                <FormLabel htmlFor="subCategory">Subcategorie</FormLabel>
+                <FormLabel className="voorbeeld-form-label" htmlFor="subCategory">
+                  Subcategorie
+                </FormLabel>
               </Paragraph>
               <Select
                 id="subCategory"
@@ -107,7 +111,9 @@ export default function Home() {
             </FormField>
             <FormField invalid={!!errors.description}>
               <Paragraph>
-                <FormLabel htmlFor="description">Beschrijving:</FormLabel>
+                <FormLabel className="voorbeeld-form-label" htmlFor="description">
+                  Beschrijving:
+                </FormLabel>
               </Paragraph>
               <FormFieldDescription>
                 Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden.
@@ -136,7 +142,9 @@ export default function Home() {
             <Heading4>Op welke locatie heeft de melding betrekking?</Heading4>
             <FormField invalid={!!errors.place}>
               <Paragraph>
-                <FormLabel htmlFor="place">Plaats</FormLabel>
+                <FormLabel className="voorbeeld-form-label" htmlFor="place">
+                  Plaats
+                </FormLabel>
               </Paragraph>
               <Textbox
                 id="place"
@@ -151,7 +159,9 @@ export default function Home() {
             </FormField>
             <FormField invalid={!!errors.street}>
               <Paragraph>
-                <FormLabel htmlFor="place">Straat</FormLabel>
+                <FormLabel className="voorbeeld-form-label" htmlFor="place">
+                  Straat
+                </FormLabel>
               </Paragraph>
               <Textbox
                 id="street"
@@ -166,7 +176,9 @@ export default function Home() {
             </FormField>
             <FormField invalid={!!errors.height}>
               <Paragraph>
-                <FormLabel htmlFor="height">Ter hoogte van</FormLabel>
+                <FormLabel className="voorbeeld-form-label" htmlFor="height">
+                  Ter hoogte van
+                </FormLabel>
               </Paragraph>
               <FormFieldDescription>Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormFieldDescription>
               <Textarea
@@ -206,7 +218,9 @@ export default function Home() {
             </Fieldset>
             <FormField invalid={!!errors.name} type="text">
               <Paragraph>
-                <FormLabel htmlFor="Naam">Naam</FormLabel>
+                <FormLabel className="voorbeeld-form-label" htmlFor="Naam">
+                  Naam
+                </FormLabel>
               </Paragraph>
               <Paragraph>
                 <Textbox
@@ -226,7 +240,9 @@ export default function Home() {
             </FormField>
             <FormField invalid={!!errors.email} type="text">
               <Paragraph>
-                <FormLabel htmlFor="Email">E-mail</FormLabel>
+                <FormLabel className="voorbeeld-form-label" htmlFor="Email">
+                  E-mail
+                </FormLabel>
               </Paragraph>
               <Paragraph>
                 <Textbox
@@ -246,7 +262,9 @@ export default function Home() {
             </FormField>
             <FormField invalid={!!errors.telephone} type="text">
               <Paragraph>
-                <FormLabel htmlFor="Telefoon">Telefoon</FormLabel>
+                <FormLabel className="voorbeeld-form-label" htmlFor="Telefoon">
+                  Telefoon
+                </FormLabel>
               </Paragraph>
               <Paragraph>
                 <Textbox
