@@ -1,0 +1,37 @@
+{
+  "version": "0.1.0",
+  "name": "@frameless/next-templates",
+  "author": "Frameless",
+  "description": "React component library for the Example repository, based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "private": true,
+  "keywords": [
+    "nl-design-system"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@types/node": "20.5.6",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "7.45.4",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "13.4.19",
+    "@nl-design-system-unstable/voorbeeld-design-tokens": "1.0.0-alpha.88",
+    "@svgr/webpack": "8.1.0",
+    "@utrecht/component-library-css": "1.0.0-alpha.547",
+    "@utrecht/component-library-react": "1.0.0-alpha.356",
+    "@utrecht/design-tokens": "1.0.0-alpha.540",
+    "@utrecht/web-component-library-react": "1.0.0-alpha.547",
+    "@utrecht/web-component-library-stencil": "1.0.0-alpha.547",
+    "clsx": "2.0.0"
+  }
+}
