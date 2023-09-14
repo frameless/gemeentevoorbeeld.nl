@@ -1,0 +1,64 @@
+.example--header-home-page {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-block: 16px;
+}
+
+.example--logo {
+  text-align: center;
+  width: 40%;
+}
+
+/* block-size moet nog voor het search component toegevoegd worden */
+.example--header-items {
+  display: flex;
+  flex: 1;
+  height: 48px;
+  justify-content: center;
+  padding-inline-end: 5em;
+}
+.example--search-box {
+  display: flex;
+  flex: 1;
+}
+.example--header-links-container {
+  align-items: center;
+  display: flex;
+}
+
+.example--header-links {
+  align-items: center;
+  display: flex;
+  margin-inline-end: 32px;
+}
+
+.example--header-user-icon {
+  margin-inline-end: 4px;
+}
+
+.utrecht-textbox {
+  margin-inline: 8px;
+}
+
+.example--header-navbar {
+  align-items: center;
+  background-color: #5315f6;
+  display: flex;
+}
+
+/* Style for the navigation links */
+.example--header-navbar a {
+  color: #fff;
+  padding-block-end: 0.8em;
+  padding-block-start: 0.8em;
+  padding-inline-end: 2em;
+  padding-inline-start: 2em;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.example--header-navbar a:hover {
+  background-color: #290b7a;
+  color: #fff;
+}
