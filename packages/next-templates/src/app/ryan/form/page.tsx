@@ -1,9 +1,7 @@
 'use client';
 
 import {
-  Article,
   Button,
-  ButtonLink,
   Document,
   Fieldset,
   FieldsetLegend,
@@ -71,7 +69,7 @@ export default function Home() {
                   required: 'Dit is verplicht',
                 })}
                 placeholder="Kies een hoofdcategorie"
-                invalid={!!errors.location}
+                invalid={!!errors.mainCategory}
               >
                 <SelectOption selected disabled value="">
                   Kies een hoofdcategorie
@@ -81,7 +79,9 @@ export default function Home() {
                 <SelectOption value="3">Option #3</SelectOption>
                 <SelectOption value="4">Option #4</SelectOption>
               </Select>
-              <Paragraph>{errors.location?.message}</Paragraph>
+              <FormFieldDescription invalid={!!errors.mainCategory}>
+                {errors.mainCategory?.message}
+              </FormFieldDescription>
             </FormField>
             <FormField invalid={!!errors.subCategory}>
               <Paragraph>
@@ -93,7 +93,7 @@ export default function Home() {
                   required: 'Dit is verplicht',
                 })}
                 placeholder="Kies een subcategorie"
-                invalid={!!errors.location}
+                invalid={!!errors.subCategory}
               >
                 <SelectOption selected disabled value="">
                   Kies een subcategorie
@@ -103,7 +103,7 @@ export default function Home() {
                 <SelectOption value="3">Option #3</SelectOption>
                 <SelectOption value="4">Option #4</SelectOption>
               </Select>
-              <Paragraph>{errors.location?.message}</Paragraph>
+              <FormFieldDescription invalid={!!errors.subCategory}>{errors.subCategory?.message}</FormFieldDescription>
             </FormField>
             <FormField invalid={!!errors.description}>
               <Paragraph>
@@ -122,7 +122,7 @@ export default function Home() {
                 placeholder=""
               ></Textarea>
               {/*Going to make this a component soon (ExampleBijlageToevoegen) everything between the Article */}
-              <Article>
+              {/* <Article>
                 <Paragraph>Bijlage</Paragraph>
                 <Paragraph>(optioneel)</Paragraph>
                 <UnorderedList>
@@ -131,7 +131,7 @@ export default function Home() {
                 </UnorderedList>
                 <Button appearance="primary-action-button">Bestand kiezen</Button>
                 <Paragraph>Geen bestand gekozen</Paragraph>
-              </Article>
+              </Article> */}
             </FormField>
             <Heading4>Op welke locatie heeft de melding betrekking?</Heading4>
             <FormField invalid={!!errors.place}>
@@ -147,7 +147,7 @@ export default function Home() {
                 })}
                 placeholder=""
               ></Textbox>
-              <Paragraph>{errors.description?.message}</Paragraph>
+              <FormFieldDescription invalid={!!errors.place}>{errors.description?.message}</FormFieldDescription>
             </FormField>
             <FormField invalid={!!errors.street}>
               <Paragraph>
@@ -162,7 +162,7 @@ export default function Home() {
                 })}
                 placeholder=""
               ></Textbox>
-              <Paragraph>{errors.street?.message}</Paragraph>
+              <FormFieldDescription invalid={!!errors.street}>{errors.street?.message}</FormFieldDescription>
             </FormField>
             <FormField invalid={!!errors.height}>
               <Paragraph>
@@ -178,7 +178,7 @@ export default function Home() {
                 })}
                 placeholder=""
               ></Textarea>
-              <Paragraph>{errors.height?.message}</Paragraph>
+              <FormFieldDescription invalid={!!errors.height}>{errors.height?.message}</FormFieldDescription>
             </FormField>
             <Heading4>Hoe kunnen we u bereiken voor meer informatie?</Heading4>
             <Fieldset role="radiogroup">
@@ -204,31 +204,69 @@ export default function Home() {
                 </Paragraph>
               </FormField>
             </Fieldset>
-            <FormField type="text">
+            <FormField invalid={!!errors.name} type="text">
               <Paragraph>
                 <FormLabel htmlFor="Naam">Naam</FormLabel>
               </Paragraph>
               <Paragraph>
-                <Textbox autoComplete="name" id="Naam" name="Naam" type="text" />
+                <Textbox
+                  autoComplete="name"
+                  id="name"
+                  invalid={!!errors.name}
+                  {...register('name', {
+                    required: 'Dit is verplicht',
+                    minLength: { value: 4, message: 'Min length is 4' },
+                  })}
+                  placeholder=""
+                  name="Naam"
+                  type="text"
+                />
               </Paragraph>
+              <FormFieldDescription invalid={!!errors.name}>{errors.name?.message}</FormFieldDescription>
             </FormField>
-            <FormField type="text">
+            <FormField invalid={!!errors.email} type="text">
               <Paragraph>
                 <FormLabel htmlFor="Email">E-mail</FormLabel>
               </Paragraph>
               <Paragraph>
-                <Textbox autoComplete="email" id="Email" name="Email" type="email" />
+                <Textbox
+                  autoComplete="email"
+                  id="email"
+                  invalid={!!errors.email}
+                  {...register('email', {
+                    required: 'Dit is verplicht',
+                    minLength: { value: 4, message: 'Min length is 4' },
+                  })}
+                  placeholder=""
+                  name="Email"
+                  type="email"
+                />
               </Paragraph>
+              <FormFieldDescription invalid={!!errors.email}>{errors.email?.message}</FormFieldDescription>
             </FormField>
-            <FormField type="text">
+            <FormField invalid={!!errors.telephone} type="text">
               <Paragraph>
                 <FormLabel htmlFor="Telefoon">Telefoon</FormLabel>
               </Paragraph>
               <Paragraph>
-                <Textbox autoComplete="tel" id="Telefoon" name="Telefoon" type="tel" />
+                <Textbox
+                  autoComplete="tel"
+                  id="telephone"
+                  invalid={!!errors.telephone}
+                  {...register('telephone', {
+                    required: 'Dit is verplicht',
+                    minLength: { value: 4, message: 'Min length is 4' },
+                  })}
+                  placeholder=""
+                  name="Telefoon"
+                  type="tel"
+                />
               </Paragraph>
+              <FormFieldDescription invalid={!!errors.telephone}>{errors.telephone?.message}</FormFieldDescription>
             </FormField>
-            <ButtonLink appearance="primary-action-button">Versturen</ButtonLink>
+            <Button type="submit" appearance="primary-action-button">
+              Versturen
+            </Button>
           </form>
         </PageContent>
         <ExampleFooterFocus />
