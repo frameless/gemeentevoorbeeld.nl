@@ -20,12 +20,15 @@ import {
 } from '@utrecht/component-library-react';
 import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 
 export default function Home() {
   return (
     <Page>
+      <ExampleHeader />
       <PageContent>
-        <Paragraph>
+        {/* <Paragraph>
           <BreadcrumbNav appearance="arrows" label="Kruimelpad">
             {' '}
             <BreadcrumbLink href="" index={0} rel="home">
@@ -38,7 +41,7 @@ export default function Home() {
               Meldingen openbare ruimte
             </BreadcrumbLink>
           </BreadcrumbNav>
-        </Paragraph>
+        </Paragraph> */}
         <Article>
           <Heading1>Graffiti laten verwijderen van uw pand</Heading1>
           <Paragraph lead>
@@ -164,6 +167,7 @@ export default function Home() {
           </section>
         </Article>
       </PageContent>
+      <ExampleFooter />
     </Page>
   );
 }
