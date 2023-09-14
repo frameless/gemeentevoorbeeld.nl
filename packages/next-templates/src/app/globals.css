@@ -52,6 +52,18 @@ body {
   --utrecht-paragraph-lead-font-size: 20px;
 }
 
+.voorbeeld-svg-arrow {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z' fill='%23001737'/%3E%3C/svg%3E%0A");
+  background-position: calc(100% - 10px);
+  background-repeat: no-repeat;
+  background-size: auto 1.4em;
+}
+
+.voorbeeld-form-label {
+  --utrecht-form-label-font-weight: 700;
+}
+
 .utrecht-ordered-list__item {
   color: #5315f6;
 }
