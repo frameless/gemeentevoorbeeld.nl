@@ -1,0 +1,23 @@
+.example--header-navbar {
+  align-items: center;
+  background-color: #5315f6;
+  display: flex;
+  padding-inline-end: 1em;
+  padding-inline-start: 1em;
+}
+
+/* Style for the navigation links */
+.example--header-navbar a {
+  color: #fff;
+  padding-block-end: 0.8em;
+  padding-block-start: 0.8em;
+  padding-inline-end: 2em;
+  padding-inline-start: 2em;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.example--header-navbar a:hover {
+  background-color: #290b7a;
+  color: #fff;
+}
