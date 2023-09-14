@@ -2,7 +2,7 @@
 import { Button, Link, Page, PageHeader, Textbox } from '@utrecht/component-library-react';
 import Logo from '@/app/styling/assets/voorbeeld-header.svg';
 import React, { HTMLAttributes } from 'react';
-import '@/components/ExampleHeaderFocus/exampleheaderfocus.css';
+import './exampleheaderfocus.css';
 
 interface ExampleHeaderFocusProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeaderFocus = ({ ...props }: ExampleHeaderFocusProps) => (
