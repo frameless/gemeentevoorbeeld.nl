@@ -11,7 +11,7 @@ export default function Home() {
           <Heading1>Melding Ontvangen: Ontbreken van een Roze Eenhoornparkeerzone</Heading1>
           <Paragraph>Beste [Uw Naam],</Paragraph>
           <Paragraph>
-            Dank u wel voor uw creatieve bijdrage aan ons Absurde Meldpunt! We hebben uw melding over het ontbreken van
+            DDank u wel voor uw creatieve bijdrage aan ons Absurde Meldpunt! We hebben uw melding over het ontbreken van
             een roze eenhoornparkeerzone voor vliegende huisdieren ontvangen en kunnen gerust stellen dat uw verzoek
             zeker in het rijk der verbeelding thuishoort.
           </Paragraph>
