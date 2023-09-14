@@ -27,6 +27,9 @@ module.exports = {
 
     return config;
   },
-  distDir: 'dist',
   output: 'export',
+  basePath: '/nl-design-system-templates',
+  images: {
+    unoptimized: true,
+  },
 };
