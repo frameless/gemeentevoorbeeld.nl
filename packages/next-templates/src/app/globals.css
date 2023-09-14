@@ -68,12 +68,11 @@ https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliothee
   --utrecht-spotlight-section-padding-block-end: 24px;
 }
 
+/* HACK these tokens are not yet defined in voorbeeld-thema */
 .utrecht-radio-button {
   --utrecht-radio-button-background-color: white;
   --utrecht-radio-button-icon-size: 0%;
   --utrecht-radio-button-checked-border-width: 0.35em;
   --utrecht-radio-button-checked-border-color: var(--voorbeeld-color-violet-700);
   --utrecht-radio-button-border-color: #7a8aa0;
-
-  vertical-align: 0% !important;
 }
