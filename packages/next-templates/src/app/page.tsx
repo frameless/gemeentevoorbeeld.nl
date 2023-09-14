@@ -22,11 +22,13 @@ import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 
 export default function Home() {
   return (
     <Page>
       <ExampleHeader />
+      <ExampleNavigation />
       <PageContent>
         {/* <Paragraph>
           <BreadcrumbNav appearance="arrows" label="Kruimelpad">
