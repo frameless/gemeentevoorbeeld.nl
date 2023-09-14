@@ -202,20 +202,16 @@ export default function Home() {
                 melding.
               </FormFieldDescription>
               <FormField type="radio">
-                <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
-                  <FormLabel htmlFor="anoniem-ja" type="radio">
-                    <RadioButton className="utrecht-form-field__input" id="anoniem-ja" name="anoniem" value="1" />
-                    Ja
-                  </FormLabel>
-                </Paragraph>
+                <FormLabel htmlFor="anoniem-ja" type="radio">
+                  Ja
+                </FormLabel>
+                <RadioButton className="utrecht-form-field__input" id="anoniem-ja" name="anoniem" value="1" />
               </FormField>
               <FormField type="radio">
-                <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
-                  <FormLabel htmlFor="anoniem-nee" type="radio">
-                    <RadioButton className="utrecht-form-field__input" id="anoniem-nee" name="anoniem" value="2" />
-                    Nee
-                  </FormLabel>
-                </Paragraph>
+                <FormLabel htmlFor="anoniem-nee" type="radio">
+                  Nee
+                </FormLabel>
+                <RadioButton className="utrecht-form-field__input" id="anoniem-nee" name="anoniem" value="2" />
               </FormField>
             </Fieldset>
             <FormField invalid={!!errors.name} type="text">
