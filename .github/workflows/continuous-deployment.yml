@@ -119,18 +119,10 @@ jobs:
         run: |
           pnpm install
 
-      - name: "Continuous Integration: build"
-        env:
-          BASE_URL: "/nl-design-system-templates/"
+      - name: "Continuous Deployment: build"
         run: |
           pnpm run --if-present build
-
-      - name: "Retain build artifact: next-templates"
-        uses: actions/upload-artifact@v3
-        with:
-          name: next-templates
-          path: packages/next-templates/
-          retention-days: 1
+          touch dist/.nojekyll
 
   test:
     runs-on: ubuntu-latest
@@ -180,17 +172,11 @@ jobs:
       - name: Checkout release branch
         uses: actions/checkout@v3
 
-      - name: "Restore build artifact: next-templates"
-        uses: actions/download-artifact@v3
-        with:
-          name: next-templates
-          path: packages/next-templates/
-
       - name: Continuous Deployment to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           branch: gh-pages
-          folder: packages/next-templates/
+          folder: packages/next-templates/dist/
 
   publish-npm:
     runs-on: ubuntu-latest

@@ -27,5 +27,6 @@ module.exports = {
 
     return config;
   },
-  basePath: '/github-pages',
+  distDir: 'dist',
+  output: 'export',
 };
