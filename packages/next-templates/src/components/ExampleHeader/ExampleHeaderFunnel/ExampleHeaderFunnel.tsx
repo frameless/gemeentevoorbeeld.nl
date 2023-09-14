@@ -2,7 +2,7 @@
 import { Link, PageHeader } from '@utrecht/component-library-react';
 import Logo from '@/app/styling/assets/voorbeeld-header.svg';
 import React, { HTMLAttributes } from 'react';
-import './exampleheaderfocus.css';
+import './exampleheaderfunnel.css';
 
 interface ExampleHeaderFunnelProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeaderFunnel = ({ ...props }: ExampleHeaderFunnelProps) => (
