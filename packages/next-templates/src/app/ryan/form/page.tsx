@@ -22,6 +22,7 @@ import {
 } from '@utrecht/component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { useForm } from 'react-hook-form';
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 
 export default function Home() {
   const {
@@ -34,6 +35,7 @@ export default function Home() {
   return (
     <Document>
       <Page>
+        <ExampleHeader />
         <PageContent>
           <Link className="example--back-link" href="./detail-page">
             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">

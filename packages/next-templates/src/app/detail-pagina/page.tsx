@@ -88,7 +88,6 @@ export default function Home() {
                 Woont u niet in Den Haag of heeft u uw DigiD niet bij de hand? Vul het formulier dan in en print het.
                 Het ondertekende formulier stuurt u naar{' '}
                 <Link href="https://www.figma.com/file/OlnanjplmeO3aWYzNKnNTo/Voorbeeld---Templates?type=design&node-id=501-878&mode=dev">
-                  {' '}
                   Meldpunt Graffiti
                 </Link>
                 . Dat kan als bijlage per <Link href="mailto:hallo@voorbeeld.nl">e-mail</Link> of per post.
