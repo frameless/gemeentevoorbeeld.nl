@@ -221,7 +221,7 @@ export default function Home() {
                 <FormLabel htmlFor="Email">E-mail</FormLabel>
               </Paragraph>
               <Paragraph>
-                <Textbox autoComplete="email" id="Email" name="Email" type="text" />
+                <Textbox autoComplete="email" id="Email" name="Email" type="email" />
               </Paragraph>
             </FormField>
             <FormField type="text">
@@ -229,7 +229,7 @@ export default function Home() {
                 <FormLabel htmlFor="Telefoon">Telefoon</FormLabel>
               </Paragraph>
               <Paragraph>
-                <Textbox autoComplete="tel" id="Telefoon" name="Telefoon" type="text" />
+                <Textbox autoComplete="tel" id="Telefoon" name="Telefoon" type="tel" />
               </Paragraph>
             </FormField>
             <ButtonLink appearance="primary-action-button">Versturen</ButtonLink>
