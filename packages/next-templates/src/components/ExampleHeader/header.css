@@ -18,7 +18,6 @@
 }
 .example--search-box {
   display: flex;
-  flex: 1;
 }
 .example--header-links-container {
   align-items: center;
