@@ -8,7 +8,7 @@ import './header.css';
 interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
   <PageHeader className="example--header-home-page">
-    <button aria-label="collapse menu navigation" className="Example--header-burger-menu-button">
+    <button aria-label="collapse menu navigation" className="example--header-burger-menu-button">
       <span className="example--header-bar"></span>
       <span className="example--header-bar"></span>
       <span className="example--header-bar"></span>
