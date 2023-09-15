@@ -44,7 +44,7 @@
   max-width: 35ch;
 }
 
-@media screen and (width <= 600px) {
+@media screen and (width <= 960px) {
   .example-link-list-container {
     align-items: start;
     flex-direction: column;
@@ -52,7 +52,11 @@
   }
 }
 
-.utrecht-link-list__item--section {
+.example-footer-content {
   margin-block-start: 1em;
+  margin-inline-start: 2.5em;
+}
+
+.example--footer-logo {
   margin-inline-start: 2.5em;
 }
