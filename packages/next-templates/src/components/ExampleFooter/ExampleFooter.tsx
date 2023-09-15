@@ -24,7 +24,7 @@ export const ExampleFooter = ({ ...props }: ExampleFooterProps) => (
         <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Navigatie item" />
         <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Navigatie item" />
       </NavigationList>
-      <section>
+      <section className="utrecht-link-list__item--section">
         <Heading5>Heading</Heading5>
         <Paragraph className="utrecht-link-list__item">
           Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *

@@ -51,3 +51,8 @@
     gap: 1em;
   }
 }
+
+.utrecht-link-list__item--section {
+  margin-block-start: 1em;
+  margin-inline-start: 2.5em;
+}
