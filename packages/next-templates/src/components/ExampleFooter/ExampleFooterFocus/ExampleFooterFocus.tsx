@@ -8,7 +8,7 @@ export const ExampleFooterFocus = ({ ...props }: ExampleFooterFocusProps) => (
   <PageFooter>
     <div className="example-link-list-container" {...props}>
       <Logo className="example--footer-logo" />
-      <section className="utrecht-link-list__item--section">
+      <section className="example-footer-content">
         <Heading5>Heading</Heading5>
         <Paragraph className="utrecht-link-list__item">
           Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
