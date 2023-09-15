@@ -1,4 +1,4 @@
-import { Button, Link, Page, PageHeader, Textbox } from '@utrecht/component-library-react';
+import { Button, Link, PageHeader, Textbox } from '@utrecht/component-library-react';
 import Logo from '../../app/styling/assets/voorbeeld-header.svg';
 import Search from '../../app/styling/assets/searchbar-icon.svg';
 import User from '../../app/styling/assets/user-icon.svg';
