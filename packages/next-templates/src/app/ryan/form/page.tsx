@@ -24,9 +24,9 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { useForm } from 'react-hook-form';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
 
 export default function Home() {
   const {
@@ -235,7 +235,7 @@ export default function Home() {
             <ButtonLink appearance="primary-action-button">Versturen</ButtonLink>
           </form>
         </PageContent>
-        <ExampleFooter />
+        <ExampleFooterFocus />
       </Page>
     </Document>
   );
