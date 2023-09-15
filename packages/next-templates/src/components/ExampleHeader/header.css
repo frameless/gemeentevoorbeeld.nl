@@ -39,12 +39,52 @@
   margin-inline: 8px;
 }
 
+.example--header-burger-menu-button {
+  background-color: transparent;
+  border-width: 0;
+  cursor: pointer;
+  display: none;
+}
+.example--header-burger-menu-button:focus-visible {
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px white;
+  outline: 3px dotted black;
+}
+
+.example--header-bar {
+  background-color: var(--voorbeeld-color-violet-700);
+  display: block;
+  height: 3px;
+  margin-block: 5px;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+  width: 25px;
+}
+
 @media (width <= 820px) {
+  .example--header-home-page {
+    margin-inline: auto;
+  }
+
   .example--header-links-container {
     display: none;
   }
 
   .example--header-text-box {
     display: none;
+  }
+
+  .example--header-burger-menu-button {
+    display: block;
+  }
+
+  .example--header-burger-menu-button.example--header-active .example--header-bar:nth-child(2) {
+    opacity: 0%;
+  }
+  .example--header-burger-menu-button.example--header-active .example--header-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .example--header-burger-menu-button.example--header-active .example--header-burger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
