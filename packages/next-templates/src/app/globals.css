@@ -2,11 +2,6 @@ body {
   margin-block: 0;
   margin-inline: 0;
 }
-
-.example--placeholder-paragraph {
-  --utrecht-form-label-color: darkgrey;
-}
-
 .example--back-link {
   --utrecht-link-text-decoration: none;
 }
