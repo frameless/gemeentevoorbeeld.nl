@@ -38,3 +38,13 @@
 .example--header-text-box {
   margin-inline: 8px;
 }
+
+@media (width <= 820px) {
+  .example--header-links-container {
+    display: none;
+  }
+
+  .example--header-text-box {
+    display: none;
+  }
+}
