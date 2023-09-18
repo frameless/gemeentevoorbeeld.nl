@@ -16,10 +16,10 @@ export default function Home() {
   return (
     <Page>
       <PageContent>
-        <Heading1>Controleer je gegevens</Heading1>
-        <Heading2>je verloren sok</Heading2>
+        <Heading1>Controleer uw gegevens</Heading1>
+        <Heading2>uw verloren sok</Heading2>
         <Separator></Separator>
-        <Heading2>U gegevens </Heading2>
+        <Heading2>uw gegevens </Heading2>
         <Separator></Separator>
         <Paragraph>
           Dank u wel voor het melden van u verloren sok(ken). De gedetailleerde beschrijving die u heeft verstrekt, zal

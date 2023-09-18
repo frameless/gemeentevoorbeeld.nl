@@ -76,9 +76,9 @@ export default function Home() {
           <Paragraph>
             Dit programma benadrukt het belang van sokken in ons dagelijks leven, geeft hen de erkenning die ze
             verdienen en minimaliseert zo het verlies van sokken, wat bijdraagt aan het milieubewustzijn door de
-            hoeveelheid textielafval te verminderen,Eveneens bevordert het &ldquo;Meldpunt voor Verdwaalde Sokken&ldquo;
-            de betrokkenheid van de gemeenschap en moedigt het de deelname aan een positieve en vermakelijke inspanning
-            aan.
+            hoeveelheid textielafval te verminderen, eveneens bevordert het &ldquo;Meldpunt voor Verdwaalde
+            Sokken&ldquo; de betrokkenheid van de gemeenschap en moedigt het de deelname aan een positieve en
+            vermakelijke inspanning aan.
           </Paragraph>
           <Heading2>Spoed</Heading2>
           <Paragraph>
@@ -87,7 +87,7 @@ export default function Home() {
           </Paragraph>
           <UnorderedList>
             <UnorderedListItem>
-              Dien uw melding in zoals hierboven beschreven, Neem onmiddellijk telefonisch contact op met ons meldpunt
+              Dien uw melding in zoals hierboven beschreven, neem onmiddellijk telefonisch contact op met ons meldpunt
               op [14 042]. Dit nummer is 24/7 bereikbaar.
             </UnorderedListItem>
             <UnorderedListItem>

@@ -18,7 +18,7 @@ export default function Home() {
         <Heading1>Controleer je gegevens</Heading1>
         <Heading2>je gevonden sok</Heading2>
         <Separator></Separator>
-        <Heading2>U gegevens</Heading2>
+        <Heading2>je gegevens</Heading2>
         <Separator></Separator>
         <Paragraph>
           Dank u wel voor het melden van de gevonden sok(ken). Uw medewerking bij het herenigen van deze sok met zijn
