@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: false
@@ -291,8 +291,8 @@ importers:
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-stencil':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547
+        specifier: 1.0.0-alpha.563
+        version: 1.0.0-alpha.563
       clsx:
         specifier: 2.0.0
         version: 2.0.0
@@ -3518,6 +3518,12 @@ packages:
 
   /@utrecht/web-component-library-stencil@1.0.0-alpha.549:
     resolution: {integrity: sha512-EtjkBtJ/LKeqeNhGmgeT8rhgtgV9SgngOckcPkpp0iiJ4Wl2CSxdY8t/BwBEz17wPlPsJ5I3fNxYL8po+jKf4g==}
+    dependencies:
+      '@stencil/core': 3.4.2
+    dev: true
+
+  /@utrecht/web-component-library-stencil@1.0.0-alpha.563:
+    resolution: {integrity: sha512-us7YoaQ2cCdhGCVJUfBOx5Lb0zks0EC+xKB8TUIt3g9cUIsQPZ3S4ZhYKOnMrn4GfsKNn/hm4RtCb14JY5H63w==}
     dependencies:
       '@stencil/core': 3.4.2
     dev: true
