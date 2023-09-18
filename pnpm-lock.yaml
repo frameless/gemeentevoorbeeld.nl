@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: false
@@ -28,8 +28,8 @@ importers:
         specifier: 6.4.1
         version: 6.4.1(eslint@8.48.0)(typescript@5.2.2)
       '@utrecht/component-library-react':
-        specifier: 1.0.0-alpha.356
-        version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.373
+        version: 1.0.0-alpha.373(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-react':
         specifier: 1.0.0-alpha.549
         version: 1.0.0-alpha.549
@@ -282,8 +282,8 @@ importers:
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547
       '@utrecht/component-library-react':
-        specifier: 1.0.0-alpha.356
-        version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.373
+        version: 1.0.0-alpha.373(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/design-tokens':
         specifier: 1.0.0-alpha.540
         version: 1.0.0-alpha.540
@@ -3473,8 +3473,8 @@ packages:
     resolution: {integrity: sha512-Ezi60wh3LGb+1FG3E7zIOX6WklkKDwTIziDYa9S2Klykosv7o881o9WoR3wZDM+mUPPsrtvYgjwISd8QywsJQQ==}
     dev: true
 
-  /@utrecht/component-library-react@1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-QITfPXJaxLO5BLIs4WPGjz8653jcYJyMGYXwcWFyGSvOhPVtFw1frT5aJzwvfCAiu0laWlUadc6rdGB44wOfPw==}
+  /@utrecht/component-library-react@1.0.0-alpha.373(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-zq/xgCqdoYpOnMq39REoQS75m5xgWj4ZSqenzlrJO8ECzoPn1ZXeC4wtOEQVfshcTva1vd50veEwxXnz/Ent+A==}
     peerDependencies:
       react: '18'
       react-dom: '18'
