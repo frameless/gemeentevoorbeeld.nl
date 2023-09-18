@@ -27,6 +27,7 @@ import {
 import { useForm } from 'react-hook-form';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
+import { FormFieldInput } from '@/components/FormFieldInput/FormFieldInput';
 
 export default function Home() {
   const {
@@ -109,11 +110,9 @@ export default function Home() {
               <Paragraph>
                 <FormLabel htmlFor="description">Beschrijving:</FormLabel>
               </Paragraph>
-              <Paragraph className="example--placeholder-paragraph">
-                <FormLabel htmlFor="description">
-                  Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden.
-                </FormLabel>
-              </Paragraph>
+              <FormFieldDescription>
+                Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden.
+              </FormFieldDescription>
               <Textarea
                 id="description"
                 invalid={!!errors.description}
@@ -170,9 +169,7 @@ export default function Home() {
               <Paragraph>
                 <FormLabel htmlFor="height">Ter hoogte van</FormLabel>
               </Paragraph>
-              <Paragraph className="example--placeholder-paragraph">
-                <FormLabel htmlFor="height">Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormLabel>
-              </Paragraph>
+              <FormFieldDescription>Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormFieldDescription>
               <Textarea
                 id="height"
                 invalid={!!errors.height}
@@ -208,22 +205,22 @@ export default function Home() {
                 </Paragraph>
               </FormField>
             </Fieldset>
-            <FormField type="text">
-              <Paragraph>
-                <FormLabel htmlFor="Naam">Naam</FormLabel>
-              </Paragraph>
-              <Paragraph>
-                <Textbox autoComplete="name" id="Naam" name="Naam" type="text" />
-              </Paragraph>
-            </FormField>
-            <FormField type="text">
-              <Paragraph>
-                <FormLabel htmlFor="Email">E-mail</FormLabel>
-              </Paragraph>
-              <Paragraph>
-                <Textbox autoComplete="email" id="Email" name="Email" type="email" />
-              </Paragraph>
-            </FormField>
+            <FormFieldInput
+              autocomplete="name"
+              htmlfor="naam"
+              id="naam"
+              type="text"
+              name="Naam"
+              label="Naam"
+            ></FormFieldInput>
+            <FormFieldInput
+              autocomplete="email"
+              htmlfor="email"
+              id="email"
+              type="email"
+              name="E-mail"
+              label="E-mail"
+            ></FormFieldInput>
             <FormField type="text">
               <Paragraph>
                 <FormLabel htmlFor="Telefoon">Telefoon</FormLabel>
