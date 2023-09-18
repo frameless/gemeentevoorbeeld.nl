@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: false
@@ -279,8 +279,8 @@ importers:
         specifier: 8.1.0
         version: 8.1.0
       '@utrecht/component-library-css':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547
+        specifier: 1.0.0-alpha.564
+        version: 1.0.0-alpha.564
       '@utrecht/component-library-react':
         specifier: 1.0.0-alpha.356
         version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
@@ -3469,8 +3469,8 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@utrecht/component-library-css@1.0.0-alpha.547:
-    resolution: {integrity: sha512-Ezi60wh3LGb+1FG3E7zIOX6WklkKDwTIziDYa9S2Klykosv7o881o9WoR3wZDM+mUPPsrtvYgjwISd8QywsJQQ==}
+  /@utrecht/component-library-css@1.0.0-alpha.564:
+    resolution: {integrity: sha512-SZ3IZNsQS4IXg47668zgO36BjYPjzA39JiBqPE7tya13cJZt6kj8+dyGNLNa3lD2IUIuLsnAABRZYKBtgu+kxQ==}
     dev: true
 
   /@utrecht/component-library-react@1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0):
