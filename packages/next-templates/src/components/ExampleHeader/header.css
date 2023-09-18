@@ -41,6 +41,7 @@
 .example--header-burger-menu-button {
   background-color: transparent;
   border-width: 0;
+  color: var(--voorbeeld-color-violet-700);
   cursor: pointer;
   display: none;
 }
@@ -52,8 +53,9 @@
 
 .example--header-bar {
   background-color: var(--voorbeeld-color-violet-700);
+  border-radius: 10px;
   display: block;
-  height: 3px;
+  height: 2px;
   margin-block: 5px;
   -webkit-transition: all 0.3 ease-in-out;
   transition: all 0.3 ease-in-out;
@@ -74,7 +76,13 @@
   }
 
   .example--header-burger-menu-button {
-    display: block;
+    align-items: center;
+    display: flex;
+    font-size: 1em;
+  }
+
+  .example--header-burger-bar-container {
+    margin-inline-end: 4px;
   }
 
   .example--header-burger-menu-button.example--header-active .example--header-bar:nth-child(2) {
