@@ -9,9 +9,12 @@ interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
   <PageHeader className="example--header-home-page">
     <button aria-label="collapse menu navigation" className="example--header-burger-menu-button">
-      <span className="example--header-bar"></span>
-      <span className="example--header-bar"></span>
-      <span className="example--header-bar"></span>
+      <div className="example--header-burger-bar-container">
+        <span className="example--header-bar"></span>
+        <span className="example--header-bar"></span>
+        <span className="example--header-bar"></span>
+      </div>
+      Menu
     </button>
     <div className="example--logo">
       <Logo />
