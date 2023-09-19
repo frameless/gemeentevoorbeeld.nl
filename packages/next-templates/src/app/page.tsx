@@ -47,8 +47,8 @@ export default function Home() {
         <Article>
           <Heading1>Graffiti laten verwijderen van uw pand</Heading1>
           <Paragraph lead>
-            Heeft u overlast van graffiti, posters of stickers op uw huis of pand? <br />
-            Meldpunt Graffiti zorgt ervoor dat deze gratis worden verwijderd.
+            Heeft u overlast van graffiti, posters of stickers op uw huis of pand? Meldpunt Graffiti zorgt ervoor dat
+            deze gratis worden verwijderd.
           </Paragraph>
 
           <SpotlightSection>
