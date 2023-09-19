@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-block: 1em;
+  margin-block-start: 1em;
   margin-inline: 10em;
 }
 
@@ -68,7 +68,9 @@
 
 @media (width <= 1185px) {
   .example--header-home-page {
+    border-bottom: solid 4px #5315f6;
     margin-inline: auto;
+    padding-block-end: 1em;
   }
 
   .example--header-search-secondary-button {

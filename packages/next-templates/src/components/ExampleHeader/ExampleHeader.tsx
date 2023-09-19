@@ -8,7 +8,11 @@ import './header.css';
 interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
   <PageHeader className="example--header-home-page">
-    <button aria-label="collapse menu navigation" className="example--header-burger-menu-button">
+    <button
+      aria-label="collapse menu navigation"
+      className="example--header-burger-menu-button"
+      popoverTarget="popovertest"
+    >
       <div className="example--header-burger-bar-container">
         <span className="example--header-bar"></span>
         <span className="example--header-bar"></span>
@@ -34,6 +38,24 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         <Button className="example--header-search-subtle-button" appearance="subtle-button">
           <Search /> Zoeken
         </Button>
+      </div>
+    </div>
+    <div id="popovertest" role="dialog" popover>
+      <button popoverTarget="popover" popoverTargetAction="hide">
+        <span aria-hidden="true">❌</span>
+        <p>Close</p>
+      </button>
+      <div>
+        <div>
+          <h2>Pine Forest</h2>
+          <p>pine and balsam | 12oz | soy wax</p>
+          <p>
+            Transport yourself into an earthy forest with notes of fresh pine and balsam. This candle is perfect for
+            winding down on the weekend with a good book. <br />
+            <br /> Burn time: 40 hours.
+          </p>
+          <p className="product-preview-price">$36.99</p>
+        </div>
       </div>
     </div>
   </PageHeader>
