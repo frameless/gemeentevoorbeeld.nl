@@ -66,8 +66,8 @@ export default function Home() {
         .
       </Paragraph>
       <Paragraph>
-        Reserveren kan per dagdeel (10.00 - 13.00 uur / 13.30 - 16.30 uur).
-        <br /> Klik in het gewenste dagdeel in de tijdsbalk hieronder om de reservering te starten.
+        Reserveren kan per dagdeel (10.00 - 13.00 uur / 13.30 - 16.30 uur). Klik in het gewenste dagdeel in de tijdsbalk
+        hieronder om de reservering te starten.
       </Paragraph>
       <hr className="utrecht-separator" />
       <form className="utrecht-form" method="GET" action="/savi/form/bevestiging/succes">

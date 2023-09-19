@@ -19,9 +19,8 @@ export default function Home() {
     <Page>
       <Heading3>Beschikbaarheid</Heading3>
       <Paragraph>
-        Staat op een bepaalde locatie de bakfiets of aanhanger er niet bij dan is deze in reparatie. <br />
-        Voor de bakfiets geldt, zorg dat u deze niet te zwaar belaadt. Om het afvalstation te bereiken moet u namelijk
-        een heuveltje op.
+        Staat op een bepaalde locatie de bakfiets of aanhanger er niet bij dan is deze in reparatie. Voor de bakfiets
+        geldt, zorg dat u deze niet te zwaar belaadt. Om het afvalstation te bereiken moet u namelijk een heuveltje op.
       </Paragraph>
 
       <form className="utrecht-form" method="GET" action="/savi/form/bevestiging">
