@@ -62,9 +62,21 @@
   width: 25px;
 }
 
+.example--header-search-subtle-button {
+  display: none;
+}
+
 @media (width <= 1185px) {
   .example--header-home-page {
     margin-inline: auto;
+  }
+
+  .example--header-search-secondary-button {
+    display: none;
+  }
+
+  .example--header-search-subtle-button {
+    display: flex;
   }
 
   .example--header-links-container {
