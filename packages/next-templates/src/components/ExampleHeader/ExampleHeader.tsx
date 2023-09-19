@@ -28,7 +28,10 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
       </div>
       <div className="example--search-box">
         <Textbox className="example--header-text-box" placeholder="Bijvoorbeeld zwembad of grofvuil" />
-        <Button appearance="secondary-action-button">
+        <Button className="example--header-search-secondary-button" appearance="secondary-action-button">
+          <Search /> Zoeken
+        </Button>
+        <Button className="example--header-search-subtle-button" appearance="subtle-button">
           <Search /> Zoeken
         </Button>
       </div>
