@@ -45,7 +45,7 @@ export default function Home() {
           </BreadcrumbNav>
         </Paragraph> */}
         <Article>
-          <Heading1>Graffitii laten verwijderen van uw pand</Heading1>
+          <Heading1>Graffiti laten verwijderen van uw pand</Heading1>
           <Paragraph lead>
             Heeft u overlast van graffiti, posters of stickers op uw huis of pand? <br />
             Meldpunt Graffiti zorgt ervoor dat deze gratis worden verwijderd.
