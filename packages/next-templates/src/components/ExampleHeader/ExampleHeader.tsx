@@ -1,9 +1,12 @@
 import { Button, Link, PageHeader, Paragraph, Textbox } from '@utrecht/component-library-react';
 import Logo from '../../app/styling/assets/voorbeeld-header.svg';
 import Search from '../../app/styling/assets/searchbar-icon.svg';
+import Xbold from '../../app/styling/assets/x-bold.svg';
 import User from '../../app/styling/assets/user-icon.svg';
 import React, { HTMLAttributes } from 'react';
+import '@utrecht/component-library-css';
 import './header.css';
+import './header.scss';
 
 interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
@@ -41,15 +44,14 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
       </div>
     </div>
     <dialog id="popovertest" className="example--header-popover-menu" role="dialog" popover="auto">
-      <button popoverTarget="popovertest" popoverTargetAction="hide">
-        <span aria-hidden="true">❌</span>
-        <Paragraph>Sluiten</Paragraph>
+      <button className="example--popover-close" popoverTarget="popovertest" popoverTargetAction="hide">
+        <Xbold />
+        Sluiten
       </button>
       <div>
         <Link className="example--header-links">
           <User className="example--header-user-icon" /> Mijn omgeving
         </Link>
-        <Link className="example--header-links">Contact</Link>
         <Link className="example--header-links">Home</Link>
         <Link className="example--header-links">About</Link>
         <Link className="example--header-links">Services</Link>
