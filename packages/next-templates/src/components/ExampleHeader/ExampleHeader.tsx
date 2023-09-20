@@ -48,7 +48,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         <Xbold />
         Sluiten
       </button>
-      <div>
+      <div className="example--header-popover-container-links">
         <Link className="example--header-links">
           <User className="example--header-user-icon" /> Mijn omgeving
         </Link>
