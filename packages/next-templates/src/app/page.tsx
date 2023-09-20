@@ -88,7 +88,7 @@ export default function Home() {
               </UnorderedListItem>
               <UnorderedListItem>
                 Woont u niet in Den Haag of heeft u uw DigiD niet bij de hand? Vul het formulier dan in en print het.
-                Het ondertekende formulier stuurt u naar{' '}
+                Het ondertekende formulier stuurt u naar 
                 <Link href="https://www.figma.com/file/OlnanjplmeO3aWYzNKnNTo/Voorbeeld---Templates?type=design&node-id=501-878&mode=dev">
                   Meldpunt Graffiti
                 </Link>
@@ -120,7 +120,7 @@ export default function Home() {
             <Paragraph>
               Graffiti met racistisch karakter wordt binnen 24 uur verwijderd. Dit soort graffiti kunt u op werkdagen
               direct bij de gemeente melden via telefoonnummer 14070. In het weekend en op feestdagen belt u hiervoor de
-              politie via 0900 – 88 44.
+              politie via 0900 - 88 44.
             </Paragraph>
           </section>
 
@@ -134,12 +134,12 @@ export default function Home() {
             </Paragraph>
             <Heading2>Aangifte bij de politie</Heading2>
             <Paragraph>
-              Als de graffiti te lezen is doet het Meldpunt Graffiti, namens u, aangifte bij de politie.
+              Als de graffiti te lezen is. Doet het Meldpunt Graffiti, namens u, aangifte bij de politie.
             </Paragraph>
           </section>
 
           <section>
-            <Heading2>Hoeland duurt het?</Heading2>
+            <Heading2>Hoelang duurt het?</Heading2>
             <Paragraph>
               Graffiti, posters en stickers worden in principe binnen 5 werkdagen na melding verwijderd. Hoe snel dit
               gebeurt hangt af van de weersomstandigheden.
@@ -149,9 +149,9 @@ export default function Home() {
           <section>
             <Heading2>Contact</Heading2>
             <Paragraph>
-              Het
+              Het 
               <Link href="https://www.figma.com/file/OlnanjplmeO3aWYzNKnNTo/Voorbeeld---Templates?type=design&node-id=501-1396&mode=dev">
-                Meldpunt Graffiti
+                Meldpunt Graffiti 
               </Link>
               van de gemeente coördineert het schoonmaken van de gevels en werkt samen met verschillende organisaties om
               de stad zoveel mogelijk vrij van graffiti te houden.
