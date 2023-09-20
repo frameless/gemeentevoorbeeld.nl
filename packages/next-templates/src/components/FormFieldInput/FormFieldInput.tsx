@@ -22,7 +22,6 @@ export const FormFieldInput = ({
   id,
   autocomplete,
   name,
-  ...props
 }: PropsWithChildren<FormFieldInputProps>) => (
   <FormField type={type}>
     {label && (
