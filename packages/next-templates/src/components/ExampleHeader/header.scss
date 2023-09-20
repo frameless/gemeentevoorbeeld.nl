@@ -1,0 +1,5 @@
+@import "@utrecht/components/backdrop/css/mixin";
+
+.example--header-popover-menu::backdrop {
+  @include utrecht-backdrop;
+}
