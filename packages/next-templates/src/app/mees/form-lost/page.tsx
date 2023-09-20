@@ -13,28 +13,29 @@ import {
   Textbox,
 } from '@utrecht/component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { FormFieldInput } from '@/components/FormFieldInput/FormFieldInput';
 
 export default function Home() {
   return (
     <Page>
       <PageContent>
         <Heading1>Maak een melding van uw kwijtgeraakte sok</Heading1>
-        <FormField type="text">
-          <Paragraph>
-            <FormLabel htmlFor="Voornaam">Voornaam</FormLabel>
-          </Paragraph>
-          <Paragraph>
-            <Textbox id="Voornaam" name="message" type="text" />
-          </Paragraph>
-        </FormField>
-        <FormField type="text">
-          <Paragraph>
-            <FormLabel htmlFor="Achternaam">Achternaam</FormLabel>
-          </Paragraph>
-          <Paragraph>
-            <Textbox id="Achternaam" name="message" type="text" />
-          </Paragraph>
-        </FormField>
+        <FormFieldInput
+          autocomplete="name"
+          htmlfor="name"
+          id="name"
+          type="text"
+          name="Voornaam"
+          label="voornaam"
+        ></FormFieldInput>
+        <FormFieldInput
+          autocomplete="family-name"
+          htmlfor="achternaam"
+          id="achternaam"
+          type="family-name"
+          name="Achternaam"
+          label="Achternaam"
+        ></FormFieldInput>
         <FormField type="text">
           <Paragraph>
             <FormLabel htmlFor="Telefoon">Telefoon</FormLabel>
