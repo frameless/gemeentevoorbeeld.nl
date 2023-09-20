@@ -1,4 +1,4 @@
-import { Button, Link, PageHeader, Textbox } from '@utrecht/component-library-react';
+import { Button, Link, PageHeader, Paragraph, Textbox } from '@utrecht/component-library-react';
 import Logo from '../../app/styling/assets/voorbeeld-header.svg';
 import Search from '../../app/styling/assets/searchbar-icon.svg';
 import User from '../../app/styling/assets/user-icon.svg';
@@ -40,24 +40,23 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         </Button>
       </div>
     </div>
-    <div id="popovertest" role="dialog" popover>
-      <button popoverTarget="popover" popoverTargetAction="hide">
+    <dialog id="popovertest" className="example--header-popover-menu" role="dialog" popover="auto">
+      <button popoverTarget="popovertest" popoverTargetAction="hide">
         <span aria-hidden="true">❌</span>
-        <p>Close</p>
+        <Paragraph>Sluiten</Paragraph>
       </button>
       <div>
-        <div>
-          <h2>Pine Forest</h2>
-          <p>pine and balsam | 12oz | soy wax</p>
-          <p>
-            Transport yourself into an earthy forest with notes of fresh pine and balsam. This candle is perfect for
-            winding down on the weekend with a good book. <br />
-            <br /> Burn time: 40 hours.
-          </p>
-          <p className="product-preview-price">$36.99</p>
-        </div>
+        <Link className="example--header-links">
+          <User className="example--header-user-icon" /> Mijn omgeving
+        </Link>
+        <Link className="example--header-links">Contact</Link>
+        <Link className="example--header-links">Home</Link>
+        <Link className="example--header-links">About</Link>
+        <Link className="example--header-links">Services</Link>
+        <Link className="example--header-links">Portfolio</Link>
+        <Link className="example--header-links">Contact</Link>
       </div>
-    </div>
+    </dialog>
   </PageHeader>
 );
 
