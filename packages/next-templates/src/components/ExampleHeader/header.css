@@ -66,11 +66,32 @@
   display: none;
 }
 
+.example--header-popover-menu {
+  border: none;
+  height: 100%;
+  left: 45%;
+  padding-inline: 2em;
+  width: 50%;
+}
+
+.example--popover-close {
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 1em;
+  margin-block: 1em;
+}
+
 @media (width <= 1185px) {
   .example--header-home-page {
     border-bottom: solid 4px #5315f6;
     margin-inline: auto;
     padding-block-end: 1em;
+  }
+
+  .example--header-links {
+    border-bottom: 1px solid #d9d9d9;
+    padding-block: 12px;
   }
 
   .example--header-search-secondary-button {
