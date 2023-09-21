@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: false
@@ -30,6 +30,9 @@ importers:
       '@utrecht/component-library-react':
         specifier: 1.0.0-alpha.356
         version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
+      '@utrecht/components':
+        specifier: 1.0.0-alpha.526
+        version: 1.0.0-alpha.526
       '@utrecht/web-component-library-react':
         specifier: 1.0.0-alpha.549
         version: 1.0.0-alpha.549
@@ -3484,6 +3487,12 @@ packages:
       lodash.chunk: 4.2.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
+  /@utrecht/components@1.0.0-alpha.526:
+    resolution: {integrity: sha512-KYCyzggeJ537eScL4HWjkn1lLyNvMhFmtINWHx1Z7PokpzqFiXrbEX6xtj9hB5tVpqoOtbijU+YOIHOmSSFk7Q==}
+    dependencies:
+      clsx: 1.2.1
     dev: true
 
   /@utrecht/design-tokens@1.0.0-alpha.540:
