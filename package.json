@@ -20,7 +20,7 @@
     "@lerna-lite/run": "2.5.0",
     "@types/node": "20.5.6",
     "@typescript-eslint/eslint-plugin": "6.4.1",
-    "@typescript-eslint/parser": "6.4.1",
+    "@typescript-eslint/parser": "6.7.2",
     "@utrecht/component-library-react": "1.0.0-alpha.356",
     "@utrecht/components": "1.0.0-alpha.526",
     "@utrecht/web-component-library-react": "1.0.0-alpha.549",
