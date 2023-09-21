@@ -44,15 +44,17 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
       </div>
     </div>
     <dialog id="popovertest" className="example--header-popover-menu" role="dialog" popover="auto">
-      <Button
-        appearance="subtle-button"
-        className="example--popover-close"
-        popoverTarget="popovertest"
-        popoverTargetAction="hide"
-      >
-        <Xbold className="example--header-xlogo" />
-        Sluiten
-      </Button>
+      <div className="example--header-popover-container-button">
+        <Button
+          appearance="subtle-button"
+          className="example--popover-close"
+          popoverTarget="popovertest"
+          popoverTargetAction="hide"
+        >
+          <Xbold className="example--header-xlogo" />
+          Sluiten
+        </Button>
+      </div>
       <div className="example--header-popover-container-links">
         <Link className="example--header-links">
           <User className="example--header-user-icon" /> Mijn omgeving
