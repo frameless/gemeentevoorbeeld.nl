@@ -1,5 +1,6 @@
 import { Button, Link, PageHeader, Textbox } from '@utrecht/component-library-react';
-import { PopOpenButton } from '../PopOpenButton/PopOpenButton';
+import { PopOverButton } from '../PopOver/PopOverButton';
+import { PopOverDialog } from '../PopOver/PopOverDialog';
 import Logo from '../../app/styling/assets/voorbeeld-header.svg';
 import Search from '../../app/styling/assets/searchbar-icon.svg';
 import Xbold from '../../app/styling/assets/x-bold.svg';
@@ -12,7 +13,7 @@ import './header.scss';
 interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
   <PageHeader className="example--header-home-page">
-    <PopOpenButton
+    <PopOverButton
       aria-label="collapse menu navigation"
       className="example--header-burger-menu-button"
       popoverTarget="popovermenu"
@@ -23,7 +24,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         <span className="example--header-bar"></span>
       </div>
       Menu
-    </PopOpenButton>
+    </PopOverButton>
     <div className="example--logo">
       <Logo />
     </div>
@@ -44,9 +45,9 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         </Button>
       </div>
     </div>
-    <dialog id="popovermenu" className="example--header-popover-menu" role="dialog" popover="auto">
+    <PopOverDialog id="popovermenu" className="example--header-popover-menu" role="dialog" popover="auto">
       <div className="example--header-popover-container-button">
-        <PopOpenButton
+        <PopOverButton
           appearance="subtle-button"
           className="example--popover-close"
           popoverTarget="popovermenu"
@@ -54,7 +55,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         >
           <Xbold className="example--header-xlogo" />
           Sluiten
-        </PopOpenButton>
+        </PopOverButton>
       </div>
       <div className="example--header-popover-container-links">
         <Link className="example--header-links">Home</Link>
@@ -68,7 +69,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
           <User className="example--header-user-icon" /> Mijn omgeving
         </Link>
       </div>
-    </dialog>
+    </PopOverDialog>
   </PageHeader>
 );
 
