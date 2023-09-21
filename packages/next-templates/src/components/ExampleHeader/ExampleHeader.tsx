@@ -14,7 +14,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
     <Button
       aria-label="collapse menu navigation"
       className="example--header-burger-menu-button"
-      popoverTarget="popovertest"
+      popoverTarget="popovermenu"
     >
       <div className="example--header-burger-bar-container">
         <span className="example--header-bar"></span>
@@ -43,12 +43,12 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         </Button>
       </div>
     </div>
-    <dialog id="popovertest" className="example--header-popover-menu" role="dialog" popover="auto">
+    <dialog id="popovermenu" className="example--header-popover-menu" role="dialog" popover="auto">
       <div className="example--header-popover-container-button">
         <Button
           appearance="subtle-button"
           className="example--popover-close"
-          popoverTarget="popovertest"
+          popoverTarget="popovermenu"
           popoverTargetAction="hide"
         >
           <Xbold className="example--header-xlogo" />
