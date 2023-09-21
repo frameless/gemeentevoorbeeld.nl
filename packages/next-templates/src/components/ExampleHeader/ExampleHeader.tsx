@@ -50,7 +50,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         popoverTarget="popovertest"
         popoverTargetAction="hide"
       >
-        <Xbold />
+        <Xbold className="example--header-xlogo" />
         Sluiten
       </Button>
       <div className="example--header-popover-container-links">
