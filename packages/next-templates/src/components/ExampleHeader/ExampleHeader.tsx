@@ -11,7 +11,7 @@ import './header.scss';
 interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
   <PageHeader className="example--header-home-page">
-    <button
+    <Button
       aria-label="collapse menu navigation"
       className="example--header-burger-menu-button"
       popoverTarget="popovertest"
@@ -22,7 +22,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         <span className="example--header-bar"></span>
       </div>
       Menu
-    </button>
+    </Button>
     <div className="example--logo">
       <Logo />
     </div>
@@ -44,10 +44,15 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
       </div>
     </div>
     <dialog id="popovertest" className="example--header-popover-menu" role="dialog" popover="auto">
-      <button className="example--popover-close" popoverTarget="popovertest" popoverTargetAction="hide">
+      <Button
+        appearance="subtle-button"
+        className="example--popover-close"
+        popoverTarget="popovertest"
+        popoverTargetAction="hide"
+      >
         <Xbold />
         Sluiten
-      </button>
+      </Button>
       <div className="example--header-popover-container-links">
         <Link className="example--header-links">
           <User className="example--header-user-icon" /> Mijn omgeving
