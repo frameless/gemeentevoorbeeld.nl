@@ -56,14 +56,16 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         </Button>
       </div>
       <div className="example--header-popover-container-links">
-        <Link className="example--header-links">
-          <User className="example--header-user-icon" /> Mijn omgeving
-        </Link>
         <Link className="example--header-links">Home</Link>
         <Link className="example--header-links">About</Link>
         <Link className="example--header-links">Services</Link>
         <Link className="example--header-links">Portfolio</Link>
         <Link className="example--header-links">Contact</Link>
+      </div>
+      <div className="example--header-user">
+        <Link>
+          <User className="example--header-user-icon" /> Mijn omgeving
+        </Link>
       </div>
     </dialog>
   </PageHeader>

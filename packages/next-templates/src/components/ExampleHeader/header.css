@@ -67,10 +67,12 @@
 }
 
 .example--header-popover-menu {
+  --utrecht-backdrop-opacity: 0.5%;
+
   border: none;
   height: 100%;
-  left: 45%;
-  padding-inline: 2em;
+  padding-inline: 1em;
+  right: 50%;
   width: 50%;
 }
 
@@ -109,6 +111,10 @@
 
   .example--header-links:first-child {
     border-top: 1px solid #d9d9d9;
+  }
+
+  .example--header-user {
+    margin-block: 1.5em;
   }
 
   .example--header-search-secondary-button {
