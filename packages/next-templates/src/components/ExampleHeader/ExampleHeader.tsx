@@ -1,4 +1,5 @@
-import { Button, Link, PageHeader, Paragraph, Textbox } from '@utrecht/component-library-react';
+import { Button, Link, PageHeader, Textbox } from '@utrecht/component-library-react';
+import { PopOpenButton } from '../PopOpenButton/PopOpenButton';
 import Logo from '../../app/styling/assets/voorbeeld-header.svg';
 import Search from '../../app/styling/assets/searchbar-icon.svg';
 import Xbold from '../../app/styling/assets/x-bold.svg';
@@ -11,7 +12,7 @@ import './header.scss';
 interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
   <PageHeader className="example--header-home-page">
-    <Button
+    <PopOpenButton
       aria-label="collapse menu navigation"
       className="example--header-burger-menu-button"
       popoverTarget="popovermenu"
@@ -22,7 +23,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         <span className="example--header-bar"></span>
       </div>
       Menu
-    </Button>
+    </PopOpenButton>
     <div className="example--logo">
       <Logo />
     </div>
@@ -45,7 +46,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
     </div>
     <dialog id="popovermenu" className="example--header-popover-menu" role="dialog" popover="auto">
       <div className="example--header-popover-container-button">
-        <Button
+        <PopOpenButton
           appearance="subtle-button"
           className="example--popover-close"
           popoverTarget="popovermenu"
@@ -53,7 +54,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         >
           <Xbold className="example--header-xlogo" />
           Sluiten
-        </Button>
+        </PopOpenButton>
       </div>
       <div className="example--header-popover-container-links">
         <Link className="example--header-links">Home</Link>
