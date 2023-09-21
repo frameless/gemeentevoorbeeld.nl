@@ -23,7 +23,7 @@
     "@typescript-eslint/parser": "6.4.1",
     "@utrecht/component-library-react": "1.0.0-alpha.356",
     "@utrecht/components": "1.0.0-alpha.526",
-    "@utrecht/web-component-library-react": "1.0.0-alpha.549",
+    "@utrecht/web-component-library-react": "1.0.0-alpha.564",
     "eslint": "8.48.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-import": "2.28.1",
