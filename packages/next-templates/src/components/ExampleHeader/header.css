@@ -74,6 +74,10 @@
   width: 50%;
 }
 
+.example--header-popover-menu::backdrop {
+  --utrecht-backdrop-background-color: rgb(0 0 0 / 50%);
+}
+
 .example--popover-close {
   align-items: center;
   background: none;
