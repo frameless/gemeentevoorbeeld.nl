@@ -80,6 +80,15 @@
   border: none;
   font-size: 1em;
   margin-block: 1em;
+  margin-inline: 1em;
+}
+
+.example--header-xlogo {
+  margin-inline-end: 0.5em;
+}
+.example--header-popover-container-button {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (width <= 1185px) {
@@ -92,6 +101,10 @@
   .example--header-links {
     border-bottom: 1px solid #d9d9d9;
     padding-block: 12px;
+  }
+
+  .example--header-links:first-child {
+    border-top: 1px solid #d9d9d9;
   }
 
   .example--header-search-secondary-button {
