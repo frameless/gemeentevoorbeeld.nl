@@ -21,3 +21,9 @@
   background-color: #290b7a;
   color: #fff;
 }
+
+@media (width <= 1185px) {
+  .example--header-navbar {
+    display: none;
+  }
+}
