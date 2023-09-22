@@ -5,7 +5,9 @@ import './Navigation.css';
 interface ExampleNavigationProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleNavigation = ({ ...props }: ExampleNavigationProps) => (
   <div className="example--header-navbar">
-    <Link className="example--header-navbar-active">Home</Link>
+    <Link className="example--header-navbar-active" href="#">
+      Home
+    </Link>
     <Link>About</Link>
     <Link>Services</Link>
     <Link>Portfolio</Link>
