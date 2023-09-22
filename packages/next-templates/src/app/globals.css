@@ -92,3 +92,7 @@ https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliothee
   --utrecht-radio-button-checked-border-color: var(--voorbeeld-color-violet-700);
   --utrecht-radio-button-border-color: #7a8aa0;
 }
+
+.utrecht-textarea-beschrijving {
+  height: 10.625em;
+}
