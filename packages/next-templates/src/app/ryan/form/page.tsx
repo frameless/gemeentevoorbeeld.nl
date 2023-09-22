@@ -177,6 +177,7 @@ export default function Home() {
               </Paragraph>
               <FormFieldDescription>Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormFieldDescription>
               <Textarea
+                className="utrecht-textarea-form"
                 id="height"
                 invalid={!!errors.height}
                 {...register('height', {
