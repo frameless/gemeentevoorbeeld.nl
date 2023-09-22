@@ -31,9 +31,11 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
     <div className="example--header-items">
       <div className="example--header-links-container">
         <Link className="example--header-links">
-          <User className="example--header-user-icon" /> Mijn omgeving
+          <User className="example--header-user-icon" href="#" /> Mijn omgeving
         </Link>
-        <Link className="example--header-links">Contact</Link>
+        <Link className="example--header-links" href="#">
+          Contact
+        </Link>
       </div>
       <div className="example--search-box">
         <Textbox className="example--header-text-box" placeholder="Bijvoorbeeld zwembad of grofvuil" />
@@ -41,7 +43,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
           <Search /> Zoeken
         </Button>
         <Button className="example--header-search-subtle-button" appearance="subtle-button">
-          <Search /> Zoeken
+          <Search href="#" /> Zoeken
         </Button>
       </div>
     </div>
