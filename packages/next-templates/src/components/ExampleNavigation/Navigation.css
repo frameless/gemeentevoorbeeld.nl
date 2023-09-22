@@ -5,6 +5,10 @@
   padding-inline-end: 1em;
   padding-inline-start: 1em;
 }
+.utrecht-link:visited,
+.utrecht-link--visited {
+  color: var(--voorbeeld-color-white);
+}
 
 /* Style for the navigation links */
 .example--header-navbar a {

@@ -68,6 +68,10 @@ body {
   --utrecht-form-label-font-weight: 700;
 }
 
+.utrecht-form-fieldset__legend {
+  --utrecht-form-fieldset-legend-font-weight: 700;
+}
+
 .utrecht-ordered-list__item {
   color: #5315f6;
 }
@@ -88,7 +92,16 @@ https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliothee
 .utrecht-radio-button {
   --utrecht-radio-button-background-color: white;
   --utrecht-radio-button-icon-size: 0%;
-  --utrecht-radio-button-checked-border-width: 0.35em;
+  --utrecht-radio-button-size: 1.5em;
+  --utrecht-radio-button-checked-border-width: 0.5em;
   --utrecht-radio-button-checked-border-color: var(--voorbeeld-color-violet-700);
   --utrecht-radio-button-border-color: #7a8aa0;
+}
+
+.utrecht-textarea-beschrijving {
+  height: 10.625em;
+}
+
+.utrecht-textarea-form {
+  height: 6.125em;
 }
