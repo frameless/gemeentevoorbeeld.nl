@@ -8,10 +8,10 @@ export const ExampleNavigation = ({ ...props }: ExampleNavigationProps) => (
     <Link className="example--header-navbar-active" href="#">
       Home
     </Link>
-    <Link>About</Link>
-    <Link>Services</Link>
-    <Link>Portfolio</Link>
-    <Link>Contact</Link>
+    <Link href="#">About</Link>
+    <Link href="#">Services</Link>
+    <Link href="#">Portfolio</Link>
+    <Link href="#">Contact</Link>
   </div>
 );
 
