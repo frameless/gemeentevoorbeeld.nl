@@ -21,6 +21,7 @@ export default function Home() {
       <PageContent>
         <Heading1>Maak een melding van uw kwijtgeraakte sok</Heading1>
         <FormFieldInput
+          classification={false}
           autocomplete="name"
           htmlfor="name"
           id="name"
@@ -29,6 +30,7 @@ export default function Home() {
           label="voornaam"
         ></FormFieldInput>
         <FormFieldInput
+          classification={false}
           autocomplete="family-name"
           htmlfor="achternaam"
           id="achternaam"
