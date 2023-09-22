@@ -7,7 +7,7 @@
 }
 .utrecht-link:visited,
 .utrecht-link--visited {
-  color: #fff;
+  color: var(--voorbeeld-color-white);
 }
 
 /* Style for the navigation links */
