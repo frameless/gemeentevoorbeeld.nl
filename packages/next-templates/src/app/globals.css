@@ -68,6 +68,10 @@ body {
   --utrecht-form-label-font-weight: 700;
 }
 
+.utrecht-form-fieldset__legend {
+  --utrecht-form-fieldset-legend-font-weight: 700;
+}
+
 .utrecht-ordered-list__item {
   color: #5315f6;
 }
