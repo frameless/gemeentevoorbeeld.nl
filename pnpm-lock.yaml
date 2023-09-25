@@ -34,8 +34,8 @@ importers:
         specifier: 1.0.0-alpha.526
         version: 1.0.0-alpha.526
       '@utrecht/web-component-library-react':
-        specifier: 1.0.0-alpha.549
-        version: 1.0.0-alpha.549
+        specifier: 1.0.0-alpha.570
+        version: 1.0.0-alpha.570(react-dom@18.2.0)(react@18.2.0)
       eslint:
         specifier: 8.48.0
         version: 8.48.0
@@ -291,8 +291,8 @@ importers:
         specifier: 1.0.0-alpha.540
         version: 1.0.0-alpha.540
       '@utrecht/web-component-library-react':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.570
+        version: 1.0.0-alpha.570(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-stencil':
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547
@@ -3499,24 +3499,15 @@ packages:
     resolution: {integrity: sha512-qT12YTZWkGwTyrza2O4k+lzAnAhDY1NYEJWc4Qk+Th1Fpb1pzJOsBdp4np4xsjJ3mtGaCS7QGA6so9qrxJ0OjA==}
     dev: true
 
-  /@utrecht/web-component-library-react@1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-vDDdKMzF9arJOsqGdGEZKy8Pb9SzMgTmN1hoQTDtm2wQ/QFMA+OPFpCC8NSr1+xo/KhaWeuqWp+HHgl4n4aGsw==}
+  /@utrecht/web-component-library-react@1.0.0-alpha.570(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-NqjfKSTmFeEeR0IIE5U10mhg8XuBFH214wzTBonJ7FcgVHNw73T1Zr3H6T/58EnhnWzjtT0BRWqwMlTqSZvWAQ==}
     peerDependencies:
       react: 16 - 18
       react-dom: 16 - 18
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.547
+      '@utrecht/web-component-library-stencil': 1.0.0-alpha.570
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-    dev: true
-
-  /@utrecht/web-component-library-react@1.0.0-alpha.549:
-    resolution: {integrity: sha512-YCCBnKJ5bOIyvefXSEIhi/Gqh4XRJbqGPxCBsurfLL7KtTTLanz1Mwas8fISaOWEr8Nssrv8y0XG3ZtfxCnGzQ==}
-    peerDependencies:
-      react: 16 - 18
-      react-dom: 16 - 18
-    dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.549
     dev: true
 
   /@utrecht/web-component-library-stencil@1.0.0-alpha.547:
@@ -3525,8 +3516,8 @@ packages:
       '@stencil/core': 3.4.2
     dev: true
 
-  /@utrecht/web-component-library-stencil@1.0.0-alpha.549:
-    resolution: {integrity: sha512-EtjkBtJ/LKeqeNhGmgeT8rhgtgV9SgngOckcPkpp0iiJ4Wl2CSxdY8t/BwBEz17wPlPsJ5I3fNxYL8po+jKf4g==}
+  /@utrecht/web-component-library-stencil@1.0.0-alpha.570:
+    resolution: {integrity: sha512-NBQ2t9LwRGczG3RGYZj+LD7720lj+2isDW04Ineo7cJyQU76glN1P/g70OubrrvOLedmmPEAQBvT9bdRbYFLIg==}
     dependencies:
       '@stencil/core': 3.4.2
     dev: true
