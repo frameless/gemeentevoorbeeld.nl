@@ -30,7 +30,7 @@
     "@nl-design-system-unstable/voorbeeld-design-tokens": "1.0.0-alpha.88",
     "@svgr/webpack": "8.1.0",
     "@utrecht/component-library-css": "1.0.0-alpha.547",
-    "@utrecht/component-library-react": "1.0.0-alpha.356",
+    "@utrecht/component-library-react": "1.0.0-alpha.380",
     "@utrecht/design-tokens": "1.0.0-alpha.540",
     "@utrecht/web-component-library-react": "1.0.0-alpha.547",
     "@utrecht/web-component-library-stencil": "1.0.0-alpha.547",
