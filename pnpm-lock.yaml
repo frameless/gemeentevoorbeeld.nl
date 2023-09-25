@@ -294,8 +294,8 @@ importers:
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-stencil':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547
+        specifier: 1.0.0-alpha.570
+        version: 1.0.0-alpha.570
       clsx:
         specifier: 2.0.0
         version: 2.0.0
@@ -3527,6 +3527,12 @@ packages:
 
   /@utrecht/web-component-library-stencil@1.0.0-alpha.549:
     resolution: {integrity: sha512-EtjkBtJ/LKeqeNhGmgeT8rhgtgV9SgngOckcPkpp0iiJ4Wl2CSxdY8t/BwBEz17wPlPsJ5I3fNxYL8po+jKf4g==}
+    dependencies:
+      '@stencil/core': 3.4.2
+    dev: true
+
+  /@utrecht/web-component-library-stencil@1.0.0-alpha.570:
+    resolution: {integrity: sha512-NBQ2t9LwRGczG3RGYZj+LD7720lj+2isDW04Ineo7cJyQU76glN1P/g70OubrrvOLedmmPEAQBvT9bdRbYFLIg==}
     dependencies:
       '@stencil/core': 3.4.2
     dev: true
