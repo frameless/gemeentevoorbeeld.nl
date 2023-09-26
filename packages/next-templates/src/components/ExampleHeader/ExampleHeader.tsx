@@ -62,10 +62,10 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         <Link className="example--header-links">About</Link>
         <Link className="example--header-links">Services</Link>
         <Link className="example--header-links">Portfolio</Link>
-        <Link className="example--header-links">Contact</Link>
       </div>
       <div className="example--header-user">
-        <Link>
+        <Link className="example--header-links">Contact</Link>
+        <Link className="example--header-links">
           <User className="example--header-user-icon" /> Mijn omgeving
         </Link>
       </div>
