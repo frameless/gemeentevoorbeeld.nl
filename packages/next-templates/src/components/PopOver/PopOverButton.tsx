@@ -1,5 +1,5 @@
 import { Button } from '@utrecht/component-library-react';
-import React, { ForwardedRef, HTMLAttributes, PropsWithChildren, forwardRef } from 'react';
+import React, { ForwardedRef, HTMLAttributes, PropsWithChildren, MouseEvent, forwardRef } from 'react';
 
 type ExtraProps = HTMLAttributes<HTMLButtonElement> & {
   popoverTarget?: string;
@@ -7,10 +7,33 @@ type ExtraProps = HTMLAttributes<HTMLButtonElement> & {
   appearance?: string;
 };
 
+let check = true;
+
 interface PopOverButtonProps extends ExtraProps {}
 export const PopOverButton = forwardRef(
   ({ children, ...restProps }: PropsWithChildren<PopOverButtonProps>, ref: ForwardedRef<HTMLButtonElement>) => (
-    <Button {...restProps}>{children}</Button>
+    <Button
+      {...restProps}
+      onClick={(evt: MouseEvent<HTMLButtonElement>) => {
+        evt.preventDefault();
+        const button = evt.target as HTMLButtonElement;
+        const target = button.getAttribute('popovertarget');
+        let targetEl = target ? button.ownerDocument.getElementById(target) : null;
+
+        if (targetEl?.localName === 'dialog' && targetEl?.getAttribute('data-modal') === 'true') {
+          if (check === true) {
+            (targetEl as HTMLDialogElement).showModal();
+            check = false;
+            console.log(check);
+          } else {
+            (targetEl as HTMLDialogElement).close();
+            check = true;
+          }
+        }
+      }}
+    >
+      {children}
+    </Button>
   ),
 );
 PopOverButton.displayName = 'PopOverButton';
