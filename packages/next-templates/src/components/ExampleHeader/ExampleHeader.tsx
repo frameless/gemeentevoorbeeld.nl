@@ -58,14 +58,24 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         </PopOverButton>
       </div>
       <div className="example--header-popover-container-links">
-        <Link className="example--header-links">Home</Link>
-        <Link className="example--header-links">About</Link>
-        <Link className="example--header-links">Services</Link>
-        <Link className="example--header-links">Portfolio</Link>
+        <Link href="#" className="example--header-links">
+          Home
+        </Link>
+        <Link href="#" className="example--header-links">
+          About
+        </Link>
+        <Link href="#" className="example--header-links">
+          Services
+        </Link>
+        <Link href="#" className="example--header-links">
+          Portfolio
+        </Link>
       </div>
       <div className="example--header-user">
-        <Link className="example--header-links">Contact</Link>
-        <Link className="example--header-links">
+        <Link href="#" className="example--header-links">
+          Contact
+        </Link>
+        <Link href="#" className="example--header-links">
           <User className="example--header-user-icon" /> Mijn omgeving
         </Link>
       </div>
