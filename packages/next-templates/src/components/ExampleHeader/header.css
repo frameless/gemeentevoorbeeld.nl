@@ -114,6 +114,10 @@
     padding-block: 12px;
   }
 
+  .example--header-popover-container-links .example--header-links {
+    font-weight: 700;
+  }
+
   .example--header-user {
     margin-block: 1.5em;
   }
