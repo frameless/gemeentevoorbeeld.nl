@@ -159,3 +159,9 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+
+@media (width <= 400px) {
+  .example--header-popover-menu {
+    width: 75%;
+  }
+}
