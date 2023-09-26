@@ -116,6 +116,7 @@
 
   .example--header-popover-container-links .example--header-links {
     font-weight: 700;
+    text-decoration: none;
   }
 
   .example--header-user {
