@@ -1,4 +1,4 @@
-name: 'Check Mergable by label ✅'
+name: "Check Mergable by label ✅"
 
 on:
   pull_request:
