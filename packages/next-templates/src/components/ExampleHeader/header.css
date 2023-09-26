@@ -71,7 +71,7 @@
 
   border: none;
   height: 100%;
-  padding-inline: 1em;
+  padding-inline: 0;
   right: 50%;
   width: 50%;
 }
@@ -111,7 +111,14 @@
 
   .example--header-links {
     color: var(--voorbeeld-color-white);
+    margin-inline: 0;
     padding-block: 12px;
+    padding-inline: 1em;
+  }
+
+  .example--header-links:hover {
+    background-color: var(--voorbeeld-color-violet-900);
+    color: var(--voorbeeld-color-white);
   }
 
   .example--header-popover-container-links .example--header-links {
