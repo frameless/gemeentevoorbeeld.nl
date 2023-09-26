@@ -45,7 +45,13 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         </Button>
       </div>
     </div>
-    <PopOverDialog id="popovermenu" className="example--header-popover-menu" role="dialog" popover="auto">
+    <PopOverDialog
+      data-modal="true"
+      id="popovermenu"
+      className="example--header-popover-menu"
+      role="dialog"
+      popover="auto"
+    >
       <div className="example--header-popover-container-button">
         <PopOverButton
           appearance="subtle-button"
