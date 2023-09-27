@@ -12,17 +12,17 @@ export const ExampleFooter = ({ ...props }: ExampleFooterProps) => (
       <Logo className="example--footer-logo" />
       <NavigationList>
         <Heading5>Heading</Heading5>
-        <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Navigatie item" />
+        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
       </NavigationList>
       <NavigationList>
         <Heading5>Heading</Heading5>
-        <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="example.com" label="Navigatie item" />
+        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
       </NavigationList>
       <section className="example-footer-content">
         <Heading5>Heading</Heading5>
