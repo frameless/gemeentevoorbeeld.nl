@@ -29,7 +29,6 @@
   display: flex;
   margin-inline-end: 32px;
 }
-
 .example--header-user-icon {
   margin-inline-end: 4px;
 }
@@ -117,6 +116,8 @@
   }
 
   .example--header-links {
+    --utrecht-link-visited-color: var(--voorbeeld-color-white);
+
     color: var(--voorbeeld-color-white);
     margin-inline: 0;
     padding-block: 12px;
