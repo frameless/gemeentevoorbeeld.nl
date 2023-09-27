@@ -25,7 +25,7 @@ export const PopOverButton = forwardRef(
             (targetEl as HTMLDialogElement).showModal();
 
             targetEl?.addEventListener('click', function (event) {
-              const rect = targetEl.getBoundingClientRect();
+              const rect = targetEl!.getBoundingClientRect();
               const isInDialog =
                 rect.top <= event.clientY &&
                 event.clientY <= rect.top + rect.height &&
