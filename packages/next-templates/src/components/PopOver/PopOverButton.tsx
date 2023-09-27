@@ -23,8 +23,19 @@ export const PopOverButton = forwardRef(
         if (targetEl?.localName === 'dialog' && targetEl?.getAttribute('data-modal') === 'true') {
           if (check === true) {
             (targetEl as HTMLDialogElement).showModal();
+
+            targetEl?.addEventListener('click', function (event) {
+              const rect = targetEl.getBoundingClientRect();
+              const isInDialog =
+                rect.top <= event.clientY &&
+                event.clientY <= rect.top + rect.height &&
+                rect.left <= event.clientX &&
+                event.clientX <= rect.left + rect.width;
+              if (!isInDialog) {
+                (targetEl as HTMLDialogElement).close();
+              }
+            });
             check = false;
-            console.log(check);
           } else {
             (targetEl as HTMLDialogElement).close();
             check = true;
