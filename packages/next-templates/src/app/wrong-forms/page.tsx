@@ -19,7 +19,7 @@ import {
 } from '@utrecht/component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
-import { FormFieldInput } from '@/components/FormFieldInput/FormFieldInput';
+import '../styling/css/wrong-form-socks.css';
 
 export default function Home() {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
           </Paragraph>
           <Heading2>Beschrijving sokken</Heading2>
           <FormField>
-            <FormLabel>Aantal</FormLabel>
+            <FormLabel className="example-foute-form-label">Aantal</FormLabel>
             <Select>
               <SelectOption value="1">Kies een aantal</SelectOption>
               <SelectOption value="2">1</SelectOption>
@@ -41,7 +41,7 @@ export default function Home() {
             </Select>
           </FormField>
           <FormField>
-            <FormLabel>Aantal</FormLabel>
+            <FormLabel className="example-foute-form-label">Aantal</FormLabel>
             <Select>
               <SelectOption value="1">Kies een kleur</SelectOption>
               <SelectOption value="2">Beige</SelectOption>
@@ -63,11 +63,11 @@ export default function Home() {
             </Select>
           </FormField>
           <FormField>
-            <FormLabel>Merk</FormLabel>
+            <FormLabel className="example-foute-form-label">Merk</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>Aantal</FormLabel>
+            <FormLabel className="example-foute-form-label">Aantal</FormLabel>
             <Select>
               <SelectOption value="1">Kies een waarde</SelectOption>
               <SelectOption value="2">Onbekend</SelectOption>
@@ -76,31 +76,31 @@ export default function Home() {
             </Select>
           </FormField>
           <FormField>
-            <FormLabel>Aanvullende informatie</FormLabel>
+            <FormLabel className="example-foute-form-label">Aanvullende informatie</FormLabel>
             <FormFieldDescription>Bijvoorbeeld een opdruk, gat of geur.</FormFieldDescription>
             <Textarea />
           </FormField>
           <FormField>
-            <Button>Foto kiezen</Button>
+            <Button appearance="secondary-action-button">Foto kiezen</Button>
           </FormField>
           <Heading2>Waar ben u uw sokken verloren?</Heading2>
           <FormField>
-            <FormLabel>Plaats</FormLabel>
+            <FormLabel className="example-foute-form-label">Plaats</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>Straat</FormLabel>
+            <FormLabel className="example-foute-form-label">Straat</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>Ter hoogte van</FormLabel>
+            <FormLabel className="example-foute-form-label">Ter hoogte van</FormLabel>
             <FormFieldDescription>Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormFieldDescription>
             <Textarea />
           </FormField>
           <Heading2>Uw gegevens</Heading2>
           <Paragraph>Zodat wij u kunnen bereiken wanneer uw sokken gevonden zijn.</Paragraph>
           <FormField>
-            <FormLabel>Geslacht</FormLabel>
+            <FormLabel className="example-foute-form-label">Geslacht</FormLabel>
             <Select>
               <SelectOption value="1">Kies een geslacht</SelectOption>
               <SelectOption value="2"></SelectOption>
@@ -108,43 +108,43 @@ export default function Home() {
             </Select>
           </FormField>
           <FormField>
-            <FormLabel>Voorletter(s)</FormLabel>
+            <FormLabel className="example-foute-form-label">Voorletter(s)</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>Tussenvoegsel (optioneel)</FormLabel>
+            <FormLabel className="example-foute-form-label">Tussenvoegsel (optioneel)</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>Achternaam</FormLabel>
+            <FormLabel className="example-foute-form-label">Achternaam</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>E-mailadres</FormLabel>
+            <FormLabel className="example-foute-form-label">E-mailadres</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>Telefoonnummer</FormLabel>
+            <FormLabel className="example-foute-form-label">Telefoonnummer</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>Straat</FormLabel>
+            <FormLabel className="example-foute-form-label">Straat</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>Huisnummer</FormLabel>
+            <FormLabel className="example-foute-form-label">Huisnummer</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>Toevoeging (Optioneel)</FormLabel>
+            <FormLabel className="example-foute-form-label">Toevoeging (Optioneel)</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>Postcode</FormLabel>
+            <FormLabel className="example-foute-form-label">Postcode</FormLabel>
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel>Woonplaats</FormLabel>
+            <FormLabel className="example-foute-form-label">Woonplaats</FormLabel>
             <Textbox />
           </FormField>
           <ButtonGroup>
