@@ -3,6 +3,7 @@ import {
   ButtonGroup,
   Document,
   ButtonLink,
+  Button,
   FormField,
   FormFieldDescription,
   FormLabel,
@@ -34,23 +35,123 @@ export default function Home() {
           <FormField>
             <FormLabel>Aantal</FormLabel>
             <Select>
-              <SelectOption disabled value="">
-                Select an option
-              </SelectOption>
-              <SelectOption value="1">1</SelectOption>
-              <SelectOption value="2">2</SelectOption>
-            </Select>
-            <FormLabel>Aantal</FormLabel>
-            <Select>
-              <SelectOption disabled value="">
-                Select an option
-              </SelectOption>
-              <SelectOption value="1">1</SelectOption>
-              <SelectOption value="2">2</SelectOption>
+              <SelectOption value="1">Kies een aantal</SelectOption>
+              <SelectOption value="2">1</SelectOption>
+              <SelectOption value="3">2</SelectOption>
             </Select>
           </FormField>
+          <FormField>
+            <FormLabel>Aantal</FormLabel>
+            <Select>
+              <SelectOption value="1">Kies een kleur</SelectOption>
+              <SelectOption value="2">Beige</SelectOption>
+              <SelectOption value="3">Blauw</SelectOption>
+              <SelectOption value="4">Bruin</SelectOption>
+              <SelectOption value="5">Creme</SelectOption>
+              <SelectOption value="6">Diverse</SelectOption>
+              <SelectOption value="7">Geel</SelectOption>
+              <SelectOption value="8">Goud</SelectOption>
+              <SelectOption value="9">Grijs</SelectOption>
+              <SelectOption value="10">Groen</SelectOption>
+              <SelectOption value="11">Oranje</SelectOption>
+              <SelectOption value="12">Paars</SelectOption>
+              <SelectOption value="13">Rood</SelectOption>
+              <SelectOption value="14">Roze</SelectOption>
+              <SelectOption value="15">Wit</SelectOption>
+              <SelectOption value="16">Zilver</SelectOption>
+              <SelectOption value="17">Zwart</SelectOption>
+            </Select>
+          </FormField>
+          <FormField>
+            <FormLabel>Merk</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>Aantal</FormLabel>
+            <Select>
+              <SelectOption value="1">Kies een waarde</SelectOption>
+              <SelectOption value="2">Onbekend</SelectOption>
+              <SelectOption value="3">Meer dan 450 euro</SelectOption>
+              <SelectOption value="3">Minder dan 450 euro</SelectOption>
+            </Select>
+          </FormField>
+          <FormField>
+            <FormLabel>Aanvullende informatie</FormLabel>
+            <FormFieldDescription>Bijvoorbeeld een opdruk, gat of geur.</FormFieldDescription>
+            <Textarea />
+          </FormField>
+          <FormField>
+            <Button>Foto kiezen</Button>
+          </FormField>
+          <Heading2>Waar ben u uw sokken verloren?</Heading2>
+          <FormField>
+            <FormLabel>Plaats</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>Straat</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>Ter hoogte van</FormLabel>
+            <FormFieldDescription>Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormFieldDescription>
+            <Textarea />
+          </FormField>
+          <Heading2>Uw gegevens</Heading2>
+          <Paragraph>Zodat wij u kunnen bereiken wanneer uw sokken gevonden zijn.</Paragraph>
+          <FormField>
+            <FormLabel>Geslacht</FormLabel>
+            <Select>
+              <SelectOption value="1">Kies een geslacht</SelectOption>
+              <SelectOption value="2"></SelectOption>
+              <SelectOption value="3">2</SelectOption>
+            </Select>
+          </FormField>
+          <FormField>
+            <FormLabel>Voorletter(s)</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>Tussenvoegsel (optioneel)</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>Achternaam</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>E-mailadres</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>Telefoonnummer</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>Straat</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>Huisnummer</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>Toevoeging (Optioneel)</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>Postcode</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel>Woonplaats</FormLabel>
+            <Textbox />
+          </FormField>
           <ButtonGroup>
-            <ButtonLink href="conformation-lost" appearance="primary-action-button">
+            <ButtonLink href="#" appearance="primary-action-button">
+              annuleren
+            </ButtonLink>
+            <ButtonLink href="#" appearance="primary-action-button">
               Versturen
             </ButtonLink>
           </ButtonGroup>
