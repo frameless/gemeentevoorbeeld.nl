@@ -2,3 +2,7 @@
   display: flex;
   font-weight: 700;
 }
+
+.example-foute-form-focus {
+  -utrecht-focus: transparent;
+}

@@ -34,7 +34,7 @@ export default function Home() {
           <Heading2>Beschrijving sokken</Heading2>
           <FormField>
             <FormLabel className="example-foute-form-label">Aantal</FormLabel>
-            <Select>
+            <Select className="example-foute-form-focus">
               <SelectOption value="1">Kies een aantal</SelectOption>
               <SelectOption value="2">1</SelectOption>
               <SelectOption value="3">2</SelectOption>
