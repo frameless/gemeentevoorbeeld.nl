@@ -45,7 +45,13 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         </Button>
       </div>
     </div>
-    <PopOverDialog id="popovermenu" className="example--header-popover-menu" role="dialog" popover="auto">
+    <PopOverDialog
+      data-modal="true"
+      id="popovermenu"
+      className="example--header-popover-menu"
+      role="dialog"
+      popover="auto"
+    >
       <div className="example--header-popover-container-button">
         <PopOverButton
           appearance="subtle-button"
@@ -58,14 +64,24 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         </PopOverButton>
       </div>
       <div className="example--header-popover-container-links">
-        <Link className="example--header-links">Home</Link>
-        <Link className="example--header-links">About</Link>
-        <Link className="example--header-links">Services</Link>
-        <Link className="example--header-links">Portfolio</Link>
-        <Link className="example--header-links">Contact</Link>
+        <Link href="#" className="example--header-links">
+          Home
+        </Link>
+        <Link href="#" className="example--header-links">
+          About
+        </Link>
+        <Link href="#" className="example--header-links">
+          Services
+        </Link>
+        <Link href="#" className="example--header-links">
+          Portfolio
+        </Link>
       </div>
       <div className="example--header-user">
-        <Link>
+        <Link href="#" className="example--header-links">
+          Contact
+        </Link>
+        <Link href="#" className="example--header-links">
           <User className="example--header-user-icon" /> Mijn omgeving
         </Link>
       </div>

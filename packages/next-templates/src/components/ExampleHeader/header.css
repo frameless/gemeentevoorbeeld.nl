@@ -29,7 +29,6 @@
   display: flex;
   margin-inline-end: 32px;
 }
-
 .example--header-user-icon {
   margin-inline-end: 4px;
 }
@@ -71,7 +70,9 @@
 
   border: none;
   height: 100%;
-  padding-inline: 1em;
+  margin-block: 0;
+  max-height: 100%;
+  padding-inline: 0;
   right: 50%;
   width: 50%;
 }
@@ -84,9 +85,15 @@
   align-items: center;
   background: none;
   border: none;
+  color: var(--voorbeeld-color-white);
   font-size: 1em;
   margin-block: 1em;
   margin-inline: 1em;
+}
+
+.example--popover-close:hover {
+  --_utrecht-button-hover-color: var(--voorbeeld-color-white);
+  --_utrecht-button-hover-background-color: var(--voorbeeld-color-violet-900);
 }
 
 .example--header-xlogo {
@@ -104,13 +111,27 @@
     padding-block-end: 1em;
   }
 
-  .example--header-links {
-    border-bottom: 1px solid #d9d9d9;
-    padding-block: 12px;
+  .example--header-popover-menu {
+    background-color: var(--voorbeeld-color-violet-700);
   }
 
-  .example--header-links:first-child {
-    border-top: 1px solid #d9d9d9;
+  .example--header-links {
+    --utrecht-link-visited-color: var(--voorbeeld-color-white);
+
+    color: var(--voorbeeld-color-white);
+    margin-inline: 0;
+    padding-block: 12px;
+    padding-inline: 1em;
+  }
+
+  .example--header-links:hover {
+    background-color: var(--voorbeeld-color-violet-900);
+    color: var(--voorbeeld-color-white);
+  }
+
+  .example--header-popover-container-links .example--header-links {
+    font-weight: 700;
+    text-decoration: none;
   }
 
   .example--header-user {
@@ -151,5 +172,11 @@
   }
   .example--header-burger-menu-button.example--header-active .example--header-burger-bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media (width <= 400px) {
+  .example--header-popover-menu {
+    width: 75%;
   }
 }
