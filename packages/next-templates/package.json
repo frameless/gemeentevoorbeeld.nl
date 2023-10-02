@@ -31,7 +31,7 @@
     "@svgr/webpack": "8.1.0",
     "@utrecht/component-library-css": "1.0.0-alpha.547",
     "@utrecht/component-library-react": "1.0.0-alpha.356",
-    "@utrecht/design-tokens": "1.0.0-alpha.540",
+    "@utrecht/design-tokens": "1.0.0-alpha.580",
     "@utrecht/web-component-library-react": "1.0.0-alpha.547",
     "@utrecht/web-component-library-stencil": "1.0.0-alpha.547",
     "clsx": "2.0.0"
