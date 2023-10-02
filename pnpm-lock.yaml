@@ -28,8 +28,8 @@ importers:
         specifier: 6.4.1
         version: 6.4.1(eslint@8.48.0)(typescript@5.2.2)
       '@utrecht/component-library-react':
-        specifier: 1.0.0-alpha.356
-        version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.396
+        version: 1.0.0-alpha.396(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/components':
         specifier: 1.0.0-alpha.526
         version: 1.0.0-alpha.526
@@ -285,8 +285,8 @@ importers:
         specifier: 1.0.0-alpha.547
         version: 1.0.0-alpha.547
       '@utrecht/component-library-react':
-        specifier: 1.0.0-alpha.356
-        version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.396
+        version: 1.0.0-alpha.396(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/design-tokens':
         specifier: 1.0.0-alpha.540
         version: 1.0.0-alpha.540
@@ -3476,14 +3476,23 @@ packages:
     resolution: {integrity: sha512-Ezi60wh3LGb+1FG3E7zIOX6WklkKDwTIziDYa9S2Klykosv7o881o9WoR3wZDM+mUPPsrtvYgjwISd8QywsJQQ==}
     dev: true
 
-  /@utrecht/component-library-react@1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-QITfPXJaxLO5BLIs4WPGjz8653jcYJyMGYXwcWFyGSvOhPVtFw1frT5aJzwvfCAiu0laWlUadc6rdGB44wOfPw==}
+  /@utrecht/component-library-react@1.0.0-alpha.396(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-3CAZoBq2fhviPUPYbI2BgKliJj2WY9YVWp0YFXU3ANG38pj3XlUAsKSXfl/22f6d65ZiEvPlWUzhoo05wCuNwA==}
     peerDependencies:
+      date-fns: ^2.30.0
       react: '18'
       react-dom: '18'
+      react-vega: ^7.6.0
+      vega: ^5.25.0
+    peerDependenciesMeta:
+      date-fns:
+        optional: true
+      react-vega:
+        optional: true
+      vega:
+        optional: true
     dependencies:
       clsx: 1.2.1
-      date-fns: 2.30.0
       lodash.chunk: 4.2.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
