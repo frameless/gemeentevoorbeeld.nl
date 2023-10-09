@@ -282,8 +282,8 @@ importers:
         specifier: 8.1.0
         version: 8.1.0
       '@utrecht/component-library-css':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547
+        specifier: 1.0.0-alpha.594
+        version: 1.0.0-alpha.594
       '@utrecht/component-library-react':
         specifier: 1.0.0-alpha.356
         version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
@@ -3472,8 +3472,8 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@utrecht/component-library-css@1.0.0-alpha.547:
-    resolution: {integrity: sha512-Ezi60wh3LGb+1FG3E7zIOX6WklkKDwTIziDYa9S2Klykosv7o881o9WoR3wZDM+mUPPsrtvYgjwISd8QywsJQQ==}
+  /@utrecht/component-library-css@1.0.0-alpha.594:
+    resolution: {integrity: sha512-ZiilUXPEtdvcsNpSDVpbhQh7GRPEqUm17DZOB1n3ON0cnphaaTNV91Z6ytYpaSnRmoPo/D4NE0P5Z5Av+n4bFQ==}
     dev: true
 
   /@utrecht/component-library-react@1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0):
