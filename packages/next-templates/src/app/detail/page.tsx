@@ -110,7 +110,7 @@ export default function Home() {
               vervuiling wordt dan gratis verwijderd. Meld vervuiling met het meldingsformulier.
             </Paragraph>
             <Paragraph>
-              <ButtonLink appearance="primary-action-button" href="">
+              <ButtonLink appearance="primary-action-button" href="/form">
                 Melding doen
               </ButtonLink>
             </Paragraph>
