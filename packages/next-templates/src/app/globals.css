@@ -50,6 +50,11 @@ body {
 .utrecht-form-fieldset__legend {
   --utrecht-form-fieldset-legend-font-weight: 700;
 }
+
+.utrecht-form-fieldset {
+  margin-block-start: 1.5em;
+}
+
 .utrecht-ordered-list__item::marker {
   color: #0a2750;
 }
