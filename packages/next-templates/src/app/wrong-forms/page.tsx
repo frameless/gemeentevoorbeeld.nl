@@ -44,7 +44,7 @@ export default function Home() {
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Aantal</FormLabel>
-            <Select>
+            <Select className="example-foute-form-focus">
               <SelectOption value="1">Kies een kleur</SelectOption>
               <SelectOption value="2">Beige</SelectOption>
               <SelectOption value="3">Blauw</SelectOption>
@@ -66,11 +66,11 @@ export default function Home() {
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Merk</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Aantal</FormLabel>
-            <Select>
+            <Select className="example-foute-form-focus">
               <SelectOption value="1">Kies een waarde</SelectOption>
               <SelectOption value="2">Onbekend</SelectOption>
               <SelectOption value="3">Meer dan 450 euro</SelectOption>
@@ -80,7 +80,7 @@ export default function Home() {
           <FormField>
             <FormLabel className="example-foute-form-label">Aanvullende informatie</FormLabel>
             <FormFieldDescription>Bijvoorbeeld een opdruk, gat of geur.</FormFieldDescription>
-            <Textarea />
+            <Textarea className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Bijlage</FormLabel>
@@ -89,28 +89,30 @@ export default function Home() {
               <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
               <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
             </UnorderedList>
-            <Button appearance="secondary-action-button">Foto kiezen</Button>
+            <Button className="example-foute-form-focus" appearance="secondary-action-button">
+              Foto kiezen
+            </Button>
             <FormFieldDescription>geen bestand gekozen</FormFieldDescription>
           </FormField>
           <Heading2>Waar ben u uw sokken verloren?</Heading2>
           <FormField>
             <FormLabel className="example-foute-form-label">Plaats</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Straat</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Ter hoogte van</FormLabel>
             <FormFieldDescription>Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormFieldDescription>
-            <Textarea />
+            <Textarea className="example-foute-form-focus" />
           </FormField>
           <Heading2>Uw gegevens</Heading2>
           <Paragraph>Zodat wij u kunnen bereiken wanneer uw sokken gevonden zijn.</Paragraph>
           <FormField>
             <FormLabel className="example-foute-form-label">Geslacht</FormLabel>
-            <Select>
+            <Select className="example-foute-form-focus">
               <SelectOption value="1">Kies een geslacht</SelectOption>
               <SelectOption value="2"></SelectOption>
               <SelectOption value="3">2</SelectOption>
@@ -118,49 +120,49 @@ export default function Home() {
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Voorletter(s)</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Tussenvoegsel (optioneel)</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Achternaam</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">E-mailadres</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Telefoonnummer</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Straat</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Huisnummer</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Toevoeging (Optioneel)</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Postcode</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Woonplaats</FormLabel>
-            <Textbox />
+            <Textbox className="example-foute-form-focus" />
           </FormField>
           <ButtonGroup>
-            <ButtonLink href="#" appearance="primary-action-button">
+            <ButtonLink className="example-foute-form-focus" href="#" appearance="primary-action-button">
               annuleren
             </ButtonLink>
-            <ButtonLink href="#" appearance="primary-action-button">
+            <ButtonLink className="example-foute-form-focus" href="#" appearance="primary-action-button">
               Versturen
             </ButtonLink>
           </ButtonGroup>

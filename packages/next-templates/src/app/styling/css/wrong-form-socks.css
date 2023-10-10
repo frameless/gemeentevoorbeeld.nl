@@ -3,6 +3,14 @@
   font-weight: 700;
 }
 
-.example-foute-form-focus {
-  -utrecht-focus: transparent;
+.example-foute-form-focus:focus {
+  --utrecht-select-focus-border-color: var(--voorbeeld-color-gray-500);
+  --utrecht-textbox-focus-border-color: var(--voorbeeld-color-gray-500);
+  --utrecht-textarea-focus-border-color: var(--voorbeeld-color-gray-500);
+  --utrecht-button-secondary-action-focus-background-color: transparent;
+  --utrecht-button-secondary-action-focus-border-color: var(--voorbeeld-color-violet-700);
+  --utrecht-button-secondary-action-focus-color: var(--voorbeeld-color-violet-700);
+  --utrecht-button-primary-action-focus-background-color: var(--voorbeeld-color-violet-700);
+  --utrecht-button-primary-action-focus-color: var(--voorbeeld-color-white);
+  --utrecht-focus-outline-color: transparent;
 }
