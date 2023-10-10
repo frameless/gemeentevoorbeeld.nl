@@ -16,6 +16,8 @@ import {
   Heading2,
   Select,
   SelectOption,
+  UnorderedList,
+  UnorderedListItem,
 } from '@utrecht/component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
@@ -81,7 +83,14 @@ export default function Home() {
             <Textarea />
           </FormField>
           <FormField>
+            <FormLabel className="example-foute-form-label">Bijlage</FormLabel>
+            <Paragraph>(optioneel)</Paragraph>
+            <UnorderedList>
+              <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
+              <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
+            </UnorderedList>
             <Button appearance="secondary-action-button">Foto kiezen</Button>
+            <FormFieldDescription>geen bestand gekozen</FormFieldDescription>
           </FormField>
           <Heading2>Waar ben u uw sokken verloren?</Heading2>
           <FormField>
