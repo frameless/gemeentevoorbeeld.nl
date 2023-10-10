@@ -22,7 +22,7 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
-import '@/app/styling/css/detail-page.css';
+import '@/app/styling/css/form-page.css';
 import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 import { useForm } from 'react-hook-form';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
@@ -45,9 +45,11 @@ export default function Home() {
             <BacklinkIcon />
             &nbsp;&nbsp;<span className="example--underlined">Terug</span>
           </Link>
-          <Heading1>Melding openbare ruimte</Heading1>
-          <Paragraph>Vul alle velden in. Als een veld optioneel is, staat dit erbij</Paragraph>
-          <Heading2 className="voorbeeld-begin-of-block">Wat wilt u melden?</Heading2>
+          <Heading1 className="utrecht-heading-1">Melding openbare ruimte</Heading1>
+          <Paragraph lead className="voorbeeld-paragraph-lead">
+            Vul alle velden in. Als een veld optioneel is, staat dit erbij
+          </Paragraph>
+          <Heading2 utrecht-heading-2>Wat wilt u melden?</Heading2>
           <Paragraph>Kies een categorie die bij uw melding past.</Paragraph>
           <form
             onSubmit={handleSubmit((data) => {
