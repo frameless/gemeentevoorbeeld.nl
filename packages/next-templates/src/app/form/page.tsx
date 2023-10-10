@@ -8,8 +8,8 @@ import {
   FormField,
   FormFieldDescription,
   FormLabel,
+  Heading1,
   Heading2,
-  Heading4,
   Link,
   Page,
   PageContent,
@@ -45,9 +45,9 @@ export default function Home() {
             <BacklinkIcon />
             &nbsp;&nbsp;<span className="example--underlined">Terug</span>
           </Link>
-          <Heading2>Melding openbare ruimte</Heading2>
+          <Heading1>Melding openbare ruimte</Heading1>
           <Paragraph>Vul alle velden in. Als een veld optioneel is, staat dit erbij</Paragraph>
-          <Heading4 className="voorbeeld-begin-of-block">Wat wilt u melden?</Heading4>
+          <Heading2 className="voorbeeld-begin-of-block">Wat wilt u melden?</Heading2>
           <Paragraph>Kies een categorie die bij uw melding past.</Paragraph>
           <form
             onSubmit={handleSubmit((data) => {
@@ -109,7 +109,7 @@ export default function Home() {
             <FormField invalid={!!errors.description}>
               <Paragraph>
                 <FormLabel className="voorbeeld-form-label" htmlFor="description">
-                  Beschrijving:
+                  Omschrijving:
                 </FormLabel>
               </Paragraph>
               <FormFieldDescription>
@@ -134,7 +134,7 @@ export default function Home() {
               <Button appearance="primary-action-button">Bestand kiezen</Button>
               <Paragraph>Geen bestand gekozen</Paragraph>
             </FormField>
-            <Heading4 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading4>
+            <Heading2 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading2>
             <FormField invalid={!!errors.place}>
               <Paragraph>
                 <FormLabel className="voorbeeld-form-label" htmlFor="place">
@@ -188,7 +188,7 @@ export default function Home() {
               ></Textarea>
               <FormFieldDescription invalid={!!errors.height}>{errors.height?.message}</FormFieldDescription>
             </FormField>
-            <Heading4 className="voorbeeld-begin-of-block">Hoe kunnen we u bereiken voor meer informatie?</Heading4>
+            <Heading2 className="voorbeeld-begin-of-block">Hoe kunnen we u bereiken voor meer informatie?</Heading2>
             <Fieldset role="radiogroup">
               <FieldsetLegend>Anoniem Melden?</FieldsetLegend>
               <FormFieldDescription>
