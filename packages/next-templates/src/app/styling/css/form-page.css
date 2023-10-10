@@ -24,15 +24,3 @@
   background-repeat: no-repeat;
   background-size: auto 1.4em;
 }
-
-.voorbeeld-form-label {
-  --utrecht-form-label-font-weight: 700;
-}
-
-.voorbeeld-last-of-block {
-  margin-block-start: 4.5em;
-}
-
-.voorbeeld-begin-of-block {
-  --utrecht-heading-4-margin-block-start: 4.5em;
-}
