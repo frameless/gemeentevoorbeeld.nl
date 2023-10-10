@@ -30,8 +30,14 @@ body {
   --utrecht-page-footer-background-color: var(--voorbeeld-color-violet-700);
   --utrecht-spotlight-section-background-color: #f5f2ff;
   --utrecht-spotlight-section-color: #0a2750;
+  --utrecht-heading-1-margin-block-start: 1.5em;
+  --utrecht-heading-1-margin-block-end: 1.5em;
+  --utrecht-page-content-padding-block-start: 1.5em;
+  --utrecht-page-content-padding-block-end: 1.5em;
   --utrecht-page-padding-inline-start: 50px;
   --utrecht-page-padding-inline-end: 50px;
+  --utrecht-paragraph-lead-line-height: 1.5;
+  --utrecht-paragraph-margin-block-end: 0.5em;
   --utrecht-spotlight-section-padding-inline-end: 1.5em;
   --utrecht-spotlight-section-padding-inline-start: 1.5em;
   --utrecht-spotlight-section-padding-block-end: 1.5em;
