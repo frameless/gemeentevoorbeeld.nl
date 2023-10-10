@@ -52,7 +52,7 @@ body {
 }
 
 .utrecht-form-fieldset {
-  margin-block-start: 1.5em;
+  margin-block-start: var(--voorbeeld-space-block-rabbit);
 }
 
 .utrecht-ordered-list__item::marker {
