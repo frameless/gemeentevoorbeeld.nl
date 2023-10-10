@@ -28,7 +28,7 @@ export default function Home() {
           <Heading1>Bezwaar indienen tegen maandagochtend</Heading1>
           <Paragraph>Vul alle velden in. Als een veld optioneel is, dan staat dit erbij.</Paragraph>
           <Heading2>Waarom maakt u bezwaar?</Heading2>
-          <Paragraph>Kies een catogorie die bij uw melding past</Paragraph>
+          <Paragraph>Kies een catogorie die bij uw melding past.</Paragraph>
           <FormField>
             <FormLabel className="example-foute-form-label">Selecteer een reden</FormLabel>
           </FormField>
