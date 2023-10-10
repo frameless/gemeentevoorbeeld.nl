@@ -1,5 +1,7 @@
 'use client';
 import {
+  ButtonGroup,
+  ButtonLink,
   Document,
   FormField,
   FormFieldDescription,
@@ -9,11 +11,13 @@ import {
   Page,
   PageContent,
   Paragraph,
+  RadioButton,
   Textarea,
   Textbox,
 } from '@utrecht/component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
+import '../../styling/css/maandagochtend.css';
 
 export default function Home() {
   return (
@@ -27,6 +31,21 @@ export default function Home() {
           <Paragraph>Kies een catogorie die bij uw melding past</Paragraph>
           <FormField>
             <FormLabel className="example-foute-form-label">Selecteer een reden</FormLabel>
+          </FormField>
+          <FormField>
+            <RadioButton /> Nog een weekend modus
+          </FormField>
+          <FormField>
+            <RadioButton /> Weekend te kort
+          </FormField>
+          <FormField>
+            <RadioButton /> Vermoeidheid
+          </FormField>
+          <FormField>
+            <RadioButton /> Puberteit
+          </FormField>
+          <FormField>
+            <RadioButton /> Ajax heeft verloren
           </FormField>
           <FormField>
             <FormLabel className="example-foute-form-label">Aanvullende Onderbouwing</FormLabel>
@@ -45,9 +64,34 @@ export default function Home() {
             <Textbox />
           </FormField>
           <FormField>
-            <FormLabel></FormLabel>
+            <FormLabel className="example-foute-form-label">Huisnummer</FormLabel>
             <Textbox />
           </FormField>
+          <FormField>
+            <FormLabel className="example-foute-form-label">Toevoeging(Optioneel)</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel className="example-foute-form-label">Postcode</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel className="example-foute-form-label">Woonplaats</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel className="example-foute-form-label">E-mailadres</FormLabel>
+            <Textbox />
+          </FormField>
+          <FormField>
+            <FormLabel className="example-foute-form-label">Telefoonnummer</FormLabel>
+            <Textbox />
+          </FormField>
+          <ButtonGroup>
+            <ButtonLink href="#" appearance="primary-action-button">
+              Versturen
+            </ButtonLink>
+          </ButtonGroup>
         </PageContent>
       </Page>
       <ExampleFooter />
