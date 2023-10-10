@@ -7,7 +7,6 @@ import {
   ButtonLink,
   Heading1,
   Heading2,
-  Heading3,
   Link,
   OrderedList,
   OrderedListItem,
@@ -31,9 +30,8 @@ export default function Home() {
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent>
-        {/* <Paragraph>
+        <Paragraph>
           <BreadcrumbNav appearance="arrows" label="Kruimelpad">
-            {' '}
             <BreadcrumbLink href="" index={0} rel="home">
               Home
             </BreadcrumbLink>
@@ -44,7 +42,7 @@ export default function Home() {
               Meldingen openbare ruimte
             </BreadcrumbLink>
           </BreadcrumbNav>
-        </Paragraph> */}
+        </Paragraph>
         <Article>
           <Heading1>Graffiti laten verwijderen van uw pand</Heading1>
           <Paragraph lead>
