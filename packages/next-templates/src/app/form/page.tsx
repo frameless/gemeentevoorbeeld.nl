@@ -50,7 +50,7 @@ export default function Home() {
             Vul alle velden in. Als een veld optioneel is, staat dit erbij
           </Paragraph>
           <Heading2 utrecht-heading-2>Wat wilt u melden?</Heading2>
-          <Paragraph>Kies een categorie die bij uw melding past.</Paragraph>
+          <Paragraph className="voorbeeld-title-paragraph">Kies een categorie die bij uw melding past.</Paragraph>
           <form
             onSubmit={handleSubmit((data) => {
               console.log(data);
@@ -133,7 +133,7 @@ export default function Home() {
                 <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
                 <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
               </UnorderedList>
-              <Button appearance="primary-action-button">Bestand kiezen</Button>
+              <Button appearance="secondary-action-button">Bestand kiezen</Button>
               <Paragraph>Geen bestand gekozen</Paragraph>
             </FormField>
             <Heading2 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading2>
@@ -262,6 +262,7 @@ export default function Home() {
               </Paragraph>
               <Paragraph>
                 <Textbox
+                  className="voorbeeld-telefoon-textbox-small"
                   autoComplete="tel"
                   id="telephone"
                   invalid={!!errors.telephone}
