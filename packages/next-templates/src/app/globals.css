@@ -12,8 +12,6 @@ body {
 /* NLDS CSS Variables */
 .utrecht-theme {
   --utrecht-space-around: 1;
-
-  /* HACK: these tokens are not set in utrecht-theme */
   --utrecht-button-group-margin-block-end: 16px;
   --utrecht-button-group-margin-block-start: 16px;
   --utrecht-link-icon-size: 18px;
@@ -41,14 +39,25 @@ body {
   --utrecht-paragraph-lead-font-size: 20px;
   --utrecht-form-label-font-weight: var(--voorbeeld-typography-font-weight-bold);
   --utrecht-paragraph-lead: var(--voorbeeld-space-block-dog);
+  --utrecht-article-max-inline-size: 1024px;
 }
 
 .voorbeeld-theme :is(.utrecht-heading-1, utrecht-heading-1),
 :is(.utrecht-heading-2, utrecht-heading-2) {
-  --utrecht-heading-2-margin-block-start: var(--voorbeeld-space-block-rabbit);
+  --utrecht-heading-2-margin-block-start: var(--voorbeeld-space-block-dog);
   --utrecht-heading-2-margin-block-end: var(--voorbeeld-space-block-rabbit);
   --utrecht-heading-1-margin-block-start: var(--voorbeeld-space-block-rabbit);
   --utrecht-heading-1-margin-block-end: var(--voorbeeld-space-block-rabbit);
+}
+
+.voorbeeld-page-content-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.voorbeeld-title-paragraph {
+  --utrecht-paragraph-margin-block-start: var(--voorbeeld-space-block-rabbit);
+  --utrecht-paragraph-margin-block-end: var(--voorbeeld-space-block-rabbit);
 }
 
 .utrecht-form-fieldset__legend {
