@@ -11,6 +11,7 @@ body {
 
 /* NLDS CSS Variables */
 .utrecht-theme {
+  /* HACK: these tokens are not set in utrecht-theme */
   --utrecht-space-around: 1;
   --utrecht-button-group-margin-block-end: 16px;
   --utrecht-button-group-margin-block-start: 16px;
