@@ -267,8 +267,8 @@ importers:
         version: 5.2.2
     devDependencies:
       '@fontsource/fira-sans':
-        specifier: 5.0.12
-        version: 5.0.12
+        specifier: 5.0.15
+        version: 5.0.15
       '@fontsource/source-serif-pro':
         specifier: 5.0.8
         version: 5.0.8
@@ -1992,8 +1992,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@fontsource/fira-sans@5.0.12:
-    resolution: {integrity: sha512-IQJxlmbye/pTHHPkW/36isA5EnrRP014sAY1ZEGtFmV0TA6CcFoLV91foSKqFwQWrJ/dFs1n1ogfECLIFXWd8Q==}
+  /@fontsource/fira-sans@5.0.15:
+    resolution: {integrity: sha512-weKiNO9qjqBwssthXRiJPoNuYF5y/x7DyPInEa2kWmSK8v8uMVJm3CbO2vXomm4BrNxkvLxOrgFzKW9Bo75nFw==}
     dev: true
 
   /@fontsource/source-serif-pro@5.0.8:
