@@ -18,6 +18,204 @@ body {
   --utrecht-link-icon-size: 18px;
 }
 
+.groningen-theme {
+  /* Uncomment each custom property you need */
+
+  /* --utrecht-button-background-color: <color>; */
+
+  /* --utrecht-button-border-color: <color>; */
+
+  /* --utrecht-button-border-radius: <length>; */
+
+  /* --utrecht-button-border-width: <length>; */
+
+  /* --utrecht-button-color: <color>; */
+
+  /* --utrecht-button-font-family: *; */
+
+  /* --utrecht-button-font-size: <length>; */
+
+  /* --utrecht-button-font-weight: <number>; */
+
+  /* --utrecht-button-inline-size: <length>; */
+
+  /* --utrecht-button-line-height: <length>; */
+
+  /* --utrecht-button-min-block-size: <length>; */
+
+  /* --utrecht-button-min-inline-size: <length>; */
+
+  /* --utrecht-button-padding-block-start: <length>; */
+
+  /* --utrecht-button-padding-block-end: <length>; */
+
+  /* --utrecht-button-padding-inline-start: <length>; */
+
+  /* --utrecht-button-padding-inline-end: <length>; */
+
+  /* --utrecht-button-text-transform: inherit | uppercase; */
+
+  /* --utrecht-button-active-background-color: <color>; */
+
+  /* --utrecht-button-active-border-color: <color>; */
+
+  /* --utrecht-button-active-color: <color>; */
+
+  /* --utrecht-button-icon-gap: <length>; */
+
+  /* --utrecht-button-icon-size: <length>; */
+
+  /* --utrecht-button-disabled-background-color: <color>; */
+
+  /* --utrecht-button-disabled-border-color: <color>; */
+
+  /* --utrecht-button-disabled-color: <color>; */
+
+  /* --utrecht-button-focus-background-color: <color>; */
+
+  /* --utrecht-button-focus-border-color: <color>; */
+
+  /* --utrecht-button-focus-color: <color>; */
+
+  /* --utrecht-button-focus-scale: <number>; */
+
+  /* --utrecht-button-hover-background-color: <color>; */
+
+  /* --utrecht-button-hover-border-color: <color>; */
+
+  /* --utrecht-button-hover-color: <color>; */
+
+  /* --utrecht-button-hover-scale: <number>; */
+
+  /* --utrecht-button-pressed-background-color: <color>; */
+
+  /* --utrecht-button-pressed-border-color: <color>; */
+
+  /* --utrecht-button-pressed-color: <color>; */
+
+  /* --utrecht-button-primary-action-background-color: <color>; */
+
+  /* --utrecht-button-primary-action-border-color: <color>; */
+
+  /* --utrecht-button-primary-action-border-width: <color>; */
+
+  /* --utrecht-button-primary-action-color: <color>; */
+
+  /* --utrecht-button-primary-action-font-weight: <number>; */
+
+  /* --utrecht-button-primary-action-active-background-color: <color>; */
+
+  /* --utrecht-button-primary-action-active-border-color: <color>; */
+
+  /* --utrecht-button-primary-action-active-color: <color>; */
+
+  /* --utrecht-button-primary-action-disabled-background-color: <color>; */
+
+  /* --utrecht-button-primary-action-disabled-border-color: <color>; */
+
+  /* --utrecht-button-primary-action-disabled-color: <color>; */
+
+  /* --utrecht-button-primary-action-hover-background-color: <color>; */
+
+  /* --utrecht-button-primary-action-hover-border-color: <color>; */
+
+  /* --utrecht-button-primary-action-hover-color: <color>; */
+
+  /* --utrecht-button-primary-action-hover-scale: <number>; */
+
+  /* --utrecht-button-primary-action-focus-background-color: <color>; */
+
+  /* --utrecht-button-primary-action-focus-border-color: <color>; */
+
+  /* --utrecht-button-primary-action-focus-color: <color>; */
+
+  /* --utrecht-button-primary-action-pressed-background-color: <color>; */
+
+  /* --utrecht-button-primary-action-pressed-border-color: <color>; */
+
+  /* --utrecht-button-primary-action-pressed-color: <color>; */
+
+  /* --utrecht-button-secondary-action-background-color: <color>; */
+
+  /* --utrecht-button-secondary-action-border-color: <color>; */
+
+  /* --utrecht-button-secondary-action-border-width: <color>; */
+
+  /* --utrecht-button-secondary-action-color: <color>; */
+
+  /* --utrecht-button-secondary-action-font-weight: <number>; */
+
+  /* --utrecht-button-secondary-action-active-background-color: <color>; */
+
+  /* --utrecht-button-secondary-action-active-border-color: <color>; */
+
+  /* --utrecht-button-secondary-action-active-color: <color>; */
+
+  /* --utrecht-button-secondary-action-disabled-background-color: <color>; */
+
+  /* --utrecht-button-secondary-action-disabled-border-color: <color>; */
+
+  /* --utrecht-button-secondary-action-disabled-color: <color>; */
+
+  /* --utrecht-button-secondary-action-hover-background-color: <color>; */
+
+  /* --utrecht-button-secondary-action-hover-border-color: <color>; */
+
+  /* --utrecht-button-secondary-action-hover-color: <color>; */
+
+  /* --utrecht-button-secondary-action-focus-background-color: <color>; */
+
+  /* --utrecht-button-secondary-action-focus-border-color: <color>; */
+
+  /* --utrecht-button-secondary-action-focus-color: <color>; */
+
+  /* --utrecht-button-secondary-action-pressed-background-color: <color>; */
+
+  /* --utrecht-button-secondary-action-pressed-border-color: <color>; */
+
+  /* --utrecht-button-secondary-action-pressed-color: <color>; */
+
+  /* --utrecht-button-subtle-background-color: <color>; */
+
+  /* --utrecht-button-subtle-border-color: <color>; */
+
+  /* --utrecht-button-subtle-border-width: <color>; */
+
+  /* --utrecht-button-subtle-color: <color>; */
+
+  /* --utrecht-button-subtle-font-weight: <number>; */
+
+  /* --utrecht-button-subtle-active-background-color: <color>; */
+
+  /* --utrecht-button-subtle-active-border-color: <color>; */
+
+  /* --utrecht-button-subtle-active-color: <color>; */
+
+  /* --utrecht-button-subtle-disabled-background-color: <color>; */
+
+  /* --utrecht-button-subtle-disabled-border-color: <color>; */
+
+  /* --utrecht-button-subtle-disabled-color: <color>; */
+
+  /* --utrecht-button-subtle-hover-background-color: <color>; */
+
+  /* --utrecht-button-subtle-hover-border-color: <color>; */
+
+  /* --utrecht-button-subtle-hover-color: <color>; */
+
+  /* --utrecht-button-subtle-focus-background-color: <color>; */
+
+  /* --utrecht-button-subtle-focus-border-color: <color>; */
+
+  /* --utrecht-button-subtle-focus-color: <color>; */
+
+  /* --utrecht-button-subtle-pressed-background-color: <color>; */
+
+  /* --utrecht-button-subtle-pressed-border-color: <color>; */
+
+  /* --utrecht-button-subtle-pressed-color: <color>; */
+}
+
 .voorbeeld-theme {
   /* HACK: these tokens are not set in voorbeeld-theme */
   --utrecht-form-field-description-margin-block-end: var(--voorbeeld-space-block-beetle);

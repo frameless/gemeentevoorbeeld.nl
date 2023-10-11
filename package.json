@@ -77,6 +77,7 @@
     "watch:style-dictionary": "lerna run watch:style-dictionary"
   },
   "dependencies": {
+    "@hookform/error-message": "2.0.1",
     "http-server": "14.1.1"
   }
 }
