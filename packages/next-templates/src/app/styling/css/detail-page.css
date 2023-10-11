@@ -6,10 +6,11 @@ https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliothee
   --utrecht-spotlight-section-padding-block-end: 150px;
 }
 
-.voorbeeld-ordered-list {
-  --utrecht-ordered-list-item-margin-block-start: 1em;
-}
-
 .utrecht-ordered-list__item {
+  --utrecht-ordered-list-item-margin-block-start: var(--voorbeeld-space-block-mouse);
+  --utrecht-ordered-list-item-margin-block-end: var(--voorbeeld-space-block-mouse);
+  --utrecht-ordered-list-font-size: var(voorbeeld-typography-font-weight-normal);
+
   color: #5315f6;
+  text-decoration: underline;
 }
