@@ -233,7 +233,7 @@ export default function Home() {
             <FormField invalid={!!errors.email} type="text">
               <Paragraph>
                 <FormLabel className="voorbeeld-form-label" htmlFor="Email">
-                  E-mail
+                  E-mailadres
                 </FormLabel>
               </Paragraph>
               <Paragraph>
@@ -255,7 +255,7 @@ export default function Home() {
             <FormField invalid={!!errors.telephone} type="text">
               <Paragraph>
                 <FormLabel className="voorbeeld-form-label" htmlFor="Telefoon">
-                  Telefoon
+                  Telefoonnummer
                 </FormLabel>
               </Paragraph>
               <Paragraph>
