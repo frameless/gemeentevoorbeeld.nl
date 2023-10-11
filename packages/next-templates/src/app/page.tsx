@@ -29,7 +29,7 @@ export default function Home() {
     <Page>
       <ExampleHeader />
       <ExampleNavigation />
-      <PageContent>
+      <PageContent className="voorbeeld-page-content-flex">
         <BreadcrumbNav appearance="arrows" label="Kruimelpad">
           <BreadcrumbNavLink href="" index={0} rel="home">
             Home
@@ -60,7 +60,7 @@ export default function Home() {
               <OrderedListItem>Zie ook</OrderedListItem>
             </OrderedList>
           </SpotlightSection>
-          <Paragraph small>
+          <Paragraph className="voorbeeld-title-paragraph" small>
             Als u een koopwoning heeft of een pand van een particuliere eigenaar huurt of beheert, kunt u gebruik maken
             van de diensten van het Meldpunt Graffiti.
           </Paragraph>
