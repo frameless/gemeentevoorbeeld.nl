@@ -18,6 +18,7 @@ import {
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import '../../styling/css/maandagochtend.css';
+import './React.maandagochtend.tsx';
 
 export default function Home() {
   return (
@@ -87,6 +88,7 @@ export default function Home() {
             <FormLabel className="example-foute-form-label">Telefoonnummer</FormLabel>
             <Textbox />
           </FormField>
+
           <ButtonGroup>
             <ButtonLink href="#" appearance="primary-action-button">
               Versturen
