@@ -16,6 +16,10 @@
   height: 6.125em;
 }
 
+.voorbeeld-telefoon-textbox-small {
+  --utrecht-form-field-max-inline-size: 160px;
+}
+
 /* Remove later: A component is going to be added instead */
 .voorbeeld-svg-arrow {
   appearance: none;
