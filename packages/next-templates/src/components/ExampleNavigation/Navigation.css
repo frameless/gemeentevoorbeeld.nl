@@ -5,9 +5,12 @@
   padding-inline-end: 1em;
   padding-inline-start: 1em;
 }
+.example--header-navbar-links:visited {
+  --utrecht-link-color: var(--voorbeeld-color-white);
+}
 
 /* Style for the navigation links */
-.example--header-navbar a {
+.example--header-navbar .example--header-navbar-links {
   color: #fff;
   padding-block-end: 0.8em;
   padding-block-start: 0.8em;
@@ -17,7 +20,7 @@
 }
 
 /* Change color on hover */
-.example--header-navbar a:hover {
+.example--header-navbar .example--header-navbar-links:hover {
   background-color: #290b7a;
   color: #fff;
 }

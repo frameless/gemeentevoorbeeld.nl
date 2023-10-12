@@ -5,11 +5,21 @@ import './Navigation.css';
 interface ExampleNavigationProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleNavigation = ({ ...props }: ExampleNavigationProps) => (
   <div className="example--header-navbar">
-    <Link className="example--header-navbar-active">Home</Link>
-    <Link>About</Link>
-    <Link>Services</Link>
-    <Link>Portfolio</Link>
-    <Link>Contact</Link>
+    <Link className="example--header-navbar-links" href="#">
+      Home
+    </Link>
+    <Link className="example--header-navbar-links" href="#">
+      About
+    </Link>
+    <Link className="example--header-navbar-links" href="#">
+      Services
+    </Link>
+    <Link className="example--header-navbar-links" href="#">
+      Portfolio
+    </Link>
+    <Link className="example--header-navbar-links" href="#">
+      Contact
+    </Link>
   </div>
 );
 

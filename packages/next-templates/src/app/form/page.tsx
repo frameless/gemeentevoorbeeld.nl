@@ -8,8 +8,8 @@ import {
   FormField,
   FormFieldDescription,
   FormLabel,
+  Heading1,
   Heading2,
-  Heading4,
   Link,
   Page,
   PageContent,
@@ -22,7 +22,7 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import '@/app/styling/css/detail-page.css';
 import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 import { useForm } from 'react-hook-form';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
@@ -45,9 +45,9 @@ export default function Home() {
             <BacklinkIcon />
             &nbsp;&nbsp;<span className="example--underlined">Terug</span>
           </Link>
-          <Heading2>Melding openbare ruimte</Heading2>
+          <Heading1>Melding openbare ruimte</Heading1>
           <Paragraph>Vul alle velden in. Als een veld optioneel is, staat dit erbij</Paragraph>
-          <Heading4 className="voorbeeld-begin-of-block">Wat wilt u melden?</Heading4>
+          <Heading2 className="voorbeeld-begin-of-block">Wat wilt u melden?</Heading2>
           <Paragraph>Kies een categorie die bij uw melding past.</Paragraph>
           <form
             onSubmit={handleSubmit((data) => {
@@ -109,13 +109,14 @@ export default function Home() {
             <FormField invalid={!!errors.description}>
               <Paragraph>
                 <FormLabel className="voorbeeld-form-label" htmlFor="description">
-                  Beschrijving:
+                  Omschrijving:
                 </FormLabel>
               </Paragraph>
               <FormFieldDescription>
                 Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden.
               </FormFieldDescription>
               <Textarea
+                className="utrecht-textarea-beschrijving"
                 id="description"
                 invalid={!!errors.description}
                 {...register('description', {
@@ -124,19 +125,16 @@ export default function Home() {
                 })}
                 placeholder=""
               ></Textarea>
-              {/*Going to make this a component soon (ExampleBijlageToevoegen) everything between the Article */}
-              {/* <Article>
-                <Paragraph>Bijlage</Paragraph>
-                <Paragraph>(optioneel)</Paragraph>
-                <UnorderedList>
-                  <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
-                  <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
-                </UnorderedList>
-                <Button appearance="primary-action-button">Bestand kiezen</Button>
-                <Paragraph>Geen bestand gekozen</Paragraph>
-              </Article> */}
+              <Paragraph>Bijlage</Paragraph>
+              <Paragraph>(optioneel)</Paragraph>
+              <UnorderedList>
+                <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
+                <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
+              </UnorderedList>
+              <Button appearance="primary-action-button">Bestand kiezen</Button>
+              <Paragraph>Geen bestand gekozen</Paragraph>
             </FormField>
-            <Heading4 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading4>
+            <Heading2 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading2>
             <FormField invalid={!!errors.place}>
               <Paragraph>
                 <FormLabel className="voorbeeld-form-label" htmlFor="place">
@@ -179,6 +177,7 @@ export default function Home() {
               </Paragraph>
               <FormFieldDescription>Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormFieldDescription>
               <Textarea
+                className="utrecht-textarea-form"
                 id="height"
                 invalid={!!errors.height}
                 {...register('height', {
@@ -189,7 +188,7 @@ export default function Home() {
               ></Textarea>
               <FormFieldDescription invalid={!!errors.height}>{errors.height?.message}</FormFieldDescription>
             </FormField>
-            <Heading4 className="voorbeeld-begin-of-block">Hoe kunnen we u bereiken voor meer informatie?</Heading4>
+            <Heading2 className="voorbeeld-begin-of-block">Hoe kunnen we u bereiken voor meer informatie?</Heading2>
             <Fieldset role="radiogroup">
               <FieldsetLegend>Anoniem Melden?</FieldsetLegend>
               <FormFieldDescription>
@@ -234,7 +233,7 @@ export default function Home() {
             <FormField invalid={!!errors.email} type="text">
               <Paragraph>
                 <FormLabel className="voorbeeld-form-label" htmlFor="Email">
-                  E-mail
+                  E-mailadres
                 </FormLabel>
               </Paragraph>
               <Paragraph>
@@ -256,7 +255,7 @@ export default function Home() {
             <FormField invalid={!!errors.telephone} type="text">
               <Paragraph>
                 <FormLabel className="voorbeeld-form-label" htmlFor="Telefoon">
-                  Telefoon
+                  Telefoonnummer
                 </FormLabel>
               </Paragraph>
               <Paragraph>

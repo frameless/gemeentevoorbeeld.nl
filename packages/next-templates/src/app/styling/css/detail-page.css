@@ -1,0 +1,15 @@
+/* HACK  should be a component 
+https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliotheek?type=design&node-id=13-254&mode=dev */
+.utrecht-spotlight-section {
+  --utrecht-heading-2-margin-block-end: 16px;
+  --utrecht-heading-2-font-size: 20px;
+  --utrecht-spotlight-section-padding-block-end: 150px;
+}
+
+.voorbeeld-ordered-list {
+  --utrecht-ordered-list-item-margin-block-start: 1em;
+}
+
+.utrecht-ordered-list__item {
+  color: #5315f6;
+}
