@@ -20,6 +20,7 @@ body {
 
 .voorbeeld-theme {
   /* HACK: these tokens are not set in voorbeeld-theme */
+  --utrecht-form-field-description-margin-block-end: var(--voorbeeld-space-block-beetle);
   --utrecht-space-around: 1;
   --utrecht-button-group-margin-block-end: 16px;
   --utrecht-button-group-margin-block-start: 16px;
@@ -71,4 +72,9 @@ body {
 
 .utrecht-ordered-list__item::marker {
   color: #0a2750;
+}
+
+.voorbeeld-telefoon-textbox-small {
+  width: 160px;
+  margin-block-end: var(--voorbeeld-space-block-dog);
 }
