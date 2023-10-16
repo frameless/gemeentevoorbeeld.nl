@@ -273,8 +273,8 @@ importers:
         specifier: 5.0.8
         version: 5.0.8
       '@next/eslint-plugin-next':
-        specifier: 13.4.19
-        version: 13.4.19
+        specifier: 13.5.5
+        version: 13.5.5
       '@nl-design-system-unstable/voorbeeld-design-tokens':
         specifier: 1.0.0-alpha.96
         version: 1.0.0-alpha.96
@@ -2461,8 +2461,8 @@ packages:
   /@next/env@13.4.19:
     resolution: {integrity: sha512-FsAT5x0jF2kkhNkKkukhsyYOrRqtSxrEhfliniIq0bwWbuXLgyt3Gv0Ml+b91XwjwArmuP7NxCiGd++GGKdNMQ==}
 
-  /@next/eslint-plugin-next@13.4.19:
-    resolution: {integrity: sha512-N/O+zGb6wZQdwu6atMZHbR7T9Np5SUFUjZqCbj0sXm+MwQO35M8TazVB4otm87GkXYs2l6OPwARd3/PUWhZBVQ==}
+  /@next/eslint-plugin-next@13.5.5:
+    resolution: {integrity: sha512-S/32s4S+SCOpW58lHKdmILAAPRdnsSei7Y3L1oZSoe5Eh0QSlzbG1nYyIpnpwWgz3T7qe3imdq7cJ6Hf29epRA==}
     dependencies:
       glob: 7.1.7
     dev: true
