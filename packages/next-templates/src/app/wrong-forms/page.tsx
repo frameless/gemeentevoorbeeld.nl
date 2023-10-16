@@ -114,8 +114,9 @@ export default function Home() {
             <FormLabel className="example-foute-form-label">Geslacht</FormLabel>
             <Select className="example-foute-form-focus">
               <SelectOption value="1">Kies een geslacht</SelectOption>
-              <SelectOption value="2"></SelectOption>
-              <SelectOption value="3">2</SelectOption>
+              <SelectOption value="2">man</SelectOption>
+              <SelectOption value="3">vrouw</SelectOption>
+              <SelectOption value="4">Onbekend</SelectOption>
             </Select>
           </FormField>
           <FormField>
