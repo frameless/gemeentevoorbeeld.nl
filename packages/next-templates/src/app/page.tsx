@@ -2,7 +2,7 @@
 
 import {
   Article,
-  BreadcrumbLink,
+  BreadcrumbNavLink,
   BreadcrumbNav,
   ButtonLink,
   Heading1,
@@ -32,15 +32,15 @@ export default function Home() {
       <PageContent>
         <Paragraph>
           <BreadcrumbNav appearance="arrows" label="Kruimelpad">
-            <BreadcrumbLink href="" index={0} rel="home">
+            <BreadcrumbNavLink href="" index={0} rel="home">
               Home
-            </BreadcrumbLink>
-            <BreadcrumbLink href="" index={1}>
+            </BreadcrumbNavLink>
+            <BreadcrumbNavLink href="" index={1}>
               Meldingen
-            </BreadcrumbLink>
-            <BreadcrumbLink href="" index={2} rel="up">
+            </BreadcrumbNavLink>
+            <BreadcrumbNavLink href="" index={2} rel="up">
               Meldingen openbare ruimte
-            </BreadcrumbLink>
+            </BreadcrumbNavLink>
           </BreadcrumbNav>
         </Paragraph>
         <Article>

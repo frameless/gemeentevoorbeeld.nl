@@ -2,7 +2,7 @@
 
 import {
   Article,
-  BreadcrumbLink,
+  BreadcrumbNavLink,
   BreadcrumbNav,
   ButtonLink,
   Heading1,
@@ -30,15 +30,15 @@ export default function Home() {
         <Paragraph>
           <BreadcrumbNav appearance="arrows" label="Kruimelpad">
             {' '}
-            <BreadcrumbLink href="https://www.utrecht.nl/" index={0} rel="home">
+            <BreadcrumbNavLink href="https://www.utrecht.nl/" index={0} rel="home">
               Home
-            </BreadcrumbLink>
-            <BreadcrumbLink href="https://pki.utrecht.nl/Loket/start.do" index={1}>
+            </BreadcrumbNavLink>
+            <BreadcrumbNavLink href="https://pki.utrecht.nl/Loket/start.do" index={1}>
               Online loket
-            </BreadcrumbLink>
-            <BreadcrumbLink href="https://pki.utrecht.nl/Loket/products/alphabet" index={2} rel="up">
+            </BreadcrumbNavLink>
+            <BreadcrumbNavLink href="https://pki.utrecht.nl/Loket/products/alphabet" index={2} rel="up">
               Producten
-            </BreadcrumbLink>
+            </BreadcrumbNavLink>
           </BreadcrumbNav>
         </Paragraph>
         <Article>
