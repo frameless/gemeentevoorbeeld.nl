@@ -48,8 +48,8 @@ export default function Home() {
             deze gratis worden verwijderd.
           </Paragraph>
 
-          <SpotlightSection>
-            <Heading2>Op deze pagina</Heading2>
+          <SpotlightSection className="voorbeeld-spotlight-section">
+            <Heading2 className="voorbeeld-spotlight-section-heading-style">Op deze pagina</Heading2>
             <OrderedList>
               <OrderedListItem>Eerst toestemming geven</OrderedListItem>
               <OrderedListItem>Dan vervuiling melden</OrderedListItem>
@@ -157,7 +157,7 @@ export default function Home() {
 
           <section>
             <Heading2>Eerst toestemming geven</Heading2>
-            <UnorderedList>
+            <UnorderedList className="voorbeeld-unordered-list-space">
               <Link href="https://www.figma.com/file/OlnanjplmeO3aWYzNKnNTo/Voorbeeld---Templates?type=design&node-id=501-1404&mode=dev">
                 <UnorderedListItem>Graffiti in de openbare ruimte melden</UnorderedListItem>
               </Link>
