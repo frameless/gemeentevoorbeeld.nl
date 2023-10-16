@@ -20,6 +20,7 @@ import {
 import '@/app/styling/css/detail-page.css';
 import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
+import { UtrechtFlexWrapFallback } from '@utrecht/web-component-library-react';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
@@ -28,7 +29,10 @@ export default function Home() {
   return (
     <Page>
       <ExampleHeader />
-      <ExampleNavigation />
+      <UtrechtFlexWrapFallback flexTarget="nav">
+        <ExampleNavigation style={{ flexWrap: 'wrap' }} id="nav" />
+        <p slot="fallback">Nog ff iets verzinnen</p>
+      </UtrechtFlexWrapFallback>
       <PageContent>
         <BreadcrumbNav appearance="arrows" label="Kruimelpad">
           <BreadcrumbNavLink href="" index={0} rel="home">
