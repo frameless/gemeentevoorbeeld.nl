@@ -8,10 +8,6 @@
   --utrecht-radio-button-border-color: #7a8aa0;
 }
 
-.voorbeeld-form-label {
-  margin-block-end: var(--voorbeeld-space-block-snail);
-}
-
 .voorbeeld-radio-button-form-label {
   --utrecht-form-label-font-weight: var(--voorbeeld-typography-font-weight-normal);
 }
@@ -43,9 +39,4 @@
 .voorbeeld-paragraph-bijlage {
   --utrecht-paragraph-font-weight: var(--voorbeeld-typography-font-weight-bold);
   margin-inline-end: var(--voorbeeld-space-block-ant);
-}
-
-.voorbeeld-unordered-list-space {
-  --utrecht-unordered-list-margin-block-start: var(--voorbeeld-space-block-dog);
-  --utrecht-unordered-list-margin-block-end: var(--voorbeeld-space-block-snail);
 }
