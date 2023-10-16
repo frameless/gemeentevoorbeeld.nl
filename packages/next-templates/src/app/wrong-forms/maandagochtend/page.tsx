@@ -16,13 +16,13 @@ import {
   Textarea,
   Textbox,
   Button,
+  FormFieldErrorMessage,
 } from '@utrecht/component-library-react';
 
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import '../../styling/css/maandagochtend.css';
-import { Form } from 'react-hook-form';
-
+import { useForm } from 'react-hook-form';
 
 type FormErrors = {
   selectedReason?: string;
@@ -35,6 +35,8 @@ type FormErrors = {
 };
 
 export default function Home() {
+  const { handleSubmit } = useForm({});
+
   const [selectedReason, setSelectedReason] = useState<string>('');
   const [additionalInfo, setAdditionalInfo] = useState<string>('');
   const [name, setName] = useState<string>('');
@@ -87,8 +89,13 @@ export default function Home() {
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (validateForm()) {
+  //     alert('Formulier verstuurd!');
+  //   }
+  // };
+  const handleFormHookSubmit = () => {
     if (validateForm()) {
       alert('Formulier verstuurd!');
     }
@@ -103,94 +110,28 @@ export default function Home() {
           <Paragraph>Vul alle velden in. Als een veld optioneel is, dan staat dit erbij.</Paragraph>
           <Heading2>Waarom maakt u bezwaar?</Heading2>
           <Paragraph>Kies een categorie die bij uw melding past.</Paragraph>
-          <Form method="post">
-          <FormField>
-            <FormLabel className="example-foute-form-label">Selecteer een reden</FormLabel>
-            <RadioButton
-              onChange={(e) => setSelectedReason(e.target.value)}
-              checked={selectedReason === 'Nog een weekend modus'}
-              value="Nog een weekend modus"
-            />
-            Nog een weekend modus
-          </FormField>
-          <FormField>
-            <RadioButton
-              onChange={(e) => setSelectedReason(e.target.value)}
-              checked={selectedReason === 'Weekend te kort'}
-              value="Weekend te kort"
-            />
-            Weekend te kort
-          </FormField>
-          <FormField>
-            <RadioButton
-              onChange={(e) => setSelectedReason(e.target.value)}
-              checked={selectedReason === 'Vermoeidheid'}
-              value="Vermoeidheid"
-            />
-            Vermoeidheid
-          </FormField>
-          <FormField>
-            <RadioButton
-              onChange={(e) => setSelectedReason(e.target.value)}
-              checked={selectedReason === 'Puberteit'}
-              value="Puberteit"
-            />
-            Puberteit
-          </FormField>
-          <FormField>
-            <RadioButton
-              onChange={(e) => setSelectedReason(e.target.value)}
-              checked={selectedReason === 'Ajax heeft verloren'}
-              value="Ajax heeft verloren"
-            />
-            Ajax heeft verloren
-          </FormField>
-          <FormField>
-            <FormLabel className="example-foute-form-label">Aanvullende Onderbouwing</FormLabel>
-            <FormFieldDescription>
-              Onderbouw de reden die u heeft opgegeven en beschrijf wat er eventueel aan gedaan kan worden.
+          <form method="post" onSubmit={handleSubmit(handleFormHookSubmit)}>
+            <FormField>
+              <FormLabel className="example-foute-form-label">Selecteer een reden</FormLabel>
+              <RadioButton
+                onChange={(e) => setSelectedReason(e.target.value)}
+                checked={selectedReason === 'Nog een weekend modus'}
+                value="Nog een weekend modus"
+              />
+              Nog een weekend modus
+            </FormField>
+
+            <ButtonGroup>
+              <Button appearance="primary-action-button" type="submit">
+                Versturen
+              </Button>
+            </ButtonGroup>
+            <FormFieldDescription invalid>
+              {Object.values(formErrors).map((error) => (
+                <Paragraph>{error}</Paragraph>
+              ))}
             </FormFieldDescription>
-            <Textarea onChange={(e) => setAdditionalInfo(e.target.value)} value={additionalInfo} />
-          </FormField>
-          <Heading2>Uw gegevens</Heading2>
-          <FormField>
-            <FormLabel className="example-foute-form-label">Naam</FormLabel>
-            <Textbox onChange={(e) => setName(e.target.value)} value={name} />
-          </FormField>
-          <FormField>
-            <FormLabel className="example-foute-form-label">Straat</FormLabel>
-            <Textbox onChange={(e) => setStreet(e.target.value)} value={street} />
-          </FormField>
-          <FormField>
-            <FormLabel className="example-foute-form-label">Huisnummer</FormLabel>
-            <Textbox onChange={(e) => setHouseNumber(e.target.value)} value={houseNumber} />
-          </FormField>
-          <FormField>
-            <FormLabel className="example-foute-form-label">Toevoeging (Optioneel)</FormLabel>
-            <Textbox />
-          </FormField>
-          <FormField>
-            <FormLabel className="example-foute-form-label">Postcode</FormLabel>
-            <Textbox onChange={(e) => setPostcode(e.target.value)} value={postcode} />
-          </FormField>
-          <FormField>
-            <FormLabel className="example-foute-form-label">Woonplaats</FormLabel>
-            <Textbox onChange={(e) => setWoonplaats(e.target.value)} value={woonplaats} />
-          </FormField>
-          <FormField>
-            <FormLabel className="example-foute-form-label">E-mailadres</FormLabel>
-            <Textbox onChange={(e) => setEmail(e.target.value)} value={email} />
-          </FormField>
-          <FormField>
-            <FormLabel className="example-foute-form-label">Telefoonnummer</FormLabel>
-            <Textbox onChange={(e) => setTelefoonnummer(e.target.value)} value={telefoonnummer} />
-          </FormField>
-          <ButtonGroup>
-            <Button appearance="primary-action-button" type="submit" >
-              Versturen
-            </Button>
-          </ButtonGroup>
-          </Form>
+          </form>
         </PageContent>
       </Page>
       <ExampleFooter />
