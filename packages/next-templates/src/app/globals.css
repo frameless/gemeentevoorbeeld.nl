@@ -21,25 +21,25 @@ body {
 .groningen-theme {
   /* Uncomment each custom property you need */
 
-  /* --utrecht-button-background-color: <color>; */
+  /* --utrecht-button-background-color: #0065BD; */
 
-  /* --utrecht-button-border-color: <color>; */
+  /* --utrecht-button-border-color: #0065BD; */
 
-  /* --utrecht-button-border-radius: <length>; */
+  /* --utrecht-button-border-radius: 3px; */
 
-  /* --utrecht-button-border-width: <length>; */
+  /* --utrecht-button-border-width: 273px; */
 
   /* --utrecht-button-color: <color>; */
 
-  /* --utrecht-button-font-family: *; */
+  /* --utrecht-button-font-family: TheMix C5 */
 
-  /* --utrecht-button-font-size: <length>; */
+  /* --utrecht-button-font-size: 16px; */
 
-  /* --utrecht-button-font-weight: <number>; */
+  /* --utrecht-button-font-weight: 500; */
 
   /* --utrecht-button-inline-size: <length>; */
 
-  /* --utrecht-button-line-height: <length>; */
+  /* --utrecht-button-line-height: 20.8px; */
 
   /* --utrecht-button-min-block-size: <length>; */
 
