@@ -41,7 +41,7 @@ export default function Home() {
       <Page>
         <ExampleHeaderFunnel />
         <PageContent>
-          <Link className="example--back-link" href="./detail-page">
+          <Link className="example--back-link" href="./">
             <BacklinkIcon />
             &nbsp;&nbsp;<span className="example--underlined">Terug</span>
           </Link>
@@ -111,13 +111,14 @@ export default function Home() {
             <FormField invalid={!!errors.description}>
               <Paragraph>
                 <FormLabel className="voorbeeld-form-label" htmlFor="description">
-                  Omschrijving:
+                  Omschrijving
                 </FormLabel>
               </Paragraph>
               <FormFieldDescription>
                 Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden.
               </FormFieldDescription>
               <Textarea
+                rows={6}
                 className="utrecht-textarea-beschrijving"
                 id="description"
                 invalid={!!errors.description}
@@ -127,15 +128,19 @@ export default function Home() {
                 })}
                 placeholder=""
               ></Textarea>
-              <Paragraph>Bijlage</Paragraph>
-              <Paragraph>(optioneel)</Paragraph>
-              <UnorderedList>
-                <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
-                <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
-              </UnorderedList>
-              <Button appearance="secondary-action-button">Bestand kiezen</Button>
-              <Paragraph>Geen bestand gekozen</Paragraph>
             </FormField>
+            <div className="voorbeeld-bijlage-container">
+              <Paragraph className="voorbeeld-paragraph-bijlage">Bijlage</Paragraph>
+              <Paragraph>(optioneel)</Paragraph>
+            </div>
+            <UnorderedList className="voorbeeld-unordered-list-space">
+              <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
+              <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
+            </UnorderedList>
+            <div className="voorbeeld-bijlage-container">
+              <Button appearance="secondary-action-button">Bestand kiezen</Button>
+              <Paragraph className="paragraph-space-bijlagen">Geen bestand gekozen</Paragraph>
+            </div>
             <Heading2 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading2>
             <FormField invalid={!!errors.place}>
               <Paragraph>
@@ -179,6 +184,7 @@ export default function Home() {
               </Paragraph>
               <FormFieldDescription>Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormFieldDescription>
               <Textarea
+                rows={3}
                 className="utrecht-textarea-form"
                 id="height"
                 invalid={!!errors.height}
@@ -193,18 +199,18 @@ export default function Home() {
             <Heading2 className="voorbeeld-begin-of-block">Hoe kunnen we u bereiken voor meer informatie?</Heading2>
             <Fieldset role="radiogroup">
               <FieldsetLegend>Anoniem Melden?</FieldsetLegend>
-              <FormFieldDescription>
+              <FormFieldDescription className="voorbeeld-spacing-FormFieldDescription">
                 Als u iets anoniem meld kunnen we u niet informeren over het verloop van de afhandeling voor deze
                 melding.
               </FormFieldDescription>
               <FormField type="radio">
-                <FormLabel htmlFor="anoniem-ja" type="radio">
+                <FormLabel className="voorbeeld-radio-button-form-label" htmlFor="anoniem-ja" type="radio">
                   Ja
                 </FormLabel>
                 <RadioButton className="utrecht-form-field__input" id="anoniem-ja" name="anoniem" value="1" />
               </FormField>
               <FormField type="radio">
-                <FormLabel htmlFor="anoniem-nee" type="radio">
+                <FormLabel className="voorbeeld-radio-button-form-label" htmlFor="anoniem-nee" type="radio">
                   Nee
                 </FormLabel>
                 <RadioButton className="utrecht-form-field__input" id="anoniem-nee" name="anoniem" value="2" />
@@ -277,7 +283,7 @@ export default function Home() {
               </Paragraph>
               <FormFieldDescription invalid={!!errors.telephone}>{errors.telephone?.message}</FormFieldDescription>
             </FormField>
-            <Button className="voorbeeld-last-of-block" type="submit" appearance="primary-action-button">
+            <Button className="voorbeeld-button-spacing" type="submit" appearance="primary-action-button">
               Versturen
             </Button>
           </form>
