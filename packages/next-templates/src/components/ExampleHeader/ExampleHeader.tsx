@@ -1,6 +1,5 @@
 import { Button, Link, PageHeader, Textbox, Drawer } from '@utrecht/component-library-react';
 import { PopOverButton } from '../PopOver/PopOverButton';
-import { PopOverDialog } from '../PopOver/PopOverDialog';
 import Logo from '../../app/styling/assets/voorbeeld-header.svg';
 import Search from '../../app/styling/assets/searchbar-icon.svg';
 import Xbold from '../../app/styling/assets/x-bold.svg';
@@ -47,6 +46,7 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         </Button>
       </div>
     </div>
+
     <Drawer data-modal="true" id="popovermenu" className="example--header-popover-menu">
       <div className="example--header-popover-container-button">
         <PopOverButton
