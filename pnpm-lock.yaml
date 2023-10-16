@@ -28,14 +28,14 @@ importers:
         specifier: 6.4.1
         version: 6.4.1(eslint@8.48.0)(typescript@5.2.2)
       '@utrecht/component-library-react':
-        specifier: 1.0.0-alpha.356
-        version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.406
+        version: 1.0.0-alpha.406(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/components':
-        specifier: 1.0.0-alpha.526
-        version: 1.0.0-alpha.526
+        specifier: 1.0.0-alpha.558
+        version: 1.0.0-alpha.558
       '@utrecht/web-component-library-react':
-        specifier: 1.0.0-alpha.549
-        version: 1.0.0-alpha.549
+        specifier: 1.0.0-alpha.596
+        version: 1.0.0-alpha.596(react-dom@18.2.0)(react@18.2.0)
       eslint:
         specifier: 8.48.0
         version: 8.48.0
@@ -276,26 +276,26 @@ importers:
         specifier: 13.4.19
         version: 13.4.19
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 1.0.0-alpha.88
-        version: 1.0.0-alpha.88
+        specifier: 1.0.0-alpha.96
+        version: 1.0.0-alpha.96
       '@svgr/webpack':
         specifier: 8.1.0
         version: 8.1.0
       '@utrecht/component-library-css':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547
+        specifier: 1.0.0-alpha.597
+        version: 1.0.0-alpha.597
       '@utrecht/component-library-react':
-        specifier: 1.0.0-alpha.356
-        version: 1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.406
+        version: 1.0.0-alpha.406(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/design-tokens':
-        specifier: 1.0.0-alpha.540
-        version: 1.0.0-alpha.540
+        specifier: 1.0.0-alpha.590
+        version: 1.0.0-alpha.590
       '@utrecht/web-component-library-react':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.596
+        version: 1.0.0-alpha.596(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-stencil':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547
+        specifier: 1.0.0-alpha.596
+        version: 1.0.0-alpha.596
       clsx:
         specifier: 2.0.0
         version: 2.0.0
@@ -2544,8 +2544,8 @@ packages:
     hasBin: true
     dev: true
 
-  /@nl-design-system-unstable/voorbeeld-design-tokens@1.0.0-alpha.88:
-    resolution: {integrity: sha512-FXrt3ITXD0T7npD5tjohRj+64llDJBI6hWOskSEgTN8WY6JlCPIXkOaEUXAeHmkjYufTCBxrS79fm8pHER+tTw==}
+  /@nl-design-system-unstable/voorbeeld-design-tokens@1.0.0-alpha.96:
+    resolution: {integrity: sha512-Qu9m5G8Fpf89QlBW0TKi7ZGnluNNvpuYXX7BcSDmw/gEYsyCSKiE7bkblR62mrPqwSm/f8odhry0JUx2id+GNA==}
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -3472,61 +3472,55 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@utrecht/component-library-css@1.0.0-alpha.547:
-    resolution: {integrity: sha512-Ezi60wh3LGb+1FG3E7zIOX6WklkKDwTIziDYa9S2Klykosv7o881o9WoR3wZDM+mUPPsrtvYgjwISd8QywsJQQ==}
+  /@utrecht/component-library-css@1.0.0-alpha.597:
+    resolution: {integrity: sha512-ZqPUf4MN/LCgZ+uUxgFTLVCQ4b5Q9UThB3Rw8zYGJ4AeT1vDkq9bG/p+5U2jVfIcnu5F7EzhHKsecBGUl0WAjA==}
     dev: true
 
-  /@utrecht/component-library-react@1.0.0-alpha.356(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-QITfPXJaxLO5BLIs4WPGjz8653jcYJyMGYXwcWFyGSvOhPVtFw1frT5aJzwvfCAiu0laWlUadc6rdGB44wOfPw==}
+  /@utrecht/component-library-react@1.0.0-alpha.406(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-lZoV/O4EFDIYghVF8okdXBNlmal7bcvZ1jqNk+b1gac54TwpvTmmbd4dlwB2+kulN1vhwiFN+oUII3zOMuYCuQ==}
     peerDependencies:
+      date-fns: ^2.30.0
       react: '18'
       react-dom: '18'
+      react-vega: ^7.6.0
+      vega: ^5.25.0
+    peerDependenciesMeta:
+      date-fns:
+        optional: true
+      react-vega:
+        optional: true
+      vega:
+        optional: true
     dependencies:
       clsx: 1.2.1
-      date-fns: 2.30.0
       lodash.chunk: 4.2.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@utrecht/components@1.0.0-alpha.526:
-    resolution: {integrity: sha512-KYCyzggeJ537eScL4HWjkn1lLyNvMhFmtINWHx1Z7PokpzqFiXrbEX6xtj9hB5tVpqoOtbijU+YOIHOmSSFk7Q==}
+  /@utrecht/components@1.0.0-alpha.558:
+    resolution: {integrity: sha512-Djjws7+i3BeZpwRzRWcdumCl1+VmUdWAQJVYYuzSkQsOuJxllb97ahFUEVoxbuLq2S1Fz2ijCcnnA9fsQ66L8g==}
     dependencies:
       clsx: 1.2.1
     dev: true
 
-  /@utrecht/design-tokens@1.0.0-alpha.540:
-    resolution: {integrity: sha512-qT12YTZWkGwTyrza2O4k+lzAnAhDY1NYEJWc4Qk+Th1Fpb1pzJOsBdp4np4xsjJ3mtGaCS7QGA6so9qrxJ0OjA==}
+  /@utrecht/design-tokens@1.0.0-alpha.590:
+    resolution: {integrity: sha512-SataSqHdataOqA8SG/GpRv5fN4zQdjLYg7Iq7i9qOiV5O0RpweIR+mA4Lj8o03Ah18QuH43xB5IG12V95RjqBw==}
     dev: true
 
-  /@utrecht/web-component-library-react@1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-vDDdKMzF9arJOsqGdGEZKy8Pb9SzMgTmN1hoQTDtm2wQ/QFMA+OPFpCC8NSr1+xo/KhaWeuqWp+HHgl4n4aGsw==}
+  /@utrecht/web-component-library-react@1.0.0-alpha.596(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Kz93KnotWf1qn2KBd18c0PWKOYDMbzjUuw357RVb6aYSewVNnm/gh887XKdcZzbxNhWRF9ZbbpubpW8k410Uig==}
     peerDependencies:
       react: 16 - 18
       react-dom: 16 - 18
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.547
+      '@utrecht/web-component-library-stencil': 1.0.0-alpha.596
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@utrecht/web-component-library-react@1.0.0-alpha.549:
-    resolution: {integrity: sha512-YCCBnKJ5bOIyvefXSEIhi/Gqh4XRJbqGPxCBsurfLL7KtTTLanz1Mwas8fISaOWEr8Nssrv8y0XG3ZtfxCnGzQ==}
-    peerDependencies:
-      react: 16 - 18
-      react-dom: 16 - 18
-    dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.549
-    dev: true
-
-  /@utrecht/web-component-library-stencil@1.0.0-alpha.547:
-    resolution: {integrity: sha512-bOSQXx3PohvMsaKGQhf578wvy8u/UXn+Pvx6DgZ5CjYA07rMGueMwgjdMxH5EiQEsxVJpH7iYERR12AHo3XhbA==}
-    dependencies:
-      '@stencil/core': 3.4.2
-    dev: true
-
-  /@utrecht/web-component-library-stencil@1.0.0-alpha.549:
-    resolution: {integrity: sha512-EtjkBtJ/LKeqeNhGmgeT8rhgtgV9SgngOckcPkpp0iiJ4Wl2CSxdY8t/BwBEz17wPlPsJ5I3fNxYL8po+jKf4g==}
+  /@utrecht/web-component-library-stencil@1.0.0-alpha.596:
+    resolution: {integrity: sha512-K4W9PQJOptMp+0HlhvKgagDanErgyc1fWdOmS4PIrlXWzDKEkfw7QxeZcsWfEu9IeWk7P3Ii+YCvh1BMVmvqiw==}
     dependencies:
       '@stencil/core': 3.4.2
     dev: true
@@ -4511,7 +4505,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
 
   /chownr@2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
@@ -6226,8 +6220,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -7635,7 +7629,7 @@ packages:
       micromatch: 4.0.5
       walker: 1.0.8
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /jest-leak-detector@29.6.3:
@@ -11085,7 +11079,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /run-applescript@5.0.0:
@@ -12605,7 +12599,7 @@ packages:
       rollup: 3.28.1
       sass: 1.66.1
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /vscode-json-languageservice@4.2.1:

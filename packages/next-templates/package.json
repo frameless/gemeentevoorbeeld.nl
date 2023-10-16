@@ -27,13 +27,13 @@
     "@fontsource/fira-sans": "5.0.12",
     "@fontsource/source-serif-pro": "5.0.8",
     "@next/eslint-plugin-next": "13.4.19",
-    "@nl-design-system-unstable/voorbeeld-design-tokens": "1.0.0-alpha.88",
+    "@nl-design-system-unstable/voorbeeld-design-tokens": "1.0.0-alpha.96",
     "@svgr/webpack": "8.1.0",
-    "@utrecht/component-library-css": "1.0.0-alpha.547",
-    "@utrecht/component-library-react": "1.0.0-alpha.356",
-    "@utrecht/design-tokens": "1.0.0-alpha.540",
-    "@utrecht/web-component-library-react": "1.0.0-alpha.547",
-    "@utrecht/web-component-library-stencil": "1.0.0-alpha.547",
+    "@utrecht/component-library-css": "1.0.0-alpha.597",
+    "@utrecht/component-library-react": "1.0.0-alpha.406",
+    "@utrecht/design-tokens": "1.0.0-alpha.590",
+    "@utrecht/web-component-library-react": "1.0.0-alpha.596",
+    "@utrecht/web-component-library-stencil": "1.0.0-alpha.596",
     "clsx": "2.0.0"
   }
 }
