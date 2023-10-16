@@ -38,7 +38,7 @@
   "devDependencies": {
     "@frameless/nlds-templates-components-css": "workspace:*",
     "@stencil/react-output-target": "0.5.3",
-    "@stencil/sass": "3.0.5",
+    "@stencil/sass": "3.0.6",
     "@types/jest": "29.5.4",
     "chokidar-cli": "3.0.0",
     "node-sass-package-importer": "5.3.3",
