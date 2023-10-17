@@ -52,13 +52,13 @@ export default function Home() {
           <SpotlightSection className="voorbeeld-spotlight-section">
             <Heading2 className="voorbeeld-spotlight-section-heading-style">Op deze pagina</Heading2>
             <OrderedList>
-              <OrderedListItem>Eerst toestemming geven</OrderedListItem>
-              <OrderedListItem>Dan vervuiling melden</OrderedListItem>
-              <OrderedListItem>Racistische graffiti melden</OrderedListItem>
-              <OrderedListItem>Goed om te weten</OrderedListItem>
-              <OrderedListItem>Hoelang duurt het?</OrderedListItem>
-              <OrderedListItem>Contact</OrderedListItem>
-              <OrderedListItem>Zie ook</OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">Eerst toestemming geven</OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">Dan vervuiling melden</OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">Racistische graffiti melden</OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">Goed om te weten</OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">Hoelang duurt het?</OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">Contact</OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">Zie ook</OrderedListItem>
             </OrderedList>
           </SpotlightSection>
           <Paragraph className="voorbeeld-title-paragraph" small>
