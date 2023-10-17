@@ -9,7 +9,9 @@ interface NavigationListItemProps extends HTMLAttributes<HTMLElement> {
 
 export const NavigationListItem = ({ href, label }: NavigationListItemProps) => (
   <li className="voorbeeld-navigation-list__item">
-    <Link href={href}>{label}</Link>
+    <Link className="voorbeeld-footer-link" href={href}>
+      {label}
+    </Link>
   </li>
 );
 
