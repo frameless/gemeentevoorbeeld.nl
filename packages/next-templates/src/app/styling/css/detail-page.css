@@ -15,3 +15,7 @@ https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliothee
   color: #5315f6;
   text-decoration: underline;
 }
+
+.voorbeeld-button-link-space {
+  margin-block-start: var(--voorbeeld-space-block-rabbit);
+}
