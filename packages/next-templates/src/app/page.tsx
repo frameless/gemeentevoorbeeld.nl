@@ -33,13 +33,13 @@ export default function Home() {
       <PageContent className="voorbeeld-page-content-flex">
         <Article className="voorbeeld-article-space">
           <BreadcrumbNav label="Kruimelpad">
-            <BreadcrumbNavLink href="" index={0} rel="home">
+            <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration-skip-ink" href="" index={0} rel="home">
               Home <ChevronRight className="voorbeeld-chevron-right-space" />
             </BreadcrumbNavLink>
-            <BreadcrumbNavLink href="" index={1}>
+            <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration-skip-ink" href="" index={1}>
               Meldingen <ChevronRight className="voorbeeld-chevron-right-space" />
             </BreadcrumbNavLink>
-            <BreadcrumbNavLink href="" index={2} rel="up">
+            <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration-skip-ink" href="" index={2} rel="up">
               Meldingen openbare ruimte
             </BreadcrumbNavLink>
           </BreadcrumbNav>
