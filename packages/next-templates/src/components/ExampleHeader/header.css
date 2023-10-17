@@ -111,7 +111,8 @@
   .example--header-home-page {
     border-bottom: solid 4px var(--voorbeeld-color-violet-700);
     margin-inline: auto;
-    padding-block-end: var(--voorbeeld-space-block-mouse);
+    padding-inline: var(--voorbeeld-space-inline-beetle);
+    padding-block: var(--voorbeeld-space-block-beetle);
   }
 
   .example--header-popover-menu {
