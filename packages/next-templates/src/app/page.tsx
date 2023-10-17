@@ -125,13 +125,13 @@ export default function Home() {
 
           <section>
             <Heading2>Goed om te weten</Heading2>
-            <Heading3>Professioneel verwijderd</Heading3>
+            <Heading3 className="voorbeeld-heading-3-space">Professioneel verwijderd</Heading3>
             <Paragraph>
               Het schoonmaken wordt altijd gedaan door een professioneel en gekwalificeerd schoonmaakbedrijf. Dat is
               belangrijk, omdat graffiti- en wildplakverwijdering specialistisch werk is en uw pand niet mag worden
               beschadigd. Naast schoonmaakspecialist zijn de schoonmakers daarom ook schilder en gevelspecialist.
             </Paragraph>
-            <Heading3>Aangifte bij de politie</Heading3>
+            <Heading3 className="voorbeeld-heading-3-space">Aangifte bij de politie</Heading3>
             <Paragraph>
               Als de graffiti te lezen is. Doet het Meldpunt Graffiti, namens u, aangifte bij de politie.
             </Paragraph>
