@@ -2,8 +2,10 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-block-start: 1em;
-  margin-inline: 10em;
+  margin-inline: auto;
+  padding-inline: var(--voorbeeld-space-inline-mouse);
+  padding-block: var(--voorbeeld-space-block-mouse);
+  max-width: 80em;
 }
 
 .example--logo {
@@ -27,11 +29,11 @@
 .example--header-links {
   align-items: center;
   display: flex;
-  margin-inline-end: 32px;
+  margin-inline-end: var(--voorbeeld-space-inline-dog);
   text-decoration-skip-ink: none;
 }
 .example--header-user-icon {
-  margin-inline-end: 4px;
+  margin-inline-end: var(--voorbeeld-space-inline-ant);
 }
 
 .example--header-text-box {
@@ -88,8 +90,8 @@
   border: none;
   color: var(--voorbeeld-color-white);
   font-size: 1em;
-  margin-block: 1em;
-  margin-inline: 1em;
+  margin-block: var(--voorbeeld-space-block-mouse);
+  margin-inline: var(--voorbeeld-space-inline-mouse);
 }
 
 .example--popover-close:hover {
@@ -98,7 +100,7 @@
 }
 
 .example--header-xlogo {
-  margin-inline-end: 0.5em;
+  margin-inline-end: var(--voorbeeld-space-inline-beetle);
 }
 .example--header-popover-container-button {
   display: flex;
@@ -109,7 +111,7 @@
   .example--header-home-page {
     border-bottom: solid 4px var(--voorbeeld-color-violet-700);
     margin-inline: auto;
-    padding-block-end: 1em;
+    padding-block-end: var(--voorbeeld-space-block-mouse);
   }
 
   .example--header-popover-menu {
@@ -121,8 +123,8 @@
 
     color: var(--voorbeeld-color-white);
     margin-inline: 0;
-    padding-block: 12px;
-    padding-inline: 1em;
+    padding-block: var(--voorbeeld-space-block-snail);
+    padding-inline: var(--voorbeeld-space-inline-mouse);
   }
 
   .example--header-links:hover {
@@ -158,7 +160,7 @@
   .example--header-burger-menu-button {
     align-items: center;
     display: flex;
-    font-size: 1em;
+    font-size: var(--voorbeeld-space-inline-mouse);
   }
 
   .example--header-burger-bar-container {
