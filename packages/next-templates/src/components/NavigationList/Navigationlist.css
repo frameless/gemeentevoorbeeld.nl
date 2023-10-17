@@ -5,11 +5,12 @@
 }
 
 .voorbeeld-navigation-list__item {
-  --utrecht-paragraph-color: white;
+  --utrecht-paragraph-color: var(--voorbeeld-color-white);
 
   line-height: 2em;
 }
 
-.utrecht-link {
-  --utrecht-link-text-decoration-color: white;
+.voorbeeld-footer-link {
+  --utrecht-link-text-decoration-color: var(--voorbeeld-color-white);
+  --utrecht-link-hover-color: var(--voorbeeld-color-white);
 }
