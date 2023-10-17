@@ -44,3 +44,7 @@
 .voorbeeld-form-field-space {
   --utrecht-form-field-margin-block-end: var(--voorbeeld-space-block-rabbit);
 }
+
+.voorbeeld-textarea-border-bottom-width {
+  --utrecht-textarea-border-bottom-width: 1px;
+}
