@@ -16,6 +16,7 @@ import {
   SpotlightSection,
   UnorderedList,
   UnorderedListItem,
+  Heading3,
 } from '@utrecht/component-library-react';
 import '@/app/styling/css/detail-page.css';
 import '@utrecht/component-library-css';
@@ -124,13 +125,13 @@ export default function Home() {
 
           <section>
             <Heading2>Goed om te weten</Heading2>
-            <Heading2>Professioneel verwijderd</Heading2>
+            <Heading3>Professioneel verwijderd</Heading3>
             <Paragraph>
               Het schoonmaken wordt altijd gedaan door een professioneel en gekwalificeerd schoonmaakbedrijf. Dat is
               belangrijk, omdat graffiti- en wildplakverwijdering specialistisch werk is en uw pand niet mag worden
               beschadigd. Naast schoonmaakspecialist zijn de schoonmakers daarom ook schilder en gevelspecialist.
             </Paragraph>
-            <Heading2>Aangifte bij de politie</Heading2>
+            <Heading3>Aangifte bij de politie</Heading3>
             <Paragraph>
               Als de graffiti te lezen is. Doet het Meldpunt Graffiti, namens u, aangifte bij de politie.
             </Paragraph>
