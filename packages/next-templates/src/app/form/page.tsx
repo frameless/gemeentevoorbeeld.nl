@@ -133,7 +133,7 @@ export default function Home() {
                   placeholder=""
                 ></Textarea>
               </FormField>
-              <div className="voorbeeld-bijlage-container">
+              <div className="voorbeeld-bijlage-flex-container">
                 <Paragraph className="voorbeeld-paragraph-bijlage">Bijlage</Paragraph>
                 <Paragraph>(optioneel)</Paragraph>
               </div>
@@ -141,7 +141,7 @@ export default function Home() {
                 <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
                 <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
               </UnorderedList>
-              <div className="voorbeeld-bijlage-container">
+              <div className="voorbeeld-bijlage-flex-container">
                 <Button appearance="secondary-action-button">Bestand kiezen</Button>
                 <Paragraph className="paragraph-space-bijlagen">Geen bestand gekozen</Paragraph>
               </div>
