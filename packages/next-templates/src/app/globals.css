@@ -75,8 +75,7 @@ body {
 }
 
 .voorbeeld-unordered-list-space {
-  padding-inline-start: var(--voorbeeld-space-inline-beetle);
-  margin-block: var(--voorbeeld-space-block-rabbit);
+  margin-block: var(--voorbeeld-space-block-snail);
 }
 
 .voorbeeld-chevron-right-space {
