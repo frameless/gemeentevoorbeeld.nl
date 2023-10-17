@@ -29,10 +29,7 @@ export default function Home() {
   return (
     <Page>
       <ExampleHeader />
-      <UtrechtFlexWrapFallback flexTarget="nav">
-        <ExampleNavigation style={{ flexWrap: 'wrap' }} id="nav" />
-        <p slot="fallback">Nog ff iets verzinnen</p>
-      </UtrechtFlexWrapFallback>
+      <ExampleNavigation />
       <PageContent>
         <BreadcrumbNav appearance="arrows" label="Kruimelpad">
           <BreadcrumbNavLink href="" index={0} rel="home">
