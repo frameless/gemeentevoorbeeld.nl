@@ -28,6 +28,7 @@
   align-items: center;
   display: flex;
   margin-inline-end: 32px;
+  text-decoration-skip-ink: none;
 }
 .example--header-user-icon {
   margin-inline-end: 4px;
