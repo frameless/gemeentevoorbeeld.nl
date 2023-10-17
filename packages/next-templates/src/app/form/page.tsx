@@ -141,10 +141,9 @@ export default function Home() {
                 <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
                 <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
               </UnorderedList>
-              <div className="voorbeeld-bijlage-container">
-                <Button appearance="secondary-action-button">Bestand kiezen</Button>
-                <Paragraph className="paragraph-space-bijlagen">Geen bestand gekozen</Paragraph>
-              </div>
+              <FormField type="file">
+                <input id="file-input" type="file"></input>
+              </FormField>
               <Heading2 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading2>
               <FormField invalid={!!errors.place}>
                 <Paragraph>
