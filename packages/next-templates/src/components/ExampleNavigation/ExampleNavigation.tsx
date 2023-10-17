@@ -8,7 +8,7 @@ import { UtrechtFlexWrapFallback } from '@utrecht/web-component-library-react';
 
 interface ExampleNavigationProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleNavigation = ({ ...props }: ExampleNavigationProps) => (
-  <UtrechtFlexWrapFallback flexTarget="nav">
+  <UtrechtFlexWrapFallback>
     <div id="nav" className="example--header-navbar" {...props}>
       <Link className="example--header-navbar-links" href="#">
         Home
