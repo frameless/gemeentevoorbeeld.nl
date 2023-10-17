@@ -40,3 +40,7 @@
   --utrecht-paragraph-font-weight: var(--voorbeeld-typography-font-weight-bold);
   margin-inline-end: var(--voorbeeld-space-block-ant);
 }
+
+.voorbeeld-form-field-space {
+  --utrecht-form-field-margin-block-end: var(--voorbeeld-space-block-rabbit);
+}
