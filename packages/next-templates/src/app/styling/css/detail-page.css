@@ -20,7 +20,7 @@ https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliothee
   margin-block-start: var(--voorbeeld-space-block-rabbit);
 }
 
-.voorbeeld-breadcrumb-text-decoration {
-  text-decoration-skip-ink: none;
-  --utrecht-link-hover-text-decoration: none;
+.voorbeeld-heading-3-space {
+  --utrecht-heading-3-margin-block-start: var(--voorbeeld-space-block-rabbit);
+  --utrecht-heading-3-margin-block-end: var(--voorbeeld-space-block-mouse);
 }
