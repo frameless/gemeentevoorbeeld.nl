@@ -82,6 +82,9 @@
 }
 
 .example--popover-close {
+  --utrecht-button-subtle-hover-color: var(--voorbeeld-color-white);
+  --utrecht-button-subtle-hover-background-color: var(--voorbeeld-color-violet-900);
+
   align-items: center;
   background: none;
   border: none;
@@ -89,11 +92,6 @@
   font-size: 1em;
   margin-block: 1em;
   margin-inline: 1em;
-}
-
-.example--popover-close:hover {
-  --_utrecht-button-hover-color: var(--voorbeeld-color-white);
-  --_utrecht-button-hover-background-color: var(--voorbeeld-color-violet-900);
 }
 
 .example--header-xlogo {

@@ -20,6 +20,7 @@ import {
 import '@/app/styling/css/detail-page.css';
 import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
+import { UtrechtFlexWrapFallback } from '@utrecht/web-component-library-react';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
@@ -30,19 +31,17 @@ export default function Home() {
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent>
-        <Paragraph>
-          <BreadcrumbNav appearance="arrows" label="Kruimelpad">
-            <BreadcrumbNavLink href="" index={0} rel="home">
-              Home
-            </BreadcrumbNavLink>
-            <BreadcrumbNavLink href="" index={1}>
-              Meldingen
-            </BreadcrumbNavLink>
-            <BreadcrumbNavLink href="" index={2} rel="up">
-              Meldingen openbare ruimte
-            </BreadcrumbNavLink>
-          </BreadcrumbNav>
-        </Paragraph>
+        <BreadcrumbNav appearance="arrows" label="Kruimelpad">
+          <BreadcrumbNavLink href="" index={0} rel="home">
+            Home
+          </BreadcrumbNavLink>
+          <BreadcrumbNavLink href="" index={1}>
+            Meldingen
+          </BreadcrumbNavLink>
+          <BreadcrumbNavLink href="" index={2} rel="up">
+            Meldingen openbare ruimte
+          </BreadcrumbNavLink>
+        </BreadcrumbNav>
         <Article>
           <Heading1>Graffiti laten verwijderen van uw pand</Heading1>
           <Paragraph lead>
