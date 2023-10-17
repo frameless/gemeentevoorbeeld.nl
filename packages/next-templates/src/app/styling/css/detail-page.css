@@ -7,7 +7,7 @@ https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliothee
   --utrecht-heading-2-font-size: 24px;
 }
 
-.utrecht-ordered-list__item {
+.voorbeeld-ordered-list__item {
   --utrecht-ordered-list-item-margin-block-start: var(--voorbeeld-space-block-mouse);
   --utrecht-ordered-list-item-margin-block-end: var(--voorbeeld-space-block-mouse);
   --utrecht-ordered-list-font-size: var(--voorbeeld-typography-font-size-sm);
