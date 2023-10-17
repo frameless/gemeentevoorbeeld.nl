@@ -123,7 +123,7 @@ export default function Home() {
                 </FormFieldDescription>
                 <Textarea
                   rows={6}
-                  className="utrecht-textarea-beschrijving"
+                  className="voorbeeld-textarea-border-bottom-width"
                   id="description"
                   invalid={!!errors.description}
                   {...register('description', {
