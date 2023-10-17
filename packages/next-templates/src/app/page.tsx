@@ -23,6 +23,7 @@ import '@utrecht/design-tokens/dist/index.css';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
+import ChevronRight from '../app/styling/assets/chevronRight.svg';
 
 export default function Home() {
   return (
@@ -30,18 +31,18 @@ export default function Home() {
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content-flex">
-        <BreadcrumbNav appearance="arrows" label="Kruimelpad">
-          <BreadcrumbNavLink href="" index={0} rel="home">
-            Home
-          </BreadcrumbNavLink>
-          <BreadcrumbNavLink href="" index={1}>
-            Meldingen
-          </BreadcrumbNavLink>
-          <BreadcrumbNavLink href="" index={2} rel="up">
-            Meldingen openbare ruimte
-          </BreadcrumbNavLink>
-        </BreadcrumbNav>
-        <Article>
+        <Article className="voorbeeld-article-space">
+          <BreadcrumbNav label="Kruimelpad">
+            <BreadcrumbNavLink href="" index={0} rel="home">
+              Home <ChevronRight className="voorbeeld-chevron-right-space" />
+            </BreadcrumbNavLink>
+            <BreadcrumbNavLink href="" index={1}>
+              Meldingen <ChevronRight className="voorbeeld-chevron-right-space" />
+            </BreadcrumbNavLink>
+            <BreadcrumbNavLink href="" index={2} rel="up">
+              Meldingen openbare ruimte
+            </BreadcrumbNavLink>
+          </BreadcrumbNav>
           <Heading1>Graffiti laten verwijderen van uw pand</Heading1>
           <Paragraph lead>
             Heeft u overlast van graffiti, posters of stickers op uw huis of pand? Meldpunt Graffiti zorgt ervoor dat
@@ -93,7 +94,7 @@ export default function Home() {
               </UnorderedListItem>
             </UnorderedList>
             <Paragraph>
-              <ButtonLink appearance="primary-action-button" href="">
+              <ButtonLink className="voorbeeld-button-link-space" appearance="primary-action-button" href="">
                 Toestemming geven
               </ButtonLink>
             </Paragraph>
@@ -106,7 +107,7 @@ export default function Home() {
               vervuiling wordt dan gratis verwijderd. Meld vervuiling met het meldingsformulier.
             </Paragraph>
             <Paragraph>
-              <ButtonLink appearance="primary-action-button" href="/form">
+              <ButtonLink className="voorbeeld-button-link-space" appearance="primary-action-button" href="/form">
                 Melding doen
               </ButtonLink>
             </Paragraph>
