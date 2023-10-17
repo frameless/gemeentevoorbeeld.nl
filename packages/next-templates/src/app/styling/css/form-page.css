@@ -26,7 +26,7 @@
   margin-block-end: var(--voorbeeld-space-block-pig);
 }
 
-.voorbeeld-bijlage-container {
+.voorbeeld-bijlage-flex-container {
   display: flex;
   align-items: center;
 }
