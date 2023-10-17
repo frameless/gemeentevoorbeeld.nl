@@ -2,6 +2,7 @@
   align-items: center;
   background-color: #5315f6;
   display: flex;
+  flex-wrap: wrap;
   padding-inline-end: 1em;
   padding-inline-start: 1em;
 }
@@ -23,10 +24,4 @@
 .example--header-navbar .example--header-navbar-links:hover {
   background-color: #290b7a;
   color: #fff;
-}
-
-@media (width <= 1185px) {
-  .example--header-navbar {
-    display: none;
-  }
 }
