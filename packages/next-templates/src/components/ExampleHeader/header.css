@@ -107,7 +107,7 @@
 
 @media (width <= 1185px) {
   .example--header-home-page {
-    border-bottom: solid 4px #5315f6;
+    border-bottom: solid 4px var(--voorbeeld-color-violet-700);
     margin-inline: auto;
     padding-block-end: 1em;
   }
