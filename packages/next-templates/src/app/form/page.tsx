@@ -112,7 +112,7 @@ export default function Home() {
                   {errors.subCategory?.message}
                 </FormFieldDescription>
               </FormField>
-              <FormField invalid={!!errors.description}>
+              <FormField className="voorbeeld-form-field-space" invalid={!!errors.description}>
                 <Paragraph>
                   <FormLabel className="voorbeeld-form-label" htmlFor="description">
                     Omschrijving
@@ -180,7 +180,7 @@ export default function Home() {
                 />
                 <FormFieldDescription invalid={!!errors.street}>{errors.street?.message}</FormFieldDescription>
               </FormField>
-              <FormField invalid={!!errors.height}>
+              <FormField className="voorbeeld-form-field-space" invalid={!!errors.height}>
                 <Paragraph>
                   <FormLabel className="voorbeeld-form-label" htmlFor="height">
                     Ter hoogte van
