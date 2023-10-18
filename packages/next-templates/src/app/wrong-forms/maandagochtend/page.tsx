@@ -170,7 +170,11 @@ export default function Home() {
             <Heading2>Uw gegevens</Heading2>
             <FormField>
               <FormLabel className="example-foute-form-label">Naam</FormLabel>
-              <Textbox onChange={(e) => setName(e.target.value)} checked={name === 'Naam'} />
+              <Textbox
+                className="textbox-name-email"
+                onChange={(e) => setName(e.target.value)}
+                checked={name === 'Naam'}
+              />
               {formErrors.name && (
                 <FormFieldDescription invalid role="alert">
                   <Paragraph className="errors-text">{formErrors.name}</Paragraph>
@@ -187,8 +191,18 @@ export default function Home() {
               )}
             </FormField>
             <FormField>
-              <FormLabel className="example-foute-form-label">Huisnummer</FormLabel>
-              <Textbox onChange={(e) => setHouseNumber(e.target.value)} checked={name === 'Huisnummer'} />
+              <FormLabel className="example-foute-form-label-huisnummer">
+                Huisnummer
+                <FormLabel className="example-foute-form-label-huisnummer">Toevoeging(Optioneel)</FormLabel>
+              </FormLabel>
+
+              <Textbox
+                className="aangepaste-textbox"
+                onChange={(e) => setHouseNumber(e.target.value)}
+                checked={name === 'Huisnummer'}
+              />
+              <Textbox className="aangepaste-textbox1" />
+
               {formErrors.houseNumber && (
                 <FormFieldDescription invalid role="alert">
                   <Paragraph className="errors-text">{formErrors.houseNumber}</Paragraph>
@@ -196,12 +210,12 @@ export default function Home() {
               )}
             </FormField>
             <FormField>
-              <FormLabel className="example-foute-form-label">Toevoeging(Optioneel)</FormLabel>
-              <Textbox />
-            </FormField>
-            <FormField>
               <FormLabel className="example-foute-form-label">Postcode</FormLabel>
-              <Textbox onChange={(e) => setPostcode(e.target.value)} checked={name === 'Postcode'} />
+              <Textbox
+                className="aangepaste-textbox"
+                onChange={(e) => setPostcode(e.target.value)}
+                checked={name === 'Postcode'}
+              />
               {formErrors.postcode && (
                 <FormFieldDescription invalid role="alert">
                   <Paragraph className="errors-text">{formErrors.postcode}</Paragraph>
@@ -219,7 +233,11 @@ export default function Home() {
             </FormField>
             <FormField>
               <FormLabel className="example-foute-form-label">E-mailadres</FormLabel>
-              <Textbox onChange={(e) => setEmail(e.target.value)} checked={name === 'E-mailadres'} />
+              <Textbox
+                className="textbox-name-email"
+                onChange={(e) => setEmail(e.target.value)}
+                checked={name === 'E-mailadres'}
+              />
               {formErrors.email && (
                 <FormFieldDescription invalid role="alert">
                   <Paragraph className="errors-text">{formErrors.email}</Paragraph>
@@ -228,7 +246,11 @@ export default function Home() {
             </FormField>
             <FormField>
               <FormLabel className="example-foute-form-label">Telefoonnummer</FormLabel>
-              <Textbox onChange={(e) => setTelefoonnummer(e.target.value)} checked={name === 'Telefoonnummer'} />
+              <Textbox
+                className="textbox-telefoonnummer"
+                onChange={(e) => setTelefoonnummer(e.target.value)}
+                checked={name === 'Telefoonnummer'}
+              />
               {formErrors.telefoonnummer && (
                 <FormFieldDescription invalid role="alert">
                   <Paragraph className="errors-text">{formErrors.telefoonnummer}</Paragraph>
