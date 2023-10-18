@@ -3,6 +3,41 @@
   font-weight: 700;
 }
 
+.example-foute-form-label-huisnummer {
+  display: flex;
+  font-weight: 700;
+  gap: 37px;
+}
 .errors-text {
   color: #d2262e;
+}
+
+.textbox-telefoonnummer {
+  width: 160px;
+}
+
+.aangepaste-textbox {
+  width: 120px;
+}
+
+.aangepaste-textbox1 {
+  width: 120px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 387px) {
+  .example-foute-form-label-huisnummer {
+    display: flex;
+    font-weight: 700;
+    gap: 10px;
+  }
+
+  .aangepaste-textbox {
+    width: 40%;
+  }
+
+  .aangepaste-textbox1 {
+    width: 40%;
+    margin-left: 10px;
+  }
 }
