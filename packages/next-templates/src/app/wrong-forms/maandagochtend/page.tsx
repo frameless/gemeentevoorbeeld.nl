@@ -26,12 +26,14 @@ import { useForm } from 'react-hook-form';
 
 type FormErrors = {
   selectedReason?: string;
+  aanvullendetekst?: string;
   name?: string;
   street?: string;
   houseNumber?: string;
   postcode?: string;
   woonplaats?: string;
   email?: string;
+  telefoonnummer?: string;
 };
 
 export default function Home() {
@@ -40,6 +42,7 @@ export default function Home() {
   const [selectedReason, setSelectedReason] = useState<string>('');
   const [additionalInfo, setAdditionalInfo] = useState<string>('');
   const [name, setName] = useState<string>('');
+  const [aanvullendetekst, setAanvullendetekst] = useState<string>('');
   const [street, setStreet] = useState<string>('');
   const [houseNumber, setHouseNumber] = useState<string>('');
   const [postcode, setPostcode] = useState<string>('');
@@ -56,45 +59,47 @@ export default function Home() {
     const errors: FormErrors = {};
 
     if (!selectedReason) {
-      errors.selectedReason = 'Selecteer een reden is verplicht';
+      errors.selectedReason = 'Selecteer een reden';
+    }
+
+    if (!aanvullendetekst) {
+      errors.aanvullendetekst = 'Error code 786';
     }
 
     if (!name) {
-      errors.name = 'Naam is verplicht';
+      errors.name = 'Vul valide naam in';
     }
 
     if (!street) {
-      errors.street = 'Straat is verplicht';
+      errors.street = 'Vul geldige straat in';
     }
 
     if (!houseNumber) {
-      errors.houseNumber = 'Huisnummer is verplicht';
+      errors.houseNumber = 'Kies een huisnummer';
     }
 
     if (!postcode) {
-      errors.postcode = 'Postcode is verplicht';
+      errors.postcode = 'Invalid';
     }
 
     if (!woonplaats) {
-      errors.woonplaats = 'Woonplaats is verplicht';
+      errors.woonplaats = 'Invoer klopt niet! Pas aan';
     }
 
     if (!email) {
-      errors.email = 'E-mailadres is verplicht';
+      errors.email = 'Ongeldig';
     } else if (!isValidEmail(email)) {
       errors.email = 'Ongeldig e-mailadres';
+    }
+
+    if (!telefoonnummer) {
+      errors.telefoonnummer = 'Error code 112';
     }
 
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   if (validateForm()) {
-  //     alert('Formulier verstuurd!');
-  //   }
-  // };
   const handleFormHookSubmit = () => {
     if (validateForm()) {
       alert('Formulier verstuurd!');
@@ -120,6 +125,116 @@ export default function Home() {
               />
               Nog een weekend modus
             </FormField>
+            <FormField>
+              <RadioButton
+                onChange={(e) => setSelectedReason(e.target.value)}
+                checked={selectedReason === 'Vermoeidheid'}
+                value="Vermoeidheid"
+              />
+              Vermoeidheid
+            </FormField>
+            <FormField>
+              <RadioButton
+                onChange={(e) => setSelectedReason(e.target.value)}
+                checked={selectedReason === 'Puberteit'}
+                value="Puberteit"
+              />
+              Puberteit
+            </FormField>
+            <FormField>
+              <RadioButton
+                onChange={(e) => setSelectedReason(e.target.value)}
+                checked={selectedReason === 'Ajax heeft verloren'}
+                value="Ajax heeft verloren"
+              />
+              Ajax heeft verloren
+            </FormField>
+            {formErrors.selectedReason && (
+              <FormFieldDescription invalid role="alert">
+                <Paragraph className="errors-text">{formErrors.selectedReason}</Paragraph>
+              </FormFieldDescription>
+            )}
+
+            <FormField>
+              <FormLabel className="example-foute-form-label">Aanvullende Onderbouwing</FormLabel>
+              <FormFieldDescription>
+                Onderbouw de reden die u heeft opgegeven en beschrijf wat er eventueel wat er aan gedaan kan worden.
+              </FormFieldDescription>
+              <Textarea onChange={(e) => setAanvullendetekst(e.target.value)}></Textarea>
+              {formErrors.aanvullendetekst && (
+                <FormFieldDescription style={{ color: '#D2262E' }} invalid role="alert">
+                  <Paragraph className="errors-text">{formErrors.aanvullendetekst}</Paragraph>
+                </FormFieldDescription>
+              )}
+            </FormField>
+            <Heading2>Uw gegevens</Heading2>
+            <FormField>
+              <FormLabel className="example-foute-form-label">Naam</FormLabel>
+              <Textbox onChange={(e) => setName(e.target.value)} checked={name === 'Naam'} />
+              {formErrors.name && (
+                <FormFieldDescription invalid role="alert">
+                  <Paragraph className="errors-text">{formErrors.name}</Paragraph>
+                </FormFieldDescription>
+              )}
+            </FormField>
+            <FormField>
+              <FormLabel className="example-foute-form-label">Straat</FormLabel>
+              <Textbox onChange={(e) => setStreet(e.target.value)} checked={name === 'Straat'} />
+              {formErrors.street && (
+                <FormFieldDescription invalid role="alert">
+                  <Paragraph className="errors-text">{formErrors.street}</Paragraph>
+                </FormFieldDescription>
+              )}
+            </FormField>
+            <FormField>
+              <FormLabel className="example-foute-form-label">Huisnummer</FormLabel>
+              <Textbox onChange={(e) => setHouseNumber(e.target.value)} checked={name === 'Huisnummer'} />
+              {formErrors.houseNumber && (
+                <FormFieldDescription invalid role="alert">
+                  <Paragraph className="errors-text">{formErrors.houseNumber}</Paragraph>
+                </FormFieldDescription>
+              )}
+            </FormField>
+            <FormField>
+              <FormLabel className="example-foute-form-label">Toevoeging(Optioneel)</FormLabel>
+              <Textbox />
+            </FormField>
+            <FormField>
+              <FormLabel className="example-foute-form-label">Postcode</FormLabel>
+              <Textbox onChange={(e) => setPostcode(e.target.value)} checked={name === 'Postcode'} />
+              {formErrors.postcode && (
+                <FormFieldDescription invalid role="alert">
+                  <Paragraph className="errors-text">{formErrors.postcode}</Paragraph>
+                </FormFieldDescription>
+              )}
+            </FormField>
+            <FormField>
+              <FormLabel className="example-foute-form-label">Woonplaats</FormLabel>
+              <Textbox onChange={(e) => setWoonplaats(e.target.value)} checked={name === 'Woonplaats'} />
+              {formErrors.woonplaats && (
+                <FormFieldDescription invalid role="alert">
+                  <Paragraph className="errors-text">{formErrors.woonplaats}</Paragraph>
+                </FormFieldDescription>
+              )}
+            </FormField>
+            <FormField>
+              <FormLabel className="example-foute-form-label">E-mailadres</FormLabel>
+              <Textbox onChange={(e) => setEmail(e.target.value)} checked={name === 'E-mailadres'} />
+              {formErrors.email && (
+                <FormFieldDescription invalid role="alert">
+                  <Paragraph className="errors-text">{formErrors.email}</Paragraph>
+                </FormFieldDescription>
+              )}
+            </FormField>
+            <FormField>
+              <FormLabel className="example-foute-form-label">Telefoonnummer</FormLabel>
+              <Textbox onChange={(e) => setTelefoonnummer(e.target.value)} checked={name === 'Telefoonnummer'} />
+              {formErrors.telefoonnummer && (
+                <FormFieldDescription invalid role="alert">
+                  <Paragraph className="errors-text">{formErrors.telefoonnummer}</Paragraph>
+                </FormFieldDescription>
+              )}
+            </FormField>
 
             <ButtonGroup>
               <Button appearance="primary-action-button" type="submit">
@@ -127,8 +242,10 @@ export default function Home() {
               </Button>
             </ButtonGroup>
             <FormFieldDescription invalid>
-              {Object.values(formErrors).map((error) => (
-                <Paragraph>{error}</Paragraph>
+              {Object.values(formErrors).map((error, index) => (
+                <Paragraph className="errors-text" key={index}>
+                  {error}
+                </Paragraph>
               ))}
             </FormFieldDescription>
           </form>
