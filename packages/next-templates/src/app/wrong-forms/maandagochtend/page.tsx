@@ -17,13 +17,14 @@ import {
   Textbox,
   Button,
   FormFieldErrorMessage,
+  ColorSample,
 } from '@utrecht/component-library-react';
 
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import '../../styling/css/maandagochtend.css';
 import { useForm } from 'react-hook-form';
-
+import InfoCirleIcon from '@/app/styling/assets/info-circle-icon.svg';
 type FormErrors = {
   selectedReason?: string;
   aanvullendetekst?: string;
@@ -210,7 +211,10 @@ export default function Home() {
               )}
             </FormField>
             <FormField>
-              <FormLabel className="example-foute-form-label">Postcode</FormLabel>
+              <FormLabel className="example-foute-form-label">
+                Postcode
+                <InfoCirleIcon />
+              </FormLabel>
               <Textbox
                 className="aangepaste-textbox"
                 onChange={(e) => setPostcode(e.target.value)}
@@ -263,13 +267,6 @@ export default function Home() {
                 Versturen
               </Button>
             </ButtonGroup>
-            <FormFieldDescription invalid>
-              {Object.values(formErrors).map((error, index) => (
-                <Paragraph className="errors-text" key={index}>
-                  {error}
-                </Paragraph>
-              ))}
-            </FormFieldDescription>
           </form>
         </PageContent>
       </Page>
