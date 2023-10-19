@@ -32,24 +32,23 @@ export default function Home() {
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content-flex">
-        <Article className="voorbeeld-article-space">
-          <BreadcrumbNav label="Kruimelpad">
-            <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={0} rel="home">
-              Home <ChevronRight className="voorbeeld-chevron-right-space" />
-            </BreadcrumbNavLink>
-            <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={1}>
-              Meldingen <ChevronRight className="voorbeeld-chevron-right-space" />
-            </BreadcrumbNavLink>
-            <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={2} rel="up">
-              Meldingen openbare ruimte
-            </BreadcrumbNavLink>
-          </BreadcrumbNav>
+        <BreadcrumbNav label="Kruimelpad">
+          <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={0} rel="home">
+            Home <ChevronRight className="voorbeeld-chevron-right-space" />
+          </BreadcrumbNavLink>
+          <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={1}>
+            Meldingen <ChevronRight className="voorbeeld-chevron-right-space" />
+          </BreadcrumbNavLink>
+          <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={2} rel="up">
+            Meldingen openbare ruimte
+          </BreadcrumbNavLink>
+        </BreadcrumbNav>
+        <Article className="voorbeeld-article-space voorbeeld-rich-text">
           <Heading1>Graffiti laten verwijderen van uw pand</Heading1>
           <Paragraph lead>
             Heeft u overlast van graffiti, posters of stickers op uw huis of pand? Meldpunt Graffiti zorgt ervoor dat
             deze gratis worden verwijderd.
           </Paragraph>
-
           <SpotlightSection className="voorbeeld-spotlight-section">
             <Heading2 className="voorbeeld-spotlight-section-heading-style">Op deze pagina</Heading2>
             <OrderedList>
