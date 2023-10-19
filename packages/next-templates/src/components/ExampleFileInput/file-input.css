@@ -1,0 +1,8 @@
+.voorbeeld-bijlage-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.utrecht-button {
+  cursor: pointer;
+}
