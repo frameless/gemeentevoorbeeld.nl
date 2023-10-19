@@ -28,6 +28,7 @@ import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 import { useForm } from 'react-hook-form';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
+import { ExampleFileInput } from '@/components/ExampleFileInput/ExampleFileInput';
 
 export default function Home() {
   const {
@@ -142,8 +143,7 @@ export default function Home() {
                 <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
               </UnorderedList>
               <div className="voorbeeld-bijlage-flex-container">
-                <Button appearance="secondary-action-button">Bestand kiezen</Button>
-                <Paragraph className="paragraph-space-bijlagen">Geen bestand gekozen</Paragraph>
+                <ExampleFileInput />
               </div>
               <Heading2 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading2>
               <FormField invalid={!!errors.place}>
