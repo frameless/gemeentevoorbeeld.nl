@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 
 import {
   ButtonGroup,
@@ -15,6 +15,7 @@ import {
   Paragraph,
   Textarea,
   Textbox,
+  TextboxProps,
   Heading2,
   Select,
   SelectOption,
@@ -24,134 +25,210 @@ import {
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import '../styling/css/wrong-form-socks.css';
-import { useForm } from 'react-hook-form';
+import { Control, Controller, FieldErrors, FieldValues, useForm } from 'react-hook-form';
 
-type FormErrors = {
-  aantalcijfer?: string;
-  aantalkleur?: string;
-  merk?: string;
-  aantalwaarde?: string;
-  aanvullendeinformatie?: string;
-  plaats?: string;
-  straat?: string;
-  terhoogtevan?: string;
-  geslacht?: string;
-  name?: string;
-  achternaam?: string;
-  emailadres?: string;
-  telefoonnummer?: string;
-  street?: string;
-  housenumber?: string;
-  postcode?: string;
-  woonplaats?: string;
+// type FormErrors = {
+//   aantalcijfer?: string;
+//   aantalkleur?: string;
+//   merk?: string;
+//   aantalwaarde?: string;
+//   aanvullendeinformatie?: string;
+//   plaats?: string;
+//   straat?: string;
+//   terhoogtevan?: string;
+//   geslacht?: string;
+//   name?: string;
+//   achternaam?: string;
+//   emailadres?: string;
+//   telefoonnummer?: string;
+//   street?: string;
+//   housenumber?: string;
+//   postcode?: string;
+//   woonplaats?: string;
+// };
+interface ReactHookFormFieldTextboxProps extends TextboxProps {
+  label: ReactNode;
+  id: string;
+  name: string;
+  errors: FieldErrors;
+  control: Control<any>;
+  requiredError?: string;
+  maxLengthError?: string;
+  unknownError?: string;
+}
+
+const ReactHookFormFieldTextbox = ({
+  control,
+  errors,
+  name,
+  id,
+  label,
+  required,
+  maxLength,
+  requiredError,
+  maxLengthError,
+  unknownError,
+  ...restProps
+}: ReactHookFormFieldTextboxProps) => {
+  return (
+    <>
+      <Controller
+        control={control}
+        rules={{
+          required,
+          maxLength,
+        }}
+        render={({ field: { onChange, onBlur, value } }) => (
+          <FormField>
+            <FormLabel htmlFor={id} className="example-foute-form-label">
+              {label}
+            </FormLabel>
+            <Textbox
+              id={id}
+              onBlur={onBlur}
+              onInput={onChange}
+              value={value}
+              className="example-foute-form-focus"
+              {...restProps}
+            />
+          </FormField>
+        )}
+        name={name}
+      />
+      {errors[name]?.type === 'required' ? (
+        <FormFieldDescription invalid>
+          <Paragraph>{requiredError}</Paragraph>
+        </FormFieldDescription>
+      ) : errors[name]?.type === 'maxLength' ? (
+        <FormFieldDescription invalid>
+          <Paragraph>{maxLengthError}</Paragraph>
+        </FormFieldDescription>
+      ) : errors[name] ? (
+        <FormFieldDescription invalid>
+          <Paragraph>{unknownError}</Paragraph>
+        </FormFieldDescription>
+      ) : undefined}
+    </>
+  );
 };
 
 export default function Home() {
-  const { handleSubmit } = useForm({});
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      achternaam: 'Tables',
+      mail: 'test',
+    },
+  });
 
-  const [aantalcijfer, setAantalcijfer] = useState<string>('');
-  const [aantalkleur, setAantalkleur] = useState<string>('');
-  const [merk, setMerk] = useState<string>('');
-  const [aantalwaarde, setAantalwaarde] = useState<string>('');
-  const [aanvullendeinformatie, setAanvullendeinformatie] = useState<string>('');
-  const [plaats, setPlaats] = useState<string>('');
-  const [straat, setStraat] = useState<string>('');
-  const [terhoogtevan, setTerhoogtevan] = useState<string>('');
-  const [geslacht, setGeslacht] = useState<string>('');
-  const [name, setName] = useState<string>('');
-  const [achternaam, setAchternaam] = useState<string>('');
-  const [emailadres, setEmailadres] = useState<string>('');
-  const [telefoonummer, setTelefoonnummer] = useState<string>('');
-  const [street, setStreet] = useState<string>('');
-  const [housenumber, setHousenumber] = useState<string>('');
-  const [postcode, setPostcode] = useState<string>('');
-  const [woonplaats, setWoonplaats] = useState<string>('');
-  const [formErrors, setFormErrors] = useState<FormErrors>({});
+  //   const [aantalcijfer, setAantalcijfer] = useState<string>('');
+  //   const [aantalkleur, setAantalkleur] = useState<string>('');
+  //   const [merk, setMerk] = useState<string>('');
+  //   const [aantalwaarde, setAantalwaarde] = useState<string>('');
+  //   const [aanvullendeinformatie, setAanvullendeinformatie] = useState<string>('');
+  //   const [plaats, setPlaats] = useState<string>('');
+  //   const [straat, setStraat] = useState<string>('');
+  //   const [terhoogtevan, setTerhoogtevan] = useState<string>('');
+  //   const [geslacht, setGeslacht] = useState<string>('');
+  //   const [name, setName] = useState<string>('');
+  //   const [achternaam, setAchternaam] = useState<string>('');
+  //   const [emailadres, setEmailadres] = useState<string>('');
+  //   const [telefoonummer, setTelefoonnummer] = useState<string>('');
+  //   const [street, setStreet] = useState<string>('');
+  //   const [housenumber, setHousenumber] = useState<string>('');
+  //   const [postcode, setPostcode] = useState<string>('');
+  //   const [woonplaats, setWoonplaats] = useState<string>('');
+  //   const [formErrors, setFormErrors] = useState<FormErrors>({});
 
   const isValidEmail = (email: string): boolean => {
     return true;
   };
 
-  const validateForm = () => {
-    const errors: FormErrors = {};
+  //   const validateForm = () => {
+  //     const errors: FormErrors = {};
 
-    if (!aantalcijfer) {
-      errors.aantalcijfer = 'wqdqwdqwd';
-    }
+  //     if (!aantalcijfer) {
+  //       errors.aantalcijfer = 'wqdqwdqwd';
+  //     }
 
-    if (!aantalkleur) {
-      errors.aantalkleur = 'd3de3d3';
-    }
+  //     if (!aantalkleur) {
+  //       errors.aantalkleur = 'd3de3d3';
+  //     }
 
-    if (!merk) {
-      errors.merk = 'TEST';
-    }
+  //     if (!merk) {
+  //       errors.merk = 'TEST';
+  //     }
 
-    if (!aantalwaarde) {
-      errors.aantalwaarde = '098765432';
-    }
+  //     if (!aantalwaarde) {
+  //       errors.aantalwaarde = '098765432';
+  //     }
 
-    if (!aanvullendeinformatie) {
-      errors.aanvullendeinformatie = 'TEST';
-    }
+  //     if (!aanvullendeinformatie) {
+  //       errors.aanvullendeinformatie = 'TEST';
+  //     }
 
-    if (!plaats) {
-      errors.plaats = 'RESt';
-    }
+  //     if (!plaats) {
+  //       errors.plaats = 'RESt';
+  //     }
 
-    if (!straat) {
-      errors.straat = 'test';
-    }
+  //     if (!straat) {
+  //       errors.straat = 'test';
+  //     }
 
-    if (!terhoogtevan) {
-      errors.terhoogtevan = 'tets';
-    }
+  //     if (!terhoogtevan) {
+  //       errors.terhoogtevan = 'tets';
+  //     }
 
-    if (!geslacht) {
-      errors.geslacht = 'test';
-    }
+  //     if (!geslacht) {
+  //       errors.geslacht = 'test';
+  //     }
 
-    if (!name) {
-      errors.name = 'de3d';
-    }
+  //     if (!name) {
+  //       errors.name = 'de3d';
+  //     }
 
-    if (!achternaam) {
-      errors.achternaam = 'de33d3d3dewd';
-    }
+  //     if (!achternaam) {
+  //       errors.achternaam = 'de33d3d3dewd';
+  //     }
 
-    if (!emailadres) {
-      errors.emailadres = 'wedwed';
-    } else if (!isValidEmail(emailadres)) {
-      errors.emailadres = 'Ongeldig e-mailadres';
-    }
+  //     if (!emailadres) {
+  //       errors.emailadres = 'wedwed';
+  //     } else if (!isValidEmail(emailadres)) {
+  //       errors.emailadres = 'Ongeldig e-mailadres';
+  //     }
 
-    if (!telefoonummer) {
-      errors.telefoonnummer = 'wedwed';
-    }
+  //     if (!telefoonummer) {
+  //       errors.telefoonnummer = 'wedwed';
+  //     }
 
-    if (!street) {
-      errors.street = 'dwedwed';
-    }
+  //     if (!street) {
+  //       errors.street = 'dwedwed';
+  //     }
 
-    if (!housenumber) {
-      errors.housenumber = 'wedwedw';
-    }
+  //     if (!housenumber) {
+  //       errors.housenumber = 'wedwedw';
+  //     }
 
-    if (!postcode) {
-      errors.postcode = 'de3d3dwdde3';
-    }
+  //     if (!postcode) {
+  //       errors.postcode = 'de3d3dwdde3';
+  //     }
 
-    if (!woonplaats) {
-      errors.woonplaats = 'wed2ed3';
-    }
+  //     if (!woonplaats) {
+  //       errors.woonplaats = 'wed2ed3';
+  //     }
 
-    setFormErrors(errors);
-    return Object.keys(errors).length === 0;
-  };
+  //     setFormErrors(errors);
+  //     return Object.keys(errors).length === 0;
+  //   };
 
   const handleFormHookSubmit = () => {
     if (validateForm()) {
       alert('Formulier verstuurd!');
+    } else {
+      console.log('Invalid form!');
     }
   };
 
@@ -200,15 +277,15 @@ export default function Home() {
             <FormField>
               <FormLabel className="example-foute-form-label">Merk</FormLabel>
               <Textbox
-                className="example-foute-form-focus"
-                onChange={(e) => setMerk(e.target.value)}
-                checked={name === 'Merk'}
+              // className="example-foute-form-focus"
+              // onChange={(e) => setMerk(e.target.value)}
+              // checked={name === 'Merk'}
               />
-              {formErrors.merk && (
+              {/* {formErrors.merk && (
                 <FormFieldDescription invalid role="alert">
                   <Paragraph className="errors-text">{formErrors.merk}</Paragraph>
-                </FormFieldDescription>
-              )}
+                </FormFieldDescription> */}
+              {/* )} */}
             </FormField>
             <FormField>
               <FormLabel className="example-foute-form-label">Aantal</FormLabel>
@@ -261,58 +338,129 @@ export default function Home() {
                 <SelectOption value="4">Onbekend</SelectOption>
               </Select>
             </FormField>
-            <FormField>
+            {/* <FormField>
               <FormLabel className="example-foute-form-label">Voorletter(s)</FormLabel>
               <Textbox className="example-foute-form-focus" />
-            </FormField>
+            </FormField> */}
+            <ReactHookFormFieldTextbox
+              control={control}
+              errors={errors}
+              label="Voorletter(s)"
+              maxLength={200}
+              required
+              id="voorletter"
+              name="voorletter"
+            ></ReactHookFormFieldTextbox>
             <FormField>
               <FormLabel className="example-foute-form-label">Tussenvoegsel (optioneel)</FormLabel>
               <Textbox className="example-foute-form-focus" />
             </FormField>
-            <FormField>
+            {/* <FormField>
               <FormLabel className="example-foute-form-label">Achternaam</FormLabel>
               <Textbox className="example-foute-form-focus" />
-            </FormField>
-            <FormField>
+            </FormField> */}
+            <ReactHookFormFieldTextbox
+              control={control}
+              errors={errors}
+              label="Achternaam"
+              maxLength={1}
+              required
+              id="faoksdofasd"
+              requiredError="Vul achternaam in."
+              maxLengthError="Achternaam is te lang."
+              unknownError="Achternaam klopt niet."
+              name="achternaam"
+            ></ReactHookFormFieldTextbox>
+            {/*<FormField>
               <FormLabel className="example-foute-form-label">E-mailadres</FormLabel>
               <Textbox className="example-foute-form-focus" />
-            </FormField>
-            <FormField>
+          </FormField>*/}
+
+            <ReactHookFormFieldTextbox
+              control={control}
+              errors={errors}
+              label="E-mailadres"
+              maxLength={200}
+              required
+              id="mail"
+              name="mail"
+            ></ReactHookFormFieldTextbox>
+            {/* <FormField>
               <FormLabel className="example-foute-form-label">Telefoonnummer</FormLabel>
               <Textbox className="example-foute-form-focus" />
-            </FormField>
-            <FormField>
+            </FormField> */}
+            <ReactHookFormFieldTextbox
+              control={control}
+              errors={errors}
+              label="Telefoonnummer"
+              maxLength={200}
+              required
+              id="phone"
+              name="telefoonnummer"
+            ></ReactHookFormFieldTextbox>
+            {/* <FormField>
               <FormLabel className="example-foute-form-label">Straat</FormLabel>
               <Textbox className="example-foute-form-focus" />
-            </FormField>
-            <FormField>
+            </FormField> */}
+            <ReactHookFormFieldTextbox
+              control={control}
+              errors={errors}
+              label="Straat"
+              maxLength={200}
+              required
+              id="street"
+              name="straat"
+            ></ReactHookFormFieldTextbox>
+            {/* <FormField>
               <FormLabel className="example-foute-form-label">Huisnummer</FormLabel>
               <Textbox className="example-foute-form-focus" />
-            </FormField>
-            <FormField>
+            </FormField> */}
+            <ReactHookFormFieldTextbox
+              control={control}
+              errors={errors}
+              label="Huisnummer"
+              maxLength={200}
+              required
+              id="housenumber"
+              name="huisnummer"
+            ></ReactHookFormFieldTextbox>
+            {/* <FormField>
               <FormLabel className="example-foute-form-label">Toevoeging (Optioneel)</FormLabel>
               <Textbox className="example-foute-form-focus" />
-            </FormField>
-            <FormField>
+            </FormField> */}
+            {/* <FormField>
               <FormLabel className="example-foute-form-label">Postcode</FormLabel>
               <Textbox className="example-foute-form-focus" />
-            </FormField>
-            <FormField>
+            </FormField> */}
+            <ReactHookFormFieldTextbox
+              control={control}
+              errors={errors}
+              label="Postcode"
+              maxLength={200}
+              required
+              id="postcode"
+              name="Postcode"
+            ></ReactHookFormFieldTextbox>
+            {/* <FormField>
               <FormLabel className="example-foute-form-label">Woonplaats</FormLabel>
               <Textbox className="example-foute-form-focus" />
-            </FormField>
+            </FormField> */}
+            <ReactHookFormFieldTextbox
+              control={control}
+              errors={errors}
+              label="Woonplaats"
+              maxLength={200}
+              required
+              id="woonplaats"
+              name="woonplaats"
+            ></ReactHookFormFieldTextbox>
             <ButtonGroup>
-              <ButtonLink className="example-foute-form-focus" href="#" appearance="primary-action-button">
+              <Button className="example-foute-form-focus" appearance="primary-action-button">
                 annuleren
-              </ButtonLink>
-              <ButtonLink
-                className="example-foute-form-focus"
-                href="#"
-                appearance="primary-action-button"
-                type="submit"
-              >
+              </Button>
+              <Button className="example-foute-form-focus" appearance="primary-action-button" type="submit">
                 Versturen
-              </ButtonLink>
+              </Button>
             </ButtonGroup>
           </form>
         </PageContent>
