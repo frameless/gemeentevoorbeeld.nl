@@ -1,0 +1,8 @@
+.voorbeeld-page-content-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.voorbeeld-article-space {
+  align-self: center;
+}
