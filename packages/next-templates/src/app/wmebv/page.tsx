@@ -1,7 +1,15 @@
 'use client';
 
-import { UtrechtArticle, UtrechtHeading1, UtrechtPage, UtrechtPageContent } from '@utrecht/web-component-library-react';
-import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+import {
+  UtrechtArticle,
+  UtrechtHeading1,
+  UtrechtHeading2,
+  UtrechtLink,
+  UtrechtPage,
+  UtrechtPageContent,
+  UtrechtParagraph,
+} from '@utrecht/web-component-library-react';
+import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
@@ -12,7 +20,7 @@ import '@/app/styling/css/wmebv.css';
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeader></ExampleHeader>
+      <ExampleHeaderWmebv></ExampleHeaderWmebv>
       <ExampleNavigation></ExampleNavigation>
       <BreadcrumbNav label="Kruimelpad">
         <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={0} rel="home">
@@ -28,6 +36,21 @@ export default function home() {
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <UtrechtHeading1>Contact met de gemeente</UtrechtHeading1>
+          <UtrechtParagraph lead>
+            Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden? Stel
+            dan uw vraag via het contactformulier.
+          </UtrechtParagraph>
+          <UtrechtHeading2>Vraag</UtrechtHeading2>
+          <UtrechtParagraph>Gebruik het contactformulier om een vraag te stellen.</UtrechtParagraph>
+          <UtrechtLink>Contactformulier</UtrechtLink>
+          <UtrechtHeading2>Klacht</UtrechtHeading2>
+          <UtrechtParagraph>Gebruik het klachtenformulier om een klacht in te dienen.</UtrechtParagraph>
+          <UtrechtLink>Klachtenformulier</UtrechtLink>
+          <UtrechtHeading2>Melding openbare ruimte en overlast</UtrechtHeading2>
+          <UtrechtParagraph>
+            Ziet u op straat of in het park iets dat stuk is of onveilig is? Gebruik dan het meldingformulier.
+          </UtrechtParagraph>
+          <UtrechtLink>Meldingformulier</UtrechtLink>
         </UtrechtArticle>
       </UtrechtPageContent>
       <ExampleFooter></ExampleFooter>
