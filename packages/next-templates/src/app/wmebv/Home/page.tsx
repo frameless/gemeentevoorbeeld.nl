@@ -13,9 +13,8 @@ import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHead
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
-import ChevronRight from '../styling/assets/chevronRight.svg';
+import ChevronRight from '../../styling/assets/chevronRight.svg';
 import '@/app/styling/css/wmebv.css';
-// import {} from '@utrecht/component-library-react';
 
 export default function home() {
   return (
@@ -51,6 +50,11 @@ export default function home() {
             Ziet u op straat of in het park iets dat stuk is of onveilig is? Gebruik dan het meldingformulier.
           </UtrechtParagraph>
           <UtrechtLink>Meldingformulier</UtrechtLink>
+          <UtrechtHeading2>Idee of voorstel</UtrechtHeading2>
+          <UtrechtParagraph>
+            Heeft u een idee of heeft u een voorstel? Gebruik dan het voorstelformulier.
+          </UtrechtParagraph>
+          <UtrechtLink>Start voorstelformulier</UtrechtLink>
         </UtrechtArticle>
       </UtrechtPageContent>
       <ExampleFooter></ExampleFooter>
