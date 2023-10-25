@@ -18,3 +18,20 @@
   --utrecht-spotlight-section-border-color: var(--voorbeeld-color-green-600);
   --utrecht-spotlight-section-border-width: 2px;
 }
+
+.voorbeeld-digid-logo {
+  --utrecht-icon-size: 48px;
+}
+
+.utrecht-radio-button {
+  --utrecht-radio-button-background-color: white;
+  --utrecht-radio-button-icon-size: 0%;
+  --utrecht-radio-button-size: 1.5em;
+  --utrecht-radio-button-checked-border-width: 0.5em;
+  --utrecht-radio-button-checked-border-color: var(--voorbeeld-color-violet-700);
+  --utrecht-radio-button-border-color: #7a8aa0;
+}
+
+.voorbeeld-radio-button-form-label {
+  --utrecht-form-label-font-weight: var(--voorbeeld-typography-font-weight-normal);
+}
