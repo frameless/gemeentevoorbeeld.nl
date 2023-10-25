@@ -27,7 +27,7 @@
   --utrecht-radio-button-background-color: white;
   --utrecht-radio-button-icon-size: 0%;
   --utrecht-radio-button-size: 1.5em;
-  --utrecht-radio-button-checked-border-width: 0.5em;
+  --utrecht-radio-button-checked-border-width: 0.6em;
   --utrecht-radio-button-checked-border-color: var(--voorbeeld-color-violet-700);
   --utrecht-radio-button-border-color: #7a8aa0;
 }
