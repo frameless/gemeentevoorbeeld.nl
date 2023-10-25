@@ -13,7 +13,7 @@ import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHead
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
-import ChevronRight from '../../styling/assets/chevronRight.svg';
+import ChevronRight from '../styling/assets/chevronRight.svg';
 import '@/app/styling/css/wmebv.css';
 // import {} from '@utrecht/component-library-react';
 
