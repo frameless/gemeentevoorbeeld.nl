@@ -4,8 +4,6 @@ import {
   UtrechtArticle,
   UtrechtButtonLink,
   UtrechtHeading1,
-  UtrechtHeading2,
-  UtrechtLink,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
@@ -13,8 +11,7 @@ import {
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import { BreadcrumbNav, BreadcrumbNavLink, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
-import ChevronRight from '../../styling/assets/chevronRight.svg';
+import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
