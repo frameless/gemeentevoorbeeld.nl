@@ -10,7 +10,7 @@ import {
   Heading3,
   PageHeader,
 } from '@utrecht/component-library-react';
-import '../styling/css/wrong-form-socks.css';
+import './drawer-scroll-list.css';
 
 const period = [
   { label: 'Late middeleeuwen', value: 'Late middeleeuwen' },
@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <Document>
       <Drawer open>
-        <PageHeader>
+        <PageHeader className="voorbeeld--sticky-header">
           <Heading3>Verfijn resultaten</Heading3>
           <Button>X</Button>
         </PageHeader>
