@@ -1,4 +1,9 @@
 .voorbeeld--sticky-header {
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid grey;
+  height: 6em;
 }
