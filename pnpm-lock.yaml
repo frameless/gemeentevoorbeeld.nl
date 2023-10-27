@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@hookform/error-message':
+        specifier: 2.0.1
+        version: 2.0.1
       http-server:
         specifier: 14.1.1
         version: 14.1.1
@@ -21,6 +24,9 @@ importers:
       '@types/node':
         specifier: 20.5.6
         version: 20.5.6
+      '@types/react':
+        specifier: 18.2.21
+        version: 18.2.21
       '@typescript-eslint/eslint-plugin':
         specifier: 6.4.1
         version: 6.4.1(@typescript-eslint/parser@6.4.1)(eslint@8.48.0)(typescript@5.2.2)
@@ -1999,6 +2005,14 @@ packages:
   /@fontsource/source-serif-pro@5.0.8:
     resolution: {integrity: sha512-bb8bza+aBp6Wpz1LOXaQ9YSwMc/wNpk3hniENCPoBMMwsn9LQaJU0kKnJSSIi+ld1t7aH4jbh+mHQHN1zLfZ3A==}
     dev: true
+
+  /@hookform/error-message@2.0.1:
+    resolution: {integrity: sha512-U410sAr92xgxT1idlu9WWOVjndxLdgPUHEB8Schr27C9eh7/xUnITWpCMF93s+lGiG++D4JnbSnrb5A21AdSNg==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      react-hook-form: ^7.0.0
+    dev: false
 
   /@html-validate/stylish@4.1.0:
     resolution: {integrity: sha512-f2MOKJ2HVdLxpOOg2jD6hjDTDJic3wpb8/UdDDIic5jTvgfMMPN3PoiNWlqDg/mCzLIj1b/p1hCRx4Kz5lbVjw==}

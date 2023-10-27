@@ -30,6 +30,10 @@ body {
   --utrecht-page-footer-background-color: var(--voorbeeld-color-violet-700);
   --utrecht-spotlight-section-background-color: #f5f2ff;
   --utrecht-spotlight-section-color: #0a2750;
+  --utrecht-heading-1-margin-block-start: 1.5em;
+  --utrecht-heading-1-margin-block-end: 1.5em;
+  --utrecht-page-content-padding-block-start: 1.5em;
+  --utrecht-page-content-padding-block-end: 1.5em;
   --utrecht-page-padding-inline-start: 50px;
   --utrecht-page-padding-inline-end: 50px;
   --utrecht-paragraph-lead-font-size: 20px;

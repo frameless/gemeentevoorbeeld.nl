@@ -19,6 +19,7 @@
     "@lerna-lite/cli": "2.5.0",
     "@lerna-lite/run": "2.5.0",
     "@types/node": "20.5.6",
+    "@types/react": "18.2.21",
     "@typescript-eslint/eslint-plugin": "6.4.1",
     "@typescript-eslint/parser": "6.4.1",
     "@utrecht/component-library-react": "1.0.0-alpha.406",
@@ -77,6 +78,7 @@
     "watch:style-dictionary": "lerna run watch:style-dictionary"
   },
   "dependencies": {
+    "@hookform/error-message": "2.0.1",
     "http-server": "14.1.1"
   }
 }
