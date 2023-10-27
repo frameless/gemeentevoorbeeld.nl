@@ -24,7 +24,7 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import '../../styling/css/maandagochtend.css';
 import { useForm } from 'react-hook-form';
-import InfoCirleIcon from '@/app/styling/assets/info-circle-icon.svg';
+// import InfoCirleIcon from '@/app/styling/assets/info-circle-icon.svg';
 type FormErrors = {
   selectedReason?: string;
   aanvullendetekst?: string;
@@ -213,7 +213,7 @@ export default function Home() {
             <FormField>
               <FormLabel className="example-foute-form-label">
                 Postcode
-                <InfoCirleIcon />
+                {/* <InfoCirleIcon /> */}
               </FormLabel>
               <Textbox
                 className="aangepaste-textbox"
