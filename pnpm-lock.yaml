@@ -24,6 +24,9 @@ importers:
       '@types/node':
         specifier: 20.5.6
         version: 20.5.6
+      '@types/react':
+        specifier: 18.2.21
+        version: 18.2.21
       '@typescript-eslint/eslint-plugin':
         specifier: 6.4.1
         version: 6.4.1(@typescript-eslint/parser@6.4.1)(eslint@8.48.0)(typescript@5.2.2)
