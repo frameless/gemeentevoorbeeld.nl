@@ -18,8 +18,6 @@ body {
   --utrecht-link-icon-size: 18px;
 }
 
-
-
 .voorbeeld-theme {
   /* HACK: these tokens are not set in voorbeeld-theme */
   --utrecht-form-field-description-margin-block-end: var(--voorbeeld-space-block-beetle);
@@ -38,14 +36,6 @@ body {
   --utrecht-page-content-padding-block-end: 1.5em;
   --utrecht-page-padding-inline-start: 50px;
   --utrecht-page-padding-inline-end: 50px;
-  --utrecht-paragraph-lead-line-height: 1.5;
-  --utrecht-paragraph-margin-block-end: 0.5em;
-  --utrecht-spotlight-section-padding-inline-end: 1.5em;
-  --utrecht-spotlight-section-padding-inline-start: 1.5em;
-  --utrecht-spotlight-section-padding-block-end: 1.5em;
-  --utrecht-spotlight-section-padding-block-start: 1.5em;
-  --utrecht-spotlight-section-margin-block-start: 1.5em;
-  --utrecht-spotlight-section-margin-block-end: 1.5em;
   --utrecht-paragraph-lead-font-size: 20px;
   --utrecht-form-label-font-weight: var(--voorbeeld-typography-font-weight-bold);
   --utrecht-paragraph-lead: var(--voorbeeld-space-block-dog);
