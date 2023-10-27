@@ -20,6 +20,7 @@ import {
   SelectOption,
   UnorderedList,
   UnorderedListItem,
+  Article,
 } from '@utrecht/component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
@@ -160,6 +161,7 @@ export default function Home() {
       <ExampleHeaderFunnel />
       <Page>
         <PageContent>
+        <Article>
           <Heading1>Melding verloren sokken</Heading1>
           <Paragraph lead>
             Sokken kwijt? That socks! Vul alle velden in. Als een veld optioneel is, staat dit erbij.
@@ -315,6 +317,7 @@ export default function Home() {
               </ButtonLink>
             </ButtonGroup>
           </form>
+          </Article>
         </PageContent>
       </Page>
       <ExampleFooter />
