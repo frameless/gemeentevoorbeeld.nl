@@ -18,6 +18,7 @@ import {
   Button,
   FormFieldErrorMessage,
   ColorSample,
+  Article,
 } from '@utrecht/component-library-react';
 
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
@@ -112,6 +113,7 @@ export default function Home() {
       <ExampleHeaderFunnel />
       <Page>
         <PageContent>
+          <Article>
           <Heading1>Bezwaar indienen tegen maandagochtend</Heading1>
           <Paragraph>Vul alle velden in. Als een veld optioneel is, dan staat dit erbij.</Paragraph>
           <Heading2>Waarom maakt u bezwaar?</Heading2>
@@ -268,6 +270,7 @@ export default function Home() {
               </Button>
             </ButtonGroup>
           </form>
+          </Article>
         </PageContent>
       </Page>
       <ExampleFooter />
