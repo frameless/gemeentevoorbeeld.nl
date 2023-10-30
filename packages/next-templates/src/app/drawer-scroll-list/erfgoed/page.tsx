@@ -2,10 +2,14 @@
 import {
   Button,
   ButtonLink,
+  DataList,
   Document,
   Drawer,
   Heading3,
+  Image,
+  Link,
   PageHeader,
+  Paragraph,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
@@ -14,14 +18,14 @@ import '../styles/drawer-scroll-list.css';
 export default function Home() {
   return (
     <Document>
-      <Drawer open>
+      <Drawer id="voorbeeld--erfgoed-drawer" open>
         <PageHeader className="voorbeeld--sticky-header">
           <Heading3>Erfgoed</Heading3>
           <Button>X</Button>
         </PageHeader>
-        <UnorderedList>
+        <UnorderedList className="voorbeeld--unorderedlist-lijst">
           <UnorderedListItem>
-            <ButtonLink>Duitse bommenwerper</ButtonLink>
+            <ButtonLink href="#voorbeeld--button-drawer">Duitse bommenwerper</ButtonLink>
           </UnorderedListItem>
           <UnorderedListItem>
             <ButtonLink>Werk aan de werf</ButtonLink>
@@ -84,6 +88,37 @@ export default function Home() {
             <ButtonLink>Paulusabdij</ButtonLink>
           </UnorderedListItem>
         </UnorderedList>
+      </Drawer>
+      <Drawer id="voorbeeld--button-drawer" open>
+        <PageHeader>
+          <Heading3>BLablabla</Heading3>
+          <Button>blebleble</Button>
+        </PageHeader>
+        <UnorderedList className="voorbeeld--unorderedlist-lijst">
+          <UnorderedListItem>
+            <ButtonLink href="#voorbeeld--button-drawer">sdfsd</ButtonLink>
+          </UnorderedListItem>
+        </UnorderedList>
+        <div className="content">
+          <Image
+            alt="Duitse Bommenwerper in de lucht tijdens de tweede wereldoorlog"
+            src="/packages/next-templates/src/app/drawer-scroll-list/duitsebommenwerper.jpeg"
+          ></Image>
+        </div>
+        <div className="details">
+          <Heading3>Duitse bommenwerper</Heading3>
+          <Paragraph>
+            Utrechtse archeologen onderzochten in 2010 een neergestorte Duitse bommenwerper. Lees was ze ontdekte over
+            het vliegtuig.
+          </Paragraph>
+        </div>
+        <div className="links">
+          <Link href="https://www.cssscript.com/easy-sliding-drawer/">Add svg icons</Link>
+        </div>
+        <div className="details">
+          {' '}
+          <DataList></DataList>{' '}
+        </div>
       </Drawer>
     </Document>
   );

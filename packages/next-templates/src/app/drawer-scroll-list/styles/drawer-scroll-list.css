@@ -7,3 +7,11 @@
   border-bottom: 1px solid grey;
   height: 6em;
 }
+
+#voorbeeld--button-drawer {
+  display: none;
+}
+
+#voorbeeld--button-drawer:target {
+  display: block;
+}
