@@ -10,7 +10,7 @@ import {
   Heading3,
   PageHeader,
 } from '@utrecht/component-library-react';
-import './drawer-scroll-list.css';
+import './styles/drawer-scroll-list.css';
 
 const period = [
   { label: 'Late middeleeuwen', value: 'Late middeleeuwen' },
