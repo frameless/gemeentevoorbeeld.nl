@@ -25,7 +25,9 @@ export default function Home() {
         </PageHeader>
         <UnorderedList className="voorbeeld--unorderedlist-lijst">
           <UnorderedListItem>
-            <ButtonLink href="#voorbeeld--button-drawer">Duitse bommenwerper</ButtonLink>
+            <ButtonLink id="voorbeeld-button-update" href="#voorbeeld--button-drawer">
+              Duitse bommenwerper
+            </ButtonLink>
           </UnorderedListItem>
           <UnorderedListItem>
             <ButtonLink>Werk aan de werf</ButtonLink>
@@ -85,14 +87,21 @@ export default function Home() {
             <ButtonLink> Kanunniken te paard?</ButtonLink>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Paulusabdij</ButtonLink>
+            <ButtonLink id="paulusabdij" href="#voorbeeld--button-drawer">
+              Paulusabdij
+            </ButtonLink>
           </UnorderedListItem>
         </UnorderedList>
       </Drawer>
-      <Drawer id="voorbeeld--button-drawer" open>
+
+      <Drawer id="voorbeeld--button-drawer">
         <PageHeader>
-          <Heading3>BLablabla</Heading3>
-          <Button>blebleble</Button>
+          <Heading3>Duitse bommenwerper</Heading3>
+
+          <ButtonLink id="voorbeeld-button-update" href="#paulusabdij">
+            Terug
+          </ButtonLink>
+          <Button>Dicht maken</Button>
         </PageHeader>
         <UnorderedList className="voorbeeld--unorderedlist-lijst">
           <UnorderedListItem>
@@ -113,11 +122,24 @@ export default function Home() {
           </Paragraph>
         </div>
         <div className="links">
-          <Link href="https://www.cssscript.com/easy-sliding-drawer/">Add svg icons</Link>
+          <Link href="https://www.cssscript.com/easy-sliding-drawer/">SVGLees het verhaal op de site SVG2 </Link>
         </div>
         <div className="details">
           {' '}
-          <DataList></DataList>{' '}
+          <DataList>
+            <div>
+              <dt>Periode</dt>
+              <dd>Moderne tijd</dd>
+            </div>
+            <div>
+              <dt>Thema</dt>
+              <dd>Archeologie</dd>
+            </div>
+            <div>
+              <dt>Tags</dt>
+              <dd>Oorlog en verdediging</dd>
+            </div>
+          </DataList>{' '}
         </div>
       </Drawer>
     </Document>
