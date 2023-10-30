@@ -46,7 +46,7 @@ export default function home() {
                     name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
                     value="1"
                   />
-                  Option 1
+                  Ja
                 </FormLabel>
               </UtrechtParagraph>
             </FormField>
@@ -63,7 +63,7 @@ export default function home() {
                     name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
                     value="2"
                   />
-                  Option 2
+                  Nee
                 </FormLabel>
               </UtrechtParagraph>
             </FormField>
