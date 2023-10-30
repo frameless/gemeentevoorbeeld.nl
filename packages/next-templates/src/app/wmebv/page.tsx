@@ -15,7 +15,6 @@ import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigat
 import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
 import ChevronRight from '../styling/assets/chevronRight.svg';
 import '@/app/styling/css/wmebv.css';
-// import {} from '@utrecht/component-library-react';
 
 export default function home() {
   return (
