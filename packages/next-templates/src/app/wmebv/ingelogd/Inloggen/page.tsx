@@ -2,7 +2,6 @@
 
 import {
   UtrechtArticle,
-  UtrechtButton,
   UtrechtButtonLink,
   UtrechtDigidLogo,
   UtrechtHeading1,
