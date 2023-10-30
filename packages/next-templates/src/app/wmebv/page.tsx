@@ -41,15 +41,20 @@ export default function home() {
           </UtrechtParagraph>
           <UtrechtHeading2>Vraag</UtrechtHeading2>
           <UtrechtParagraph>Gebruik het contactformulier om een vraag te stellen.</UtrechtParagraph>
-          <UtrechtLink>Contactformulier</UtrechtLink>
+          <UtrechtLink href="/wmebv/ingelogd/Intro">Contactformulier</UtrechtLink>
           <UtrechtHeading2>Klacht</UtrechtHeading2>
           <UtrechtParagraph>Gebruik het klachtenformulier om een klacht in te dienen.</UtrechtParagraph>
-          <UtrechtLink>Klachtenformulier</UtrechtLink>
+          <UtrechtLink href="#">Klachtenformulier</UtrechtLink>
           <UtrechtHeading2>Melding openbare ruimte en overlast</UtrechtHeading2>
           <UtrechtParagraph>
             Ziet u op straat of in het park iets dat stuk is of onveilig is? Gebruik dan het meldingformulier.
           </UtrechtParagraph>
-          <UtrechtLink>Meldingformulier</UtrechtLink>
+          <UtrechtLink href="#">Meldingformulier</UtrechtLink>
+          <UtrechtHeading2>Idee of voorstel</UtrechtHeading2>
+          <UtrechtParagraph>
+            Heeft u een idee of heeft u een voorstel? Gebruik dan het voorstelformulier.
+          </UtrechtParagraph>
+          <UtrechtLink href="#">Start voorstelformulier</UtrechtLink>
         </UtrechtArticle>
       </UtrechtPageContent>
       <ExampleFooter></ExampleFooter>
