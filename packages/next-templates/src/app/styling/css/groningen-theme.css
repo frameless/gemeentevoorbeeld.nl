@@ -1,11 +1,11 @@
-.groningen-theme {
+.groningen--button {
     /* Uncomment each custom property you need */
     --utrecht-button-background-color: #0065BD;
     --utrecht-button-border-color: #0065BD;
     --utrecht-button-border-radius: 3px;
     --utrecht-button-border-width: 273px;
     --utrecht-button-color:#FFFFFF ;
-    --utrecht-button-font-family: TheSans C5 
+    --utrecht-button-font-family: TheSans C5 ;
     --utrecht-button-font-size: 16px;
     --utrecht-button-font-weight: 500;
     --utrecht-button-inline-size: <length>;
@@ -94,7 +94,7 @@
     --utrecht-button-subtle-pressed-border-color:#0065BD;
     --utrecht-button-subtle-pressed-color:#0065BD ;
 
-    --utrecht-form-field-description-margin-block-end: var(--voorbeeld-space-block-beetle);
+     --utrecht-form-field-description-margin-block-end: var(--voorbeeld-space-block-beetle); 
     --utrecht-space-around: 1;
     --utrecht-button-group-margin-block-end: 16px;
     --utrecht-button-group-margin-block-start: 16px;
@@ -123,6 +123,120 @@
     --utrecht-form-label-font-weight: bold;
     --utrecht-paragraph-lead: var(--voorbeeld-space-block-dog);
     --utrecht-article-max-inline-size: 1024px;
-    --utrecht-unordered-list-padding-inline-start: var(--voorbeeld-space-inline-beetle);
+    --utrecht-unordered-list-padding-inline-start: var(--voorbeeld-space-inline-beetle); 
   
+
+
+  }
+
+  .groningen-theme-heading {  
+    --utrecht-heading-1-color: #000;
+    --utrecht-heading-1-font-family: TheMix C5;
+    --utrecht-heading-1-font-size: 32px;
+    --utrecht-heading-1-font-weight: bold;
+    --utrecht-heading-1-line-height: 130%;
+    --utrecht-heading-1-margin-block-end: 16px;
+    --utrecht-heading-1-margin-block-start: 16px;
+
+    --utrecht-heading-2-color: #000;
+    --utrecht-heading-2-font-family: TheMix C5;
+    --utrecht-heading-2-font-size: 24px;
+    --utrecht-heading-2-font-weight: bold;
+    --utrecht-heading-2-line-height: 130%;
+    --utrecht-heading-2-margin-block-end: 16px;
+    --utrecht-heading-2-margin-block-start: 16px;
+
+    --utrecht-heading-3-color: #000;
+    --utrecht-heading-3-font-family: TheMix C5;
+    --utrecht-heading-3-font-size: 18px;
+    --utrecht-heading-3-font-weight: bold;
+    --utrecht-heading-3-line-height: 130%;
+    --utrecht-heading-3-margin-block-end: 16px;
+    --utrecht-heading-3-margin-block-start: 16px;
+
+    --utrecht-heading-4-color: #000;
+    --utrecht-heading-4-font-family: TheMix C5;
+    --utrecht-heading-4-font-size: 16px;
+    --utrecht-heading-4-font-weight: bold;
+    --utrecht-heading-4-line-height: 130%;
+    --utrecht-heading-4-margin-block-end: 16px;
+    --utrecht-heading-4-margin-block-start: 16px;
+
+    --utrecht-heading-5-color: #000;
+    --utrecht-heading-5-font-family: TheMix C5;
+    --utrecht-heading-5-font-size: 16px;
+    --utrecht-heading-5-font-weight: plain;
+    --utrecht-heading-5-line-height: 130%;
+    --utrecht-heading-5-margin-block-end: 16px;
+    --utrecht-heading-5-margin-block-start: 16px;
+  }
+
+  .groningen-theme-paragraph {
+    --utrecht-paragraph-color: #4B4B4B;
+    --utrecht-paragraph-font-family: TheSans C5;
+    --utrecht-paragraph-font-size: 16px;
+    --utrecht-paragraph-font-weight:500;
+    --utrecht-paragraph-line-height: 150%;
+    --utrecht-paragraph-margin-block-start: <length>;
+    --utrecht-paragraph-margin-block-end: <length>;
+    --utrecht-paragraph-lead-color: #4B4B4B;
+    --utrecht-paragraph-lead-font-size: 16px;
+    --utrecht-paragraph-lead-font-weight: 530;
+    --utrecht-paragraph-lead-line-height: 150%;
+    --utrecht-paragraph-small-color: #4B4B4B;
+    --utrecht-paragraph-small-font-size: 14px;
+    --utrecht-paragraph-small-font-weight: 500;
+    --utrecht-paragraph-small-line-height: 150%;
+  }
+
+
+  .groningen-theme-textbox {
+
+   --utrecht-textbox-background-color: #FFFFFF;
+    --utrecht-textbox-border-bottom-width: 1px;
+    --utrecht-textbox-border-color: #D2D2D2;
+    --utrecht-textbox-border-radius: 3px;
+    --utrecht-textbox-border-width: 400px;
+    --utrecht-textbox-color: <color>;
+    --utrecht-textbox-font-family: TheSans C5*;
+    --utrecht-textbox-font-size: 16px;
+    --utrecht-textbox-line-height: 150%;
+    --utrecht-textbox-padding-block-end: 0;
+    --utrecht-textbox-padding-block-start: 0;
+    --utrecht-textbox-padding-inline-end: 0;
+    --utrecht-textbox-padding-inline-start: 0;
+    --utrecht-textbox-placeholder-color: #000;
+  }
+
+  .groningen-theme-textarea {
+    
+    --utrecht-textarea-background-color:#FFFFFF;
+    --utrecht-textarea-border-bottom-width: 1px;
+    --utrecht-textarea-border-color: #D2D2D2;
+    --utrecht-textarea-border-radius: 3px;
+    --utrecht-textarea-border-width: 400px;
+    --utrecht-textarea-color: #000;
+    --utrecht-textarea-font-family: TheSans C5*;
+    --utrecht-textarea-font-size: 16px;
+    --utrecht-textarea-line-height: 150%;
+    --utrecht-textarea-min-block-size: 0;
+    --utrecht-textarea-padding-block-end: 0;
+    --utrecht-textarea-padding-block-start:0;
+    --utrecht-textarea-padding-inline-end: 0;
+    --utrecht-textarea-padding-inline-start: 0;
+    --utrecht-textarea-placeholder-color: #000;
+
+    /* --utrecht-textarea-disabled-background-color: <color>; */
+    /* --utrecht-textarea-disabled-border-color: <color>; */
+    /* --utrecht-textarea-disabled-color: <color>; */
+    /* --utrecht-textarea-focus-background-color: <color>; */
+    /* --utrecht-textarea-focus-border-color: <color>; */
+    /* --utrecht-textarea-focus-color: <length>; */
+    /* --utrecht-textarea-invalid-background-color: <color>; */
+    /* --utrecht-textarea-invalid-border-color: <color>; */
+    /* --utrecht-textarea-invalid-border-width: <length>; */
+    /* --utrecht-textarea-invalid-color: <length>; */
+    /* --utrecht-textarea-read-only-background-color: <color>; */
+    /* --utrecht-textarea-read-only-border-color: <color>; */
+    /* --utrecht-textarea-read-only-color: <color>; */
   }
