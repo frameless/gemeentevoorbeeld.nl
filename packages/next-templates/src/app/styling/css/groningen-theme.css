@@ -177,7 +177,7 @@
   --utrecht-paragraph-margin-block-start: 16px;
   --utrecht-paragraph-margin-block-end: 16px;
   --utrecht-paragraph-lead-color: #4b4b4b;
-  --utrecht-paragraph-lead-font-size: 16px;
+  --utrecht-paragraph-lead-font-size: 20px;
   --utrecht-paragraph-lead-font-weight: 530;
   --utrecht-paragraph-lead-line-height: 150%;
   --utrecht-paragraph-small-color: #4b4b4b;
@@ -222,13 +222,7 @@
   --utrecht-textarea-padding-inline-start: 0;
   --utrecht-textarea-placeholder-color: #000;
   --utrecht-paragraph-margin-block-start: 16px;
-  --utrecht-paragraph-margin-block-end: 16px /* --utrecht-textarea-disabled-background-color: <color>; */
-    /* --utrecht-textarea-disabled-border-color: <color>; */ /* --utrecht-textarea-disabled-color: <color>; */
-    /* --utrecht-textarea-focus-background-color: <color>; */ /* --utrecht-textarea-focus-border-color: <color>; */
-    /* --utrecht-textarea-focus-color: <length>; */ /* --utrecht-textarea-invalid-background-color: <color>; */
-    /* --utrecht-textarea-invalid-border-color: <color>; */ /* --utrecht-textarea-invalid-border-width: <length>; */
-    /* --utrecht-textarea-invalid-color: <length>; */ /* --utrecht-textarea-read-only-background-color: <color>; */
-    /* --utrecht-textarea-read-only-border-color: <color>; */ /* --utrecht-textarea-read-only-color: <color>; */;
+  --utrecht-paragraph-margin-block-end: 16px;
 }
 
 .groningen-theme-form-label {
@@ -243,4 +237,12 @@
   --utrecht-form-label-radio-color: #000;
   --utrecht-form-label-radio-font-weight: 500;
   --utrecht-paragraph-margin-block-end: 16px;
+}
+
+.groningen-theme-formfield-descripton {
+  --utrecht-form-field-description-color: #676767;
+  --utrecht-form-field-description-font-family: TheSans C5 *;
+  --utrecht-form-field-description-font-size: 16px;
+  --utrecht-form-field-description-margin-block-start: 0;
+  --utrecht-form-field-description-margin-block-end: 8px;
 }
