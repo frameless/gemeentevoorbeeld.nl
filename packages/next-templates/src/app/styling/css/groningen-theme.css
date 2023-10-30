@@ -1,4 +1,4 @@
-.groningen--button {
+.groningen-theme {
     /* Uncomment each custom property you need */
     --utrecht-button-background-color: #0065BD;
     --utrecht-button-border-color: #0065BD;
@@ -125,11 +125,6 @@
     --utrecht-article-max-inline-size: 1024px;
     --utrecht-unordered-list-padding-inline-start: var(--voorbeeld-space-inline-beetle); 
   
-
-
-  }
-
-  .groningen-theme-heading {  
     --utrecht-heading-1-color: #000;
     --utrecht-heading-1-font-family: TheMix C5;
     --utrecht-heading-1-font-size: 32px;
@@ -169,9 +164,7 @@
     --utrecht-heading-5-line-height: 130%;
     --utrecht-heading-5-margin-block-end: 16px;
     --utrecht-heading-5-margin-block-start: 16px;
-  }
 
-  .groningen-theme-paragraph {
     --utrecht-paragraph-color: #4B4B4B;
     --utrecht-paragraph-font-family: TheSans C5;
     --utrecht-paragraph-font-size: 16px;
@@ -187,10 +180,6 @@
     --utrecht-paragraph-small-font-size: 14px;
     --utrecht-paragraph-small-font-weight: 500;
     --utrecht-paragraph-small-line-height: 150%;
-  }
-
-
-  .groningen-theme-textbox {
 
    --utrecht-textbox-background-color: #FFFFFF;
     --utrecht-textbox-border-bottom-width: 1px;
@@ -206,9 +195,6 @@
     --utrecht-textbox-padding-inline-end: 0;
     --utrecht-textbox-padding-inline-start: 0;
     --utrecht-textbox-placeholder-color: #000;
-  }
-
-  .groningen-theme-textarea {
     
     --utrecht-textarea-background-color:#FFFFFF;
     --utrecht-textarea-border-bottom-width: 1px;
