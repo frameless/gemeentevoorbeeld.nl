@@ -28,6 +28,16 @@ import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 import { useForm } from 'react-hook-form';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
+import '@fontsource/merriweather-sans/400.css';
+import '@fontsource/merriweather-sans/400-italic.css';
+import '@fontsource/merriweather-sans/500.css'; // Specify weight
+import '@fontsource/merriweather-sans/500-italic.css'; // Specify weight and style
+import '@fontsource/merriweather-sans/600.css'; // Specify weight
+import '@fontsource/merriweather-sans/600-italic.css'; // Specify weight and style
+import '@fontsource/merriweather-sans/700.css'; // Specify weight
+import '@fontsource/merriweather-sans/700-italic.css'; // Specify weight and style
+import '@fontsource/merriweather-sans/800.css'; // Specify weight
+import '@fontsource/merriweather-sans/800-italic.css'; // Specify weight and style
 
 export default function Home() {
   const {
@@ -118,7 +128,7 @@ export default function Home() {
                     Omschrijving
                   </FormLabel>
                 </Paragraph>
-                <FormFieldDescription>
+                <FormFieldDescription className="">
                   Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden.
                 </FormFieldDescription>
                 <Textarea
