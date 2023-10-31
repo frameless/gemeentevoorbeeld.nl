@@ -5,7 +5,7 @@
   --utrecht-button-border-radius: 3px;
   --utrecht-button-border-width: 273px;
   --utrecht-button-color: #ffffff;
-  --utrecht-button-font-family: TheSans C5;
+  --utrecht-button-font-family: "Merriweather Sans", sans-serif;
   --utrecht-button-font-size: 16px;
   --utrecht-button-font-weight: bold;
   --utrecht-button-inline-size: <length>;
@@ -134,7 +134,7 @@
   --utrecht-heading-1-margin-block-start: 16px;
 
   --utrecht-heading-2-color: #000;
-  --utrecht-heading-2-font-family: "TheMix C5", sans-serif;
+  --utrecht-heading-2-font-family: "Merriweather Sans", sans-serif;
   --utrecht-heading-2-font-size: 24px;
   --utrecht-heading-2-font-weight: bold;
   --utrecht-heading-2-line-height: 130%;
@@ -142,7 +142,7 @@
   --utrecht-heading-2-margin-block-start: 555px;
 
   --utrecht-heading-3-color: #000;
-  --utrecht-heading-3-font-family: "TheMix C5", sans-serif;
+  --utrecht-heading-3-font-family: "Merriweather Sans", sans-serif;
   --utrecht-heading-3-font-size: 18px;
   --utrecht-heading-3-font-weight: bold;
   --utrecht-heading-3-line-height: 130%;
@@ -150,7 +150,7 @@
   --utrecht-heading-3-margin-block-start: 16px;
 
   --utrecht-heading-4-color: #000;
-  --utrecht-heading-4-font-family: "TheMix C5", sans-serif;
+  --utrecht-heading-4-font-family: "Merriweather Sans", sans-serif;
   --utrecht-heading-4-font-size: 16px;
   --utrecht-heading-4-font-weight: bold;
   --utrecht-heading-4-line-height: 130%;
@@ -158,7 +158,7 @@
   --utrecht-heading-4-margin-block-start: 16px;
 
   --utrecht-heading-5-color: #000;
-  --utrecht-heading-5-font-family: "TheMix C5", sans-serif;
+  --utrecht-heading-5-font-family: "Merriweather Sans", sans-serif;
   --utrecht-heading-5-font-size: 16px;
   --utrecht-heading-5-font-weight: plain;
   --utrecht-heading-5-line-height: 130%;
@@ -166,7 +166,7 @@
   --utrecht-heading-5-margin-block-start: 16px;
 
   --utrecht-paragraph-color: #4b4b4b;
-  --utrecht-paragraph-font-family: "TheSans C5", sans-serif;
+  --utrecht-paragraph-font-family: "Merriweather Sans", sans-serif;
   --utrecht-paragraph-font-size: 16px;
   --utrecht-paragraph-font-weight: 500;
   --utrecht-paragraph-line-height: 150%;
@@ -203,7 +203,7 @@
   --utrecht-textarea-border-color: #e4e4e4;
   --utrecht-textarea-border-radius: 3px;
   --utrecht-textarea-color: #000;
-  --utrecht-textarea-font-family: "TheSans C5", sans-serif;
+  --utrecht-textarea-font-family: "Merriweather Sans", sans-serif;
   --utrecht-textarea-font-size: 16px;
   --utrecht-textarea-line-height: 150%;
   --utrecht-textarea-min-block-size: 0;
@@ -220,6 +220,7 @@
 
   --utrecht-form-label-color: #000;
   --utrecht-form-label-font-weight: bold;
+  --utrecht-form-label-font-family: "Merriweather Sans", sans-serif;
   --utrecht-form-label-font-size: 18px;
   --utrecht-form-label-checkbox-color: #000;
   --utrecht-form-label-checkbox-font-weight: 500;
@@ -229,7 +230,7 @@
   --utrecht-form-label-radio-font-weight: 500;
 
   --utrecht-form-fieldset-legend-color: #000;
-  --utrecht-form-fieldset-legend-font-family: *;
+  --utrecht-form-fieldset-legend-font-family: "Merriweather Sans", sans-serif;
   --utrecht-form-fieldset-legend-font-size: 16px;
   --utrecht-form-fieldset-legend-font-weight: bold;
   --utrecht-form-fieldset-legend-line-height: 150%;
@@ -237,7 +238,7 @@
   --utrecht-form-fieldset-legend-margin-block-start: 0px;
 
   --utrecht-form-field-description-color: #676767;
-  --utrecht-form-field-description-font-family: "TheSans C5", sans-serif;
+  --utrecht-form-field-description-font-family: "Merriweather Sans", sans-serif;
   --utrecht-form-field-description-font-size: 16px;
   --utrecht-form-field-description-margin-block-start: 0;
   --utrecht-form-field-description-margin-block-end: 8px;
@@ -248,7 +249,7 @@
   --utrecht-select-border-radius: 3px;
   --utrecht-select-border-width: 2px;
   --utrecht-select-color: #000;
-  --utrecht-select-font-family: "TheSans C5", sans-serif;
+  --utrecht-select-font-family: "Merriweather Sans", sans-serif;
   --utrecht-select-font-size: 16px;
   --utrecht-select-max-inline-size: <length>;
   --utrecht-select-padding-block-end: 16px;
@@ -258,6 +259,7 @@
 
   --utrecht-unordered-list-font-size: 16px;
   --utrecht-unordered-list-line-height: 150%;
+  --utrecht-unordered-list-font-family: "Merriweather Sans", sans-serif;
   --utrecht-unordered-list-margin-block-start: 16px;
   --utrecht-unordered-list-margin-block-end: 16px;
   --utrecht-unordered-list-padding-inline-start: 16px;
@@ -272,4 +274,5 @@
   --utrecht-link-text-decoration-color: #248641; */
 
   /* --utrecht-link-text-underline-offset: <length>; */
+  --utrecht-font-family: "Merriweather Sans", sans-serif;
 }
