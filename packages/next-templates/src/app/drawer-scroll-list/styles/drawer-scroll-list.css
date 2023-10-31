@@ -8,6 +8,11 @@
   height: 6em;
 }
 
+.voorbeeld--unorderedlist-lijst {
+  list-style: none;
+  padding-inline: 0;
+}
+
 #voorbeeld--button-drawer {
   display: none;
 }
