@@ -21,7 +21,9 @@ export default function Home() {
       <Drawer id="voorbeeld--erfgoed-drawer" open>
         <header className="voorbeeld-drawer__header--sticky">
           <Heading3>Erfgoed</Heading3>
-          <Button>X</Button>
+          <Button>
+            <Kruisje />
+          </Button>
         </header>
         <ul className="voorbeeld--unorderedlist-lijst">
           <li>
