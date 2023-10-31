@@ -114,162 +114,162 @@ export default function Home() {
       <Page>
         <PageContent>
           <Article>
-          <Heading1>Bezwaar indienen tegen maandagochtend</Heading1>
-          <Paragraph>Vul alle velden in. Als een veld optioneel is, dan staat dit erbij.</Paragraph>
-          <Heading2>Waarom maakt u bezwaar?</Heading2>
-          <Paragraph>Kies een categorie die bij uw melding past.</Paragraph>
-          <form method="post" onSubmit={handleSubmit(handleFormHookSubmit)}>
-            <FormField>
-              <FormLabel className="example-foute-form-label">Selecteer een reden</FormLabel>
-              <RadioButton
-                onChange={(e) => setSelectedReason(e.target.value)}
-                checked={selectedReason === 'Nog een weekend modus'}
-                value="Nog een weekend modus"
-              />
-              Nog een weekend modus
-            </FormField>
-            <FormField>
-              <RadioButton
-                onChange={(e) => setSelectedReason(e.target.value)}
-                checked={selectedReason === 'Vermoeidheid'}
-                value="Vermoeidheid"
-              />
-              Vermoeidheid
-            </FormField>
-            <FormField>
-              <RadioButton
-                onChange={(e) => setSelectedReason(e.target.value)}
-                checked={selectedReason === 'Puberteit'}
-                value="Puberteit"
-              />
-              Puberteit
-            </FormField>
-            <FormField>
-              <RadioButton
-                onChange={(e) => setSelectedReason(e.target.value)}
-                checked={selectedReason === 'Ajax heeft verloren'}
-                value="Ajax heeft verloren"
-              />
-              Ajax heeft verloren
-            </FormField>
-            {formErrors.selectedReason && (
-              <FormFieldDescription invalid role="alert">
-                <Paragraph className="errors-text">{formErrors.selectedReason}</Paragraph>
-              </FormFieldDescription>
-            )}
+            <Heading1>Bezwaar indienen tegen maandagochtend</Heading1>
+            <Paragraph>Vul alle velden in. Als een veld optioneel is, dan staat dit erbij.</Paragraph>
+            <Heading2>Waarom maakt u bezwaar?</Heading2>
+            <Paragraph>Kies een categorie die bij uw melding past.</Paragraph>
+            <form method="post" onSubmit={handleSubmit(handleFormHookSubmit)}>
+              <FormField>
+                <FormLabel className="example-foute-form-label">Selecteer een reden</FormLabel>
+                <RadioButton
+                  onChange={(e) => setSelectedReason(e.target.value)}
+                  checked={selectedReason === 'Nog een weekend modus'}
+                  value="Nog een weekend modus"
+                />
+                Nog een weekend modus
+              </FormField>
+              <FormField>
+                <RadioButton
+                  onChange={(e) => setSelectedReason(e.target.value)}
+                  checked={selectedReason === 'Vermoeidheid'}
+                  value="Vermoeidheid"
+                />
+                Vermoeidheid
+              </FormField>
+              <FormField>
+                <RadioButton
+                  onChange={(e) => setSelectedReason(e.target.value)}
+                  checked={selectedReason === 'Puberteit'}
+                  value="Puberteit"
+                />
+                Puberteit
+              </FormField>
+              <FormField>
+                <RadioButton
+                  onChange={(e) => setSelectedReason(e.target.value)}
+                  checked={selectedReason === 'Ajax heeft verloren'}
+                  value="Ajax heeft verloren"
+                />
+                Ajax heeft verloren
+              </FormField>
+              {formErrors.selectedReason && (
+                <FormFieldDescription invalid role="alert">
+                  <Paragraph className="errors-text">{formErrors.selectedReason}</Paragraph>
+                </FormFieldDescription>
+              )}
 
-            <FormField>
-              <FormLabel className="example-foute-form-label">Aanvullende Onderbouwing</FormLabel>
-              <FormFieldDescription>
-                Onderbouw de reden die u heeft opgegeven en beschrijf wat er eventueel wat er aan gedaan kan worden.
-              </FormFieldDescription>
-              <Textarea onChange={(e) => setAanvullendetekst(e.target.value)}></Textarea>
-              {formErrors.aanvullendetekst && (
-                <FormFieldDescription style={{ color: '#D2262E' }} invalid role="alert">
-                  <Paragraph className="errors-text">{formErrors.aanvullendetekst}</Paragraph>
+              <FormField>
+                <FormLabel className="example-foute-form-label">Aanvullende Onderbouwing</FormLabel>
+                <FormFieldDescription>
+                  Onderbouw de reden die u heeft opgegeven en beschrijf wat er eventueel wat er aan gedaan kan worden.
                 </FormFieldDescription>
-              )}
-            </FormField>
-            <Heading2>Uw gegevens</Heading2>
-            <FormField>
-              <FormLabel className="example-foute-form-label">Naam</FormLabel>
-              <Textbox
-                className="textbox-name-email"
-                onChange={(e) => setName(e.target.value)}
-                checked={name === 'Naam'}
-              />
-              {formErrors.name && (
-                <FormFieldDescription invalid role="alert">
-                  <Paragraph className="errors-text">{formErrors.name}</Paragraph>
-                </FormFieldDescription>
-              )}
-            </FormField>
-            <FormField>
-              <FormLabel className="example-foute-form-label">Straat</FormLabel>
-              <Textbox onChange={(e) => setStreet(e.target.value)} checked={name === 'Straat'} />
-              {formErrors.street && (
-                <FormFieldDescription invalid role="alert">
-                  <Paragraph className="errors-text">{formErrors.street}</Paragraph>
-                </FormFieldDescription>
-              )}
-            </FormField>
-            <FormField>
-              <FormLabel className="example-foute-form-label-huisnummer">
-                Huisnummer
-                <FormLabel className="example-foute-form-label-huisnummer">Toevoeging(Optioneel)</FormLabel>
-              </FormLabel>
+                <Textarea onChange={(e) => setAanvullendetekst(e.target.value)}></Textarea>
+                {formErrors.aanvullendetekst && (
+                  <FormFieldDescription style={{ color: '#D2262E' }} invalid role="alert">
+                    <Paragraph className="errors-text">{formErrors.aanvullendetekst}</Paragraph>
+                  </FormFieldDescription>
+                )}
+              </FormField>
+              <Heading2>Uw gegevens</Heading2>
+              <FormField>
+                <FormLabel className="example-foute-form-label">Naam</FormLabel>
+                <Textbox
+                  className="textbox-name-email"
+                  onChange={(e) => setName(e.target.value)}
+                  checked={name === 'Naam'}
+                />
+                {formErrors.name && (
+                  <FormFieldDescription invalid role="alert">
+                    <Paragraph className="errors-text">{formErrors.name}</Paragraph>
+                  </FormFieldDescription>
+                )}
+              </FormField>
+              <FormField>
+                <FormLabel className="example-foute-form-label">Straat</FormLabel>
+                <Textbox onChange={(e) => setStreet(e.target.value)} checked={name === 'Straat'} />
+                {formErrors.street && (
+                  <FormFieldDescription invalid role="alert">
+                    <Paragraph className="errors-text">{formErrors.street}</Paragraph>
+                  </FormFieldDescription>
+                )}
+              </FormField>
+              <FormField>
+                <FormLabel className="example-foute-form-label-huisnummer">
+                  Huisnummer
+                  <FormLabel className="example-foute-form-label-huisnummer">Toevoeging(Optioneel)</FormLabel>
+                </FormLabel>
 
-              <Textbox
-                className="aangepaste-textbox"
-                onChange={(e) => setHouseNumber(e.target.value)}
-                checked={name === 'Huisnummer'}
-              />
-              <Textbox className="aangepaste-textbox1" />
+                <Textbox
+                  className="aangepaste-textbox"
+                  onChange={(e) => setHouseNumber(e.target.value)}
+                  checked={name === 'Huisnummer'}
+                />
+                <Textbox className="aangepaste-textbox1" />
 
-              {formErrors.houseNumber && (
-                <FormFieldDescription invalid role="alert">
-                  <Paragraph className="errors-text">{formErrors.houseNumber}</Paragraph>
-                </FormFieldDescription>
-              )}
-            </FormField>
-            <FormField>
-              <FormLabel className="example-foute-form-label">
-                Postcode
-                {/* <InfoCirleIcon /> */}
-              </FormLabel>
-              <Textbox
-                className="aangepaste-textbox"
-                onChange={(e) => setPostcode(e.target.value)}
-                checked={name === 'Postcode'}
-              />
-              {formErrors.postcode && (
-                <FormFieldDescription invalid role="alert">
-                  <Paragraph className="errors-text">{formErrors.postcode}</Paragraph>
-                </FormFieldDescription>
-              )}
-            </FormField>
-            <FormField>
-              <FormLabel className="example-foute-form-label">Woonplaats</FormLabel>
-              <Textbox onChange={(e) => setWoonplaats(e.target.value)} checked={name === 'Woonplaats'} />
-              {formErrors.woonplaats && (
-                <FormFieldDescription invalid role="alert">
-                  <Paragraph className="errors-text">{formErrors.woonplaats}</Paragraph>
-                </FormFieldDescription>
-              )}
-            </FormField>
-            <FormField>
-              <FormLabel className="example-foute-form-label">E-mailadres</FormLabel>
-              <Textbox
-                className="textbox-name-email"
-                onChange={(e) => setEmail(e.target.value)}
-                checked={name === 'E-mailadres'}
-              />
-              {formErrors.email && (
-                <FormFieldDescription invalid role="alert">
-                  <Paragraph className="errors-text">{formErrors.email}</Paragraph>
-                </FormFieldDescription>
-              )}
-            </FormField>
-            <FormField>
-              <FormLabel className="example-foute-form-label">Telefoonnummer</FormLabel>
-              <Textbox
-                className="textbox-telefoonnummer"
-                onChange={(e) => setTelefoonnummer(e.target.value)}
-                checked={name === 'Telefoonnummer'}
-              />
-              {formErrors.telefoonnummer && (
-                <FormFieldDescription invalid role="alert">
-                  <Paragraph className="errors-text">{formErrors.telefoonnummer}</Paragraph>
-                </FormFieldDescription>
-              )}
-            </FormField>
+                {formErrors.houseNumber && (
+                  <FormFieldDescription invalid role="alert">
+                    <Paragraph className="errors-text">{formErrors.houseNumber}</Paragraph>
+                  </FormFieldDescription>
+                )}
+              </FormField>
+              <FormField>
+                <FormLabel className="example-foute-form-label">
+                  Postcode
+                  {/* <InfoCirleIcon /> */}
+                </FormLabel>
+                <Textbox
+                  className="aangepaste-textbox"
+                  onChange={(e) => setPostcode(e.target.value)}
+                  checked={name === 'Postcode'}
+                />
+                {formErrors.postcode && (
+                  <FormFieldDescription invalid role="alert">
+                    <Paragraph className="errors-text">{formErrors.postcode}</Paragraph>
+                  </FormFieldDescription>
+                )}
+              </FormField>
+              <FormField>
+                <FormLabel className="example-foute-form-label">Woonplaats</FormLabel>
+                <Textbox onChange={(e) => setWoonplaats(e.target.value)} checked={name === 'Woonplaats'} />
+                {formErrors.woonplaats && (
+                  <FormFieldDescription invalid role="alert">
+                    <Paragraph className="errors-text">{formErrors.woonplaats}</Paragraph>
+                  </FormFieldDescription>
+                )}
+              </FormField>
+              <FormField>
+                <FormLabel className="example-foute-form-label">E-mailadres</FormLabel>
+                <Textbox
+                  className="textbox-name-email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  checked={name === 'E-mailadres'}
+                />
+                {formErrors.email && (
+                  <FormFieldDescription invalid role="alert">
+                    <Paragraph className="errors-text">{formErrors.email}</Paragraph>
+                  </FormFieldDescription>
+                )}
+              </FormField>
+              <FormField>
+                <FormLabel className="example-foute-form-label">Telefoonnummer</FormLabel>
+                <Textbox
+                  className="textbox-telefoonnummer"
+                  onChange={(e) => setTelefoonnummer(e.target.value)}
+                  checked={name === 'Telefoonnummer'}
+                />
+                {formErrors.telefoonnummer && (
+                  <FormFieldDescription invalid role="alert">
+                    <Paragraph className="errors-text">{formErrors.telefoonnummer}</Paragraph>
+                  </FormFieldDescription>
+                )}
+              </FormField>
 
-            <ButtonGroup>
-              <Button appearance="primary-action-button" type="submit">
-                Versturen
-              </Button>
-            </ButtonGroup>
-          </form>
+              <ButtonGroup>
+                <Button appearance="primary-action-button" type="submit">
+                  Versturen
+                </Button>
+              </ButtonGroup>
+            </form>
           </Article>
         </PageContent>
       </Page>
