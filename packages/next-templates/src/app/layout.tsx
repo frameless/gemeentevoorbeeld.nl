@@ -16,7 +16,7 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
     <html lang="nl">
       {/* <body className="voorbeeld-theme">{children}</body> */}
-      <body className="groningen-theme">
+      <body className="voorbeeld-theme">
         <div className="utrecht-document">{children}</div>
       </body>
     </html>
