@@ -14,6 +14,29 @@ import '../styles/drawer-scroll-list.css';
 import BackArrow from '../pijltje-rechts.svg';
 import Kruisje from '../kruisje.svg';
 
+const linkData = [
+  { id: 'duitse_bommenwerper', href: '#voorbeeld--button-drawer', content: 'Duitse bommenwerper' },
+  { id: 'werf', href: '#voorbeeld--button-drawer2', content: 'Werk aan de werf' },
+  { id: 'vredebrug', href: '#', content: 'Bouw en sloop van kasteel Vredenburg' },
+  { id: 'cecilianklooster', href: '#', content: 'Ceciliaklooster' },
+  { id: 'middeleeuse-stadsmuur', href: '#', content: 'Middeleeuwse stadsmuur' },
+  { id: 'rijmvliet', href: '#', content: 'Oude tempel in Rijnvliet?' },
+  { id: 'dorp-aan-rivier', href: '#', content: 'Dorp aan de rivier' },
+  { id: 'romeinse-wachttoren', href: '#', content: 'Romeinse wachttorens' },
+  { id: 'blauwkapel', href: '#', content: 'Kerkje van Blauwkapel' },
+  { id: 'utrechtse-werven', href: '#', content: 'De Utrechtse werven' },
+  { id: 'domplein', href: '#', content: 'Domplein' },
+  { id: 'haardkuil-steentijd', href: '#', content: 'Haardkuil uit de oude steentijd' },
+  { id: 'janskerkhof', href: '#', content: 'Janskerkhof' },
+  { id: 'sterrenburg', href: '#', content: 'Bijlhouwerstoren en Sterrenburg' },
+  { id: 'natuur', href: '#', content: 'Natuur op de forten' },
+  { id: 'buurtoren', href: '#', content: 'Buurtoren' },
+  { id: 'plompetorengracht', href: '#', content: 'Rondom de Plompetorengracht' },
+  { id: 'herderplein', href: '#', content: 'Herderplein in buurt Halve Maan' },
+  { id: 'kamp', href: '#', content: 'Rondom de Nieuwe Kamp' },
+  { id: 'kanunniken', href: '#', content: 'Kanunniken te paard?' },
+  { id: 'paulusabdij', href: '#', content: 'Paulusabdij' },
+];
 export default function Home() {
   return (
     <Document>
@@ -25,111 +48,13 @@ export default function Home() {
           </Button>
         </header>
         <ul className="voorbeeld--unorderedlist-lijst">
-          <li>
-            <Link id="duitse_bommenwerper" href="#voorbeeld--button-drawer">
-              Duitse bommenwerper
-            </Link>
-          </li>
-          <li>
-            <Link id="werf" href="#voorbeeld--button-drawer2">
-              Werk aan de werf
-            </Link>
-          </li>
-          <li>
-            <Link id="vredebrug" href="#">
-              Bouw en sloop van kasteel Vredenburg{' '}
-            </Link>
-          </li>
-          <li>
-            <Link id="cecilianklooster" href="#">
-              Ceciliaklooster
-            </Link>
-          </li>
-          <li>
-            <Link id="middeleeuse-stadsmuur" href="#">
-              Middeleeuwse stadsmuur
-            </Link>
-          </li>
-          <li>
-            <Link id="rijmvliet" href="#">
-              Oude tempel in Rijnvliet?
-            </Link>
-          </li>
-          <li>
-            <Link id="dorp-aan-rivier" href="#">
-              Dorp aan de rivier
-            </Link>
-          </li>
-          <li>
-            <Link id="romeinse-wachttoren" href="#">
-              Romeinse wachttorens
-            </Link>
-          </li>
-          <li>
-            <Link id="blauwkapel" href="#">
-              Kerkje van Blauwkapel
-            </Link>
-          </li>
-          <li>
-            <Link id="utrechtse-werven" href="#">
-              De Utrechtse werven
-            </Link>
-          </li>
-          <li>
-            <Link id="domplein" href="#">
-              Domplein
-            </Link>
-          </li>
-          <li>
-            <Link id="haardkuil-steentijd" href="#">
-              Haardkuil uit de oude steentijd
-            </Link>
-          </li>
-          <li>
-            <Link id="janskerkhof" href="#">
-              Janskerkhof
-            </Link>
-          </li>
-          <li>
-            <Link id="sterrenburg" href="#">
-              Bijlhouwerstoren en Sterrenburg
-            </Link>
-          </li>
-          <li>
-            <Link id="natuur" href="#">
-              Natuur op de forten
-            </Link>
-          </li>
-          <li>
-            <Link id="buurtoren" href="#">
-              Buurtoren
-            </Link>
-          </li>
-          <li>
-            <Link id="plompetorengracht" href="#">
-              Rondom de Plompetorengracht
-            </Link>
-          </li>
-          <li>
-            <Link id="herderplein" href="#">
-              Herderplein in buurt Halve Maan
-            </Link>
-          </li>
-          <li>
-            <Link href="#" id="kamp">
-              Rondom de Nieuwe Kamp
-            </Link>
-          </li>
-          <li>
-            <Link href="#" id="kanunniken">
-              Kanunniken te paard?
-            </Link>
-          </li>
-          <li>
-            <Link href="#" id="paulusabdij">
-              Paulusabdij
-            </Link>
-          </li>
+          {linkData.map(({ id, href, content }) => (
+            <li>
+              <Link id={id} href={href}>
+                {content}
+              </Link>
+            </li>
+          ))}
         </ul>
       </Drawer>
 
