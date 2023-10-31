@@ -1,7 +1,6 @@
 'use client';
 import {
   Button,
-  ButtonLink,
   DataList,
   Document,
   Drawer,
@@ -24,71 +23,71 @@ export default function Home() {
         </header>
         <UnorderedList className="voorbeeld--unorderedlist-lijst">
           <UnorderedListItem>
-            <ButtonLink id="voorbeeld-button-update" href="#voorbeeld--button-drawer">
+            <Link id="voorbeeld-button-update" href="#voorbeeld--button-drawer">
               Duitse bommenwerper
-            </ButtonLink>
+            </Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Werk aan de werf</ButtonLink>
+            <Link>Werk aan de werf</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Bouw en sloop van kasteel Vredenburg </ButtonLink>
+            <Link>Bouw en sloop van kasteel Vredenburg </Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Ceciliaklooster</ButtonLink>
+            <Link>Ceciliaklooster</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Middeleeuwse stadsmuur</ButtonLink>
+            <Link>Middeleeuwse stadsmuur</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Oude tempel in Rijnvliet?</ButtonLink>
+            <Link>Oude tempel in Rijnvliet?</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Dorp aan de rivier</ButtonLink>
+            <Link>Dorp aan de rivier</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Romeinse wachttorens</ButtonLink>
+            <Link>Romeinse wachttorens</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Kerkje van Blauwkapel</ButtonLink>
+            <Link>Kerkje van Blauwkapel</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>De Utrechtse werven</ButtonLink>
+            <Link>De Utrechtse werven</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Domplein</ButtonLink>
+            <Link>Domplein</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Haardkuil uit de oude steentijd</ButtonLink>
+            <Link>Haardkuil uit de oude steentijd</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Janskerkhof</ButtonLink>
+            <Link>Janskerkhof</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Bijlhouwerstoren en Sterrenburg</ButtonLink>
+            <Link>Bijlhouwerstoren en Sterrenburg</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Natuur op de forten</ButtonLink>
+            <Link>Natuur op de forten</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Buurtoren</ButtonLink>
+            <Link>Buurtoren</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Rondom de Plompetorengracht</ButtonLink>
+            <Link>Rondom de Plompetorengracht</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Herderplein in buurt Halve Maan</ButtonLink>
+            <Link>Herderplein in buurt Halve Maan</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink>Rondom de Nieuwe Kamp</ButtonLink>
+            <Link>Rondom de Nieuwe Kamp</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink> Kanunniken te paard?</ButtonLink>
+            <Link> Kanunniken te paard?</Link>
           </UnorderedListItem>
           <UnorderedListItem>
-            <ButtonLink id="paulusabdij" href="#voorbeeld--button-drawer">
+            <Link id="paulusabdij" href="#voorbeeld--button-drawer">
               Paulusabdij
-            </ButtonLink>
+            </Link>
           </UnorderedListItem>
         </UnorderedList>
       </Drawer>
@@ -97,14 +96,14 @@ export default function Home() {
         <header>
           <Heading3>Duitse bommenwerper</Heading3>
 
-          <ButtonLink id="voorbeeld-button-update" href="#paulusabdij">
+          <Link id="voorbeeld-button-update" href="#paulusabdij">
             Terug
-          </ButtonLink>
+          </Link>
           <Button>Dicht maken</Button>
         </header>
         <UnorderedList className="voorbeeld--unorderedlist-lijst">
           <UnorderedListItem>
-            <ButtonLink href="#voorbeeld--button-drawer">sdfsd</ButtonLink>
+            <Link href="#voorbeeld--button-drawer">sdfsd</Link>
           </UnorderedListItem>
         </UnorderedList>
         <div className="content">
