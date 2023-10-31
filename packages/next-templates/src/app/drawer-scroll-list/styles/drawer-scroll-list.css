@@ -13,10 +13,10 @@
   padding-inline: 0;
 }
 
-#voorbeeld--button-drawer {
+[id^="voorbeeld--button-drawer"] {
   display: none;
 }
 
-#voorbeeld--button-drawer:target {
+[id^="voorbeeld--button-drawer"]:target {
   display: block;
 }
