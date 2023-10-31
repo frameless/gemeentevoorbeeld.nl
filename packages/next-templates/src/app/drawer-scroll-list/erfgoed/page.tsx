@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <Document>
       <Drawer id="voorbeeld--erfgoed-drawer" open>
-        <PageHeader className="voorbeeld--sticky-header">
+        <PageHeader className="voorbeeld-drawer__header--sticky">
           <Heading3>Erfgoed</Heading3>
           <Button>X</Button>
         </PageHeader>

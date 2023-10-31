@@ -1,4 +1,4 @@
-.voorbeeld--sticky-header {
+.voorbeeld-drawer__header--sticky {
   display: flex;
   align-items: center;
   position: sticky;
