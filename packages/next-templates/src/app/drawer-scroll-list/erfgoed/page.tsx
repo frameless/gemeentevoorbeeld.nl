@@ -1,6 +1,19 @@
 'use client';
-import { Button, DataList, Document, Drawer, Heading3, Image, Link, Paragraph } from '@utrecht/component-library-react';
+import {
+  Button,
+  ButtonLink,
+  DataList,
+  Document,
+  Drawer,
+  Heading3,
+  Image,
+  Link,
+  Paragraph,
+} from '@utrecht/component-library-react';
 import '../styles/drawer-scroll-list.css';
+
+import BackArrow from '../pijltje-rechts.svg';
+import Kruisje from '../kruisje.svg';
 
 export default function Home() {
   return (
@@ -84,17 +97,18 @@ export default function Home() {
       <Drawer id="voorbeeld--button-drawer">
         <header>
           <Heading3>Duitse bommenwerper</Heading3>
-
-          <Link id="voorbeeld-button-update" href="#paulusabdij">
-            Terug
-          </Link>
-          <Button>Dicht maken</Button>
+          <ButtonLink id="voorbeeld-button-update" href="#voorbeeld-link-duitse_bommenwerper">
+            <BackArrow />
+          </ButtonLink>
+          <Button>
+            <Kruisje />
+          </Button>
         </header>
         <div className="content">
           <Image
             alt="Duitse Bommenwerper in de lucht tijdens de tweede wereldoorlog"
-            src="/packages/next-templates/src/app/drawer-scroll-list/duitsebommenwerper.jpeg"
-          ></Image>
+            src="/nl-design-system-templates/packages/next-templates/src/app/drawer-scroll-list/erfgoed/duitsebommer.jpg"
+          />
         </div>
         <div className="details">
           <Heading3>Duitse bommenwerper</Heading3>
@@ -107,7 +121,6 @@ export default function Home() {
           <Link href="https://www.cssscript.com/easy-sliding-drawer/">SVGLees het verhaal op de site SVG2 </Link>
         </div>
         <div className="details">
-          {' '}
           <DataList>
             <div>
               <dt>Periode</dt>
@@ -121,7 +134,7 @@ export default function Home() {
               <dt>Tags</dt>
               <dd>Oorlog en verdediging</dd>
             </div>
-          </DataList>{' '}
+          </DataList>
         </div>
       </Drawer>
     </Document>
