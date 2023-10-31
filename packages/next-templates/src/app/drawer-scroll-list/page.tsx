@@ -8,7 +8,6 @@ import {
   FormField,
   FormLabel,
   Heading3,
-  PageHeader,
 } from '@utrecht/component-library-react';
 import './styles/drawer-scroll-list.css';
 
@@ -47,10 +46,10 @@ export default function Home() {
   return (
     <Document>
       <Drawer open>
-        <PageHeader className="voorbeeld-drawer__header--sticky">
+        <header className="voorbeeld-drawer__header--sticky">
           <Heading3>Verfijn resultaten</Heading3>
           <Button>X</Button>
-        </PageHeader>
+        </header>
         <AccordionProvider
           sections={[
             {

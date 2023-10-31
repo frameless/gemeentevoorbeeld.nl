@@ -8,7 +8,6 @@ import {
   Heading3,
   Image,
   Link,
-  PageHeader,
   Paragraph,
   UnorderedList,
   UnorderedListItem,
@@ -19,10 +18,10 @@ export default function Home() {
   return (
     <Document>
       <Drawer id="voorbeeld--erfgoed-drawer" open>
-        <PageHeader className="voorbeeld-drawer__header--sticky">
+        <header className="voorbeeld-drawer__header--sticky">
           <Heading3>Erfgoed</Heading3>
           <Button>X</Button>
-        </PageHeader>
+        </header>
         <UnorderedList className="voorbeeld--unorderedlist-lijst">
           <UnorderedListItem>
             <ButtonLink id="voorbeeld-button-update" href="#voorbeeld--button-drawer">
@@ -95,14 +94,14 @@ export default function Home() {
       </Drawer>
 
       <Drawer id="voorbeeld--button-drawer">
-        <PageHeader>
+        <header>
           <Heading3>Duitse bommenwerper</Heading3>
 
           <ButtonLink id="voorbeeld-button-update" href="#paulusabdij">
             Terug
           </ButtonLink>
           <Button>Dicht maken</Button>
-        </PageHeader>
+        </header>
         <UnorderedList className="voorbeeld--unorderedlist-lijst">
           <UnorderedListItem>
             <ButtonLink href="#voorbeeld--button-drawer">sdfsd</ButtonLink>
