@@ -1,16 +1,5 @@
 'use client';
-import {
-  Button,
-  DataList,
-  Document,
-  Drawer,
-  Heading3,
-  Image,
-  Link,
-  Paragraph,
-  UnorderedList,
-  UnorderedListItem,
-} from '@utrecht/component-library-react';
+import { Button, DataList, Document, Drawer, Heading3, Image, Link, Paragraph } from '@utrecht/component-library-react';
 import '../styles/drawer-scroll-list.css';
 
 export default function Home() {
@@ -21,75 +10,75 @@ export default function Home() {
           <Heading3>Erfgoed</Heading3>
           <Button>X</Button>
         </header>
-        <UnorderedList className="voorbeeld--unorderedlist-lijst">
-          <UnorderedListItem>
+        <ul className="voorbeeld--unorderedlist-lijst">
+          <li>
             <Link id="voorbeeld-button-update" href="#voorbeeld--button-drawer">
               Duitse bommenwerper
             </Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Werk aan de werf</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Bouw en sloop van kasteel Vredenburg </Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Ceciliaklooster</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Middeleeuwse stadsmuur</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Oude tempel in Rijnvliet?</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Dorp aan de rivier</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Romeinse wachttorens</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Kerkje van Blauwkapel</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>De Utrechtse werven</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Domplein</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Haardkuil uit de oude steentijd</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Janskerkhof</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Bijlhouwerstoren en Sterrenburg</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Natuur op de forten</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Buurtoren</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Rondom de Plompetorengracht</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Herderplein in buurt Halve Maan</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link>Rondom de Nieuwe Kamp</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link> Kanunniken te paard?</Link>
-          </UnorderedListItem>
-          <UnorderedListItem>
+          </li>
+          <li>
             <Link id="paulusabdij" href="#voorbeeld--button-drawer">
               Paulusabdij
             </Link>
-          </UnorderedListItem>
-        </UnorderedList>
+          </li>
+        </ul>
       </Drawer>
 
       <Drawer id="voorbeeld--button-drawer">
@@ -101,11 +90,6 @@ export default function Home() {
           </Link>
           <Button>Dicht maken</Button>
         </header>
-        <UnorderedList className="voorbeeld--unorderedlist-lijst">
-          <UnorderedListItem>
-            <Link href="#voorbeeld--button-drawer">sdfsd</Link>
-          </UnorderedListItem>
-        </UnorderedList>
         <div className="content">
           <Image
             alt="Duitse Bommenwerper in de lucht tijdens de tweede wereldoorlog"
