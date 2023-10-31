@@ -247,6 +247,9 @@ importers:
 
   packages/next-templates:
     dependencies:
+      '@fontsource/merriweather-sans':
+        specifier: 5.0.8
+        version: 5.0.8
       '@types/node':
         specifier: 20.5.6
         version: 20.5.6
@@ -2004,6 +2007,10 @@ packages:
   /@fontsource/fira-sans@5.0.12:
     resolution: {integrity: sha512-IQJxlmbye/pTHHPkW/36isA5EnrRP014sAY1ZEGtFmV0TA6CcFoLV91foSKqFwQWrJ/dFs1n1ogfECLIFXWd8Q==}
     dev: true
+
+  /@fontsource/merriweather-sans@5.0.8:
+    resolution: {integrity: sha512-hFJJjMM8zyzykKLPRcuTE74xGqTurahJ00pObsm7Axu4VQKl+n0EJO/nEsu9hoHTUv4Aw7GfA16mJHqibXEcEQ==}
+    dev: false
 
   /@fontsource/source-serif-pro@5.0.8:
     resolution: {integrity: sha512-bb8bza+aBp6Wpz1LOXaQ9YSwMc/wNpk3hniENCPoBMMwsn9LQaJU0kKnJSSIi+ld1t7aH4jbh+mHQHN1zLfZ3A==}
