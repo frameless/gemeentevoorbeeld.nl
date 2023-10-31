@@ -12,7 +12,7 @@ export default function Home() {
         </header>
         <ul className="voorbeeld--unorderedlist-lijst">
           <li>
-            <Link id="voorbeeld-button-update" href="#voorbeeld--button-drawer">
+            <Link id="voorbeeld-link-duitse_bommenwerper" href="#voorbeeld--button-drawer">
               Duitse bommenwerper
             </Link>
           </li>
