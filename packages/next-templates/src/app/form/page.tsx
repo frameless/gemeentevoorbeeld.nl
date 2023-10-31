@@ -128,7 +128,7 @@ export default function Home() {
                     Omschrijving
                   </FormLabel>
                 </Paragraph>
-                <FormFieldDescription className="">
+                <FormFieldDescription>
                   Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden.
                 </FormFieldDescription>
                 <Textarea
@@ -151,7 +151,7 @@ export default function Home() {
                 <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
               </UnorderedList>
               <div className="voorbeeld-bijlage-flex-container">
-                <Button appearance="secondary-action-button">Bestand kiezen </Button>
+                <Button appearance="secondary-action-button">Bestand kiezen</Button>
                 <Paragraph className="paragraph-space-bijlagen">Geen bestand gekozen</Paragraph>
               </div>
               <Heading2 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading2>
