@@ -11,6 +11,11 @@
 .voorbeeld--unorderedlist-lijst {
   list-style: none;
   padding-inline: 0;
+  margin-inline: 1em;
+}
+
+.voorbeeld--unorderedlist-lijst li {
+  margin-block: 12px;
 }
 
 [id^="voorbeeld--button-drawer"] {
