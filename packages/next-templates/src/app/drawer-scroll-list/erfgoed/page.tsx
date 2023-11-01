@@ -46,13 +46,17 @@ export default function Home() {
     setOpen(true);
   }
 
+  function closeOpen() {
+    setOpen(false);
+  }
+
   return (
     <Document>
       <Button onClick={addOpen}>open drawer</Button>
       <Drawer id="voorbeeld--erfgoed-drawer" open={open}>
         <header className="voorbeeld-drawer__header--sticky">
           <Heading3>Erfgoed</Heading3>
-          <Button>
+          <Button onClick={closeOpen}>
             <Kruisje />
           </Button>
         </header>
