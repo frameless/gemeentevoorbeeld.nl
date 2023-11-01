@@ -13,6 +13,7 @@ import {
 import '../styles/drawer-scroll-list.css';
 import BackArrow from '../pijltje-rechts.svg';
 import Kruisje from '../kruisje.svg';
+import { useState } from 'react';
 
 const linkData = [
   { id: 'duitse_bommenwerper', href: '#voorbeeld--button-drawer', content: 'Duitse bommenwerper' },
@@ -37,10 +38,18 @@ const linkData = [
   { id: 'kanunniken', href: '#', content: 'Kanunniken te paard?' },
   { id: 'paulusabdij', href: '#', content: 'Paulusabdij' },
 ];
+
 export default function Home() {
+  const [open, setOpen] = useState(false);
+
+  function addOpen() {
+    setOpen(true);
+  }
+
   return (
     <Document>
-      <Drawer id="voorbeeld--erfgoed-drawer" open>
+      <Button onClick={addOpen}>open drawer</Button>
+      <Drawer id="voorbeeld--erfgoed-drawer" open={open}>
         <header className="voorbeeld-drawer__header--sticky">
           <Heading3>Erfgoed</Heading3>
           <Button>
