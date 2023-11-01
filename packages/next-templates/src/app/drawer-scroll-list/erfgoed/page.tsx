@@ -41,6 +41,7 @@ const linkData = [
 
 export default function Home() {
   const [open, setOpen] = useState(false);
+  const [draweropen, setDraweropen] = useState(false);
 
   function addOpen() {
     setOpen(true);
@@ -48,6 +49,11 @@ export default function Home() {
 
   function closeOpen() {
     setOpen(false);
+  }
+
+  function closeAll() {
+    setOpen(false);
+    setDraweropen(false);
   }
 
   return (
@@ -71,12 +77,12 @@ export default function Home() {
         </ul>
       </Drawer>
 
-      <Drawer id="voorbeeld--button-drawer">
+      <Drawer id="voorbeeld--button-drawer" open={draweropen}>
         <header>
           <ButtonLink id="voorbeeld-button-update" href="#duitse_bommenwerper">
             <BackArrow />
           </ButtonLink>
-          <Button>
+          <Button onClick={closeAll}>
             <Kruisje />
           </Button>
         </header>
