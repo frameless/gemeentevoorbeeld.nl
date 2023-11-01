@@ -17,11 +17,3 @@
 .voorbeeld--unorderedlist-lijst li {
   margin-block: 12px;
 }
-
-[id^="voorbeeld--button-drawer"] {
-  display: none;
-}
-
-[id^="voorbeeld--button-drawer"]:target {
-  display: block;
-}
