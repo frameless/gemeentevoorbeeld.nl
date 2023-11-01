@@ -56,6 +56,10 @@ export default function Home() {
     setErfopen(false);
   }
 
+  function closeErfOpen() {
+    setErfopen(false);
+  }
+
   return (
     <Document>
       <Button onClick={addOpen}>open drawer</Button>
@@ -79,9 +83,9 @@ export default function Home() {
 
       <Drawer id="voorbeeld--button-drawer" open={erfopen}>
         <header>
-          <ButtonLink id="voorbeeld-button-update" href="#duitse_bommenwerper">
+          <Button onClick={closeErfOpen} id="voorbeeld-button-update">
             <BackArrow />
-          </ButtonLink>
+          </Button>
           <Button onClick={closeAll}>
             <Kruisje />
           </Button>
