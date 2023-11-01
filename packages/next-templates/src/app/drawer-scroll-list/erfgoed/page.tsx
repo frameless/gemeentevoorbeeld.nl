@@ -41,7 +41,7 @@ const linkData = [
 
 export default function Home() {
   const [open, setOpen] = useState(false);
-  const [draweropen, setDraweropen] = useState(false);
+  const [erfopen, setErfopen] = useState(false);
 
   function addOpen() {
     setOpen(true);
@@ -53,7 +53,7 @@ export default function Home() {
 
   function closeAll() {
     setOpen(false);
-    setDraweropen(false);
+    setErfopen(false);
   }
 
   return (
@@ -77,7 +77,7 @@ export default function Home() {
         </ul>
       </Drawer>
 
-      <Drawer id="voorbeeld--button-drawer" open={draweropen}>
+      <Drawer id="voorbeeld--button-drawer" open={erfopen}>
         <header>
           <ButtonLink id="voorbeeld-button-update" href="#duitse_bommenwerper">
             <BackArrow />
