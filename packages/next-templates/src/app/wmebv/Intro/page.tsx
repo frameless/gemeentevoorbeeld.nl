@@ -2,6 +2,7 @@
 
 import {
   UtrechtArticle,
+  UtrechtButtonGroup,
   UtrechtButtonLink,
   UtrechtHeading1,
   UtrechtPage,
@@ -35,9 +36,11 @@ export default function home() {
               printen.
             </UnorderedListItem>
           </UnorderedList>
-          <UtrechtButtonLink href="./Inloggen" appearance="primary-action-button">
-            Doorgaan
-          </UtrechtButtonLink>
+          <UtrechtButtonGroup>
+            <UtrechtButtonLink href="./Inloggen" appearance="primary-action-button">
+              Doorgaan
+            </UtrechtButtonLink>
+          </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
       <ExampleFooter></ExampleFooter>
