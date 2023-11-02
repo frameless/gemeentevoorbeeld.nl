@@ -39,9 +39,33 @@ const linkData = [
   { id: 'paulusabdij', href: '#', content: 'Paulusabdij' },
 ];
 
+const drawerData = [
+  [
+    {
+      title: 'Duitse Bommenwerper',
+      info: 'Utrechtse archeologen onderzochten in 2010 een neergestorte Duitse bommenwerper. Lees was ze ontdekte overhet vliegtuig.',
+      linkHref: 'https://erfgoed.utrecht.nl/verhalen/duitse-bommenwerper/',
+      period: 'Moderne tijd',
+      theme: 'Archeologie',
+      tags: 'Oorlog en verdediging',
+    },
+  ],
+  [
+    {
+      title: 'Werk aan de werf',
+      info: 'Utrecht staat bekend om zijn werven en werfkelders. De eigenaren van de grachtenpanden moesten deze vroeger onderhouden. In de 20e eeuw raakten de werven in verval. Toen nam de gemeente Utrecht het eigendom van de werfmuren en kades over. Verschillende restauratierondes volgden.',
+      linkHref: 'https://erfgoed.utrecht.nl/verhalen/werk-aan-de-werf/',
+      period: 'Moderne tijd',
+      theme: 'Gebouwen',
+      tags: 'Woningbouw',
+    },
+  ],
+];
+
 export default function Home() {
   const [open, setOpen] = useState(false);
   const [erfopen, setErfopen] = useState(false);
+  const [place, setPlace] = useState(0);
 
   function addOpen() {
     setOpen(true);
@@ -56,10 +80,23 @@ export default function Home() {
     setErfopen(false);
   }
 
+  function openErfOpen(data: string) {
+    setErfopen(true);
+    setPlace(itemSelection(data));
+  }
+
   function closeErfOpen() {
     setErfopen(false);
   }
 
+  function itemSelection(id: string) {
+    if (id !== undefined) {
+      return linkData.findIndex((obj) => obj.id === id);
+    } else {
+      setErfopen(false);
+      return 0;
+    }
+  }
   return (
     <Document>
       <Button onClick={addOpen}>open drawer</Button>
@@ -73,7 +110,7 @@ export default function Home() {
         <ul className="voorbeeld--unorderedlist-lijst">
           {linkData.map(({ id, href, content }) => (
             <li>
-              <Link id={id} href={href}>
+              <Link onClick={() => openErfOpen(id)} id={id} href={href}>
                 {content}
               </Link>
             </li>
@@ -90,82 +127,37 @@ export default function Home() {
             <Kruisje />
           </Button>
         </header>
-        <div className="content">
+        {/* <div className="content">
           <Image
             alt="Duitse Bommenwerper in de lucht tijdens de tweede wereldoorlog"
             src="/nl-design-system-templates/packages/next-templates/src/app/drawer-scroll-list/erfgoed/duitsebommer.jpg"
           />
-        </div>
-        <div className="details">
-          <Heading3>Duitse bommenwerper</Heading3>
-          <Paragraph>
-            Utrechtse archeologen onderzochten in 2010 een neergestorte Duitse bommenwerper. Lees was ze ontdekte over
-            het vliegtuig.
-          </Paragraph>
-        </div>
-        <div className="links">
-          <Link href="https://www.cssscript.com/easy-sliding-drawer/">SVGLees het verhaal op de site SVG2 </Link>
-        </div>
-        <div className="details">
-          <DataList>
+        </div> */}
+        {drawerData[place].map(({ title, info, linkHref, period, theme, tags }) => (
+          <div className="details">
+            <Heading3>{title}</Heading3>
+            <Paragraph>{info}</Paragraph>
             <div>
-              <dt>Periode</dt>
-              <dd>Moderne tijd</dd>
+              <Link className="links" href={linkHref}></Link>
             </div>
-            <div>
-              <dt>Thema</dt>
-              <dd>Archeologie</dd>
+            <div className="details">
+              <DataList>
+                <div>
+                  <dt>Period</dt>
+                  <dd>{period}</dd>
+                </div>
+                <div>
+                  <dt>Thema</dt>
+                  <dd>{theme}</dd>
+                </div>
+                <div>
+                  <dt>Tags</dt>
+                  <dd>{tags}</dd>
+                </div>
+              </DataList>
             </div>
-            <div>
-              <dt>Tags</dt>
-              <dd>Oorlog en verdediging</dd>
-            </div>
-          </DataList>
-        </div>
-      </Drawer>
-
-      <Drawer id="voorbeeld--button-drawer2">
-        <header>
-          <ButtonLink id="voorbeeld-button-update" href="#werf">
-            <BackArrow />
-          </ButtonLink>
-          <Button>
-            <Kruisje />
-          </Button>
-        </header>
-        <div className="content">
-          <Image
-            alt="Constructie bij de werf"
-            src="/nl-design-system-templates/packages/next-templates/src/app/drawer-scroll-list/erfgoed/duitsebommer.jpg"
-          />
-        </div>
-        <div className="details">
-          <Heading3>Werk aan de werf</Heading3>
-          <Paragraph>
-            Utrecht staat bekend om zijn werven en werfkelders. De eigenaren van de grachtenpanden moesten deze vroeger
-            onderhouden. In de 20e eeuw raakten de werven in verval. Toen nam de gemeente Utrecht het eigendom van de
-            werfmuren en kades over. Verschillende restauratierondes volgden.
-          </Paragraph>
-        </div>
-        <div className="links">
-          <Link href="https://www.cssscript.com/easy-sliding-drawer/">SVGLees het verhaal op de site SVG2 </Link>
-        </div>
-        <div className="details">
-          <DataList>
-            <div>
-              <dt>Periode</dt>
-              <dd>Moderne tijd</dd>
-            </div>
-            <div>
-              <dt>Thema</dt>
-              <dd>Gebouwen</dd>
-            </div>
-            <div>
-              <dt>Tags</dt>
-              <dd>Woningbouw</dd>
-            </div>
-          </DataList>
-        </div>
+          </div>
+        ))}
       </Drawer>
     </Document>
   );
