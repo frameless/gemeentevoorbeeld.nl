@@ -35,3 +35,46 @@
 .voorbeeld-radio-button-form-label {
   --utrecht-form-label-font-weight: var(--voorbeeld-typography-font-weight-normal);
 }
+.voorbeeld-bijlage-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.paragraph-space-bijlagen {
+  margin-inline-start: var(--voorbeeld-space-inline-mouse);
+  --utrecht-paragraph-color: var(--utrecht-document-subtle-color);
+}
+
+.voorbeeld-paragraph-bijlage {
+  --utrecht-paragraph-font-weight: var(--voorbeeld-typography-font-weight-bold);
+  margin-inline-end: var(--voorbeeld-space-block-ant);
+}
+
+.voorbeeld-button-spacing {
+  margin-block-start: var(--voorbeeld-space-block-dog);
+  margin-block-end: var(--voorbeeld-space-block-rabbit);
+}
+
+.voorbeeld-link-spacing {
+  margin-block-end: var(--voorbeeld-space-block-rabbit);
+}
+
+.voorbeeld-paragraph-end-space {
+  margin-block-end: var(--voorbeeld-space-block-pig);
+}
+
+.voorbeeld-small-textbox-small {
+  width: 328px;
+}
+
+.voorbeeld-smaller-textbox-small {
+  width: 160px;
+}
+
+.voorbeeld-tiny-textbox-small {
+  width: 120px;
+}
+
+.voorbeeld-datalist-style {
+  background-color: aquamarine;
+}
