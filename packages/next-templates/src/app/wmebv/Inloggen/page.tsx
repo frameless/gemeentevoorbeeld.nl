@@ -6,7 +6,6 @@ import {
   UtrechtDigidLogo,
   UtrechtHeading1,
   UtrechtHeading2,
-  UtrechtLink,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
@@ -16,6 +15,7 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import '@/app/styling/css/wmebv.css';
 import { Fieldset, FieldsetLegend, FormField, FormLabel, RadioButton } from '@utrecht/component-library-react';
+import { useId } from 'react';
 
 export default function home() {
   return (
@@ -30,8 +30,10 @@ export default function home() {
             Dankzij uw DigiD kunt u overal makkelijk en veilig inloggen. Uw persoonlijke gegevens blijven goed
             beschermd. Wanneer u inlogt worden uw persoonlijke gegevens automatisch ingevuld.
           </UtrechtParagraph>
-          <UtrechtDigidLogo className="voorbeeld-digid-logo" />
-          <Fieldset id="df861ef1-844a-42df-8365-b54f59474fb8" role="radiogroup">
+          <UtrechtParagraph>
+            <UtrechtDigidLogo className="voorbeeld-digid-logo" />
+          </UtrechtParagraph>
+          <Fieldset role="radiogroup">
             <FieldsetLegend>Wilt u inloggen</FieldsetLegend>
             <FormField type="radio">
               <UtrechtParagraph className="utrecht-form-field__label utrecht-form-field__label--radio">
