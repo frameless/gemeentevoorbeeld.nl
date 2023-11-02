@@ -2,9 +2,11 @@
 
 import {
   UtrechtArticle,
+  UtrechtButton,
   UtrechtHeading1,
   UtrechtHeading2,
   UtrechtLink,
+  UtrechtLinkButton,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
@@ -23,13 +25,7 @@ export default function home() {
       <ExampleNavigation></ExampleNavigation>
       <BreadcrumbNav label="Kruimelpad">
         <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={0} rel="home">
-          Home <ChevronRight className="voorbeeld-chevron-right-space" />
-        </BreadcrumbNavLink>
-        <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={1}>
-          Contact <ChevronRight className="voorbeeld-chevron-right-space" />
-        </BreadcrumbNavLink>
-        <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={2} rel="up">
-          Ik heb een vraag
+          Home
         </BreadcrumbNavLink>
       </BreadcrumbNav>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
@@ -41,15 +37,17 @@ export default function home() {
           </UtrechtParagraph>
           <UtrechtHeading2>Vraag</UtrechtHeading2>
           <UtrechtParagraph>Gebruik het contactformulier om een vraag te stellen.</UtrechtParagraph>
-          <UtrechtLink href="/wmebv/ingelogd/Intro">Contactformulier</UtrechtLink>
+          <UtrechtParagraph>
+            <UtrechtLink href="/wmebv/Intro">Start contactformulier</UtrechtLink>
+          </UtrechtParagraph>
           <UtrechtHeading2>Klacht</UtrechtHeading2>
           <UtrechtParagraph>Gebruik het klachtenformulier om een klacht in te dienen.</UtrechtParagraph>
-          <UtrechtLink href="#">Klachtenformulier</UtrechtLink>
+          <UtrechtLink href="#"> Start klachtenformulier</UtrechtLink>
           <UtrechtHeading2>Melding openbare ruimte en overlast</UtrechtHeading2>
           <UtrechtParagraph>
             Ziet u op straat of in het park iets dat stuk is of onveilig is? Gebruik dan het meldingformulier.
           </UtrechtParagraph>
-          <UtrechtLink href="#">Meldingformulier</UtrechtLink>
+          <UtrechtLink href="#"> Start meldingformulier</UtrechtLink>
           <UtrechtHeading2>Idee of voorstel</UtrechtHeading2>
           <UtrechtParagraph>
             Heeft u een idee of heeft u een voorstel? Gebruik dan het voorstelformulier.
