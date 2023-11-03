@@ -1,5 +1,5 @@
 'use client';
-import { Button, DataList, Document, Drawer, Heading3, Image, Link, Paragraph } from '@utrecht/component-library-react';
+import { Button, DataList, Drawer, Heading3, Image, Link, Page, Paragraph } from '@utrecht/component-library-react';
 import '../styles/drawer-scroll-list.css';
 import BackArrow from '../pijltje-rechts.svg';
 import Kruisje from '../kruisje.svg';
@@ -88,7 +88,7 @@ export default function Home() {
     }
   }
   return (
-    <Document>
+    <Page>
       <Button onClick={addOpen}>open drawer</Button>
       <Drawer id="voorbeeld--erfgoed-drawer" open={open}>
         <header className="voorbeeld-drawer__header--sticky">
@@ -149,6 +149,6 @@ export default function Home() {
           </div>
         ))}
       </Drawer>
-    </Document>
+    </Page>
   );
 }
