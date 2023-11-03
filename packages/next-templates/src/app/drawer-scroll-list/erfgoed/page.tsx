@@ -1,6 +1,7 @@
 'use client';
-import { Button, DataList, Drawer, Heading3, Image, Link, Page, Paragraph } from '@utrecht/component-library-react';
+import { Button, DataList, Drawer, Heading3, Link, Page, Paragraph } from '@utrecht/component-library-react';
 import '../styles/drawer-scroll-list.css';
+import Image from 'next/image';
 import BackArrow from '../pijltje-rechts.svg';
 import Kruisje from '../kruisje.svg';
 import { useState } from 'react';
@@ -120,12 +121,14 @@ export default function Home() {
             <Kruisje />
           </Button>
         </header>
-        {/* <div className="content">
+        <div className="voorbeeld-drawer__image">
           <Image
             alt="Duitse Bommenwerper in de lucht tijdens de tweede wereldoorlog"
-            src="/nl-design-system-templates/packages/next-templates/src/app/drawer-scroll-list/erfgoed/duitsebommer.jpg"
+            src="/duitsebommer.jpg"
+            width={1080}
+            height={419}
           />
-        </div> */}
+        </div>
         {drawerData[place].map(({ title, info, linkHref, period, theme, tags }) => (
           <div className="voorbeeld-drawer__body voorbeeld-drawer__body--details">
             <Heading3>{title}</Heading3>
