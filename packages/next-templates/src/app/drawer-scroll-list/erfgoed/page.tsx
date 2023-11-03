@@ -90,7 +90,7 @@ export default function Home() {
   return (
     <Page>
       <Button onClick={addOpen}>open drawer</Button>
-      <Drawer id="voorbeeld--erfgoed-drawer" open={open}>
+      <Drawer className="voorbeeld-drawer voorbeeld-drawer--erfgoed-drawer" open={open}>
         <header className="voorbeeld-drawer__header--sticky">
           <Heading3>Erfgoed</Heading3>
           <Button onClick={closeOpen}>
@@ -108,12 +108,12 @@ export default function Home() {
         </ul>
       </Drawer>
 
-      <Drawer id="voorbeeld--button-drawer" open={erfopen}>
+      <Drawer className="voorbeeld-drawer voorbeeld-drawer--button-drawer" open={erfopen}>
         <header>
-          <Button onClick={closeErfOpen} id="voorbeeld-button-update">
+          <Button onClick={closeErfOpen} className="voorbeeld-drawer__button-back" aria-label="terug">
             <BackArrow />
           </Button>
-          <Button onClick={closeAll}>
+          <Button onClick={closeAll} className="voorbeeld-drawer__button-close" aria-label="sluit">
             <Kruisje />
           </Button>
         </header>
@@ -124,13 +124,13 @@ export default function Home() {
           />
         </div> */}
         {drawerData[place].map(({ title, info, linkHref, period, theme, tags }) => (
-          <div className="details">
+          <div className="voorbeeld-drawer__details">
             <Heading3>{title}</Heading3>
             <Paragraph>{info}</Paragraph>
             <div>
               <Link className="links" href={linkHref}></Link>
             </div>
-            <div className="details">
+            <div className="voorbeeld-drawer__datalist">
               <DataList>
                 <div>
                   <dt>Period</dt>

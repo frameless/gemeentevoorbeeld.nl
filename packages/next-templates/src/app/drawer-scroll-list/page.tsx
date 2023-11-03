@@ -45,7 +45,7 @@ const tags = [
 export default function Home() {
   return (
     <Document>
-      <Drawer open>
+      <Drawer className="voorbeeld-drawer" open>
         <header className="voorbeeld-drawer__header voorbeeld-drawer__header--sticky">
           <Heading3>Verfijn resultaten</Heading3>
           <Button>X</Button>

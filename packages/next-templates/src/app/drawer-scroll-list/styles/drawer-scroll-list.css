@@ -1,11 +1,26 @@
-.voorbeeld-drawer__header--sticky {
+.voorbeeld-theme {
+  background: skyblue;
+}
+
+.voorbeeld-drawer {
+  /* this is where general styling goes for the drawer, like a shadow on the whole thing */
+}
+
+.voorbeeld-drawer--erfgoed-drawer {
+  /* this is the exceptions for the Erfgoed drawer */
+}
+
+.voorbeeld-drawer__header {
   display: flex;
   align-items: center;
-  position: sticky;
-  top: 0;
   background-color: white;
   border-bottom: 1px solid grey;
   height: 6em;
+}
+
+.voorbeeld-drawer__header--sticky {
+  position: sticky;
+  top: 0;
 }
 
 .voorbeeld--unorderedlist-lijst {
@@ -16,4 +31,20 @@
 
 .voorbeeld--unorderedlist-lijst li {
   margin-block: 12px;
+}
+
+.voorbeeld-drawer__button-update {
+  /* */
+}
+
+.voorbeeld-drawer__button-close {
+  /* */
+}
+
+.voorbeeld-drawer__details {
+  /* */
+}
+
+.voorbeeld-drawer__datalist {
+  /* */
 }
