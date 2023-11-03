@@ -109,7 +109,7 @@ export default function Home() {
       </Drawer>
 
       <Drawer className="voorbeeld-drawer voorbeeld-drawer--button-drawer" open={erfopen}>
-        <header>
+        <header className="voorbeeld-drawer__header voorbeeld-drawer__header--sticky">
           <Button onClick={closeErfOpen} className="voorbeeld-drawer__button-back" aria-label="terug">
             <BackArrow />
           </Button>

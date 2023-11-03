@@ -12,10 +12,14 @@
 
 .voorbeeld-drawer__header {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   background-color: white;
   border-bottom: 1px solid grey;
-  height: 6em;
+  padding: 2em;
+}
+
+.voorbeeld-drawer__header h3 {
+  align-self: center;
 }
 
 .voorbeeld-drawer__header--sticky {
