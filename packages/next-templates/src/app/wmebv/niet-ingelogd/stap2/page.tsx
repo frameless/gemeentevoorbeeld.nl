@@ -2,23 +2,18 @@
 
 import {
   UtrechtArticle,
-  UtrechtPage,
-  UtrechtPageContent,
-  UtrechtButton,
-  UtrechtForm,
-  UtrechtHeading,
+  UtrechtButtonLink,
+  UtrechtFormFieldTextbox,
+  UtrechtHeading1,
   UtrechtHeading2,
   UtrechtLink,
+  UtrechtPage,
+  UtrechtPageContent,
   UtrechtParagraph,
-  UtrechtTextbox,
-  UtrechtButtonLink,
-  UtrechtHeading1,
-  UtrechtFormFieldTextbox,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import { FormField, FormLabel, Textbox } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
@@ -36,63 +31,75 @@ export default function home() {
             Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet met
             anderen gedeeld.
           </UtrechtParagraph>
-          <FormLabel htmlFor="naam">Naam</FormLabel>
+
           <UtrechtFormFieldTextbox
-            name="naam"
-            type="text"
-            id="naam"
             autoComplete="name"
             className="voorbeeld-small-textbox-small"
+            id="Naam"
+            label="Naam"
+            name="naam"
+            type="text"
           />
-          <FormLabel htmlFor="straat">Straat</FormLabel>
+
           <UtrechtFormFieldTextbox
             aria-label="straat"
-            type="text"
-            name="straat"
-            id="straat"
             autoComplete="street-address"
+            id="Straat"
+            label="Straat"
+            name="straat"
+            type="text"
           />
-          <FormLabel htmlFor="huisnummer">Huisnummer</FormLabel>
+
           <UtrechtFormFieldTextbox
             autoComplete=""
-            type="text"
+            className="voorbeeld-tiny-textbox-small"
+            id="Huisnummer"
+            label="Huisnummer"
             name="huisnummer"
-            className="voorbeeld-tiny-textbox-small"
-            id="huisnummer"
+            type="text"
           />
-          <FormLabel htmlFor="toevoeging">Toevoeging</FormLabel>
-          <FormLabel htmlFor="toevoeging" className="utrecht-paragraph">
-            (Niet verplicht)
-          </FormLabel>
+
           <UtrechtFormFieldTextbox
             autoComplete=""
-            name="toevoeging"
+            className="voorbeeld-tiny-textbox-small"
             id="toevoeging"
+            label="Toevoeging"
+            name="toevoeging"
             type="text"
-            className="voorbeeld-tiny-textbox-small"
           />
-          <FormLabel htmlFor="postcode">Postcode</FormLabel>
+
           <UtrechtFormFieldTextbox
-            name="postcode"
-            id="postcode"
             autoComplete="postal-code"
-            type="text"
             className="voorbeeld-tiny-textbox-small"
+            id="Postcode"
+            label="Postcode"
+            name="postcode"
+            type="text"
           />
-          <FormLabel htmlFor="woonplaats">Woonplaats</FormLabel>
-          <UtrechtFormFieldTextbox id="woonplaats" autoComplete="" name="woonplaats" />
-          <FormLabel htmlFor="email">E-mailadres</FormLabel>
+
           <UtrechtFormFieldTextbox
-            id="email"
-            autoComplete="email"
-            type="email"
-            className="voorbeeld-small-textbox-small"
+            autoComplete="address-level2"
+            id="woonplaats"
+            label="Woonplaats"
+            name="Woonplaats"
+            type="text"
           />
-          <FormLabel htmlFor="tel">Telefoonnummer</FormLabel>
-          <FormLabel htmlFor="tel" className="utrecht-paragraph">
-            (Niet verplicht)
-          </FormLabel>
-          <UtrechtFormFieldTextbox type="tel" id="tel" autoComplete="tel" className="voorbeeld-smaller-textbox-small" />
+
+          <UtrechtFormFieldTextbox
+            autoComplete="email"
+            className="voorbeeld-small-textbox-small"
+            id="Emailadres"
+            label="Emailadres"
+            type="email"
+          />
+
+          <UtrechtFormFieldTextbox
+            autoComplete="tel"
+            className="voorbeeld-smaller-textbox-small"
+            id="tel"
+            label="Telefoonnummer (niet verplicht)"
+            type="tel"
+          />
           <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap3" appearance="primary-action-button">
             Volgende stap
           </UtrechtButtonLink>
