@@ -15,7 +15,6 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import '@/app/styling/css/wmebv.css';
 import { Fieldset, FieldsetLegend, FormField, FormLabel, RadioButton } from '@utrecht/component-library-react';
-import { useId } from 'react';
 
 export default function home() {
   return (

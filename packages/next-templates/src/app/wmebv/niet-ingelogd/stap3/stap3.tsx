@@ -2,18 +2,18 @@
 
 import {
   UtrechtArticle,
-  UtrechtPage,
-  UtrechtPageContent,
   UtrechtButton,
   UtrechtDataList,
+  UtrechtDataListItem,
   UtrechtDataListKey,
   UtrechtDataListValue,
-  UtrechtHeading,
+  UtrechtHeading1,
   UtrechtHeading2,
   UtrechtHeading3,
   UtrechtLink,
+  UtrechtPage,
+  UtrechtPageContent,
   UtrechtParagraph,
-  UtrechtDataListItem,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
@@ -27,7 +27,7 @@ export default function home() {
       <ExampleNavigation />
       <UtrechtPageContent>
         <UtrechtArticle>
-          <UtrechtHeading>Vraag aan de gemeente</UtrechtHeading>
+          <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
           <UtrechtParagraph lead>Stap 3 van 4</UtrechtParagraph>
           <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
           <UtrechtHeading3>Uw vraag</UtrechtHeading3>

@@ -6,7 +6,6 @@ import {
   UtrechtButtonLink,
   UtrechtForm,
   UtrechtFormFieldTextarea,
-  UtrechtHeading,
   UtrechtHeading1,
   UtrechtHeading2,
   UtrechtLink,
