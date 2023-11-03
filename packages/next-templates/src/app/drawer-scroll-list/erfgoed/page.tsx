@@ -1,15 +1,5 @@
 'use client';
-import {
-  Button,
-  ButtonLink,
-  DataList,
-  Document,
-  Drawer,
-  Heading3,
-  Image,
-  Link,
-  Paragraph,
-} from '@utrecht/component-library-react';
+import { Button, DataList, Document, Drawer, Heading3, Image, Link, Paragraph } from '@utrecht/component-library-react';
 import '../styles/drawer-scroll-list.css';
 import BackArrow from '../pijltje-rechts.svg';
 import Kruisje from '../kruisje.svg';
