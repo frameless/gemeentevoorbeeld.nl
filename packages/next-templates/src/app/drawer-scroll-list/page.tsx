@@ -11,6 +11,8 @@ import {
 } from '@utrecht/component-library-react';
 import './styles/drawer-scroll-list.css';
 
+import Kruisje from './kruisje.svg';
+
 const period = [
   { label: 'Late middeleeuwen', value: 'Late middeleeuwen' },
   { label: 'Moderne tijd', value: 'Moderne tijd' },
@@ -48,7 +50,9 @@ export default function Home() {
       <Drawer className="voorbeeld-drawer" open>
         <header className="voorbeeld-drawer__header voorbeeld-drawer__header--sticky">
           <Heading3>Verfijn resultaten</Heading3>
-          <Button>X</Button>
+          <Button className="voorbeeld-drawer__button-close" aria-label="sluit">
+            <Kruisje />
+          </Button>
         </header>
         <AccordionProvider
           sections={[
