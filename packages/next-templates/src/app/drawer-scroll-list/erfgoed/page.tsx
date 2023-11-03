@@ -97,15 +97,18 @@ export default function Home() {
             <Kruisje />
           </Button>
         </header>
-        <ul className="voorbeeld--unorderedlist-lijst">
-          {linkData.map(({ id, href, content }) => (
-            <li>
-              <Link onClick={() => openErfOpen(id)} id={id} href={href}>
-                {content}
-              </Link>
-            </li>
-          ))}
-        </ul>
+
+        <div className="voorbeeld-drawer__body">
+          <ul className="voorbeeld--unorderedlist-lijst">
+            {linkData.map(({ id, href, content }) => (
+              <li>
+                <Link onClick={() => openErfOpen(id)} id={id} href={href}>
+                  {content}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </Drawer>
 
       <Drawer className="voorbeeld-drawer voorbeeld-drawer--button-drawer" open={erfopen}>
@@ -124,7 +127,7 @@ export default function Home() {
           />
         </div> */}
         {drawerData[place].map(({ title, info, linkHref, period, theme, tags }) => (
-          <div className="voorbeeld-drawer__details">
+          <div className="voorbeeld-drawer__body voorbeeld-drawer__body--details">
             <Heading3>{title}</Heading3>
             <Paragraph>{info}</Paragraph>
             <div>
