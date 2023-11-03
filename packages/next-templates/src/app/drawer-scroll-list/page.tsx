@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <Document>
       <Drawer open>
-        <header className="voorbeeld-drawer__header--sticky">
+        <header className="voorbeeld-drawer__header voorbeeld-drawer__header--sticky">
           <Heading3>Verfijn resultaten</Heading3>
           <Button>X</Button>
         </header>
