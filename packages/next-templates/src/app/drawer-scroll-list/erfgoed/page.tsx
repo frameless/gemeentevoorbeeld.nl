@@ -91,7 +91,7 @@ export default function Home() {
     <Page>
       <Button onClick={addOpen}>open drawer</Button>
       <Drawer className="voorbeeld-drawer voorbeeld-drawer--erfgoed-drawer" open={open}>
-        <header className="voorbeeld-drawer__header--sticky">
+        <header className="voorbeeld-drawer__header voorbeeld-drawer__header--sticky">
           <Heading3>Erfgoed</Heading3>
           <Button onClick={closeOpen}>
             <Kruisje />
