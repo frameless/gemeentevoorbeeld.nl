@@ -46,13 +46,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="domain"
+                type="text"
                 {...register('domain', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een domein in"
                 invalid={!!errors.domain}
-              ></Textbox>
+              />
               <Paragraph>{errors.domain?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.channel}>
@@ -63,13 +64,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="channel"
+                type="text"
                 invalid={!!errors.channel}
                 {...register('channel', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een kanaal in"
-              ></Textbox>
+              />
               <Paragraph>{errors.channel?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.messageTypes}>
@@ -86,7 +88,7 @@ export default function Home() {
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier de typen berichten in"
-              ></Textarea>
+              />
               <Paragraph>{errors.messageTypes?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel 3 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
@@ -105,7 +107,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel [...] Kanaal bezwaarschriften en klachten</FieldsetLegend>
@@ -118,13 +120,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="channel-2"
+                type="text"
                 {...register('channel-2', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een kanaal in"
                 invalid={!!errors.channel2}
-              ></Textbox>
+              />
               <Paragraph>{errors.channel2?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.oneOrMoreArticles2}>
@@ -142,7 +145,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles2}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles2?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.channel3}>
@@ -154,13 +157,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="channel-3"
+                type="text"
                 {...register('channel-3', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een kanaal in"
                 invalid={!!errors.channel3}
-              ></Textbox>
+              />
               <Paragraph>{errors.channel3?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.oneOrMoreArticles3}>
@@ -178,7 +182,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles3}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles3?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel [...] Kanaal Omgevingswet</FieldsetLegend>
@@ -198,7 +202,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles4}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles4?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel [...] Kanaal Dienstenwet</FieldsetLegend>
@@ -218,7 +222,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles5}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles5?.message}</Paragraph>
             </FormField>
             <Heading2>Variant C</Heading2>
@@ -232,13 +236,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="domain2"
+                type="text"
                 {...register('domain2', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een domein in"
                 invalid={!!errors.domain2}
-              ></Textbox>
+              />
               <Paragraph>{errors.domain2?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.channel4}>
@@ -249,13 +254,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="channel4"
+                type="text"
                 invalid={!!errors.channel4}
                 {...register('channel4', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een kanaal in"
-              ></Textbox>
+              />
               <Paragraph>{errors.channel4?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.messageTypes2}>
@@ -272,7 +278,7 @@ export default function Home() {
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier de typen berichten in"
-              ></Textarea>
+              />
               <Paragraph>{errors.messageTypes2?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel 3 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
@@ -291,7 +297,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles6}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles6?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel [...] Kanaal bezwaarschriften en klachten</FieldsetLegend>
@@ -304,13 +310,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="channel-5"
+                type="text"
                 {...register('channel-5', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een kanaal in"
                 invalid={!!errors.channel5}
-              ></Textbox>
+              />
               <Paragraph>{errors.channel5?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.oneOrMoreArticles7}>
@@ -328,7 +335,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles7}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles7?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.channel6}>
@@ -340,13 +347,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="channel-6"
+                type="text"
                 {...register('channel-6', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een kanaal in"
                 invalid={!!errors.channel6}
-              ></Textbox>
+              />
               <Paragraph>{errors.channel6?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.oneOrMoreArticles8}>
@@ -364,7 +372,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles8}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles8?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel [...] Kanaal Omgevingswet</FieldsetLegend>
@@ -384,7 +392,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles9}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles9?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel [...] Kanaal Dienstenwet</FieldsetLegend>
@@ -404,7 +412,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles10}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles10?.message}</Paragraph>
             </FormField>
             <Heading2>Variant D</Heading2>
@@ -424,7 +432,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier typen berichten in"
                 invalid={!!errors.messageTypes3}
-              ></Textarea>
+              />
               <Paragraph>{errors.messageTypes3?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.name1}>
@@ -433,13 +441,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="name1"
+                type="text"
                 {...register('name1', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een naam in"
                 invalid={!!errors.name1}
-              ></Textbox>
+              />
               <Paragraph>{errors.name1?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.messageTypes4}>
@@ -456,7 +465,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier typen berichten in"
                 invalid={!!errors.messageTypes4}
-              ></Textarea>
+              />
               <Paragraph>{errors.messageTypes4?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.name2}>
@@ -465,13 +474,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="name2"
+                type="text"
                 {...register('name2', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een naam in"
                 invalid={!!errors.name2}
-              ></Textbox>
+              />
               <Paragraph>{errors.name2?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.messageTypes5}>
@@ -488,7 +498,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier typen berichten in"
                 invalid={!!errors.messageTypes5}
-              ></Textarea>
+              />
               <Paragraph>{errors.messageTypes5?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.messageTypes6}>
@@ -505,7 +515,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier typen berichten in"
                 invalid={!!errors.messageTypes6}
-              ></Textarea>
+              />
               <Paragraph>{errors.messageTypes6?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel 3 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
@@ -524,7 +534,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles11}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles11?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel [...] Kanaal bezwaarschriften en klachten</FieldsetLegend>
@@ -537,13 +547,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="channel-7"
+                type="text"
                 {...register('channel-7', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een kanaal in"
                 invalid={!!errors.channel7}
-              ></Textbox>
+              />
               <Paragraph>{errors.channel7?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.oneOrMoreArticles12}>
@@ -561,7 +572,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles12}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles12?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.channel8}>
@@ -573,13 +584,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="channel-8"
+                type="text"
                 {...register('channel-8', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een kanaal in"
                 invalid={!!errors.channel8}
-              ></Textbox>
+              />
               <Paragraph>{errors.channel8?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.oneOrMoreArticles13}>
@@ -597,7 +609,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles13}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles13?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel [...] Kanaal Omgevingswet</FieldsetLegend>
@@ -617,7 +629,7 @@ export default function Home() {
                 })}
                 placeholder="Vul hier één of meer artikelen in"
                 invalid={!!errors.oneOrMoreArticles14}
-              ></Textarea>
+              />
               <Paragraph>{errors.oneOrMoreArticles14?.message}</Paragraph>
             </FormField>
             <FieldsetLegend>Artikel [...] Inwerkingtreding besluit</FieldsetLegend>
@@ -627,13 +639,14 @@ export default function Home() {
               </Paragraph>
               <Textbox
                 id="date"
+                type="text"
                 {...register('date', {
                   required: 'Dit is verplicht',
                   minLength: { value: 4, message: 'Min length is 4' },
                 })}
                 placeholder="Vul hier een kanaal in"
                 invalid={!!errors.date}
-              ></Textbox>
+              />
               <Paragraph>{errors.date?.message}</Paragraph>
             </FormField>
             <Button appearance="primary-action-button" type="submit">
