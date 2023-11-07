@@ -1,5 +1,5 @@
 'use client';
-import { Button, DataList, Drawer, Heading3, Link, Page, Paragraph } from '@utrecht/component-library-react';
+import { Article, Button, DataList, Drawer, Heading3, Link, Page, Paragraph } from '@utrecht/component-library-react';
 import '../styles/drawer-scroll-list.css';
 import Image from 'next/image';
 import BackArrow from '../pijltje-rechts.svg';
@@ -39,6 +39,7 @@ const drawerData = [
       period: 'Moderne tijd',
       theme: 'Archeologie',
       tags: 'Oorlog en verdediging',
+      href: '/duitsebommer.jpg',
     },
   ],
   [
@@ -49,6 +50,7 @@ const drawerData = [
       period: 'Moderne tijd',
       theme: 'Gebouwen',
       tags: 'Woningbouw',
+      href: '/werf.jpg',
     },
   ],
 ];
@@ -121,38 +123,42 @@ export default function Home() {
             <Kruisje />
           </Button>
         </header>
-        <div className="voorbeeld-drawer__image">
-          <Image
-            alt="Duitse Bommenwerper in de lucht tijdens de tweede wereldoorlog"
-            src="/duitsebommer.jpg"
-            width={1080}
-            height={419}
-          />
-        </div>
-        {drawerData[place].map(({ title, info, linkHref, period, theme, tags }) => (
-          <div className="voorbeeld-drawer__body voorbeeld-drawer__body--details">
-            <Heading3>{title}</Heading3>
-            <Paragraph>{info}</Paragraph>
-            <div>
-              <Link className="links" href={linkHref}></Link>
+        {drawerData[place].map(({ title, info, linkHref, period, theme, tags, href }) => (
+          <Article>
+            <div className="voorbeeld-drawer__image">
+              <Image
+                alt="Duitse Bommenwerper in de lucht tijdens de tweede wereldoorlog"
+                src={href}
+                width={1080}
+                height={419}
+              />
             </div>
-            <div className="voorbeeld-drawer__datalist">
-              <DataList>
-                <div>
-                  <dt>Period</dt>
-                  <dd>{period}</dd>
-                </div>
-                <div>
-                  <dt>Thema</dt>
-                  <dd>{theme}</dd>
-                </div>
-                <div>
-                  <dt>Tags</dt>
-                  <dd>{tags}</dd>
-                </div>
-              </DataList>
+            <div className="voorbeeld-drawer__body voorbeeld-drawer__body--details">
+              <Heading3>{title}</Heading3>
+              <Paragraph>{info}</Paragraph>
+              <div>
+                <Link className="links" href={linkHref}>
+                  Lees het verhaal op de site
+                </Link>
+              </div>
+              <div className="voorbeeld-drawer__datalist">
+                <DataList>
+                  <div>
+                    <dt>Period</dt>
+                    <dd>{period}</dd>
+                  </div>
+                  <div>
+                    <dt>Thema</dt>
+                    <dd>{theme}</dd>
+                  </div>
+                  <div>
+                    <dt>Tags</dt>
+                    <dd>{tags}</dd>
+                  </div>
+                </DataList>
+              </div>
             </div>
-          </div>
+          </Article>
         ))}
       </Drawer>
     </Page>
