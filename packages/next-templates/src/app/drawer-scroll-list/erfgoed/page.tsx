@@ -94,9 +94,9 @@ export default function Home() {
     <Page>
       <Button onClick={addOpen}>open drawer</Button>
       <Drawer className="voorbeeld-drawer voorbeeld-drawer--erfgoed-drawer" open={open}>
-        <header className="voorbeeld-drawer__header voorbeeld-drawer__header--sticky">
+        <header aria-label="header-list-erfgoed" className="voorbeeld-drawer__header voorbeeld-drawer__header--sticky">
           <Heading3>Erfgoed</Heading3>
-          <Button onClick={closeOpen}>
+          <Button aria-label="sluit" onClick={closeOpen}>
             <Kruisje />
           </Button>
         </header>
@@ -115,7 +115,7 @@ export default function Home() {
       </Drawer>
 
       <Drawer className="voorbeeld-drawer voorbeeld-drawer--button-drawer" open={erfopen}>
-        <header className="voorbeeld-drawer__header voorbeeld-drawer__header--sticky">
+        <header aria-label="header-erfgoed" className="voorbeeld-drawer__header voorbeeld-drawer__header--sticky">
           <Button onClick={closeErfOpen} className="voorbeeld-drawer__button-back" aria-label="terug">
             <BackArrow />
           </Button>
