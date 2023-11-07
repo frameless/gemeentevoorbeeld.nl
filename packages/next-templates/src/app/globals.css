@@ -18,6 +18,10 @@ body {
   --utrecht-link-icon-size: 18px;
 }
 
+.indent-fieldset {
+  margin-inline-start: 1em;
+}
+
 .voorbeeld-theme {
   /* HACK: these tokens are not set in voorbeeld-theme */
   --utrecht-form-field-description-margin-block-end: var(--voorbeeld-space-block-beetle);
