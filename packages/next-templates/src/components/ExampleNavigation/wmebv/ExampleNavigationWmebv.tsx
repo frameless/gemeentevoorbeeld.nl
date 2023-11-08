@@ -1,26 +1,19 @@
 import { Link } from '@utrecht/component-library-react';
 import React, { HTMLAttributes } from 'react';
+import { ExampleNavigation } from '../ExampleNavigation';
 import '../Navigation.css';
 
 interface ExampleNavigationWmebvProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleNavigationWmebv = ({ ...props }: ExampleNavigationWmebvProps) => (
-  <div className="example--header-navbar">
-    <Link className="example--header-navbar-links" href="#">
-      Home
-    </Link>
-    <Link className="example--header-navbar-links" href="#">
-      Wonen en leve
-    </Link>
-    <Link className="example--header-navbar-links" href="#">
-      Zorg en onderwijs
-    </Link>
-    <Link className="example--header-navbar-links" href="#">
-      Werk en inkomen
-    </Link>
-    <Link className="example--header-navbar-links" href="#">
-      Contact
-    </Link>
-  </div>
+  <ExampleNavigation
+    links={[
+      { label: 'Home', href: '' },
+      { label: 'Wonen en leven', href: '' },
+      { label: 'Zorg en onderwijs', href: '' },
+      { label: 'Werk en inkomen', href: '' },
+      { label: 'Contact', href: '' },
+    ]}
+  ></ExampleNavigation>
 );
 
 ExampleNavigationWmebv.displayName = 'ExampleHeaderWmebv';
