@@ -10,13 +10,16 @@ import {
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
-  UtrechtUrlData,
+  UtrechtLink,
+  UtrechtSpotlightSection,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import { ButtonGroup, Strong, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
-import CircleCheck from '@/app/styling/assets/circleCheck.svg';
+import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
+import Printer from '@/app/styling/assets/printer-icon.svg';
+import FileText from '@/app/styling/assets/filetext-icon.svg';
+import CircleCheck from '../../styling/assets/circleCheck.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
@@ -36,35 +39,33 @@ export default function home() {
             <CircleCheck slot="icon" />
             <UtrechtHeading1>Uw vraag is met succes verstuurd</UtrechtHeading1>
             <UtrechtParagraph>Kenmerk: 230829-1118-59dc</UtrechtParagraph>
-          </UtrechtAlert>
-          <UtrechtHeading2>Wat gaat er nu gebeuren?</UtrechtHeading2>
-          <UtrechtParagraph>
-            Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden? Stel
-            dan uw vraag via het contactformulier.
-          </UtrechtParagraph>
+          </UtrechtSpotlightSection>
+          <UtrechtHeading1>Wat gaat er nu gebeuren?</UtrechtHeading1>
+
           <UnorderedList>
-            <UnorderedListItem>
-              U ontvangt een bevestigingsmail op{' '}
-              <Strong>
-                <UtrechtUrlData>{email}</UtrechtUrlData>
-              </Strong>
-              .
+            <UnorderedListItem className="voorbeeld-unordered-list-item">
+              U ontvangt een bevestigingsmail op <span className="bold-mail">j.vandrouwen@gmail.com</span>
+            </UnorderedListItem>
+            <UnorderedListItem className="voorbeeld-unordered-list-item">
+              De afdeling Vraagbaak gaat met uw vraag aan de slag.
+            </UnorderedListItem>
+            <UnorderedListItem className="voorbeeld-unordered-list-item">
+              U wordt per email op de hoogte gehouden maar kunt de voortgang ook inzien binnen uw
+              <span className="mijn-omgeving"> mijn omgeving</span>.
             </UnorderedListItem>
             <UnorderedListItem>De afdeling Vraagbaak gaat met uw vraag aan de slag.</UnorderedListItem>
           </UnorderedList>
-          <ButtonGroup className="utrecht-button-group--example-column">
-            {/* TODO: Don't print this page, print the page with the data list */}
-            <UtrechtButton appearance="subtle-button" onClick={() => print()}>
-              Print uw vraag
-            </UtrechtButton>
-            {/* TODO: Add attributes to PDF link, when component supports them: download="vraag.pdf" type="application/pdf" */}
-            <UtrechtButtonLink appearance="subtle-button" href="/archive/vraag.pdf">
-              Download uw vraag als PDF
-            </UtrechtButtonLink>
-            <UtrechtButtonLink appearance="subtle-button" href="/">
-              Terug naar voorbeeld.nl
-            </UtrechtButtonLink>
-          </ButtonGroup>
+          <UtrechtLink className="link">
+            <Printer /> Print uw vraag
+          </UtrechtLink>
+          <UtrechtLink className="link">
+            <FileText /> Download uw vraag als PDF
+          </UtrechtLink>
+          <UtrechtLink className="link">Terug naar voorbeeld.nl</UtrechtLink>
+
+          <UtrechtButtonLink href="./Inloggen" appearance="primary-action-button">
+            Doorgaan
+          </UtrechtButtonLink>
         </UtrechtArticle>
       </UtrechtPageContent>
       <ExampleFooter></ExampleFooter>
