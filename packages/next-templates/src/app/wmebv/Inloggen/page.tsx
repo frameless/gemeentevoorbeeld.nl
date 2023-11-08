@@ -2,13 +2,9 @@
 
 import {
   UtrechtArticle,
-  UtrechtButton,
-  UtrechtButtonGroup,
-  UtrechtButtonLink,
-  UtrechtDigidLogo,
   UtrechtHeading1,
   UtrechtHeading2,
-  UtrechtIconChevronLeft,
+  UtrechtLink,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
@@ -16,59 +12,45 @@ import {
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
+import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
+import ChevronRight from '../../styling/assets/chevronRight.svg';
 import '@/app/styling/css/wmebv.css';
-import { Fieldset, FieldsetLegend, FormField, FormLabel, RadioButton } from '@utrecht/component-library-react';
-import { useId } from 'react';
+// import {} from '@utrecht/component-library-react';
 
 export default function home() {
-  const radio1id = useId();
-  const radio2id = useId();
   return (
     <UtrechtPage>
       <ExampleHeaderWmebv></ExampleHeaderWmebv>
       <ExampleNavigation></ExampleNavigation>
+      <BreadcrumbNav label="Kruimelpad">
+        <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={0} rel="home">
+          Home <ChevronRight className="voorbeeld-chevron-right-space" />
+        </BreadcrumbNavLink>
+        <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={1}>
+          Contact <ChevronRight className="voorbeeld-chevron-right-space" />
+        </BreadcrumbNavLink>
+        <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={2} rel="up">
+          Ik heb een vraag
+        </BreadcrumbNavLink>
+      </BreadcrumbNav>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
-        <UtrechtButtonGroup>
-          <UtrechtButtonLink href="../" appearance="subtle-button">
-            <UtrechtIconChevronLeft></UtrechtIconChevronLeft> Terug
-          </UtrechtButtonLink>
-        </UtrechtButtonGroup>
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
-          <UtrechtHeading2 id="form-heading">Inloggen</UtrechtHeading2>
-          <UtrechtParagraph>
-            Dankzij uw DigiD kunt u overal makkelijk en veilig inloggen. Uw persoonlijke gegevens blijven goed
-            beschermd. Wanneer u inlogt worden uw persoonlijke gegevens automatisch ingevuld.
+          <UtrechtHeading1>Contact met de gemeente</UtrechtHeading1>
+          <UtrechtParagraph lead>
+            Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden? Stel
+            dan uw vraag via het contactformulier.
           </UtrechtParagraph>
+          <UtrechtHeading2>Vraag</UtrechtHeading2>
+          <UtrechtParagraph>Gebruik het contactformulier om een vraag te stellen.</UtrechtParagraph>
+          <UtrechtLink>Start Contactformulier</UtrechtLink>
+          <UtrechtHeading2>Klacht</UtrechtHeading2>
+          <UtrechtParagraph>Gebruik het klachtenformulier om een klacht in te dienen.</UtrechtParagraph>
+          <UtrechtLink>Start Klachtenformulier</UtrechtLink>
+          <UtrechtHeading2>Melding openbare ruimte en overlast</UtrechtHeading2>
           <UtrechtParagraph>
-            <UtrechtDigidLogo className="voorbeeld-digid-logo" role="img" aria-label="DigiD logo" />
+            Ziet u op straat of in het park iets dat stuk is of onveilig is? Gebruik dan het meldingformulier.
           </UtrechtParagraph>
-          <form action="./wmebv/ingelogd-stap-1" method="post" aria-labelledby="form-heading">
-            <Fieldset role="radiogroup">
-              <FieldsetLegend>Wilt u inloggen?</FieldsetLegend>
-              <FormField type="radio">
-                <UtrechtParagraph className="utrecht-form-field__label utrecht-form-field__label--radio">
-                  <FormLabel className="voorbeeld-radio-button-form-label" htmlFor={radio1id} type="radio">
-                    <RadioButton className="utrecht-form-field__input" id={radio1id} name="login" value="1" />
-                    Ja
-                  </FormLabel>
-                </UtrechtParagraph>
-              </FormField>
-              <FormField type="radio">
-                <UtrechtParagraph className="utrecht-form-field__label utrecht-form-field__label--radio">
-                  <FormLabel className="voorbeeld-radio-button-form-label" htmlFor={radio2id} type="radio">
-                    <RadioButton className="utrecht-form-field__input" id={radio2id} name="login" value="0" />
-                    Nee
-                  </FormLabel>
-                </UtrechtParagraph>
-              </FormField>
-            </Fieldset>
-            <UtrechtButtonGroup>
-              <UtrechtButton appearance="primary-action-button" type="submit">
-                Doorgaan
-              </UtrechtButton>
-            </UtrechtButtonGroup>
-          </form>
+          <UtrechtLink>Start Meldingformulier</UtrechtLink>
         </UtrechtArticle>
       </UtrechtPageContent>
       <ExampleFooter></ExampleFooter>
