@@ -1,6 +1,7 @@
 .utrecht-card-list-item {
   background-color: var(--utrecht-color-blue-90);
   max-width: 312px;
+  list-style: none;
 }
 
 .utrecht-card-list-item:hover {
