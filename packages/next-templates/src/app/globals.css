@@ -41,6 +41,9 @@ body {
   --utrecht-paragraph-lead: var(--voorbeeld-space-block-dog);
   --utrecht-article-max-inline-size: 670px; /* 75ch for Fira Sans in 16px font size = 670px */
   --utrecht-unordered-list-padding-inline-start: var(--voorbeeld-space-inline-beetle);
+
+  --example-page-header-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.5);
+
   /* nav bar component */
   --example-nav-bar-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.5);
   --example-nav-bar-link-padding-block-end: 16px;
@@ -108,4 +111,21 @@ body {
 
 .utrecht-form-field-description {
   max-width: 80ch;
+}
+
+utrecht-page-content {
+  /* use `auto` margins to center the page */
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  max-inline-size: calc(
+    var(--utrecht-article-max-inline-size) * 1.25
+  ); /* random gekozen, groter dan --utrecht-article-max-inline-size */
+}
+
+.utrecht-page-footer__content {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  max-inline-size: calc(
+    var(--utrecht-article-max-inline-size) * 1.5
+  ); /* random gekozen, groter dan --utrecht-article-max-inline-size */
 }

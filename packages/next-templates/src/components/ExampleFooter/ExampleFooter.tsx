@@ -8,28 +8,30 @@ import './footer.css';
 interface ExampleFooterProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleFooter = ({ ...props }: ExampleFooterProps) => (
   <PageFooter>
-    <div className="example-link-list-container" {...props}>
-      <Logo className="example--footer-logo" />
-      <NavigationList>
-        <Heading5>Heading</Heading5>
-        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-      </NavigationList>
-      <NavigationList>
-        <Heading5>Heading</Heading5>
-        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-        <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-      </NavigationList>
-      <section className="example-footer-content">
-        <Heading5>Heading</Heading5>
-        <Paragraph className="utrecht-link-list__item">
-          Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
-        </Paragraph>
-      </section>
+    <div className="utrecht-page-footer__content">
+      <div className="example-link-list-container" {...props}>
+        <Logo className="example--footer-logo" />
+        <NavigationList>
+          <Heading5>Heading</Heading5>
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+        </NavigationList>
+        <NavigationList>
+          <Heading5>Heading</Heading5>
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+        </NavigationList>
+        <section className="example-footer-content">
+          <Heading5>Heading</Heading5>
+          <Paragraph className="utrecht-link-list__item">
+            Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
+          </Paragraph>
+        </section>
+      </div>
     </div>
   </PageFooter>
 );
