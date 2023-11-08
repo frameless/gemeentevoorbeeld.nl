@@ -20,6 +20,11 @@ export default function home() {
     <UtrechtPage>
       <ExampleHeaderWmebv></ExampleHeaderWmebv>
       <ExampleNavigation></ExampleNavigation>
+      <BreadcrumbNav label="Kruimelpad">
+        <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="./Home" index={0} rel="home">
+          Terug
+        </BreadcrumbNavLink>
+      </BreadcrumbNav>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
@@ -28,10 +33,16 @@ export default function home() {
             dan uw vraag via het contactformulier.
           </UtrechtParagraph>
           <UnorderedList>
-            <UnorderedListItem>Het duurt ongeveer 5 minuten om dit formulier in te vullen.</UnorderedListItem>
-            <UnorderedListItem>Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.</UnorderedListItem>
-            <UnorderedListItem>U kunt het formulier tussentijds opslaan en later verder gaan.</UnorderedListItem>
-            <UnorderedListItem>
+            <UnorderedListItem className="voorbeeld-unordered-list-item">
+              Het duurt ongeveer 5 minuten om dit formulier in te vullen.
+            </UnorderedListItem>
+            <UnorderedListItem className="voorbeeld-unordered-list-item">
+              Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.
+            </UnorderedListItem>
+            <UnorderedListItem className="voorbeeld-unordered-list-item">
+              U kunt het formulier tussentijds opslaan en later verder gaan.
+            </UnorderedListItem>
+            <UnorderedListItem className="voorbeeld-unordered-list-item">
               Na het versturen ontvangt u een bevestigingsmail. Ook heeft u de mogelijkheid uw vraag te downloaden of
               printen.
             </UnorderedListItem>
