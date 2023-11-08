@@ -6,17 +6,18 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-export type UnorderedListProps = HTMLAttributes<HTMLUListElement>;
+export type CardListProps = HTMLAttributes<HTMLUListElement>;
 
-export const UnorderedList = forwardRef(
-  (
-    { children, className, ...restProps }: PropsWithChildren<UnorderedListProps>,
-    ref: ForwardedRef<HTMLUListElement>,
-  ) => (
-    <ul role="list" {...restProps} ref={ref} className={clsx('utrecht-unordered-list', className)}>
+export const CardList = forwardRef(
+  ({ children, className, ...restProps }: PropsWithChildren<CardListProps>, ref: ForwardedRef<HTMLUListElement>) => (
+    <ul role="list" {...restProps} ref={ref} className={clsx('utrecht-card-list', className)}>
       {children}
     </ul>
   ),
 );
 
-UnorderedList.displayName = 'UnorderedList';
+CardList.displayName = 'CardList';
+
+export default function show() {
+  return <CardList>test</CardList>;
+}
