@@ -1,6 +1,6 @@
 'use client';
 
-import { Heading2, Paragraph } from '@utrecht/component-library-react';
+import { Heading2, Page, Paragraph } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -36,3 +36,15 @@ export const Card: FC<CardProps> = ({ description, title, image: { url = '', alt
     </div>
   );
 };
+export default function Home() {
+  return (
+    <Page>
+      <Card
+        description="test test test test test test test test"
+        title="test"
+        image={{ url: '/business_corgi.jpeg', alt: 'test' }}
+        link={{ href: '#' }}
+      />
+    </Page>
+  );
+}
