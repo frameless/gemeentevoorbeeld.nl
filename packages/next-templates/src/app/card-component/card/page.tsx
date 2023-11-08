@@ -3,7 +3,6 @@
 import { Heading, Paragraph } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { FC, HTMLAttributes } from 'react';
 import './index.style.css';
 
@@ -34,17 +33,15 @@ export const CardListItem: FC<CardListItemProps> = ({
     <li {...props} className={clsx('utrecht-card-list-item', props.className)} onClick={() => linkRef.current?.click()}>
       {url && <Image src={url} alt={alt} className={'utrecht-card-list-item__image'} width={312} height={200} />}
       <div className={'utrecht-card-list-item__content'}>
-        <article>
-          <hgroup>
-            <Heading level={headerlevel} className="utrecht-card-list-item__title">
-              <a ref={linkRef} href={href} className={'utrecht-link utrecht-link--html-a'}>
-                {title}
-              </a>
-            </Heading>
-            <p className="preheading">preheading</p>
-          </hgroup>
-          <p className="utrecht-card-list-item__body">{children}</p>
-        </article>
+        <hgroup>
+          <Heading level={headerlevel} className="utrecht-card-list-item__title">
+            <a ref={linkRef} href={href} className={'utrecht-link utrecht-link--html-a'}>
+              {title}
+            </a>
+          </Heading>
+          <p className="preheading">preheading</p>
+        </hgroup>
+        <p className="utrecht-card-list-item__body">{children}</p>
       </div>
     </li>
   );
