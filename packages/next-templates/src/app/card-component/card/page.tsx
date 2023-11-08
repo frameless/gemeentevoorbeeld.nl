@@ -17,6 +17,9 @@ interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'childre
   link: {
     href: string;
   };
+
+  // do we want an article around the card content. Default is no
+  useArticle: boolean | false;
 }
 
 export const CardListItem: FC<CardListItemProps> = ({
@@ -25,6 +28,9 @@ export const CardListItem: FC<CardListItemProps> = ({
   title,
   image: { url = '', alt },
   link: { href },
+
+  // expect a useArticle parameter given
+  useArticle,
   ...props
 }) => {
   const linkRef = React.useRef<HTMLAnchorElement>(null);
@@ -32,6 +38,10 @@ export const CardListItem: FC<CardListItemProps> = ({
   return (
     <li {...props} className={clsx('utrecht-card-list-item', props.className)} onClick={() => linkRef.current?.click()}>
       {url && <Image src={url} alt={alt} className={'utrecht-card-list-item__image'} width={312} height={200} />}
+
+      {/* is we want a useArticle then add  an article*/}
+      {useArticle && '<article>'}
+
       <div className={'utrecht-card-list-item__content'}>
         <hgroup>
           <Heading level={headerlevel} className="utrecht-card-list-item__title">
@@ -43,6 +53,9 @@ export const CardListItem: FC<CardListItemProps> = ({
         </hgroup>
         <p className="utrecht-card-list-item__body">{children}</p>
       </div>
+
+      {/* closing tag  */}
+      {useArticle && '</article>'}
     </li>
   );
 };
@@ -54,6 +67,8 @@ export default function Home() {
         title="test"
         image={{ url: '/business_corgi.jpeg', alt: 'test' }}
         link={{ href: '#' }}
+        // testing if the article shows when true...not yet, we get the the article tags as text
+        useArticle={true}
       >
         test test test test test test test test test test test test test test test test
       </CardListItem>
