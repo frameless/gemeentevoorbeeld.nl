@@ -1,11 +1,19 @@
-.example--header-home-page {
+.utrecht-page-header {
+  display: flex;
+  justify-content: center;
+  --utrecht-page-padding-inline-start: 0;
+  --utrecht-page-padding-inline-end: 0;
+}
+
+.example-page-header__content {
+  inline-size: 100%;
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin-inline: auto;
   padding-inline: var(--voorbeeld-space-inline-mouse);
   padding-block: var(--voorbeeld-space-block-mouse);
-  max-width: 80em;
+  max-inline-size: var(--example-page-header-content-max-inline-size);
 }
 
 .example--logo {
@@ -108,7 +116,7 @@
 }
 
 @media (width <= 1185px) {
-  .example--header-home-page {
+  .example-page-header__content {
     border-bottom: solid 4px var(--voorbeeld-color-violet-700);
     margin-inline: auto;
     padding-inline: var(--voorbeeld-space-inline-beetle);
@@ -150,12 +158,11 @@
     display: flex;
   }
 
-  .example--header-links-container {
-    display: none;
-  }
-
+  .example-nav-bar,
+  .example--header-links-container,
   .example--header-text-box {
-    display: none;
+    /* stylelint-disable-next-line declaration-no-important */
+    display: none !important;
   }
 
   .example--header-burger-menu-button {
