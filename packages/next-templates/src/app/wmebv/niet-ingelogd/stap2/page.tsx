@@ -27,7 +27,7 @@ export default function home() {
           <UtrechtLink href="./stap1">Vorige stap</UtrechtLink>
           <UtrechtParagraph>Stap 2 van 4</UtrechtParagraph>
           <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
-          <UtrechtParagraph>
+          <UtrechtParagraph className="voorbeeld-paragraph-spacing">
             Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet met
             anderen gedeeld.
           </UtrechtParagraph>
@@ -97,7 +97,7 @@ export default function home() {
             autoComplete="tel"
             className="voorbeeld-smaller-textbox-small"
             id="tel"
-            label="Telefoonnummer (niet verplicht)"
+            label="Telefoonnummer"
             type="tel"
           />
           <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap3" appearance="primary-action-button">
