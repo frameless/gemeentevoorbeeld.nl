@@ -58,3 +58,54 @@
 .fieldlabel_inloggen {
   padding-block-start: 3rem;
 }
+
+.voorbeeld-link-spacing {
+  margin-block-end: 1.5rem;
+  margin-block-start: 1.5rem;
+}
+
+.voorbeeld-button-spacing-bestand-kiezen {
+  margin-block-end: 3rem;
+  margin-block-start: 0.75rem;
+}
+
+.paragraph-space-bijlagen {
+  margin-block-start: -5.3rem;
+  margin-inline-start: 10rem;
+  margin-block-end: 5rem;
+  color: #5b6e8a;
+}
+
+.voorbeeld-stap-spacing {
+  margin-block-start: 3rem;
+}
+
+.voorbeeld-heading-spacing {
+  margin-block-start: -3rem;
+}
+
+.voorbeeld-smaller-textbox-small {
+  width: 10rem;
+}
+
+.voorbeeld-tiny-textbox-small {
+  width: 7.5rem;
+}
+
+.voorbeeld-paragraph-spacing {
+  margin-block-end: 4.5rem;
+}
+
+.voorbeeld-heading3-spacing {
+  margin-block-end: 1.5rem;
+  margin-block-start: 1.5rem;
+}
+
+.utrecht-data-list-label {
+  padding-block-start: 1.5rem;
+}
+
+.utrecht-data-list-value {
+  text-decoration: underline;
+  text-decoration-color: #5b6e8a;
+}
