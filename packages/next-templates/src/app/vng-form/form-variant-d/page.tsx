@@ -39,7 +39,7 @@ export default function Home() {
           >
             <Heading2>Variant D</Heading2>
             <FieldsetLegend>Artikel 2 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
-            <FieldsetLegend>a.</FieldsetLegend>
+            <FieldsetLegend>Subartikel a.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.messageTypes3}>
                 <Paragraph>
@@ -61,7 +61,7 @@ export default function Home() {
                 <Paragraph>{errors.messageTypes3?.message}</Paragraph>
               </FormField>
             </Fieldset>
-            <FieldsetLegend>b.</FieldsetLegend>
+            <FieldsetLegend>Subartikel b.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.name1}>
                 <Paragraph>
@@ -136,7 +136,7 @@ export default function Home() {
                 <Paragraph>{errors.messageTypes5?.message}</Paragraph>
               </FormField>
             </Fieldset>
-            <FieldsetLegend>d.</FieldsetLegend>
+            <FieldsetLegend>Subartikel d.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.messageTypes6}>
                 <Paragraph>
@@ -178,7 +178,7 @@ export default function Home() {
               </FormField>
             </Fieldset>
             <FieldsetLegend>Artikel [...] Kanaal bezwaarschriften en klachten</FieldsetLegend>
-            <FieldsetLegend>5.</FieldsetLegend>
+            <FieldsetLegend>Subartikel 5.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel7}>
                 <Paragraph>
@@ -220,7 +220,7 @@ export default function Home() {
                 <Paragraph>{errors.oneOrMoreArticles12?.message}</Paragraph>
               </FormField>
             </Fieldset>
-            <FieldsetLegend>6.</FieldsetLegend>
+            <FieldsetLegend>Subartikel 6.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel8}>
                 <Paragraph>

@@ -121,7 +121,7 @@ export default function Home() {
               </FormField>
             </Fieldset>
             <FieldsetLegend>Artikel [...] Kanaal bezwaarschriften en klachten</FieldsetLegend>
-            <FieldsetLegend>3.</FieldsetLegend>
+            <FieldsetLegend>Subartikel 3.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel5}>
                 <Paragraph>
@@ -163,7 +163,7 @@ export default function Home() {
                 <Paragraph>{errors.oneOrMoreArticles7?.message}</Paragraph>
               </FormField>
             </Fieldset>
-            <FieldsetLegend>4.</FieldsetLegend>
+            <FieldsetLegend>Subartikel 4.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel6}>
                 <Paragraph>

@@ -39,7 +39,7 @@ export default function Home() {
           >
             <Heading2>Variant B</Heading2>
             <FieldsetLegend>Artikel 2 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
-            <FieldsetLegend>1.</FieldsetLegend>
+            <FieldsetLegend>Subartikel 1.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.domain}>
                 <Paragraph>
@@ -61,7 +61,7 @@ export default function Home() {
                 <Paragraph>{errors.domain?.message}</Paragraph>
               </FormField>
             </Fieldset>
-            <FieldsetLegend>3.</FieldsetLegend>
+            <FieldsetLegend>Subartikel 3.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel}>
                 <Paragraph>
@@ -123,7 +123,7 @@ export default function Home() {
               </FormField>
             </Fieldset>
             <FieldsetLegend>Artikel [...] Kanaal bezwaarschriften en klachten</FieldsetLegend>
-            <FieldsetLegend>1.</FieldsetLegend>
+            <FieldsetLegend>Subartikel 1.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel2}>
                 <Paragraph>
@@ -165,7 +165,7 @@ export default function Home() {
                 <Paragraph>{errors.oneOrMoreArticles2?.message}</Paragraph>
               </FormField>
             </Fieldset>
-            <FieldsetLegend>2.</FieldsetLegend>
+            <FieldsetLegend>Subartikel 2.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel3}>
                 <Paragraph>
