@@ -28,8 +28,8 @@ export default function home() {
         <UtrechtArticle className="voorbeeld-article-space ">
           <UtrechtLink href="/wmebv/Inloggen">Terug</UtrechtLink>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
-          <UtrechtParagraph>Stap 1 van 4</UtrechtParagraph>
-          <UtrechtHeading2>Uw vraag</UtrechtHeading2>
+          <UtrechtParagraph className="voorbeeld-stap-spacing">Stap 1 van 4</UtrechtParagraph>
+          <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
           <UtrechtForm>
             <FormLabel>Stel uw vraag</FormLabel>
             <UtrechtFormFieldTextarea />
@@ -46,7 +46,9 @@ export default function home() {
             </UnorderedListItem>
           </UnorderedList>
           <div className="voorbeeld-bijlage-flex-container">
-            <UtrechtButton appearance="secondary-action-button">Bestand kiezen</UtrechtButton>
+            <UtrechtButton appearance="secondary-action-button" className="voorbeeld-button-spacing-bestand-kiezen">
+              Bestand kiezen
+            </UtrechtButton>
             <UtrechtParagraph className="paragraph-space-bijlagen">Geen bestand gekozen</UtrechtParagraph>
           </div>
           <UtrechtButtonLink href="./stap2" className="voorbeeld-button-spacing" appearance="primary-action-button">
