@@ -18,63 +18,43 @@
   --utrecht-spotlight-section-border-color: var(--voorbeeld-color-green-600);
   --utrecht-spotlight-section-border-width: 2px;
 }
-
 .voorbeeld-digid-logo {
-  --utrecht-icon-size: 48px;
+  --utrecht-icon-size: 32px;
 }
 
-.utrecht-radio-button {
-  --utrecht-radio-button-background-color: white;
-  --utrecht-radio-button-icon-size: 0%;
-  --utrecht-radio-button-size: 1.5em;
-  --utrecht-radio-button-checked-border-width: 0.6em;
-  --utrecht-radio-button-checked-border-color: var(--voorbeeld-color-violet-700);
-  --utrecht-radio-button-border-color: #7a8aa0;
+.voorbeeld-unordered-list-item {
+  margin: 12px;
 }
 
-.voorbeeld-radio-button-form-label {
-  --utrecht-form-label-font-weight: var(--voorbeeld-typography-font-weight-normal);
-}
-.voorbeeld-bijlage-flex-container {
-  display: flex;
-  align-items: center;
+.bold-mail {
+  font-weight: bold;
 }
 
-.paragraph-space-bijlagen {
-  margin-inline-start: var(--voorbeeld-space-inline-mouse);
-  --utrecht-paragraph-color: var(--utrecht-document-subtle-color);
+.mijn-omgeving {
+  color: #5315f6;
+  text-decoration: underline;
 }
 
-.voorbeeld-paragraph-bijlage {
-  --utrecht-paragraph-font-weight: var(--voorbeeld-typography-font-weight-bold);
-  margin-inline-end: var(--voorbeeld-space-block-ant);
+.link {
+  text-decoration: underline;
+  text-decoration-color: #5315f6;
+  padding: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 20px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
-.voorbeeld-button-spacing {
-  margin-block-start: var(--voorbeeld-space-block-dog);
-  margin-block-end: var(--voorbeeld-space-block-rabbit);
+.breadcrumNav-link {
+  padding-inline-start: 20px;
 }
 
-.voorbeeld-link-spacing {
-  margin-block-end: var(--voorbeeld-space-block-rabbit);
+.paragraph_digid {
+  margin-block-end: 1.5rem;
 }
 
-.voorbeeld-paragraph-end-space {
-  margin-block-end: var(--voorbeeld-space-block-pig);
-}
-
-.voorbeeld-small-textbox-small {
-  width: 328px;
-}
-
-.voorbeeld-smaller-textbox-small {
-  width: 160px;
-}
-
-.voorbeeld-tiny-textbox-small {
-  width: 120px;
-}
-
-.voorbeeld-datalist-style {
-  background-color: aquamarine;
+.fieldlabel_inloggen {
+  padding-block-start: 3rem;
 }
