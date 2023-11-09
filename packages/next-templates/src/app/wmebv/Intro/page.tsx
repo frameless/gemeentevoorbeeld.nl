@@ -13,6 +13,8 @@ import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHead
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
+import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
+
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
