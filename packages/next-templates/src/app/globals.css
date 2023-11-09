@@ -54,6 +54,15 @@ body {
   --example-nav-bar-link-padding-inline-start: 16px;
   --example-nav-bar-background-color: #5315f6;
   --example-nav-bar-color: #fff;
+
+  /* alert */
+  --utrecht-alert-ok-background-color: #e4f9ea;
+  --utrecht-alert-ok-border-color: #167e33;
+  --utrecht-alert-padding-inline-start: var(--voorbeeld-space-inline-mouse);
+  --utrecht-alert-padding-inline-end: var(--voorbeeld-space-inline-mouse);
+  --utrecht-alert-padding-block-start: var(--voorbeeld-space-inline-mouse);
+  --utrecht-alert-padding-block-end: var(--voorbeeld-space-inline-rat);
+  --utrecht-alert-icon-gap: var(--voorbeeld-space-inline-beetle);
 }
 
 .voorbeeld-theme :is(.utrecht-heading-1, utrecht-heading-1),
@@ -130,4 +139,8 @@ utrecht-page-content {
   max-inline-size: calc(
     var(--utrecht-article-max-inline-size) * 1.5
   ); /* random gekozen, groter dan --utrecht-article-max-inline-size */
+}
+
+.utrecht-button-group--example-column {
+  flex-direction: column;
 }
