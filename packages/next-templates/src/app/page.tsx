@@ -60,13 +60,27 @@ export default function Home() {
           <SpotlightSection className="voorbeeld-spotlight-section">
             <Heading2 className="voorbeeld-spotlight-section-heading-style">Op deze pagina</Heading2>
             <OrderedList>
-              <OrderedListItem className="voorbeeld-ordered-list__item">Eerst toestemming geven</OrderedListItem>
-              <OrderedListItem className="voorbeeld-ordered-list__item">Dan vervuiling melden</OrderedListItem>
-              <OrderedListItem className="voorbeeld-ordered-list__item">Racistische graffiti melden</OrderedListItem>
-              <OrderedListItem className="voorbeeld-ordered-list__item">Goed om te weten</OrderedListItem>
-              <OrderedListItem className="voorbeeld-ordered-list__item">Hoelang duurt het?</OrderedListItem>
-              <OrderedListItem className="voorbeeld-ordered-list__item">Contact</OrderedListItem>
-              <OrderedListItem className="voorbeeld-ordered-list__item">Zie ook</OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">
+                <Link href="#toestemming">Eerst toestemming geven</Link>
+              </OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">
+                <Link href="#vervuiling">Dan vervuiling melden</Link>
+              </OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">
+                <Link href="#graffiti">Racistische graffiti melden</Link>
+              </OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">
+                <Link href="#weten">Goed om te weten</Link>
+              </OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">
+                <Link href="#hoe-lang">Hoe lang duurt het?</Link>
+              </OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">
+                <Link href="#contact">Contact</Link>
+              </OrderedListItem>
+              <OrderedListItem className="voorbeeld-ordered-list__item">
+                <Link href="#zie-ook">Zie ook</Link>
+              </OrderedListItem>
             </OrderedList>
           </SpotlightSection>
           <Paragraph className="voorbeeld-title-paragraph" small>
@@ -77,7 +91,8 @@ export default function Home() {
             Als u een woning van een corporatie huurt, meldt u vervuiling direct aan hen. De corporatie verzorgt
             namelijk zelf de reiniging van hun panden.
           </Paragraph>
-          <section>
+
+          <section id="toestemming">
             <Heading2>Eerst toestemming geven</Heading2>
             <UnorderedList>
               <UnorderedListItem>
@@ -108,7 +123,7 @@ export default function Home() {
             </Paragraph>
           </section>
 
-          <section>
+          <section id="vervuiling">
             <Heading2>Dan vervuiling melden</Heading2>
             <Paragraph>
               Als u toestemming heeft gegeven, kunt u de vervuiling op uw pand melden met het meldingsformulier. De
@@ -121,7 +136,7 @@ export default function Home() {
             </Paragraph>
           </section>
 
-          <section>
+          <section id="graffiti">
             <Heading2>Racistische graffiti melden</Heading2>
             <Paragraph>
               Graffiti met racistisch karakter wordt binnen 24 uur verwijderd. Dit soort graffiti kunt u op werkdagen
@@ -130,7 +145,7 @@ export default function Home() {
             </Paragraph>
           </section>
 
-          <section>
+          <section id="weten">
             <Heading2>Goed om te weten</Heading2>
             <Heading3 className="voorbeeld-heading-3-space">Professioneel verwijderd</Heading3>
             <Paragraph>
@@ -144,15 +159,15 @@ export default function Home() {
             </Paragraph>
           </section>
 
-          <section>
-            <Heading2>Hoelang duurt het?</Heading2>
+          <section id="hoe-lang">
+            <Heading2>Hoe lang duurt het?</Heading2>
             <Paragraph>
               Graffiti, posters en stickers worden in principe binnen 5 werkdagen na melding verwijderd. Hoe snel dit
               gebeurt hangt af van de weersomstandigheden.
             </Paragraph>
           </section>
 
-          <section>
+          <section id="contact">
             <Heading2>Contact</Heading2>
             <Paragraph>
               Het 
@@ -164,8 +179,8 @@ export default function Home() {
             </Paragraph>
           </section>
 
-          <section>
-            <Heading2>Eerst toestemming geven</Heading2>
+          <section id="zie-ook">
+            <Heading2>Zie ook</Heading2>
             <UnorderedList className="voorbeeld-unordered-list-space">
               <Link href="https://www.figma.com/file/OlnanjplmeO3aWYzNKnNTo/Voorbeeld---Templates?type=design&node-id=501-1404&mode=dev">
                 <UnorderedListItem>Graffiti in de openbare ruimte melden</UnorderedListItem>
