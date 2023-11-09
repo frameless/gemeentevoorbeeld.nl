@@ -17,6 +17,7 @@ import {
   UnorderedList,
   UnorderedListItem,
   Heading3,
+  BreadcrumbNavSeparator,
 } from '@utrecht/component-library-react';
 import '@/app/styling/css/detail-page.css';
 import '@utrecht/component-library-css';
@@ -35,11 +36,17 @@ export default function Home() {
         <Article className="voorbeeld-article-space">
           <BreadcrumbNav label="Kruimelpad">
             <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={0} rel="home">
-              Home <ChevronRight className="voorbeeld-chevron-right-space" />
+              Home
             </BreadcrumbNavLink>
+            <BreadcrumbNavSeparator>
+              <ChevronRight className="voorbeeld-chevron-right-space" />
+            </BreadcrumbNavSeparator>
             <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={1}>
-              Meldingen <ChevronRight className="voorbeeld-chevron-right-space" />
+              Meldingen
             </BreadcrumbNavLink>
+            <BreadcrumbNavSeparator>
+              <ChevronRight className="voorbeeld-chevron-right-space" />
+            </BreadcrumbNavSeparator>
             <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={2} rel="up">
               Meldingen openbare ruimte
             </BreadcrumbNavLink>
