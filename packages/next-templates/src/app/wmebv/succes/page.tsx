@@ -35,11 +35,11 @@ export default function home() {
       <ExampleNavigation></ExampleNavigation>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">
-            <CircleCheck slot="icon" />
-            <UtrechtHeading1>Uw vraag is met succes verstuurd</UtrechtHeading1>
-            <UtrechtParagraph>Kenmerk: 230829-1118-59dc</UtrechtParagraph>
-          </UtrechtSpotlightSection>
+          <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv" />
+          <CircleCheck slot="icon" />
+          <UtrechtHeading1>Uw vraag is met succes verstuurd</UtrechtHeading1>
+          <UtrechtParagraph>Kenmerk: 230829-1118-59dc</UtrechtParagraph>
+          <UtrechtSpotlightSection />
           <UtrechtHeading1>Wat gaat er nu gebeuren?</UtrechtHeading1>
 
           <UnorderedList>
