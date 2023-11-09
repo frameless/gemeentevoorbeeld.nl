@@ -1,6 +1,6 @@
 'use client';
 
-import { Heading } from '@utrecht/component-library-react';
+import { Heading, Link } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
@@ -40,9 +40,9 @@ export const CardListItem = ({
           <div className={'utrecht-card-list-item__content'}>
             <hgroup>
               <Heading level={headinglevel} className="utrecht-card-list-item__title">
-                <a ref={linkRef} href={href} className="utrecht-link utrecht-link--html-a">
+                <Link ref={linkRef} href={href} className="utrecht-link utrecht-link--html-a">
                   {title}
-                </a>
+                </Link>
               </Heading>
               {preHeading && <p className="utrecht-card-list-item__pre-heading">{preHeading}</p>}
             </hgroup>
@@ -53,9 +53,9 @@ export const CardListItem = ({
         <div className={'utrecht-card-list-item__content'}>
           <hgroup>
             <Heading level={headinglevel} className="utrecht-card-list-item__title">
-              <a ref={linkRef} href={href} className="utrecht-link utrecht-link--html-a">
+              <Link ref={linkRef} href={href} className="utrecht-link utrecht-link--html-a">
                 {title}
-              </a>
+              </Link>
             </Heading>
             {preHeading && <p className="utrecht-card-list-item__pre-heading">{preHeading}</p>}
           </hgroup>
