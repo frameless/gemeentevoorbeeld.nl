@@ -5,6 +5,7 @@ import {
   UtrechtButtonGroup,
   UtrechtButtonLink,
   UtrechtHeading1,
+  UtrechtLink,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
@@ -13,22 +14,20 @@ import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHead
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
-import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
+import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv></ExampleHeaderWmebv>
-      <ExampleNavigation></ExampleNavigation>
-      <BreadcrumbNav label="Kruimelpad">
-        <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="./Home" index={0} rel="home">
-          Terug
-        </BreadcrumbNavLink>
-      </BreadcrumbNav>
+      <ExampleHeaderWmebv />
+      <ExampleNavigation />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
+          <UtrechtLink href="/wmebv">
+            <ArrowLeft /> Terug
+          </UtrechtLink>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
           <UtrechtParagraph>
             Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden? Stel
