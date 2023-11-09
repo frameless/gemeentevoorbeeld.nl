@@ -14,9 +14,8 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
+import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { FormLabel, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
@@ -24,8 +23,7 @@ import '@/app/styling/css/wmebv.css';
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv />
-      <ExampleNavigation />
+      <ExampleHeaderFunnel />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <UtrechtButtonGroup>
