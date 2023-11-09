@@ -7,9 +7,9 @@ import React, { FC, HTMLAttributes } from 'react';
 import './index.style.css';
 
 interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
-  headerlevel: number;
+  headinglevel: number;
   title?: string;
-  preheading?: string;
+  preHeading?: string;
   children?: string;
   image?: {
     url: string;
@@ -24,10 +24,10 @@ interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'childre
 }
 
 export const CardListItem: FC<CardListItemProps> = ({
-  headerlevel,
+  headinglevel,
   children,
   title,
-  preheading,
+  preHeading,
   image,
   link: { href },
   // expect a useArticle parameter given
@@ -46,12 +46,12 @@ export const CardListItem: FC<CardListItemProps> = ({
         <article>
           <div className={'utrecht-card-list-item__content'}>
             <hgroup>
-              <Heading level={headerlevel} className="utrecht-card-list-item__title">
+              <Heading level={headinglevel} className="utrecht-card-list-item__title">
                 <a ref={linkRef} href={href} className={'utrecht-link utrecht-link--html-a'}>
                   {title}
                 </a>
               </Heading>
-              {preheading && <p className="utrecht-card-list-item-preheading">{preheading}</p>}
+              {preHeading && <p className="utrecht-card-list-item__pre-heading">{preHeading}</p>}
             </hgroup>
             <p className="utrecht-card-list-item__body">{children}</p>
           </div>
@@ -59,12 +59,12 @@ export const CardListItem: FC<CardListItemProps> = ({
       ) : (
         <div className={'utrecht-card-list-item__content'}>
           <hgroup>
-            <Heading level={headerlevel} className="utrecht-card-list-item__title">
+            <Heading level={headinglevel} className="utrecht-card-list-item__title">
               <a ref={linkRef} href={href} className={'utrecht-link utrecht-link--html-a'}>
                 {title}
               </a>
             </Heading>
-            {preheading && <p className="utrecht-card-list-item-preheading">{preheading}</p>}
+            {preHeading && <p className="utrecht-card-list-item__pre-heading">{preHeading}</p>}
           </hgroup>
           <p className="utrecht-card-list-item__body">{children}</p>
         </div>
@@ -76,11 +76,11 @@ export default function Home() {
   return (
     <ul>
       <CardListItem
-        headerlevel={2}
+        headinglevel={2}
         title="test"
         image={{ url: '/business_corgi.jpeg', alt: 'test' }}
         link={{ href: '#' }}
-        preheading="optional testje"
+        preHeading="optional testje"
       >
         test test test test test test test test test test test test test test test test
       </CardListItem>
