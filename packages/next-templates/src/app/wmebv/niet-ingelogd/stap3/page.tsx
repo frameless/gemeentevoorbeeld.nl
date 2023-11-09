@@ -19,6 +19,7 @@ import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHead
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import Pencil from '../../../styling/assets/pencil-icon.svg';
+import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
@@ -29,7 +30,11 @@ export default function home() {
       <UtrechtPageContent>
         <UtrechtArticle>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
-          <UtrechtLink href="./stap2">Vorige stap</UtrechtLink>
+          <UtrechtLink href="./stap2">
+            {' '}
+            <ArrowLeft />
+            Vorige stap
+          </UtrechtLink>
           <UtrechtParagraph lead>Stap 3 van 4</UtrechtParagraph>
           <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
           <UtrechtHeading3 className="voorbeeld-heading3-spacing">Uw vraag</UtrechtHeading3>
