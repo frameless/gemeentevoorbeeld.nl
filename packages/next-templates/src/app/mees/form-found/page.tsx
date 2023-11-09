@@ -6,7 +6,6 @@ import {
   FormFieldDescription,
   FormLabel,
   Heading1,
-  Heading5,
   Page,
   PageContent,
   Paragraph,

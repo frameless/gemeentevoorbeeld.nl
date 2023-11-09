@@ -1,0 +1,103 @@
+:root {
+  /* How do we get this from the design system? */
+  --utrecht-drawer-max-inline-size: 400px;
+}
+
+.voorbeeld-theme {
+  background: skyblue;
+}
+
+.voorbeeld-drawer {
+  inline-size: 100%;
+  max-inline-size: 400px;
+  /* this is where general styling goes for the drawer, like a shadow on the whole thing */
+}
+
+.voorbeeld-drawer--erfgoed-drawer {
+  /* this is the exceptions for the Erfgoed drawer */
+}
+
+.voorbeeld-drawer__header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid grey;
+  padding: 2em;
+}
+
+.voorbeeld-drawer__header :is(h2, h3, h4, h5, h6) {
+  align-self: center;
+}
+
+.voorbeeld-drawer__header--sticky {
+  position: sticky;
+  top: 0;
+}
+
+.voorbeeld--unorderedlist-lijst {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/*
+.voorbeeld--unorderedlist-lijst li {
+  margin-block: 12px;
+} */
+
+.voorbeeld--unorderedlist-lijst a {
+  border-bottom: 1px solid grey;
+
+  padding: 12px 2em;
+  display: block;
+}
+
+.voorbeeld-drawer__button-update {
+  /* */
+}
+
+.voorbeeld-drawer__button-close {
+  /* */
+}
+
+.voorbeeld-drawer__image img {
+  width: 100%;
+  height: auto;
+}
+
+.voorbeeld-drawer__body {
+  /* */
+}
+
+.voorbeeld-drawer__body--details {
+  padding: 2em;
+}
+
+.voorbeeld-drawer__datalist {
+  /* */
+}
+
+/* to hide all the unclickable links */
+a[href="#"] {
+  display: none;
+  /* opacity: 0.3; */
+}
+
+.utrecht-button {
+  background-color: #ffb8ff;
+}
+
+.utrecht-page {
+  padding: 2em;
+}
+
+.utrecht-data-list {
+  margin-top: 2em;
+}
+
+.utrecht-data-list dt {
+  font-weight: bold;
+}
+
+.utrecht-data-list dd {
+  margin-left: 0;
+}
