@@ -23,7 +23,7 @@
 }
 
 .voorbeeld-unordered-list-item {
-  margin: 12px;
+  --utrecht-unordered-list-item-margin: 12px;
 }
 
 .bold-mail {
@@ -52,16 +52,15 @@
 }
 
 .paragraph_digid {
-  margin-block-end: 1.5rem;
+  --utrecht-paragraph-margin-block-end: var(--voorbeeld-space-block-rabbit);
 }
 
 .fieldlabel_inloggen {
-  padding-block-start: 3rem;
+  padding-block-start: var(--voorbeeld-space-block-beetle);
 }
 
 .voorbeeld-link-spacing {
-  margin-block-end: 1.5rem;
-  margin-block-start: 1.5rem;
+  margin-block: var(--voorbeeld-space-block-rabbit);
 }
 
 .voorbeeld-button-spacing-bestand-kiezen {
@@ -76,8 +75,8 @@
   color: #5b6e8a;
 }
 
-.voorbeeld-stap-spacing {
-  margin-block-start: 3rem;
+.voorbeeld-paragraph-spacing-stapx {
+  --utrecht-paragraph-margin-block-start: var(--voorbeeld-space-block-beetle);
 }
 
 .voorbeeld-heading-spacing {
@@ -85,35 +84,41 @@
 }
 
 .voorbeeld-smaller-textbox-small {
-  width: 10rem;
+  --utrecht-textbox-small-width: var(--voorbeeld-size-xl);
+  --utrecht-textbox-margin-block-start: var(--voorbeeld-space-block-beetle);
 }
 
 .voorbeeld-tiny-textbox-small {
-  width: 7.5rem;
+  --utrecht-textbox-tiny-width: 120px;
 }
 
 .voorbeeld-paragraph-spacing {
-  margin-block-end: 4.5rem;
+  margin-block-end: 2.5rem;
 }
 
 .voorbeeld-heading3-spacing {
-  margin-block-end: 1.5rem;
-  margin-block-start: 1.5rem;
+  --utrecht-heading3-margin-block: var(--voorbeeld-space-block-snail);
 }
 
 .utrecht-data-list-label {
-  margin-block-end: 0.25rem;
+  --utrecht-data-list-margin-block-end: var(--voorbeeld-space-block-snail);
+  --utrecht-data-list-margin-block-end: var(--voorbeeld-space-block-beetle);
 }
 
 .utrecht-data-list-value {
-  margin-block-end: 0.75rem;
-  margin-block-start: 0.75rem;
+  margin-block-end: var(--voorbeeld-space-block-snail);
+  margin-block-start: var(--voorbeeld-space-block-ant);
 }
 
-.voorbeeld-datalist-style {
-  margin-top: 1.5rem;
+.voorbeeld-data-list-style {
+  --utrecht-data-list-margin-top: var(--voorbeeld-space-block-rabbit);
 }
 
-.grey_underline {
+.voorbeeld-data-list-label-spacer {
   border: 1px solid #e4e7ec;
+}
+
+.voorbeeld-dat-list-label-spacer-1 {
+  border: 1px solid #e4e7ec;
+  margin-block-end: 1.5rem;
 }
