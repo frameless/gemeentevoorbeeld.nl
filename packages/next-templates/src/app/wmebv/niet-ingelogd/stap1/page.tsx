@@ -17,6 +17,8 @@ import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHead
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { FormLabel, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
+import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
+
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
@@ -26,7 +28,10 @@ export default function home() {
       <ExampleNavigation />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtLink href="/wmebv/Inloggen">Terug</UtrechtLink>
+          <UtrechtLink href="/wmebv/Inloggen">
+            {' '}
+            <ArrowLeft /> Terug
+          </UtrechtLink>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
           <UtrechtParagraph className="voorbeeld-stap-spacing">Stap 1 van 4</UtrechtParagraph>
           <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
