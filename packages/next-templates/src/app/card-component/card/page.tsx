@@ -9,8 +9,9 @@ import './index.style.css';
 interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   headerlevel: number;
   title: string;
+  preheading?: string;
   children: string;
-  image: {
+  image?: {
     url: string;
     alt: string;
   };
@@ -26,7 +27,8 @@ export const CardListItem: FC<CardListItemProps> = ({
   headerlevel,
   children,
   title,
-  image: { url = '', alt },
+  preheading,
+  image,
   link: { href },
   // expect a useArticle parameter given
   useArticle,
@@ -36,7 +38,10 @@ export const CardListItem: FC<CardListItemProps> = ({
 
   return (
     <li {...props} className={clsx('utrecht-card-list-item', props.className)} onClick={() => linkRef.current?.click()}>
-      {url && <Image src={url} alt={alt} className={'utrecht-card-list-item__image'} width={312} height={200} />}
+      {/* {url && <Image src={url} alt={alt} className={'utrecht-card-list-item__image'} width={312} height={200} />} */}
+      {image && (
+        <Image src={image.url} alt={image.alt} className={'utrecht-card-list-item__image'} width={312} height={200} />
+      )}
 
       {/* is we want a useArticle then add  an article*/}
       {useArticle ? (
@@ -48,7 +53,7 @@ export const CardListItem: FC<CardListItemProps> = ({
                   {title}
                 </a>
               </Heading>
-              <p className="utrecht-card-preheading">preheading</p>
+              {preheading && <p className="utrecht-card-preheading">{preheading}</p>}
             </hgroup>
             <p className="utrecht-card-list-item__body">{children}</p>
           </div>
@@ -61,7 +66,7 @@ export const CardListItem: FC<CardListItemProps> = ({
                 {title}
               </a>
             </Heading>
-            <p className="preheading">preheading</p>
+            {preheading && <p className="utrecht-card-preheading">{preheading}</p>}
           </hgroup>
           <p className="utrecht-card-list-item__body">{children}</p>
         </div>
@@ -78,6 +83,7 @@ export default function Home() {
         image={{ url: '/business_corgi.jpeg', alt: 'test' }}
         link={{ href: '#' }}
         // testing if the article shows when true...not yet, we get the the article tags as text
+        preheading="optional testje"
       >
         test test test test test test test test test test test test test test test test
       </CardListItem>
