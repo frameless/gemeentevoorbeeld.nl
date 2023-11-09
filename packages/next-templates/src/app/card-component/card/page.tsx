@@ -6,12 +6,13 @@ import Image from 'next/image';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import './index.style.css';
 import { CardList } from '../card-list/page';
+import { type } from 'os';
 
 interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   headingLevel: number;
   title?: string;
   preHeading?: string;
-  children?: string;
+  children?: any;
   imageHeight?: number;
   imageWidth?: number;
   imageSrc?: string;
