@@ -40,7 +40,7 @@ export const CardListItem = ({
           <div className={'utrecht-card-list-item__content'}>
             <hgroup>
               <Heading level={headinglevel} className="utrecht-card-list-item__title">
-                <a ref={linkRef} href={href} className={'utrecht-link utrecht-link--html-a'}>
+                <a ref={linkRef} href={href} className="utrecht-link utrecht-link--html-a">
                   {title}
                 </a>
               </Heading>
@@ -53,7 +53,7 @@ export const CardListItem = ({
         <div className={'utrecht-card-list-item__content'}>
           <hgroup>
             <Heading level={headinglevel} className="utrecht-card-list-item__title">
-              <a ref={linkRef} href={href} className={'utrecht-link utrecht-link--html-a'}>
+              <a ref={linkRef} href={href} className="utrecht-link utrecht-link--html-a">
                 {title}
               </a>
             </Heading>
