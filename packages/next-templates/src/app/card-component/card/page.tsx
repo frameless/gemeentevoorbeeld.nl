@@ -99,7 +99,21 @@ export default function Home() {
         imageAlt="test"
         imageSrc="/business_corgi.jpeg"
         imageWidth={500}
-        imageHeight={500}
+        imageHeight={300}
+        cardRole={true}
+        href="#"
+        preHeading="optional testje"
+      >
+        test test test test test test test test test test test test test test test test
+      </CardListItem>
+      <CardListItem
+        headingLevel={2}
+        title="test"
+        imageAlt="test"
+        imageSrc="/business_corgi.jpeg"
+        imageWidth={500}
+        imageHeight={300}
+        cardRole={true}
         href="#"
         preHeading="optional testje"
       >
