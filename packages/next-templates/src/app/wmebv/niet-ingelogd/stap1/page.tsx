@@ -3,6 +3,7 @@
 import {
   UtrechtArticle,
   UtrechtButton,
+  UtrechtButtonGroup,
   UtrechtButtonLink,
   UtrechtForm,
   UtrechtFormFieldTextarea,
@@ -17,10 +18,7 @@ import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHead
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { FormLabel, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
-import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
-
 import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
-
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
@@ -57,15 +55,23 @@ export default function home() {
             </UtrechtButton>
             <UtrechtParagraph className="paragraph-space-bijlagen">Geen bestand gekozen</UtrechtParagraph>
           </div>
-          <UtrechtButtonLink href="./stap2" className="voorbeeld-button-spacing" appearance="primary-action-button">
-            Volgende stap
-          </UtrechtButtonLink>
-          <UtrechtParagraph className="voorbeeld-link-spacing">
-            <UtrechtLink href="#">Opslaan en later verder</UtrechtLink>
-          </UtrechtParagraph>
-          <UtrechtParagraph className="voorbeeld-paragraph-end-space">
-            <UtrechtLink href="#">Sluit formulier</UtrechtLink>
-          </UtrechtParagraph>
+          <UtrechtButtonGroup>
+            <div className="voorbeeld-button-group-spacing">
+              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap2" appearance="primary-action-button">
+                Volgende stap
+              </UtrechtButtonLink>
+              <UtrechtParagraph className="voorbeeld-link-spacing">
+                <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+                  Opslaan en later verder
+                </UtrechtButtonLink>
+              </UtrechtParagraph>
+              <UtrechtParagraph className="voorbeeld-paragraph-end-space">
+                <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+                  Sluit formulier
+                </UtrechtButtonLink>
+              </UtrechtParagraph>
+            </div>
+          </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
       <ExampleFooter />

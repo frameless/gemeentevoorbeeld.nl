@@ -6,7 +6,6 @@ import {
   UtrechtHeading1,
   UtrechtHeading2,
   UtrechtLink,
-  UtrechtLinkButton,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
@@ -14,8 +13,6 @@ import {
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
-import ChevronRight from '../../app/styling/assets/chevronRight.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
@@ -23,13 +20,9 @@ export default function home() {
     <UtrechtPage>
       <ExampleHeaderWmebv></ExampleHeaderWmebv>
       <ExampleNavigation></ExampleNavigation>
-      <BreadcrumbNav label="Kruimelpad">
-        <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="" index={0} rel="home">
-          Home
-        </BreadcrumbNavLink>
-      </BreadcrumbNav>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
+          <UtrechtLink href="/wmebv/Inloggen">Home</UtrechtLink>
           <UtrechtHeading1>Contact met de gemeente</UtrechtHeading1>
           <UtrechtParagraph lead>
             Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden? Stel

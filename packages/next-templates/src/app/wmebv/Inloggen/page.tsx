@@ -14,22 +14,20 @@ import {
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import '@/app/styling/css/wmebv.css';
 import { Fieldset, FieldsetLegend, FormField, FormLabel, RadioButton } from '@utrecht/component-library-react';
-import { BreadcrumbNav, BreadcrumbNavLink, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
+import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
+import '@/app/styling/css/wmebv.css';
 
 export default function home() {
   return (
     <UtrechtPage>
       <ExampleHeaderWmebv></ExampleHeaderWmebv>
       <ExampleNavigation></ExampleNavigation>
-      <BreadcrumbNav label="Kruimelpad">
-        <BreadcrumbNavLink className="voorbeeld-breadcrumb-text-decoration" href="./Intro" index={0} rel="home">
-          Terug
-        </BreadcrumbNavLink>
-      </BreadcrumbNav>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
+          <UtrechtLink href="/wmebv/Intro">
+            <ArrowLeft /> Terug
+          </UtrechtLink>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
           <UtrechtHeading2>Inloggen</UtrechtHeading2>
           <UtrechtParagraph className="paragraph_digid">

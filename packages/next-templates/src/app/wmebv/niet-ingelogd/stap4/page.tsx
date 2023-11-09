@@ -22,8 +22,8 @@ import '@/app/styling/css/wmebv.css';
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv></ExampleHeaderWmebv>
-      <ExampleNavigation></ExampleNavigation>
+      <ExampleHeaderWmebv />
+      <ExampleNavigation />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <UtrechtSpotlightSection className="utrecht-spotlight-section-wmebv">
@@ -33,7 +33,6 @@ export default function home() {
             <UtrechtParagraph>Kenmerk: 230829-1118-59dc</UtrechtParagraph>
           </UtrechtSpotlightSection>
           <UtrechtHeading1>Wat gaat er nu gebeuren?</UtrechtHeading1>
-
           <UnorderedList>
             <UnorderedListItem className="voorbeeld-unordered-list-item">
               U ontvangt een bevestigingsmail op <span className="bold-mail">j.vandrouwen@gmail.com</span>
@@ -42,20 +41,18 @@ export default function home() {
               De afdeling Vraagbaak gaat met uw vraag aan de slag.
             </UnorderedListItem>
           </UnorderedList>
-          <UtrechtLink className="link">
+          <UtrechtLink className="link" href="#">
             <Printer /> Print uw vraag
           </UtrechtLink>
-          <UtrechtLink className="link">
+          <UtrechtLink className="link" href="#">
             <FileText /> Download uw vraag als PDF
           </UtrechtLink>
-          <UtrechtLink className="link">Terug naar voorbeeld.nl</UtrechtLink>
-
-          <UtrechtButtonLink href="../Home" appearance="primary-action-button">
-            Doorgaan
-          </UtrechtButtonLink>
+          <UtrechtLink className="link" href="#">
+            Terug naar voorbeeld.nl
+          </UtrechtLink>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter></ExampleFooter>
+      <ExampleFooter />
     </UtrechtPage>
   );
 }
