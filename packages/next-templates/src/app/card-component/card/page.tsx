@@ -3,7 +3,7 @@
 import { Heading } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import Image from 'next/image';
-import React, { FC, HTMLAttributes } from 'react';
+import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import './index.style.css';
 
 interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
@@ -14,12 +14,10 @@ interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'childre
   imageSrc?: string;
   imageAlt?: string;
   href?: string;
-
-  // do we want an article around the card content. Default is no
-  useArticle?: boolean | false;
+  cardRole?: boolean | false;
 }
 
-export const CardListItem: FC<CardListItemProps> = ({
+export const CardListItem = ({
   headinglevel,
   children,
   title,
@@ -27,10 +25,9 @@ export const CardListItem: FC<CardListItemProps> = ({
   imageSrc,
   imageAlt,
   href,
-  // expect a useArticle parameter given
-  useArticle,
+  cardRole,
   ...props
-}) => {
+}: PropsWithChildren<CardListItemProps>) => {
   const linkRef = React.useRef<HTMLAnchorElement>(null);
 
   return (
@@ -38,8 +35,7 @@ export const CardListItem: FC<CardListItemProps> = ({
       {imageSrc && imageAlt && (
         <Image src={imageSrc} alt={imageAlt} className={'utrecht-card-list-item__image'} width={312} height={200} />
       )}
-      {/* is we want a useArticle then add  an article*/}
-      {useArticle ? (
+      {cardRole ? (
         <article>
           <div className={'utrecht-card-list-item__content'}>
             <hgroup>
