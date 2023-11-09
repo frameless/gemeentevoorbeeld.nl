@@ -8,7 +8,7 @@ import './index.style.css';
 import { CardList } from '../card-list/page';
 
 interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
-  headinglevel: number;
+  headingLevel: number;
   title?: string;
   preHeading?: string;
   children?: string;
@@ -21,7 +21,7 @@ interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'childre
 }
 
 export const CardListItem = ({
-  headinglevel,
+  headingLevel,
   children,
   title,
   preHeading,
@@ -50,7 +50,7 @@ export const CardListItem = ({
         <article>
           <div className={'utrecht-card-list-item__content'}>
             <hgroup>
-              <Heading level={headinglevel} className="utrecht-card-list-item__title">
+              <Heading level={headingLevel} className="utrecht-card-list-item__title">
                 <Link ref={linkRef} href={href} className="utrecht-link utrecht-link--html-a">
                   {title}
                 </Link>
@@ -63,7 +63,7 @@ export const CardListItem = ({
       ) : (
         <div className={'utrecht-card-list-item__content'}>
           <hgroup>
-            <Heading level={headinglevel} className="utrecht-card-list-item__title">
+            <Heading level={headingLevel} className="utrecht-card-list-item__title">
               <Link ref={linkRef} href={href} className="utrecht-link utrecht-link--html-a">
                 {title}
               </Link>
@@ -80,7 +80,7 @@ export default function Home() {
   return (
     <CardList>
       <CardListItem
-        headinglevel={2}
+        headingLevel={2}
         title="test"
         imageAlt="test"
         imageSrc="/business_corgi.jpeg"
