@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import './index.style.css';
+import { CardList } from '../card-list/page';
 
 interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   headinglevel: number;
@@ -77,7 +78,7 @@ export const CardListItem = ({
 };
 export default function Home() {
   return (
-    <ul>
+    <CardList>
       <CardListItem
         headinglevel={2}
         title="test"
@@ -90,6 +91,6 @@ export default function Home() {
       >
         test test test test test test test test test test test test test test test test
       </CardListItem>
-    </ul>
+    </CardList>
   );
 }
