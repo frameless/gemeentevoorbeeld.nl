@@ -34,13 +34,19 @@ export const CardListItem = ({
   ...props
 }: PropsWithChildren<CardListItemProps>) => {
   const linkRef = React.useRef<HTMLAnchorElement>(null);
+
+  let headingContent: any = title;
+  if (typeof href === 'string') {
+    headingContent = <Link href={href}>{title}</Link>;
+  } else {
+    headingContent;
+  }
+
   let card = (
     <div className={'utrecht-card-list-item__content'}>
       <hgroup>
         <Heading level={headingLevel} className="utrecht-card-list-item__title">
-          <Link ref={linkRef} href={href} className="utrecht-link utrecht-link--html-a">
-            {title}
-          </Link>
+          {headingContent}
         </Heading>
         {preHeading && <p className="utrecht-card-list-item__pre-heading">{preHeading}</p>}
       </hgroup>
@@ -101,7 +107,6 @@ export default function Home() {
         imageWidth={500}
         imageHeight={300}
         cardRole={true}
-        href="#"
         preHeading="optional testje"
       >
         test test test test test test test test test test test test test test test test
@@ -115,7 +120,6 @@ export default function Home() {
         imageHeight={300}
         cardRole={true}
         href="#"
-        preHeading="optional testje"
       >
         test test test test test test test test test test test test test test test test
       </CardListItem>
