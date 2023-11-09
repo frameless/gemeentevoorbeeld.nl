@@ -1,51 +1,70 @@
 'use client';
 
 import {
+  UtrechtAlert,
   UtrechtArticle,
+  UtrechtButton,
   UtrechtButtonLink,
   UtrechtHeading1,
+  UtrechtHeading2,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
-  UtrechtSpotlightSection,
+  UtrechtUrlData,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
+import { ButtonGroup, Strong, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import CircleCheck from '@/app/styling/assets/circleCheck.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
+  const data = {
+    email: 'j.vandrouwen@gmail.com',
+  };
+
+  const { email } = data;
+
   return (
     <UtrechtPage>
       <ExampleHeaderWmebv></ExampleHeaderWmebv>
       <ExampleNavigation></ExampleNavigation>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtSpotlightSection className="utrecht-spotlight-section-wmebv">
-            <UtrechtHeading1>
-              <CircleCheck /> Vraag met succes verstuurd
-            </UtrechtHeading1>
+          <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">
+            <CircleCheck slot="icon" />
+            <UtrechtHeading1>Uw vraag is met succes verstuurd</UtrechtHeading1>
             <UtrechtParagraph>Kenmerk: 230829-1118-59dc</UtrechtParagraph>
-          </UtrechtSpotlightSection>
-          <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
+          </UtrechtAlert>
+          <UtrechtHeading2>Wat gaat er nu gebeuren?</UtrechtHeading2>
           <UtrechtParagraph>
             Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden? Stel
             dan uw vraag via het contactformulier.
           </UtrechtParagraph>
           <UnorderedList>
-            <UnorderedListItem>Het duurt ongeveer 5 minuten om dit formulier in te vullen.</UnorderedListItem>
-            <UnorderedListItem>Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.</UnorderedListItem>
-            <UnorderedListItem>U kunt het formulier tussentijds opslaan en later verder gaan.</UnorderedListItem>
             <UnorderedListItem>
-              Na het versturen ontvangt u een bevestigingsmail. Ook heeft u de mogelijkheid uw vraag te downloaden of
-              printen.
+              U ontvangt een bevestigingsmail op{' '}
+              <Strong>
+                <UtrechtUrlData>{email}</UtrechtUrlData>
+              </Strong>
+              .
             </UnorderedListItem>
+            <UnorderedListItem>De afdeling Vraagbaak gaat met uw vraag aan de slag.</UnorderedListItem>
           </UnorderedList>
-          <UtrechtButtonLink href="./Inloggen" appearance="primary-action-button">
-            Doorgaan
-          </UtrechtButtonLink>
+          <ButtonGroup className="utrecht-button-group--example-column">
+            {/* TODO: Don't print this page, print the page with the data list */}
+            <UtrechtButton appearance="subtle-button" onClick={() => print()}>
+              Print uw vraag
+            </UtrechtButton>
+            {/* TODO: Add attributes to PDF link, when component supports them: download="vraag.pdf" type="application/pdf" */}
+            <UtrechtButtonLink appearance="subtle-button" href="/archive/vraag.pdf">
+              Download uw vraag als PDF
+            </UtrechtButtonLink>
+            <UtrechtButtonLink appearance="subtle-button" href="/">
+              Terug naar voorbeeld.nl
+            </UtrechtButtonLink>
+          </ButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
       <ExampleFooter></ExampleFooter>
