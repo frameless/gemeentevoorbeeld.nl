@@ -46,7 +46,7 @@ export const CardListItem = ({
               </Heading>
               {preHeading && <p className="utrecht-card-list-item__pre-heading">{preHeading}</p>}
             </hgroup>
-            <p className="utrecht-card-list-item__body">{children}</p>
+            {children}
           </div>
         </article>
       ) : (
@@ -59,7 +59,7 @@ export const CardListItem = ({
             </Heading>
             {preHeading && <p className="utrecht-card-list-item__pre-heading">{preHeading}</p>}
           </hgroup>
-          <p className="utrecht-card-list-item__body">{children}</p>
+          {children}
         </div>
       )}
     </li>
