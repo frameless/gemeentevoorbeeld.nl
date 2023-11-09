@@ -18,7 +18,7 @@ interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'childre
   imageSrc?: string;
   imageAlt?: string;
   href?: string;
-  cardRole?: boolean | false;
+  cardRole?: 'article' | string;
 }
 
 export const CardListItem = ({
@@ -55,7 +55,7 @@ export const CardListItem = ({
     </div>
   );
 
-  if (cardRole) {
+  if (cardRole === 'article') {
     card = (
       <li
         {...props}
@@ -107,7 +107,7 @@ export default function Home() {
         imageSrc="/business_corgi.jpeg"
         imageWidth={500}
         imageHeight={300}
-        cardRole={true}
+        cardRole="article"
         preHeading="optional testje"
       >
         <Paragraph>
@@ -123,7 +123,6 @@ export default function Home() {
         imageSrc="/business_corgi.jpeg"
         imageWidth={500}
         imageHeight={300}
-        cardRole={true}
         href="#"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at ipsum rhoncus, rhoncus nisl eu, sollicitudin
