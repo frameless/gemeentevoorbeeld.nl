@@ -8,9 +8,9 @@ import './index.style.css';
 
 interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   headerlevel: number;
-  title: string;
+  title?: string;
   preheading?: string;
-  children: string;
+  children?: string;
   image?: {
     url: string;
     alt: string;
