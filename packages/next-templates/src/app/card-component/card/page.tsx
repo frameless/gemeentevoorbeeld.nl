@@ -48,7 +48,7 @@ export const CardListItem: FC<CardListItemProps> = ({
                   {title}
                 </a>
               </Heading>
-              <p className="preheading">preheading</p>
+              <p className="utrecht-card-preheading">preheading</p>
             </hgroup>
             <p className="utrecht-card-list-item__body">{children}</p>
           </div>
