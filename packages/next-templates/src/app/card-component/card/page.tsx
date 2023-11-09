@@ -11,13 +11,9 @@ interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'childre
   title?: string;
   preHeading?: string;
   children?: string;
-  image?: {
-    url: string;
-    alt: string;
-  };
-  link: {
-    href: string;
-  };
+  imageSrc?: string;
+  imageAlt?: string;
+  href?: string;
 
   // do we want an article around the card content. Default is no
   useArticle?: boolean | false;
@@ -28,8 +24,9 @@ export const CardListItem: FC<CardListItemProps> = ({
   children,
   title,
   preHeading,
-  image,
-  link: { href },
+  imageSrc,
+  imageAlt,
+  href,
   // expect a useArticle parameter given
   useArticle,
   ...props
@@ -38,8 +35,8 @@ export const CardListItem: FC<CardListItemProps> = ({
 
   return (
     <li {...props} className={clsx('utrecht-card-list-item', props.className)} onClick={() => linkRef.current?.click()}>
-      {image && (
-        <Image src={image.url} alt={image.alt} className={'utrecht-card-list-item__image'} width={312} height={200} />
+      {imageSrc && imageAlt && (
+        <Image src={imageSrc} alt={imageAlt} className={'utrecht-card-list-item__image'} width={312} height={200} />
       )}
       {/* is we want a useArticle then add  an article*/}
       {useArticle ? (
@@ -78,8 +75,9 @@ export default function Home() {
       <CardListItem
         headinglevel={2}
         title="test"
-        image={{ url: '/business_corgi.jpeg', alt: 'test' }}
-        link={{ href: '#' }}
+        imageAlt="test"
+        imageSrc="/business_corgi.jpeg"
+        href="#"
         preHeading="optional testje"
       >
         test test test test test test test test test test test test test test test test
