@@ -14,6 +14,7 @@ import {
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
+
 import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
@@ -26,11 +27,10 @@ export default function home() {
         <UtrechtArticle>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
           <UtrechtLink href="./stap1">
-            {' '}
             <ArrowLeft />
             Vorige stap
           </UtrechtLink>
-          <UtrechtParagraph> Stap 2 van 4</UtrechtParagraph>
+          <UtrechtParagraph className="voorbeeld-paragraph-spacing-stapx"> Stap 2 van 4</UtrechtParagraph>
           <UtrechtHeading2>Uw gegevens</UtrechtHeading2>
           <UtrechtParagraph className="voorbeeld-paragraph-spacing">
             Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet met
