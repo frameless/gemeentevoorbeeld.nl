@@ -38,11 +38,9 @@ export const CardListItem: FC<CardListItemProps> = ({
 
   return (
     <li {...props} className={clsx('utrecht-card-list-item', props.className)} onClick={() => linkRef.current?.click()}>
-      {/* {url && <Image src={url} alt={alt} className={'utrecht-card-list-item__image'} width={312} height={200} />} */}
       {image && (
         <Image src={image.url} alt={image.alt} className={'utrecht-card-list-item__image'} width={312} height={200} />
       )}
-
       {/* is we want a useArticle then add  an article*/}
       {useArticle ? (
         <article>
