@@ -1,6 +1,6 @@
 'use client';
 
-import { Heading, Paragraph } from '@utrecht/component-library-react';
+import { Heading } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import React, { FC, HTMLAttributes } from 'react';
