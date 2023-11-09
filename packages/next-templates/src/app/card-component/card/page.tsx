@@ -1,6 +1,6 @@
 'use client';
 
-import { Heading, Link } from '@utrecht/component-library-react';
+import { Heading, Link, Paragraph } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
@@ -110,7 +110,11 @@ export default function Home() {
         cardRole={true}
         preHeading="optional testje"
       >
-        test test test test test test test test test test test test test test test test
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at ipsum rhoncus, rhoncus nisl eu, sollicitudin
+          erat. Duis posuere bibendum diam, semper iaculis mi varius in. Interdum et malesuada fames ac ante ipsum
+          primis in faucibus. Aliquam erat volutpat.
+        </Paragraph>
       </CardListItem>
       <CardListItem
         headingLevel={2}
@@ -122,7 +126,9 @@ export default function Home() {
         cardRole={true}
         href="#"
       >
-        test test test test test test test test test test test test test test test test
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at ipsum rhoncus, rhoncus nisl eu, sollicitudin
+        erat. Duis posuere bibendum diam, semper iaculis mi varius in. Interdum et malesuada fames ac ante ipsum primis
+        in faucibus. Aliquam erat volutpat.
       </CardListItem>
     </CardList>
   );
