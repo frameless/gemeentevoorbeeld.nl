@@ -22,7 +22,7 @@ export default function home() {
       <ExampleNavigation></ExampleNavigation>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtLink href="/wmebv/Inloggen">Home</UtrechtLink>
+          <UtrechtLink href="/wmebv">Home</UtrechtLink>
           <UtrechtHeading1>Contact met de gemeente</UtrechtHeading1>
           <UtrechtParagraph lead>
             Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden? Stel
