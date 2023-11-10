@@ -11,6 +11,7 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
+import { LinkButton } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import ArrowLeft from '@/app/styling/assets/ArrowLeft.svg';
@@ -24,9 +25,9 @@ export default function home() {
         <UtrechtArticle>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
           <UtrechtButtonGroup>
-            <UtrechtButtonLink className="voorbeeld-button-link" appearance="subtle-button" href="./stap1">
-              <ArrowLeft /> Vorige stap
-            </UtrechtButtonLink>
+            <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap1/">
+              <ArrowLeft /> Vorige Stap
+            </LinkButton>
           </UtrechtButtonGroup>
           <UtrechtParagraph>Stap 2 van 4</UtrechtParagraph>
           <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
@@ -117,7 +118,7 @@ export default function home() {
             value="0650618346"
           />
           <UtrechtButtonGroup className="utrecht-button-group--example-column">
-            <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap4" appearance="primary-action-button">
+            <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap3" appearance="primary-action-button">
               Volgende stap
             </UtrechtButtonLink>
             <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
