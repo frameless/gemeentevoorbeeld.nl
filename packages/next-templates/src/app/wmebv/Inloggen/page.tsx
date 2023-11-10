@@ -15,7 +15,14 @@ import {
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import { Fieldset, FieldsetLegend, FormField, FormLabel, RadioButton } from '@utrecht/component-library-react';
+import {
+  Fieldset,
+  FieldsetLegend,
+  FormField,
+  FormLabel,
+  RadioButton,
+  HeadingGroup,
+} from '@utrecht/component-library-react';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
@@ -32,8 +39,10 @@ export default function home() {
                 <ArrowLeft /> Terug
               </UtrechtLink>
             </UtrechtButtonGroup>
-            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
-            <UtrechtHeading2>Inloggen</UtrechtHeading2>
+            <HeadingGroup>
+              <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
+              <UtrechtHeading2>Inloggen</UtrechtHeading2>
+            </HeadingGroup>
             <UtrechtParagraph className="paragraph_digid">
               Dankzij uw DigiD kunt u overal makkelijk en veilig inloggen. Uw persoonlijke gegevens blijven goed
               beschermd. Wanneer u inlogt worden uw persoonlijke gegevens automatisch ingevuld.

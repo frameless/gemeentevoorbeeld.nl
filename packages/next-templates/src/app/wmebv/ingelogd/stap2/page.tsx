@@ -11,7 +11,7 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
-import { LinkButton } from '@utrecht/component-library-react';
+import { HeadingGroup, LinkButton, PreHeading } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
@@ -30,8 +30,10 @@ export default function home() {
                 <ArrowLeft /> Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
-            <UtrechtParagraph>Stap 2 van 4</UtrechtParagraph>
-            <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
+            <HeadingGroup>
+              <PreHeading>Stap 2 van 4</PreHeading>
+              <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
+            </HeadingGroup>
             <UtrechtParagraph>
               Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet
               met anderen gedeeld.

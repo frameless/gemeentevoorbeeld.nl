@@ -16,7 +16,13 @@ import {
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { FormLabel, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
+import {
+  FormLabel,
+  UnorderedList,
+  UnorderedListItem,
+  PreHeading,
+  HeadingGroup,
+} from '@utrecht/component-library-react';
 import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
@@ -32,8 +38,10 @@ export default function home() {
                 <ArrowLeft /> Terug
               </UtrechtLink>
             </UtrechtButtonGroup>
-            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
-            <UtrechtParagraph className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtParagraph>
+            <HeadingGroup>
+              <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
+              <PreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</PreHeading>
+            </HeadingGroup>
             <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
             <UtrechtForm>
               <FormLabel>Stel uw vraag</FormLabel>

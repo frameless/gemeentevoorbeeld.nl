@@ -15,7 +15,7 @@ import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHead
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
-import { LinkButton } from '@utrecht/component-library-react';
+import { LinkButton, PreHeading, HeadingGroup } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
@@ -32,8 +32,10 @@ export default function home() {
                 <ArrowLeft /> Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
-            <UtrechtParagraph className="voorbeeld-paragraph-spacing-stapx"> Stap 2 van 4</UtrechtParagraph>
-            <UtrechtHeading2>Uw gegevens</UtrechtHeading2>
+            <HeadingGroup>
+              <PreHeading>Stap 2 van 4</PreHeading>
+              <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
+            </HeadingGroup>
             <UtrechtParagraph className="voorbeeld-paragraph-spacing">
               Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet
               met anderen gedeeld.
