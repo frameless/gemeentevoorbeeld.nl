@@ -2,7 +2,7 @@
 import { Link, PageHeader } from '@utrecht/component-library-react';
 import Logo from '@/app/styling/assets/voorbeeld-header.svg';
 import React, { HTMLAttributes } from 'react';
-import '../ExampleHeaderFunnel/exampleheaderfunnel.css';
+import '../../ExampleHeader/ExampleHeaderFunnel/exampleheaderfunnel.css';
 import { UtrechtButtonLink } from '@utrecht/web-component-library-react';
 
 interface ExampleHeaderFunnelWmebvProps extends HTMLAttributes<HTMLDivElement> {}

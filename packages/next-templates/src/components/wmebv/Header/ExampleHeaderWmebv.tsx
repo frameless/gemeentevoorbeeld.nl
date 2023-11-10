@@ -6,8 +6,8 @@ import Xbold from '../../../app/styling/assets/x-bold.svg';
 import User from '../../../app/styling/assets/user-icon.svg';
 import React, { HTMLAttributes } from 'react';
 import '@utrecht/component-library-css';
-import '../header.css';
-import '../header.scss';
+import '../../ExampleHeader/header.scss';
+import '../../ExampleHeader/header.css';
 
 interface ExampleHeaderWmebvProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleHeaderWmebv = ({ ...props }: ExampleHeaderWmebvProps) => (
