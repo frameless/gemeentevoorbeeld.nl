@@ -17,6 +17,7 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
+import { LinkButton } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import ArrowLeft from '@/app/styling/assets/ArrowLeft.svg';
@@ -30,9 +31,9 @@ export default function home() {
         <UtrechtArticle>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
           <UtrechtButtonGroup>
-            <UtrechtButtonLink href="/stap2" appearance="subtle-button" className="voorbeeld-button-link">
-              <ArrowLeft /> Terug
-            </UtrechtButtonLink>
+            <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap2/">
+              <ArrowLeft /> Vorige Stap
+            </LinkButton>
           </UtrechtButtonGroup>
           <UtrechtParagraph lead>Stap 3 van 4</UtrechtParagraph>
           <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>

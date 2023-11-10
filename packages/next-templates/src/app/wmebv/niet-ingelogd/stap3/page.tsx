@@ -39,10 +39,12 @@ export default function home() {
           <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
           <UtrechtHeading3 className="voorbeeld-heading3-spacing">Uw vraag</UtrechtHeading3>
           <DataList>
-            <UtrechtLink href="./stap1">
-              <Pencil />
-              Aanpassen
-            </UtrechtLink>
+            <UtrechtButtonGroup>
+              <UtrechtLink href="./stap1">
+                <Pencil />
+                Aanpassen
+              </UtrechtLink>
+            </UtrechtButtonGroup>
             <DataListItem>
               <DataListKey className="voorbeeld-heading3-spacing">Uw vraag</DataListKey>
               <DataListValue>
@@ -58,10 +60,12 @@ export default function home() {
             </DataListItem>
           </DataList>
           <UtrechtHeading3 className="voorbeeld-heading3-spacing">Uw gegevens</UtrechtHeading3>
-          <UtrechtLink href="./stap2">
-            <Pencil />
-            Aanpassen
-          </UtrechtLink>
+          <UtrechtButtonGroup>
+            <UtrechtLink href="./stap2">
+              <Pencil />
+              Aanpassen
+            </UtrechtLink>
+          </UtrechtButtonGroup>
           <DataList className="voorbeeld-datalist-style">
             <DataListKey className="utrecht-data-list-label">Naam</DataListKey>
             <DataListValue className="utrecht-data-list-value">Jeroen van Drouwen</DataListValue>
