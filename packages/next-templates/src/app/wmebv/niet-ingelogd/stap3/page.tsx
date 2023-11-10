@@ -99,7 +99,7 @@ export default function home() {
           </DataList>
           <UtrechtButtonGroup className="utrecht-button-group--example-column">
             <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap4" appearance="primary-action-button">
-              Volgende stap
+              Versturen
             </UtrechtButtonLink>
             <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
               Opslaan en later verder

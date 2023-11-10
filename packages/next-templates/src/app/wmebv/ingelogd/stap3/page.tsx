@@ -83,22 +83,16 @@ export default function home() {
             <UtrechtDataListKey>Telefoonnummer</UtrechtDataListKey>
             <UtrechtDataListValue>0650618346</UtrechtDataListValue>
           </UtrechtDataList>
-          <UtrechtButtonGroup>
-            <div className="voorbeeld-button-group-spacing">
-              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap4" appearance="primary-action-button">
-                Versturen
-              </UtrechtButtonLink>
-              <UtrechtParagraph className="voorbeeld-link-spacing">
-                <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
-                  Opslaan en later verder
-                </UtrechtButtonLink>
-              </UtrechtParagraph>
-              <UtrechtParagraph className="voorbeeld-paragraph-end-space">
-                <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
-                  Sluit formulier
-                </UtrechtButtonLink>
-              </UtrechtParagraph>
-            </div>
+          <UtrechtButtonGroup className="utrecht-button-group--example-column">
+            <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap4" appearance="primary-action-button">
+              Versturen
+            </UtrechtButtonLink>
+            <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              Opslaan en later verder
+            </UtrechtButtonLink>
+            <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              Sluit formulier
+            </UtrechtButtonLink>
           </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
