@@ -17,10 +17,11 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
-import { LinkButton } from '@utrecht/component-library-react';
+import { LinkButton, PreHeading, HeadingGroup } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
+import Pencil from '../../../styling/assets/pencil-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
@@ -36,11 +37,17 @@ export default function home() {
                 <ArrowLeft /> Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
-            <UtrechtParagraph lead>Stap 3 van 4</UtrechtParagraph>
-            <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
-            <UtrechtHeading3>Uw vraag</UtrechtHeading3>
+            <HeadingGroup>
+              <PreHeading>Stap 3 van 4</PreHeading>
+              <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
+              <UtrechtHeading3>Uw vraag</UtrechtHeading3>
+            </HeadingGroup>
             <UtrechtDataList>
-              <UtrechtLink href="./stap1">Uw vraag aanpassen </UtrechtLink>
+              <UtrechtLink href="./stap1">
+                {' '}
+                <Pencil />
+                Aanpassen{' '}
+              </UtrechtLink>
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Uw vraag</UtrechtDataListKey>
                 <UtrechtDataListValue>
@@ -56,7 +63,10 @@ export default function home() {
               </UtrechtDataListItem>
             </UtrechtDataList>
             <UtrechtHeading3>Uw gegevens</UtrechtHeading3>
-            <UtrechtLink> Uw gegevens Aanpassen</UtrechtLink>
+            <UtrechtLink>
+              <Pencil />
+              Aanpassen
+            </UtrechtLink>
             <UtrechtDataList className="voorbeeld-datalist-style">
               <UtrechtDataListKey>Naam</UtrechtDataListKey>
               <UtrechtDataListValue>Jeroen van Drouwen</UtrechtDataListValue>
