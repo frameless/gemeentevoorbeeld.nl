@@ -31,15 +31,15 @@ export default function Home() {
     <Document>
       <Page>
         <PageContent>
-          <Heading1>Formulier producten-diensten-overzicht</Heading1>
+          <Heading1>Formulier Producten-diensten-overzicht</Heading1>
           <form
             onSubmit={handleSubmit((data) => {
               console.log(data);
             })}
           >
             <Heading2>Variant B</Heading2>
-            <FieldsetLegend>Artikel 2 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
-            <FieldsetLegend>Subartikel 1.</FieldsetLegend>
+            <FieldsetLegend className="article">Artikel 2 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
+            <FieldsetLegend className="subarticle">Subartikel 1.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.domain}>
                 <Paragraph>
@@ -122,8 +122,8 @@ export default function Home() {
                 <Paragraph>{errors.oneOrMoreArticles?.message}</Paragraph>
               </FormField>
             </Fieldset>
-            <FieldsetLegend>Artikel [...] Kanaal bezwaarschriften en klachten</FieldsetLegend>
-            <FieldsetLegend>Subartikel 1.</FieldsetLegend>
+            <FieldsetLegend className="article">Artikel [...] Kanaal bezwaarschriften en klachten</FieldsetLegend>
+            <FieldsetLegend className="subarticle">Subartikel 1.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel2}>
                 <Paragraph>
@@ -165,7 +165,7 @@ export default function Home() {
                 <Paragraph>{errors.oneOrMoreArticles2?.message}</Paragraph>
               </FormField>
             </Fieldset>
-            <FieldsetLegend>Subartikel 2.</FieldsetLegend>
+            <FieldsetLegend className="subarticle">Subartikel 2.</FieldsetLegend>
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel3}>
                 <Paragraph>
@@ -207,7 +207,7 @@ export default function Home() {
                 <Paragraph>{errors.oneOrMoreArticles3?.message}</Paragraph>
               </FormField>
             </Fieldset>
-            <FieldsetLegend>Artikel [...] Kanaal Omgevingswet en Dienstenwet</FieldsetLegend>
+            <FieldsetLegend className="article">Artikel [...] Kanaal Omgevingswet en Dienstenwet</FieldsetLegend>
             <Fieldset>
               <FormField invalid={!!errors.oneOrMoreArticles4}>
                 <Paragraph>

@@ -19,7 +19,15 @@ body {
 }
 
 .indent-fieldset {
-  margin-inline-start: 1em;
+  margin-inline-start: var(--voorbeeld-space-block-mouse);
+}
+
+.subarticle {
+  padding-top: var(--voorbeeld-space-block-mouse);
+}
+
+.article {
+  --utrecht-form-fieldset-legend-font-size: var(--voorbeeld-typography-font-size-xl);
 }
 
 .voorbeeld-theme {
