@@ -2,6 +2,7 @@
 
 import {
   UtrechtArticle,
+  UtrechtButtonGroup,
   UtrechtButtonLink,
   UtrechtDigidLogo,
   UtrechtHeading1,
@@ -25,9 +26,11 @@ export default function home() {
       <ExampleNavigation></ExampleNavigation>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtLink href="/wmebv/Intro">
-            <ArrowLeft /> Terug
-          </UtrechtLink>
+          <UtrechtButtonGroup>
+            <UtrechtLink href="/wmebv/Intro">
+              <ArrowLeft /> Terug
+            </UtrechtLink>
+          </UtrechtButtonGroup>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
           <UtrechtHeading2>Inloggen</UtrechtHeading2>
           <UtrechtParagraph className="paragraph_digid">

@@ -28,9 +28,11 @@ export default function home() {
       <ExampleNavigation />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtLink href="/wmebv/Inloggen">
-            <ArrowLeft /> Terug
-          </UtrechtLink>
+          <UtrechtButtonGroup>
+            <UtrechtLink href="/wmebv/Inloggen">
+              <ArrowLeft /> Terug
+            </UtrechtLink>
+          </UtrechtButtonGroup>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
           <UtrechtParagraph className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtParagraph>
           <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
@@ -55,22 +57,16 @@ export default function home() {
             </UtrechtButton>
             <UtrechtParagraph className="paragraph-space-bijlagen">Geen bestand gekozen</UtrechtParagraph>
           </div>
-          <UtrechtButtonGroup>
-            <div className="voorbeeld-button-group-spacing">
-              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap2" appearance="primary-action-button">
-                Volgende stap
-              </UtrechtButtonLink>
-              <UtrechtParagraph className="voorbeeld-link-spacing">
-                <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
-                  Opslaan en later verder
-                </UtrechtButtonLink>
-              </UtrechtParagraph>
-              <UtrechtParagraph className="voorbeeld-paragraph-end-space">
-                <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
-                  Sluit formulier
-                </UtrechtButtonLink>
-              </UtrechtParagraph>
-            </div>
+          <UtrechtButtonGroup className="utrecht-button-group--example-column">
+            <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap2" appearance="primary-action-button">
+              Volgende stap
+            </UtrechtButtonLink>
+            <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              Opslaan en later verder
+            </UtrechtButtonLink>
+            <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              Sluit formulier
+            </UtrechtButtonLink>
           </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>

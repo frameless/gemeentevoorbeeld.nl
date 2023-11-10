@@ -106,20 +106,16 @@ export default function home() {
             label="Telefoonnummer"
             type="tel"
           />
-          <UtrechtButtonGroup>
-            <div className="voorbeeld-button-group-spacing">
-              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap3" appearance="primary-action-button">
-                Volgende stap
-              </UtrechtButtonLink>
-              <UtrechtParagraph className="voorbeeld-link-spacing">
-                <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
-                  Opslaan en later verder
-                </UtrechtButtonLink>
-              </UtrechtParagraph>
-              <UtrechtParagraph className="voorbeeld-paragraph-end-space">
-                <LinkButton className="voorbeeld-button-link">Sluit formulier</LinkButton>
-              </UtrechtParagraph>
-            </div>
+          <UtrechtButtonGroup className="utrecht-button-group--example-column">
+            <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap3" appearance="primary-action-button">
+              Volgende stap
+            </UtrechtButtonLink>
+            <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              Opslaan en later verder
+            </UtrechtButtonLink>
+            <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              Sluit formulier
+            </UtrechtButtonLink>
           </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
