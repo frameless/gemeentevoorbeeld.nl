@@ -7,8 +7,6 @@ import {
   UtrechtFormFieldTextbox,
   UtrechtHeading1,
   UtrechtHeading2,
-  UtrechtLink,
-  UtrechtLinkButton,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
