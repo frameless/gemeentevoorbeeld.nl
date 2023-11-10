@@ -44,9 +44,8 @@ export default function home() {
             </HeadingGroup>
             <UtrechtDataList>
               <UtrechtLink href="./stap1">
-                {' '}
                 <Pencil />
-                Aanpassen{' '}
+                Aanpassen
               </UtrechtLink>
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Uw vraag</UtrechtDataListKey>
