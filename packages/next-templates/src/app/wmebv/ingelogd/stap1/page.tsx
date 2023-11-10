@@ -18,7 +18,7 @@ import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHead
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { FormLabel, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
-import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
+import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
