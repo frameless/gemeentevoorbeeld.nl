@@ -8,15 +8,13 @@ import {
   UtrechtHeading1,
   UtrechtButtonGroup,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
+import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv />
-      <ExampleNavigation />
       <UtrechtPageContent>
         <UtrechtArticle>
           <UtrechtHeading1>Doe alsof u inlogt met DigiD</UtrechtHeading1>

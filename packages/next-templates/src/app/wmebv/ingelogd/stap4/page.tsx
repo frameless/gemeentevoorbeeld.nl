@@ -13,14 +13,19 @@ import {
   UtrechtHeading2,
   UtrechtUrlData,
 } from '@utrecht/web-component-library-react';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { Strong, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import { IconPrinter, IconCircleCheck, IconFileText } from '@tabler/icons-react';
-import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import '@/app/styling/css/wmebv.css';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 
 export default function home() {
+  const userdata = {
+    username: 'J. van Drouwen',
+    userURL: '#',
+  };
+
   const data = {
     code: '230829-1118-59dc',
     email: 'j.vandrouwen@gmail.com',
@@ -30,7 +35,7 @@ export default function home() {
 
   return (
     <UtrechtPage>
-      <ExampleHeaderFunnelWmebv />
+      <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">
@@ -81,7 +86,7 @@ export default function home() {
           </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

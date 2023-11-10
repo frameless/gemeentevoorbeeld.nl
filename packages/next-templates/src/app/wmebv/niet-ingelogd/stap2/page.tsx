@@ -15,12 +15,10 @@ import {
   UtrechtParagraph,
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { IconArrowLeft } from '@tabler/icons-react';
 import { LinkButton } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
 import { useId } from 'react';
-import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { useForm } from 'react-hook-form';
 import {
   emailValidation,
@@ -33,6 +31,8 @@ import {
   streetValidation,
 } from '@/utils/validation';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 
 export default function home() {
   const data = {
@@ -240,7 +240,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

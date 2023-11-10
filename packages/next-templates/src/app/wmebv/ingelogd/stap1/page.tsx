@@ -16,16 +16,20 @@ import {
   UtrechtParagraph,
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { UnorderedList, UnorderedListItem, LinkButton } from '@utrecht/component-library-react';
-import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { useForm } from 'react-hook-form';
 import { messageValidation } from '@/utils/validation';
 import { IconArrowLeft } from '@tabler/icons-react';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '@/app/wmebv/SessionData';
 import '@/app/styling/css/wmebv.css';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 
 export default function home() {
+  const userdata = {
+    username: 'J. van Drouwen',
+    userURL: '#',
+  };
   const [storedData, _, patchStoredData, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {
     message: '',
   });
@@ -50,7 +54,7 @@ export default function home() {
 
   return (
     <UtrechtPage>
-      <ExampleHeaderFunnelWmebv />
+      <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <form method="post" action="/api/wmebv/signed-in/step1" onSubmit={handleSubmit(onSubmit)}>
@@ -117,7 +121,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

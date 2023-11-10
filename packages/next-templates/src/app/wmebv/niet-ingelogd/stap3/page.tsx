@@ -21,11 +21,11 @@ import {
   UtrechtUrlData,
 } from '@utrecht/web-component-library-react';
 import { LinkButton, PreserveData } from '@utrecht/component-library-react';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { IconArrowLeft, IconPencil } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
-import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 
 export default function home() {
   const [storedData, _, __, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {});
@@ -139,7 +139,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

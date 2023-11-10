@@ -1,7 +1,7 @@
 import { Link } from '@utrecht/component-library-react';
 import React, { HTMLAttributes } from 'react';
-import { ExampleNavigation } from '../ExampleNavigation';
-import '../Navigation.css';
+import { ExampleNavigation } from '../../ExampleNavigation/ExampleNavigation';
+import './Navigation.scss';
 
 interface ExampleNavigationWmebvProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleNavigationWmebv = ({ ...props }: ExampleNavigationWmebvProps) => (
@@ -16,4 +16,4 @@ export const ExampleNavigationWmebv = ({ ...props }: ExampleNavigationWmebvProps
   ></ExampleNavigation>
 );
 
-ExampleNavigationWmebv.displayName = 'ExampleHeaderWmebv';
+ExampleNavigationWmebv.displayName = 'ExampleNavigationWmebv';

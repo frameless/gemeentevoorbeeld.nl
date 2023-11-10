@@ -13,12 +13,12 @@ import {
   UtrechtHeading2,
   UtrechtUrlData,
 } from '@utrecht/web-component-library-react';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { Strong, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import { IconPrinter, IconCircleCheck, IconFileText } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
-import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 
 export default function home() {
   const data = {
@@ -80,7 +80,7 @@ export default function home() {
           </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

@@ -15,9 +15,7 @@ import {
   UtrechtParagraph,
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import { LinkButton, Paragraph } from '@utrecht/component-library-react';
-import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { LinkButton } from '@utrecht/component-library-react';
 import { useId } from 'react';
 import { useForm } from 'react-hook-form';
 import {
@@ -33,8 +31,14 @@ import {
 import { IconArrowLeft } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 
 export default function home() {
+  const userdata = {
+    username: 'J. van Drouwen',
+    userURL: '#',
+  };
   const data = {
     name: 'Jeroen van Drouwen',
     street: 'Laan der Voorbeelden',
@@ -80,7 +84,7 @@ export default function home() {
 
   return (
     <UtrechtPage>
-      <ExampleHeaderFunnelWmebv />
+      <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent>
         <UtrechtArticle>
           <form method="post" action="/api/wmebv/signed-in/step2" onSubmit={handleSubmit(onSubmit)}>
@@ -161,7 +165,7 @@ export default function home() {
               readOnly={true}
               invalid={!!errors[houseNumberSuffixField.name]}
             >
-              <Paragraph slot="description">Niet verplicht.</Paragraph>
+              <UtrechtParagraph slot="description">Niet verplicht.</UtrechtParagraph>
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[houseNumberSuffixField.name]?.message)}
               </UtrechtFormFieldErrorMessage>
@@ -217,7 +221,7 @@ export default function home() {
               type="tel"
               invalid={!!errors[phoneField.name]}
             >
-              <Paragraph slot="description">Niet verplicht.</Paragraph>
+              <UtrechtParagraph slot="description">Niet verplicht.</UtrechtParagraph>
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[phoneField.name]?.message)}
               </UtrechtFormFieldErrorMessage>
@@ -250,7 +254,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }
