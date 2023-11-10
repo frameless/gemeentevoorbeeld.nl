@@ -31,10 +31,10 @@ export const ExampleHeaderWmebv = ({ ...props }: ExampleHeaderWmebvProps) => (
       <div className="example--header-items">
         <div className="example--header-links-container">
           <Link className="example--header-links" href="#">
-            <User className="example--header-user-icon" /> Mijn omgeving
+            <User className="example--header-user-icon" /> Contact
           </Link>
           <Link className="example--header-links" href="#">
-            Contact
+            Mijn Omgeving
           </Link>
         </div>
       </div>
