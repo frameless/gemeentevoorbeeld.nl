@@ -2,7 +2,6 @@
 
 import {
   UtrechtArticle,
-  UtrechtButton,
   UtrechtButtonGroup,
   UtrechtHeading1,
   UtrechtHeading2,
@@ -11,9 +10,9 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
+import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { ExampleNavigationWmebv } from '@/components/wmebv/Navigation/ExampleNavigationWmebv';
 import '@/app/styling/css/wmebv.css';
 import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
 
@@ -21,7 +20,7 @@ export default function home() {
   return (
     <UtrechtPage>
       <ExampleHeaderWmebv />
-      <ExampleNavigation />
+      <ExampleNavigationWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <BreadcrumbNav label="Kruimelpad">
@@ -62,7 +61,7 @@ export default function home() {
           </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

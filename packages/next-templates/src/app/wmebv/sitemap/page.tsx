@@ -9,11 +9,11 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { Table, TableBody, TableCell, TableHeader, TableHeaderCell, TableRow } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
+import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
 
 export default function home() {
   return (

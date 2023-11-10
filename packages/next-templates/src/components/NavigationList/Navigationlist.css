@@ -5,8 +5,6 @@
 }
 
 .voorbeeld-navigation-list__item {
-  --utrecht-paragraph-color: var(--voorbeeld-color-white);
-
   line-height: 2em;
 }
 

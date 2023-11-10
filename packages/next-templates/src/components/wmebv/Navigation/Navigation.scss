@@ -20,8 +20,8 @@
   justify-content: center;
 
   .utrecht-link-button {
-    --utrecht-button-font-weight: initial; /* override `utrecht-link-button` style */
-    /* font-weight: inherit; */
+    --utrecht-button-font-weight: var(--voorbeeld-typography-font-weight-bold)
+      /* override `utrecht-link-button` style */ /* font-weight: inherit; */;
   }
 
   @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
@@ -31,7 +31,6 @@
     border-block-start-style: solid;
     border-block-end-width: 1px;
     border-block-start-width: 1px;
-    /* add padding to make room for contrasting focus ring */
     padding-block-start: calc(var(--utrecht-focus-outline-width) * 2);
     padding-block-end: calc(var(--utrecht-focus-outline-width) * 2);
   }

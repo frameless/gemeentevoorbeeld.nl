@@ -16,8 +16,6 @@ import {
   UtrechtParagraph,
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import {
   FormLabel,
   UnorderedList,
@@ -33,6 +31,8 @@ import { messageValidation } from '@/utils/validation';
 import { IconArrowLeft } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 
 export default function home() {
   const [storedData, _, patchStoredData, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {
@@ -51,7 +51,7 @@ export default function home() {
 
   return (
     <UtrechtPage>
-      <ExampleHeaderFunnel />
+      <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <form method="post" action="/api/wmebv/anonymous/step1" onSubmit={saveFormData}>
@@ -149,7 +149,7 @@ export default function home() {
           <form name="empty"></form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

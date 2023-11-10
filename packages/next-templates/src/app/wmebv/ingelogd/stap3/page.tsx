@@ -20,17 +20,21 @@ import {
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
 import { LinkButton, PreserveData, URLData } from '@utrecht/component-library-react';
-import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { IconArrowLeft, IconPencil } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 
 export default function home() {
+  const userdata = {
+    username: 'J. van Drouwen',
+    userURL: '#',
+  };
   const [storedData, _, __, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {});
   return (
     <UtrechtPage>
-      <ExampleHeaderFunnelWmebv />
+      <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent>
         <UtrechtArticle>
           <form method="post" action="/api/wmebv/signed-in/step3">
@@ -137,7 +141,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }
