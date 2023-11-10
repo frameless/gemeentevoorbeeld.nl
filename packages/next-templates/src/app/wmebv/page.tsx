@@ -57,6 +57,31 @@ export default function home() {
           <UtrechtButtonGroup>
             <UtrechtLink href="#">Start voorstelformulier</UtrechtLink>
           </UtrechtButtonGroup>
+          <form action="Intro" method="post">
+            <UtrechtHeading1>Contact met de gemeente</UtrechtHeading1>
+            <UtrechtParagraph lead>
+              Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden?
+              Stel dan uw vraag via het contactformulier.
+            </UtrechtParagraph>
+            <UtrechtHeading2>Vraag</UtrechtHeading2>
+            <UtrechtParagraph>Gebruik het contactformulier om een vraag te stellen.</UtrechtParagraph>
+            <UtrechtParagraph>
+              <UtrechtLink href="/wmebv/Intro">Start contactformulier</UtrechtLink>
+            </UtrechtParagraph>
+            <UtrechtHeading2>Klacht</UtrechtHeading2>
+            <UtrechtParagraph>Gebruik het klachtenformulier om een klacht in te dienen.</UtrechtParagraph>
+            <UtrechtLink href="#"> Start klachtenformulier</UtrechtLink>
+            <UtrechtHeading2>Melding openbare ruimte en overlast</UtrechtHeading2>
+            <UtrechtParagraph>
+              Ziet u op straat of in het park iets dat stuk is of onveilig is? Gebruik dan het meldingformulier.
+            </UtrechtParagraph>
+            <UtrechtLink href="#"> Start meldingformulier</UtrechtLink>
+            <UtrechtHeading2>Idee of voorstel</UtrechtHeading2>
+            <UtrechtParagraph>
+              Heeft u een idee of heeft u een voorstel? Gebruik dan het voorstelformulier.
+            </UtrechtParagraph>
+            <UtrechtLink href="#">Start voorstelformulier</UtrechtLink>
+          </form>
         </UtrechtArticle>
       </UtrechtPageContent>
       <ExampleFooter />
