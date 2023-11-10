@@ -12,7 +12,15 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
-import { DataList, DataListItem, DataListKey, DataListValue, LinkButton } from '@utrecht/component-library-react';
+import {
+  DataList,
+  DataListItem,
+  DataListKey,
+  DataListValue,
+  LinkButton,
+  PreHeading,
+  HeadingGroup,
+} from '@utrecht/component-library-react';
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
@@ -34,10 +42,11 @@ export default function home() {
                 <ArrowLeft /> Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
-            <UtrechtParagraph lead className="voorbeeld-paragraph-spacing-stapx">
-              Stap 3 van 4
-            </UtrechtParagraph>
-            <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
+            <HeadingGroup>
+              <PreHeading>Stap 3 van 4</PreHeading>
+              <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
+              <UtrechtHeading3>Uw vraag</UtrechtHeading3>
+            </HeadingGroup>
             <UtrechtHeading3 className="voorbeeld-heading3-spacing">Uw vraag</UtrechtHeading3>
             <DataList>
               <UtrechtButtonGroup>
