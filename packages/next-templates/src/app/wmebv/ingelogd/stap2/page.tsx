@@ -12,7 +12,7 @@ import {
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
 import { HeadingGroup, LinkButton, PreHeading } from '@utrecht/component-library-react';
-import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';

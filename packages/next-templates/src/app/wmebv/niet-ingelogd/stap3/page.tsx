@@ -21,7 +21,7 @@ import {
   PreHeading,
   HeadingGroup,
 } from '@utrecht/component-library-react';
-import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
+import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import Pencil from '../../../styling/assets/pencil-icon.svg';
