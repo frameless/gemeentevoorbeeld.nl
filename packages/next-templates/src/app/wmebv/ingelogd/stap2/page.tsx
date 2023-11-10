@@ -14,7 +14,7 @@ import {
 import { LinkButton } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import ArrowLeft from '@/app/styling/assets/ArrowLeft.svg';
+import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
