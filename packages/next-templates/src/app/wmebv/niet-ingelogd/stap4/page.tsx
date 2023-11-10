@@ -9,6 +9,7 @@ import {
   UtrechtParagraph,
   UtrechtLink,
   UtrechtSpotlightSection,
+  UtrechtButtonGroup,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
@@ -41,15 +42,17 @@ export default function home() {
               De afdeling Vraagbaak gaat met uw vraag aan de slag.
             </UnorderedListItem>
           </UnorderedList>
-          <UtrechtLink className="link" href="#">
-            <Printer /> Print uw vraag
-          </UtrechtLink>
-          <UtrechtLink className="link" href="#">
-            <FileText /> Download uw vraag als PDF
-          </UtrechtLink>
-          <UtrechtLink className="link" href="#">
-            Terug naar voorbeeld.nl
-          </UtrechtLink>
+          <UtrechtButtonGroup className="utrecht-button-group--example-column">
+            <UtrechtLink className="link" href="#">
+              <Printer /> Print uw vraag
+            </UtrechtLink>
+            <UtrechtLink className="link" href="#">
+              <FileText /> Download uw vraag als PDF
+            </UtrechtLink>
+            <UtrechtLink className="link" href="#">
+              Terug naar voorbeeld.nl
+            </UtrechtLink>
+          </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
       <ExampleFooter />

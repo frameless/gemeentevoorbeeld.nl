@@ -28,9 +28,11 @@ export default function home() {
       <ExampleNavigation />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtLink href="/wmebv/Inloggen">
-            <ArrowLeft /> Terug
-          </UtrechtLink>
+          <UtrechtButtonGroup>
+            <UtrechtLink href="/wmebv/Inloggen">
+              <ArrowLeft /> Terug
+            </UtrechtLink>
+          </UtrechtButtonGroup>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
           <UtrechtParagraph className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtParagraph>
           <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>

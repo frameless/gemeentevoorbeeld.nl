@@ -6,6 +6,7 @@ import {
   UtrechtPageContent,
   UtrechtButtonLink,
   UtrechtHeading1,
+  UtrechtButtonGroup,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
@@ -19,9 +20,11 @@ export default function home() {
       <UtrechtPageContent>
         <UtrechtArticle>
           <UtrechtHeading1>Doe alsof u inlogt met DigiD</UtrechtHeading1>
-          <UtrechtButtonLink href="./niet-ingelogd/stap1" appearance="primary-action-button">
-            Inloggen
-          </UtrechtButtonLink>
+          <UtrechtButtonGroup>
+            <UtrechtButtonLink href="./niet-ingelogd/stap1" appearance="primary-action-button">
+              Inloggen
+            </UtrechtButtonLink>
+          </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
     </UtrechtPage>

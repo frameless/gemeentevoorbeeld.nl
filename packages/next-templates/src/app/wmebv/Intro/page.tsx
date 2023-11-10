@@ -25,9 +25,11 @@ export default function home() {
       <ExampleNavigation />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtLink href="/wmebv">
-            <ArrowLeft /> Terug
-          </UtrechtLink>
+          <UtrechtButtonGroup>
+            <UtrechtLink href="/wmebv">
+              <ArrowLeft /> Terug
+            </UtrechtLink>
+          </UtrechtButtonGroup>
           <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
           <UtrechtParagraph>
             Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden? Stel
