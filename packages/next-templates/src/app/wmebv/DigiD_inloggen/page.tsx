@@ -15,13 +15,11 @@ import '@/app/styling/css/wmebv.css';
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv />
-      <ExampleNavigation />
       <UtrechtPageContent>
         <UtrechtArticle>
           <UtrechtHeading1>Doe alsof u inlogt met DigiD</UtrechtHeading1>
           <UtrechtButtonGroup>
-            <UtrechtButtonLink href="./niet-ingelogd/stap1" appearance="primary-action-button">
+            <UtrechtButtonLink href="./ingelogd/stap1" appearance="primary-action-button">
               Inloggen
             </UtrechtButtonLink>
           </UtrechtButtonGroup>

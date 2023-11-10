@@ -12,7 +12,7 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
+import { ExampleHeaderFunnelWmebvEmpty } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebvEmpty';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import {
@@ -29,8 +29,7 @@ import '@/app/styling/css/wmebv.css';
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv></ExampleHeaderWmebv>
-      <ExampleNavigation></ExampleNavigation>
+      <ExampleHeaderFunnelWmebvEmpty />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <form action="./ingelogd/stap1">

@@ -11,7 +11,7 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
+import { ExampleHeaderFunnelWmebvEmpty } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebvEmpty';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
@@ -21,8 +21,7 @@ import '@/app/styling/css/wmebv.css';
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv />
-      <ExampleNavigation />
+      <ExampleHeaderFunnelWmebvEmpty />
       <UtrechtPageContent>
         <UtrechtArticle>
           <form action="./stap3" method="post">

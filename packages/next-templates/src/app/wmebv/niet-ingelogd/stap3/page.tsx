@@ -21,7 +21,7 @@ import {
   PreHeading,
   HeadingGroup,
 } from '@utrecht/component-library-react';
-import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
+import { ExampleHeaderFunnelWmebvEmpty } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebvEmpty';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import Pencil from '../../../styling/assets/pencil-icon.svg';
@@ -31,8 +31,7 @@ import '@/app/styling/css/wmebv.css';
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv />
-      <ExampleNavigation />
+      <ExampleHeaderFunnelWmebvEmpty />
       <UtrechtPageContent>
         <UtrechtArticle>
           <form action="./stap4" method="post">

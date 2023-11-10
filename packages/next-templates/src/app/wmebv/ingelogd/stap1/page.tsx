@@ -64,26 +64,16 @@ export default function home() {
               </UtrechtButton>
               <UtrechtParagraph className="paragraph-space-bijlagen">Geen bestand gekozen</UtrechtParagraph>
             </div>
-            <UtrechtButtonGroup>
-              <div className="voorbeeld-button-group-spacing">
-                <UtrechtButtonLink
-                  className="voorbeeld-button-spacing"
-                  href="./stap2"
-                  appearance="primary-action-button"
-                >
-                  Volgende stap
-                </UtrechtButtonLink>
-                <UtrechtParagraph className="voorbeeld-link-spacing">
-                  <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
-                    Opslaan en later verder
-                  </UtrechtButtonLink>
-                </UtrechtParagraph>
-                <UtrechtParagraph className="voorbeeld-paragraph-end-space">
-                  <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
-                    Sluit formulier
-                  </UtrechtButtonLink>
-                </UtrechtParagraph>
-              </div>
+            <UtrechtButtonGroup className="utrecht-button-group--example-column">
+              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap2" appearance="primary-action-button">
+                Volgende stap
+              </UtrechtButtonLink>
+              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+                Opslaan en later verder
+              </UtrechtButtonLink>
+              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+                Sluit formulier
+              </UtrechtButtonLink>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>
