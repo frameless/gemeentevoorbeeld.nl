@@ -49,11 +49,6 @@ export default function home() {
             <UnorderedListItem className="voorbeeld-unordered-list-item">
               De afdeling Vraagbaak gaat met uw vraag aan de slag.
             </UnorderedListItem>
-            <UnorderedListItem className="voorbeeld-unordered-list-item">
-              U wordt per email op de hoogte gehouden maar kunt de voortgang ook inzien binnen uw
-              <span className="mijn-omgeving"> mijn omgeving</span>.
-            </UnorderedListItem>
-            <UnorderedListItem>De afdeling Vraagbaak gaat met uw vraag aan de slag.</UnorderedListItem>
           </UnorderedList>
           <UtrechtLink className="link">
             <Printer /> Print uw vraag
