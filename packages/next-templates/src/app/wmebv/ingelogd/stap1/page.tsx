@@ -14,9 +14,8 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import {
   FormLabel,
   PreHeading,
@@ -30,8 +29,7 @@ import '@/app/styling/css/wmebv.css';
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv />
-      <ExampleNavigation />
+      <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <form action="./stap2" method="post">
@@ -90,7 +88,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

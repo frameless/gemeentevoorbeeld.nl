@@ -13,7 +13,7 @@ import {
 } from '@utrecht/web-component-library-react';
 import { HeadingGroup, LinkButton, PreHeading } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
@@ -134,7 +134,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

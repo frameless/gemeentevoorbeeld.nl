@@ -2,7 +2,6 @@
 
 import {
   UtrechtArticle,
-  UtrechtButton,
   UtrechtButtonGroup,
   UtrechtButtonLink,
   UtrechtDataList,
@@ -19,7 +18,7 @@ import {
 } from '@utrecht/web-component-library-react';
 import { LinkButton, PreHeading, HeadingGroup } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import Pencil from '../../../styling/assets/pencil-icon.svg';
 import '@/app/styling/css/wmebv.css';
@@ -108,7 +107,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

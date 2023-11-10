@@ -22,7 +22,7 @@ import {
   HeadingGroup,
 } from '@utrecht/component-library-react';
 import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import Pencil from '../../../styling/assets/pencil-icon.svg';
 import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
@@ -125,7 +125,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

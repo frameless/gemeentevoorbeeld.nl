@@ -11,11 +11,10 @@ import {
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
-
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
@@ -59,7 +58,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter></ExampleFooter>
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

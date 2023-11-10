@@ -12,7 +12,7 @@ import {
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import { LinkButton, PreHeading, HeadingGroup } from '@utrecht/component-library-react';
@@ -123,7 +123,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

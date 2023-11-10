@@ -14,8 +14,6 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import {
   FormLabel,
   UnorderedList,
@@ -23,6 +21,8 @@ import {
   PreHeading,
   HeadingGroup,
 } from '@utrecht/component-library-react';
+import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
@@ -78,7 +78,7 @@ export default function home() {
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

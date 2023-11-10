@@ -2,7 +2,6 @@
 
 import {
   UtrechtArticle,
-  UtrechtButtonLink,
   UtrechtHeading1,
   UtrechtPage,
   UtrechtPageContent,
@@ -11,9 +10,8 @@ import {
   UtrechtSpotlightSection,
   UtrechtButtonGroup,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import Printer from '@/app/styling/assets/printer-icon.svg';
 import FileText from '@/app/styling/assets/filetext-icon.svg';
@@ -23,8 +21,7 @@ import '@/app/styling/css/wmebv.css';
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv />
-      <ExampleNavigation />
+      <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <UtrechtSpotlightSection className="utrecht-spotlight-section-wmebv">
@@ -55,7 +52,7 @@ export default function home() {
           </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }

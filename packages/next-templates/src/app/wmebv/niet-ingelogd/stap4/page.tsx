@@ -2,7 +2,6 @@
 
 import {
   UtrechtArticle,
-  UtrechtButtonLink,
   UtrechtHeading1,
   UtrechtPage,
   UtrechtPageContent,
@@ -12,7 +11,7 @@ import {
   UtrechtButtonGroup,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
-import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import Printer from '@/app/styling/assets/printer-icon.svg';
@@ -55,7 +54,7 @@ export default function home() {
           </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>
-      <ExampleFooter />
+      <ExampleFooterWmebv />
     </UtrechtPage>
   );
 }
