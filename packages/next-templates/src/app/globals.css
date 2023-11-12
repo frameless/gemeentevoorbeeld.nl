@@ -144,3 +144,12 @@ utrecht-page-content {
 .utrecht-button-group--example-column {
   flex-direction: column;
 }
+
+@media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
+  .utrecht-page-footer,
+  utrecht-page-footer {
+    border-block-start-color: currentColor;
+    border-block-start-style: solid;
+    border-block-start-width: 1px;
+  }
+}
