@@ -2,6 +2,7 @@
 
 import {
   UtrechtArticle,
+  UtrechtButton,
   UtrechtButtonGroup,
   UtrechtButtonLink,
   UtrechtDigidLogo,
@@ -33,7 +34,7 @@ export default function home() {
       <ExampleNavigation></ExampleNavigation>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <form action="./ingelogd/stap1">
+          <form method="POST" action="/api/choose-form">
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Intro">
                 <ArrowLeft /> Terug
@@ -60,8 +61,8 @@ export default function home() {
                     <RadioButton
                       className="utrecht-form-field__input"
                       id="800b7f3f-5048-4dcc-8f23-d04fa6ca4199"
-                      name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                      value="1"
+                      name="formType"
+                      value="ingelogd"
                     />
                     Ja
                   </FormLabel>
@@ -77,17 +78,19 @@ export default function home() {
                     <RadioButton
                       className="utrecht-form-field__input"
                       id="fbc03e63-42c2-46e3-9acc-183fa64c6dcd"
-                      name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                      value="2"
+                      name="formType"
+                      value="niet-ingelogd"
                     />
                     Nee
                   </FormLabel>
                 </UtrechtParagraph>
               </FormField>
             </Fieldset>
-            <UtrechtButtonLink href="./ingelogd/stap1" appearance="primary-action-button">
-              Doorgaan
-            </UtrechtButtonLink>
+            <UtrechtButtonGroup>
+              <UtrechtButton type="submit" appearance="primary-action-button">
+                Doorgaan
+              </UtrechtButton>
+            </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>
