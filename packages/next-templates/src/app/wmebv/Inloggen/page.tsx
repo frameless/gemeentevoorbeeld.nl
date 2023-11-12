@@ -4,7 +4,6 @@ import {
   UtrechtArticle,
   UtrechtButton,
   UtrechtButtonGroup,
-  UtrechtButtonLink,
   UtrechtDigidLogo,
   UtrechtHeading1,
   UtrechtHeading2,
@@ -34,7 +33,7 @@ export default function home() {
       <ExampleNavigation></ExampleNavigation>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <form method="POST" action="/api/choose-form">
+          <form method="POST" action="/api/wmebv/choose-form">
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Intro">
                 <ArrowLeft /> Terug
@@ -61,8 +60,8 @@ export default function home() {
                     <RadioButton
                       className="utrecht-form-field__input"
                       id="800b7f3f-5048-4dcc-8f23-d04fa6ca4199"
-                      name="formType"
-                      value="ingelogd"
+                      name="loggedIn"
+                      value="true"
                     />
                     Ja
                   </FormLabel>
@@ -78,8 +77,8 @@ export default function home() {
                     <RadioButton
                       className="utrecht-form-field__input"
                       id="fbc03e63-42c2-46e3-9acc-183fa64c6dcd"
-                      name="formType"
-                      value="niet-ingelogd"
+                      name="loggedIn"
+                      value="false"
                     />
                     Nee
                   </FormLabel>

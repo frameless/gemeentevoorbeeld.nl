@@ -3,12 +3,13 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
-    const formType = formData.get('formType');
 
-    if (formType) {
-      return Response.redirect(new URL(`/wmebv/${formType}/stap1`, request.nextUrl.origin));
-    }
-    return NextResponse.json({ error: 'Internal Server Error' });
+    return Response.redirect(
+      new URL(
+        `/wmebv/${formData.get('loggedIn') === 'true' ? 'DigiD-inloggen' : 'niet-ingelogd/stap1'}`,
+        request.nextUrl.origin,
+      ),
+    );
   } catch (error) {
     console.log(error);
 

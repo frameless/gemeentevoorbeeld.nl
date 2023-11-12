@@ -21,7 +21,7 @@ export default function home() {
         <UtrechtArticle>
           <UtrechtHeading1>Doe alsof u inlogt met DigiD</UtrechtHeading1>
           <UtrechtButtonGroup>
-            <UtrechtButtonLink href="./niet-ingelogd/stap1" appearance="primary-action-button">
+            <UtrechtButtonLink href="./ingelogd/stap1" appearance="primary-action-button">
               Inloggen
             </UtrechtButtonLink>
           </UtrechtButtonGroup>
