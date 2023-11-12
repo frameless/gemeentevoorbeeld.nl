@@ -22,10 +22,6 @@
   --utrecht-icon-size: 32px;
 }
 
-.voorbeeld-unordered-list-item {
-  --utrecht-unordered-list-item-margin: 12px;
-}
-
 .bold-mail {
   font-weight: bold;
 }

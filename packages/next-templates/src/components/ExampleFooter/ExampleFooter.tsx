@@ -12,7 +12,7 @@ export const ExampleFooter = ({ ...props }: ExampleFooterProps) => (
       <div className="example-link-list-container" {...props}>
         <Logo className="example--footer-logo" />
         <NavigationList>
-          <NavigationListItem className="utrecht-link-list__item" href="#" label="Contact" />
+          <NavigationListItem className="utrecht-link-list__item" href="/wmebv/" label="Contact" />
           <NavigationListItem className="utrecht-link-list__item" href="#" label="RSS" />
         </NavigationList>
         <NavigationList>

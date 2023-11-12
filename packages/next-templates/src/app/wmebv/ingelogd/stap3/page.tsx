@@ -12,12 +12,15 @@ import {
   UtrechtHeading1,
   UtrechtHeading2,
   UtrechtHeading3,
+  UtrechtHeadingGroup,
+  UtrechtIcon,
   UtrechtLink,
+  UtrechtMultilineData,
   UtrechtPage,
   UtrechtPageContent,
-  UtrechtParagraph,
+  UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import { LinkButton, PreHeading, HeadingGroup } from '@utrecht/component-library-react';
+import { LinkButton, PreserveData, URLData } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
@@ -25,85 +28,121 @@ import Pencil from '../../../styling/assets/pencil-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
+  const data = {
+    message: `Beste meneer of mevrouw,
+
+Ik heb 8 weken geleden een aanvraag voor bijstandsuitkering gedaan maar ik heb nog steeds niets
+gehoord. Volgens mij had u allang op mijn aanvraag moeten beslissen.
+
+Met vriendelijke groet, Jeroen van Drouwen`,
+    name: 'Jeroen van Drouwen',
+    street: 'Laan der Voorbeelden',
+    houseNumber: '99',
+    houseNumberSuffix: '',
+    postalCode: '1024 VP',
+    city: 'Voorbeeld',
+    email: 'j.vandrouwen@gmail.com',
+    tel: '0650618346',
+  };
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent>
         <UtrechtArticle>
           <form action="./stap4" method="post">
-            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
               <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap2/">
-                <ArrowLeft /> Vorige Stap
+                <UtrechtIcon>
+                  <ArrowLeft />
+                </UtrechtIcon>{' '}
+                Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
-            <HeadingGroup>
-              <PreHeading>Stap 3 van 4</PreHeading>
+            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
+            <UtrechtHeadingGroup>
               <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
-              <UtrechtHeading3>Uw vraag</UtrechtHeading3>
-            </HeadingGroup>
-            <UtrechtDataList>
+              <UtrechtPreHeading>Stap 3 van 4</UtrechtPreHeading>
+            </UtrechtHeadingGroup>
+            <UtrechtHeading3>Uw vraag</UtrechtHeading3>
+            <UtrechtButtonGroup>
               <UtrechtLink href="./stap1">
                 <Pencil />
                 Aanpassen
               </UtrechtLink>
+            </UtrechtButtonGroup>
+            <UtrechtDataList>
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Uw vraag</UtrechtDataListKey>
                 <UtrechtDataListValue>
-                  <UtrechtParagraph className="voorbeeld-title-paragraph">Beste meneer of mevrouw, </UtrechtParagraph>
-                  <UtrechtParagraph className="voorbeeld-title-paragraph">
-                    Ik heb 8 weken geleden een aanvraag voor bijstandsuitkering gedaan maar ik heb nog steeds niets
-                    gehoord. Volgens mij had u allang op mijn aanvraag moeten beslissen.
-                  </UtrechtParagraph>
-                  <UtrechtParagraph className="voorbeeld-title-paragraph">
-                    Met vriendelijke groet, Jeroen van Drouwen
-                  </UtrechtParagraph>
+                  <UtrechtMultilineData>{data.message}</UtrechtMultilineData>
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
             </UtrechtDataList>
             <UtrechtHeading3>Uw gegevens</UtrechtHeading3>
-            <UtrechtLink>
-              <Pencil />
-              Aanpassen
-            </UtrechtLink>
+            <UtrechtButtonGroup>
+              <UtrechtLink href="./stap2">
+                <Pencil />
+                Aanpassen
+              </UtrechtLink>
+            </UtrechtButtonGroup>
             <UtrechtDataList className="voorbeeld-datalist-style">
-              <UtrechtDataListKey>Naam</UtrechtDataListKey>
-              <UtrechtDataListValue>Jeroen van Drouwen</UtrechtDataListValue>
+              <UtrechtDataListItem>
+                <UtrechtDataListKey>Naam</UtrechtDataListKey>
+                <UtrechtDataListValue>
+                  <PreserveData>{data.name}</PreserveData>
+                </UtrechtDataListValue>
+              </UtrechtDataListItem>
+              <UtrechtDataListItem>
+                <UtrechtDataListKey>Straat</UtrechtDataListKey>
+                <UtrechtDataListValue>
+                  <PreserveData>{data.street}</PreserveData>
+                </UtrechtDataListValue>
+              </UtrechtDataListItem>
+              <UtrechtDataListItem>
+                <UtrechtDataListKey>Huisnummer</UtrechtDataListKey>
+                <UtrechtDataListValue>
+                  <PreserveData>
+                    {data.houseNumber}
+                    {data.houseNumberSuffix}
+                  </PreserveData>
+                </UtrechtDataListValue>
+              </UtrechtDataListItem>
+              <UtrechtDataListItem>
+                <UtrechtDataListKey>Postcode</UtrechtDataListKey>
+                <UtrechtDataListValue>
+                  <PreserveData>{data.postalCode}</PreserveData>
+                </UtrechtDataListValue>
+              </UtrechtDataListItem>
+              <UtrechtDataListItem>
+                <UtrechtDataListKey>Woonplaats</UtrechtDataListKey>
+                <UtrechtDataListValue>
+                  <PreserveData>{data.city}</PreserveData>
+                </UtrechtDataListValue>
+              </UtrechtDataListItem>
+              <UtrechtDataListItem>
+                <UtrechtDataListKey>E-mailadres</UtrechtDataListKey>
+                <UtrechtDataListValue>
+                  <URLData>{data.email}</URLData>
+                </UtrechtDataListValue>
+              </UtrechtDataListItem>
+              <UtrechtDataListItem>
+                <UtrechtDataListKey>Telefoonnummer</UtrechtDataListKey>
+                <UtrechtDataListValue>
+                  <PreserveData>{data.tel}</PreserveData>
+                </UtrechtDataListValue>
+              </UtrechtDataListItem>
             </UtrechtDataList>
-            <UtrechtDataList>
-              <UtrechtDataListKey>Straat</UtrechtDataListKey>
-              <UtrechtDataListValue>Laan der voorbeelden</UtrechtDataListValue>
-            </UtrechtDataList>
-            <UtrechtDataList>
-              <UtrechtDataListKey>Huisnummer</UtrechtDataListKey>
-              <UtrechtDataListValue>99</UtrechtDataListValue>
-            </UtrechtDataList>
-            <UtrechtDataList>
-              <UtrechtDataListKey>Postcode</UtrechtDataListKey>
-              <UtrechtDataListValue>1024VP</UtrechtDataListValue>
-            </UtrechtDataList>
-            <UtrechtDataList>
-              <UtrechtDataListKey>Woonplaats</UtrechtDataListKey>
-              <UtrechtDataListValue>Voorbeekd</UtrechtDataListValue>
-            </UtrechtDataList>
-            <UtrechtDataList>
-              <UtrechtDataListKey>E-mailadres</UtrechtDataListKey>
-              <UtrechtDataListValue>j.vandrouwen@gmail.com</UtrechtDataListValue>
-            </UtrechtDataList>
-            <UtrechtDataList>
-              <UtrechtDataListKey>Telefoonnummer</UtrechtDataListKey>
-              <UtrechtDataListValue>0650618346</UtrechtDataListValue>
-            </UtrechtDataList>
-            <UtrechtButtonGroup className="utrecht-button-group--example-column">
+            <UtrechtButtonGroup direction="column">
               <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap4" appearance="primary-action-button">
                 Versturen
               </UtrechtButtonLink>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              <LinkButton inline className="voorbeeld-button-link" formAction="./save">
                 Opslaan en later verder
-              </UtrechtButtonLink>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              </LinkButton>
+              <LinkButton inline className="voorbeeld-button-link" formAction="./stop">
                 Sluit formulier
-              </UtrechtButtonLink>
+              </LinkButton>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>

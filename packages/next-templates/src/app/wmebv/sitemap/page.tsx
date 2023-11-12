@@ -2,6 +2,7 @@
 
 import {
   UtrechtArticle,
+  UtrechtButtonGroup,
   UtrechtHeading1,
   UtrechtLink,
   UtrechtPage,
@@ -11,17 +12,7 @@ import {
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import {
-  ButtonGroup,
-  ButtonLink,
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableHeaderCell,
-  TableRow,
-} from '@utrecht/component-library-react';
-import ChevronRight from '../../styling/assets/chevronRight.svg';
+import { Table, TableBody, TableCell, TableHeader, TableHeaderCell, TableRow } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
@@ -139,19 +130,19 @@ export default function home() {
                 <TableRow key={index}>
                   <TableCell>{title}</TableCell>
                   <TableCell>
-                    <ButtonGroup className="utrecht-button-group--example-column">
+                    <UtrechtButtonGroup direction="column">
                       {website && <UtrechtLink href={website}>Webpagina</UtrechtLink>}
                       {designLargeViewport && (
-                        <ButtonLink href={designLargeViewport} target="figma">
+                        <UtrechtLink href={designLargeViewport} target="figma">
                           Design groot scherm (Figma)
-                        </ButtonLink>
+                        </UtrechtLink>
                       )}
                       {designSmallViewport && (
-                        <ButtonLink href={designSmallViewport} target="figma">
+                        <UtrechtLink href={designSmallViewport} target="figma">
                           Design voor klein scherm (Figma)
-                        </ButtonLink>
+                        </UtrechtLink>
                       )}
-                    </ButtonGroup>
+                    </UtrechtButtonGroup>
                   </TableCell>
                 </TableRow>
               ))}
