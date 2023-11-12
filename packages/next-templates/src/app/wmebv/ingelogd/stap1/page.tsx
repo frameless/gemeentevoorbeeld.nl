@@ -34,7 +34,7 @@ export default function home() {
       <ExampleNavigation />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <form action="./stap2" method="post">
+          <form method="POST" action="/api/wmebv/signed-in/step1">
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <ArrowLeft /> Terug
@@ -68,20 +68,21 @@ export default function home() {
             </div>
             <UtrechtButtonGroup>
               <div className="voorbeeld-button-group-spacing">
-                <UtrechtButtonLink
-                  className="voorbeeld-button-spacing"
-                  href="./stap2"
-                  appearance="primary-action-button"
-                >
+                <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                   Volgende stap
-                </UtrechtButtonLink>
+                </UtrechtButton>
                 <UtrechtParagraph className="voorbeeld-link-spacing">
-                  <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+                  <UtrechtButton
+                    appearance="subtle-button"
+                    className="voorbeeld-button-link"
+                    formAction="/api/wmebv/save"
+                    formMethod="POST"
+                  >
                     Opslaan en later verder
-                  </UtrechtButtonLink>
+                  </UtrechtButton>
                 </UtrechtParagraph>
                 <UtrechtParagraph className="voorbeeld-paragraph-end-space">
-                  <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+                  <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="/wmebv">
                     Sluit formulier
                   </UtrechtButtonLink>
                 </UtrechtParagraph>

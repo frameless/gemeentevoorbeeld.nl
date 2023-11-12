@@ -49,7 +49,7 @@ export default function home() {
             <UtrechtLink className="link" href="#">
               <FileText /> Download uw vraag als PDF
             </UtrechtLink>
-            <UtrechtLink className="link" href="#">
+            <UtrechtLink className="link" href="/wmebv">
               Terug naar voorbeeld.nl
             </UtrechtLink>
           </UtrechtButtonGroup>

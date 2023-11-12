@@ -2,6 +2,7 @@
 
 import {
   UtrechtArticle,
+  UtrechtButton,
   UtrechtButtonGroup,
   UtrechtButtonLink,
   UtrechtFormFieldTextbox,
@@ -23,7 +24,7 @@ export default function home() {
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent>
         <UtrechtArticle>
-          <form action="./stap3" method="post">
+          <form method="post" action={'/api/wmebv/signed-in/step2'}>
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
               <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap1/">
@@ -121,13 +122,18 @@ export default function home() {
               value="0650618346"
             />
             <UtrechtButtonGroup className="utrecht-button-group--example-column">
-              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap3" appearance="primary-action-button">
+              <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Volgende stap
-              </UtrechtButtonLink>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              </UtrechtButton>
+              <UtrechtButton
+                appearance="subtle-button"
+                className="voorbeeld-button-link"
+                formAction="/api/wmebv/save"
+                formMethod="POST"
+              >
                 Opslaan en later verder
-              </UtrechtButtonLink>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              </UtrechtButton>
+              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="/wmebv">
                 Sluit formulier
               </UtrechtButtonLink>
             </UtrechtButtonGroup>

@@ -32,7 +32,7 @@ export default function home() {
       <ExampleHeaderFunnel />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <form action="./stap2">
+          <form method="POST" action="/api/wmebv/anonymous/step1">
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <ArrowLeft /> Terug
@@ -65,12 +65,17 @@ export default function home() {
               <UtrechtParagraph className="paragraph-space-bijlagen">Geen bestand gekozen</UtrechtParagraph>
             </div>
             <UtrechtButtonGroup className="utrecht-button-group--example-column">
-              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap2" appearance="primary-action-button">
+              <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Volgende stap
-              </UtrechtButtonLink>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              </UtrechtButton>
+              <UtrechtButton
+                appearance="subtle-button"
+                className="voorbeeld-button-link"
+                formAction="/api/wmebv/save"
+                formMethod="POST"
+              >
                 Opslaan en later verder
-              </UtrechtButtonLink>
+              </UtrechtButton>
               <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
                 Sluit formulier
               </UtrechtButtonLink>
