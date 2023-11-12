@@ -2,38 +2,62 @@
 
 import {
   UtrechtArticle,
+  UtrechtButton,
   UtrechtButtonGroup,
-  UtrechtButtonLink,
   UtrechtFormFieldTextbox,
   UtrechtHeading1,
   UtrechtHeading2,
+  UtrechtHeadingGroup,
+  UtrechtIcon,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
+  UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import { HeadingGroup, LinkButton, PreHeading } from '@utrecht/component-library-react';
+import { LinkButton, Paragraph } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
+import { useId } from 'react';
 
 export default function home() {
+  const data = {
+    message: `Beste meneer of mevrouw,
+
+Ik heb 8 weken geleden een aanvraag voor bijstandsuitkering gedaan maar ik heb nog steeds niets
+gehoord. Volgens mij had u allang op mijn aanvraag moeten beslissen.
+
+Met vriendelijke groet, Jeroen van Drouwen`,
+    name: 'Jeroen van Drouwen',
+    street: 'Laan der Voorbeelden',
+    houseNumber: '99',
+    houseNumberSuffix: '',
+    postalCode: '1024 VP',
+    city: 'Voorbeeld',
+    email: 'j.vandrouwen@gmail.com',
+    tel: '0650618346',
+  };
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent>
         <UtrechtArticle>
           <form action="./stap3" method="post">
-            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
               <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap1/">
-                <ArrowLeft /> Vorige Stap
+                <UtrechtIcon>
+                  <ArrowLeft />
+                </UtrechtIcon>{' '}
+                Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
-            <HeadingGroup>
-              <PreHeading>Stap 2 van 4</PreHeading>
+            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
+            <UtrechtHeadingGroup>
+              <UtrechtPreHeading>Stap 2 van 4</UtrechtPreHeading>
               <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
-            </HeadingGroup>
+            </UtrechtHeadingGroup>
             <UtrechtParagraph>
               Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet
               met anderen gedeeld.
@@ -42,94 +66,101 @@ export default function home() {
             <UtrechtFormFieldTextbox
               autoComplete="name"
               className="voorbeeld-small-textbox-small"
-              id="Naam"
+              id={useId()}
               label="Naam"
               name="naam"
               type="text"
               readOnly={true}
-              value="Jeroen Van Drouwen"
+              value={data.name}
             />
 
             <UtrechtFormFieldTextbox
-              aria-label="straat"
               autoComplete="street-address"
-              id="Straat"
+              id={useId()}
               label="Straat"
               name="straat"
               type="text"
               readOnly={true}
-              value="Laan der voorbeelden"
+              value={data.street}
             />
 
             <UtrechtFormFieldTextbox
               autoComplete=""
               className="voorbeeld-tiny-textbox-small"
-              id="Huisnummer"
+              id={useId()}
               label="Huisnummer"
               name="huisnummer"
               type="text"
               readOnly={true}
-              value="99"
+              value={data.houseNumber}
             />
 
             <UtrechtFormFieldTextbox
               autoComplete=""
               className="voorbeeld-tiny-textbox-small"
-              id="toevoeging"
+              id={useId()}
               label="Toevoeging"
               name="toevoeging"
               type="text"
+              value={data.houseNumberSuffix}
               readOnly={true}
             />
 
             <UtrechtFormFieldTextbox
               autoComplete="postal-code"
               className="voorbeeld-tiny-textbox-small"
-              id="Postcode"
+              id={useId()}
               label="Postcode"
               name="postcode"
               type="text"
               readOnly={true}
-              value="1024 VP"
+              value={data.postalCode}
             />
 
             <UtrechtFormFieldTextbox
               autoComplete="address-level2"
-              id="woonplaats"
+              id={useId()}
               label="Woonplaats"
               name="Woonplaats"
               type="text"
               readOnly={true}
-              value="Voorbeeld"
+              value={data.city}
             />
 
             <UtrechtFormFieldTextbox
               autoComplete="email"
               className="voorbeeld-small-textbox-small"
-              id="Emailadres"
-              label="Emailadres"
+              id={useId()}
+              label="E-mailadres"
               type="email"
-              value="j.vandrouwen@gmail.com"
+              value={data.email}
             />
 
             <UtrechtFormFieldTextbox
               autoComplete="tel"
               className="voorbeeld-smaller-textbox-small"
               id="tel"
-              label="Telefoonnummer (niet verplicht)"
+              label="Telefoonnummer"
               type="tel"
-              value="0650618346"
-            />
-            <UtrechtButtonGroup className="utrecht-button-group--example-column">
-              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap3" appearance="primary-action-button">
+              value={data.tel}
+            >
+              <Paragraph slot="description">Niet verplicht.</Paragraph>
+            </UtrechtFormFieldTextbox>
+            <UtrechtButtonGroup direction="column">
+              <UtrechtButton
+                type="submit"
+                className="voorbeeld-button-spacing"
+                appearance="primary-action-button"
+                formAction="./stap3/"
+              >
                 Volgende stap
-              </UtrechtButtonLink>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              </UtrechtButton>
+              <LinkButton inline className="voorbeeld-button-link" formAction="./save">
                 Opslaan en later verder
-              </UtrechtButtonLink>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              </LinkButton>
+              <LinkButton inline className="voorbeeld-button-link" formAction="./stop">
                 Sluit formulier
-              </UtrechtButtonLink>
+              </LinkButton>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>

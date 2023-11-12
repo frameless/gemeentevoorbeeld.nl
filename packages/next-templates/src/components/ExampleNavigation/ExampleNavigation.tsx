@@ -28,24 +28,22 @@ export const ExampleNavigation = ({
     },
     {
       label: 'Contact',
-      href: '#',
-    },
-    {
-      label: 'Uitloggen',
-      href: '',
+      href: '/wmebv/',
     },
   ],
   center = true,
 }: NavigationProps) => (
   <Navigation center={center}>
     <NavigationLinkList center={center}>
-      {links.map(({ label, href }) =>
+      {links.map(({ label, href }, index) =>
         href ? (
-          <NavigationLink center={center} href={href}>
+          <NavigationLink center={center} href={href} key={index}>
             {label}
           </NavigationLink>
         ) : (
-          <NavigationLinkButton className="example-navbar__link">{label}</NavigationLinkButton>
+          <NavigationLinkButton className="example-navbar__link" key={index}>
+            {label}
+          </NavigationLinkButton>
         ),
       )}
     </NavigationLinkList>

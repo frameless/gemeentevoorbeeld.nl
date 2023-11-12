@@ -5,50 +5,47 @@ import {
   UtrechtButton,
   UtrechtButtonGroup,
   UtrechtButtonLink,
-  UtrechtForm,
   UtrechtFormFieldTextarea,
   UtrechtHeading1,
   UtrechtHeading2,
+  UtrechtHeadingGroup,
+  UtrechtIcon,
   UtrechtLink,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
+  UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import {
-  FormLabel,
-  PreHeading,
-  UnorderedList,
-  UnorderedListItem,
-  HeadingGroup,
-} from '@utrecht/component-library-react';
+import { UnorderedList, UnorderedListItem, LinkButton } from '@utrecht/component-library-react';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
+import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 
 export default function home() {
+  const data = {
+    message: '',
+  };
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv />
-      <ExampleNavigation />
+      <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <form action="./stap2" method="post">
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
-                <ArrowLeft /> Terug
+                <UtrechtIcon>
+                  <ArrowLeft />
+                </UtrechtIcon>{' '}
+                Terug
               </UtrechtLink>
             </UtrechtButtonGroup>
-            <HeadingGroup>
+            <UtrechtHeadingGroup>
               <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
-              <PreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</PreHeading>
-            </HeadingGroup>
+              <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtPreHeading>
+            </UtrechtHeadingGroup>
             <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
-            <UtrechtForm>
-              <FormLabel>Stel uw vraag</FormLabel>
-              <UtrechtFormFieldTextarea />
-            </UtrechtForm>
+            <UtrechtFormFieldTextarea label="Stel uw vraag" value={data.message} />
             <div className="voorbeeld-bijlage-flex-container">
               <UtrechtParagraph className="voorbeeld-paragraph-bijlage">Bestand toevoegen</UtrechtParagraph>
               <UtrechtParagraph>(Niet verplicht)</UtrechtParagraph>
@@ -66,26 +63,16 @@ export default function home() {
               </UtrechtButton>
               <UtrechtParagraph className="paragraph-space-bijlagen">Geen bestand gekozen</UtrechtParagraph>
             </div>
-            <UtrechtButtonGroup>
-              <div className="voorbeeld-button-group-spacing">
-                <UtrechtButtonLink
-                  className="voorbeeld-button-spacing"
-                  href="./stap2"
-                  appearance="primary-action-button"
-                >
-                  Volgende stap
-                </UtrechtButtonLink>
-                <UtrechtParagraph className="voorbeeld-link-spacing">
-                  <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
-                    Opslaan en later verder
-                  </UtrechtButtonLink>
-                </UtrechtParagraph>
-                <UtrechtParagraph className="voorbeeld-paragraph-end-space">
-                  <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
-                    Sluit formulier
-                  </UtrechtButtonLink>
-                </UtrechtParagraph>
-              </div>
+            <UtrechtButtonGroup direction="column">
+              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap2" appearance="primary-action-button">
+                Volgende stap
+              </UtrechtButtonLink>
+              <LinkButton inline className="voorbeeld-button-link" formAction="./save">
+                Opslaan en later verder
+              </LinkButton>
+              <LinkButton inline className="voorbeeld-button-link" formAction="./stop">
+                Sluit formulier
+              </LinkButton>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>
