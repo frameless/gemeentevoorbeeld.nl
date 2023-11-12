@@ -12,25 +12,15 @@ export const ExampleFooter = ({ ...props }: ExampleFooterProps) => (
       <div className="example-link-list-container" {...props}>
         <Logo className="example--footer-logo" />
         <NavigationList>
-          <Heading5>Heading</Heading5>
-          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Contact" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="RSS" />
         </NavigationList>
         <NavigationList>
-          <Heading5>Heading</Heading5>
-          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
-          <NavigationListItem className="utrecht-link-list__item" href="#" label="Navigatie item" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Bescherming persoonsgegevens" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Gebruikersvoorwaarden" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Proclaimer" />
+          <NavigationListItem className="utrecht-link-list__item" href="#" label="Cookieverklaring" />
         </NavigationList>
-        <section className="example-footer-content">
-          <Heading5>Heading</Heading5>
-          <Paragraph className="utrecht-link-list__item">
-            Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
-          </Paragraph>
-        </section>
       </div>
     </div>
   </PageFooter>
