@@ -18,8 +18,30 @@ import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigat
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import { LinkButton, PreHeading, HeadingGroup } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
+import { useForm } from 'react-hook-form';
 
 export default function home() {
+  const storedFormData = sessionStorage.getItem('wmebv');
+  const defaultValues = storedFormData && JSON.parse(storedFormData);
+
+  const {
+    getValues,
+    register,
+    formState: { errors },
+  } = useForm({ defaultValues });
+
+  const { max: _naamMax, min: _naamMin, ...nameField } = register('naam');
+  const { max: _straatMax, min: _straatMin, ...streetField } = register('straat');
+  const { max: _huisnummerMax, min: _huisnummerMin, ...houseNumberField } = register('huisnummer');
+  const { max: _toevoegingMax, min: _toevoegingMin, ...houseNumberSuffixField } = register('toevoeging');
+  const { max: _postcodeMax, min: _postcodeMin, ...postalCodeField } = register('postcode');
+  const { max: _woonplaatsMax, min: _woonplaatsMin, ...homeTownField } = register('woonplaats');
+  const { max: _emailMax, min: _emailMin, ...emailField } = register('email');
+  const { max: _telMax, min: _telMin, ...telField } = register('tel');
+
+  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderWmebv />
@@ -29,7 +51,13 @@ export default function home() {
           <form method="post" action="/api/wmebv/anonymous/step2">
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
-              <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap1/">
+              <LinkButton
+                type="submit"
+                inline={true}
+                className="voorbeeld-button-link"
+                onSubmit={saveFormData}
+                formAction="/api/wmebv/anonymous/step2/back"
+              >
                 <ArrowLeft /> Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
@@ -43,59 +71,48 @@ export default function home() {
             </UtrechtParagraph>
 
             <UtrechtFormFieldTextbox
+              {...nameField}
               autoComplete="name"
               className="voorbeeld-small-textbox-small"
               id="Naam"
               label="Naam"
-              name="naam"
-              type="text"
             />
 
-            <UtrechtFormFieldTextbox
-              aria-label="straat"
-              autoComplete="street-address"
-              id="Straat"
-              label="Straat"
-              name="straat"
-              type="text"
-            />
+            <UtrechtFormFieldTextbox {...streetField} autoComplete="street-address" id="Straat" label="Straat" />
 
             <UtrechtFormFieldTextbox
+              {...houseNumberField}
               autoComplete=""
               className="voorbeeld-tiny-textbox-small"
               id="Huisnummer"
               label="Huisnummer"
-              name="huisnummer"
-              type="text"
             />
 
             <UtrechtFormFieldTextbox
+              {...houseNumberSuffixField}
               autoComplete=""
               className="voorbeeld-tiny-textbox-small"
               id="toevoeging"
               label="Toevoeging"
-              name="toevoeging"
-              type="text"
             />
 
             <UtrechtFormFieldTextbox
+              {...postalCodeField}
               autoComplete="postal-code"
               className="voorbeeld-tiny-textbox-small"
               id="Postcode"
               label="Postcode"
-              name="postcode"
-              type="text"
             />
 
             <UtrechtFormFieldTextbox
+              {...homeTownField}
               autoComplete="address-level2"
               id="woonplaats"
               label="Woonplaats"
-              name="Woonplaats"
-              type="text"
             />
 
             <UtrechtFormFieldTextbox
+              {...emailField}
               autoComplete="email"
               className="voorbeeld-small-textbox-small"
               id="Emailadres"
@@ -104,6 +121,7 @@ export default function home() {
             />
 
             <UtrechtFormFieldTextbox
+              {...telField}
               autoComplete="tel"
               className="voorbeeld-smaller-textbox-small"
               id="tel"
@@ -115,16 +133,24 @@ export default function home() {
                 Volgende stap
               </UtrechtButton>
               <UtrechtButton
+                type="submit"
                 appearance="subtle-button"
                 className="voorbeeld-button-link"
                 formAction="/api/wmebv/save"
                 formMethod="POST"
+                onSubmit={saveFormData}
               >
                 Opslaan en later verder
               </UtrechtButton>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              <UtrechtButton
+                type="submit"
+                appearance="subtle-button"
+                className="voorbeeld-button-link"
+                onClick={deleteFormData}
+                formAction="/wmebv"
+              >
                 Sluit formulier
-              </UtrechtButtonLink>
+              </UtrechtButton>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>

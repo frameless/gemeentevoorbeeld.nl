@@ -25,14 +25,27 @@ import {
 } from '@utrecht/component-library-react';
 import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
+import { useForm } from 'react-hook-form';
 
 export default function home() {
+  const storedFormData = sessionStorage.getItem('wmebv');
+  const defaultValues = storedFormData && JSON.parse(storedFormData);
+
+  const {
+    getValues,
+    register,
+    formState: { errors },
+  } = useForm({ defaultValues });
+
+  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnel />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <form method="POST" action="/api/wmebv/anonymous/step1">
+          <form method="POST" action="/api/wmebv/anonymous/step1" onSubmit={saveFormData}>
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <ArrowLeft /> Terug
@@ -69,16 +82,24 @@ export default function home() {
                 Volgende stap
               </UtrechtButton>
               <UtrechtButton
+                type="submit"
                 appearance="subtle-button"
                 className="voorbeeld-button-link"
                 formAction="/api/wmebv/save"
                 formMethod="POST"
+                onSubmit={saveFormData}
               >
                 Opslaan en later verder
               </UtrechtButton>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              <UtrechtButton
+                type="submit"
+                appearance="subtle-button"
+                className="voorbeeld-button-link"
+                onClick={deleteFormData}
+                formAction="/wmebv"
+              >
                 Sluit formulier
-              </UtrechtButtonLink>
+              </UtrechtButton>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>

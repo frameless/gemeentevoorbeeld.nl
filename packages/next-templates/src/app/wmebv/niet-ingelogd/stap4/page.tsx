@@ -10,6 +10,7 @@ import {
   UtrechtLink,
   UtrechtSpotlightSection,
   UtrechtButtonGroup,
+  UtrechtButton,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
@@ -19,6 +20,7 @@ import Printer from '@/app/styling/assets/printer-icon.svg';
 import FileText from '@/app/styling/assets/filetext-icon.svg';
 import CircleCheck from '../../../styling/assets/circleCheck.svg';
 import '@/app/styling/css/wmebv.css';
+import { redirect } from 'next/navigation';
 
 export default function home() {
   return (
@@ -49,9 +51,16 @@ export default function home() {
             <UtrechtLink className="link" href="#">
               <FileText /> Download uw vraag als PDF
             </UtrechtLink>
-            <UtrechtLink className="link" href="/wmebv">
+            <UtrechtButton
+              appearance="subtle-button"
+              className="voorbeeld-button-link"
+              onClick={() => {
+                sessionStorage.removeItem('wmebv');
+                redirect('/wmebv');
+              }}
+            >
               Terug naar voorbeeld.nl
-            </UtrechtLink>
+            </UtrechtButton>
           </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>

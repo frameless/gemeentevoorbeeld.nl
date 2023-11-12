@@ -30,6 +30,12 @@ import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
+  const storedFormData = sessionStorage.getItem('wmebv');
+  const formValues = storedFormData && JSON.parse(storedFormData);
+
+  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderWmebv />
@@ -39,9 +45,9 @@ export default function home() {
           <form method="post" action="/api/wmebv/anonymous/step3">
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
-              <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap2/">
+              <UtrechtLink className="voorbeeld-button-link" href="./stap2/">
                 <ArrowLeft /> Vorige Stap
-              </LinkButton>
+              </UtrechtLink>
             </UtrechtButtonGroup>
             <HeadingGroup>
               <PreHeading>Stap 3 van 4</PreHeading>
@@ -58,16 +64,7 @@ export default function home() {
               </UtrechtButtonGroup>
               <DataListItem>
                 <DataListKey className="voorbeeld-heading3-spacing">Uw vraag</DataListKey>
-                <DataListValue>
-                  <UtrechtParagraph className="voorbeeld-title-paragraph">Beste meneer of mevrouw, </UtrechtParagraph>
-                  <UtrechtParagraph className="voorbeeld-title-paragraph">
-                    Ik heb 8 weken geleden een aanvraag voor bijstandsuitkering gedaan maar ik heb nog steeds niets
-                    gehoord. Volgens mij had u allang op mijn aanvraag moeten beslissen.
-                  </UtrechtParagraph>
-                  <UtrechtParagraph className="voorbeeld-title-paragraph">
-                    Met vriendelijke groet, Jeroen van Drouwen
-                  </UtrechtParagraph>
-                </DataListValue>
+                <DataListValue>{formValues?.['uw-vraag']}</DataListValue>
               </DataListItem>
             </DataList>
             <UtrechtHeading3 className="voorbeeld-heading3-spacing">Uw gegevens</UtrechtHeading3>
@@ -79,37 +76,42 @@ export default function home() {
             </UtrechtButtonGroup>
             <DataList className="voorbeeld-datalist-style">
               <DataListKey className="utrecht-data-list-label">Naam</DataListKey>
-              <DataListValue className="utrecht-data-list-value">Jeroen van Drouwen</DataListValue>
+              <DataListValue className="utrecht-data-list-value">{formValues?.naam}</DataListValue>
               <div className="voorbeeld-dat-list-label-spacer"></div>
             </DataList>
             <DataList>
               <DataListKey className="utrecht-data-list-label">Straat</DataListKey>
-              <DataListValue className="utrecht-data-list-value">Laan der voorbeelden</DataListValue>
+              <DataListValue className="utrecht-data-list-value">{formValues?.straat}</DataListValue>
               <div className="voorbeeld-dat-list-label-spacer"></div>
             </DataList>
             <DataList>
               <DataListKey className="utrecht-data-list-label">Huisnummer</DataListKey>
-              <DataListValue className="utrecht-data-list-value">99</DataListValue>
+              <DataListValue className="utrecht-data-list-value">{formValues?.huisnummer}</DataListValue>
+              <div className="voorbeeld-dat-list-label-spacer"></div>
+            </DataList>
+            <DataList>
+              <DataListKey className="utrecht-data-list-label">Toevoeging</DataListKey>
+              <DataListValue className="utrecht-data-list-value">{formValues?.toevoeging}</DataListValue>
               <div className="voorbeeld-dat-list-label-spacer"></div>
             </DataList>
             <DataList>
               <DataListKey className="utrecht-data-list-label">Postcode</DataListKey>
-              <DataListValue className="utrecht-data-list-value">1024VP</DataListValue>
+              <DataListValue className="utrecht-data-list-value">{formValues?.postcode}</DataListValue>
               <div className="voorbeeld-dat-list-label-spacer"></div>
             </DataList>
             <DataList>
               <DataListKey className="utrecht-data-list-label">Woonplaats</DataListKey>
-              <DataListValue className="utrecht-data-list-value">Voorbeeld</DataListValue>
+              <DataListValue className="utrecht-data-list-value">{formValues?.woonplaats}</DataListValue>
               <div className="voorbeeld-dat-list-label-spacer"></div>
             </DataList>
             <DataList>
               <DataListKey className="utrecht-data-list-label">E-mailadres</DataListKey>
-              <DataListValue className="utrecht-data-list-value">j.vandrouwen@gmail.com</DataListValue>
+              <DataListValue className="utrecht-data-list-value">{formValues?.email}</DataListValue>
               <div className="voorbeeld-dat-list-label-spacer"></div>
             </DataList>
             <DataList>
               <DataListKey className="utrecht-data-list-label">Telefoonnummer</DataListKey>
-              <DataListValue className="utrecht-data-list-value">0650618346</DataListValue>
+              <DataListValue className="utrecht-data-list-value">{formValues?.tel}</DataListValue>
               <div className="voorbeeld-dat-list-label-spacer-1"></div>
             </DataList>
             <UtrechtButtonGroup className="utrecht-button-group--example-column">
@@ -117,16 +119,24 @@ export default function home() {
                 Volgende stap
               </UtrechtButton>
               <UtrechtButton
+                type="submit"
                 appearance="subtle-button"
                 className="voorbeeld-button-link"
                 formAction="/api/wmebv/save"
                 formMethod="POST"
+                onSubmit={saveFormData}
               >
                 Opslaan en later verder
               </UtrechtButton>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              <UtrechtButton
+                type="submit"
+                appearance="subtle-button"
+                className="voorbeeld-button-link"
+                onClick={deleteFormData}
+                formAction="/wmebv"
+              >
                 Sluit formulier
-              </UtrechtButtonLink>
+              </UtrechtButton>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>

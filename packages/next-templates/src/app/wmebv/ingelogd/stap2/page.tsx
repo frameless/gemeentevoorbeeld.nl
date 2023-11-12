@@ -17,17 +17,57 @@ import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/Examp
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
+import { useForm } from 'react-hook-form';
+import { redirect } from 'next/navigation';
 
 export default function home() {
+  const storedFormData = sessionStorage.getItem('wmebv');
+  const defaultValues = storedFormData && JSON.parse(storedFormData);
+
+  const digid = {
+    naam: 'Jeroen Van Drouwen',
+    straat: 'Laan der voorbeelden',
+    huisnummer: 99,
+    toevoeging: '',
+    postcode: '1024 VP',
+    woonplaats: 'Voorbeeld',
+    email: 'j.vandrouwen@gmail.com',
+    tel: '0650618346',
+  };
+
+  const {
+    getValues,
+    register,
+    formState: { errors },
+  } = useForm({ defaultValues: { ...defaultValues, ...digid } });
+
+  const { max: _naamMax, min: _naamMin, ...nameField } = register('naam');
+  const { max: _straatMax, min: _straatMin, ...streetField } = register('straat');
+  const { max: _huisnummerMax, min: _huisnummerMin, ...houseNumberField } = register('huisnummer');
+  const { max: _toevoegingMax, min: _toevoegingMin, ...houseNumberSuffixField } = register('toevoeging');
+  const { max: _postcodeMax, min: _postcodeMin, ...postalCodeField } = register('postcode');
+  const { max: _woonplaatsMax, min: _woonplaatsMin, ...homeTownField } = register('woonplaats');
+  const { max: _emailMax, min: _emailMin, ...emailField } = register('email');
+  const { max: _telMax, min: _telMin, ...telField } = register('tel');
+
+  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent>
         <UtrechtArticle>
-          <form method="post" action={'/api/wmebv/signed-in/step2'}>
+          <form method="post" action="/api/wmebv/signed-in/step2" onSubmit={saveFormData}>
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
-              <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap1/">
+              <LinkButton
+                type="submit"
+                inline={true}
+                className="voorbeeld-button-link"
+                onSubmit={saveFormData}
+                formAction="/api/wmebv/signed-in/step2/back"
+              >
                 <ArrowLeft /> Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
@@ -41,85 +81,65 @@ export default function home() {
             </UtrechtParagraph>
 
             <UtrechtFormFieldTextbox
-              autoComplete="name"
+              {...nameField}
               className="voorbeeld-small-textbox-small"
               id="Naam"
               label="Naam"
               name="naam"
-              type="text"
               readOnly={true}
-              value="Jeroen Van Drouwen"
             />
 
-            <UtrechtFormFieldTextbox
-              aria-label="straat"
-              autoComplete="street-address"
-              id="Straat"
-              label="Straat"
-              name="straat"
-              type="text"
-              readOnly={true}
-              value="Laan der voorbeelden"
-            />
+            <UtrechtFormFieldTextbox {...streetField} aria-label="straat" id="Straat" label="Straat" readOnly={true} />
 
             <UtrechtFormFieldTextbox
-              autoComplete=""
+              {...houseNumberField}
               className="voorbeeld-tiny-textbox-small"
               id="Huisnummer"
               label="Huisnummer"
-              name="huisnummer"
-              type="text"
               readOnly={true}
-              value="99"
             />
 
             <UtrechtFormFieldTextbox
-              autoComplete=""
+              {...houseNumberSuffixField}
               className="voorbeeld-tiny-textbox-small"
               id="toevoeging"
               label="Toevoeging"
-              name="toevoeging"
-              type="text"
               readOnly={true}
             />
 
             <UtrechtFormFieldTextbox
+              {...postalCodeField}
               autoComplete="postal-code"
               className="voorbeeld-tiny-textbox-small"
               id="Postcode"
               label="Postcode"
-              name="postcode"
-              type="text"
               readOnly={true}
-              value="1024 VP"
             />
 
             <UtrechtFormFieldTextbox
+              {...homeTownField}
               autoComplete="address-level2"
               id="woonplaats"
               label="Woonplaats"
-              name="Woonplaats"
-              type="text"
               readOnly={true}
-              value="Voorbeeld"
             />
 
             <UtrechtFormFieldTextbox
+              {...emailField}
               autoComplete="email"
               className="voorbeeld-small-textbox-small"
               id="Emailadres"
               label="Emailadres"
               type="email"
-              value="j.vandrouwen@gmail.com"
             />
 
             <UtrechtFormFieldTextbox
+              {...telField}
               autoComplete="tel"
               className="voorbeeld-smaller-textbox-small"
               id="tel"
               label="Telefoonnummer (niet verplicht)"
               type="tel"
-              value="0650618346"
             />
             <UtrechtButtonGroup className="utrecht-button-group--example-column">
               <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
@@ -130,12 +150,20 @@ export default function home() {
                 className="voorbeeld-button-link"
                 formAction="/api/wmebv/save"
                 formMethod="POST"
+                type="submit"
+                onSubmit={saveFormData}
               >
                 Opslaan en later verder
               </UtrechtButton>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="/wmebv">
+              <UtrechtButton
+                type="submit"
+                appearance="subtle-button"
+                className="voorbeeld-button-link"
+                onClick={deleteFormData}
+                formAction="/wmebv"
+              >
                 Sluit formulier
-              </UtrechtButtonLink>
+              </UtrechtButton>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>

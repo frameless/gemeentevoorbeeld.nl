@@ -6,6 +6,7 @@ import {
   UtrechtButtonGroup,
   UtrechtButtonLink,
   UtrechtForm,
+  UtrechtFormFieldDescription,
   UtrechtFormFieldTextarea,
   UtrechtHeading1,
   UtrechtHeading2,
@@ -23,18 +24,32 @@ import {
   UnorderedList,
   UnorderedListItem,
   HeadingGroup,
+  FormField,
 } from '@utrecht/component-library-react';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
+import { useForm } from 'react-hook-form';
 
 export default function home() {
+  const storedFormData = sessionStorage.getItem('wmebv');
+  const defaultValues = storedFormData && JSON.parse(storedFormData);
+
+  const {
+    getValues,
+    register,
+    formState: { errors },
+  } = useForm({ defaultValues });
+
+  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderWmebv />
       <ExampleNavigation />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <form method="POST" action="/api/wmebv/signed-in/step1">
+          <form method="post" action="/api/wmebv/signed-in/step1" onSubmit={saveFormData}>
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <ArrowLeft /> Terug
@@ -45,10 +60,12 @@ export default function home() {
               <PreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</PreHeading>
             </HeadingGroup>
             <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
-            <UtrechtForm>
-              <FormLabel>Stel uw vraag</FormLabel>
-              <UtrechtFormFieldTextarea />
-            </UtrechtForm>
+            <FormField invalid={!!errors['uw-vraag']}>
+              <UtrechtFormFieldDescription>
+                {errors['uw-vraag'] && String(errors['uw-vraag'].message)}
+              </UtrechtFormFieldDescription>
+              <UtrechtFormFieldTextarea {...register('uw-vraag', { required: true })} label="Stel uw vraag" />
+            </FormField>
             <div className="voorbeeld-bijlage-flex-container">
               <UtrechtParagraph className="voorbeeld-paragraph-bijlage">Bestand toevoegen</UtrechtParagraph>
               <UtrechtParagraph>(Niet verplicht)</UtrechtParagraph>
@@ -77,14 +94,22 @@ export default function home() {
                     className="voorbeeld-button-link"
                     formAction="/api/wmebv/save"
                     formMethod="POST"
+                    onSubmit={saveFormData}
+                    type="submit"
                   >
                     Opslaan en later verder
                   </UtrechtButton>
                 </UtrechtParagraph>
                 <UtrechtParagraph className="voorbeeld-paragraph-end-space">
-                  <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="/wmebv">
+                  <UtrechtButton
+                    type="submit"
+                    appearance="subtle-button"
+                    className="voorbeeld-button-link"
+                    onClick={deleteFormData}
+                    formAction="/wmebv"
+                  >
                     Sluit formulier
-                  </UtrechtButtonLink>
+                  </UtrechtButton>
                 </UtrechtParagraph>
               </div>
             </UtrechtButtonGroup>

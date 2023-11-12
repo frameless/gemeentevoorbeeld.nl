@@ -15,7 +15,6 @@ import {
   UtrechtLink,
   UtrechtPage,
   UtrechtPageContent,
-  UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
 import { LinkButton, PreHeading, HeadingGroup } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
@@ -25,6 +24,10 @@ import Pencil from '../../../styling/assets/pencil-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
+  const storedFormData = sessionStorage.getItem('wmebv');
+  const formState = storedFormData && JSON.parse(storedFormData);
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
@@ -33,9 +36,9 @@ export default function home() {
           <form method="post" action="/api/wmebv/signed-in/step3">
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
-              <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap2/">
+              <UtrechtLink className="voorbeeld-button-link" href="./stap2/">
                 <ArrowLeft /> Vorige Stap
-              </LinkButton>
+              </UtrechtLink>
             </UtrechtButtonGroup>
             <HeadingGroup>
               <PreHeading>Stap 3 van 4</PreHeading>
@@ -49,56 +52,52 @@ export default function home() {
               </UtrechtLink>
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Uw vraag</UtrechtDataListKey>
-                <UtrechtDataListValue>
-                  <UtrechtParagraph className="voorbeeld-title-paragraph">Beste meneer of mevrouw, </UtrechtParagraph>
-                  <UtrechtParagraph className="voorbeeld-title-paragraph">
-                    Ik heb 8 weken geleden een aanvraag voor bijstandsuitkering gedaan maar ik heb nog steeds niets
-                    gehoord. Volgens mij had u allang op mijn aanvraag moeten beslissen.
-                  </UtrechtParagraph>
-                  <UtrechtParagraph className="voorbeeld-title-paragraph">
-                    Met vriendelijke groet, Jeroen van Drouwen
-                  </UtrechtParagraph>
-                </UtrechtDataListValue>
+                <UtrechtDataListValue>{formState?.['uw-vraag']}</UtrechtDataListValue>
               </UtrechtDataListItem>
             </UtrechtDataList>
             <UtrechtHeading3>Uw gegevens</UtrechtHeading3>
-            <UtrechtLink>
+            <UtrechtLink href="./stap2">
               <Pencil />
               Aanpassen
             </UtrechtLink>
             <UtrechtDataList className="voorbeeld-datalist-style">
               <UtrechtDataListKey>Naam</UtrechtDataListKey>
-              <UtrechtDataListValue>Jeroen van Drouwen</UtrechtDataListValue>
+              <UtrechtDataListValue>{formState?.naam}</UtrechtDataListValue>
             </UtrechtDataList>
             <UtrechtDataList>
               <UtrechtDataListKey>Straat</UtrechtDataListKey>
-              <UtrechtDataListValue>Laan der voorbeelden</UtrechtDataListValue>
+              <UtrechtDataListValue>{formState?.straat}</UtrechtDataListValue>
             </UtrechtDataList>
             <UtrechtDataList>
               <UtrechtDataListKey>Huisnummer</UtrechtDataListKey>
-              <UtrechtDataListValue>99</UtrechtDataListValue>
+              <UtrechtDataListValue>{formState?.huisnummer}</UtrechtDataListValue>
+            </UtrechtDataList>
+            <UtrechtDataList>
+              <UtrechtDataListKey>Toevoeging</UtrechtDataListKey>
+              <UtrechtDataListValue>{formState?.toevoeging}</UtrechtDataListValue>
             </UtrechtDataList>
             <UtrechtDataList>
               <UtrechtDataListKey>Postcode</UtrechtDataListKey>
-              <UtrechtDataListValue>1024VP</UtrechtDataListValue>
+              <UtrechtDataListValue>{formState?.postcode}</UtrechtDataListValue>
             </UtrechtDataList>
             <UtrechtDataList>
               <UtrechtDataListKey>Woonplaats</UtrechtDataListKey>
-              <UtrechtDataListValue>Voorbeekd</UtrechtDataListValue>
+              <UtrechtDataListValue>{formState?.woonplaats}</UtrechtDataListValue>
             </UtrechtDataList>
             <UtrechtDataList>
               <UtrechtDataListKey>E-mailadres</UtrechtDataListKey>
-              <UtrechtDataListValue>j.vandrouwen@gmail.com</UtrechtDataListValue>
+              <UtrechtDataListValue>{formState?.email}</UtrechtDataListValue>
             </UtrechtDataList>
             <UtrechtDataList>
               <UtrechtDataListKey>Telefoonnummer</UtrechtDataListKey>
-              <UtrechtDataListValue>0650618346</UtrechtDataListValue>
+              <UtrechtDataListValue>{formState?.tel}</UtrechtDataListValue>
             </UtrechtDataList>
             <UtrechtButtonGroup className="utrecht-button-group--example-column">
               <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Versturen
               </UtrechtButton>
               <UtrechtButton
+                type="submit"
                 appearance="subtle-button"
                 className="voorbeeld-button-link"
                 formAction="/api/wmebv/save"
@@ -106,9 +105,15 @@ export default function home() {
               >
                 Opslaan en later verder
               </UtrechtButton>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              <UtrechtButton
+                type="submit"
+                appearance="subtle-button"
+                className="voorbeeld-button-link"
+                onClick={deleteFormData}
+                formAction="/wmebv"
+              >
                 Sluit formulier
-              </UtrechtButtonLink>
+              </UtrechtButton>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>
