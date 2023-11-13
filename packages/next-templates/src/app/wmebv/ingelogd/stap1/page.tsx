@@ -5,6 +5,7 @@ import {
   UtrechtButton,
   UtrechtButtonGroup,
   UtrechtButtonLink,
+  UtrechtFormFieldErrorMessage,
   UtrechtFormFieldTextarea,
   UtrechtHeading1,
   UtrechtHeading2,
@@ -21,17 +22,30 @@ import { UnorderedList, UnorderedListItem, LinkButton } from '@utrecht/component
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
+import { useForm } from 'react-hook-form';
 
 export default function home() {
-  const data = {
-    message: '',
-  };
+  const storedData = sessionStorage.getItem('wmebv');
+  const storedFormData = storedData && JSON.parse(storedData);
+  const defaultValues = { message: '', ...storedFormData };
+
+  const {
+    getValues,
+    register,
+    formState: { errors },
+  } = useForm({ defaultValues });
+
+  const messageField = register('message', { required: true });
+
+  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <form action="./stap2" method="post">
+          <form method="post" action="/api/wmebv/signed-in/step1" onSubmit={saveFormData}>
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <UtrechtIcon>
@@ -45,7 +59,11 @@ export default function home() {
               <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtPreHeading>
             </UtrechtHeadingGroup>
             <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
-            <UtrechtFormFieldTextarea label="Stel uw vraag" value={data.message} />
+            <UtrechtFormFieldTextarea label="Stel uw vraag" {...messageField} invalid={!!errors[messageField.name]}>
+              <UtrechtFormFieldErrorMessage slot="error-message">
+                {String(errors[messageField.name]?.message)}
+              </UtrechtFormFieldErrorMessage>
+            </UtrechtFormFieldTextarea>
             <div className="voorbeeld-bijlage-flex-container">
               <UtrechtParagraph className="voorbeeld-paragraph-bijlage">Bestand toevoegen</UtrechtParagraph>
               <UtrechtParagraph>(Niet verplicht)</UtrechtParagraph>
@@ -64,13 +82,27 @@ export default function home() {
               <UtrechtParagraph className="paragraph-space-bijlagen">Geen bestand gekozen</UtrechtParagraph>
             </div>
             <UtrechtButtonGroup direction="column">
-              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap2" appearance="primary-action-button">
+              <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Volgende stap
-              </UtrechtButtonLink>
-              <LinkButton inline className="voorbeeld-button-link" formAction="./save">
+              </UtrechtButton>
+              <LinkButton
+                inline
+                className="voorbeeld-button-link"
+                onClick={() => {
+                  saveFormData();
+                  location.assign('/wmebv');
+                }}
+              >
                 Opslaan en later verder
               </LinkButton>
-              <LinkButton inline className="voorbeeld-button-link" formAction="./stop">
+              <LinkButton
+                inline
+                className="voorbeeld-button-link"
+                onClick={() => {
+                  deleteFormData();
+                  location.assign('/wmebv');
+                }}
+              >
                 Sluit formulier
               </LinkButton>
             </UtrechtButtonGroup>
