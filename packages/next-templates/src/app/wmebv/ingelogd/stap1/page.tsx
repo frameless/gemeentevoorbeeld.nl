@@ -23,6 +23,7 @@ import '@/app/styling/css/wmebv.css';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { useForm } from 'react-hook-form';
 import { useEffect, useState } from 'react';
+import { messageValidation } from '@/utils/validation';
 
 export default function home() {
   const [storedData, setStoredData] = useState<{}>();
@@ -39,9 +40,15 @@ export default function home() {
     getValues,
     register,
     formState: { errors },
-  } = useForm({ defaultValues });
+    handleSubmit,
+  } = useForm({ defaultValues, reValidateMode: 'onChange' });
 
-  const messageField = register('message', { required: true });
+  const messageField = register('message', messageValidation);
+
+  const onSubmit = (_: any, event: any) => {
+    saveFormData();
+    event.target.submit();
+  };
 
   const saveFormData = () => window.sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
   const deleteFormData = () => window.sessionStorage.removeItem('wmebv');
@@ -51,7 +58,7 @@ export default function home() {
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <form method="post" action="/api/wmebv/signed-in/step1" onSubmit={saveFormData}>
+          <form method="post" action="/api/wmebv/signed-in/step1" onSubmit={handleSubmit(onSubmit)}>
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <UtrechtIcon>

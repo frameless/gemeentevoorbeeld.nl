@@ -22,6 +22,16 @@ import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 import { useEffect, useId, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import {
+  nameValidation,
+  streetValidation,
+  houseNumberValidation,
+  houseNumberSuffixValidation,
+  postalCodeValidation,
+  homeTownValidation,
+  emailValidation,
+  phoneValidation,
+} from '@/utils/validation';
 
 export default function home() {
   const [storedData, setStoredData] = useState<{}>();
@@ -49,36 +59,42 @@ export default function home() {
     getValues,
     register,
     formState: { errors },
-  } = useForm({ defaultValues });
+    handleSubmit,
+  } = useForm({ defaultValues, reValidateMode: 'onChange' });
 
-  const { min: _minA, max: _maxA, ...nameField } = register('name', { required: 'Vul een naam in' });
-  const { min: _minB, max: _maxB, ...streetField } = register('street', { required: 'Vul een straat in' });
+  const { min: _minA, max: _maxA, ...nameField } = register('name', nameValidation);
+  const { min: _minB, max: _maxB, ...streetField } = register('street', streetValidation);
+  const { min: _minC, max: _maxC, ...houseNumberField } = register('houseNumber', houseNumberValidation);
   const {
-    min: _minC,
-    max: _maxC,
-    ...houseNumberField
-  } = register('houseNumber', { required: 'Vul een huisnummer in' });
-  const { min: _minD, max: _maxD, ...houseNumberSuffixField } = register('houseNumberSuffix', { required: false });
-  const { min: _minE, max: _maxE, ...postalCodeField } = register('postalCode', { required: 'Vul een postcode in' });
-  const { min: _minF, max: _maxF, ...homeTownField } = register('homeTown', { required: 'Vul een woonplaats in' });
-  const { min: _minG, max: _maxG, ...emailField } = register('email', { required: 'Vul een e-mailadres in' });
-  const { min: _minH, max: _maxH, ...phoneField } = register('phone', { required: false });
-
+    min: _minD,
+    max: _maxD,
+    ...houseNumberSuffixField
+  } = register('houseNumberSuffix', houseNumberSuffixValidation);
+  const { min: _minE, max: _maxE, ...postalCodeField } = register('postalCode', postalCodeValidation);
+  const { min: _minF, max: _maxF, ...homeTownField } = register('homeTown', homeTownValidation);
+  const { min: _minG, max: _maxG, ...emailField } = register('email', emailValidation);
+  const { min: _minH, max: _maxH, ...phoneField } = register('phone', phoneValidation);
   const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
   const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
+  const onSubmit = (_: any, event: any) => {
+    saveFormData();
+    event.target.submit();
+  };
 
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent>
         <UtrechtArticle>
-          <form method="post" action="/api/wmebv/signed-in/step2" onSubmit={saveFormData}>
+          <form method="post" action="/api/wmebv/signed-in/step2" onSubmit={handleSubmit(onSubmit)}>
             <UtrechtButtonGroup>
               <LinkButton
                 type="submit"
                 inline={true}
                 className="voorbeeld-button-link"
-                formAction="./stap1/"
+                formAction="/api/wmebv/signed-in/step2/back"
+                formMethod="POST"
                 onSubmit={saveFormData}
               >
                 <UtrechtIcon>
@@ -104,6 +120,7 @@ export default function home() {
               id={useId()}
               label="Naam"
               readOnly={true}
+              invalid={!!errors[nameField.name]}
             >
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[nameField.name]?.message)}
@@ -116,6 +133,7 @@ export default function home() {
               id={useId()}
               label="Straat"
               readOnly={true}
+              invalid={!!errors[streetField.name]}
             >
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[streetField.name]?.message)}
@@ -129,6 +147,7 @@ export default function home() {
               id={useId()}
               label="Huisnummer"
               readOnly={true}
+              invalid={!!errors[houseNumberField.name]}
             >
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[houseNumberField.name]?.message)}
@@ -142,8 +161,12 @@ export default function home() {
               id={useId()}
               label="Toevoeging"
               readOnly={true}
+              invalid={!!errors[houseNumberSuffixField.name]}
             >
               <Paragraph slot="description">Niet verplicht.</Paragraph>
+              <UtrechtFormFieldErrorMessage slot="error-message">
+                {String(errors[houseNumberSuffixField.name]?.message)}
+              </UtrechtFormFieldErrorMessage>
             </UtrechtFormFieldTextbox>
 
             <UtrechtFormFieldTextbox
@@ -153,6 +176,7 @@ export default function home() {
               id={useId()}
               label="Postcode"
               readOnly={true}
+              invalid={!!errors[postalCodeField.name]}
             >
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[postalCodeField.name]?.message)}
@@ -165,6 +189,7 @@ export default function home() {
               id={useId()}
               label="Woonplaats"
               readOnly={true}
+              invalid={!!errors[homeTownField.name]}
             >
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[homeTownField.name]?.message)}
@@ -178,6 +203,7 @@ export default function home() {
               id={useId()}
               type="email"
               label="E-mailadres"
+              invalid={!!errors[emailField.name]}
             >
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[emailField.name]?.message)}
@@ -191,8 +217,12 @@ export default function home() {
               id="tel"
               label="Telefoonnummer"
               type="tel"
+              invalid={!!errors[phoneField.name]}
             >
               <Paragraph slot="description">Niet verplicht.</Paragraph>
+              <UtrechtFormFieldErrorMessage slot="error-message">
+                {String(errors[phoneField.name]?.message)}
+              </UtrechtFormFieldErrorMessage>
             </UtrechtFormFieldTextbox>
             <UtrechtButtonGroup direction="column">
               <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
