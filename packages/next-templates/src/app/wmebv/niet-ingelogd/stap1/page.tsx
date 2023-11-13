@@ -32,6 +32,7 @@ import '@/app/styling/css/wmebv.css';
 import { TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
 import { useForm } from 'react-hook-form';
 import { useEffect, useState } from 'react';
+import { messageValidation } from '@/utils/validation';
 
 export default function home() {
   const [storedData, setStoredData] = useState<any>();
@@ -50,8 +51,7 @@ export default function home() {
     formState: { errors },
   } = useForm({ defaultValues });
 
-  const messageField = register('message', { required: true });
-  // const fileField = register('message', { required: false });
+  const messageField = register('message', messageValidation);
 
   const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
   const deleteFormData = () => sessionStorage.removeItem('wmebv');
