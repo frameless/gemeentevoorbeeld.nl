@@ -21,12 +21,16 @@ import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/Examp
 import { useEffect, useState } from 'react';
 
 export default function home() {
-  const [storedData, setStoredData] = useState<any>();
+  const data = {
+    email: '',
+    code: '230829-1118-59dc',
+  };
+  const [storedData, setStoredData] = useState<any>(data);
 
   useEffect(() => {
     const stored = sessionStorage.getItem('wmebv');
 
-    setStoredData(stored ? { ...JSON.parse(stored), code: '230829-1118-59dc' } : { code: '230829-1118-59dc' });
+    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
   }, []);
 
   const deleteFormData = () => sessionStorage.removeItem('wmebv');

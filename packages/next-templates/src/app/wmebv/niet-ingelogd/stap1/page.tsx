@@ -35,25 +35,23 @@ import { IconArrowLeft } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
-  const [storedData, setStoredData] = useState<any>();
+  const [storedData, setStoredData] = useState<any>({ message: '' });
 
   useEffect(() => {
     const stored = sessionStorage.getItem('wmebv');
 
-    setStoredData(stored ? JSON.parse(stored) : {});
+    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
   }, []);
-
-  const defaultValues = { message: '', ...storedData };
 
   const {
     getValues,
     register,
     formState: { errors },
-  } = useForm({ defaultValues });
+  } = useForm({ values: storedData });
 
   const messageField = register('message', messageValidation);
 
-  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify({ ...storedData, ...getValues() }));
   const deleteFormData = () => sessionStorage.removeItem('wmebv');
 
   return (

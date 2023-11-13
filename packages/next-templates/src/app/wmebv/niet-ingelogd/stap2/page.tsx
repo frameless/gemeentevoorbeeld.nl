@@ -35,7 +35,6 @@ import {
 
 export default function home() {
   const data = {
-    message: '',
     name: '',
     street: '',
     houseNumber: '',
@@ -46,22 +45,20 @@ export default function home() {
     tel: '',
   };
 
-  const [storedData, setStoredData] = useState<any>();
+  const [storedData, setStoredData] = useState<any>(data);
 
   useEffect(() => {
     const stored = sessionStorage.getItem('wmebv');
 
-    setStoredData(stored ? JSON.parse(stored) : {});
+    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
   }, []);
-
-  const defaultValues = { ...data, ...storedData };
 
   const {
     getValues,
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm({ defaultValues, reValidateMode: 'onBlur' });
+  } = useForm({ values: storedData, reValidateMode: 'onBlur' });
 
   const { min: _minA, max: _maxA, ...nameField } = register('name', nameValidation);
   const { min: _minB, max: _maxB, ...streetField } = register('street', streetValidation);
@@ -76,7 +73,7 @@ export default function home() {
   const { min: _minG, max: _maxG, ...emailField } = register('email', emailValidation);
   const { min: _minH, max: _maxH, ...phoneField } = register('phone', phoneValidation);
 
-  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify({ ...storedData, ...getValues() }));
   const deleteFormData = () => sessionStorage.removeItem('wmebv');
 
   const onSubmit = (_: any, event: any) => {

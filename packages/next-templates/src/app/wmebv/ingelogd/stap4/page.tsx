@@ -18,12 +18,24 @@ import { Strong, UnorderedList, UnorderedListItem } from '@utrecht/component-lib
 import { IconPrinter, IconCircleCheck, IconFileText } from '@tabler/icons-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import '@/app/styling/css/wmebv.css';
+import { useEffect, useState } from 'react';
 
 export default function home() {
   const data = {
     code: '230829-1118-59dc',
     email: 'j.vandrouwen@gmail.com',
   };
+
+  const [storedData, setStoredData] = useState<any>(data);
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wmebv');
+
+    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
+  }, []);
+
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
@@ -40,14 +52,14 @@ export default function home() {
               </UtrechtIcon>
               Vraag met succes verstuurd
             </UtrechtHeading1>
-            <UtrechtParagraph>Kenmerk: {data.code}</UtrechtParagraph>
+            <UtrechtParagraph>Kenmerk: {storedData?.code}</UtrechtParagraph>
           </UtrechtAlert>
           <UtrechtHeading2>Wat gaat er nu gebeuren?</UtrechtHeading2>
           <UnorderedList>
             <UnorderedListItem>
               U ontvangt een bevestigingsmail op
               <Strong>
-                <UtrechtUrlData>{data.email}</UtrechtUrlData>
+                <UtrechtUrlData>{storedData?.email}</UtrechtUrlData>
               </Strong>
             </UnorderedListItem>
             <UnorderedListItem>De afdeling Vraagbaak gaat met uw vraag aan de slag.</UnorderedListItem>
@@ -65,7 +77,15 @@ export default function home() {
               </UtrechtIcon>
               Download uw vraag als PDF
             </UtrechtLink>
-            <UtrechtLink href="#">Terug naar voorbeeld.nl</UtrechtLink>
+            <UtrechtLink
+              href="/wmebv"
+              onClick={() => {
+                deleteFormData();
+                location.assign('/wmebv');
+              }}
+            >
+              Terug naar voorbeeld.nl
+            </UtrechtLink>
           </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>

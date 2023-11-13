@@ -26,22 +26,20 @@ import { IconArrowLeft } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
-  const [storedData, setStoredData] = useState<{}>();
+  const [storedData, setStoredData] = useState<{ message: string }>({ message: '' });
 
   useEffect(() => {
     const stored = sessionStorage.getItem('wmebv');
 
-    setStoredData(stored ? JSON.parse(stored) : {});
+    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
   }, []);
-
-  const defaultValues = { message: '', ...storedData };
 
   const {
     getValues,
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm({ defaultValues, reValidateMode: 'onChange' });
+  } = useForm({ values: storedData, reValidateMode: 'onChange' });
 
   const messageField = register('message', messageValidation);
 
@@ -50,7 +48,9 @@ export default function home() {
     event.target.submit();
   };
 
-  const saveFormData = () => window.sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const saveFormData = () => {
+    window.sessionStorage.setItem('wmebv', JSON.stringify({ ...storedData, ...getValues() }));
+  };
   const deleteFormData = () => window.sessionStorage.removeItem('wmebv');
 
   return (

@@ -32,7 +32,7 @@ export default function home() {
   useEffect(() => {
     const stored = sessionStorage.getItem('wmebv');
 
-    setStoredData(stored ? JSON.parse(stored) : {});
+    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
   }, []);
 
   const deleteFormData = () => sessionStorage.removeItem('wmebv');
@@ -109,7 +109,7 @@ export default function home() {
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Woonplaats</UtrechtDataListKey>
                 <UtrechtDataListValue>
-                  <PreserveData>{storedData?.city}</PreserveData>
+                  <PreserveData>{storedData?.homeTown}</PreserveData>
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
               <UtrechtDataListItem>
@@ -121,7 +121,7 @@ export default function home() {
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Telefoonnummer</UtrechtDataListKey>
                 <UtrechtDataListValue>
-                  <PreserveData>{storedData?.tel}</PreserveData>
+                  <PreserveData>{storedData?.phone}</PreserveData>
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
             </UtrechtDataList>
