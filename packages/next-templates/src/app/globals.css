@@ -66,6 +66,7 @@ body {
   /* alert */
   --utrecht-alert-ok-background-color: #e4f9ea;
   --utrecht-alert-ok-border-color: #167e33;
+  --utrecht-alert-icon-ok-color: #167e33;
   --utrecht-alert-padding-inline-start: var(--voorbeeld-space-inline-mouse);
   --utrecht-alert-padding-inline-end: var(--voorbeeld-space-inline-mouse);
   --utrecht-alert-padding-block-start: var(--voorbeeld-space-inline-mouse);

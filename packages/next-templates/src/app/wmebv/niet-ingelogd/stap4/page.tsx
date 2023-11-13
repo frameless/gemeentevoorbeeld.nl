@@ -38,8 +38,12 @@ export default function home() {
         <UtrechtArticle className="voorbeeld-article-space ">
           <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">
             <UtrechtHeading1>
-              <UtrechtIcon>
-                <IconCircleCheck color="var(--voorbeeld-color-green-600)" size={33} />
+              <UtrechtIcon
+                style={{
+                  '--utrecht-icon-color': 'var(--_utrecht-alert-icon-color, currentColor)',
+                }}
+              >
+                <IconCircleCheck size={33} />
               </UtrechtIcon>
               Vraag met succes verstuurd
             </UtrechtHeading1>
