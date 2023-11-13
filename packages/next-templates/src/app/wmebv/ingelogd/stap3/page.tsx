@@ -43,6 +43,7 @@ export default function home() {
       <UtrechtPageContent>
         <UtrechtArticle>
           <form method="post" action="/api/wmebv/signed-in/step3">
+            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
               <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap2/">
                 <UtrechtIcon>
@@ -51,10 +52,9 @@ export default function home() {
                 Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
-            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtHeadingGroup>
-              <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
               <UtrechtPreHeading>Stap 3 van 4</UtrechtPreHeading>
+              <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
             </UtrechtHeadingGroup>
             <UtrechtHeading3>Uw vraag</UtrechtHeading3>
             <UtrechtButtonGroup>
@@ -140,7 +140,7 @@ export default function home() {
                   location.assign('/wmebv');
                 }}
               >
-                Sluit formulier
+                Stoppen met formulier
               </LinkButton>
             </UtrechtButtonGroup>
           </form>

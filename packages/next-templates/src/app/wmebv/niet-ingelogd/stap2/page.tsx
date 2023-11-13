@@ -90,6 +90,8 @@ export default function home() {
       <UtrechtPageContent>
         <UtrechtArticle>
           <form method="post" action="/api/wmebv/anonymous/step2" onSubmit={handleSubmit(onSubmit)}>
+            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
+
             <UtrechtButtonGroup>
               <LinkButton
                 type="submit"
@@ -105,10 +107,9 @@ export default function home() {
               </LinkButton>
             </UtrechtButtonGroup>
             <UtrechtHeadingGroup>
-              <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
-              <UtrechtPreHeading>Stap 2 van 4</UtrechtPreHeading>
+              <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 2 van 4</UtrechtPreHeading>
+              <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
             </UtrechtHeadingGroup>
-            <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
             <UtrechtParagraph className="voorbeeld-paragraph-spacing">
               Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet
               met anderen gedeeld.
@@ -116,8 +117,8 @@ export default function home() {
 
             <UtrechtFormFieldTextbox
               {...nameField}
-              autoComplete="given-name"
-              className="voorbeeld-small-textbox-small"
+              autoComplete="name"
+              className="voorbeeld-small-textbox"
               id={useId()}
               label="Naam"
               spellCheck={false}
@@ -143,7 +144,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...houseNumberField}
               autoComplete=""
-              className="voorbeeld-tiny-textbox-small"
+              className="voorbeeld-tiny-textbox"
               id={useId()}
               label="Huisnummer"
               invalid={!!errors[houseNumberField.name]}
@@ -156,7 +157,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...houseNumberSuffixField}
               autoComplete=""
-              className="voorbeeld-tiny-textbox-small"
+              className="voorbeeld-tiny-textbox"
               id={useId()}
               label="Toevoeging"
               invalid={!!errors[houseNumberSuffixField.name]}
@@ -167,7 +168,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...postalCodeField}
               autoComplete="postal-code"
-              className="voorbeeld-tiny-textbox-small"
+              className="voorbeeld-tiny-textbox"
               id={useId()}
               label="Postcode"
               invalid={!!errors[postalCodeField.name]}
@@ -192,7 +193,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...emailField}
               autoComplete="email"
-              className="voorbeeld-small-textbox-small"
+              className="voorbeeld-small-textbox"
               id={useId()}
               label="Emailadres"
               type="email"
@@ -206,7 +207,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...phoneField}
               autoComplete="tel"
-              className="voorbeeld-smaller-textbox-small"
+              className="voorbeeld-smaller-textbox"
               id={useId()}
               label="Telefoonnummer"
               type="tel"
@@ -239,7 +240,7 @@ export default function home() {
                   location.assign('/wmebv');
                 }}
               >
-                Sluit formulier
+                Stoppen met formulier
               </LinkButton>
             </UtrechtButtonGroup>
           </form>

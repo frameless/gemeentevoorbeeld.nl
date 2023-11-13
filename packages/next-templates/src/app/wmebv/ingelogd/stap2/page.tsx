@@ -88,6 +88,7 @@ export default function home() {
       <UtrechtPageContent>
         <UtrechtArticle>
           <form method="post" action="/api/wmebv/signed-in/step2" onSubmit={handleSubmit(onSubmit)}>
+            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
               <LinkButton
                 type="submit"
@@ -103,7 +104,6 @@ export default function home() {
                 Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
-            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtHeadingGroup>
               <UtrechtPreHeading>Stap 2 van 4</UtrechtPreHeading>
               <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
@@ -116,7 +116,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...nameField}
               autoComplete="name"
-              className="voorbeeld-small-textbox-small"
+              className="voorbeeld-small-textbox"
               id={useId()}
               label="Naam"
               readOnly={true}
@@ -143,7 +143,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...houseNumberField}
               autoComplete=""
-              className="voorbeeld-tiny-textbox-small"
+              className="voorbeeld-tiny-textbox"
               id={useId()}
               label="Huisnummer"
               readOnly={true}
@@ -157,7 +157,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...houseNumberSuffixField}
               autoComplete=""
-              className="voorbeeld-tiny-textbox-small"
+              className="voorbeeld-tiny-textbox"
               id={useId()}
               label="Toevoeging"
               readOnly={true}
@@ -172,7 +172,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...postalCodeField}
               autoComplete="postal-code"
-              className="voorbeeld-tiny-textbox-small"
+              className="voorbeeld-tiny-textbox"
               id={useId()}
               label="Postcode"
               readOnly={true}
@@ -199,7 +199,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...emailField}
               autoComplete="email"
-              className="voorbeeld-small-textbox-small"
+              className="voorbeeld-small-textbox"
               id={useId()}
               type="email"
               label="E-mailadres"
@@ -213,7 +213,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...phoneField}
               autoComplete="tel"
-              className="voorbeeld-smaller-textbox-small"
+              className="voorbeeld-smaller-textbox"
               id="tel"
               label="Telefoonnummer"
               type="tel"
@@ -246,7 +246,7 @@ export default function home() {
                   location.assign('/wmebv');
                 }}
               >
-                Sluit formulier
+                Stoppen met formulier
               </LinkButton>
             </UtrechtButtonGroup>
           </form>

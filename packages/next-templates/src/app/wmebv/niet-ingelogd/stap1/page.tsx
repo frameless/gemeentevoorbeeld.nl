@@ -72,8 +72,8 @@ export default function home() {
             </UtrechtButtonGroup>
             <UtrechtHeadingGroup>
               <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
-              <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtPreHeading>
             </UtrechtHeadingGroup>
+            <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtPreHeading>
             <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
             <UtrechtFormFieldTextarea
               {...messageField}
@@ -149,7 +149,7 @@ export default function home() {
                   location.assign('/wmebv');
                 }}
               >
-                Sluit formulier
+                Stoppen met formulier
               </LinkButton>
             </UtrechtButtonGroup>
           </form>
