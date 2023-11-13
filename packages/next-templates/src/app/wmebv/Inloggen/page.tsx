@@ -2,11 +2,12 @@
 
 import {
   UtrechtArticle,
+  UtrechtButton,
   UtrechtButtonGroup,
-  UtrechtButtonLink,
   UtrechtDigidLogo,
   UtrechtHeading1,
   UtrechtHeading2,
+  UtrechtIcon,
   UtrechtLink,
   UtrechtPage,
   UtrechtPageContent,
@@ -15,14 +16,7 @@ import {
 import { ExampleHeaderFunnelWmebvEmpty } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebvEmpty';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import {
-  Fieldset,
-  FieldsetLegend,
-  FormField,
-  FormLabel,
-  RadioButton,
-  HeadingGroup,
-} from '@utrecht/component-library-react';
+import { Fieldset, FieldsetLegend, FormField, FormLabel, RadioButton } from '@utrecht/component-library-react';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
@@ -32,16 +26,17 @@ export default function home() {
       <ExampleHeaderFunnelWmebvEmpty />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <form action="./ingelogd/stap1">
+          <form method="POST" action="/api/wmebv/choose-form">
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Intro">
-                <ArrowLeft /> Terug
+                <UtrechtIcon>
+                  <ArrowLeft />
+                </UtrechtIcon>{' '}
+                Terug
               </UtrechtLink>
             </UtrechtButtonGroup>
-            <HeadingGroup>
-              <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
-              <UtrechtHeading2>Inloggen</UtrechtHeading2>
-            </HeadingGroup>
+            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
+            <UtrechtHeading2>Inloggen</UtrechtHeading2>
             <UtrechtParagraph className="paragraph_digid">
               Dankzij uw DigiD kunt u overal makkelijk en veilig inloggen. Uw persoonlijke gegevens blijven goed
               beschermd. Wanneer u inlogt worden uw persoonlijke gegevens automatisch ingevuld.
@@ -59,8 +54,8 @@ export default function home() {
                     <RadioButton
                       className="utrecht-form-field__input"
                       id="800b7f3f-5048-4dcc-8f23-d04fa6ca4199"
-                      name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                      value="1"
+                      name="loggedIn"
+                      value="true"
                     />
                     Ja
                   </FormLabel>
@@ -76,17 +71,19 @@ export default function home() {
                     <RadioButton
                       className="utrecht-form-field__input"
                       id="fbc03e63-42c2-46e3-9acc-183fa64c6dcd"
-                      name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                      value="2"
+                      name="loggedIn"
+                      value="false"
                     />
                     Nee
                   </FormLabel>
                 </UtrechtParagraph>
               </FormField>
             </Fieldset>
-            <UtrechtButtonLink href="./ingelogd/stap1" appearance="primary-action-button">
-              Doorgaan
-            </UtrechtButtonLink>
+            <UtrechtButtonGroup>
+              <UtrechtButton type="submit" appearance="primary-action-button">
+                Doorgaan
+              </UtrechtButton>
+            </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>
       </UtrechtPageContent>

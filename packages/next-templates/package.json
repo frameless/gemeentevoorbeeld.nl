@@ -29,11 +29,12 @@
     "@next/eslint-plugin-next": "13.4.19",
     "@nl-design-system-unstable/voorbeeld-design-tokens": "1.0.0-alpha.96",
     "@svgr/webpack": "8.1.0",
-    "@utrecht/component-library-css": "1.0.0-alpha.597",
-    "@utrecht/component-library-react": "1.0.0-alpha.406",
-    "@utrecht/design-tokens": "1.0.0-alpha.590",
-    "@utrecht/web-component-library-react": "1.0.0-alpha.596",
-    "@utrecht/web-component-library-stencil": "1.0.0-alpha.596",
+    "@utrecht/component-library-css": "2.0.0",
+    "@utrecht/component-library-react": "2.0.0",
+    "@utrecht/components": "2.0.0",
+    "@utrecht/design-tokens": "1.0.0-alpha.602",
+    "@utrecht/web-component-library-react": "1.0.2",
+    "@utrecht/web-component-library-stencil": "1.1.0",
     "clsx": "2.0.0"
   }
 }

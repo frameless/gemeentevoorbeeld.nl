@@ -33,15 +33,6 @@ importers:
       '@typescript-eslint/parser':
         specifier: 6.4.1
         version: 6.4.1(eslint@8.48.0)(typescript@5.2.2)
-      '@utrecht/component-library-react':
-        specifier: 1.0.0-alpha.406
-        version: 1.0.0-alpha.406(react-dom@18.2.0)(react@18.2.0)
-      '@utrecht/components':
-        specifier: 1.0.0-alpha.558
-        version: 1.0.0-alpha.558
-      '@utrecht/web-component-library-react':
-        specifier: 1.0.0-alpha.596
-        version: 1.0.0-alpha.596(react-dom@18.2.0)(react@18.2.0)
       eslint:
         specifier: 8.48.0
         version: 8.48.0
@@ -288,20 +279,23 @@ importers:
         specifier: 8.1.0
         version: 8.1.0
       '@utrecht/component-library-css':
-        specifier: 1.0.0-alpha.597
-        version: 1.0.0-alpha.597
+        specifier: 2.0.0
+        version: 2.0.0
       '@utrecht/component-library-react':
-        specifier: 1.0.0-alpha.406
-        version: 1.0.0-alpha.406(react-dom@18.2.0)(react@18.2.0)
+        specifier: 2.0.0
+        version: 2.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@utrecht/components':
+        specifier: 2.0.0
+        version: 2.0.0
       '@utrecht/design-tokens':
-        specifier: 1.0.0-alpha.590
-        version: 1.0.0-alpha.590
+        specifier: 1.0.0-alpha.602
+        version: 1.0.0-alpha.602
       '@utrecht/web-component-library-react':
-        specifier: 1.0.0-alpha.596
-        version: 1.0.0-alpha.596(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.2
+        version: 1.0.2(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-stencil':
-        specifier: 1.0.0-alpha.596
-        version: 1.0.0-alpha.596
+        specifier: 1.1.0
+        version: 1.1.0
       clsx:
         specifier: 2.0.0
         version: 2.0.0
@@ -2834,16 +2828,16 @@ packages:
       '@sinonjs/commons': 3.0.0
     dev: true
 
-  /@stencil/core@3.4.2:
-    resolution: {integrity: sha512-FAUhUVaakCy29nU2GwO/HQBRV1ihPRvncz3PUc8oR+UJLAxGabTmP8PLY7wvHfbw+Cvi4VXfJFTBvdfDu6iKPQ==}
-    engines: {node: '>=14.10.0', npm: '>=6.0.0'}
-    hasBin: true
-    dev: true
-
   /@stencil/core@4.1.0:
     resolution: {integrity: sha512-yIpL+CX02fy5zvFXwXcHZjjEILRm3aiONbucpfLIWPS7zcBAuucdROssartEa+D7E1JRko97ydxn1Ntdu4GoWg==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
+
+  /@stencil/core@4.5.0:
+    resolution: {integrity: sha512-XRbHdb9t4SQzCCbF9qsh0dexvnlArEzCDJl19BJzxzazVBM398SeJUKCBh4p91AZIWveN0gHuZSIGMhLWR7qSA==}
+    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
+    hasBin: true
+    dev: true
 
   /@stencil/react-output-target@0.5.3(@stencil/core@4.1.0):
     resolution: {integrity: sha512-68jwRp35CjAcwhTJ9yFD/3n+jrHOqvEH2jreVuPVvZK+4tkhPlYlwz0d1E1RlF3jyifUSfdkWUGgXIEy8Fo3yw==}
@@ -3486,12 +3480,12 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@utrecht/component-library-css@1.0.0-alpha.597:
-    resolution: {integrity: sha512-ZqPUf4MN/LCgZ+uUxgFTLVCQ4b5Q9UThB3Rw8zYGJ4AeT1vDkq9bG/p+5U2jVfIcnu5F7EzhHKsecBGUl0WAjA==}
+  /@utrecht/component-library-css@2.0.0:
+    resolution: {integrity: sha512-l5aHqZqD9Lbzb8hbDlgVewmdC0sP13GGMwqJpEloR3kkXYI6PZfIQaH2QzgLqHARF0CCjRhaS+lScAmgYjxCQQ==}
     dev: true
 
-  /@utrecht/component-library-react@1.0.0-alpha.406(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-lZoV/O4EFDIYghVF8okdXBNlmal7bcvZ1jqNk+b1gac54TwpvTmmbd4dlwB2+kulN1vhwiFN+oUII3zOMuYCuQ==}
+  /@utrecht/component-library-react@2.0.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-WiZXgMhoDVRUZdPf9aVWBO1FIBVrY+qCNBHhX31lbUHZL83fMmcke4BFneu8Uk5ZB/ckDG+lFdbA23YuC9h0OA==}
     peerDependencies:
       date-fns: ^2.30.0
       react: '18'
@@ -3512,31 +3506,31 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@utrecht/components@1.0.0-alpha.558:
-    resolution: {integrity: sha512-Djjws7+i3BeZpwRzRWcdumCl1+VmUdWAQJVYYuzSkQsOuJxllb97ahFUEVoxbuLq2S1Fz2ijCcnnA9fsQ66L8g==}
+  /@utrecht/components@2.0.0:
+    resolution: {integrity: sha512-PZmvcmHa5SB4V5xLV/5iqyQfN7rVXN5FKY/pXKX2MopUd/FdRM0uTaVcDmUn62jDOcoisO4UrmttzKe75ysh/Q==}
     dependencies:
       clsx: 1.2.1
     dev: true
 
-  /@utrecht/design-tokens@1.0.0-alpha.590:
-    resolution: {integrity: sha512-SataSqHdataOqA8SG/GpRv5fN4zQdjLYg7Iq7i9qOiV5O0RpweIR+mA4Lj8o03Ah18QuH43xB5IG12V95RjqBw==}
+  /@utrecht/design-tokens@1.0.0-alpha.602:
+    resolution: {integrity: sha512-gvVjPLOg/4JnhT74rADaK0uyXsXneph3NWsiVYKEWCS0h2I05Y7AJf7Z55YBTKEwMOSP68HOHz4cVJ+/e6j0iA==}
     dev: true
 
-  /@utrecht/web-component-library-react@1.0.0-alpha.596(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-Kz93KnotWf1qn2KBd18c0PWKOYDMbzjUuw357RVb6aYSewVNnm/gh887XKdcZzbxNhWRF9ZbbpubpW8k410Uig==}
+  /@utrecht/web-component-library-react@1.0.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-TFs2ub0bNvqXlNNn2rdmWyb7/1fQN/pijQFcBt5yohaiQYhrdk7G63JfqPiF7xGk6XbAV0NW3HogcYMhMbKBqg==}
     peerDependencies:
       react: 16 - 18
       react-dom: 16 - 18
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.596
+      '@utrecht/web-component-library-stencil': 1.1.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@utrecht/web-component-library-stencil@1.0.0-alpha.596:
-    resolution: {integrity: sha512-K4W9PQJOptMp+0HlhvKgagDanErgyc1fWdOmS4PIrlXWzDKEkfw7QxeZcsWfEu9IeWk7P3Ii+YCvh1BMVmvqiw==}
+  /@utrecht/web-component-library-stencil@1.1.0:
+    resolution: {integrity: sha512-3gHqaSqI5y6J+H6ZABHNxgdPxhQDzLFJX+ILfQDzuzQUOywyuAFodrArE2J53uPPcL6cw6ckXlIPEOZmuy3KSA==}
     dependencies:
-      '@stencil/core': 3.4.2
+      '@stencil/core': 4.5.0
     dev: true
 
   /@vitejs/plugin-react@4.0.4(vite@4.4.9):

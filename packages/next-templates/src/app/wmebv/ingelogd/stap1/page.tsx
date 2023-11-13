@@ -4,15 +4,17 @@ import {
   UtrechtArticle,
   UtrechtButton,
   UtrechtButtonGroup,
-  UtrechtButtonLink,
-  UtrechtForm,
+  UtrechtFormFieldErrorMessage,
   UtrechtFormFieldTextarea,
   UtrechtHeading1,
   UtrechtHeading2,
+  UtrechtHeadingGroup,
+  UtrechtIcon,
   UtrechtLink,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
+  UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
@@ -22,31 +24,59 @@ import {
   UnorderedList,
   UnorderedListItem,
   HeadingGroup,
+  LinkButton,
 } from '@utrecht/component-library-react';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
+import { useForm } from 'react-hook-form';
+import { useEffect, useState } from 'react';
 
 export default function home() {
+  const [storedData, setStoredData] = useState<{}>();
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wmebv');
+
+    setStoredData(stored ? JSON.parse(stored) : {});
+  }, []);
+
+  const defaultValues = { message: '', ...storedData };
+
+  const {
+    getValues,
+    register,
+    formState: { errors },
+  } = useForm({ defaultValues });
+
+  const messageField = register('message', { required: true });
+
+  const saveFormData = () => window.sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const deleteFormData = () => window.sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <form action="./stap2" method="post">
+          <form method="post" action="/api/wmebv/signed-in/step1" onSubmit={saveFormData}>
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
-                <ArrowLeft /> Terug
+                <UtrechtIcon>
+                  <ArrowLeft />
+                </UtrechtIcon>{' '}
+                Terug
               </UtrechtLink>
             </UtrechtButtonGroup>
-            <HeadingGroup>
+            <UtrechtHeadingGroup>
               <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
-              <PreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</PreHeading>
-            </HeadingGroup>
+              <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtPreHeading>
+            </UtrechtHeadingGroup>
             <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
-            <UtrechtForm>
-              <FormLabel>Stel uw vraag</FormLabel>
-              <UtrechtFormFieldTextarea />
-            </UtrechtForm>
+            <UtrechtFormFieldTextarea label="Stel uw vraag" {...messageField} invalid={!!errors[messageField.name]}>
+              <UtrechtFormFieldErrorMessage slot="error-message">
+                {String(errors[messageField.name]?.message)}
+              </UtrechtFormFieldErrorMessage>
+            </UtrechtFormFieldTextarea>
             <div className="voorbeeld-bijlage-flex-container">
               <UtrechtParagraph className="voorbeeld-paragraph-bijlage">Bestand toevoegen</UtrechtParagraph>
               <UtrechtParagraph>(Niet verplicht)</UtrechtParagraph>
@@ -64,16 +94,30 @@ export default function home() {
               </UtrechtButton>
               <UtrechtParagraph className="paragraph-space-bijlagen">Geen bestand gekozen</UtrechtParagraph>
             </div>
-            <UtrechtButtonGroup className="utrecht-button-group--example-column">
-              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap2" appearance="primary-action-button">
+            <UtrechtButtonGroup direction="column">
+              <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Volgende stap
-              </UtrechtButtonLink>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              </UtrechtButton>
+              <LinkButton
+                inline
+                className="voorbeeld-button-link"
+                onClick={() => {
+                  saveFormData();
+                  location.assign('/wmebv');
+                }}
+              >
                 Opslaan en later verder
-              </UtrechtButtonLink>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              </LinkButton>
+              <LinkButton
+                inline
+                className="voorbeeld-button-link"
+                onClick={() => {
+                  deleteFormData();
+                  location.assign('/wmebv');
+                }}
+              >
                 Sluit formulier
-              </UtrechtButtonLink>
+              </LinkButton>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>

@@ -2,134 +2,222 @@
 
 import {
   UtrechtArticle,
+  UtrechtButton,
   UtrechtButtonGroup,
-  UtrechtButtonLink,
+  UtrechtFormFieldErrorMessage,
   UtrechtFormFieldTextbox,
   UtrechtHeading1,
   UtrechtHeading2,
+  UtrechtHeadingGroup,
+  UtrechtIcon,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
+  UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import { HeadingGroup, LinkButton, PreHeading } from '@utrecht/component-library-react';
+import { Paragraph, LinkButton } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
+import { useEffect, useId, useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 export default function home() {
+  const [storedData, setStoredData] = useState<{}>();
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wmebv');
+
+    setStoredData(stored ? JSON.parse(stored) : {});
+  }, []);
+
+  const data = {
+    name: 'Jeroen van Drouwen',
+    street: 'Laan der Voorbeelden',
+    houseNumber: '99',
+    houseNumberSuffix: '',
+    postalCode: '1024 VP',
+    homeTown: 'Voorbeeld',
+    email: 'j.vandrouwen@gmail.com',
+    phone: '0650618346',
+  };
+
+  const defaultValues = { ...data, ...storedData };
+
+  const {
+    getValues,
+    register,
+    formState: { errors },
+  } = useForm({ defaultValues });
+
+  const { min: _minA, max: _maxA, ...nameField } = register('name', { required: 'Vul een naam in' });
+  const { min: _minB, max: _maxB, ...streetField } = register('street', { required: 'Vul een straat in' });
+  const {
+    min: _minC,
+    max: _maxC,
+    ...houseNumberField
+  } = register('houseNumber', { required: 'Vul een huisnummer in' });
+  const { min: _minD, max: _maxD, ...houseNumberSuffixField } = register('houseNumberSuffix', { required: false });
+  const { min: _minE, max: _maxE, ...postalCodeField } = register('postalCode', { required: 'Vul een postcode in' });
+  const { min: _minF, max: _maxF, ...homeTownField } = register('homeTown', { required: 'Vul een woonplaats in' });
+  const { min: _minG, max: _maxG, ...emailField } = register('email', { required: 'Vul een e-mailadres in' });
+  const { min: _minH, max: _maxH, ...phoneField } = register('phone', { required: false });
+
+  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent>
         <UtrechtArticle>
-          <form action="./stap3" method="post">
-            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
+          <form method="post" action="/api/wmebv/signed-in/step2" onSubmit={saveFormData}>
             <UtrechtButtonGroup>
-              <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap1/">
-                <ArrowLeft /> Vorige Stap
+              <LinkButton
+                type="submit"
+                inline={true}
+                className="voorbeeld-button-link"
+                formAction="./stap1/"
+                onSubmit={saveFormData}
+              >
+                <UtrechtIcon>
+                  <ArrowLeft />
+                </UtrechtIcon>{' '}
+                Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
-            <HeadingGroup>
-              <PreHeading>Stap 2 van 4</PreHeading>
+            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
+            <UtrechtHeadingGroup>
+              <UtrechtPreHeading>Stap 2 van 4</UtrechtPreHeading>
               <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
-            </HeadingGroup>
+            </UtrechtHeadingGroup>
             <UtrechtParagraph>
               Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet
               met anderen gedeeld.
             </UtrechtParagraph>
 
             <UtrechtFormFieldTextbox
+              {...nameField}
               autoComplete="name"
               className="voorbeeld-small-textbox-small"
-              id="Naam"
+              id={useId()}
               label="Naam"
-              name="naam"
-              type="text"
               readOnly={true}
-              value="Jeroen Van Drouwen"
-            />
+            >
+              <UtrechtFormFieldErrorMessage slot="error-message">
+                {String(errors[nameField.name]?.message)}
+              </UtrechtFormFieldErrorMessage>
+            </UtrechtFormFieldTextbox>
 
             <UtrechtFormFieldTextbox
-              aria-label="straat"
+              {...streetField}
               autoComplete="street-address"
-              id="Straat"
+              id={useId()}
               label="Straat"
-              name="straat"
-              type="text"
               readOnly={true}
-              value="Laan der voorbeelden"
-            />
+            >
+              <UtrechtFormFieldErrorMessage slot="error-message">
+                {String(errors[streetField.name]?.message)}
+              </UtrechtFormFieldErrorMessage>
+            </UtrechtFormFieldTextbox>
 
             <UtrechtFormFieldTextbox
+              {...houseNumberField}
               autoComplete=""
               className="voorbeeld-tiny-textbox-small"
-              id="Huisnummer"
+              id={useId()}
               label="Huisnummer"
-              name="huisnummer"
-              type="text"
               readOnly={true}
-              value="99"
-            />
+            >
+              <UtrechtFormFieldErrorMessage slot="error-message">
+                {String(errors[houseNumberField.name]?.message)}
+              </UtrechtFormFieldErrorMessage>
+            </UtrechtFormFieldTextbox>
 
             <UtrechtFormFieldTextbox
+              {...houseNumberSuffixField}
               autoComplete=""
               className="voorbeeld-tiny-textbox-small"
-              id="toevoeging"
+              id={useId()}
               label="Toevoeging"
-              name="toevoeging"
-              type="text"
               readOnly={true}
-            />
+            >
+              <Paragraph slot="description">Niet verplicht.</Paragraph>
+            </UtrechtFormFieldTextbox>
 
             <UtrechtFormFieldTextbox
+              {...postalCodeField}
               autoComplete="postal-code"
               className="voorbeeld-tiny-textbox-small"
-              id="Postcode"
+              id={useId()}
               label="Postcode"
-              name="postcode"
-              type="text"
               readOnly={true}
-              value="1024 VP"
-            />
+            >
+              <UtrechtFormFieldErrorMessage slot="error-message">
+                {String(errors[postalCodeField.name]?.message)}
+              </UtrechtFormFieldErrorMessage>
+            </UtrechtFormFieldTextbox>
 
             <UtrechtFormFieldTextbox
+              {...homeTownField}
               autoComplete="address-level2"
-              id="woonplaats"
+              id={useId()}
               label="Woonplaats"
-              name="Woonplaats"
-              type="text"
               readOnly={true}
-              value="Voorbeeld"
-            />
+            >
+              <UtrechtFormFieldErrorMessage slot="error-message">
+                {String(errors[homeTownField.name]?.message)}
+              </UtrechtFormFieldErrorMessage>
+            </UtrechtFormFieldTextbox>
 
             <UtrechtFormFieldTextbox
+              {...emailField}
               autoComplete="email"
               className="voorbeeld-small-textbox-small"
-              id="Emailadres"
-              label="Emailadres"
+              id={useId()}
               type="email"
-              value="j.vandrouwen@gmail.com"
-            />
+              label="E-mailadres"
+            >
+              <UtrechtFormFieldErrorMessage slot="error-message">
+                {String(errors[emailField.name]?.message)}
+              </UtrechtFormFieldErrorMessage>
+            </UtrechtFormFieldTextbox>
 
             <UtrechtFormFieldTextbox
+              {...phoneField}
               autoComplete="tel"
               className="voorbeeld-smaller-textbox-small"
               id="tel"
-              label="Telefoonnummer (niet verplicht)"
+              label="Telefoonnummer"
               type="tel"
-              value="0650618346"
-            />
-            <UtrechtButtonGroup className="utrecht-button-group--example-column">
-              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap3" appearance="primary-action-button">
+            >
+              <Paragraph slot="description">Niet verplicht.</Paragraph>
+            </UtrechtFormFieldTextbox>
+            <UtrechtButtonGroup direction="column">
+              <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Volgende stap
-              </UtrechtButtonLink>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              </UtrechtButton>
+              <LinkButton
+                inline
+                className="voorbeeld-button-link"
+                onClick={() => {
+                  saveFormData();
+                  location.assign('/wmebv');
+                }}
+              >
                 Opslaan en later verder
-              </UtrechtButtonLink>
-              <UtrechtButtonLink appearance="subtle-button" className="voorbeeld-button-link" href="#">
+              </LinkButton>
+              <LinkButton
+                inline
+                className="voorbeeld-button-link"
+                onClick={() => {
+                  deleteFormData();
+                  location.assign('/wmebv');
+                }}
+              >
                 Sluit formulier
-              </UtrechtButtonLink>
+              </LinkButton>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>

@@ -7,48 +7,63 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
   UtrechtLink,
-  UtrechtSpotlightSection,
   UtrechtButtonGroup,
+  UtrechtIcon,
+  UtrechtAlert,
+  UtrechtHeading2,
+  UtrechtUrlData,
 } from '@utrecht/web-component-library-react';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
-import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
+import { Strong, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import Printer from '@/app/styling/assets/printer-icon.svg';
 import FileText from '@/app/styling/assets/filetext-icon.svg';
 import CircleCheck from '../../../styling/assets/circleCheck.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
+  const data = {
+    code: '230829-1118-59dc',
+    email: 'j.vandrouwen@gmail.com',
+  };
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtSpotlightSection className="utrecht-spotlight-section-wmebv">
+          <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">
             <UtrechtHeading1>
-              <CircleCheck /> Vraag met succes verstuurd
+              <UtrechtIcon>
+                <CircleCheck />
+              </UtrechtIcon>{' '}
+              Vraag met succes verstuurd
             </UtrechtHeading1>
-            <UtrechtParagraph>Kenmerk: 230829-1118-59dc</UtrechtParagraph>
-          </UtrechtSpotlightSection>
-          <UtrechtHeading1>Wat gaat er nu gebeuren?</UtrechtHeading1>
+            <UtrechtParagraph>Kenmerk: {data.code}</UtrechtParagraph>
+          </UtrechtAlert>
+          <UtrechtHeading2>Wat gaat er nu gebeuren?</UtrechtHeading2>
           <UnorderedList>
-            <UnorderedListItem className="voorbeeld-unordered-list-item">
-              U ontvangt een bevestigingsmail op <span className="bold-mail">j.vandrouwen@gmail.com</span>
+            <UnorderedListItem>
+              U ontvangt een bevestigingsmail op{' '}
+              <Strong>
+                <UtrechtUrlData>{data.email}</UtrechtUrlData>
+              </Strong>
             </UnorderedListItem>
-            <UnorderedListItem className="voorbeeld-unordered-list-item">
-              De afdeling Vraagbaak gaat met uw vraag aan de slag.
-            </UnorderedListItem>
+            <UnorderedListItem>De afdeling Vraagbaak gaat met uw vraag aan de slag.</UnorderedListItem>
           </UnorderedList>
-          <UtrechtButtonGroup className="utrecht-button-group--example-column">
-            <UtrechtLink className="link" href="#">
-              <Printer /> Print uw vraag
+          <UtrechtButtonGroup direction="column">
+            <UtrechtLink href="#">
+              <UtrechtIcon>
+                <Printer />
+              </UtrechtIcon>{' '}
+              Print uw vraag
             </UtrechtLink>
-            <UtrechtLink className="link" href="#">
-              <FileText /> Download uw vraag als PDF
+            <UtrechtLink href="/" download="vraag.pdf">
+              <UtrechtIcon>
+                <FileText />
+              </UtrechtIcon>{' '}
+              Download uw vraag als PDF
             </UtrechtLink>
-            <UtrechtLink className="link" href="#">
-              Terug naar voorbeeld.nl
-            </UtrechtLink>
+            <UtrechtLink href="#">Terug naar voorbeeld.nl</UtrechtLink>
           </UtrechtButtonGroup>
         </UtrechtArticle>
       </UtrechtPageContent>

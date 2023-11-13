@@ -7,47 +7,76 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
   UtrechtLink,
-  UtrechtSpotlightSection,
   UtrechtButtonGroup,
+  UtrechtIcon,
+  UtrechtAlert,
+  UtrechtHeading2,
+  UtrechtUrlData,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderFunnelWmebvEmpty } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebvEmpty';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
-import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
+import { Strong, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import Printer from '@/app/styling/assets/printer-icon.svg';
 import FileText from '@/app/styling/assets/filetext-icon.svg';
 import CircleCheck from '../../../styling/assets/circleCheck.svg';
 import '@/app/styling/css/wmebv.css';
+import { useEffect, useState } from 'react';
 
 export default function home() {
+  const [storedData, setStoredData] = useState<any>();
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wmebv');
+
+    setStoredData(stored ? { ...JSON.parse(stored), code: '230829-1118-59dc' } : { code: '230829-1118-59dc' });
+  }, []);
+
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebvEmpty />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtSpotlightSection className="utrecht-spotlight-section-wmebv">
+          <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">
             <UtrechtHeading1>
-              <CircleCheck /> Vraag met succes verstuurd
+              <UtrechtIcon>
+                <CircleCheck />
+              </UtrechtIcon>{' '}
+              Vraag met succes verstuurd
             </UtrechtHeading1>
-            <UtrechtParagraph>Kenmerk: 230829-1118-59dc</UtrechtParagraph>
-          </UtrechtSpotlightSection>
-          <UtrechtHeading1>Wat gaat er nu gebeuren?</UtrechtHeading1>
+            <UtrechtParagraph>Kenmerk: {storedData?.code}</UtrechtParagraph>
+          </UtrechtAlert>
+          <UtrechtHeading2>Wat gaat er nu gebeuren?</UtrechtHeading2>
           <UnorderedList>
-            <UnorderedListItem className="voorbeeld-unordered-list-item">
-              U ontvangt een bevestigingsmail op <span className="bold-mail">j.vandrouwen@gmail.com</span>
+            <UnorderedListItem>
+              U ontvangt een bevestigingsmail op{' '}
+              <Strong>
+                <UtrechtUrlData>{storedData?.email}</UtrechtUrlData>
+              </Strong>
             </UnorderedListItem>
-            <UnorderedListItem className="voorbeeld-unordered-list-item">
-              De afdeling Vraagbaak gaat met uw vraag aan de slag.
-            </UnorderedListItem>
+            <UnorderedListItem>De afdeling Vraagbaak gaat met uw vraag aan de slag.</UnorderedListItem>
           </UnorderedList>
-          <UtrechtButtonGroup className="utrecht-button-group--example-column">
-            <UtrechtLink className="link" href="#">
-              <Printer /> Print uw vraag
+          <UtrechtButtonGroup direction="column">
+            <UtrechtLink href="#">
+              <UtrechtIcon>
+                <Printer />
+              </UtrechtIcon>{' '}
+              Print uw vraag
             </UtrechtLink>
-            <UtrechtLink className="link" href="#">
-              <FileText /> Download uw vraag als PDF
+            <UtrechtLink href="/" download="vraag.pdf">
+              <UtrechtIcon>
+                <FileText />
+              </UtrechtIcon>{' '}
+              Download uw vraag als PDF
             </UtrechtLink>
-            <UtrechtLink className="link" href="#">
+            <UtrechtLink
+              href="/wmebv"
+              onClick={() => {
+                deleteFormData();
+                location.assign('/wmebv');
+              }}
+            >
               Terug naar voorbeeld.nl
             </UtrechtLink>
           </UtrechtButtonGroup>

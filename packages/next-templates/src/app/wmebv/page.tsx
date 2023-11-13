@@ -14,6 +14,7 @@ import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleNavigationWmebv } from '@/components/wmebv/Navigation/ExampleNavigationWmebv';
 import '@/app/styling/css/wmebv.css';
+import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
 
 export default function home() {
   return (
@@ -22,9 +23,11 @@ export default function home() {
       <ExampleNavigationWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <UtrechtButtonGroup>
-            <UtrechtLink href="/wmebv">Home</UtrechtLink>
-          </UtrechtButtonGroup>
+          <BreadcrumbNav label="Kruimelpad">
+            <BreadcrumbNavLink href="" index={0} rel="home">
+              Home
+            </BreadcrumbNavLink>
+          </BreadcrumbNav>
           <UtrechtHeading1>Contact met de gemeente</UtrechtHeading1>
           <UtrechtParagraph lead>
             Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden? Stel
