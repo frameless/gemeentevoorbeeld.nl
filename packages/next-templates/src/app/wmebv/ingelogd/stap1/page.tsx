@@ -18,12 +18,12 @@ import {
 } from '@utrecht/web-component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { UnorderedList, UnorderedListItem, LinkButton } from '@utrecht/component-library-react';
-import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
-import '@/app/styling/css/wmebv.css';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { useForm } from 'react-hook-form';
 import { useEffect, useState } from 'react';
 import { messageValidation } from '@/utils/validation';
+import { IconArrowLeft } from '@tabler/icons-react';
+import '@/app/styling/css/wmebv.css';
 
 export default function home() {
   const [storedData, setStoredData] = useState<{}>();
@@ -62,8 +62,8 @@ export default function home() {
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <UtrechtIcon>
-                  <ArrowLeft />
-                </UtrechtIcon>{' '}
+                  <IconArrowLeft />
+                </UtrechtIcon>
                 Terug
               </UtrechtLink>
             </UtrechtButtonGroup>

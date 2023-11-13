@@ -18,8 +18,6 @@ import {
 import { LinkButton, Paragraph } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
-import '@/app/styling/css/wmebv.css';
 import { useEffect, useId, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import {
@@ -32,6 +30,8 @@ import {
   emailValidation,
   phoneValidation,
 } from '@/utils/validation';
+import { IconArrowLeft } from '@tabler/icons-react';
+import '@/app/styling/css/wmebv.css';
 
 export default function home() {
   const [storedData, setStoredData] = useState<{}>();
@@ -98,8 +98,8 @@ export default function home() {
                 onSubmit={saveFormData}
               >
                 <UtrechtIcon>
-                  <ArrowLeft />
-                </UtrechtIcon>{' '}
+                  <IconArrowLeft />
+                </UtrechtIcon>
                 Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>

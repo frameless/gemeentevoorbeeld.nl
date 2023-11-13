@@ -13,10 +13,9 @@ import {
 } from '@utrecht/web-component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
-import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
-
-import '@/app/styling/css/wmebv.css';
+import { IconArrowLeft } from '@tabler/icons-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
+import '@/app/styling/css/wmebv.css';
 
 export default function home() {
   return (
@@ -28,8 +27,8 @@ export default function home() {
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv">
                 <UtrechtIcon>
-                  <ArrowLeft />
-                </UtrechtIcon>{' '}
+                  <IconArrowLeft />
+                </UtrechtIcon>
                 Terug
               </UtrechtLink>
             </UtrechtButtonGroup>

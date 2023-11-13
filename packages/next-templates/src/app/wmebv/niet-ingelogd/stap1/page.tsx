@@ -27,12 +27,12 @@ import {
   FormFieldDescription,
   Textbox,
 } from '@utrecht/component-library-react';
-import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
-import '@/app/styling/css/wmebv.css';
 import { TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
 import { useForm } from 'react-hook-form';
 import { useEffect, useState } from 'react';
 import { messageValidation } from '@/utils/validation';
+import { IconArrowLeft } from '@tabler/icons-react';
+import '@/app/styling/css/wmebv.css';
 
 export default function home() {
   const [storedData, setStoredData] = useState<any>();
@@ -65,8 +65,8 @@ export default function home() {
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <UtrechtIcon>
-                  <ArrowLeft />
-                </UtrechtIcon>{' '}
+                  <IconArrowLeft />
+                </UtrechtIcon>
                 Terug
               </UtrechtLink>
             </UtrechtButtonGroup>
@@ -85,7 +85,7 @@ export default function home() {
             >
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[messageField.name]?.message)}
-              </UtrechtFormFieldErrorMessage>{' '}
+              </UtrechtFormFieldErrorMessage>
             </UtrechtFormFieldTextarea>
             <FormField id="file-field">
               <UtrechtParagraph className="voorbeeld-paragraph-bijlage">
