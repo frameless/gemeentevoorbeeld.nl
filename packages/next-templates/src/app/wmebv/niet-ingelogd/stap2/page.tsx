@@ -16,7 +16,7 @@ import {
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
+import { IconArrowLeft } from '@tabler/icons-react';
 import { LinkButton } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
 import { useEffect, useId, useState } from 'react';
@@ -99,8 +99,8 @@ export default function home() {
                 onSubmit={saveFormData}
               >
                 <UtrechtIcon>
-                  <ArrowLeft />
-                </UtrechtIcon>{' '}
+                  <IconArrowLeft />
+                </UtrechtIcon>
                 Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>

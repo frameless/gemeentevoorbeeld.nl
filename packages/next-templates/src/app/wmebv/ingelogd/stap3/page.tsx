@@ -22,10 +22,9 @@ import {
 import { LinkButton, PreserveData, URLData } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
-import Pencil from '../../../styling/assets/pencil-icon.svg';
-import '@/app/styling/css/wmebv.css';
 import { useEffect, useState } from 'react';
+import { IconArrowLeft, IconPencil } from '@tabler/icons-react';
+import '@/app/styling/css/wmebv.css';
 
 export default function home() {
   const [storedData, setStoredData] = useState<any>();
@@ -47,8 +46,8 @@ export default function home() {
             <UtrechtButtonGroup>
               <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap2/">
                 <UtrechtIcon>
-                  <ArrowLeft />
-                </UtrechtIcon>{' '}
+                  <IconArrowLeft />
+                </UtrechtIcon>
                 Vorige Stap
               </LinkButton>
             </UtrechtButtonGroup>
@@ -60,7 +59,7 @@ export default function home() {
             <UtrechtHeading3>Uw vraag</UtrechtHeading3>
             <UtrechtButtonGroup>
               <UtrechtLink href="./stap1">
-                <Pencil />
+                <IconPencil />
                 Aanpassen
               </UtrechtLink>
             </UtrechtButtonGroup>
@@ -75,7 +74,7 @@ export default function home() {
             <UtrechtHeading3>Uw gegevens</UtrechtHeading3>
             <UtrechtButtonGroup>
               <UtrechtLink href="./stap2">
-                <Pencil />
+                <IconPencil />
                 Aanpassen
               </UtrechtLink>
             </UtrechtButtonGroup>

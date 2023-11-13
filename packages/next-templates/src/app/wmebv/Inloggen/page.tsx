@@ -17,7 +17,7 @@ import { ExampleHeaderWmebv } from '@/components/ExampleHeader/wmebv/ExampleHead
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { Fieldset, FieldsetLegend, FormField, FormLabel, RadioButton } from '@utrecht/component-library-react';
-import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
+import { IconArrowLeft } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
@@ -31,8 +31,8 @@ export default function home() {
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Intro">
                 <UtrechtIcon>
-                  <ArrowLeft />
-                </UtrechtIcon>{' '}
+                  <IconArrowLeft />
+                </UtrechtIcon>
                 Terug
               </UtrechtLink>
             </UtrechtButtonGroup>

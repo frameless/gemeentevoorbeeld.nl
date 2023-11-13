@@ -15,11 +15,9 @@ import {
 } from '@utrecht/web-component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { Strong, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
-import Printer from '@/app/styling/assets/printer-icon.svg';
-import FileText from '@/app/styling/assets/filetext-icon.svg';
-import CircleCheck from '../../../styling/assets/circleCheck.svg';
-import '@/app/styling/css/wmebv.css';
+import { IconPrinter, IconCircleCheck, IconFileText } from '@tabler/icons-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
+import '@/app/styling/css/wmebv.css';
 
 export default function home() {
   const data = {
@@ -34,8 +32,8 @@ export default function home() {
           <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">
             <UtrechtHeading1>
               <UtrechtIcon>
-                <CircleCheck />
-              </UtrechtIcon>{' '}
+                <IconCircleCheck color="var(--voorbeeld-color-green-600)" size={33} />
+              </UtrechtIcon>
               Vraag met succes verstuurd
             </UtrechtHeading1>
             <UtrechtParagraph>Kenmerk: {data.code}</UtrechtParagraph>
@@ -43,7 +41,7 @@ export default function home() {
           <UtrechtHeading2>Wat gaat er nu gebeuren?</UtrechtHeading2>
           <UnorderedList>
             <UnorderedListItem>
-              U ontvangt een bevestigingsmail op{' '}
+              U ontvangt een bevestigingsmail op
               <Strong>
                 <UtrechtUrlData>{data.email}</UtrechtUrlData>
               </Strong>
@@ -53,14 +51,14 @@ export default function home() {
           <UtrechtButtonGroup direction="column">
             <UtrechtLink href="#">
               <UtrechtIcon>
-                <Printer />
-              </UtrechtIcon>{' '}
+                <IconPrinter />
+              </UtrechtIcon>
               Print uw vraag
             </UtrechtLink>
             <UtrechtLink href="/" download="vraag.pdf">
               <UtrechtIcon>
-                <FileText />
-              </UtrechtIcon>{' '}
+                <IconFileText />
+              </UtrechtIcon>
               Download uw vraag als PDF
             </UtrechtLink>
             <UtrechtLink href="#">Terug naar voorbeeld.nl</UtrechtLink>
