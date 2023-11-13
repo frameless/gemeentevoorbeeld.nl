@@ -34,14 +34,6 @@ import { IconArrowLeft } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
-  const [storedData, setStoredData] = useState<{}>();
-
-  useEffect(() => {
-    const stored = sessionStorage.getItem('wmebv');
-
-    setStoredData(stored ? JSON.parse(stored) : {});
-  }, []);
-
   const data = {
     name: 'Jeroen van Drouwen',
     street: 'Laan der Voorbeelden',
@@ -53,14 +45,20 @@ export default function home() {
     phone: '0650618346',
   };
 
-  const defaultValues = { ...data, ...storedData };
+  const [storedData, setStoredData] = useState<any>(data);
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wmebv');
+
+    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
+  }, []);
 
   const {
     getValues,
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm({ defaultValues, reValidateMode: 'onChange' });
+  } = useForm({ values: storedData, reValidateMode: 'onChange' });
 
   const { min: _minA, max: _maxA, ...nameField } = register('name', nameValidation);
   const { min: _minB, max: _maxB, ...streetField } = register('street', streetValidation);
@@ -74,7 +72,8 @@ export default function home() {
   const { min: _minF, max: _maxF, ...homeTownField } = register('homeTown', homeTownValidation);
   const { min: _minG, max: _maxG, ...emailField } = register('email', emailValidation);
   const { min: _minH, max: _maxH, ...phoneField } = register('phone', phoneValidation);
-  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+
+  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify({ ...storedData, ...getValues() }));
   const deleteFormData = () => sessionStorage.removeItem('wmebv');
 
   const onSubmit = (_: any, event: any) => {
@@ -96,7 +95,10 @@ export default function home() {
                 className="voorbeeld-button-link"
                 formAction="/api/wmebv/signed-in/step2/back"
                 formMethod="POST"
-                onSubmit={saveFormData}
+                onSubmit={() => {
+                  setStoredData((data: any) => ({ ...data, ...getValues() }));
+                  saveFormData();
+                }}
               >
                 <UtrechtIcon>
                   <IconArrowLeft />
