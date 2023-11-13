@@ -79,13 +79,17 @@
   margin-block-start: -3rem;
 }
 
-.voorbeeld-smaller-textbox-small {
-  --utrecht-textbox-small-width: var(--voorbeeld-size-xl);
+.voorbeeld-smaller-textbox {
   --utrecht-textbox-margin-block-start: var(--voorbeeld-space-block-beetle);
+  --utrecht-textbox-max-inline-size: 136px;
 }
 
-.voorbeeld-tiny-textbox-small {
-  --utrecht-textbox-tiny-width: 120px;
+.voorbeeld-tiny-textbox {
+  --utrecht-textbox-max-inline-size: 120px;
+}
+
+.voorbeeld-small-textbox {
+  --utrecht-textbox-max-inline-size: 304px;
 }
 
 .voorbeeld-paragraph-spacing {
