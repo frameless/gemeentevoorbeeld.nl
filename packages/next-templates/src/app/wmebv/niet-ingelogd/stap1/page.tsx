@@ -31,11 +31,18 @@ import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 import { TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
 import { useForm } from 'react-hook-form';
+import { useEffect, useState } from 'react';
 
 export default function home() {
-  const storedData = sessionStorage.getItem('wmebv');
-  const storedFormData = storedData && JSON.parse(storedData);
-  const defaultValues = { message: '', ...storedFormData };
+  const [storedData, setStoredData] = useState<any>();
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wmebv');
+
+    setStoredData(stored ? JSON.parse(stored) : {});
+  }, []);
+
+  const defaultValues = { message: '', ...storedData };
 
   const {
     getValues,

@@ -4,7 +4,6 @@ import {
   UtrechtArticle,
   UtrechtButton,
   UtrechtButtonGroup,
-  UtrechtButtonLink,
   UtrechtFormFieldErrorMessage,
   UtrechtFormFieldTextarea,
   UtrechtHeading1,
@@ -23,11 +22,18 @@ import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { useForm } from 'react-hook-form';
+import { useEffect, useState } from 'react';
 
 export default function home() {
-  const storedData = sessionStorage.getItem('wmebv');
-  const storedFormData = storedData && JSON.parse(storedData);
-  const defaultValues = { message: '', ...storedFormData };
+  const [storedData, setStoredData] = useState<{}>();
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wmebv');
+
+    setStoredData(stored ? JSON.parse(stored) : {});
+  }, []);
+
+  const defaultValues = { message: '', ...storedData };
 
   const {
     getValues,
@@ -37,8 +43,8 @@ export default function home() {
 
   const messageField = register('message', { required: true });
 
-  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
-  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+  const saveFormData = () => window.sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const deleteFormData = () => window.sessionStorage.removeItem('wmebv');
 
   return (
     <UtrechtPage>
