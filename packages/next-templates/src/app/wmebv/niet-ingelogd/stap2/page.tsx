@@ -20,14 +20,11 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import { LinkButton } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
-import { useId } from 'react';
+import { useEffect, useId, useState } from 'react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { useForm } from 'react-hook-form';
 
 export default function home() {
-  const storedData = sessionStorage.getItem('wmebv');
-  const storedFormData = storedData && JSON.parse(storedData);
-
   const data = {
     message: '',
     name: '',
@@ -39,7 +36,16 @@ export default function home() {
     email: '',
     tel: '',
   };
-  const defaultValues = { ...data, ...storedFormData };
+
+  const [storedData, setStoredData] = useState<any>();
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wmebv');
+
+    setStoredData(stored ? JSON.parse(stored) : {});
+  }, []);
+
+  const defaultValues = { ...data, ...storedData };
 
   const {
     getValues,

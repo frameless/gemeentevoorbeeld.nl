@@ -20,12 +20,17 @@ import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/Examp
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
-import { useId } from 'react';
+import { useEffect, useId, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function home() {
-  const storedData = sessionStorage.getItem('wmebv');
-  const storedFormData = storedData && JSON.parse(storedData);
+  const [storedData, setStoredData] = useState<{}>();
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wmebv');
+
+    setStoredData(stored ? JSON.parse(stored) : {});
+  }, []);
 
   const data = {
     name: 'Jeroen van Drouwen',
@@ -35,10 +40,10 @@ export default function home() {
     postalCode: '1024 VP',
     homeTown: 'Voorbeeld',
     email: 'j.vandrouwen@gmail.com',
-    tel: '0650618346',
+    phone: '0650618346',
   };
 
-  const defaultValues = { ...data, ...storedFormData };
+  const defaultValues = { ...data, ...storedData };
 
   const {
     getValues,

@@ -20,10 +20,17 @@ import FileText from '@/app/styling/assets/filetext-icon.svg';
 import CircleCheck from '../../../styling/assets/circleCheck.svg';
 import '@/app/styling/css/wmebv.css';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
+import { useEffect, useState } from 'react';
 
 export default function home() {
-  const storedData = sessionStorage.getItem('wmebv');
-  const data = storedData ? { ...JSON.parse(storedData), code: '230829-1118-59dc' } : { code: '230829-1118-59dc' };
+  const [storedData, setStoredData] = useState<any>();
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wmebv');
+
+    setStoredData(stored ? { ...JSON.parse(stored), code: '230829-1118-59dc' } : { code: '230829-1118-59dc' });
+  }, []);
+
   const deleteFormData = () => sessionStorage.removeItem('wmebv');
 
   return (
@@ -38,14 +45,14 @@ export default function home() {
               </UtrechtIcon>{' '}
               Vraag met succes verstuurd
             </UtrechtHeading1>
-            <UtrechtParagraph>Kenmerk: {data?.code}</UtrechtParagraph>
+            <UtrechtParagraph>Kenmerk: {storedData?.code}</UtrechtParagraph>
           </UtrechtAlert>
           <UtrechtHeading2>Wat gaat er nu gebeuren?</UtrechtHeading2>
           <UnorderedList>
             <UnorderedListItem>
               U ontvangt een bevestigingsmail op{' '}
               <Strong>
-                <UtrechtUrlData>{data?.email}</UtrechtUrlData>
+                <UtrechtUrlData>{storedData?.email}</UtrechtUrlData>
               </Strong>
             </UnorderedListItem>
             <UnorderedListItem>De afdeling Vraagbaak gaat met uw vraag aan de slag.</UnorderedListItem>

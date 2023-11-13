@@ -25,10 +25,16 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import Pencil from '../../../styling/assets/pencil-icon.svg';
 import '@/app/styling/css/wmebv.css';
+import { useEffect, useState } from 'react';
 
 export default function home() {
-  const storedData = sessionStorage.getItem('wmebv');
-  const data = storedData && JSON.parse(storedData);
+  const [storedData, setStoredData] = useState<any>();
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem('wmebv');
+
+    setStoredData(stored ? JSON.parse(stored) : {});
+  }, []);
 
   const deleteFormData = () => sessionStorage.removeItem('wmebv');
 
@@ -62,7 +68,7 @@ export default function home() {
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Uw vraag</UtrechtDataListKey>
                 <UtrechtDataListValue>
-                  <UtrechtMultilineData>{data.message}</UtrechtMultilineData>
+                  <UtrechtMultilineData>{storedData?.message}</UtrechtMultilineData>
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
             </UtrechtDataList>
@@ -77,46 +83,46 @@ export default function home() {
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Naam</UtrechtDataListKey>
                 <UtrechtDataListValue>
-                  <PreserveData>{data.name}</PreserveData>
+                  <PreserveData>{storedData?.name}</PreserveData>
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Straat</UtrechtDataListKey>
                 <UtrechtDataListValue>
-                  <PreserveData>{data.street}</PreserveData>
+                  <PreserveData>{storedData?.street}</PreserveData>
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Huisnummer</UtrechtDataListKey>
                 <UtrechtDataListValue>
                   <PreserveData>
-                    {data.houseNumber}
-                    {data.houseNumberSuffix}
+                    {storedData?.houseNumber}
+                    {storedData?.houseNumberSuffix}
                   </PreserveData>
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Postcode</UtrechtDataListKey>
                 <UtrechtDataListValue>
-                  <PreserveData>{data.postalCode}</PreserveData>
+                  <PreserveData>{storedData?.postalCode}</PreserveData>
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Woonplaats</UtrechtDataListKey>
                 <UtrechtDataListValue>
-                  <PreserveData>{data.city}</PreserveData>
+                  <PreserveData>{storedData?.city}</PreserveData>
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
               <UtrechtDataListItem>
                 <UtrechtDataListKey>E-mailadres</UtrechtDataListKey>
                 <UtrechtDataListValue>
-                  <URLData>{data.email}</URLData>
+                  <URLData>{storedData?.email}</URLData>
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Telefoonnummer</UtrechtDataListKey>
                 <UtrechtDataListValue>
-                  <PreserveData>{data.tel}</PreserveData>
+                  <PreserveData>{storedData?.tel}</PreserveData>
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
             </UtrechtDataList>
