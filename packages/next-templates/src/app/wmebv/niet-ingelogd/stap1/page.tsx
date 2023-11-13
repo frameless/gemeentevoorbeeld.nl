@@ -4,6 +4,7 @@ import {
   UtrechtArticle,
   UtrechtButton,
   UtrechtButtonGroup,
+  UtrechtFormFieldErrorMessage,
   UtrechtFormFieldTextarea,
   UtrechtHeading1,
   UtrechtHeading2,
@@ -29,14 +30,31 @@ import {
 import ArrowLeft from '../../../styling/assets/arrow-left-icon.svg';
 import '@/app/styling/css/wmebv.css';
 import { TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
+import { useForm } from 'react-hook-form';
 
 export default function home() {
+  const storedData = sessionStorage.getItem('wmebv');
+  const storedFormData = storedData && JSON.parse(storedData);
+  const defaultValues = { message: '', ...storedFormData };
+
+  const {
+    getValues,
+    register,
+    formState: { errors },
+  } = useForm({ defaultValues });
+
+  const messageField = register('message', { required: true });
+  // const fileField = register('message', { required: false });
+
+  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify(getValues()));
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnel />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
-          <form action="./stap2" method="post">
+          <form method="post" action="/api/wmebv/anonymous/step1" onSubmit={saveFormData}>
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <UtrechtIcon>
@@ -51,12 +69,17 @@ export default function home() {
             </UtrechtHeadingGroup>
             <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
             <UtrechtFormFieldTextarea
+              {...messageField}
               label="Stel uw vraag"
               style={{
                 '--_utrecht-textarea-rows': '10',
                 '--utrecht-textarea-min-block-size': 'calc(var(--_utrecht-textarea-rows, 2) * 1em)',
               }}
-            />
+            >
+              <UtrechtFormFieldErrorMessage slot="error-message">
+                {String(errors[messageField.name]?.message)}
+              </UtrechtFormFieldErrorMessage>{' '}
+            </UtrechtFormFieldTextarea>
             <FormField id="file-field">
               <UtrechtParagraph className="voorbeeld-paragraph-bijlage">
                 <FormLabel htmlFor="file-input" id="file-label">
@@ -98,26 +121,27 @@ export default function home() {
               </div>
             </FormField>
             <UtrechtButtonGroup direction="column">
-              <UtrechtButton
-                type="submit"
-                className="voorbeeld-button-spacing"
-                appearance="primary-action-button"
-                formAction="/wmebv/api?redirect=/wmebv/niet-ingelogd/stap2"
-                formMethod="post"
-              >
+              <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Volgende stap
               </UtrechtButton>
               <LinkButton
-                type="submit"
                 inline
                 className="voorbeeld-button-link"
-                formAction="/wmebv/api?redirect=/wmebv/opgeslagen"
-                formMethod="post"
+                onClick={() => {
+                  saveFormData();
+                  location.assign('/wmebv');
+                }}
               >
                 Opslaan en later verder
               </LinkButton>
-              {/* "Sluit formulier" should not transfer data for files to server. So it must not submit the same form. */}
-              <LinkButton type="submit" formAction="/wmebv/api?redirect=/wmebv/" form="empty" inline>
+              <LinkButton
+                inline
+                className="voorbeeld-button-link"
+                onClick={() => {
+                  deleteFormData();
+                  location.assign('/wmebv');
+                }}
+              >
                 Sluit formulier
               </LinkButton>
             </UtrechtButtonGroup>

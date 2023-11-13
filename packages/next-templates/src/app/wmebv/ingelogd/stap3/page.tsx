@@ -4,7 +4,6 @@ import {
   UtrechtArticle,
   UtrechtButton,
   UtrechtButtonGroup,
-  UtrechtButtonLink,
   UtrechtDataList,
   UtrechtDataListItem,
   UtrechtDataListKey,
@@ -28,29 +27,17 @@ import Pencil from '../../../styling/assets/pencil-icon.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
-  const data = {
-    message: `Beste meneer of mevrouw,
+  const storedData = sessionStorage.getItem('wmebv');
+  const data = storedData && JSON.parse(storedData);
 
-Ik heb 8 weken geleden een aanvraag voor bijstandsuitkering gedaan maar ik heb nog steeds niets
-gehoord. Volgens mij had u allang op mijn aanvraag moeten beslissen.
-
-Met vriendelijke groet, Jeroen van Drouwen`,
-    name: 'Jeroen van Drouwen',
-    street: 'Laan der Voorbeelden',
-    houseNumber: '99',
-    houseNumberSuffix: '',
-    postalCode: '1024 VP',
-    city: 'Voorbeeld',
-    email: 'j.vandrouwen@gmail.com',
-    tel: '0650618346',
-  };
+  const deleteFormData = () => sessionStorage.removeItem('wmebv');
 
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent>
         <UtrechtArticle>
-          <form action="./stap4" method="post">
+          <form method="post" action="/api/wmebv/signed-in/step3">
             <UtrechtButtonGroup>
               <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap2/">
                 <UtrechtIcon>
@@ -134,13 +121,20 @@ Met vriendelijke groet, Jeroen van Drouwen`,
               </UtrechtDataListItem>
             </UtrechtDataList>
             <UtrechtButtonGroup direction="column">
-              <UtrechtButtonLink className="voorbeeld-button-spacing" href="./stap4" appearance="primary-action-button">
-                Versturen
-              </UtrechtButtonLink>
-              <LinkButton inline className="voorbeeld-button-link" formAction="./save">
+              <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
+                Volgende stap
+              </UtrechtButton>
+              <UtrechtLink className="voorbeeld-button-link" href="/wmebv">
                 Opslaan en later verder
-              </LinkButton>
-              <LinkButton inline className="voorbeeld-button-link" formAction="./stop">
+              </UtrechtLink>
+              <LinkButton
+                inline
+                className="voorbeeld-button-link"
+                onClick={() => {
+                  deleteFormData();
+                  location.assign('/wmebv');
+                }}
+              >
                 Sluit formulier
               </LinkButton>
             </UtrechtButtonGroup>
