@@ -43,6 +43,12 @@ body {
   --utrecht-unordered-list-padding-inline-start: var(--voorbeeld-space-inline-beetle);
   --utrecht-unordered-list-item-margin-block-start: 12px;
   --utrecht-unordered-list-item-margin-block-end: 0;
+  --utrecht-radio-button-background-color: white;
+  --utrecht-radio-button-icon-size: 0%;
+  --utrecht-radio-button-size: 1.5em;
+  --utrecht-radio-button-checked-border-width: 0.6em;
+  --utrecht-radio-button-checked-border-color: var(--voorbeeld-color-violet-700);
+  --utrecht-radio-button-border-color: #7a8aa0;
 
   --example-page-header-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.5);
 
