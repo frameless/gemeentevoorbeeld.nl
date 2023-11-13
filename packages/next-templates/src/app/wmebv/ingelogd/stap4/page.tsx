@@ -22,13 +22,18 @@ import CircleCheck from '../../../styling/assets/circleCheck.svg';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
+  const userdata = {
+    username: 'J. van Drouwen',
+    userURL: '#',
+  };
+
   const data = {
     code: '230829-1118-59dc',
     email: 'j.vandrouwen@gmail.com',
   };
   return (
     <UtrechtPage>
-      <ExampleHeaderFunnelWmebv />
+      <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">

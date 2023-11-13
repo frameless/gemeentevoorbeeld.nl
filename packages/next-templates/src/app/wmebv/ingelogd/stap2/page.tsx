@@ -24,6 +24,11 @@ import { useEffect, useId, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function home() {
+  const userdata = {
+    username: 'J. van Drouwen',
+    userURL: '#',
+  };
+
   const [storedData, setStoredData] = useState<{}>();
 
   useEffect(() => {
@@ -69,7 +74,7 @@ export default function home() {
 
   return (
     <UtrechtPage>
-      <ExampleHeaderFunnelWmebv />
+      <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent>
         <UtrechtArticle>
           <form method="post" action="/api/wmebv/signed-in/step2" onSubmit={saveFormData}>

@@ -16,7 +16,7 @@ import {
   UtrechtParagraph,
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderFunnelWmebvEmpty } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebvEmpty';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import ArrowLeft from '@/app/styling/assets/arrow-left-icon.svg';
 import { LinkButton } from '@utrecht/component-library-react';
@@ -71,7 +71,7 @@ export default function home() {
 
   return (
     <UtrechtPage>
-      <ExampleHeaderFunnelWmebvEmpty />
+      <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent>
         <UtrechtArticle>
           <form method="post" action="/api/wmebv/anonymous/step2" onSubmit={saveFormData}>

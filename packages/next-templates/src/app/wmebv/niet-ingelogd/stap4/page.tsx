@@ -13,7 +13,7 @@ import {
   UtrechtHeading2,
   UtrechtUrlData,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderFunnelWmebvEmpty } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebvEmpty';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { Strong, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import Printer from '@/app/styling/assets/printer-icon.svg';
@@ -35,7 +35,7 @@ export default function home() {
 
   return (
     <UtrechtPage>
-      <ExampleHeaderFunnelWmebvEmpty />
+      <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle className="voorbeeld-article-space ">
           <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">

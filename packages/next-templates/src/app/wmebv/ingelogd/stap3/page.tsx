@@ -28,6 +28,10 @@ import '@/app/styling/css/wmebv.css';
 import { useEffect, useState } from 'react';
 
 export default function home() {
+  const userdata = {
+    username: 'J. van Drouwen',
+    userURL: '#',
+  };
   const [storedData, setStoredData] = useState<any>();
 
   useEffect(() => {
@@ -40,7 +44,7 @@ export default function home() {
 
   return (
     <UtrechtPage>
-      <ExampleHeaderFunnelWmebv />
+      <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent>
         <UtrechtArticle>
           <form method="post" action="/api/wmebv/signed-in/step3">
