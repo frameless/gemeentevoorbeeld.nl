@@ -33,7 +33,7 @@ export default function home() {
               </UtrechtLink>
             </UtrechtButtonGroup>
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
-            <UtrechtParagraph>
+            <UtrechtParagraph lead>
               Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden?
               Stel dan uw vraag via het contactformulier.
             </UtrechtParagraph>

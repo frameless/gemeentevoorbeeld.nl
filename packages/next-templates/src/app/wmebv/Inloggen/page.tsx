@@ -44,7 +44,7 @@ export default function home() {
             </UtrechtParagraph>
             <UtrechtDigidLogo className="voorbeeld-digid-logo" />
             <Fieldset id="df861ef1-844a-42df-8365-b54f59474fb8" role="radiogroup">
-              <FieldsetLegend className="fieldlabel_inloggen">Wilt u inloggen</FieldsetLegend>
+              <FieldsetLegend className="fieldlabel_inloggen">Wilt u inloggen?</FieldsetLegend>
               <FormField type="radio">
                 <UtrechtParagraph className="utrecht-form-field__label utrecht-form-field__label--radio">
                   <FormLabel
