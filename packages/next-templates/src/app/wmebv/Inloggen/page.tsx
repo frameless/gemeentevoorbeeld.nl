@@ -41,7 +41,7 @@ export default function home() {
               Dankzij uw DigiD kunt u overal makkelijk en veilig inloggen. Uw persoonlijke gegevens blijven goed
               beschermd. Wanneer u inlogt worden uw persoonlijke gegevens automatisch ingevuld.
             </UtrechtParagraph>
-            <UtrechtDigidLogo className="voorbeeld-digid-logo" />
+            <UtrechtDigidLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
             <Fieldset id="df861ef1-844a-42df-8365-b54f59474fb8" role="radiogroup">
               <FieldsetLegend className="fieldlabel_inloggen">Wilt u inloggen?</FieldsetLegend>
               <FormField type="radio">
