@@ -41,7 +41,7 @@ export default function home() {
               >
                 <IconCircleCheck size={33} />
               </UtrechtIcon>
-              Vraag met succes verstuurd
+              Uw vraag met succes verstuurd
             </UtrechtHeading1>
             <UtrechtParagraph>Kenmerk: {storedData?.code}</UtrechtParagraph>
           </UtrechtAlert>
