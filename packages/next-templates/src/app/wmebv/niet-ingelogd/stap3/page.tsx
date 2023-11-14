@@ -25,18 +25,10 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { IconArrowLeft, IconPencil } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
-import { useEffect, useState } from 'react';
+import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 
 export default function home() {
-  const [storedData, setStoredData] = useState<any>();
-
-  useEffect(() => {
-    const stored = sessionStorage.getItem('wmebv');
-
-    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
-  }, []);
-
-  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+  const [storedData, _, __, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {});
 
   return (
     <UtrechtPage>
@@ -137,7 +129,7 @@ export default function home() {
                 inline
                 className="voorbeeld-button-link"
                 onClick={() => {
-                  deleteFormData();
+                  removeStoredData();
                   location.assign('/wmebv');
                 }}
               >

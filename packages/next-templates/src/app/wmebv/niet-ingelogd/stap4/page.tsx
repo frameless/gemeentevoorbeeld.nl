@@ -18,22 +18,14 @@ import { Strong, UnorderedList, UnorderedListItem } from '@utrecht/component-lib
 import { IconPrinter, IconCircleCheck, IconFileText } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
-import { useEffect, useState } from 'react';
+import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 
 export default function home() {
   const data = {
     email: '',
     code: '230829-1118-59dc',
   };
-  const [storedData, setStoredData] = useState<any>(data);
-
-  useEffect(() => {
-    const stored = sessionStorage.getItem('wmebv');
-
-    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
-  }, []);
-
-  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+  const [storedData, _, __, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, data);
 
   return (
     <UtrechtPage>
@@ -79,7 +71,7 @@ export default function home() {
             <UtrechtLink
               href="/wmebv"
               onClick={() => {
-                deleteFormData();
+                removeStoredData();
                 location.assign('/wmebv');
               }}
             >
