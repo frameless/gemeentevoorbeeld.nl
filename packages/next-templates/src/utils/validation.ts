@@ -28,7 +28,7 @@ export const houseNumberValidation = {
   required: 'Vul een huisnummer in',
   pattern: {
     value: /^[0-9]+$/,
-    message: 'Het ingevulde huisnummer is niet toegestaan. Gebruik alleen nummers.',
+    message: 'Het ingevulde huisnummer is niet toegestaan. Gebruik alleen nummers. Vul letters in onder toevoeging ',
   },
   maxLength: { value: 5, message: 'Het ingevulde huisnummer is niet toegestaan. Gebruik niet meer dan 5 tekens.' },
 };
@@ -39,7 +39,7 @@ export const houseNumberSuffixValidation = {
     value: new RegExp(`^${teletex}$`),
     message: 'De ingevulde toevoeging is niet toegestaan. Gebruik geen speciale karakters.',
   },
-  maxLength: { value: 4, message: 'Het ingevulde huisnummer is niet toegestaan. Gebruik niet meer dan 4 tekens.' },
+  maxLength: { value: 4, message: 'De ingevulde toevoeging is niet toegestaan. Gebruik niet meer dan 4 tekens.' },
 };
 
 export const postalCodeValidation = {
@@ -67,7 +67,7 @@ export const emailValidation = {
     value:
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     message:
-      'Het ingevulde e-mailadres is niet toegestaan. Gebruik een geldige postcode zoals bijvoorbeeld hallo@example.com.',
+      'Het ingevulde e-mailadres is niet toegestaan. Gebruik een geldig e-mailadres zoals bijvoorbeeld hallo@example.com.',
   },
   maxLength: { value: 200, message: 'Het ingevulde e-mailadres is niet toegestaan. Gebruik niet meer dan 200 tekens.' },
 };
