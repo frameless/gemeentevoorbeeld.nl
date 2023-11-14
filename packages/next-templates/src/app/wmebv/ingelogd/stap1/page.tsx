@@ -20,19 +20,15 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { UnorderedList, UnorderedListItem, LinkButton } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { useForm } from 'react-hook-form';
-import { useEffect, useState } from 'react';
 import { messageValidation } from '@/utils/validation';
 import { IconArrowLeft } from '@tabler/icons-react';
+import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '@/app/wmebv/SessionData';
 import '@/app/styling/css/wmebv.css';
 
 export default function home() {
-  const [storedData, setStoredData] = useState<{ message: string }>({ message: '' });
-
-  useEffect(() => {
-    const stored = sessionStorage.getItem('wmebv');
-
-    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
-  }, []);
+  const [storedData, _, patchStoredData, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {
+    message: '',
+  });
 
   const {
     getValues,
@@ -43,15 +39,14 @@ export default function home() {
 
   const messageField = register('message', messageValidation);
 
+  const saveFormData = () => {
+    patchStoredData(getValues());
+  };
+
   const onSubmit = (_: any, event: any) => {
     saveFormData();
     event.target.submit();
   };
-
-  const saveFormData = () => {
-    window.sessionStorage.setItem('wmebv', JSON.stringify({ ...storedData, ...getValues() }));
-  };
-  const deleteFormData = () => window.sessionStorage.removeItem('wmebv');
 
   return (
     <UtrechtPage>
@@ -112,7 +107,7 @@ export default function home() {
                 inline
                 className="voorbeeld-button-link"
                 onClick={() => {
-                  deleteFormData();
+                  removeStoredData();
                   location.assign('/wmebv');
                 }}
               >

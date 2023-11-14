@@ -18,7 +18,7 @@ import {
 import { LinkButton, Paragraph } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { useEffect, useId, useState } from 'react';
+import { useId } from 'react';
 import { useForm } from 'react-hook-form';
 import {
   nameValidation,
@@ -32,6 +32,7 @@ import {
 } from '@/utils/validation';
 import { IconArrowLeft } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
+import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 
 export default function home() {
   const data = {
@@ -45,13 +46,10 @@ export default function home() {
     phone: '0650618346',
   };
 
-  const [storedData, setStoredData] = useState<any>(data);
-
-  useEffect(() => {
-    const stored = sessionStorage.getItem('wmebv');
-
-    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
-  }, []);
+  const [storedData, _, patchStoredData, removeStoredData] = useSessionState<ContactFormSessionData>(
+    FORM_SESSION_KEY,
+    data,
+  );
 
   const {
     getValues,
@@ -73,8 +71,7 @@ export default function home() {
   const { min: _minG, max: _maxG, ...emailField } = register('email', emailValidation);
   const { min: _minH, max: _maxH, ...phoneField } = register('phone', phoneValidation);
 
-  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify({ ...storedData, ...getValues() }));
-  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+  const saveFormData = () => patchStoredData(getValues());
 
   const onSubmit = (_: any, event: any) => {
     saveFormData();
@@ -96,7 +93,6 @@ export default function home() {
                 formAction="/api/wmebv/signed-in/step2/back"
                 formMethod="POST"
                 onSubmit={() => {
-                  setStoredData((data: any) => ({ ...data, ...getValues() }));
                   saveFormData();
                 }}
               >
@@ -244,7 +240,7 @@ export default function home() {
                 inline
                 className="voorbeeld-button-link"
                 onClick={() => {
-                  deleteFormData();
+                  removeStoredData();
                   location.assign('/wmebv');
                 }}
               >

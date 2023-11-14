@@ -29,19 +29,15 @@ import {
 } from '@utrecht/component-library-react';
 import { TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
 import { useForm } from 'react-hook-form';
-import { useEffect, useState } from 'react';
 import { messageValidation } from '@/utils/validation';
 import { IconArrowLeft } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
+import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 
 export default function home() {
-  const [storedData, setStoredData] = useState<any>({ message: '' });
-
-  useEffect(() => {
-    const stored = sessionStorage.getItem('wmebv');
-
-    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
-  }, []);
+  const [storedData, _, patchStoredData, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {
+    message: '',
+  });
 
   const {
     getValues,
@@ -51,8 +47,7 @@ export default function home() {
 
   const messageField = register('message', messageValidation);
 
-  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify({ ...storedData, ...getValues() }));
-  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+  const saveFormData = () => patchStoredData(getValues());
 
   return (
     <UtrechtPage>
@@ -143,7 +138,7 @@ export default function home() {
                 inline
                 className="voorbeeld-button-link"
                 onClick={() => {
-                  deleteFormData();
+                  removeStoredData();
                   location.assign('/wmebv');
                 }}
               >

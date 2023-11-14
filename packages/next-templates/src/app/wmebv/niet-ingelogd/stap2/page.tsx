@@ -19,7 +19,7 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { IconArrowLeft } from '@tabler/icons-react';
 import { LinkButton } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
-import { useEffect, useId, useState } from 'react';
+import { useId } from 'react';
 import { ExampleHeaderFunnelWmebv } from '@/components/ExampleHeader/wmebv/ExampleHeaderFunnelWmebv';
 import { useForm } from 'react-hook-form';
 import {
@@ -32,6 +32,7 @@ import {
   postalCodeValidation,
   streetValidation,
 } from '@/utils/validation';
+import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 
 export default function home() {
   const data = {
@@ -45,13 +46,10 @@ export default function home() {
     tel: '',
   };
 
-  const [storedData, setStoredData] = useState<any>(data);
-
-  useEffect(() => {
-    const stored = sessionStorage.getItem('wmebv');
-
-    setStoredData((data: any) => (stored ? { ...data, ...JSON.parse(stored) } : data));
-  }, []);
+  const [storedData, _, patchStoredData, removeStoredData] = useSessionState<ContactFormSessionData>(
+    FORM_SESSION_KEY,
+    data,
+  );
 
   const {
     getValues,
@@ -73,8 +71,7 @@ export default function home() {
   const { min: _minG, max: _maxG, ...emailField } = register('email', emailValidation);
   const { min: _minH, max: _maxH, ...phoneField } = register('phone', phoneValidation);
 
-  const saveFormData = () => sessionStorage.setItem('wmebv', JSON.stringify({ ...storedData, ...getValues() }));
-  const deleteFormData = () => sessionStorage.removeItem('wmebv');
+  const saveFormData = () => patchStoredData(getValues());
 
   const onSubmit = (_: any, event: any) => {
     saveFormData();
@@ -233,7 +230,7 @@ export default function home() {
                 inline
                 className="voorbeeld-button-link"
                 onClick={() => {
-                  deleteFormData();
+                  removeStoredData();
                   location.assign('/wmebv');
                 }}
               >
