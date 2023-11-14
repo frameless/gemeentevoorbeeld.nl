@@ -69,7 +69,7 @@ export const emailValidation = {
     message:
       'Het ingevulde e-mailadres is niet toegestaan. Gebruik een geldige postcode zoals bijvoorbeeld hallo@example.com.',
   },
-  maxLength: { value: 200, message: 'De ingevulde woonplaats is niet toegestaan. Gebruik niet meer dan 200 tekens.' },
+  maxLength: { value: 200, message: 'Het ingevulde e-mailadres is niet toegestaan. Gebruik niet meer dan 200 tekens.' },
 };
 
 export const phoneValidation = {
