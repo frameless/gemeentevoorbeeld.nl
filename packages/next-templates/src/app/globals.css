@@ -22,8 +22,8 @@ body {
   /* HACK: these tokens are not set in voorbeeld-theme */
   --utrecht-form-field-description-margin-block-end: var(--voorbeeld-space-block-beetle);
   --utrecht-space-around: 1;
-  --utrecht-button-group-margin-block-end: 16px;
-  --utrecht-button-group-margin-block-start: 16px;
+  --utrecht-button-group-margin-block-end: 24px;
+  --utrecht-button-group-margin-block-start: 24px;
   --utrecht-link-icon-size: 18px;
   --utrecht-radio-button-size: 1em;
   --utrecht-form-field-margin-block-end: 20px;
@@ -50,6 +50,14 @@ body {
   --utrecht-radio-button-checked-border-color: var(--voorbeeld-color-violet-700);
   --utrecht-radio-button-border-color: #7a8aa0;
   --utrecht-textbox-read-only-border-color: var(--utrecht-textbox-border-color);
+  --utrecht-data-list-rows-gap: 24px;
+  --utrecht-data-list-rows-border-bottom-color: #e4e7ec;
+  --utrecht-data-list-rows-border-bottom-width: 1px;
+  --utrecht-data-list-rows-item-value-margin-block-start: 8px;
+  --utrecht-data-list-margin-block-start: 24px;
+  --utrecht-data-list-margin-block-end: 48px;
+  --utrecht-data-list-rows-item-padding-block-end: 12px;
+  --utrecht-data-list-rows-item-padding-block-start: 12px;
 
   --example-page-header-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.5);
 
