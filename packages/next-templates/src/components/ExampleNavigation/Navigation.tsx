@@ -9,7 +9,7 @@ export interface NavigationLinkListProps {
 }
 
 export const NavigationLinkList = ({ children, center }: PropsWithChildren<NavigationLinkListProps>) => (
-  <nav>
+  <nav className="example-nav-bar__nav">
     <ul
       role="list"
       className={clsx('example-nav-bar__link-list', {
@@ -77,7 +77,7 @@ interface NavigationProps extends HTMLAttributes<HTMLDivElement> {
   center?: boolean;
 }
 
-export const Navigation = ({ center = true, children }: PropsWithChildren<NavigationProps>) => (
+export const Navigation = ({ center = false, children }: PropsWithChildren<NavigationProps>) => (
   <div className="example-nav-bar">
     <div
       className={clsx('example-nav-bar__content', {
@@ -90,3 +90,26 @@ export const Navigation = ({ center = true, children }: PropsWithChildren<Naviga
 );
 
 Navigation.displayName = 'Navigation';
+
+export const useNavigation = ({
+  links = [],
+  center,
+}: NavigationProps & {
+  links: { href?: string; label: string }[];
+}): Partial<NavigationProps> => ({
+  children: (
+    <NavigationLinkList center={center}>
+      {links.map(({ label, href }, index) =>
+        href ? (
+          <NavigationLink center={center} href={href} key={index}>
+            {label}
+          </NavigationLink>
+        ) : (
+          <NavigationLinkButton className="example-navbar__link" key={index}>
+            {label}
+          </NavigationLinkButton>
+        ),
+      )}
+    </NavigationLinkList>
+  ),
+});
