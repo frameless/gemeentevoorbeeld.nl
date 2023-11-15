@@ -10,16 +10,16 @@ import {
   UtrechtPageContent,
   UtrechtParagraph,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import '@/app/styling/css/wmebv.css';
 import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv />
+      <ExampleHeader />
       <ExampleNavigation />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle id="main" className="voorbeeld-article-space ">
