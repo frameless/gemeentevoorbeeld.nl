@@ -46,8 +46,8 @@ export default function home() {
               </LinkButton>
             </UtrechtButtonGroup>
             <UtrechtHeadingGroup>
-              <UtrechtPreHeading>Stap 3 van 4</UtrechtPreHeading>
               <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
+              <UtrechtPreHeading>Stap 3 van 4</UtrechtPreHeading>
             </UtrechtHeadingGroup>
             <UtrechtHeading3>Uw vraag</UtrechtHeading3>
             <UtrechtButtonGroup>

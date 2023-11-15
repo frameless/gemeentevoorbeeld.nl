@@ -101,8 +101,8 @@ export default function home() {
               </LinkButton>
             </UtrechtButtonGroup>
             <UtrechtHeadingGroup>
-              <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 2 van 4</UtrechtPreHeading>
               <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
+              <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 2 van 4</UtrechtPreHeading>
             </UtrechtHeadingGroup>
             <UtrechtParagraph className="voorbeeld-paragraph-spacing">
               Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet
