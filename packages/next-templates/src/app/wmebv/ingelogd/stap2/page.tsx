@@ -86,7 +86,7 @@ export default function home() {
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent>
-        <UtrechtArticle>
+        <UtrechtArticle id="main">
           <form method="post" action="/api/wmebv/signed-in/step2" onSubmit={handleSubmit(onSubmit)}>
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>

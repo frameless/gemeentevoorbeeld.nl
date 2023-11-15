@@ -82,7 +82,7 @@ export default function home() {
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent>
-        <UtrechtArticle>
+        <UtrechtArticle id="main">
           <form method="post" action="/api/wmebv/anonymous/step2" onSubmit={handleSubmit(onSubmit)}>
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
 

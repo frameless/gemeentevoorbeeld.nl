@@ -22,7 +22,7 @@ export default function home() {
       <ExampleHeaderWmebv />
       <ExampleNavigationWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
-        <UtrechtArticle className="voorbeeld-article-space ">
+        <UtrechtArticle id="main" className="voorbeeld-article-space ">
           <BreadcrumbNav label="Kruimelpad">
             <BreadcrumbNavLink href="" index={0} rel="home">
               Home
