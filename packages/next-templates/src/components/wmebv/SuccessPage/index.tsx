@@ -34,7 +34,7 @@ export const ExampleSuccessPage = ({ storedData, removeStoredData }: ExampleSucc
           </UtrechtIcon>
           Uw vraag is met succes verstuurd
         </UtrechtHeading1>
-        <UtrechtParagraph>Kenmerk: {storedData?.code}</UtrechtParagraph>
+        <UtrechtParagraph>Zaaknummer: {storedData?.code}</UtrechtParagraph>
       </UtrechtAlert>
       <UtrechtHeading2>Wat gaat er nu gebeuren?</UtrechtHeading2>
       <UnorderedList>
