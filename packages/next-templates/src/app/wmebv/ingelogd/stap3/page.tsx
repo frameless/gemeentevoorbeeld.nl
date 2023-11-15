@@ -29,7 +29,7 @@ import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeade
 export default function home() {
   const userdata = {
     username: 'J. van Drouwen',
-    userURL: '#',
+    userURL: '/mijn-omgeving/',
   };
   const [storedData, _, __, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {});
   return (
