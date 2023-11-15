@@ -4,25 +4,27 @@ import {
   UtrechtArticle,
   UtrechtPage,
   UtrechtPageContent,
-  UtrechtButtonLink,
   UtrechtHeading1,
   UtrechtButtonGroup,
+  UtrechtButton,
 } from '@utrecht/web-component-library-react';
-import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
-import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import '@/app/styling/css/wmebv.css';
+import { useId } from 'react';
 
 export default function home() {
+  const formHeadingId = useId();
   return (
     <UtrechtPage>
       <UtrechtPageContent>
-        <UtrechtArticle>
-          <UtrechtHeading1>Doe alsof u inlogt met DigiD</UtrechtHeading1>
-          <UtrechtButtonGroup>
-            <UtrechtButtonLink href="./ingelogd/stap1" appearance="primary-action-button">
-              Inloggen
-            </UtrechtButtonLink>
-          </UtrechtButtonGroup>
+        <UtrechtArticle id="main">
+          <UtrechtHeading1 id={formHeadingId}>Doe alsof u inlogt met DigiD</UtrechtHeading1>
+          <form action="./ingelogd/stap1" method="get" aria-labelledby={formHeadingId}>
+            <UtrechtButtonGroup>
+              <UtrechtButton type="submit" appearance="primary-action-button">
+                Inloggen
+              </UtrechtButton>
+            </UtrechtButtonGroup>
+          </form>
         </UtrechtArticle>
       </UtrechtPageContent>
     </UtrechtPage>
