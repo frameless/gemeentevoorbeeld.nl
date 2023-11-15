@@ -1,10 +1,10 @@
 'use client';
-import { Link, PageHeader } from '@utrecht/component-library-react';
-import Logo from '@/app/styling/assets/voorbeeld-header.svg';
 import React, { HTMLAttributes } from 'react';
 import '../../ExampleHeader/ExampleHeaderFunnel/exampleheaderfunnel.css';
 import { UtrechtButtonLink } from '@utrecht/web-component-library-react';
 import { IconChevronDown } from '@tabler/icons-react';
+import { PageHeader } from '@/components/PageHeader';
+import { PageHeaderLogo } from '@/components/PageHeaderLogo';
 
 interface ExampleHeaderFunnelWmebvProps extends HTMLAttributes<HTMLDivElement> {
   username?: string;
@@ -12,9 +12,7 @@ interface ExampleHeaderFunnelWmebvProps extends HTMLAttributes<HTMLDivElement> {
 }
 export const ExampleHeaderFunnelWmebv = ({ username, userURL }: ExampleHeaderFunnelWmebvProps) => (
   <PageHeader className="example--header-home-page">
-    <div className="logo">
-      <Logo />
-    </div>
+    <PageHeaderLogo />
     <div className="example--header-items">
       {username && (
         <div className="example--search-box">
