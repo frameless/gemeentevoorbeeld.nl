@@ -82,6 +82,25 @@ body {
   --utrecht-alert-icon-gap: var(--voorbeeld-space-inline-beetle);
 }
 
+.voorbeeld-theme .utrecht-page-footer {
+  --utrecht-heading-2-color: currentColor;
+  --utrecht-heading-2-font-family: var(--voorbeeld-typography-font-family-secondary);
+  --utrecht-heading-2-font-size: var(--voorbeeld-typography-font-size-md);
+  --utrecht-heading-2-font-weight: var(--voorbeeld-typography-font-weight-bold);
+  --utrecht-heading-2-line-height: var(--voorbeeld-typography-line-height-lg);
+  --utrecht-heading-5-color: currentColor;
+  --utrecht-link-color: currentColor;
+  --utrecht-link-focus-color: var(--voorbeeld-color-black);
+  --utrecht-link-text-decoration-color: currentColor;
+  --utrecht-link-visited-color: currentColor;
+  --utrecht-page-footer-color: var(--voorbeeld-color-white);
+  --utrecht-page-footer-padding-block-end: var(--voorbeeld-space-block-dog);
+  --utrecht-page-footer-padding-block-start: var(--voorbeeld-space-block-dog);
+  --utrecht-page-footer-padding-inline-end: var(--voorbeeld-space-inline-dog);
+  --utrecht-page-footer-padding-inline-start: var(--voorbeeld-space-inline-dog);
+  --utrecht-paragraph-color: currentColor;
+}
+
 .voorbeeld-theme utrecht-link-button,
 .voorbeeld-theme .utrecht-link-button {
   --utrecht-button-font-weight: var(--utrecht-link-font-weight);
