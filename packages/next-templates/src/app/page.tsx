@@ -33,7 +33,7 @@ export default function Home() {
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content-flex">
-        <Article className="voorbeeld-article-space">
+        <Article id="main" className="voorbeeld-article-space">
           <BreadcrumbNav label="Kruimelpad">
             <BreadcrumbNavLink href="" index={0} rel="home">
               Home

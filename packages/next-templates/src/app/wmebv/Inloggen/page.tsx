@@ -25,7 +25,7 @@ export default function home() {
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
-        <UtrechtArticle className="voorbeeld-article-space ">
+        <UtrechtArticle id="main" className="voorbeeld-article-space ">
           <form method="POST" action="/api/wmebv/choose-form">
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Intro">
