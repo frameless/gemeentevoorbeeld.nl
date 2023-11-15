@@ -7,11 +7,11 @@ interface ExampleNavigationWmebvProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleNavigationWmebv = ({ ...props }: ExampleNavigationWmebvProps) => (
   <ExampleNavigation
     links={[
-      { label: 'Home', href: '' },
-      { label: 'Wonen en leven', href: '' },
-      { label: 'Zorg en onderwijs', href: '' },
-      { label: 'Werk en inkomen', href: '' },
-      { label: 'Contact', href: '' },
+      { label: 'Home', href: '/' },
+      { label: 'Wonen en leven', href: '/wonen-en-leven/' },
+      { label: 'Zorg en onderwijs', href: '/zorg-en-onderwijs/' },
+      { label: 'Werk en inkomen', href: '/werk-en-inkomen/' },
+      { label: 'Contact', href: '/wmebv/' },
     ]}
   ></ExampleNavigation>
 );
