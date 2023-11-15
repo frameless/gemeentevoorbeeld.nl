@@ -2,6 +2,7 @@
   -webkit-column-count: 1;
   -moz-column-count: 1;
   column-count: 1;
+  margin-block-start: 0;
 }
 
 .voorbeeld-navigation-list__item {
