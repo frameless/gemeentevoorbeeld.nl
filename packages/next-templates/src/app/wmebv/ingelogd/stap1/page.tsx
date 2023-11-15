@@ -11,6 +11,7 @@ import {
   UtrechtHeadingGroup,
   UtrechtIcon,
   UtrechtLink,
+  UtrechtLinkButton,
   UtrechtPage,
   UtrechtPageContent,
   UtrechtParagraph,
@@ -97,7 +98,7 @@ export default function home() {
               <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Volgende stap
               </UtrechtButton>
-              <LinkButton
+              <UtrechtLinkButton
                 inline
                 className="voorbeeld-button-link"
                 onClick={() => {
@@ -106,8 +107,8 @@ export default function home() {
                 }}
               >
                 Opslaan en later verder
-              </LinkButton>
-              <LinkButton
+              </UtrechtLinkButton>
+              <UtrechtLinkButton
                 inline
                 className="voorbeeld-button-link"
                 onClick={() => {
@@ -116,7 +117,7 @@ export default function home() {
                 }}
               >
                 Stoppen met formulier
-              </LinkButton>
+              </UtrechtLinkButton>
             </UtrechtButtonGroup>
           </form>
         </UtrechtArticle>
