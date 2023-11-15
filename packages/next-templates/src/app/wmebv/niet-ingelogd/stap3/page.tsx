@@ -20,15 +20,20 @@ import {
   UtrechtPreHeading,
   UtrechtUrlData,
 } from '@utrecht/web-component-library-react';
-import { LinkButton, PreserveData } from '@utrecht/component-library-react';
+import { Link, LinkButton, PreserveData } from '@utrecht/component-library-react';
 import { IconArrowLeft, IconPencil } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
+import { useId } from 'react';
 
 export default function home() {
   const [storedData, _, __, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {});
+  const dataHeading1Id = useId();
+  const dataHeading2Id = useId();
+  const buttonLabel1Id = useId();
+  const buttonLabel2Id = useId();
 
   return (
     <UtrechtPage>
@@ -49,12 +54,12 @@ export default function home() {
               <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
               <UtrechtPreHeading>Stap 3 van 4</UtrechtPreHeading>
             </UtrechtHeadingGroup>
-            <UtrechtHeading3>Uw vraag</UtrechtHeading3>
+            <UtrechtHeading3 id={dataHeading1Id}>Uw vraag</UtrechtHeading3>
             <UtrechtButtonGroup>
-              <UtrechtLink href="./stap1">
+              <Link href="./stap1" aria-labelledby={[buttonLabel1Id, dataHeading1Id].join(' ')}>
                 <IconPencil />
-                Aanpassen
-              </UtrechtLink>
+                <span id={buttonLabel1Id}>Aanpassen</span>
+              </Link>
             </UtrechtButtonGroup>
             <UtrechtDataList>
               <UtrechtDataListItem>
@@ -64,13 +69,13 @@ export default function home() {
                 </UtrechtDataListValue>
               </UtrechtDataListItem>
             </UtrechtDataList>
-            <UtrechtHeading3>Uw gegevens</UtrechtHeading3>
+            <UtrechtHeading3 id={dataHeading2Id}>Uw gegevens</UtrechtHeading3>
             <UtrechtButtonGroup>
-              <UtrechtLink href="./stap2">
+              <Link href="./stap2" aria-labelledby={[buttonLabel2Id, dataHeading2Id].join(' ')}>
                 <IconPencil />
-                Aanpassen
-              </UtrechtLink>
-            </UtrechtButtonGroup>
+                <span id={buttonLabel2Id}>Aanpassen</span>
+              </Link>
+            </UtrechtButtonGroup>{' '}
             <UtrechtDataList className="voorbeeld-datalist-style">
               <UtrechtDataListItem>
                 <UtrechtDataListKey>Naam</UtrechtDataListKey>
