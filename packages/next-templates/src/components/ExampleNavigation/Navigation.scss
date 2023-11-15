@@ -20,8 +20,8 @@
   justify-content: center;
 
   .utrecht-link-button {
-    --utrecht-button-font-weight: initial; /* override `utrecht-link-button` style */
-    /* font-weight: inherit; */
+    --utrecht-button-font-weight: var(--voorbeeld-typography-font-weight-bold);
+    /* override `utrecht-link-button` style */ /* font-weight: inherit; */
   }
 
   @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
@@ -59,22 +59,29 @@
   align-items: stretch;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: start;
 }
 
 .example-nav-bar__link-list-item {
   @include reset-li();
+  display: inline-flex;
 }
 
 .example-nav-bar__link-list--center {
   & > * {
     flex: 1 1 0;
-    display: flex;
     justify-content: center;
   }
 }
 
+.example-nav-bar__nav,
+.example-nav-bar__link-list {
+  inline-size: 100%;
+}
+
 /* Style for the navigation links */
 .example-nav-bar__link {
+  font-weight: var(--voorbeeld-typography-font-weight-bold);
   max-inline-size: var(--example-nav-bar-link-max-inline-size, 30ch);
   padding-block-end: var(--example-nav-bar-link-padding-block-end);
   padding-block-start: var(--example-nav-bar-link-padding-block-start);
