@@ -7,7 +7,7 @@ export const teletex =
 export const messageValidation = { required: 'Vul uw vraag in.' };
 
 export const nameValidation = {
-  required: 'Vul een naam in',
+  required: 'Vul een naam in.',
   pattern: {
     value: new RegExp(`^${teletex}$`),
     message: 'De ingevulde naam is niet toegestaan. Gebruik geen speciale karakters.',
@@ -16,7 +16,7 @@ export const nameValidation = {
 };
 
 export const streetValidation = {
-  required: 'Vul een straat in',
+  required: 'Vul een straat in.',
   pattern: {
     value: new RegExp(`^${teletex}$`),
     message: 'De ingevulde straat is niet toegestaan. Gebruik geen speciale karakters.',
@@ -25,7 +25,7 @@ export const streetValidation = {
 };
 
 export const houseNumberValidation = {
-  required: 'Vul een huisnummer in',
+  required: 'Vul een huisnummer in.',
   pattern: {
     value: /^[0-9]+$/,
     message:
@@ -44,7 +44,7 @@ export const houseNumberSuffixValidation = {
 };
 
 export const postalCodeValidation = {
-  required: 'Vul een postcode in',
+  required: 'Vul een postcode in.',
   pattern: {
     value: /^[0-9]{4}\s*[A-Za-z]{2}$/,
     message: 'De ingevulde postcode is niet toegestaan. Vul een nederlandse postcode in, zoals bijvoorbeeld 1234AB.',
@@ -54,7 +54,7 @@ export const postalCodeValidation = {
 };
 
 export const homeTownValidation = {
-  required: 'Vul een woonplaats in',
+  required: 'Vul een woonplaats in.',
   pattern: {
     value: new RegExp(`^${teletex}$`),
     message: 'De ingevulde woonplaats is niet toegestaan. Gebruik geen speciale karakters.',
@@ -63,7 +63,7 @@ export const homeTownValidation = {
 };
 
 export const emailValidation = {
-  required: 'Vul een e-mailadres in',
+  required: 'Vul een e-mailadres in.',
   pattern: {
     value:
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
