@@ -15,7 +15,7 @@
   color: var(--example-nav-bar-color);
   --utrecht-link-color: currentColor;
   --utrecht-link-hover-color: currentColor;
-  --utrecht-link-focus-color: black;
+  --utrecht-link-focus-color: var(--voorbeeld-color-black);
   display: flex;
   justify-content: center;
 
@@ -92,7 +92,7 @@
 
 /* Change color on hover */
 .example-nav-bar__link:hover {
-  background-color: #290b7a;
+  background-color: var(--voorbeeld-color-violet-900);
 }
 
 .example-nav-bar__item--end {
