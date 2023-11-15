@@ -37,7 +37,7 @@ export default function home() {
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
-      <ExampleSuccessPage storedData={storedData} removeStoredData={removeStoredData} />
+      <ExampleSuccessPage storedData={storedData} removeStoredData={removeStoredData} mijnOmgeving />
       <ExampleFooterWmebv />
     </UtrechtPage>
   );
