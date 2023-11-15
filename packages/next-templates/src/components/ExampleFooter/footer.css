@@ -52,12 +52,6 @@
   }
 }
 
-@media screen and (width <= 960px) {
-  .voorbeeld-navigation-list {
-    padding-inline-start: 0;
-  }
-}
-
 .voorbeeld-navigation-list {
   padding-inline-start: 0;
 }
