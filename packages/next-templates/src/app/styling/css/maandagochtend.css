@@ -10,7 +10,7 @@
   gap: 37px;
 }
 .errors-text {
-  color: #d2262e;
+  color: var(--voorbeeld-color-red-600);
 }
 
 .textbox-telefoonnummer {
@@ -27,7 +27,7 @@
 }
 
 path {
-  fill: #5315f6;
+  fill: var(--voorbeeld-color-violet-700);
 }
 
 @media only screen and (max-width: 387px) {

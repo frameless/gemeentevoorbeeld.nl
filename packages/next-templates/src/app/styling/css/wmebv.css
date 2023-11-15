@@ -27,13 +27,13 @@
 }
 
 .mijn-omgeving {
-  color: #5315f6;
+  color: var(--voorbeeld-color-violet-700);
   text-decoration: underline;
 }
 
 .link {
   text-decoration: underline;
-  text-decoration-color: #5315f6;
+  text-decoration-color: var(--voorbeeld-color-violet-700);
   padding: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -51,10 +51,6 @@
   --utrecht-paragraph-margin-block-end: var(--voorbeeld-space-block-rabbit);
 }
 
-.fieldlabel_inloggen {
-  padding-block-start: var(--voorbeeld-space-block-beetle);
-}
-
 .voorbeeld-link-spacing {
   margin-block: var(--voorbeeld-space-block-rabbit);
 }
@@ -68,7 +64,7 @@
   margin-block-start: -5.3rem;
   margin-inline-start: 10rem;
   margin-block-end: 5rem;
-  color: #5b6e8a;
+  color: var(--voorbeeld-color-gray-600);
 }
 
 .voorbeeld-paragraph-spacing-stapx {
@@ -115,10 +111,10 @@
 }
 
 .voorbeeld-data-list-label-spacer {
-  border: 1px solid #e4e7ec;
+  border: 1px solid var(--voorbeeld-color-gray-200);
 }
 
 .voorbeeld-dat-list-label-spacer-1 {
-  border: 1px solid #e4e7ec;
+  border: 1px solid var(--voorbeeld-color-gray-200);
   margin-block-end: 1.5rem;
 }
