@@ -24,7 +24,7 @@ import { ExampleSuccessPage } from '@/components/wmebv/SuccessPage';
 export default function home() {
   const userdata = {
     username: 'J. van Drouwen',
-    userURL: '#',
+    userURL: '/mijn-omgeving/',
   };
 
   const data = {

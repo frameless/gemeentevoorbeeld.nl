@@ -28,7 +28,7 @@ import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv
 export default function home() {
   const userdata = {
     username: 'J. van Drouwen',
-    userURL: '#',
+    userURL: '/mijn-omgeving/',
   };
   const [storedData, _, patchStoredData, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {
     message: '',
