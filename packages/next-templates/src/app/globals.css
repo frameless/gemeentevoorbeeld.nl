@@ -50,7 +50,7 @@ body {
   --utrecht-radio-button-checked-border-color: var(--voorbeeld-color-violet-700);
   --utrecht-radio-button-border-color: #7a8aa0;
   --utrecht-textbox-read-only-border-color: var(--voorbeeld-color-gray-500);
-
+  --utrecht-form-field-description-color: var(--utrecht-current-color);
   --example-page-header-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.5);
 
   --utrecht-action-submit-cursor: pointer;
