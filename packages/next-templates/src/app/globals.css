@@ -26,6 +26,7 @@ body {
   --utrecht-button-group-margin-block-start: var(--voorbeeld-space-block-rabbit);
   --utrecht-link-icon-size: 18px;
   --utrecht-radio-button-size: var(--voorbeeld-space-block-rabbit);
+  --utrecht-form-field-description-color: currentColor;
   --utrecht-form-field-margin-block-start: var(--voorbeeld-space-block-rabbit);
   --utrecht-form-field-label-margin-block-end: var(--voorbeeld-space-block-beetle);
   --utrecht-paragraph-margin-block-end: var(--voorbeeld-space-block-rabbit);
