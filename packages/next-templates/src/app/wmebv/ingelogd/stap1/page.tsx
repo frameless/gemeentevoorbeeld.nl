@@ -56,7 +56,7 @@ export default function home() {
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
-        <UtrechtArticle className="voorbeeld-article-space ">
+        <UtrechtArticle id="main" className="voorbeeld-article-space ">
           <form method="post" action="/api/wmebv/signed-in/step1" onSubmit={handleSubmit(onSubmit)}>
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">

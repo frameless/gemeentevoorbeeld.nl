@@ -21,7 +21,7 @@ export default function home() {
       <ExampleHeaderWmebv></ExampleHeaderWmebv>
       <ExampleNavigation></ExampleNavigation>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
-        <UtrechtArticle className="voorbeeld-article-space ">
+        <UtrechtArticle id="main" className="voorbeeld-article-space ">
           <UtrechtHeading1>Sitemap</UtrechtHeading1>
           <UtrechtParagraph lead>
             Deze pagina helpt developers en designers door overzicht te geven in alle formulierpagina&#39;s die zijn

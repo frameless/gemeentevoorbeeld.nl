@@ -31,7 +31,7 @@ export default function home() {
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
-        <UtrechtArticle className="voorbeeld-article-space ">
+        <UtrechtArticle id="main" className="voorbeeld-article-space ">
           <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">
             <UtrechtHeading1>
               <UtrechtIcon

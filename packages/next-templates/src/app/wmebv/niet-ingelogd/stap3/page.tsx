@@ -34,7 +34,7 @@ export default function home() {
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent>
-        <UtrechtArticle>
+        <UtrechtArticle id="main">
           <form method="post" action="/api/wmebv/anonymous/step3">
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
