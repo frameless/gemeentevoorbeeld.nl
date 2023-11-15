@@ -66,11 +66,11 @@ export default function home() {
                 Terug
               </UtrechtLink>
             </UtrechtButtonGroup>
+            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtHeadingGroup>
-              <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
+              <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtPreHeading>
+              <UtrechtHeading2>Uw vraag</UtrechtHeading2>
             </UtrechtHeadingGroup>
-            <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtPreHeading>
-            <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
             <UtrechtFormFieldTextarea label="Stel uw vraag" {...messageField} invalid={!!errors[messageField.name]}>
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[messageField.name]?.message)}
