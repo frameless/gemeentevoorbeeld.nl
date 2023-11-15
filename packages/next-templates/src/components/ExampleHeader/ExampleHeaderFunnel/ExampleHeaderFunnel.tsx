@@ -1,20 +1,17 @@
 'use client';
-import { Link, PageHeader } from '@utrecht/component-library-react';
-import Logo from '@/app/styling/assets/voorbeeld-header.svg';
-import React, { HTMLAttributes } from 'react';
+import { Link } from '@utrecht/component-library-react';
+import React from 'react';
 import './exampleheaderfunnel.css';
+import { PageHeaderLogo } from '@/components/PageHeaderLogo';
+import { PageHeader } from '@/components/PageHeader';
+import { UtrechtUrlData } from '@utrecht/web-component-library-react';
 
-interface ExampleHeaderFunnelProps extends HTMLAttributes<HTMLDivElement> {}
-export const ExampleHeaderFunnel = ({ ...props }: ExampleHeaderFunnelProps) => (
+export const ExampleHeaderFunnel = () => (
   <PageHeader className="example--header-home-page">
-    <div className="logo">
-      <Logo />
-    </div>
-    <div className="example--header-items">
-      <div className="example--search-box">
-        <Link>Terug naar voorbeeld.nl</Link>
-      </div>
-    </div>
+    <PageHeaderLogo />
+    <Link href="/">
+      Terug naar <UtrechtUrlData>gemeentevoorbeeld.nl</UtrechtUrlData>
+    </Link>
   </PageHeader>
 );
 

@@ -1,0 +1,17 @@
+.example-page-header {
+  display: flex;
+  justify-content: center;
+  --utrecht-page-padding-inline-start: 0;
+  --utrecht-page-padding-inline-end: 0;
+}
+
+.example-page-header__content {
+  inline-size: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  padding-inline: var(--voorbeeld-space-inline-mouse);
+  padding-block: var(--voorbeeld-space-block-mouse);
+  max-inline-size: var(--example-page-header-content-max-inline-size);
+}
