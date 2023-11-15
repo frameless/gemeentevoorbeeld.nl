@@ -52,7 +52,31 @@
   }
 }
 
+@media screen and (width <= 960px) {
+  .voorbeeld-navigation-list {
+    padding-inline-start: 0;
+  }
+}
+
+.voorbeeld-navigation-list {
+  padding-inline-start: 0;
+}
 .example-footer-content {
   margin-block-start: 1em;
   margin-inline-start: 2.5em;
+}
+
+.voorbeeld-footer-block {
+  --utrecht-link-text-decoration-color: var(--voorbeeld-color-white);
+  --utrecht-paragraph-color: var(--voorbeeld-color-white);
+  max-width: 50ch;
+}
+
+.voorbeeld-footer-heading {
+  --utrecht-heading-2-color: var(--voorbeeld-color-white);
+  --utrecht-heading-2-font-family: var(--voorbeeld-typography-font-family-secondary);
+  --utrecht-heading-2-font-size: var(--voorbeeld-typography-font-size-md);
+  --utrecht-heading-2-font-weight: var(--voorbeeld-typography-font-weight-bold);
+  --utrecht-heading-2-line-height: var(--voorbeeld-typography-line-height-lg);
+  margin-block-start: var(--voorbeeld-);
 }
