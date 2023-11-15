@@ -16,11 +16,12 @@ import {
 import { ContactFormSessionData } from '@/app/wmebv/SessionData';
 
 interface ExampleSuccessPageProps extends HTMLAttributes<HTMLDivElement> {
+  mijnOmgeving?: boolean;
   storedData: ContactFormSessionData;
   removeStoredData: () => void;
 }
 
-export const ExampleSuccessPage = ({ storedData, removeStoredData }: ExampleSuccessPageProps) => (
+export const ExampleSuccessPage = ({ storedData, removeStoredData, mijnOmgeving }: ExampleSuccessPageProps) => (
   <UtrechtPageContent className="voorbeeld-page-content-flex">
     <UtrechtArticle id="main" className="voorbeeld-article-space ">
       <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">
@@ -45,6 +46,12 @@ export const ExampleSuccessPage = ({ storedData, removeStoredData }: ExampleSucc
           </Strong>
         </UnorderedListItem>
         <UnorderedListItem>De afdeling Vraagbaak gaat met uw vraag aan de slag.</UnorderedListItem>
+        {mijnOmgeving && (
+          <UnorderedListItem>
+            U wordt per e-mail op de hoogte gehouden maar kunt de voortgang ook inzien binnen uw{' '}
+            <UtrechtLink href="/mijn-omgeving/">Mijn omgeving</UtrechtLink>.
+          </UnorderedListItem>
+        )}
       </UnorderedList>
       <UtrechtButtonGroup direction="column">
         <UtrechtLink href="#">
