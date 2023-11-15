@@ -45,6 +45,10 @@ export const ExampleSuccessPage = ({ storedData, removeStoredData }: ExampleSucc
           </Strong>
         </UnorderedListItem>
         <UnorderedListItem>De afdeling Vraagbaak gaat met uw vraag aan de slag.</UnorderedListItem>
+        <UnorderedListItem>
+          U wordt per email op de hoogte gehouden maar kunt de voortgang ook inzien binnen uw
+          <UtrechtLink href="../mijn-zaken"> mijn omgeving.</UtrechtLink>
+        </UnorderedListItem>
       </UnorderedList>
       <UtrechtButtonGroup direction="column">
         <UtrechtLink href="#">
