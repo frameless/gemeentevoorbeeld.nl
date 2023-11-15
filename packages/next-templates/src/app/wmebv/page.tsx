@@ -12,15 +12,15 @@ import {
 } from '@utrecht/web-component-library-react';
 import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
-import { ExampleNavigationWmebv } from '@/components/wmebv/Navigation/ExampleNavigationWmebv';
 import '@/app/styling/css/wmebv.css';
 import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
+import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 
 export default function home() {
   return (
     <UtrechtPage>
       <ExampleHeaderWmebv />
-      <ExampleNavigationWmebv />
+      <ExampleNavigation />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle id="main" className="voorbeeld-article-space ">
           <BreadcrumbNav label="Kruimelpad">
