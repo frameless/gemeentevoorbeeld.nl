@@ -67,13 +67,13 @@ export const ExampleSuccessPage = ({ storedData, removeStoredData, mijnOmgeving 
           Download uw vraag als PDF
         </UtrechtLink>
         <UtrechtLink
-          href="/wmebv"
+          href="/wmebv/"
           onClick={() => {
             removeStoredData();
             location.assign('/wmebv');
           }}
         >
-          Terug naar voorbeeld.nl
+          Terug naar <UtrechtUrlData>gemeentevoorbeeld.nl</UtrechtUrlData>
         </UtrechtLink>
       </UtrechtButtonGroup>
     </UtrechtArticle>
