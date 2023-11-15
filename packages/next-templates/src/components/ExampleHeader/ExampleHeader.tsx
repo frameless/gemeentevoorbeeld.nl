@@ -1,17 +1,20 @@
 import { Button, Link, PageHeader, Textbox } from '@utrecht/component-library-react';
 import { PopOverButton } from '../PopOver/PopOverButton';
 import { PopOverDialog } from '../PopOver/PopOverDialog';
-import Logo from '../../app/styling/assets/voorbeeld-header.svg';
 import Search from '../../app/styling/assets/searchbar-icon.svg';
 import Xbold from '../../app/styling/assets/x-bold.svg';
 import User from '../../app/styling/assets/user-icon.svg';
 import React, { HTMLAttributes } from 'react';
+import { PageHeaderLogo } from '../PageHeaderLogo';
 import '@utrecht/component-library-css';
 import './header.css';
 import './header.scss';
 
-interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {}
-export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
+interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {
+  search?: boolean;
+}
+
+export const ExampleHeader = ({ search }: ExampleHeaderProps) => (
   <PageHeader className="example--header-home-page">
     <div className="example-page-header__content">
       <PopOverButton
@@ -27,26 +30,28 @@ export const ExampleHeader = ({ ...props }: ExampleHeaderProps) => (
         Menu
       </PopOverButton>
       <div className="example--logo">
-        <Logo />
+        <PageHeaderLogo />
       </div>
       <div className="example--header-items">
         <div className="example--header-links-container">
-          <Link className="example--header-links" href="#">
-            <User className="example--header-user-icon" /> Mijn omgeving
-          </Link>
-          <Link className="example--header-links" href="#">
+          <Link className="example--header-links" href="/wmebv/">
             Contact
           </Link>
+          <Link className="example--header-links" href="/mijn-omgeving/">
+            <User className="example--header-user-icon" /> Mijn omgeving
+          </Link>
         </div>
-        <div className="example--search-box">
-          <Textbox className="example--header-text-box" placeholder="Bijvoorbeeld zwembad of grofvuil" />
-          <Button className="example--header-search-secondary-button" appearance="secondary-action-button">
-            <Search /> Zoeken
-          </Button>
-          <Button className="example--header-search-subtle-button" appearance="subtle-button">
-            <Search /> Zoeken
-          </Button>
-        </div>
+        {search && (
+          <div className="example--search-box">
+            <Textbox className="example--header-text-box" placeholder="Bijvoorbeeld zwembad of grofvuil" />
+            <Button className="example--header-search-secondary-button" appearance="secondary-action-button">
+              <Search /> Zoeken
+            </Button>
+            <Button className="example--header-search-subtle-button" appearance="subtle-button">
+              <Search /> Zoeken
+            </Button>
+          </div>
+        )}
       </div>
       <PopOverDialog
         data-modal="true"

@@ -13,12 +13,12 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { Table, TableBody, TableCell, TableHeader, TableHeaderCell, TableRow } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
-import { ExampleHeaderWmebv } from '@/components/wmebv/Header/ExampleHeaderWmebv';
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 
 export default function home() {
   return (
     <UtrechtPage>
-      <ExampleHeaderWmebv></ExampleHeaderWmebv>
+      <ExampleHeader></ExampleHeader>
       <ExampleNavigation></ExampleNavigation>
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle id="main" className="voorbeeld-article-space ">

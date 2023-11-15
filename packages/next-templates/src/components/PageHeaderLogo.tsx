@@ -1,4 +1,4 @@
-import { Link } from '@utrecht/component-library-react/dist/css-module';
+import { Link } from '@utrecht/component-library-react';
 import { useId } from 'react';
 import Logo from '@/app/styling/assets/voorbeeld-header.svg';
 
