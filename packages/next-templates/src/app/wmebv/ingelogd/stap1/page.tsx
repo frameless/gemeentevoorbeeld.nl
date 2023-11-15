@@ -70,7 +70,7 @@ export default function home() {
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtHeadingGroup>
               <UtrechtHeading2>Uw vraag</UtrechtHeading2>
-              <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtPreHeading>
+              <UtrechtPreHeading>Stap 1 van 4</UtrechtPreHeading>
             </UtrechtHeadingGroup>
             <UtrechtFormFieldTextarea label="Stel uw vraag" {...messageField} invalid={!!errors[messageField.name]}>
               <UtrechtFormFieldErrorMessage slot="error-message">

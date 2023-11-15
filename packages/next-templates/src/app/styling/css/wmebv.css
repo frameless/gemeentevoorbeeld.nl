@@ -67,14 +67,6 @@
   color: var(--voorbeeld-color-gray-600);
 }
 
-.voorbeeld-paragraph-spacing-stapx {
-  --utrecht-paragraph-margin-block-start: var(--voorbeeld-space-block-beetle);
-}
-
-.voorbeeld-heading-spacing {
-  margin-block-start: -3rem;
-}
-
 .voorbeeld-smaller-textbox {
   --utrecht-textbox-margin-block-start: var(--voorbeeld-space-block-beetle);
   --utrecht-textbox-max-inline-size: 136px;
@@ -86,10 +78,6 @@
 
 .voorbeeld-small-textbox {
   --utrecht-textbox-max-inline-size: 304px;
-}
-
-.voorbeeld-paragraph-spacing {
-  margin-block-end: 2.5rem;
 }
 
 .voorbeeld-heading3-spacing {
