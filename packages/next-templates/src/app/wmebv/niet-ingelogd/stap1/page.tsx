@@ -66,7 +66,7 @@ export default function home() {
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtHeadingGroup>
               <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
-              <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtPreHeading>
+              <UtrechtPreHeading>Stap 1 van 4</UtrechtPreHeading>
             </UtrechtHeadingGroup>
             <UtrechtFormFieldTextarea
               {...messageField}
