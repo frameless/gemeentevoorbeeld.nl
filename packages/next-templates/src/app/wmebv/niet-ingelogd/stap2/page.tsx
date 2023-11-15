@@ -18,7 +18,7 @@ import {
 import { IconArrowLeft } from '@tabler/icons-react';
 import { LinkButton } from '@utrecht/component-library-react';
 import '@/app/styling/css/wmebv.css';
-import { useId } from 'react';
+import { useEffect, useId } from 'react';
 import { useForm } from 'react-hook-form';
 import {
   emailValidation,
@@ -78,6 +78,17 @@ export default function home() {
     event.target.submit();
   };
 
+  const stepProgressLabel = 'Stap 2 van 4';
+  const stepLabel = 'Uw gegevens';
+  const websiteLabel = 'gemeente Voorbeeld';
+
+  const hasErrors = Object.values(errors).length > 0;
+  useEffect(() => {
+    if (typeof document?.title === 'string') {
+      document.title = `${hasErrors ? 'Fout: ' : ''}${stepProgressLabel}: ${stepLabel} - ${websiteLabel}`;
+    }
+  }, [hasErrors]);
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />
@@ -101,8 +112,8 @@ export default function home() {
               </LinkButton>
             </UtrechtButtonGroup>
             <UtrechtHeadingGroup>
-              <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
-              <UtrechtPreHeading>Stap 2 van 4</UtrechtPreHeading>
+              <UtrechtHeading2>{stepLabel}</UtrechtHeading2>
+              <UtrechtPreHeading>{stepProgressLabel}</UtrechtPreHeading>
             </UtrechtHeadingGroup>
             <UtrechtParagraph>
               Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet

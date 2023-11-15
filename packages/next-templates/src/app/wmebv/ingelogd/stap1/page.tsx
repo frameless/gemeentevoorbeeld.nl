@@ -25,6 +25,7 @@ import { IconArrowLeft } from '@tabler/icons-react';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '@/app/wmebv/SessionData';
 import '@/app/styling/css/wmebv.css';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { useEffect } from 'react';
 
 export default function home() {
   const userdata = {
@@ -53,6 +54,17 @@ export default function home() {
     event.target.submit();
   };
 
+  const hasErrors = Object.values(errors).length > 0;
+  const stepProgressLabel = 'Stap 1 van 4';
+  const stepLabel = 'Uw vraag';
+  const websiteLabel = 'gemeente Voorbeeld';
+
+  useEffect(() => {
+    if (typeof document?.title === 'string') {
+      document.title = `${hasErrors ? 'Fout: ' : ''}${stepProgressLabel}: ${stepLabel} - ${websiteLabel}`;
+    }
+  }, [hasErrors]);
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
@@ -69,8 +81,8 @@ export default function home() {
             </UtrechtButtonGroup>
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtHeadingGroup>
-              <UtrechtHeading2>Uw vraag</UtrechtHeading2>
-              <UtrechtPreHeading>Stap 1 van 4</UtrechtPreHeading>
+              <UtrechtHeading2>{stepLabel}</UtrechtHeading2>
+              <UtrechtPreHeading>{stepProgressLabel}</UtrechtPreHeading>
             </UtrechtHeadingGroup>
             <UtrechtFormFieldTextarea label="Stel uw vraag" {...messageField} invalid={!!errors[messageField.name]}>
               <UtrechtFormFieldErrorMessage slot="error-message">

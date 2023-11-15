@@ -33,6 +33,7 @@ import '@/app/styling/css/wmebv.css';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { useEffect } from 'react';
 
 export default function home() {
   const [storedData, _, patchStoredData, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {
@@ -48,6 +49,17 @@ export default function home() {
   const messageField = register('message', messageValidation);
 
   const saveFormData = () => patchStoredData(getValues());
+
+  const stepProgressLabel = 'Stap 1 van 4';
+  const stepLabel = 'Uw vraag';
+  const websiteLabel = 'gemeente Voorbeeld';
+
+  const hasErrors = Object.values(errors).length > 0;
+  useEffect(() => {
+    if (typeof document?.title === 'string') {
+      document.title = `${hasErrors ? 'Fout: ' : ''}${stepProgressLabel}: ${stepLabel} - ${websiteLabel}`;
+    }
+  }, [hasErrors]);
 
   return (
     <UtrechtPage>
@@ -65,8 +77,8 @@ export default function home() {
             </UtrechtButtonGroup>
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtHeadingGroup>
-              <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
-              <UtrechtPreHeading>Stap 1 van 4</UtrechtPreHeading>
+              <UtrechtHeading2>{stepLabel}</UtrechtHeading2>
+              <UtrechtPreHeading>{stepProgressLabel}</UtrechtPreHeading>
             </UtrechtHeadingGroup>
             <UtrechtFormFieldTextarea
               {...messageField}

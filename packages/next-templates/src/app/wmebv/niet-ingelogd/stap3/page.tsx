@@ -26,7 +26,7 @@ import '@/app/styling/css/wmebv.css';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
-import { useId } from 'react';
+import { useEffect, useId } from 'react';
 
 export default function home() {
   const [storedData, _, __, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {});
@@ -34,6 +34,16 @@ export default function home() {
   const dataHeading2Id = useId();
   const buttonLabel1Id = useId();
   const buttonLabel2Id = useId();
+
+  const stepProgressLabel = 'Stap 3 van 4';
+  const stepLabel = 'Controleer uw gegevens';
+  const websiteLabel = 'gemeente Voorbeeld';
+
+  useEffect(() => {
+    if (typeof document?.title === 'string') {
+      document.title = `${stepProgressLabel}: ${stepLabel} - ${websiteLabel}`;
+    }
+  }, []);
 
   return (
     <UtrechtPage>
@@ -51,8 +61,8 @@ export default function home() {
               </LinkButton>
             </UtrechtButtonGroup>
             <UtrechtHeadingGroup>
-              <UtrechtHeading2>Controleer uw gegevens</UtrechtHeading2>
-              <UtrechtPreHeading>Stap 3 van 4</UtrechtPreHeading>
+              <UtrechtHeading2>{stepLabel}</UtrechtHeading2>
+              <UtrechtPreHeading>{stepProgressLabel}</UtrechtPreHeading>
             </UtrechtHeadingGroup>
             <UtrechtHeading3 id={dataHeading1Id}>Uw vraag</UtrechtHeading3>
             <UtrechtButtonGroup>
