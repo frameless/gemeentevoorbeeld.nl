@@ -4,12 +4,13 @@ import Logo from '@/app/styling/assets/voorbeeld-header.svg';
 import React, { HTMLAttributes } from 'react';
 import '../../ExampleHeader/ExampleHeaderFunnel/exampleheaderfunnel.css';
 import { UtrechtButtonLink } from '@utrecht/web-component-library-react';
+import { IconChevronDown } from '@tabler/icons-react';
 
 interface ExampleHeaderFunnelWmebvProps extends HTMLAttributes<HTMLDivElement> {
   username?: string;
   userURL?: string;
 }
-export const ExampleHeaderFunnelWmebv = ({ username, userURL, ...props }: ExampleHeaderFunnelWmebvProps) => (
+export const ExampleHeaderFunnelWmebv = ({ username, userURL }: ExampleHeaderFunnelWmebvProps) => (
   <PageHeader className="example--header-home-page">
     <div className="logo">
       <Logo />
@@ -19,6 +20,7 @@ export const ExampleHeaderFunnelWmebv = ({ username, userURL, ...props }: Exampl
         <div className="example--search-box">
           <UtrechtButtonLink href={userURL} appearance="subtle-button" className="voorbeeld-button-link">
             {username}
+            <IconChevronDown />
           </UtrechtButtonLink>
         </div>
       )}
