@@ -19,8 +19,18 @@ import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigat
 import { Fieldset, FieldsetLegend, FormField, FormLabel, RadioButton } from '@utrecht/component-library-react';
 import { IconArrowLeft } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
+import { useEffect } from 'react';
 
 export default function home() {
+  const stepLabel = 'Vraag aan de gemeente';
+  const websiteLabel = 'gemeente Voorbeeld';
+
+  useEffect(() => {
+    if (typeof document?.title === 'string') {
+      document.title = `${stepLabel} - ${websiteLabel}`;
+    }
+  }, []);
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />

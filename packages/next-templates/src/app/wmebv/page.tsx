@@ -15,8 +15,18 @@ import '@/app/styling/css/wmebv.css';
 import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+import { useEffect } from 'react';
 
 export default function home() {
+  const pageTitle = 'Contact met de gemeente';
+  const websiteLabel = 'gemeente Voorbeeld';
+
+  useEffect(() => {
+    if (typeof document?.title === 'string') {
+      document.title = `${pageTitle} - ${websiteLabel}`;
+    }
+  }, []);
+
   return (
     <UtrechtPage>
       <ExampleHeader />
@@ -28,7 +38,7 @@ export default function home() {
               Home
             </BreadcrumbNavLink>
           </BreadcrumbNav>
-          <UtrechtHeading1>Contact met de gemeente</UtrechtHeading1>
+          <UtrechtHeading1>{pageTitle}</UtrechtHeading1>
           <UtrechtParagraph lead>
             Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden? Stel
             dan uw vraag via het contactformulier.

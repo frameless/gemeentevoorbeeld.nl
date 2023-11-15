@@ -16,8 +16,18 @@ import { IconArrowLeft } from '@tabler/icons-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import '@/app/styling/css/wmebv.css';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { useEffect } from 'react';
 
 export default function home() {
+  const stepLabel = 'Vraag aan de gemeente';
+  const websiteLabel = 'gemeente Voorbeeld';
+
+  useEffect(() => {
+    if (typeof document?.title === 'string') {
+      document.title = `${stepLabel} - ${websiteLabel}`;
+    }
+  }, []);
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv />

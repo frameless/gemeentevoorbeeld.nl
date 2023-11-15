@@ -16,7 +16,7 @@ import {
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
 import { LinkButton } from '@utrecht/component-library-react';
-import { useId } from 'react';
+import { useEffect, useId } from 'react';
 import { useForm } from 'react-hook-form';
 import {
   nameValidation,
@@ -82,6 +82,17 @@ export default function home() {
     event.target.submit();
   };
 
+  const hasErrors = Object.values(errors).length > 0;
+  const stepProgressLabel = 'Stap 2 van 4';
+  const stepLabel = 'Uw gegevens';
+  const websiteLabel = 'gemeente Voorbeeld';
+
+  useEffect(() => {
+    if (typeof document?.title === 'string') {
+      document.title = `${hasErrors ? 'Fout: ' : ''}${stepProgressLabel}: ${stepLabel} - ${websiteLabel}`;
+    }
+  }, [hasErrors]);
+
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
@@ -107,8 +118,8 @@ export default function home() {
               </LinkButton>
             </UtrechtButtonGroup>
             <UtrechtHeadingGroup>
-              <UtrechtHeading2>Uw Gegevens</UtrechtHeading2>
-              <UtrechtPreHeading>Stap 2 van 4</UtrechtPreHeading>
+              <UtrechtHeading2>{stepLabel}</UtrechtHeading2>
+              <UtrechtPreHeading>{stepProgressLabel}</UtrechtPreHeading>
             </UtrechtHeadingGroup>
             <UtrechtParagraph>
               Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet
