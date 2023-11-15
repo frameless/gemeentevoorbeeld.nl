@@ -63,11 +63,11 @@ export default function home() {
                 Terug
               </UtrechtLink>
             </UtrechtButtonGroup>
+            <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtHeadingGroup>
-              <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
+              <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
+              <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtPreHeading>
             </UtrechtHeadingGroup>
-            <UtrechtPreHeading className="voorbeeld-paragraph-spacing-stapx">Stap 1 van 4</UtrechtPreHeading>
-            <UtrechtHeading2 className="voorbeeld-heading-spacing">Uw vraag</UtrechtHeading2>
             <UtrechtFormFieldTextarea
               {...messageField}
               label="Stel uw vraag"
