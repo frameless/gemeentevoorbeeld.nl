@@ -23,8 +23,8 @@ export default function Home() {
   const searchParams = useSearchParams();
 
   let address = '';
-  // CANNOT INPUT AS EXPR THE WHOLE OF {searchParams.get('aanhangerbakfiets')} !!! because here it's not HTML, after return, it's JS acting like HTML
-  const expr = searchParams.get('aanhanger bakfiets');
+  // CANNOT INPUT AS EXPR THE WHOLE OF {searchParams?.get('aanhangerbakfiets')} !!! because here it's not HTML, after return, it's JS acting like HTML
+  const expr = searchParams?.get('aanhanger bakfiets');
   switch (expr) {
     case 'Aanhanger 1Tractieweg':
       address = 'https://asp3.lvp.nl/amisweb/utrecht/amis3/amis.php?action=objinfo&obj_id=1000000001';
@@ -49,16 +49,16 @@ export default function Home() {
     <Page>
       <Heading3>Gegevens Bevestiging</Heading3>
       <Paragraph>
-        {/* {searchParams.get('aanhangerbakfiets')}
-        {searchParams.get('datums beschikbaarheid')} */}
+        {/* {searchParams?.get('aanhangerbakfiets')}
+        {searchParams?.get('datums beschikbaarheid')} */}
         Beschikbaarheid van{' '}
         <Link href={address}>
-          <strong>{searchParams.get('aanhanger bakfiets')}</strong>
+          <strong>{searchParams?.get('aanhanger bakfiets')}</strong>
         </Link>
         {' op '}
         <strong>
-          {searchParams.get('datums beschikbaarheid') ? (
-            <DateValue dateTime={searchParams.get('datums beschikbaarheid')!} locale="nl" />
+          {searchParams?.get('datums beschikbaarheid') ? (
+            <DateValue dateTime={searchParams?.get('datums beschikbaarheid')!} locale="nl" />
           ) : (
             <EmptyIndicator title="No date given" />
           )}
@@ -103,12 +103,12 @@ export default function Home() {
           </FormField>
         </Fieldset>
 
-        <input type="hidden" id="1111" name="aanhanger bakfiets" value={searchParams.get('aanhanger bakfiets')!} />
+        <input type="hidden" id="1111" name="aanhanger bakfiets" value={searchParams?.get('aanhanger bakfiets')!} />
         <input
           type="hidden"
           id="2222"
           name="datums beschikbaarheid"
-          value={searchParams.get('datums beschikbaarheid')!}
+          value={searchParams?.get('datums beschikbaarheid')!}
         />
 
         <ButtonGroup>

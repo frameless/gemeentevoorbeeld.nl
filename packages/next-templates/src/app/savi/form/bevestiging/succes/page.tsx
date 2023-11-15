@@ -13,16 +13,16 @@ export default function Home() {
     <Page>
       <Heading3>Gegevens Bevestiging</Heading3>
       <Paragraph>
-        U hebt gekozen voor: <strong>{searchParams.get('aanhanger bakfiets')}</strong>
+        U hebt gekozen voor: <strong>{searchParams?.get('aanhanger bakfiets')}</strong>
         {' op '}
         <strong>
-          {searchParams.get('datums beschikbaarheid') ? (
-            <DateValue dateTime={searchParams.get('datums beschikbaarheid')!} locale="nl" />
+          {searchParams?.get('datums beschikbaarheid') ? (
+            <DateValue dateTime={searchParams?.get('datums beschikbaarheid')!} locale="nl" />
           ) : (
             <EmptyIndicator title="No date given" />
           )}
         </strong>{' '}
-        om <strong>{searchParams.get('dagdeel')}</strong>
+        om <strong>{searchParams?.get('dagdeel')}</strong>
       </Paragraph>
       {/* <Paragraph>
         <img
@@ -32,7 +32,7 @@ export default function Home() {
           style={ marginInline: 'auto', display: 'block' }
         />
         </strong>
-        <strong> Om {searchParams.get('dagdeel')}</strong>
+        <strong> Om {searchParams?.get('dagdeel')}</strong>
       </Paragraph> */}
     </Page>
   );
