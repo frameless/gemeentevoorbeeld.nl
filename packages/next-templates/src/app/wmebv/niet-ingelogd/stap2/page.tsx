@@ -189,7 +189,7 @@ export default function home() {
               autoComplete="email"
               className="voorbeeld-small-textbox"
               id={useId()}
-              label="Emailadres"
+              label="E-mailadres"
               type="email"
               invalid={!!errors[emailField.name]}
             >
