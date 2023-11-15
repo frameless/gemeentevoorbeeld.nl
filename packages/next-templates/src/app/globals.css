@@ -53,6 +53,8 @@ body {
   --utrecht-radio-button-checked-border-color: var(--voorbeeld-color-violet-700);
   --utrecht-radio-button-border-color: var(--voorbeeld-color-gray-500);
   --utrecht-textbox-read-only-border-color: var(--utrecht-textbox-border-color);
+  --voorbeeld-logo-icon-color: var(--voorbeeld-color-violet-700);
+  --voorbeeld-logo-color: var(--voorbeeld-color-gray-950);
 
   --example-page-header-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.5);
 
@@ -194,6 +196,10 @@ utrecht-page-content {
 }
 
 @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
+  .voorbeeld-theme {
+    --voorbeeld-logo-icon-color: currentColor;
+    --voorbeeld-logo-color: currentColor;
+  }
   .utrecht-page-footer,
   utrecht-page-footer {
     border-block-start-color: currentColor;
