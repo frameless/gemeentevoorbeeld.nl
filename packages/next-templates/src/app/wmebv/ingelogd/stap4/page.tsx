@@ -19,6 +19,7 @@ import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeade
 import '@/app/styling/css/wmebv.css';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
+import { ExampleSuccessPage } from '@/components/wmebv/SuccessPage';
 
 export default function home() {
   const userdata = {
@@ -36,56 +37,7 @@ export default function home() {
   return (
     <UtrechtPage>
       <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
-      <UtrechtPageContent className="voorbeeld-page-content-flex">
-        <UtrechtArticle id="main" className="voorbeeld-article-space ">
-          <UtrechtAlert type="ok" className="utrecht-spotlight-section-wmebv">
-            <UtrechtHeading1>
-              <UtrechtIcon
-                style={{
-                  '--utrecht-icon-color': 'var(--_utrecht-alert-icon-color, currentColor)',
-                }}
-              >
-                <IconCircleCheck size={33} />
-              </UtrechtIcon>
-              Uw vraag is met succes verstuurd
-            </UtrechtHeading1>
-            <UtrechtParagraph>Kenmerk: {storedData?.code}</UtrechtParagraph>
-          </UtrechtAlert>
-          <UtrechtHeading2>Wat gaat er nu gebeuren?</UtrechtHeading2>
-          <UnorderedList>
-            <UnorderedListItem>
-              U ontvangt een bevestigingsmail op
-              <Strong>
-                <UtrechtUrlData>{storedData?.email}</UtrechtUrlData>
-              </Strong>
-            </UnorderedListItem>
-            <UnorderedListItem>De afdeling Vraagbaak gaat met uw vraag aan de slag.</UnorderedListItem>
-          </UnorderedList>
-          <UtrechtButtonGroup direction="column">
-            <UtrechtLink href="#">
-              <UtrechtIcon>
-                <IconPrinter />
-              </UtrechtIcon>
-              Print uw vraag
-            </UtrechtLink>
-            <UtrechtLink href="/" download="vraag.pdf">
-              <UtrechtIcon>
-                <IconFileText />
-              </UtrechtIcon>
-              Download uw vraag als PDF
-            </UtrechtLink>
-            <UtrechtLink
-              href="/wmebv"
-              onClick={() => {
-                removeStoredData();
-                location.assign('/wmebv');
-              }}
-            >
-              Terug naar voorbeeld.nl
-            </UtrechtLink>
-          </UtrechtButtonGroup>
-        </UtrechtArticle>
-      </UtrechtPageContent>
+      <ExampleSuccessPage storedData={storedData} removeStoredData={removeStoredData} />
       <ExampleFooterWmebv />
     </UtrechtPage>
   );
