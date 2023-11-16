@@ -95,6 +95,7 @@ export default function home() {
               label="Stel uw vraag"
               invalid={!!errors[messageField.name]}
               errorMessage={String(errors[messageField.name]?.message)}
+              required
             ></FormFieldTextarea>
 
             <FormFieldFile
