@@ -27,6 +27,7 @@ import '@/app/styling/css/wmebv.css';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { useEffect, useRef, useState } from 'react';
 import { OptionalValidationAlert, useAlertScroll } from '@/components/OptionalValidationAlert';
+import { FormFieldFile } from '@/components/FormFieldFile';
 
 export default function home() {
   const userdata = {
@@ -89,32 +90,38 @@ export default function home() {
             </UtrechtHeadingGroup>
             <OptionalValidationAlert id="form-errors" errors={errors} ref={alertRef} />
             <UtrechtFormFieldTextarea
-              label="Stel uw vraag"
               {...messageField}
               id={`field-${messageField.name}`}
+              label="Stel uw vraag"
               invalid={!!errors[messageField.name]}
+              style={{
+                '--_utrecht-textarea-rows': '10',
+                '--utrecht-textarea-min-block-size': 'calc(var(--_utrecht-textarea-rows, 2) * 1em)',
+              }}
             >
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[messageField.name]?.message)}
               </UtrechtFormFieldErrorMessage>
             </UtrechtFormFieldTextarea>
-            <div className="voorbeeld-bijlage-flex-container">
-              <UtrechtParagraph className="voorbeeld-paragraph-bijlage">Bestand toevoegen</UtrechtParagraph>
-              <UtrechtParagraph>(Niet verplicht)</UtrechtParagraph>
-            </div>
-            <UnorderedList className="voorbeeld-unordered-list-space">
-              <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
-              <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
-              <UnorderedListItem>
-                Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bmp en gif.
-              </UnorderedListItem>
-            </UnorderedList>
-            <div className="voorbeeld-bijlage-flex-container">
-              <UtrechtButton appearance="secondary-action-button" className="voorbeeld-button-spacing-bestand-kiezen">
-                Bestand kiezen
-              </UtrechtButton>
-              <UtrechtParagraph className="paragraph-space-bijlagen">Geen bestand gekozen</UtrechtParagraph>
-            </div>
+
+            <FormFieldFile
+              id="file-field"
+              label="Bestand toevoegen"
+              buttonLabel="Bestand kiezen"
+              description={
+                <>
+                  <UtrechtParagraph>Niet verplicht.</UtrechtParagraph>
+                  <UnorderedList className="voorbeeld-unordered-list-space">
+                    <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
+                    <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
+                    <UnorderedListItem>
+                      Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bmp en gif.
+                    </UnorderedListItem>
+                  </UnorderedList>
+                </>
+              }
+              status={<UtrechtParagraph>Geen bestand gekozen</UtrechtParagraph>}
+            ></FormFieldFile>
             <UtrechtButtonGroup direction="column">
               <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Volgende stap
