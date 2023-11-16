@@ -19,13 +19,13 @@ import {
 } from '@utrecht/web-component-library-react';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
-import { useForm } from 'react-hook-form';
+import { SubmitErrorHandler, useForm } from 'react-hook-form';
 import { messageValidation } from '@/utils/validation';
 import { IconArrowLeft } from '@tabler/icons-react';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '@/app/wmebv/SessionData';
 import '@/app/styling/css/wmebv.css';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { OptionalValidationAlert } from '@/components/OptionalValidationAlert';
 
 export default function home() {
@@ -55,6 +55,24 @@ export default function home() {
     event.target.submit();
   };
 
+  const alertRef = useRef<HTMLDivElement>(null);
+  const [submitValidationErrors, setSubmitValidationErrors] = useState<any>();
+
+  useEffect(() => {
+    if (submitValidationErrors && Object.keys(submitValidationErrors).length > 0) {
+      // TODO: Perhaps focus the alert instead, for screen readers and easy access to the links in tab order?
+      if (alertRef.current?.id) {
+        location.href = `#${alertRef.current?.id}`;
+      } else {
+        alertRef.current?.scrollIntoView();
+      }
+    }
+  }, [submitValidationErrors]);
+
+  const onValidationError: SubmitErrorHandler<ContactFormSessionData> = (errors) => {
+    setSubmitValidationErrors(errors);
+  };
+
   const hasErrors = Object.values(errors).length > 0;
   const stepProgressLabel = 'Stap 1 van 4';
   const stepLabel = 'Uw vraag';
@@ -71,7 +89,7 @@ export default function home() {
       <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle id="main" className="voorbeeld-article-space ">
-          <form method="post" action="/api/wmebv/signed-in/step1" onSubmit={handleSubmit(onSubmit)}>
+          <form method="post" action="/api/wmebv/signed-in/step1" onSubmit={handleSubmit(onSubmit, onValidationError)}>
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <UtrechtIcon>
@@ -85,7 +103,7 @@ export default function home() {
               <UtrechtHeading2>{stepLabel}</UtrechtHeading2>
               <UtrechtPreHeading>{stepProgressLabel}</UtrechtPreHeading>
             </UtrechtHeadingGroup>
-            <OptionalValidationAlert errors={errors} />
+            <OptionalValidationAlert id="form-errors" errors={errors} ref={alertRef} />
             <UtrechtFormFieldTextarea
               label="Stel uw vraag"
               {...messageField}
