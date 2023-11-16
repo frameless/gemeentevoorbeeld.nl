@@ -343,8 +343,8 @@ importers:
         specifier: 0.5.3
         version: 0.5.3(@stencil/core@4.1.0)
       '@stencil/sass':
-        specifier: 3.0.5
-        version: 3.0.5(@stencil/core@4.1.0)
+        specifier: 3.0.7
+        version: 3.0.7(@stencil/core@4.1.0)
       '@types/jest':
         specifier: 29.5.4
         version: 29.5.4
@@ -2850,8 +2850,8 @@ packages:
       '@stencil/core': 4.1.0
     dev: true
 
-  /@stencil/sass@3.0.5(@stencil/core@4.1.0):
-    resolution: {integrity: sha512-9nyllMXOEvHywo6fP2iwXgnq32A+OOUE36Aq7iUjzwT3wdr04qsvupO1JNIyRvmvCDF15hOKXztrZH1/wDu2Zg==}
+  /@stencil/sass@3.0.7(@stencil/core@4.1.0):
+    resolution: {integrity: sha512-HcBjrh2CJ6aJnkOrBNSVyf1+x3FnUneYFk44rcx/jDK6Lx7R4w0dXMEsIR5MXqtROYWonZt7WtR8wsM1vcD+6w==}
     engines: {node: '>=12.0.0', npm: '>=6.0.0'}
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3.0.0-beta.0 || >= 4.0.0-beta.0 || >= 4.0.0'
