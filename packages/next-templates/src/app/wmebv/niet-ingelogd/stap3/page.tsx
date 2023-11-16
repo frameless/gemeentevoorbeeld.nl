@@ -148,9 +148,15 @@ export default function home() {
               <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Volgende stap
               </UtrechtButton>
-              <UtrechtLink className="voorbeeld-button-link" href="/wmebv">
+              <LinkButton
+                inline
+                className="voorbeeld-button-link"
+                onClick={() => {
+                  location.assign('/wmebv');
+                }}
+              >
                 Opslaan en later verder
-              </UtrechtLink>
+              </LinkButton>
               <LinkButton
                 inline
                 className="voorbeeld-button-link"
