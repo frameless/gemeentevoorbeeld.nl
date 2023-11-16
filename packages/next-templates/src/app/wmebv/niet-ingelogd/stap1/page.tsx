@@ -34,6 +34,7 @@ import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../..
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { useEffect } from 'react';
+import { OptionalValidationAlert } from '@/components/OptionalValidationAlert';
 
 export default function home() {
   const [storedData, _, patchStoredData, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {
@@ -44,11 +45,17 @@ export default function home() {
     getValues,
     register,
     formState: { errors },
+    handleSubmit,
   } = useForm({ values: storedData });
 
   const messageField = register('message', messageValidation);
 
   const saveFormData = () => patchStoredData(getValues());
+
+  const onSubmit = (_: any, event: any) => {
+    saveFormData();
+    event.target.submit();
+  };
 
   const stepProgressLabel = 'Stap 1 van 4';
   const stepLabel = 'Uw vraag';
@@ -66,7 +73,7 @@ export default function home() {
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle id="main" className="voorbeeld-article-space ">
-          <form method="post" action="/api/wmebv/anonymous/step1" onSubmit={saveFormData}>
+          <form method="post" action="/api/wmebv/anonymous/step1" onSubmit={handleSubmit(onSubmit)}>
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <UtrechtIcon>
@@ -80,8 +87,10 @@ export default function home() {
               <UtrechtHeading2>{stepLabel}</UtrechtHeading2>
               <UtrechtPreHeading>{stepProgressLabel}</UtrechtPreHeading>
             </UtrechtHeadingGroup>
+            <OptionalValidationAlert errors={errors} />
             <UtrechtFormFieldTextarea
               {...messageField}
+              id={`field-${messageField.name}`}
               label="Stel uw vraag"
               style={{
                 '--_utrecht-textarea-rows': '10',

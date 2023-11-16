@@ -17,7 +17,7 @@ import {
   UtrechtParagraph,
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import { UnorderedList, UnorderedListItem, LinkButton } from '@utrecht/component-library-react';
+import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { useForm } from 'react-hook-form';
 import { messageValidation } from '@/utils/validation';
@@ -26,6 +26,7 @@ import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '@/app
 import '@/app/styling/css/wmebv.css';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { useEffect } from 'react';
+import { OptionalValidationAlert } from '@/components/OptionalValidationAlert';
 
 export default function home() {
   const userdata = {
@@ -84,7 +85,13 @@ export default function home() {
               <UtrechtHeading2>{stepLabel}</UtrechtHeading2>
               <UtrechtPreHeading>{stepProgressLabel}</UtrechtPreHeading>
             </UtrechtHeadingGroup>
-            <UtrechtFormFieldTextarea label="Stel uw vraag" {...messageField} invalid={!!errors[messageField.name]}>
+            <OptionalValidationAlert errors={errors} />
+            <UtrechtFormFieldTextarea
+              label="Stel uw vraag"
+              {...messageField}
+              id={`field-${messageField.name}`}
+              invalid={!!errors[messageField.name]}
+            >
               <UtrechtFormFieldErrorMessage slot="error-message">
                 {String(errors[messageField.name]?.message)}
               </UtrechtFormFieldErrorMessage>
