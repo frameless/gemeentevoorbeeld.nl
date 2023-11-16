@@ -31,6 +31,7 @@ import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../..
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { useEffect, useId } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function home() {
   const userdata = {
@@ -42,6 +43,12 @@ export default function home() {
   const dataHeading2Id = useId();
   const buttonLabel1Id = useId();
   const buttonLabel2Id = useId();
+
+  const router = useRouter();
+
+  const onClickPrev = () => {
+    router.push('./stap2');
+  };
 
   const stepProgressLabel = 'Stap 3 van 4';
   const stepLabel = 'Controleer uw gegevens';
@@ -61,7 +68,7 @@ export default function home() {
           <form method="post" action="/api/wmebv/signed-in/step3">
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
-              <LinkButton type="submit" inline={true} className="voorbeeld-button-link" formAction="./stap2/">
+              <LinkButton inline={true} className="voorbeeld-button-link" formAction="./stap2/" onClick={onClickPrev}>
                 <UtrechtIcon>
                   <IconArrowLeft />
                 </UtrechtIcon>

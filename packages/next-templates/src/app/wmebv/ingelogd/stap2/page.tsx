@@ -16,7 +16,7 @@ import {
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
 import { LinkButton } from '@utrecht/component-library-react';
-import { useEffect, useId } from 'react';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import {
   nameValidation,
@@ -33,6 +33,8 @@ import '@/app/styling/css/wmebv.css';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
+import { OptionalValidationAlert } from '@/components/OptionalValidationAlert';
+import { useRouter } from 'next/navigation';
 
 export default function home() {
   const userdata = {
@@ -82,6 +84,13 @@ export default function home() {
     event.target.submit();
   };
 
+  const router = useRouter();
+
+  const onClickPrev = () => {
+    saveFormData();
+    router.push('./stap1');
+  };
+
   const hasErrors = Object.values(errors).length > 0;
   const stepProgressLabel = 'Stap 2 van 4';
   const stepLabel = 'Uw gegevens';
@@ -102,7 +111,6 @@ export default function home() {
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
               <LinkButton
-                type="submit"
                 inline={true}
                 className="voorbeeld-button-link"
                 formAction="/api/wmebv/signed-in/step2/back"
@@ -110,6 +118,7 @@ export default function home() {
                 onSubmit={() => {
                   saveFormData();
                 }}
+                onClick={onClickPrev}
               >
                 <UtrechtIcon>
                   <IconArrowLeft />
@@ -125,12 +134,12 @@ export default function home() {
               Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet
               met anderen gedeeld.
             </UtrechtParagraph>
-
+            <OptionalValidationAlert errors={errors} />
             <UtrechtFormFieldTextbox
               {...nameField}
               autoComplete="name"
               className="voorbeeld-small-textbox"
-              id={useId()}
+              id={`field-${nameField.name}`}
               label="Naam"
               readOnly={true}
               invalid={!!errors[nameField.name]}
@@ -143,7 +152,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...streetField}
               autoComplete="street-address"
-              id={useId()}
+              id={`field-${streetField.name}`}
               label="Straat"
               readOnly={true}
               invalid={!!errors[streetField.name]}
@@ -157,7 +166,7 @@ export default function home() {
               {...houseNumberField}
               autoComplete=""
               className="voorbeeld-tiny-textbox"
-              id={useId()}
+              id={`field-${houseNumberField.name}`}
               label="Huisnummer"
               readOnly={true}
               invalid={!!errors[houseNumberField.name]}
@@ -171,7 +180,7 @@ export default function home() {
               {...houseNumberSuffixField}
               autoComplete=""
               className="voorbeeld-tiny-textbox"
-              id={useId()}
+              id={`field-${houseNumberSuffixField.name}`}
               label="Toevoeging"
               readOnly={true}
               invalid={!!errors[houseNumberSuffixField.name]}
@@ -186,7 +195,7 @@ export default function home() {
               {...postalCodeField}
               autoComplete="postal-code"
               className="voorbeeld-tiny-textbox"
-              id={useId()}
+              id={`field-${postalCodeField.name}`}
               label="Postcode"
               readOnly={true}
               invalid={!!errors[postalCodeField.name]}
@@ -199,7 +208,7 @@ export default function home() {
             <UtrechtFormFieldTextbox
               {...homeTownField}
               autoComplete="address-level2"
-              id={useId()}
+              id={`field-${homeTownField.name}`}
               label="Woonplaats"
               readOnly={true}
               invalid={!!errors[homeTownField.name]}
@@ -213,7 +222,7 @@ export default function home() {
               {...emailField}
               autoComplete="email"
               className="voorbeeld-small-textbox"
-              id={useId()}
+              id={`field-${emailField.name}`}
               type="email"
               label="E-mailadres"
               invalid={!!errors[emailField.name]}

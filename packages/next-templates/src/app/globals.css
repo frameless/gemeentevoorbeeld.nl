@@ -80,6 +80,9 @@ body {
   --utrecht-alert-padding-block-start: var(--voorbeeld-space-inline-mouse);
   --utrecht-alert-padding-block-end: var(--voorbeeld-space-inline-rat);
   --utrecht-alert-icon-gap: var(--voorbeeld-space-inline-beetle);
+  --utrecht-alert-error-border-color: var(--voorbeeld-color-red-600);
+  --utrecht-alert-icon-error-color: var(--voorbeeld-color-red-600);
+  --utrecht-alert-error-background-color: var(--voorbeeld-color-red-100);
 }
 
 .voorbeeld-theme .utrecht-page-footer {
@@ -245,6 +248,11 @@ utrecht-page-content {
 .utrecht-form-fieldset__fieldset[role="radiogroup"] {
   margin-block-start: var(--utrecht-form-field-margin-block-start);
 }
+
+.utrecht-alert__icon {
+  --utrecht-icon-size: var(--voorbeeld-size-icon-lg);
+}
+
 .utrecht-data-list__item,
 utrecht-data-list-item {
   display: block;
