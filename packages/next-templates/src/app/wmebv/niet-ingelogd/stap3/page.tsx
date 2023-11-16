@@ -146,7 +146,7 @@ export default function home() {
             </DataList>
             <UtrechtButtonGroup direction="column">
               <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
-                Volgende stap
+                Versturen
               </UtrechtButton>
               <LinkButton
                 inline
