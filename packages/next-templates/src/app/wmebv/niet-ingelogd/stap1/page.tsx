@@ -34,7 +34,7 @@ import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../..
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { useEffect } from 'react';
-import { OptionalValidationAlert } from '@/components/OptionalValidationAlert';
+import { OptionalValidationAlert, useAlertScroll } from '@/components/OptionalValidationAlert';
 
 export default function home() {
   const [storedData, _, patchStoredData, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {
@@ -57,6 +57,8 @@ export default function home() {
     event.target.submit();
   };
 
+  const { alertRef, onInvalid } = useAlertScroll();
+
   const stepProgressLabel = 'Stap 1 van 4';
   const stepLabel = 'Uw vraag';
   const websiteLabel = 'gemeente Voorbeeld';
@@ -73,7 +75,7 @@ export default function home() {
       <ExampleHeaderFunnelWmebv />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle id="main" className="voorbeeld-article-space ">
-          <form method="post" action="/api/wmebv/anonymous/step1" onSubmit={handleSubmit(onSubmit)}>
+          <form method="post" action="/api/wmebv/anonymous/step1" onSubmit={handleSubmit(onSubmit, onInvalid)}>
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <UtrechtIcon>
@@ -87,7 +89,7 @@ export default function home() {
               <UtrechtHeading2>{stepLabel}</UtrechtHeading2>
               <UtrechtPreHeading>{stepProgressLabel}</UtrechtPreHeading>
             </UtrechtHeadingGroup>
-            <OptionalValidationAlert errors={errors} />
+            <OptionalValidationAlert id="form-errors" errors={errors} ref={alertRef} />
             <UtrechtFormFieldTextarea
               {...messageField}
               id={`field-${messageField.name}`}

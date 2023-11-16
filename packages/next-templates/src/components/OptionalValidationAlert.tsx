@@ -1,9 +1,30 @@
 import { IconExclamationCircle } from '@tabler/icons-react';
 import { Alert, AlertProps } from '@utrecht/component-library-react';
 import { UtrechtHeading2, UtrechtIcon, UtrechtLink, UtrechtParagraph } from '@utrecht/web-component-library-react';
-import { ForwardedRef, forwardRef } from 'react';
-import { FieldErrors } from 'react-hook-form';
+import { ForwardedRef, forwardRef, useEffect, useRef, useState } from 'react';
+import { FieldErrors, SubmitErrorHandler } from 'react-hook-form';
 
+export const useAlertScroll = () => {
+  const alertRef = useRef<HTMLDivElement>(null);
+  const [submitValidationErrors, setSubmitValidationErrors] = useState<any>();
+
+  useEffect(() => {
+    if (submitValidationErrors && Object.keys(submitValidationErrors).length > 0) {
+      // TODO: Perhaps focus the alert instead, for screen readers and easy access to the links in tab order?
+      if (alertRef.current?.id) {
+        location.href = `#${alertRef.current?.id}`;
+      } else {
+        alertRef.current?.scrollIntoView();
+      }
+    }
+  }, [submitValidationErrors]);
+
+  const onInvalid: SubmitErrorHandler<any> = (errors) => {
+    setSubmitValidationErrors(errors);
+  };
+
+  return { alertRef, onInvalid };
+};
 export interface OptionalValidationAlertProps extends AlertProps {
   errors: FieldErrors;
 }

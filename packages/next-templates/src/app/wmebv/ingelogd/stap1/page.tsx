@@ -26,7 +26,7 @@ import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '@/app
 import '@/app/styling/css/wmebv.css';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { useEffect, useRef, useState } from 'react';
-import { OptionalValidationAlert } from '@/components/OptionalValidationAlert';
+import { OptionalValidationAlert, useAlertScroll } from '@/components/OptionalValidationAlert';
 
 export default function home() {
   const userdata = {
@@ -55,23 +55,7 @@ export default function home() {
     event.target.submit();
   };
 
-  const alertRef = useRef<HTMLDivElement>(null);
-  const [submitValidationErrors, setSubmitValidationErrors] = useState<any>();
-
-  useEffect(() => {
-    if (submitValidationErrors && Object.keys(submitValidationErrors).length > 0) {
-      // TODO: Perhaps focus the alert instead, for screen readers and easy access to the links in tab order?
-      if (alertRef.current?.id) {
-        location.href = `#${alertRef.current?.id}`;
-      } else {
-        alertRef.current?.scrollIntoView();
-      }
-    }
-  }, [submitValidationErrors]);
-
-  const onValidationError: SubmitErrorHandler<ContactFormSessionData> = (errors) => {
-    setSubmitValidationErrors(errors);
-  };
+  const { alertRef, onInvalid } = useAlertScroll();
 
   const hasErrors = Object.values(errors).length > 0;
   const stepProgressLabel = 'Stap 1 van 4';
@@ -89,7 +73,7 @@ export default function home() {
       <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent className="voorbeeld-page-content-flex">
         <UtrechtArticle id="main" className="voorbeeld-article-space ">
-          <form method="post" action="/api/wmebv/signed-in/step1" onSubmit={handleSubmit(onSubmit, onValidationError)}>
+          <form method="post" action="/api/wmebv/signed-in/step1" onSubmit={handleSubmit(onSubmit, onInvalid)}>
             <UtrechtButtonGroup>
               <UtrechtLink href="/wmebv/Inloggen">
                 <UtrechtIcon>
