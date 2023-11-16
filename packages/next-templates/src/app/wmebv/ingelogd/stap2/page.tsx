@@ -4,8 +4,6 @@ import {
   UtrechtArticle,
   UtrechtButton,
   UtrechtButtonGroup,
-  UtrechtFormFieldErrorMessage,
-  UtrechtFormFieldTextbox,
   UtrechtHeading1,
   UtrechtHeading2,
   UtrechtHeadingGroup,
@@ -35,6 +33,7 @@ import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { OptionalValidationAlert, useAlertScroll } from '@/components/OptionalValidationAlert';
 import { useRouter } from 'next/navigation';
+import { FormFieldTextbox } from '@/components/FormFieldTextbox';
 
 export default function home() {
   const userdata = {
@@ -137,48 +136,42 @@ export default function home() {
               met anderen gedeeld.
             </UtrechtParagraph>
             <OptionalValidationAlert id="form-errors" errors={errors} ref={alertRef} />
-            <UtrechtFormFieldTextbox
+            <FormFieldTextbox
               {...nameField}
               autoComplete="name"
               className="voorbeeld-small-textbox"
               id={`field-${nameField.name}`}
               label="Naam"
               readOnly={true}
+              required
               invalid={!!errors[nameField.name]}
-            >
-              <UtrechtFormFieldErrorMessage slot="error-message">
-                {String(errors[nameField.name]?.message)}
-              </UtrechtFormFieldErrorMessage>
-            </UtrechtFormFieldTextbox>
+              errorMessage={String(errors[nameField.name]?.message)}
+            ></FormFieldTextbox>
 
-            <UtrechtFormFieldTextbox
+            <FormFieldTextbox
               {...streetField}
               autoComplete="street-address"
               id={`field-${streetField.name}`}
               label="Straat"
               readOnly={true}
+              required
               invalid={!!errors[streetField.name]}
-            >
-              <UtrechtFormFieldErrorMessage slot="error-message">
-                {String(errors[streetField.name]?.message)}
-              </UtrechtFormFieldErrorMessage>
-            </UtrechtFormFieldTextbox>
+              errorMessage={String(errors[streetField.name]?.message)}
+            ></FormFieldTextbox>
 
-            <UtrechtFormFieldTextbox
+            <FormFieldTextbox
               {...houseNumberField}
               autoComplete=""
               className="voorbeeld-tiny-textbox"
               id={`field-${houseNumberField.name}`}
               label="Huisnummer"
               readOnly={true}
+              required
               invalid={!!errors[houseNumberField.name]}
-            >
-              <UtrechtFormFieldErrorMessage slot="error-message">
-                {String(errors[houseNumberField.name]?.message)}
-              </UtrechtFormFieldErrorMessage>
-            </UtrechtFormFieldTextbox>
+              errorMessage={String(errors[houseNumberField.name]?.message)}
+            ></FormFieldTextbox>
 
-            <UtrechtFormFieldTextbox
+            <FormFieldTextbox
               {...houseNumberSuffixField}
               autoComplete=""
               className="voorbeeld-tiny-textbox"
@@ -186,55 +179,46 @@ export default function home() {
               label="Toevoeging"
               readOnly={true}
               invalid={!!errors[houseNumberSuffixField.name]}
-            >
-              <UtrechtParagraph slot="description">Niet verplicht.</UtrechtParagraph>
-              <UtrechtFormFieldErrorMessage slot="error-message">
-                {String(errors[houseNumberSuffixField.name]?.message)}
-              </UtrechtFormFieldErrorMessage>
-            </UtrechtFormFieldTextbox>
+              description={<UtrechtParagraph slot="description">Niet verplicht.</UtrechtParagraph>}
+              errorMessage={String(errors[houseNumberSuffixField.name]?.message)}
+            ></FormFieldTextbox>
 
-            <UtrechtFormFieldTextbox
+            <FormFieldTextbox
               {...postalCodeField}
               autoComplete="postal-code"
               className="voorbeeld-tiny-textbox"
               id={`field-${postalCodeField.name}`}
               label="Postcode"
               readOnly={true}
+              required
               invalid={!!errors[postalCodeField.name]}
-            >
-              <UtrechtFormFieldErrorMessage slot="error-message">
-                {String(errors[postalCodeField.name]?.message)}
-              </UtrechtFormFieldErrorMessage>
-            </UtrechtFormFieldTextbox>
+              errorMessage={String(errors[postalCodeField.name]?.message)}
+            ></FormFieldTextbox>
 
-            <UtrechtFormFieldTextbox
+            <FormFieldTextbox
               {...homeTownField}
               autoComplete="address-level2"
               id={`field-${homeTownField.name}`}
               label="Woonplaats"
               readOnly={true}
+              required
               invalid={!!errors[homeTownField.name]}
-            >
-              <UtrechtFormFieldErrorMessage slot="error-message">
-                {String(errors[homeTownField.name]?.message)}
-              </UtrechtFormFieldErrorMessage>
-            </UtrechtFormFieldTextbox>
+              errorMessage={String(errors[homeTownField.name]?.message)}
+            ></FormFieldTextbox>
 
-            <UtrechtFormFieldTextbox
+            <FormFieldTextbox
               {...emailField}
               autoComplete="email"
               className="voorbeeld-small-textbox"
               id={`field-${emailField.name}`}
               type="email"
+              required
               label="E-mailadres"
               invalid={!!errors[emailField.name]}
-            >
-              <UtrechtFormFieldErrorMessage slot="error-message">
-                {String(errors[emailField.name]?.message)}
-              </UtrechtFormFieldErrorMessage>
-            </UtrechtFormFieldTextbox>
+              errorMessage={String(errors[emailField.name]?.message)}
+            ></FormFieldTextbox>
 
-            <UtrechtFormFieldTextbox
+            <FormFieldTextbox
               {...phoneField}
               autoComplete="tel"
               className="voorbeeld-smaller-textbox"
@@ -242,12 +226,9 @@ export default function home() {
               label="Telefoonnummer"
               type="tel"
               invalid={!!errors[phoneField.name]}
-            >
-              <UtrechtParagraph slot="description">Niet verplicht.</UtrechtParagraph>
-              <UtrechtFormFieldErrorMessage slot="error-message">
-                {String(errors[phoneField.name]?.message)}
-              </UtrechtFormFieldErrorMessage>
-            </UtrechtFormFieldTextbox>
+              description={<UtrechtParagraph slot="description">Niet verplicht.</UtrechtParagraph>}
+              errorMessage={String(errors[phoneField.name]?.message)}
+            ></FormFieldTextbox>
             <UtrechtButtonGroup direction="column">
               <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Volgende stap
