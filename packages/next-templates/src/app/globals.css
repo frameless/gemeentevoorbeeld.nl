@@ -287,3 +287,8 @@ utrecht-data-list {
   width: 1px !important;
   white-space: nowrap !important;
 }
+
+.message-textarea {
+  --_utrecht-textarea-rows: 10;
+  --utrecht-textarea-min-block-size: calc(var(--_utrecht-textarea-rows, 2) * 1em);
+}
