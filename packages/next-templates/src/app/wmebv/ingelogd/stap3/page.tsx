@@ -4,10 +4,6 @@ import {
   UtrechtArticle,
   UtrechtButton,
   UtrechtButtonGroup,
-  UtrechtDataList,
-  UtrechtDataListItem,
-  UtrechtDataListKey,
-  UtrechtDataListValue,
   UtrechtHeading1,
   UtrechtHeading2,
   UtrechtHeading3,
@@ -19,7 +15,16 @@ import {
   UtrechtPageContent,
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import { Link, LinkButton, PreserveData, URLData } from '@utrecht/component-library-react';
+import {
+  DataList,
+  DataListItem,
+  DataListKey,
+  DataListValue,
+  Link,
+  LinkButton,
+  PreserveData,
+  URLData,
+} from '@utrecht/component-library-react';
 import { IconArrowLeft, IconPencil } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
@@ -74,14 +79,14 @@ export default function home() {
                 <span id={buttonLabel1Id}>Aanpassen</span>
               </Link>
             </UtrechtButtonGroup>
-            <UtrechtDataList>
-              <UtrechtDataListItem>
-                <UtrechtDataListKey>Uw vraag</UtrechtDataListKey>
-                <UtrechtDataListValue>
+            <DataList>
+              <DataListItem>
+                <DataListKey>Uw vraag</DataListKey>
+                <DataListValue>
                   <UtrechtMultilineData>{storedData?.message}</UtrechtMultilineData>
-                </UtrechtDataListValue>
-              </UtrechtDataListItem>
-            </UtrechtDataList>
+                </DataListValue>
+              </DataListItem>
+            </DataList>
             <UtrechtHeading3 id={dataHeading2Id}>Uw gegevens</UtrechtHeading3>
             <UtrechtButtonGroup>
               <Link href="./stap2" aria-labelledby={[buttonLabel2Id, dataHeading2Id].join(' ')}>
@@ -89,53 +94,53 @@ export default function home() {
                 <span id={buttonLabel2Id}>Aanpassen</span>
               </Link>
             </UtrechtButtonGroup>
-            <UtrechtDataList className="voorbeeld-datalist-style">
-              <UtrechtDataListItem>
-                <UtrechtDataListKey>Naam</UtrechtDataListKey>
-                <UtrechtDataListValue>
+            <DataList className="voorbeeld-datalist-style">
+              <DataListItem>
+                <DataListKey>Naam</DataListKey>
+                <DataListValue>
                   <PreserveData>{storedData?.name}</PreserveData>
-                </UtrechtDataListValue>
-              </UtrechtDataListItem>
-              <UtrechtDataListItem>
-                <UtrechtDataListKey>Straat</UtrechtDataListKey>
-                <UtrechtDataListValue>
+                </DataListValue>
+              </DataListItem>
+              <DataListItem>
+                <DataListKey>Straat</DataListKey>
+                <DataListValue>
                   <PreserveData>{storedData?.street}</PreserveData>
-                </UtrechtDataListValue>
-              </UtrechtDataListItem>
-              <UtrechtDataListItem>
-                <UtrechtDataListKey>Huisnummer</UtrechtDataListKey>
-                <UtrechtDataListValue>
+                </DataListValue>
+              </DataListItem>
+              <DataListItem>
+                <DataListKey>Huisnummer</DataListKey>
+                <DataListValue>
                   <PreserveData>
                     {storedData?.houseNumber}
                     {storedData?.houseNumberSuffix}
                   </PreserveData>
-                </UtrechtDataListValue>
-              </UtrechtDataListItem>
-              <UtrechtDataListItem>
-                <UtrechtDataListKey>Postcode</UtrechtDataListKey>
-                <UtrechtDataListValue>
+                </DataListValue>
+              </DataListItem>
+              <DataListItem>
+                <DataListKey>Postcode</DataListKey>
+                <DataListValue>
                   <PreserveData>{storedData?.postalCode}</PreserveData>
-                </UtrechtDataListValue>
-              </UtrechtDataListItem>
-              <UtrechtDataListItem>
-                <UtrechtDataListKey>Woonplaats</UtrechtDataListKey>
-                <UtrechtDataListValue>
+                </DataListValue>
+              </DataListItem>
+              <DataListItem>
+                <DataListKey>Woonplaats</DataListKey>
+                <DataListValue>
                   <PreserveData>{storedData?.homeTown}</PreserveData>
-                </UtrechtDataListValue>
-              </UtrechtDataListItem>
-              <UtrechtDataListItem>
-                <UtrechtDataListKey>E-mailadres</UtrechtDataListKey>
-                <UtrechtDataListValue>
+                </DataListValue>
+              </DataListItem>
+              <DataListItem>
+                <DataListKey>E-mailadres</DataListKey>
+                <DataListValue>
                   <URLData>{storedData?.email}</URLData>
-                </UtrechtDataListValue>
-              </UtrechtDataListItem>
-              <UtrechtDataListItem>
-                <UtrechtDataListKey>Telefoonnummer</UtrechtDataListKey>
-                <UtrechtDataListValue>
+                </DataListValue>
+              </DataListItem>
+              <DataListItem>
+                <DataListKey>Telefoonnummer</DataListKey>
+                <DataListValue>
                   <PreserveData>{storedData?.phone}</PreserveData>
-                </UtrechtDataListValue>
-              </UtrechtDataListItem>
-            </UtrechtDataList>
+                </DataListValue>
+              </DataListItem>
+            </DataList>
             <UtrechtButtonGroup direction="column">
               <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
                 Volgende stap
