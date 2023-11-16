@@ -4,8 +4,6 @@ import {
   UtrechtArticle,
   UtrechtButton,
   UtrechtButtonGroup,
-  UtrechtFormFieldErrorMessage,
-  UtrechtFormFieldTextarea,
   UtrechtHeading1,
   UtrechtHeading2,
   UtrechtHeadingGroup,
@@ -16,16 +14,7 @@ import {
   UtrechtParagraph,
   UtrechtPreHeading,
 } from '@utrecht/web-component-library-react';
-import {
-  FormLabel,
-  UnorderedList,
-  UnorderedListItem,
-  LinkButton,
-  FormField,
-  FormFieldDescription,
-  Textbox,
-} from '@utrecht/component-library-react';
-import { TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
+import { UnorderedList, UnorderedListItem, LinkButton } from '@utrecht/component-library-react';
 import { useForm } from 'react-hook-form';
 import { messageValidation } from '@/utils/validation';
 import { IconArrowLeft } from '@tabler/icons-react';
@@ -36,6 +25,7 @@ import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv
 import { useEffect } from 'react';
 import { OptionalValidationAlert, useAlertScroll } from '@/components/OptionalValidationAlert';
 import { FormFieldFile } from '@/components/FormFieldFile';
+import { FormFieldTextarea } from '@/components/FormFieldTextarea';
 
 export default function home() {
   const [storedData, _, patchStoredData, removeStoredData] = useSessionState<ContactFormSessionData>(FORM_SESSION_KEY, {
@@ -91,20 +81,14 @@ export default function home() {
               <UtrechtPreHeading>{stepProgressLabel}</UtrechtPreHeading>
             </UtrechtHeadingGroup>
             <OptionalValidationAlert errors={errors} ref={alertRef} />
-            <UtrechtFormFieldTextarea
+            <FormFieldTextarea
               {...messageField}
+              className="message-textarea"
               id={`field-${messageField.name}`}
               label="Stel uw vraag"
               invalid={!!errors[messageField.name]}
-              style={{
-                '--_utrecht-textarea-rows': '10',
-                '--utrecht-textarea-min-block-size': 'calc(var(--_utrecht-textarea-rows, 2) * 1em)',
-              }}
-            >
-              <UtrechtFormFieldErrorMessage slot="error-message">
-                {String(errors[messageField.name]?.message)}
-              </UtrechtFormFieldErrorMessage>
-            </UtrechtFormFieldTextarea>
+              errorMessage={String(errors[messageField.name]?.message)}
+            ></FormFieldTextarea>
 
             <FormFieldFile
               id="file-field"
