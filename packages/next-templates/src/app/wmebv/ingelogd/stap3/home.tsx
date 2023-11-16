@@ -117,7 +117,7 @@ export default function home() {
             </UtrechtDataList>
             <UtrechtButtonGroup direction="column">
               <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
-                Volgende stap
+                Versturen
               </UtrechtButton>
               <UtrechtLink className="voorbeeld-button-link" href="/wmebv">
                 Opslaan en later verder
