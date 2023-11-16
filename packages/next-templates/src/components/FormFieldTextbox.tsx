@@ -11,6 +11,7 @@ import clsx from 'clsx';
 import { ForwardedRef, ReactNode, forwardRef, useId } from 'react';
 
 export interface FormFieldTextboxProps extends FormFieldProps {
+  name?: string;
   invalid?: boolean;
   disabled?: boolean;
   label: ReactNode;
@@ -36,6 +37,7 @@ export interface FormFieldTextboxProps extends FormFieldProps {
 export const FormFieldTextbox = forwardRef(
   (
     {
+      name,
       invalid,
       disabled,
       label,
@@ -80,6 +82,7 @@ export const FormFieldTextbox = forwardRef(
           <Textbox
             ref={ref}
             id={inputId}
+            name={name}
             className="utrecht-form-field__input"
             type={(type as TextboxTypes) || 'text'}
             autoComplete={autoComplete}
