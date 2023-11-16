@@ -33,7 +33,7 @@ import '@/app/styling/css/wmebv.css';
 import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
-import { OptionalValidationAlert } from '@/components/OptionalValidationAlert';
+import { OptionalValidationAlert, useAlertScroll } from '@/components/OptionalValidationAlert';
 import { useRouter } from 'next/navigation';
 
 export default function home() {
@@ -84,6 +84,8 @@ export default function home() {
     event.target.submit();
   };
 
+  const { alertRef, onInvalid } = useAlertScroll();
+
   const router = useRouter();
 
   const onClickPrev = () => {
@@ -107,7 +109,7 @@ export default function home() {
       <ExampleHeaderFunnelWmebv userURL={userdata.userURL} username={userdata.username} />
       <UtrechtPageContent>
         <UtrechtArticle id="main">
-          <form method="post" action="/api/wmebv/signed-in/step2" onSubmit={handleSubmit(onSubmit)}>
+          <form method="post" action="/api/wmebv/signed-in/step2" onSubmit={handleSubmit(onSubmit, onInvalid)}>
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
               <LinkButton
@@ -134,7 +136,7 @@ export default function home() {
               Om u zo goed mogelijk te kunnen helpen, ontvangen we graag uw contactgegevens. Deze gegevens worden niet
               met anderen gedeeld.
             </UtrechtParagraph>
-            <OptionalValidationAlert errors={errors} />
+            <OptionalValidationAlert id="form-errors" errors={errors} ref={alertRef} />
             <UtrechtFormFieldTextbox
               {...nameField}
               autoComplete="name"
