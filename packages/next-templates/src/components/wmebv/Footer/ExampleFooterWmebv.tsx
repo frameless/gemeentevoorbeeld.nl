@@ -5,6 +5,7 @@ import { Heading2, Heading5, PageFooter, Paragraph, UnorderedListItem } from '@u
 import React, { HTMLAttributes } from 'react';
 import '../../ExampleFooter/footer.css';
 import { UtrechtHeading2, UtrechtLink, UtrechtParagraph, UtrechtUrlData } from '@utrecht/web-component-library-react';
+import { Address } from '@/components/Address';
 
 interface ExampleFooterWmebvProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleFooterWmebv = ({ ...props }: ExampleFooterWmebvProps) => (
@@ -16,14 +17,14 @@ export const ExampleFooterWmebv = ({ ...props }: ExampleFooterWmebvProps) => (
         </div>
         <div className="voorbeeld-footer-block utrecht-link-list__item">
           <UtrechtHeading2>Contact</UtrechtHeading2>
-          <UtrechtParagraph>
+          <Address>
             Bel <UtrechtLink href="tel:453453">453 453</UtrechtLink> (maandag tot en met vrijdag van 09.00 tot 17.00
             uur) of stuur een e-mail naar{' '}
             <UtrechtLink href="mailto:vragen@gemeentevoorbeeld.nl">
               <UtrechtUrlData>vragen@gemeentevoorbeeld.nl</UtrechtUrlData>
             </UtrechtLink>
             {'.'}
-          </UtrechtParagraph>
+          </Address>
         </div>
         <div className="voorbeeld-footer-block">
           <NavigationList>
