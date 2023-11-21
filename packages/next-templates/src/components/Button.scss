@@ -1,0 +1,5 @@
+.utrecht-button--nav {
+  /* TODO: remove `!important` when import order is fixed */
+  /* stylelint-disable-next-line declaration-no-important */
+  cursor: var(--utrecht-action-navigate-cursor, pointer) !important;
+}
