@@ -2,7 +2,6 @@ import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFun
 import RootLayout from '@/components/RootLayout';
 import {
   Article,
-  Button,
   ButtonGroup,
   Heading1,
   HeadingGroup,
@@ -10,6 +9,7 @@ import {
   Paragraph,
   PreHeading,
 } from '@utrecht/component-library-react/dist/css-module';
+import { Button } from '@/components/Button';
 import { Page, PageContent } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtUrlData } from '@utrecht/web-component-library-react';
 
@@ -44,6 +44,7 @@ export default function Custom404() {
                   onClick={() => {
                     history.back();
                   }}
+                  rel="prev"
                 >
                   Terug naar de vorige pagina
                 </Button>
