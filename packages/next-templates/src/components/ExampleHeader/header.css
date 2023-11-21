@@ -16,6 +16,10 @@
   max-inline-size: var(--example-page-header-content-max-inline-size);
 }
 
+.denhaag-theme .example-page-header__content {
+  padding-inline: 80px;
+}
+
 .example--logo {
   text-align: center;
 }
