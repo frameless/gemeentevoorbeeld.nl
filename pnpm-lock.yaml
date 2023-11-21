@@ -15,9 +15,6 @@ importers:
         specifier: 14.1.1
         version: 14.1.1
     devDependencies:
-      '@gemeente-denhaag/design-tokens-components':
-        specifier: 0.2.3-alpha.357
-        version: 0.2.3-alpha.357
       '@lerna-lite/cli':
         specifier: 2.5.0
         version: 2.5.0(@lerna-lite/run@2.5.0)
