@@ -272,6 +272,9 @@ importers:
       '@fontsource/source-serif-pro':
         specifier: 5.0.8
         version: 5.0.8
+      '@gemeente-denhaag/design-tokens-components':
+        specifier: 0.2.3-alpha.357
+        version: 0.2.3-alpha.357
       '@next/eslint-plugin-next':
         specifier: 13.4.19
         version: 13.4.19
