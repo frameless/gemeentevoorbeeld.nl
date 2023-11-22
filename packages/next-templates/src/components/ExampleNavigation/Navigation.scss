@@ -100,6 +100,10 @@
 }
 
 .denhaag-theme {
+  .utrecht-breadcrumb-nav {
+    background: var(--denhaag-color-warmgrey-1);
+  }
+
   .example-nav-bar {
     display: flex;
     justify-content: center;
