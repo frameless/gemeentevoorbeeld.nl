@@ -178,26 +178,219 @@ utrecht-alert + utrecht-heading-1 {
   --utrecht-side-navigation-margin-block-start: var(--denhaag-space-onbekenden);
 }
 
-.denhaag-theme 
-utrecht-alert 
-+ :is(
-  utrecht-heading-1,
-  utrecht-heading-2,
-  utrecht-heading-3,
-  utrecht-heading-4,
-  utrecht-heading-5,
-  utrecht-heading-6,
-  utrecht-accordion,
-  utrecht-alert,
-  utrecht-badge-list,
-  utrecht-block-quote,
-  utrecht-button,
-  utrecht-button-group,
-  utrecht-datalist,
-  utrecht-form-field,
-)
+.denhaag-theme
+  utrecht-alert
+  + :is(
+    utrecht-heading-1,
+    utrecht-heading-2,
+    utrecht-heading-3,
+    utrecht-heading-4,
+    utrecht-heading-5,
+    utrecht-heading-6,
+    utrecht-accordion,
+    utrecht-alert,
+    utrecht-badge-list,
+    utrecht-block-quote,
+    utrecht-button,
+    utrecht-button-group,
+    utrecht-datalist,
+    utrecht-form-field,
+    utrecht-icon-only-button,
+    utrecht-image-paragraph,
+    utrecht-image-hero,
+    utrecht-invalid-form-alert,
+    utrecht-link,
+    utrecht-ordered-list,
+    utrecht-pagination,
+    utrecht-paragraph,
+    utrecht-seperator,
+    utrecht-status-badge,
+    utrecht-status-badge-list,
+    utrecht-table,
+    utrecht-unordered-list
+  ) {
+  --utrecht-heading-1-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-2-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-3-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-4-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-5-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-6-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-alert-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-badge-list-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-block-quote-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-button-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-button-group-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-datalist-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-form-field-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-icon-only-button-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-image-paragraph-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-image-hero-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-invalid-form-alert-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-link-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-ordered-list-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-pagination-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-paragraph-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-seperator-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-status-badge-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-status-badge-list-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-table-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-unordered-list-margin-block-start: var(--denhaag-space-onbekenden);
+}
 
+.denhaag-theme
+  utrecht-breadcrumb
+  + :is(
+    utrecht-heading-1,
+    utrecht-heading-2,
+    utrecht-heading-3,
+    utrecht-heading-4,
+    utrecht-heading-5,
+    utrecht-heading-6,
+    utrecht-accordion,
+    utrecht-alert,
+    utrecht-badge-list,
+    utrecht-block-quote,
+    utrecht-button,
+    utrecht-button-group,
+    utrecht-datalist,
+    utrecht-form-field,
+    utrecht-icon-only-button,
+    utrecht-image-paragraph,
+    utrecht-image-hero,
+    utrecht-invalid-form-alert,
+    utrecht-link,
+    utrecht-ordered-list,
+    utrecht-pagination,
+    utrecht-paragraph,
+    utrecht-seperator,
+    utrecht-side-navigation,
+    utrecht-status-badge,
+    utrecht-status-badge-list,
+    utrecht-table,
+    utrecht-unordered-list
+  ) {
+  --utrecht-heading-1-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-2-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-3-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-4-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-5-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-6-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-alert-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-badge-list-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-block-quote-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-button-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-button-group-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-datalist-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-form-field-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-icon-only-button-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-image-paragraph-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-image-hero-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-invalid-form-alert-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-link-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-ordered-list-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-pagination-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-paragraph-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-seperator-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-side-navigation-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-status-badge-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-status-badge-list-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-table-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-unordered-list-margin-block-start: var(--denhaag-space-onbekenden);
+}
 
+.denhaag-theme utrecht-block-quote + utrecht-alert,
+.denhaag-theme utrecht-block-quote + utrecht-seperator {
+  --utrecht-alert-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-seperator-margin-block-start: var(--denhaag-space-onbekenden);
+}
+
+.denhaag-theme
+  utrecht-button
+  + :is(
+    utrecht-heading-2,
+    utrecht-heading-3,
+    utrecht-heading-4,
+    utrecht-heading-5,
+    utrecht-heading-6,
+    utrecht-alert,
+    utrecht-seperator,
+    utrecht-side-navigation
+  ) {
+  --utrecht-heading-2-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-3-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-4-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-5-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-6-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-alert-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-seperator-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-side-navigation-margin-block-start: var(--denhaag-space-onbekenden);
+}
+
+.denhaag-theme
+  utrecht-form-field
+  + :is(
+    utrecht-heading-2,
+    utrecht-heading-3,
+    utrecht-heading-4,
+    utrecht-heading-5,
+    utrecht-heading-6,
+    utrecht-alert,
+    utrecht-seperator
+  ) {
+  --utrecht-heading-2-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-3-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-4-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-5-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-6-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-alert-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-seperator-margin-block-start: var(--denhaag-space-onbekenden);
+}
+
+.denhaag-theme
+  utrecht-icon-only-button
+  + :is(
+    utrecht-heading-2,
+    utrecht-heading-3,
+    utrecht-heading-4,
+    utrecht-heading-5,
+    utrecht-heading-6,
+    utrecht-alert,
+    utrecht-seperator,
+    utrecht-side-navigation
+  ) {
+  --utrecht-heading-2-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-3-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-4-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-5-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-heading-6-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-alert-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-seperator-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-side-navigation-margin-block-start: var(--denhaag-space-onbekenden);
+}
+
+.denhaag-theme utrecht-image-paragraph + utrecht-alert,
+.denhaag-theme utrecht-image-paragraph + utrecht-seperator {
+  --utrecht-alert-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-seperator-margin-block-start: var(--denhaag-space-onbekenden);
+}
+
+.denhaag-theme utrecht-image-hero + utrecht-alert,
+.denhaag-theme utrecht-image-hero + utrecht-pagination,
+.denhaag-theme utrecht-image-hero + utrecht-seperator {
+  --utrecht-alert-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-pagination-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-seperator-margin-block-start: var(--denhaag-space-onbekenden);
+}
+
+.denhaag-theme utrecht-invalid-form-alert + utrecht-alert,
+.denhaag-theme utrecht-invalid-form-alert + utrecht-seperator,
+.denhaag-theme utrecht-invalid-form-alert + utrecht-side-navigation {
+  --utrecht-alert-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-side-navigation-margin-block-start: var(--denhaag-space-onbekenden);
+  --utrecht-seperator-margin-block-start: var(--denhaag-space-onbekenden);
+}
 
 /* kennissen selector */
 .denhaag-theme utrecht-heading-1 + utrecht-heading-2,
@@ -215,10 +408,235 @@ utrecht-alert
 
 .denhaag-theme utrecht-heading + utrecht-badge-list,
 .denhaag-theme utrecht-heading + utrecht-block-quote,
-.denhaag-theme utrecht-heading + utrecht-invalid-from-alert {
+.denhaag-theme utrecht-heading + utrecht-invalid-form-alert {
   --utrecht-badge-list-margin-block-start: var(--denhaag-space-kennissen);
   --utrecht-block-quote-margin-block-start: var(--denhaag-space-kennissen);
-  --utrecht-invalid-from-alert-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-invalid-form-alert-margin-block-start: var(--denhaag-space-kennissen);
+}
+
+.denhaag-theme utrecht-badge-list + utrecht-heading,
+.denhaag-theme utrecht-badge-list + utrecht-block-quote,
+.denhaag-theme utrecht-badge-list + utrecht-invalid-form-alert {
+  --utrecht-badge-list-margin-block-start: var(--denhaag-space-kennissen);
+}
+
+.denhaag-theme
+  utrecht-block-quote
+  + :is(
+    utrecht-heading-2,
+    utrecht-heading-3,
+    utrecht-heading-4,
+    utrecht-heading-5,
+    utrecht-heading-6,
+    utrecht-accordion,
+    utrecht-badge-list,
+    utrecht-block-quote,
+    utrecht-button,
+    utrecht-button-group,
+    utrecht-data-list,
+    utrecht-form-field,
+    utrecht-icon-only-button,
+    utrecht-image-paragraph,
+    utrecht-invalid-form-alert,
+    utrecht-link,
+    utrecht-ordered-list,
+    utrecht-pagination,
+    utrecht-paragraph,
+    utrecht-status-badge-list,
+    utrecht-table,
+    utrecht-unordered-list
+  ) {
+  --utrecht-heading-2-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-3-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-4-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-5-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-6-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-badge-list-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-block-quote-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-button-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-button-group-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-datalist-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-form-field-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-icon-only-button-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-image-paragraph-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-invalid-form-alert-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-link-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-ordered-list-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-pagination-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-paragraph-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-status-badge-list-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-table-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-unordered-list-margin-block-start: var(--denhaag-space-kennissen);
+}
+
+.denhaag-theme utrecht-button + utrecht-accordion,
+.denhaag-theme utrecht-button + utrecht-badge-list,
+.denhaag-theme utrecht-button + utrecht-block-quote,
+.denhaag-theme utrecht-button + utrecht-image-paragraph,
+.denhaag-theme utrecht-button + utrecht-invalid-form-alert {
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-badge-list-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-block-qoute-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-image-paragraph-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-invalid-form-alert-margin-block-start: var(--denhaag-space-kennissen);
+}
+
+.denhaag-theme utrecht-data-list + utrecht-heading-2,
+.denhaag-theme utrecht-data-list + utrecht-heading-3,
+.denhaag-theme utrecht-data-list + utrecht-heading-4,
+.denhaag-theme utrecht-data-list + utrecht-heading-5,
+.denhaag-theme utrecht-data-list + utrecht-heading-6,
+.denhaag-theme utrecht-data-list + utrecht-block-quote {
+  --utrecht-heading-2-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-3-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-4-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-5-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-6-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-block-qoute-margin-block-start: var(--denhaag-space-kennissen);
+}
+
+.denhaag-theme utrecht-form-field + utrecht-accordion,
+.denhaag-theme utrecht-form-field + utrecht-block-quote,
+.denhaag-theme utrecht-form-field + utrecht-button-group,
+.denhaag-theme utrecht-form-field + utrecht-invalid-form-alert {
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-block-qoute-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-button-group-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-invalid-form-alert-margin-block-start: var(--denhaag-space-kennissen);
+}
+
+.denhaag-theme
+  utrecht-icon-only-button
+  + :is(
+    utrecht-accordion,
+    utrect-badge-list,
+    utrecht-block-quote,
+    utrecht-image-paragraph,
+    utrecht-invalid-form-alert
+  ) {
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-badge-list-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-block-quote-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-image-paragraph-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-invalid-form-alert-margin-block-start: var(--denhaag-space-kennissen);
+}
+
+.denhaag-theme
+  utrecht-image-paragraph
+  + :is(
+    utrecht-heading-2,
+    utrecht-heading-3,
+    utrecht-heading-4,
+    utrecht-heading-5,
+    utrecht-heading-6,
+    utrecht-block-quote,
+    utrecht-invalid-form-alert
+  ) {
+  --utrecht-heading-2-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-3-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-4-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-5-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-6-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-block-qoute-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-invalid-form-alert-margin-block-start: var(--denhaag-space-kennissen);
+}
+
+.denhaag-theme
+  utrecht-image-hero
+  + :is(
+    utrecht-heading-2,
+    utrecht-accordion,
+    utrecht-badge-list,
+    utrecht-block-quote,
+    utrecht-button,
+    utrecht-button-group,
+    utrecht-data-list,
+    utrecht-form-field,
+    utrecht-icon-only-button,
+    utrecht-image-paragraph,
+    utrecht-image-hero,
+    utrecht-invalid-form-alert,
+    utrecht-link,
+    utrecht-ordered-list,
+    utrecht-paragraph,
+    utrecht-skip-link,
+    utrecht-status-badge,
+    utrecht-status-badge-list,
+    utrecht-table,
+    utrecht-textarea,
+    utrecht-text-input,
+    utrecht-unordered-list
+  ) {
+  --utrecht-heading-2-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-badge-list-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-block-quote-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-button-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-button-group-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-datalist-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-form-field-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-icon-only-button-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-image-paragraph-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-image-hero-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-invalid-form-alert-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-link-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-ordered-list-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-paragraph-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-status-badge-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-status-badge-list-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-table-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-textarea-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-text-input-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-unordered-list-margin-block-start: var(--denhaag-space-kennissen);
+}
+
+.denhaag-theme
+  utrecht-invalid-form-alert
+  + :is(
+    utrecht-heading-2,
+    utrecht-heading-3,
+    utrecht-heading-4,
+    utrecht-heading-5,
+    utrecht-heading-6,
+    utrecht-accordion,
+    utrecht-badge-list,
+    utrecht-block-quote,
+    utrecht-button,
+    utrecht-button-group,
+    utrecht-data-list,
+    utrecht-form-field,
+    utrecht-icon-only-button,
+    utrecht-image-paragraph,
+    utrecht-link,
+    utrecht-ordered-list,
+    utrecht-pagination,
+    utrecht-paragraph,
+    utrecht-status-badge-list,
+    utrecht-table,
+    utrecht-unordered-list
+  ) {
+  --utrecht-heading-2-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-3-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-4-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-5-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-heading-6-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-badge-list-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-block-quote-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-button-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-button-group-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-datalist-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-form-field-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-icon-only-button-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-image-paragraph-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-link-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-ordered-list-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-pagination-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-paragraph-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-status-badge-list-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-table-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-unordered-list-margin-block-start: var(--denhaag-space-kennissen);
 }
 
 /* vrienden selector */
@@ -252,9 +670,223 @@ utrecht-alert
   --utrecht-table-margin-block-start: var(--denhaag-space-vrienden);
 }
 
+.denhaag-theme utrecht-badge-list + utrecht-accordion,
+.denhaag-theme utrecht-badge-list + utrecht-button,
+.denhaag-theme utrecht-badge-list + utrecht-button-group,
+.denhaag-theme utrecht-badge-list + utrecht-data-list,
+.denhaag-theme utrecht-badge-list + utrecht-form-field,
+.denhaag-theme utrecht-badge-list + utrecht-icon-only-button,
+.denhaag-theme utrecht-badge-list + utrecht-image-paragraph,
+.denhaag-theme utrecht-badge-list + utrecht-link,
+.denhaag-theme utrecht-badge-list + utrecht-ordered-list,
+.denhaag-theme utrecht-badge-list + utrecht-paragraph,
+.denhaag-theme utrecht-badge-list + utrecht-status-badge-list,
+.denhaag-theme utrecht-badge-list + utrecht-table,
+.denhaag-theme utrecht-badge-list + utrecht-unordered-list {
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-button-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-button-group-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-data-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-form-field-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-icon-only-button-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-image-paragraph-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-link-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-ordered-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-paragraph-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-status-badge-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-table-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-unordered-list-margin-block-start: var(--denhaag-space-vrienden);
+}
+
+.denhaag-theme
+  utrecht-button
+  + :is(
+    utrecht-button,
+    utrecht-button-group,
+    utrecht-data-list,
+    utrecht-icon-only-button,
+    utrecht-link,
+    utrecht-ordered-list,
+    utrecht-paragraph,
+    utrecht-table,
+    utrecht-unordered-list
+  ) {
+  --utrecht-button-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-button-group-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-data-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-icon-only-button-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-link-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-ordered-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-paragraph-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-table-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-unordered-list-margin-block-start: var(--denhaag-space-vrienden);
+}
+
+.denhaag-theme
+  :is(utrecht-heading-2, utrecht-heading-3, utrecht-heading-4, utrecht-heading-5, utrecht-heading-6, utrecht-badge-list)
+  + utrecht-accordion {
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-vrienden);
+}
+
+.denhaag-theme
+  utrecht-form-field
+  + :is(
+    utrecht-badge-list,
+    utrecht-button,
+    utrecht-data-list,
+    utrecht-form-field,
+    utrecht-icon-only-button,
+    utrecht-link,
+    utrecht-ordered-list,
+    utrecht-paragraph,
+    utrecht-table,
+    utrecht-undordered-list
+  ) {
+  --utrecht-badge-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-button-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-data-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-form-field-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-icon-only-button-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-link-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-ordered-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-paragraph-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-table-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-unordered-list-margin-block-start: var(--denhaag-space-vrienden);
+}
+
+.denhaag-theme
+  utrecht-icon-only-button
+  + :is(
+    utrecht-button,
+    utrecht-button-group,
+    utrecht-data-list,
+    utrecht-icon-only-button,
+    utrecht-link,
+    utrecht-ordered-list,
+    utrecht-paragraph,
+    utrecht-table,
+    utrecht-unordered-list
+  ) {
+  --utrecht-button-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-button-group-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-data-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-icon-only-button-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-link-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-ordered-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-paragraph-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-table-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-unordered-list-margin-block-start: var(--denhaag-space-vrienden);
+}
+
+.denhaag-theme
+  utrecht-image-paragraph
+  + :is(
+    utrecht-accordion,
+    utrecht-badge-list,
+    utrecht-button,
+    utrecht-button-group,
+    utrecht-data-list,
+    utrecht-form-field,
+    utrecht-icon-only-button,
+    utrecht-image-paragraph,
+    utrecht-link,
+    utrecht-ordered-list,
+    utrecht-pagination,
+    utrecht-paragraph,
+    utrecht-status-badge-list,
+    utrecht-table,
+    utrecht-unordered-list
+  ) {
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-badge-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-button-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-button-group-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-data-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-form-field-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-icon-only-button-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-image-paragraph-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-link-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-ordered-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-pagination-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-paragraph-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-status-badge-list-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-table-margin-block-start: var(--denhaag-space-vrienden);
+  --utrecht-unordered-list-margin-block-start: var(--denhaag-space-vrienden);
+}
+
 /* besties selector */
 .denhaag-theme utrecht-accordion + utrecht-accordion {
-  --utrecht-accordion-margin-block-start: var(--denhaag-space-kennissen);
+  --utrecht-accordion-margin-block-start: var(--denhaag-space-besties);
+}
+
+.denhaag-theme utrecht-data-list-item + utrecht-data-list-item {
+  --utrecht-data-list-item-margin-block-start: var(--denhaag-space-besties);
+}
+
+.denhaag-theme utrecht-form-field-checkbox-option + utrecht-form-field-checkbox-option,
+.denhaag-theme utrecht-form-field-checkbox-option + utrecht-form-field-description,
+.denhaag-theme utrecht-form-field-checkbox-option + utrecht-form-field-error-message {
+  --utrecht-form-field-checkbox-option-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-description-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-error-message-margin-block-start: var(--denhaag-space-besties);
+}
+
+.denhaag-theme utrecht-form-field-description + utrecht-form-field-checkbox-option,
+.denhaag-theme utrecht-form-field-description + utrecht-form-field-radion-option,
+.denhaag-theme utrecht-form-field-description + utrecht-form-field-error-message,
+.denhaag-theme utrecht-form-field-description + utrecht-form-field-radio-group,
+.denhaag-theme utrecht-form-field-description + utrecht-form-field-select,
+.denhaag-theme utrecht-form-field-description + utrecht-form-field-textarea,
+.denhaag-theme utrecht-form-field-description + utrecht-form-field-text-input {
+  --utrecht-form-field-checkbox-option-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-radio-option-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-error-message-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-radio-group-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-select-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-textarea-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-text-input-margin-block-start: var(--denhaag-space-besties);
+}
+
+.denhaag-theme utrecht-form-field-error-message + utrecht-form-field-checkbox-option,
+.denhaag-theme utrecht-form-field-error-message + utrecht-form-field-description,
+.denhaag-theme utrecht-form-field-error-message + utrecht-form-field-error-message,
+.denhaag-theme utrecht-form-field-error-message + utrecht-form-field-radio-option,
+.denhaag-theme utrecht-form-field-error-message + utrecht-form-field-radio-group,
+.denhaag-theme utrecht-form-field-error-message + utrecht-form-field-select,
+.denhaag-theme utrecht-form-field-error-message + utrecht-form-field-textarea,
+.denhaag-theme utrecht-form-field-error-message + utrecht-form-field-text-input {
+  --utrecht-form-field-checkbox-option-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-description-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-error-message-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-radio-option-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-radio-group-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-select-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-textarea-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-text-input-margin-block-start: var(--denhaag-space-besties);
+}
+
+.denhaag-theme utrecht-form-field-label + utrecht-form-field-checkbox-option,
+.denhaag-theme utrecht-form-field-label + utrecht-form-field-error-message,
+.denhaag-theme utrecht-form-field-label + utrecht-form-field-radio-option,
+.denhaag-theme utrecht-form-field-label + utrecht-form-field-radio-group,
+.denhaag-theme utrecht-form-field-label + utrecht-form-field-select,
+.denhaag-theme utrecht-form-field-label + utrecht-form-field-textarea,
+.denhaag-theme utrecht-form-field-label + utrecht-form-field-text-input {
+  --utrecht-form-field-checkbox-option-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-error-message-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-radio-option-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-radio-group-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-select-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-textarea-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-text-input-margin-block-start: var(--denhaag-space-besties);
+}
+
+.denhaag-theme utrecht-form-field-radio-option + utrecht-form-field-error-message,
+.denhaag-theme utrecht-form-field-radio-option + utrecht-form-field-radio-option,
+.denhaag-theme utrecht-form-field-radio-option + utrecht-form-field-description {
+  --utrecht-form-field-radio-option-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-error-message-margin-block-start: var(--denhaag-space-besties);
+  --utrecht-form-field-description-margin-block-start: var(--denhaag-space-besties);
 }
 
 utrecht-alert
