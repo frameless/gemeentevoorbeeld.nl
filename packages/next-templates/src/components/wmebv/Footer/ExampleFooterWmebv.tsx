@@ -16,14 +16,13 @@ export const ExampleFooterWmebv = ({ ...props }: ExampleFooterWmebvProps) => (
           <Logo className="example--footer-logo" />
         </div>
         <div className="voorbeeld-footer-block utrecht-link-list__item">
-          <UtrechtHeading2>Contact</UtrechtHeading2>
+          <UtrechtHeading2 className="example-footer__heading-3">Contact</UtrechtHeading2>
           <Address>
             Bel <UtrechtLink href="tel:453453">453 453</UtrechtLink> (maandag tot en met vrijdag van 09.00 tot 17.00
             uur) of stuur een e-mail naar{' '}
             <UtrechtLink href="mailto:vragen@gemeentevoorbeeld.nl">
               <UtrechtUrlData>vragen@gemeentevoorbeeld.nl</UtrechtUrlData>
             </UtrechtLink>
-            {'.'}
           </Address>
         </div>
         <div className="voorbeeld-footer-block">
