@@ -10,18 +10,7 @@
   column-count: 1;
 }
 
-.example--footer-heading5 {
-  display: flex;
-  justify-content: column;
-}
-
-.utrecht-link-list-focus__item {
-  --utrecht-paragraph-color: white;
-}
-
-.utrecht-link-list__item {
-  --utrecht-paragraph-color: white;
-
+.denhaag-theme .utrecht-link-list__item {
   line-height: 2em;
 }
 
@@ -45,6 +34,15 @@
   margin-inline-start: 2.5em;
 }
 
-.voorbeeld-footer-block {
+.denhaag-theme .voorbeeld-footer-block {
   max-width: 50ch;
+  --utrecht-heading-2-color: var(--denhaag-color-ocher-3);
+}
+
+.denhaag-theme .example--footer-logo {
+  color: var(--denhaag-color-white);
+}
+
+.denhaag-theme .utrecht-page-footer__content {
+  --utrecht-focus-outline-color: var(--denhaag-color-ocher-3);
 }

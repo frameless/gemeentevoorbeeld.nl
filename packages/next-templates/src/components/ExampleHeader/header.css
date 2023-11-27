@@ -16,6 +16,10 @@
   max-inline-size: var(--example-page-header-content-max-inline-size);
 }
 
+.denhaag-theme .example-page-header__content {
+  max-inline-size: calc(670px * 1.5);
+}
+
 .example--logo {
   text-align: center;
 }
@@ -40,6 +44,11 @@
   margin-inline-end: var(--voorbeeld-space-inline-dog);
   text-decoration-skip-ink: none;
 }
+
+.denhaag-theme .example--header-links {
+  margin-inline-end: 32px;
+}
+
 .example--header-user-icon {
   margin-inline-end: var(--voorbeeld-space-inline-ant);
 }
@@ -55,6 +64,7 @@
   cursor: pointer;
   display: none;
 }
+
 .example--header-burger-menu-button:focus-visible {
   border-radius: 3px;
   box-shadow: 0 0 0 2px var(--voorbeeld-color-white);

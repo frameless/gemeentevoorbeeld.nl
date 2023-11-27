@@ -5,11 +5,6 @@
   margin-block-start: 0;
 }
 
-.voorbeeld-navigation-list__item {
+.denhaag-theme .voorbeeld-navigation-list__item {
   line-height: 2em;
-}
-
-.voorbeeld-footer-link {
-  --utrecht-link-text-decoration-color: var(--voorbeeld-color-white);
-  --utrecht-link-hover-color: var(--voorbeeld-color-white);
 }

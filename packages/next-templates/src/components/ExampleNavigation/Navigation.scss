@@ -98,3 +98,33 @@
 .example-nav-bar__item--end {
   justify-self: end;
 }
+
+.denhaag-theme {
+  .utrecht-breadcrumb-nav {
+    background: var(--denhaag-color-warmgrey-1);
+  }
+
+  .example-nav-bar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .example-nav-bar__content {
+    max-inline-size: calc(670px * 1.5);
+  }
+
+  .example-nav-bar__link-list {
+    --utrecht-link-color: var(--denhaag-color-blue-3);
+    --utrecht-link-hover-color: var(--denhaag-color-blue-4);
+    --utrecht-link-focus-color: var(--denhaag-color-blue-4);
+  }
+
+  .example-nav-bar__link {
+    max-inline-size: 30ch;
+    margin-block: 16px;
+    margin-inline: 24px;
+    --utrecht-link-text-decoration: none;
+    --utrecht-link-hover-text-decoration: underline;
+    --utrecht-link-focus-text-decoration: underline;
+  }
+}
