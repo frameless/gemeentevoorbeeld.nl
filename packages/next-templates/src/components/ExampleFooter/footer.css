@@ -10,17 +10,7 @@
   column-count: 1;
 }
 
-.example--footer-heading5 {
-  display: flex;
-  justify-content: column;
-}
-
-.utrecht-link-list-focus__item {
-  --utrecht-paragraph-color: white;
-}
-
 .denhaag-theme .utrecht-link-list__item {
-  --utrecht-paragraph-color: var(--denhaag-color-white);
   line-height: 2em;
 }
 
