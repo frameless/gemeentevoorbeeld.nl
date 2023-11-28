@@ -384,7 +384,8 @@
     --utrecht-separator-margin-block-start: var(--denhaag-space-onbekenden);
   }
 
-  :is(utrecht-paragraph, .utrecht-paragraph) + :is(utrecht-alert, utrecht-separator) {
+  :is(utrecht-paragraph, .utrecht-paragraph)
+    + :is(utrecht-alert, .utrecht-alert, utrecht-separator, .utrecht-separator) {
     --utrecht-alert-margin-block-start: var(--denhaag-space-onbekenden);
     --utrecht-separator-margin-block-start: var(--denhaag-space-onbekenden);
   }
@@ -1158,7 +1159,7 @@
   }
 
   /* vrienden selector */
-  :is(utrecht-heading-2, .utrecht-heading-2)
+  :is(utrecht-heading-2, .utrecht-heading-2, utrecht-heading-3, .utrecht-heading-3)
     + :is(
       utrecht-accordion,
       .utrecht-accordion,
