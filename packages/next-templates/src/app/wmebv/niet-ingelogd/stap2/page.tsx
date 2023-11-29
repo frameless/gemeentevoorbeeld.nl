@@ -220,7 +220,7 @@ export default function home() {
             ></FormFieldTextbox>
 
             <UtrechtButtonGroup direction="column">
-              <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
+              <UtrechtButton type="submit" appearance="primary-action-button">
                 Volgende stap
               </UtrechtButton>
               <LinkButton
