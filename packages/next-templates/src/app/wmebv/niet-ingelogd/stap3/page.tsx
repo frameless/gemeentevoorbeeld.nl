@@ -64,7 +64,7 @@ export default function home() {
           <form method="post" action="/api/wmebv/anonymous/step3">
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
-              <LinkButton inline={true} className="voorbeeld-button-link" formAction="./stap2/" onClick={onClickPrev}>
+              <LinkButton inline={true} formAction="./stap2/" onClick={onClickPrev}>
                 <UtrechtIcon>
                   <IconArrowLeft />
                 </UtrechtIcon>

@@ -110,7 +110,6 @@ export default function home() {
             <UtrechtButtonGroup>
               <LinkButton
                 inline={true}
-                className="voorbeeld-button-link"
                 formAction="./stap1/"
                 onClick={onClickPrev}
                 onSubmit={(evt) => {
