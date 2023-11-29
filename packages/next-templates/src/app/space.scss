@@ -30,15 +30,13 @@
     --utrecht-heading-1-margin-block-end: 0;
   }
 
-  /*
   utrecht-heading + utrecht-pagination,
-  utrecht-heading + utrecht-separator + utrecht-accordion,
-  utrecht-heading-2 + utrecht-side-navigation + utrecht-accordion {
+  utrecht-heading + :is(utrecht-separator, utrecht-accordion),
+  utrecht-heading-2 + :is(utrecht-side-navigation, utrecht-accordion) {
     --utrecht-pagination-margin-block-start: var(--denhaag-space-onbekenden);
     --utrecht-separator-margin-block-start: var(--denhaag-space-onbekenden);
     --utrecht-side-navigation-margin-block-start: var(--denhaag-space-onbekenden);
   }
-  */
 
   :is(utrecht-alert, .utrecht-alert)
     + :is(
