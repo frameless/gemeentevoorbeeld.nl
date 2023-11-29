@@ -1506,6 +1506,8 @@
       .utrecht-accordion,
       utrecht-badge-list,
       .utrecht-badge-list,
+      utrecht-button,
+      .utrecht-button,
       utrecht-button-group,
       .utrecht-button-group,
       utrecht-data-list,
@@ -1533,6 +1535,7 @@
     ) {
     --utrecht-accordion-margin-block-start: var(--denhaag-space-vrienden);
     --utrecht-badge-list-margin-block-start: var(--denhaag-space-vrienden);
+    --utrecht-button-margin-block-start: var(--denhaag-space-vrienden);
     --utrecht-button-group-margin-block-start: var(--denhaag-space-vrienden);
     --utrecht-data-list-margin-block-start: var(--denhaag-space-vrienden);
     --utrecht-form-field-margin-block-start: var(--denhaag-space-vrienden);
