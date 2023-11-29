@@ -30,9 +30,11 @@
     --utrecht-heading-1-margin-block-end: 0;
   }
 
-  utrecht-heading + utrecht-pagination,
-  utrecht-heading + :is(utrecht-separator, utrecht-accordion),
-  utrecht-heading-2 + :is(utrecht-side-navigation, utrecht-accordion) {
+  utrecht-heading,
+  .utrecht-heading + utrecht-pagination,
+  .utrecht-pagination + :is(utrecht-separator, .utrecht-separator, utrecht-accordion, .utrecht-accordion),
+  utrecht-heading-2,
+  .utrecht-heading-2 + :is(utrecht-side-navigation, .utrecht-side-navigation, utrecht-accordion, .utrecht-accordion) {
     --utrecht-pagination-margin-block-start: var(--denhaag-space-onbekenden);
     --utrecht-separator-margin-block-start: var(--denhaag-space-onbekenden);
     --utrecht-side-navigation-margin-block-start: var(--denhaag-space-onbekenden);
