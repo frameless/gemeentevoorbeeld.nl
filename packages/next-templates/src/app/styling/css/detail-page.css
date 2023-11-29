@@ -13,15 +13,6 @@ https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliothee
   --utrecht-ordered-list-font-size: var(--voorbeeld-typography-font-size-sm);
 }
 
-.voorbeeld-button-link-space {
-  margin-block-start: var(--voorbeeld-space-block-rabbit);
-}
-
-.voorbeeld-heading-3-space {
-  --utrecht-heading-3-margin-block-start: var(--voorbeeld-space-block-rabbit);
-  --utrecht-heading-3-margin-block-end: var(--voorbeeld-space-block-mouse);
-}
-
 .utrecht-spotlight-section {
   --utrecht-spotlight-section-padding-inline-end: var(--voorbeeld-space-inline-rabbit);
   --utrecht-spotlight-section-padding-inline-start: var(--voorbeeld-space-inline-rabbit);
