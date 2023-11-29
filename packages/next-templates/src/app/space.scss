@@ -1177,6 +1177,8 @@
       .utrecht-link,
       utrecht-ordered-list,
       .utrecht-ordered-list,
+      utrecht-paragraph,
+      .utrecht-paragraph,
       utrecht-status-badge,
       .utrecht-status-badge,
       utrecht-status-badge-list,
@@ -1504,8 +1506,6 @@
       .utrecht-accordion,
       utrecht-badge-list,
       .utrecht-badge-list,
-      utrecht-button,
-      .utrecht-button,
       utrecht-button-group,
       .utrecht-button-group,
       utrecht-data-list,
@@ -1533,7 +1533,6 @@
     ) {
     --utrecht-accordion-margin-block-start: var(--denhaag-space-vrienden);
     --utrecht-badge-list-margin-block-start: var(--denhaag-space-vrienden);
-    --utrecht-button-margin-block-start: var(--denhaag-space-vrienden);
     --utrecht-button-group-margin-block-start: var(--denhaag-space-vrienden);
     --utrecht-data-list-margin-block-start: var(--denhaag-space-vrienden);
     --utrecht-form-field-margin-block-start: var(--denhaag-space-vrienden);
@@ -1690,6 +1689,10 @@
   }
 
   /* besties selector */
+  :is(utrecht-unordered-list, .utrecht-unorderd-list) + :is(utrecht-button, .utrecht-button) {
+    --utrecht-button-margin-block-start: var(--denhaag-space-besties);
+  }
+
   :is(utrecht-accordion, .utrecht-accordion) + :is(utrecht-accordion, .utrecht-accordion) {
     --utrecht-accordion-margin-block-start: var(--denhaag-space-besties);
   }
