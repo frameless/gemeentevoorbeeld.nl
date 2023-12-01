@@ -1158,6 +1158,70 @@
     --utrecht-invalid-form-alert-margin-block-start: var(--denhaag-space-kennissen);
   }
 
+  *
+    + :is(
+      utrecht-heading-2,
+      .utrecht-heading-2,
+      utrecht-heading-3,
+      .utrecht-heading-3,
+      utrecht-heading-4,
+      .utrecht-heading-4,
+      utrecht-heading-5,
+      .utrecht-heading-5,
+      utrecht-heading-6,
+      .utrecht-heading-6,
+      utrecht-accordion,
+      .utrecht-accordion,
+      utrecht-badge-list,
+      .utrecht-badge-list,
+      utrecht-blockquote,
+      .utrecht-blockquote,
+      utrecht-button,
+      .utrecht-button,
+      utrecht-button-group,
+      .utrecht-button-group,
+      utrecht-form-field,
+      .utrecht-form-field,
+      todo-icon-only-button,
+      .todo-icon-only-button,
+      todo-image-paragraph,
+      .todo-image-paragraph,
+      utrecht-link,
+      .utrecht-link,
+      utrecht-ordered-list,
+      .utrecht-ordered-list,
+      utrecht-paragraph,
+      .utrecht-paragraph,
+      utrecht-status-badge,
+      .utrecht-status-badge,
+      utrecht-status-badge-list,
+      .utrecht-status-badge-list,
+      utrecht-table,
+      .utrecht-table
+    ) {
+    --utrecht-heading-6-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-heading-5-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-heading-4-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-heading-3-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-heading-2-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-heading-1-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-accordion-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-badge-list-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-blockquote-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-button-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-button-group-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-data-list-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-form-field-margin-block-start: var(--denhaag-space-kennissen);
+    --todo-icon-only-button-margin-block-start: var(--denhaag-space-kennissen);
+    --todo-image-paragraph-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-link-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-ordered-list-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-paragraph-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-status-badge-list-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-table-margin-block-start: var(--denhaag-space-kennissen);
+    --utrecht-unordered-list-margin-block-start: var(--denhaag-space-kennissen);
+  }
+
   /* vrienden selector */
   :is(utrecht-heading-2, .utrecht-heading-2, utrecht-heading-3, .utrecht-heading-3)
     + :is(
