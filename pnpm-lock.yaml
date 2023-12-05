@@ -23,7 +23,10 @@ importers:
         version: 3.0.0(@lerna-lite/run@3.0.0)(typescript@5.3.2)
       '@lerna-lite/run':
         specifier: 3.0.0
-        version: 3.0.0(@lerna-lite/publish@3.0.0)(typescript@5.3.2)
+        version: 3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
+      '@lerna-lite/version':
+        specifier: 3.0.0
+        version: 3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/run@3.0.0)(typescript@5.3.2)
       '@types/node':
         specifier: 20.10.3
         version: 20.10.3
@@ -2412,7 +2415,7 @@ packages:
       '@lerna-lite/core': 3.0.0(typescript@5.3.2)
       '@lerna-lite/init': 3.0.0(typescript@5.3.2)
       '@lerna-lite/publish': 3.0.0(@lerna-lite/run@3.0.0)(typescript@5.3.2)
-      '@lerna-lite/run': 3.0.0(@lerna-lite/publish@3.0.0)(typescript@5.3.2)
+      '@lerna-lite/run': 3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
       '@lerna-lite/version': 3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/run@3.0.0)(typescript@5.3.2)
       dedent: 1.5.1
       dotenv: 16.3.1
@@ -2544,7 +2547,7 @@ packages:
       - typescript
     dev: true
 
-  /@lerna-lite/run@3.0.0(@lerna-lite/publish@3.0.0)(typescript@5.3.2):
+  /@lerna-lite/run@3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
     resolution: {integrity: sha512-9FVlvM/YjM3im31pU1mCw4xbyh7TYX5uv5Z7MODylG1vKPEqKWrkjKhUzJmc9GIs2YiJl8PCcVXtnbDogrbWIw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:

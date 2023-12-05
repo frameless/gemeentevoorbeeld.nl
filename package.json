@@ -19,6 +19,7 @@
     "@lerna-lite/cli": "3.0.0",
     "@lerna-lite/publish": "3.0.0",
     "@lerna-lite/run": "3.0.0",
+    "@lerna-lite/version": "3.0.0",
     "@types/node": "20.10.3",
     "@types/react": "18.2.41",
     "@typescript-eslint/eslint-plugin": "6.13.1",
