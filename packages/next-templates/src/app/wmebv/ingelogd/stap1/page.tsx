@@ -132,7 +132,6 @@ export default function home() {
               </UtrechtLinkButton>
               <UtrechtLinkButton
                 inline
-                className="voorbeeld-button-link"
                 onClick={() => {
                   removeStoredData();
                   location.assign('/wmebv');

@@ -116,27 +116,41 @@ body {
   --utrecht-heading-1-margin-block-end: var(--voorbeeld-space-block-rabbit);
 }
 
-utrecht-alert
-  > :is(
-    .utrecht-heading-1,
-    utrecht-heading-1,
-    .utrecht-heading-2,
-    utrecht-heading-2,
-    .utrecht-heading-3,
-    utrecht-heading-3,
-    .utrecht-heading-4,
-    utrecht-heading-4,
-    .utrecht-heading-5,
-    utrecht-heading-5,
-    .utrecht-heading-6,
-    utrecht-heading-6
-  ):first-child {
-  --utrecht-heading-1-margin-block-start: 0;
-  --utrecht-heading-2-margin-block-start: 0;
-  --utrecht-heading-3-margin-block-start: 0;
-  --utrecht-heading-4-margin-block-start: 0;
-  --utrecht-heading-5-margin-block-start: 0;
-  --utrecht-heading-6-margin-block-start: 0;
+.voorbeeld-theme * + :is(.utrecht-heading-1, utrecht-heading-1, .utrecht-heading-2, utrecht-heading-2) {
+  --utrecht-heading-2-margin-block-start: var(--voorbeeld-space-block-dog);
+  --utrecht-heading-2-margin-block-end: var(--voorbeeld-space-block-rabbit);
+  --utrecht-heading-1-margin-block-start: var(--voorbeeld-space-block-rabbit);
+  --utrecht-heading-1-margin-block-end: var(--voorbeeld-space-block-rabbit);
+}
+
+.denhaag-theme {
+  /* TODO: remove these when teheme is included */
+  --denhaag-space-3xs: 2px;
+  --denhaag-space-2xs: 4px;
+  --denhaag-space-xs: 8px;
+  --denhaag-space-s: 12px;
+  --denhaag-space-m: 16px;
+  --denhaag-space-l: 20px;
+  --denhaag-space-xl: 24px;
+  --denhaag-space-2xl: 32px;
+  --denhaag-space-3xl: 40px;
+  --denhaag-space-4xl: 48px;
+  --denhaag-space-5xl: 56px;
+
+  /* TODO: add these the theme later */
+  --denhaag-space-besties: var(--denhaag-space-xs);
+  --denhaag-space-vrienden: var(--denhaag-space-m);
+  --denhaag-space-kennissen: var(--denhaag-space-xl);
+  --denhaag-space-onbekenden: var(--denhaag-space-2xl);
+}
+
+.voorbeeld-theme {
+  /* TODO: add these the theme later */
+  --denhaag-space-besties: 8px;
+  --denhaag-space-vrienden: 16px;
+  --denhaag-space-kennissen: 24px;
+  --denhaag-space-onbekenden: 32px;
+  --denhaag-space-onbemindend: 64px;
 }
 
 .voorbeeld-title-paragraph {

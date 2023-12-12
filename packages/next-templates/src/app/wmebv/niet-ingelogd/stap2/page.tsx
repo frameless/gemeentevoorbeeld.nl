@@ -110,7 +110,6 @@ export default function home() {
             <UtrechtButtonGroup>
               <LinkButton
                 inline={true}
-                className="voorbeeld-button-link"
                 formAction="./stap1/"
                 onClick={onClickPrev}
                 onSubmit={(evt) => {
@@ -221,12 +220,11 @@ export default function home() {
             ></FormFieldTextbox>
 
             <UtrechtButtonGroup direction="column">
-              <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
+              <UtrechtButton type="submit" appearance="primary-action-button">
                 Volgende stap
               </UtrechtButton>
               <LinkButton
                 inline
-                className="voorbeeld-button-link"
                 onClick={() => {
                   saveFormData();
                   location.assign('/wmebv');
@@ -236,7 +234,6 @@ export default function home() {
               </LinkButton>
               <LinkButton
                 inline
-                className="voorbeeld-button-link"
                 onClick={() => {
                   removeStoredData();
                   location.assign('/wmebv');

@@ -5,7 +5,7 @@ import { Document, SkipLink } from '@utrecht/component-library-react/dist/css-mo
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
     <VoorbeeldTheme>
-      <Document>
+      <Document className="todo-space">
         <SkipLink href="#main">Naar inhoud</SkipLink>
         {children}
       </Document>

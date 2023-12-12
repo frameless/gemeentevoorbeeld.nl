@@ -47,7 +47,7 @@ export default function home() {
             </UtrechtButtonGroup>
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtHeading2>Inloggen</UtrechtHeading2>
-            <UtrechtParagraph className="paragraph_digid">
+            <UtrechtParagraph>
               Dankzij uw DigiD kunt u overal makkelijk en veilig inloggen. Uw persoonlijke gegevens blijven goed
               beschermd. Wanneer u inlogt worden uw persoonlijke gegevens automatisch ingevuld.
             </UtrechtParagraph>

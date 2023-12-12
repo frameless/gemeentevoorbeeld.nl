@@ -235,7 +235,6 @@ export default function home() {
               </UtrechtButton>
               <LinkButton
                 inline
-                className="voorbeeld-button-link"
                 onClick={() => {
                   saveFormData();
                   location.assign('/wmebv');
@@ -245,7 +244,6 @@ export default function home() {
               </LinkButton>
               <LinkButton
                 inline
-                className="voorbeeld-button-link"
                 onClick={() => {
                   removeStoredData();
                   location.assign('/wmebv');

@@ -98,7 +98,7 @@ export default function home() {
               description={
                 <>
                   <UtrechtParagraph>Niet verplicht.</UtrechtParagraph>
-                  <UnorderedList className="voorbeeld-unordered-list-space">
+                  <UnorderedList>
                     <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
                     <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
                     <UnorderedListItem>
@@ -110,12 +110,11 @@ export default function home() {
               status={<UtrechtParagraph>Geen bestand gekozen</UtrechtParagraph>}
             ></FormFieldFile>
             <UtrechtButtonGroup direction="column">
-              <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
+              <UtrechtButton type="submit" appearance="primary-action-button">
                 Volgende stap
               </UtrechtButton>
               <LinkButton
                 inline
-                className="voorbeeld-button-link"
                 onClick={() => {
                   saveFormData();
                   location.assign('/wmebv');
@@ -125,7 +124,6 @@ export default function home() {
               </LinkButton>
               <LinkButton
                 inline
-                className="voorbeeld-button-link"
                 onClick={() => {
                   removeStoredData();
                   location.assign('/wmebv');

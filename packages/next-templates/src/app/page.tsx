@@ -39,13 +39,13 @@ export default function Home() {
               Home
             </BreadcrumbNavLink>
             <BreadcrumbNavSeparator>
-              <ChevronRight className="voorbeeld-chevron-right-space" />
+              <ChevronRight />
             </BreadcrumbNavSeparator>
             <BreadcrumbNavLink href="" index={1}>
               Meldingen
             </BreadcrumbNavLink>
             <BreadcrumbNavSeparator>
-              <ChevronRight className="voorbeeld-chevron-right-space" />
+              <ChevronRight />
             </BreadcrumbNavSeparator>
             <BreadcrumbNavLink href="" index={2} rel="up">
               Meldingen openbare ruimte
@@ -83,7 +83,7 @@ export default function Home() {
               </OrderedListItem>
             </OrderedList>
           </SpotlightSection>
-          <Paragraph className="voorbeeld-title-paragraph" small>
+          <Paragraph small>
             Als u een koopwoning heeft of een pand van een particuliere eigenaar huurt of beheert, kunt u gebruik maken
             van de diensten van het Meldpunt Graffiti.
           </Paragraph>
@@ -117,7 +117,7 @@ export default function Home() {
               </UnorderedListItem>
             </UnorderedList>
             <Paragraph>
-              <ButtonLink className="voorbeeld-button-link-space" appearance="primary-action-button" href="">
+              <ButtonLink appearance="primary-action-button" href="">
                 Toestemming geven
               </ButtonLink>
             </Paragraph>
@@ -130,7 +130,7 @@ export default function Home() {
               vervuiling wordt dan gratis verwijderd. Meld vervuiling met het meldingsformulier.
             </Paragraph>
             <Paragraph>
-              <ButtonLink className="voorbeeld-button-link-space" appearance="primary-action-button" href="/form">
+              <ButtonLink appearance="primary-action-button" href="/form">
                 Melding doen
               </ButtonLink>
             </Paragraph>
@@ -147,13 +147,13 @@ export default function Home() {
 
           <section id="weten">
             <Heading2>Goed om te weten</Heading2>
-            <Heading3 className="voorbeeld-heading-3-space">Professioneel verwijderd</Heading3>
+            <Heading3>Professioneel verwijderd</Heading3>
             <Paragraph>
               Het schoonmaken wordt altijd gedaan door een professioneel en gekwalificeerd schoonmaakbedrijf. Dat is
               belangrijk, omdat graffiti- en wildplakverwijdering specialistisch werk is en uw pand niet mag worden
               beschadigd. Naast schoonmaakspecialist zijn de schoonmakers daarom ook schilder en gevelspecialist.
             </Paragraph>
-            <Heading3 className="voorbeeld-heading-3-space">Aangifte bij de politie</Heading3>
+            <Heading3>Aangifte bij de politie</Heading3>
             <Paragraph>
               Als de graffiti te lezen is. Doet het Meldpunt Graffiti, namens u, aangifte bij de politie.
             </Paragraph>
@@ -181,7 +181,7 @@ export default function Home() {
 
           <section id="zie-ook">
             <Heading2>Zie ook</Heading2>
-            <UnorderedList className="voorbeeld-unordered-list-space">
+            <UnorderedList>
               <Link href="https://www.figma.com/file/OlnanjplmeO3aWYzNKnNTo/Voorbeeld---Templates?type=design&node-id=501-1404&mode=dev">
                 <UnorderedListItem>Graffiti in de openbare ruimte melden</UnorderedListItem>
               </Link>

@@ -64,7 +64,7 @@ export default function home() {
           <form method="post" action="/api/wmebv/anonymous/step3">
             <UtrechtHeading1>Vraag aan de gemeente</UtrechtHeading1>
             <UtrechtButtonGroup>
-              <LinkButton inline={true} className="voorbeeld-button-link" formAction="./stap2/" onClick={onClickPrev}>
+              <LinkButton inline={true} formAction="./stap2/" onClick={onClickPrev}>
                 <UtrechtIcon>
                   <IconArrowLeft />
                 </UtrechtIcon>
@@ -97,7 +97,7 @@ export default function home() {
                 <span id={buttonLabel2Id}>Aanpassen</span>
               </Link>
             </UtrechtButtonGroup>{' '}
-            <DataList className="voorbeeld-datalist-style">
+            <DataList>
               <DataListItem>
                 <DataListKey>Naam</DataListKey>
                 <DataListValue>
@@ -145,12 +145,11 @@ export default function home() {
               </DataListItem>
             </DataList>
             <UtrechtButtonGroup direction="column">
-              <UtrechtButton type="submit" className="voorbeeld-button-spacing" appearance="primary-action-button">
+              <UtrechtButton type="submit" appearance="primary-action-button">
                 Versturen
               </UtrechtButton>
               <LinkButton
                 inline
-                className="voorbeeld-button-link"
                 onClick={() => {
                   location.assign('/wmebv');
                 }}
@@ -159,7 +158,6 @@ export default function home() {
               </LinkButton>
               <LinkButton
                 inline
-                className="voorbeeld-button-link"
                 onClick={() => {
                   removeStoredData();
                   location.assign('/wmebv');
