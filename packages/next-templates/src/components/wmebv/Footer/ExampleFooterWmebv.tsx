@@ -4,17 +4,23 @@ import { NavigationListItem } from '../../NavigationList/NavigationListItem';
 import { Heading2, Heading5, PageFooter, Paragraph, UnorderedListItem } from '@utrecht/component-library-react';
 import React, { HTMLAttributes } from 'react';
 import '../../ExampleFooter/footer.css';
-import { UtrechtHeading2, UtrechtLink, UtrechtParagraph, UtrechtUrlData } from '@utrecht/web-component-library-react';
+import { IconArrowRight } from '@tabler/icons-react';
+
+import {
+  UtrechtButton,
+  UtrechtHeading2,
+  UtrechtLink,
+  UtrechtParagraph,
+  UtrechtUrlData,
+} from '@utrecht/web-component-library-react';
 import { Address } from '@/components/Address';
 
 interface ExampleFooterWmebvProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleFooterWmebv = ({ ...props }: ExampleFooterWmebvProps) => (
-  <PageFooter>
+  <PageFooter className="utrecht-page-footer">
     <div className="utrecht-page-footer__content">
       <div className="example-link-list-container" {...props}>
-        <div className="voorbeeld-footer-block">
-          <Logo className="example--footer-logo" />
-        </div>
+        <Logo />
         <div className="voorbeeld-footer-block utrecht-link-list__item">
           <UtrechtHeading2 className="example-footer__heading-3">Contact</UtrechtHeading2>
           <Address>
@@ -25,12 +31,12 @@ export const ExampleFooterWmebv = ({ ...props }: ExampleFooterWmebvProps) => (
             </UtrechtLink>
           </Address>
         </div>
-        <div className="voorbeeld-footer-block">
+        <div>
           <NavigationList>
-            <NavigationListItem className="utrecht-link-list__item" href="#" label="Bescherming persoonsgegevens" />
-            <NavigationListItem className="utrecht-link-list__item" href="#" label="Gebruikersvoorwaarden" />
-            <NavigationListItem className="utrecht-link-list__item" href="#" label="Proclaimer" />
-            <NavigationListItem className="utrecht-link-list__item" href="#" label="Cookieverklaring" />
+            <NavigationListItem className="example-nav-list-footer" href="#" label="Bescherming persoonsgegevens" />
+            <NavigationListItem className="example-nav-list-footer" href="#" label="Gebruikersvoorwaarden" />
+            <NavigationListItem className="example-nav-list-footer" href="#" label="Proclaimer" />
+            <NavigationListItem className="example-nav-list-footer" href="#" label="Toegankelijkheid" />
           </NavigationList>
         </div>
       </div>
