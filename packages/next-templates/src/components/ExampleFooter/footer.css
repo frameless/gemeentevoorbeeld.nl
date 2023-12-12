@@ -24,25 +24,47 @@
     flex-direction: column;
     gap: 1em;
   }
+  .example-footer-content {
+    padding-inline: 16px;
+  }
+
+  .example-nav-list-footer {
+    padding-left: 16px;
+  }
 }
 
 .voorbeeld-navigation-list {
   padding-inline-start: 0;
 }
 .example-footer-content {
-  margin-block-start: 1em;
+  margin-block-start: 48px;
   margin-inline-start: 2.5em;
+}
+
+.denhaag-theme body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.utrecht-page-footer,
+utrecht-page-footer {
+  margin-top: auto;
 }
 
 .denhaag-theme .voorbeeld-footer-block {
   max-width: 50ch;
   --utrecht-heading-2-color: var(--denhaag-color-ocher-3);
-}
-
-.denhaag-theme .example--footer-logo {
-  color: var(--denhaag-color-white);
+  --utrecht-heading-2-font-size: 18px;
+  --utrecht-paragraph-color: var(--denhaag-color-white);
+  --utrecht-paragraph-margin-block: var(--denhaag-space-block-xs);
 }
 
 .denhaag-theme .utrecht-page-footer__content {
   --utrecht-focus-outline-color: var(--denhaag-color-ocher-3);
+}
+
+.example-nav-list-footer {
+  text-decoration-line: underline;
+  font-size: var(--utrecht-space-text-md);
 }
