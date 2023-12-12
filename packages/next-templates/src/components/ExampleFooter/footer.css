@@ -18,16 +18,13 @@
   max-width: 35ch;
 }
 
-@media screen and (width <= 960px) {
+@media screen and (width <= 1050px) {
   .example-link-list-container {
     align-items: start;
     flex-direction: column;
     gap: 1em;
+    padding-left: 16px;
   }
-  .example-footer-content {
-    padding-inline: 16px;
-  }
-
   .example-nav-list-footer {
     padding-left: 16px;
   }
@@ -41,14 +38,7 @@
   margin-inline-start: 2.5em;
 }
 
-.denhaag-theme body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.utrecht-page-footer,
-utrecht-page-footer {
+.utrecht-page-footer {
   margin-top: auto;
 }
 
