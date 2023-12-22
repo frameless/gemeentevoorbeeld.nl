@@ -39,6 +39,7 @@ export default function home() {
             </BreadcrumbNavLink>
           </BreadcrumbNav>
           <UtrechtHeading1>{pageTitle}</UtrechtHeading1>
+          <OpenForm configuration={{}} />
           <UtrechtParagraph lead>
             Veel zaken regelt u eenvoudig zelf online via onze website. Kunt u de gewenste informatie niet vinden? Stel
             dan uw vraag via het contactformulier.
