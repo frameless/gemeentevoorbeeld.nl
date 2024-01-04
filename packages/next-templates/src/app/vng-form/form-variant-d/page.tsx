@@ -36,6 +36,7 @@ export default function Home() {
             onSubmit={handleSubmit((data) => {
               console.log(data);
             })}
+            method="POST"
           >
             <Heading2>Variant D</Heading2>
             <FieldsetLegend className="article">Artikel 2 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
@@ -43,15 +44,15 @@ export default function Home() {
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.messageTypes3}>
                 <Paragraph>
-                  <FormLabel htmlFor="message-types3">Berichttypen</FormLabel>
+                  <FormLabel htmlFor="messagetypes3">Berichttypen</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>
                   Typen berichten waarvoor een specifiek webformulier beschikbaar is voor webformulieren die worden
                   ontsloten op [...]
                 </FormFieldDescription>
                 <Textarea
-                  id="message-types3"
-                  {...register('message-types3', {
+                  id="messagetypes3"
+                  {...register('messagetypes3', {
                     required: 'Dit is verplicht',
                     minLength: { value: 4, message: 'Min length is 4' },
                   })}
@@ -82,14 +83,14 @@ export default function Home() {
               </FormField>
               <FormField invalid={!!errors.messageTypes4}>
                 <Paragraph>
-                  <FormLabel htmlFor="message-types4">Berichttypen</FormLabel>
+                  <FormLabel htmlFor="messagetypes4">Berichttypen</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>
                   Typen berichten waar dit formulier voor kan worden gebruikt die worden ontsloten op [...]
                 </FormFieldDescription>
                 <Textarea
-                  id="message-types4"
-                  {...register('message-types4', {
+                  id="messagetypes4"
+                  {...register('messagetypes4', {
                     required: 'Dit is verplicht',
                     minLength: { value: 4, message: 'Min length is 4' },
                   })}
@@ -119,14 +120,14 @@ export default function Home() {
               </FormField>
               <FormField invalid={!!errors.messageTypes5}>
                 <Paragraph>
-                  <FormLabel htmlFor="message-types5">Berichttypen</FormLabel>
+                  <FormLabel htmlFor="messagetypes5">Berichttypen</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>
                   Typen berichten waarvoor dit e-mailadres kan worden gebruikt
                 </FormFieldDescription>
                 <Textarea
-                  id="message-types5"
-                  {...register('message-types5', {
+                  id="messagetypes5"
+                  {...register('messagetypes5', {
                     required: 'Dit is verplicht',
                     minLength: { value: 4, message: 'Min length is 4' },
                   })}
@@ -140,12 +141,12 @@ export default function Home() {
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.messageTypes6}>
                 <Paragraph>
-                  <FormLabel htmlFor="message-types6">Naam mailadres</FormLabel>
+                  <FormLabel htmlFor="messagetypes6">Naam mailadres</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>(Voor alle andere typen berichten binnen dit domein)</FormFieldDescription>
                 <Textarea
-                  id="message-types6"
-                  {...register('message-types6', {
+                  id="messagetypes6"
+                  {...register('messagetypes6', {
                     required: 'Dit is verplicht',
                     minLength: { value: 4, message: 'Min length is 4' },
                   })}
@@ -182,16 +183,16 @@ export default function Home() {
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel7}>
                 <Paragraph>
-                  <FormLabel htmlFor="channel-7">Kanaal bezwaarschriften</FormLabel>
+                  <FormLabel htmlFor="channel7">Kanaal bezwaarschriften</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>
                   Het kanaal dat wordt aangewezen voor het indienen van bezwaarschriften in afwijking van het hierna
                   opgevraagde artikel of artikelen
                 </FormFieldDescription>
                 <Textbox
-                  id="channel-7"
+                  id="channel7"
                   type="text"
-                  {...register('channel-7', {
+                  {...register('channel7', {
                     required: 'Dit is verplicht',
                     minLength: { value: 4, message: 'Min length is 4' },
                   })}
@@ -224,16 +225,16 @@ export default function Home() {
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel8}>
                 <Paragraph>
-                  <FormLabel htmlFor="channel-8">Kanaal klachten</FormLabel>
+                  <FormLabel htmlFor="channel8">Kanaal klachten</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>
                   Het kanaal dat wordt aangewezen voor het indienen van klachten in afwijking van het hierna opgevraagde
                   artikel of artikelen
                 </FormFieldDescription>
                 <Textbox
-                  id="channel-8"
+                  id="channel8"
                   type="text"
-                  {...register('channel-8', {
+                  {...register('channel8', {
                     required: 'Dit is verplicht',
                     minLength: { value: 4, message: 'Min length is 4' },
                   })}

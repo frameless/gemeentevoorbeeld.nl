@@ -36,6 +36,7 @@ export default function Home() {
             onSubmit={handleSubmit((data) => {
               console.log(data);
             })}
+            method="POST"
           >
             <Heading2>Variant B</Heading2>
             <FieldsetLegend className="article">Artikel 2 Aanwijzing kanalen van het domein [...]</FieldsetLegend>

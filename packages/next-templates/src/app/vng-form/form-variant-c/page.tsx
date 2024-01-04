@@ -36,6 +36,7 @@ export default function Home() {
             onSubmit={handleSubmit((data) => {
               console.log(data);
             })}
+            method="POST"
           >
             <Heading2>Variant C</Heading2>
             <FieldsetLegend className="article">Artikel 2 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
@@ -81,13 +82,13 @@ export default function Home() {
               </FormField>
               <FormField invalid={!!errors.messageTypes2}>
                 <Paragraph>
-                  <FormLabel htmlFor="message-types2">Berichttypen</FormLabel>
+                  <FormLabel htmlFor="messagetypes2">Berichttypen</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>
                   Typen berichten waarvoor dit aangewezen kanaal beschikbaar is
                 </FormFieldDescription>
                 <Textarea
-                  id="message-types2"
+                  id="messagetypes2"
                   invalid={!!errors.messageTypes2}
                   {...register('messageTypes2', {
                     required: 'Dit is verplicht',
@@ -125,16 +126,16 @@ export default function Home() {
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel5}>
                 <Paragraph>
-                  <FormLabel htmlFor="channel-5">Kanaal bezwaarschriften</FormLabel>
+                  <FormLabel htmlFor="channel5">Kanaal bezwaarschriften</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>
                   Het kanaal dat wordt aangewezen voor het indienen van bezwaarschriften in afwijking van het hierna
                   opgevraagde artikel of artikelen
                 </FormFieldDescription>
                 <Textbox
-                  id="channel-5"
+                  id="channel5"
                   type="text"
-                  {...register('channel-5', {
+                  {...register('channel5', {
                     required: 'Dit is verplicht',
                     minLength: { value: 4, message: 'Min length is 4' },
                   })}
@@ -167,16 +168,16 @@ export default function Home() {
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel6}>
                 <Paragraph>
-                  <FormLabel htmlFor="channel-6">Kanaal klachten</FormLabel>
+                  <FormLabel htmlFor="channel6">Kanaal klachten</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>
                   Het kanaal dat wordt aangewezen voor het indienen van klachten in afwijking van het hierna opgevraagde
                   artikel of artikelen
                 </FormFieldDescription>
                 <Textbox
-                  id="channel-6"
+                  id="channel6"
                   type="text"
-                  {...register('channel-6', {
+                  {...register('channel6', {
                     required: 'Dit is verplicht',
                     minLength: { value: 4, message: 'Min length is 4' },
                   })}
