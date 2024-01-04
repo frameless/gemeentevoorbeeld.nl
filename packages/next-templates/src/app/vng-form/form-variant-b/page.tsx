@@ -19,25 +19,32 @@ import {
 } from '@utrecht/component-library-react';
 import { useForm } from 'react-hook-form';
 
-export default function Home() {
+interface formData {
+  domain: string;
+  channel: string;
+  messageTypes: string;
+  oneOrMoreArticles: string;
+}
+
+export default function Home({ saveData }) {
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm<{ [key: string]: string }>();
+
+  const submitForm = (formData) => {
+    saveData(formData);
+  };
+
   console.log(watch());
   return (
     <Document>
       <Page>
         <PageContent>
           <Heading1>Formulier Producten-diensten-overzicht</Heading1>
-          <form
-            onSubmit={handleSubmit((data) => {
-              console.log(data);
-            })}
-            method="POST"
-          >
+          <form onSubmit={handleSubmit(submitForm)}>
             <Heading2>Variant B</Heading2>
             <FieldsetLegend className="article">Artikel 2 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
             <FieldsetLegend className="subarticle">Subartikel 1.</FieldsetLegend>
@@ -85,13 +92,13 @@ export default function Home() {
               </FormField>
               <FormField invalid={!!errors.messageTypes}>
                 <Paragraph>
-                  <FormLabel htmlFor="message-types">Berichttypen</FormLabel>
+                  <FormLabel htmlFor="messagetypes">Berichttypen</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>
                   Typen berichten waarvoor dit aangewezen kanaal beschikbaar is
                 </FormFieldDescription>
                 <Textarea
-                  id="message-types"
+                  id="messagetypes"
                   invalid={!!errors.messageTypes}
                   {...register('messageTypes', {
                     required: 'Dit is verplicht',
@@ -128,16 +135,16 @@ export default function Home() {
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel2}>
                 <Paragraph>
-                  <FormLabel htmlFor="channel-2">Kanaal bezwaarschriften</FormLabel>
+                  <FormLabel htmlFor="channel2">Kanaal bezwaarschriften</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>
                   Het kanaal dat wordt aangewezen voor het indienen van bezwaarschriften in afwijking van het hierna
                   opgevraagde artikel of artikelen
                 </FormFieldDescription>
                 <Textbox
-                  id="channel-2"
+                  id="channel2"
                   type="text"
-                  {...register('channel-2', {
+                  {...register('channel2', {
                     required: 'Dit is verplicht',
                     minLength: { value: 4, message: 'Min length is 4' },
                   })}
@@ -170,16 +177,16 @@ export default function Home() {
             <Fieldset className="indent-fieldset">
               <FormField invalid={!!errors.channel3}>
                 <Paragraph>
-                  <FormLabel htmlFor="channel-3">Kanaal klachten</FormLabel>
+                  <FormLabel htmlFor="channel3">Kanaal klachten</FormLabel>
                 </Paragraph>
                 <FormFieldDescription>
                   Het kanaal dat wordt aangewezen voor het indienen van klachten in afwijking van het hierna opgevraagde
                   artikel of artikelen
                 </FormFieldDescription>
                 <Textbox
-                  id="channel-3"
+                  id="channel3"
                   type="text"
-                  {...register('channel-3', {
+                  {...register('channel3', {
                     required: 'Dit is verplicht',
                     minLength: { value: 4, message: 'Min length is 4' },
                   })}
