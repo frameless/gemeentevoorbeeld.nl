@@ -27,7 +27,7 @@ describe('Aanwijzingsbesluit variant B data', () => {
     });
   });
 
-  it('Data from Article Kanaal bezwaartschriften en klachten exists', () => {
+  describe('Data from Article Kanaal bezwaartschriften en klachten exists', () => {
     it('has channel2', () => {
       expect(data.channel2).toBeDefined();
     });
@@ -42,7 +42,7 @@ describe('Aanwijzingsbesluit variant B data', () => {
     });
   });
 
-  it('Data from Article Kanaal Omgevingswet en dienstenwet', () => {
+  describe('Data from Article Kanaal Omgevingswet en dienstenwet', () => {
     it('has oneOrMoreArticles4', () => {
       expect(data.oneOrMoreArticles4).toBeDefined();
     });
