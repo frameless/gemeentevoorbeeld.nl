@@ -26,18 +26,18 @@ export default function Home() {
     watch,
     formState: { errors },
   } = useForm<{ [key: string]: string }>();
+
+  const onSubmit = (formData: { [key: string]: string }) => {
+    submitForm(formData);
+  };
+
   console.log(watch());
   return (
     <Document>
       <Page>
         <PageContent>
           <Heading1>Formulier Producten-diensten-overzicht</Heading1>
-          <form
-            onSubmit={handleSubmit((data) => {
-              console.log(data);
-            })}
-            method="POST"
-          >
+          <form onSubmit={handleSubmit(onSubmit)} action="/">
             <Heading2>Variant C</Heading2>
             <FieldsetLegend className="article">Artikel 2 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
             <Fieldset>

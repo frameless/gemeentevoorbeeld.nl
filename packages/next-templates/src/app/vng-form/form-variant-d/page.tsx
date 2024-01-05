@@ -20,24 +20,25 @@ import {
 import { useForm } from 'react-hook-form';
 
 export default function Home() {
+  const { submitForm } = require('../../App.js');
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm<{ [key: string]: string }>();
+
+  const onSubmit = (formData: { [key: string]: string }) => {
+    submitForm(formData);
+  };
+
   console.log(watch());
   return (
     <Document>
       <Page>
         <PageContent>
           <Heading1>Formulier Producten-diensten-overzicht</Heading1>
-          <form
-            onSubmit={handleSubmit((data) => {
-              console.log(data);
-            })}
-            method="POST"
-          >
+          <form onSubmit={handleSubmit(onSubmit)} action="/">
             <Heading2>Variant D</Heading2>
             <FieldsetLegend className="article">Artikel 2 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
             <FieldsetLegend className="subarticle">Subartikel a.</FieldsetLegend>

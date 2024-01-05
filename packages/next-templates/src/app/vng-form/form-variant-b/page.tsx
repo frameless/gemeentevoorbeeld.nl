@@ -19,14 +19,8 @@ import {
 } from '@utrecht/component-library-react';
 import { useForm } from 'react-hook-form';
 
-interface formData {
-  domain: string;
-  channel: string;
-  messageTypes: string;
-  oneOrMoreArticles: string;
-}
-
-export default function Home({ saveData }) {
+export default function Home() {
+  const { submitForm } = require('../../App.js');
   const {
     register,
     handleSubmit,
@@ -34,8 +28,8 @@ export default function Home({ saveData }) {
     formState: { errors },
   } = useForm<{ [key: string]: string }>();
 
-  const submitForm = (formData) => {
-    saveData(formData);
+  const onSubmit = (formData: { [key: string]: string }) => {
+    submitForm(formData);
   };
 
   console.log(watch());
@@ -44,7 +38,7 @@ export default function Home({ saveData }) {
       <Page>
         <PageContent>
           <Heading1>Formulier Producten-diensten-overzicht</Heading1>
-          <form onSubmit={handleSubmit(submitForm)}>
+          <form onSubmit={handleSubmit(onSubmit)} action="/">
             <Heading2>Variant B</Heading2>
             <FieldsetLegend className="article">Artikel 2 Aanwijzing kanalen van het domein [...]</FieldsetLegend>
             <FieldsetLegend className="subarticle">Subartikel 1.</FieldsetLegend>

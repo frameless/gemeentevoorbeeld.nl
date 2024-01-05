@@ -4,28 +4,36 @@
  */
 
 const submitForm = (data) => {
-    const formData = saveData(data);
-
-    return fetch("/api/aanwijzingsbesluit-ekpdg/create", {
-        method: "POST",
-        body: formData,
-    }).then((response) => {
-        if (response.ok) {
-            // Handle successful upload
-        } else {
-            // Handle error
-        }
-    });
+  saveData(data);
 };
 
 const saveData = (data) => {
-    const formData = new FormData();
+  const formData = new FormData();
 
-    for (let i = 1; i + 1 < data.domains.length; i++) formData.append(`domain${i == 1 ? '' : i}`, data.domains[i]);
-    data = { ...data, picture: data.picture[0].name };
-    formData.append("", JSON.stringify(data));
+  for (const key in formData) {
+    if (key === 'field') {
+      formData.append(key, formData[key][1]);
+    } else {
+      formData.append(key, formData[key]);
+    }
+  }
+  return fetch('/api/aanwijzingsbesluit-ekpdg/create', {
+    method: 'POST',
+    body: formData,
+  }).then((response) => {
+    if (response.ok) {
+      // Handle successful upload
+    } else {
+      // Handle error
+    }
+  });
 };
 
 const getData = () => {
-    const
+  // Storing response
+  return fetch('/api/aanwijzingsbesluit-ekpdg/', {
+    method: 'GET',
+  }).then((data) => {
+    return data;
+  });
 };
