@@ -24,7 +24,7 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react';
 import '@/app/styling/css/form-page.css';
-import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
+import { IconChevronLeft } from '@tabler/icons-react';
 import { useForm } from 'react-hook-form';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
@@ -44,7 +44,7 @@ export default function Home() {
         <PageContent className="voorbeeld-page-content-flex">
           <Article className="voorbeeld-article-space">
             <Link className="example--back-link" href="./">
-              <BacklinkIcon />
+              <IconChevronLeft />
               &nbsp;&nbsp;<span className="example--underlined">Terug</span>
             </Link>
             <Heading1 className="utrecht-heading-1">Melding openbare ruimte</Heading1>
