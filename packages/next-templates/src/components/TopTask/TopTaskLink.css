@@ -5,6 +5,12 @@
   text-decoration: none;
 }
 
+.example-toptask-link:focus-visible {
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px var(--voorbeeld-color-white);
+  outline: 3px dotted var(--voorbeeld-color-black);
+}
+
 .example-toptask-link__icon {
   display: block;
   line-height: var(--line-height, 1.6);
