@@ -8,6 +8,7 @@ import {
   FieldsetLegend,
   FormField,
   FormFieldDescription,
+  FormFieldErrorMessage,
   FormLabel,
   Heading1,
   Heading2,
@@ -28,6 +29,16 @@ import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 import { useForm } from 'react-hook-form';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
+import { FormFieldTextarea } from '@/components/FormFieldTextarea';
+import { FormFieldTextbox } from '@/components/FormFieldTextbox';
+import {
+  messageValidation,
+  homeTownValidation,
+  streetValidation,
+  nameValidation,
+  emailValidation,
+  phoneValidation,
+} from '@/utils/validation';
 
 export default function Home() {
   const {
@@ -35,8 +46,19 @@ export default function Home() {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<{ [key: string]: string }>();
-  console.log(watch());
+  } = useForm<{ [key: string]: string }>({ reValidateMode: 'onBlur' });
+
+  const descriptionField = register('description', messageValidation);
+  const placeField = register('place', homeTownValidation);
+  const streetField = register('street', streetValidation);
+  const heightField = register('height', {
+    required: 'Vul een hoogte in',
+    minLength: { value: 4, message: 'Min length is 4' },
+  });
+  const nameField = register('name', nameValidation);
+  const emailField = register('email', emailValidation);
+  const phoneField = register('phone', phoneValidation);
+
   return (
     <Document>
       <Page>
@@ -112,27 +134,15 @@ export default function Home() {
                   {errors.subCategory?.message}
                 </FormFieldDescription>
               </FormField>
-              <FormField className="voorbeeld-form-field-space" invalid={!!errors.description}>
-                <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="description">
-                    Omschrijving
-                  </FormLabel>
-                </Paragraph>
-                <FormFieldDescription>
-                  Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden.
-                </FormFieldDescription>
-                <Textarea
-                  rows={6}
-                  className="voorbeeld-textarea-border-bottom-width"
-                  id="description"
-                  invalid={!!errors.description}
-                  {...register('description', {
-                    required: 'Dit is verplicht',
-                    minLength: { value: 4, message: 'Min length is 4' },
-                  })}
-                  placeholder=""
-                ></Textarea>
-              </FormField>
+              <FormFieldTextarea
+                {...descriptionField}
+                description="Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden."
+                className="message-textarea"
+                id={`field-${descriptionField.name}`}
+                label="Omschrijving"
+                invalid={!!errors[descriptionField.name]}
+                errorMessage={String(errors[descriptionField.name]?.message)}
+              ></FormFieldTextarea>
               <div className="voorbeeld-bijlage-flex-container">
                 <Paragraph className="voorbeeld-paragraph-bijlage">Bijlage</Paragraph>
                 <Paragraph>(optioneel)</Paragraph>
@@ -146,60 +156,31 @@ export default function Home() {
                 <Paragraph className="paragraph-space-bijlagen">Geen bestand gekozen</Paragraph>
               </div>
               <Heading2 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading2>
-              <FormField invalid={!!errors.place}>
-                <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="place">
-                    Plaats
-                  </FormLabel>
-                </Paragraph>
-                <Textbox
-                  id="place"
-                  invalid={!!errors.place}
-                  {...register('place', {
-                    required: 'Dit is verplicht',
-                    minLength: { value: 4, message: 'Min length is 4' },
-                  })}
-                  placeholder=""
-                />
-                <FormFieldDescription invalid={!!errors.place}>{errors.description?.message}</FormFieldDescription>
-              </FormField>
-              <FormField invalid={!!errors.street}>
-                <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="place">
-                    Straat
-                  </FormLabel>
-                </Paragraph>
-                <Textbox
-                  id="street"
-                  invalid={!!errors.street}
-                  {...register('street', {
-                    required: 'Dit is verplicht',
-                    minLength: { value: 4, message: 'Min length is 4' },
-                  })}
-                  placeholder=""
-                />
-                <FormFieldDescription invalid={!!errors.street}>{errors.street?.message}</FormFieldDescription>
-              </FormField>
-              <FormField className="voorbeeld-form-field-space" invalid={!!errors.height}>
-                <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="height">
-                    Ter hoogte van
-                  </FormLabel>
-                </Paragraph>
-                <FormFieldDescription>Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje.</FormFieldDescription>
-                <Textarea
-                  rows={3}
-                  className="utrecht-textarea-form"
-                  id="height"
-                  invalid={!!errors.height}
-                  {...register('height', {
-                    required: 'Dit is verplicht',
-                    minLength: { value: 4, message: 'Min length is 4' },
-                  })}
-                  placeholder=""
-                ></Textarea>
-                <FormFieldDescription invalid={!!errors.height}>{errors.height?.message}</FormFieldDescription>
-              </FormField>
+              <FormFieldTextbox
+                {...placeField}
+                id={`place-${placeField.name}`}
+                invalid={!!errors[placeField.name]}
+                errorMessage={String(errors[placeField.name]?.message)}
+                label="Plaats"
+                placeholder=""
+              ></FormFieldTextbox>
+              <FormFieldTextbox
+                {...streetField}
+                id={`street-${streetField.name}`}
+                invalid={!!errors[streetField.name]}
+                errorMessage={String(errors[streetField.name]?.message)}
+                label="Straat"
+                placeholder=""
+              ></FormFieldTextbox>
+              <FormFieldTextbox
+                {...heightField}
+                id={`height-${heightField.name}`}
+                invalid={!!errors[heightField.name]}
+                description="Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje."
+                errorMessage={String(errors[heightField.name]?.message)}
+                label="Ter hoogte van"
+                placeholder=""
+              ></FormFieldTextbox>
               <Heading2 className="voorbeeld-begin-of-block">Hoe kunnen we u bereiken voor meer informatie?</Heading2>
               <Fieldset role="radiogroup">
                 <FieldsetLegend>Anoniem Melden?</FieldsetLegend>
@@ -220,73 +201,41 @@ export default function Home() {
                   <RadioButton className="utrecht-form-field__input" id="anoniem-nee" name="anoniem" value="2" />
                 </FormField>
               </Fieldset>
-              <FormField invalid={!!errors.name} type="text">
-                <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="Naam">
-                    Naam
-                  </FormLabel>
-                </Paragraph>
-                <Paragraph>
-                  <Textbox
-                    autoComplete="name"
-                    id="name"
-                    invalid={!!errors.name}
-                    {...register('name', {
-                      required: 'Dit is verplicht',
-                      minLength: { value: 4, message: 'Min length is 4' },
-                    })}
-                    placeholder=""
-                    name="Naam"
-                    type="text"
-                  />
-                </Paragraph>
-                <FormFieldDescription invalid={!!errors.name}>{errors.name?.message}</FormFieldDescription>
-              </FormField>
-              <FormField invalid={!!errors.email} type="text">
-                <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="Email">
-                    E-mailadres
-                  </FormLabel>
-                </Paragraph>
-                <Paragraph>
-                  <Textbox
-                    autoComplete="email"
-                    id="email"
-                    invalid={!!errors.email}
-                    {...register('email', {
-                      required: 'Dit is verplicht',
-                      minLength: { value: 4, message: 'Min length is 4' },
-                    })}
-                    placeholder=""
-                    name="Email"
-                    type="email"
-                  />
-                </Paragraph>
-                <FormFieldDescription invalid={!!errors.email}>{errors.email?.message}</FormFieldDescription>
-              </FormField>
-              <FormField invalid={!!errors.telephone} type="text">
-                <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="Telefoon">
-                    Telefoonnummer
-                  </FormLabel>
-                </Paragraph>
-                <Paragraph>
-                  <Textbox
-                    className="voorbeeld-telefoon-textbox-small"
-                    autoComplete="tel"
-                    id="telephone"
-                    invalid={!!errors.telephone}
-                    {...register('telephone', {
-                      required: 'Dit is verplicht',
-                      minLength: { value: 4, message: 'Min length is 4' },
-                    })}
-                    placeholder=""
-                    name="Telefoon"
-                    type="tel"
-                  />
-                </Paragraph>
-                <FormFieldDescription invalid={!!errors.telephone}>{errors.telephone?.message}</FormFieldDescription>
-              </FormField>
+              <FormFieldTextbox
+                {...nameField}
+                id={`name-${nameField.name}`}
+                invalid={!!errors[nameField.name]}
+                required
+                type="name"
+                autoComplete="name"
+                errorMessage={String(errors[nameField.name]?.message)}
+                name="Naam"
+                label="Naam"
+                placeholder=""
+              ></FormFieldTextbox>
+              <FormFieldTextbox
+                {...emailField}
+                id={`email-${emailField.name}`}
+                invalid={!!errors[emailField.name]}
+                autoComplete="email"
+                type="email"
+                required
+                errorMessage={String(errors[emailField.name]?.message)}
+                name="E-mailadres"
+                label="E-mailadres"
+                placeholder=""
+              ></FormFieldTextbox>
+              <FormFieldTextbox
+                {...phoneField}
+                id={`phone-${phoneField.name}`}
+                invalid={!!errors[phoneField.name]}
+                type="tel"
+                autoComplete="tel"
+                errorMessage={String(errors[phoneField.name]?.message)}
+                name="Telefoonnummer"
+                label="Telefoonnummer"
+                placeholder=""
+              ></FormFieldTextbox>
               <Button className="voorbeeld-button-spacing" type="submit" appearance="primary-action-button">
                 Versturen
               </Button>
