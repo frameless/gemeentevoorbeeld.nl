@@ -25,7 +25,6 @@ import '@utrecht/design-tokens/dist/index.css';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import ChevronRight from '../app/styling/assets/chevronRight.svg';
 
 export default function Home() {
   return (
