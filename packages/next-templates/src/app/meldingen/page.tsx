@@ -23,14 +23,12 @@ export default function Home() {
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content-flex">
         <TopTaskNavigation className="grid">
-          <TopTaskLink href="/meldingen-openbare-ruimte/aanhanger-of-bakfiets-melding/form">
+          <TopTaskLink href="/meldingen-/aanhanger-of-bakfiets-melding/form">
             Paspoort of ID-kaart aanvragen
           </TopTaskLink>
-          <TopTaskLink href="/meldingen-openbare-ruimte/eenhoornparkeerzone-aanvraag/form">
-            Meldingen openbare ruimte
-          </TopTaskLink>
-          <TopTaskLink href="/meldingen-openbare-ruimte/graffiti-melding/form">Verhuizing doorgeven</TopTaskLink>
-          <TopTaskLink href="/meldingen-openbare-ruimte/verloren-sokken-melding/">Werken bij de gemeente</TopTaskLink>
+          <TopTaskLink href="/meldingen/eenhoornparkeerzone-aanvraag/form">Meldingen openbare ruimte</TopTaskLink>
+          <TopTaskLink href="/meldingen/graffiti-melding/form">Verhuizing doorgeven</TopTaskLink>
+          <TopTaskLink href="/meldingen/verloren-sokken-melding/">Werken bij de gemeente</TopTaskLink>
         </TopTaskNavigation>
       </PageContent>
       <ExampleFooter />
