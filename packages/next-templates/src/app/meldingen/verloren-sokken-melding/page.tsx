@@ -43,11 +43,11 @@ export default function Home() {
             </Link>
           </Paragraph>
           <ButtonGroup>
-            <ButtonLink appearance="primary-action-button" href="mees/form-found">
+            <ButtonLink appearance="primary-action-button" href="./verloren-stokken-melding/form-found">
               Meld je gevonden sok
               <UtrechtIconArrow />
             </ButtonLink>
-            <ButtonLink appearance="primary-action-button" href="mees/form-lost">
+            <ButtonLink appearance="primary-action-button" href="./verloren-stokken-melding/form-lost">
               Meld je verloren sok <UtrechtIconArrow />
             </ButtonLink>
           </ButtonGroup>
