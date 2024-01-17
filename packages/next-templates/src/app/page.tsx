@@ -1,27 +1,19 @@
 'use client';
 
-import {
-  Article,
-  BreadcrumbNavLink,
-  BreadcrumbNav,
-  ButtonLink,
-  Heading1,
-  Heading2,
-  Link,
-  OrderedList,
-  OrderedListItem,
-  Page,
-  PageContent,
-  Paragraph,
-  SpotlightSection,
-  UnorderedList,
-  UnorderedListItem,
-  Heading3,
-  BreadcrumbNavSeparator,
-} from '@utrecht/component-library-react';
+import { Page, PageContent } from '@utrecht/component-library-react';
 import '@/app/styling/css/detail-page.css';
 import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
+import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
+import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
+import {
+  UtrechtIconAfvalScheiden,
+  UtrechtIconMeldingKlacht,
+  UtrechtIconNummerbord,
+  UtrechtIconPaspoort,
+  UtrechtIconVerhuizen,
+  UtrechtIconWerken,
+} from '@utrecht/web-component-library-react';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
