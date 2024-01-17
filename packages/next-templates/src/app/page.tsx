@@ -133,7 +133,7 @@ export default function Home() {
               <ButtonLink
                 className="voorbeeld-button-link-space"
                 appearance="primary-action-button"
-                href="/melding/graffiti-melding/form"
+                href="/meldingen/graffiti-melding/form"
               >
                 Melding doen
               </ButtonLink>
