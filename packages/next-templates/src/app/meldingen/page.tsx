@@ -1,7 +1,7 @@
 'use client';
 import { Article, Page, PageContent } from '@utrecht/component-library-react';
-import { TopTaskNavigation } from '../components/TopTask/TopTaskNavigation';
-import { TopTaskLink } from '../components/TopTask/TopTaskLink';
+import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
+import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
