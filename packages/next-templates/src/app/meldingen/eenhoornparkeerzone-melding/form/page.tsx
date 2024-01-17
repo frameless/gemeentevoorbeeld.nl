@@ -37,7 +37,7 @@ export default function Home() {
             is aan parkeerzones voor roze eenhoorns? Zijn uw vliegende huisdieren in de war over waar ze moeten landen?
             Dan bent u op de juiste plek! Melding: Ontbreken van een Roze Eenhoornparkeerzone
           </Paragraph>
-          <form onSubmit={handleSubmit((data) => {})}>
+          <form method="POST" action="./eenhoornparkeerzone-melding/confirmed" onSubmit={handleSubmit((data) => {})}>
             <FormField invalid={!!errors.location}>
               <Paragraph>
                 <FormLabel htmlFor="location">Locatie:</FormLabel>
@@ -161,11 +161,7 @@ export default function Home() {
               />
             </FormField>
             <Paragraph>{errors.emailAdress?.message}</Paragraph>
-            <Button
-              type="submit"
-              appearance="primary-action-button"
-              formAction="./eenhoornparkeerzone-melding/confirmed"
-            >
+            <Button type="submit" appearance="primary-action-button">
               Dien uw melding in
             </Button>
           </form>
