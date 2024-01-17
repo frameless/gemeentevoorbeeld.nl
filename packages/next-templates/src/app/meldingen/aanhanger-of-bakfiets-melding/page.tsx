@@ -64,7 +64,7 @@ export default function Home() {
             geveltuin? Reserveer dan altijd de hele dag, dus 2 dagdelen.
           </Paragraph>
           <Paragraph>
-            <ButtonLink appearance="primary-action-button" href="./form">
+            <ButtonLink appearance="primary-action-button" href="./aanhanger-of-bakfiets-melding/form">
               Reserveer aanhanger of bakfiets <UtrechtIconArrow></UtrechtIconArrow>
             </ButtonLink>
           </Paragraph>
