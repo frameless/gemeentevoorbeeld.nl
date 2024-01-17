@@ -1,5 +1,5 @@
 .example-toptask-link {
-  flex: 33.33%;
+  flex: calc(100% / 3);
   padding: var(--voorbeeld-space-inline-rabbit);
   background-color: var(--voorbeeld-color-violet-700);
   text-decoration: none;
