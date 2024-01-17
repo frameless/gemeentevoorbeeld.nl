@@ -16,8 +16,10 @@ import {
   Textbox,
 } from '@utrecht/component-library-react';
 import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -37,7 +39,13 @@ export default function Home() {
             is aan parkeerzones voor roze eenhoorns? Zijn uw vliegende huisdieren in de war over waar ze moeten landen?
             Dan bent u op de juiste plek! Melding: Ontbreken van een Roze Eenhoornparkeerzone
           </Paragraph>
-          <form method="POST" action="./eenhoornparkeerzone-melding/confirmed" onSubmit={handleSubmit((data) => {})}>
+          <form
+            method="POST"
+            action="./eenhoornparkeerzone-melding/confirmed"
+            onSubmit={handleSubmit((data) => {
+              router.push('./confirmed');
+            })}
+          >
             <FormField invalid={!!errors.location}>
               <Paragraph>
                 <FormLabel htmlFor="location">Locatie:</FormLabel>
