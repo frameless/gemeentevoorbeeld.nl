@@ -35,7 +35,7 @@ export default function Home() {
           opgegeven e-mailadres om u op de hoogte te stellen.
         </Paragraph>
         <ButtonGroup>
-          <ButtonLink href="mees" appearance="primary-action-button">
+          <ButtonLink href="verloren-sokken-melding" appearance="primary-action-button">
             Versturen
           </ButtonLink>
           <ButtonLink href="form-found" appearance="secondary-action-button">
