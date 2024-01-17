@@ -1,0 +1,19 @@
+.example-toptask-link {
+  flex: 33.33%;
+  padding: var(--voorbeeld-space-inline-rabbit);
+  background-color: var(--voorbeeld-color-violet-700);
+  text-decoration: none;
+}
+
+.example-toptask-link__icon {
+  display: block;
+  line-height: var(--line-height, 1.6);
+  color: var(--voorbeeld-color-white);
+  font-size: var(--voorbeeld-size-icon-2xl);
+}
+
+.example-toptask-link__title {
+  padding-block-start: var(--voorbeeld-space-inline-rabbit);
+  color: var(--voorbeeld-color-white);
+  font-weight: var(--voorbeeld-typography-font-weight-medium);
+}
