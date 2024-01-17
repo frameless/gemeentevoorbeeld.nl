@@ -24,7 +24,7 @@ export default function Home() {
           <Paragraph>
             <b>Ga naar het Meldingsformulier:</b>
           </Paragraph>
-          <ButtonLink appearance="primary-action-button" href="./form">
+          <ButtonLink appearance="primary-action-button" href="./eenhoornparkeerzone-melding/form">
             Maak melding
           </ButtonLink>
           <Paragraph>
