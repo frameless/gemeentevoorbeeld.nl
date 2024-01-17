@@ -23,7 +23,7 @@ export default function Home() {
         geldt, zorg dat u deze niet te zwaar belaadt. Om het afvalstation te bereiken moet u namelijk een heuveltje op.
       </Paragraph>
 
-      <form className="utrecht-form" method="GET" action="/savi/form/bevestiging">
+      <form className="utrecht-form" method="GET" action="./form/bevestiging">
         <FormField type="text">
           <Paragraph>
             <FormLabel htmlFor="1111">Aanhanger/bakfiets</FormLabel>
