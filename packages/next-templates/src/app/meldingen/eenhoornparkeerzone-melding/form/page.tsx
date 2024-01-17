@@ -161,7 +161,11 @@ export default function Home() {
               />
             </FormField>
             <Paragraph>{errors.emailAdress?.message}</Paragraph>
-            <Button type="submit" appearance="primary-action-button" formAction="./confirmed">
+            <Button
+              type="submit"
+              appearance="primary-action-button"
+              formAction="./eenhoornparkeerzone-melding/confirmed"
+            >
               Dien uw melding in
             </Button>
           </form>
