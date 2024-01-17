@@ -5,7 +5,6 @@ import {
   Document,
   Heading1,
   Heading2,
-  Heading5,
   Link,
   Page,
   PageContent,
