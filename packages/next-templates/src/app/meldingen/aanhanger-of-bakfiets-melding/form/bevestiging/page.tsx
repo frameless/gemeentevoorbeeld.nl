@@ -70,7 +70,7 @@ export default function Home() {
         hieronder om de reservering te starten.
       </Paragraph>
       <hr className="utrecht-separator" />
-      <form className="utrecht-form" method="GET" action="/savi/form/bevestiging/succes">
+      <form className="utrecht-form" method="GET" action="./form/bevestiging/succes">
         <Fieldset id="only" role="radiogroup">
           <FieldsetLegend>Selecteer uw gewenste dagdeel</FieldsetLegend>
           <FormField type="radio">
