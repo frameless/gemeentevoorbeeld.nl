@@ -7,7 +7,7 @@ import './footer.css';
 
 interface ExampleFooterProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleFooter = ({ ...props }: ExampleFooterProps) => (
-  <PageFooter>
+  <PageFooter className="example-page-footer">
     <div className="utrecht-page-footer__content">
       <div className="example-link-list-container" {...props}>
         <Logo className="example--footer-logo" />
