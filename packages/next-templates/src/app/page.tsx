@@ -1,9 +1,6 @@
 'use client';
 
 import { Page, PageContent } from '@utrecht/component-library-react';
-import '@/app/styling/css/detail-page.css';
-import '@utrecht/component-library-css';
-import '@utrecht/design-tokens/dist/index.css';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
 import {
