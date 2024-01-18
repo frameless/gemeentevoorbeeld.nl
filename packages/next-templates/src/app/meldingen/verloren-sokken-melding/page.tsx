@@ -1,8 +1,8 @@
 'use client';
 import {
+  Article,
   ButtonGroup,
   ButtonLink,
-  Document,
   Heading1,
   Heading2,
   Link,
@@ -18,10 +18,10 @@ import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 
 export default function Home() {
   return (
-    <Document>
+    <Page>
       <ExampleHeader />
-      <Page>
-        <PageContent>
+      <PageContent className="voorbeeld-page-content-flex">
+        <Article className="voorbeeld-article-space">
           <Heading1>Meldpunt voor Verdwaalde Sokken</Heading1>
           <Paragraph lead>
             Het &ldquo;Meldpunt voor Verdwaalde Sokken,&ldquo; is een initiatief van onze gemeente met als doel de
@@ -98,9 +98,9 @@ export default function Home() {
               te zijn.
             </UnorderedListItem>
           </UnorderedList>
-        </PageContent>
-        <ExampleFooter />
-      </Page>
-    </Document>
+        </Article>
+      </PageContent>
+      <ExampleFooter />
+    </Page>
   );
 }
