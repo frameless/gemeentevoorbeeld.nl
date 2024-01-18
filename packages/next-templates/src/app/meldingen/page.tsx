@@ -13,11 +13,11 @@ export default function Home() {
       <PageContent className="voorbeeld-page-content--flex">
         <TopTaskNavigation className="grid">
           <TopTaskLink href="/meldingen-/aanhanger-of-bakfiets-melding/form">
-            Paspoort of ID-kaart aanvragen
+            Aanvraag aanhanger of bakfiets
           </TopTaskLink>
-          <TopTaskLink href="/meldingen/eenhoornparkeerzone-aanvraag/form">Meldingen openbare ruimte</TopTaskLink>
-          <TopTaskLink href="/meldingen/graffiti-melding/form">Verhuizing doorgeven</TopTaskLink>
-          <TopTaskLink href="/meldingen/verloren-sokken-melding/">Werken bij de gemeente</TopTaskLink>
+          <TopTaskLink href="/meldingen/eenhoornparkeerzone-aanvraag/form">Aanvraag eenhoornparkeerzone</TopTaskLink>
+          <TopTaskLink href="/meldingen/graffiti-melding/form">Melding graffiti</TopTaskLink>
+          <TopTaskLink href="/meldingen/verloren-sokken-melding/">Melding verloren sokken</TopTaskLink>
         </TopTaskNavigation>
       </PageContent>
       <ExampleFooter />
