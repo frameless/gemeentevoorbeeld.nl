@@ -14,6 +14,7 @@ import {
 } from '@utrecht/component-library-react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
+import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 
 interface Inputs {
   Voornaam: string;
@@ -36,6 +37,7 @@ export default function Home() {
 
   return (
     <Page>
+      <ExampleHeaderFunnel />
       <PageContent>
         <Heading1>Maak een melding van een gevonden sok</Heading1>
         <form onSubmit={handleSubmit(onSubmit)}>
