@@ -15,11 +15,13 @@ import {
 import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 
 export default function Home() {
   return (
     <Page>
       <ExampleHeader />
+      <ExampleNavigation />
       <PageContent className="voorbeeld-page-content-flex">
         <Article className="voorbeeld-article-space">
           <Heading1>Meldpunt voor Verdwaalde Sokken</Heading1>
