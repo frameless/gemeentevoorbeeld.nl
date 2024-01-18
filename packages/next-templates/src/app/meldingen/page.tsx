@@ -12,12 +12,10 @@ export default function Home() {
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content--flex">
         <TopTaskNavigation className="grid">
-          <TopTaskLink href="/meldingen-/aanhanger-of-bakfiets-melding/form">
-            Aanvraag aanhanger of bakfiets
-          </TopTaskLink>
-          <TopTaskLink href="/meldingen/eenhoornparkeerzone-aanvraag/form">Aanvraag eenhoornparkeerzone</TopTaskLink>
-          <TopTaskLink href="/meldingen/graffiti-melding/form">Melding graffiti</TopTaskLink>
-          <TopTaskLink href="/meldingen/verloren-sokken-melding/">Melding verloren sokken</TopTaskLink>
+          <TopTaskLink href="/meldingen-/aanhanger-of-bakfiets-melding">Aanvraag aanhanger of bakfiets</TopTaskLink>
+          <TopTaskLink href="/meldingen/eenhoornparkeerzone-aanvraag">Aanvraag eenhoornparkeerzone</TopTaskLink>
+          <TopTaskLink href="/meldingen/graffiti-melding">Melding graffiti</TopTaskLink>
+          <TopTaskLink href="/meldingen/verloren-sokken-melding">Melding verloren sokken</TopTaskLink>
         </TopTaskNavigation>
       </PageContent>
       <ExampleFooter />
