@@ -10,7 +10,7 @@ export default function Home() {
     <Page>
       <ExampleHeader />
       <ExampleNavigation />
-      <PageContent className="voorbeeld-page-content-flex">
+      <PageContent className="voorbeeld-page-content--flex">
         <TopTaskNavigation className="grid">
           <TopTaskLink href="/meldingen-/aanhanger-of-bakfiets-melding/form">
             Paspoort of ID-kaart aanvragen
