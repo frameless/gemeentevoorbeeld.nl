@@ -190,6 +190,12 @@ utrecht-alert
   max-width: 80ch;
 }
 
+.voorbeeld-thema > .utrecht-page-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 utrecht-page-content {
   /* use `auto` margins to center the page */
   margin-inline-start: auto;
