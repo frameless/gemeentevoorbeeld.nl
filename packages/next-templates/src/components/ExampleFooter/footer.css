@@ -48,3 +48,7 @@
 .voorbeeld-footer-block {
   max-width: 50ch;
 }
+
+.example-page-footer {
+  flex: 1 1;
+}
