@@ -40,63 +40,35 @@ export default function Home() {
         <Heading1>Maak een melding van een gevonden sok</Heading1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormField type="text">
-            <Paragraph>
-              <FormLabel htmlFor="Voornaam">Voornaam</FormLabel>
-            </Paragraph>
-            <Paragraph>
-              <Textbox {...register('Voornaam')} id="Voornaam" name="Voornaam" type="text" />
-            </Paragraph>
+            <FormLabel htmlFor="Voornaam">Voornaam</FormLabel>
+            <Textbox {...register('Voornaam')} id="Voornaam" name="Voornaam" type="text" />
           </FormField>
           <FormField type="text">
-            <Paragraph>
-              <FormLabel htmlFor="Achternaam">Achternaam</FormLabel>
-            </Paragraph>
-            <Paragraph>
-              <Textbox {...register('Achternaam')} id="Achternaam" name="Achternaam" type="text" />
-            </Paragraph>
+            <FormLabel htmlFor="Achternaam">Achternaam</FormLabel>
+            <Textbox {...register('Achternaam')} id="Achternaam" name="Achternaam" type="text" />
           </FormField>
           <FormField type="text">
-            <Paragraph>
-              <FormLabel htmlFor="Telefoon">Telefoon</FormLabel>
-            </Paragraph>
-            <Paragraph>
-              <Textbox {...register('Telefoon')} id="Telefoon" name="Telefoon" type="text" />
-            </Paragraph>
+            <FormLabel htmlFor="Telefoon">Telefoon</FormLabel>
+            <Textbox {...register('Telefoon')} id="Telefoon" name="Telefoon" type="text" />
           </FormField>
           <FormField type="text">
-            <Paragraph>
-              <FormLabel htmlFor="Email">E-mail</FormLabel>
-            </Paragraph>
-            <Paragraph>
-              <Textbox {...register('Email')} id="Email" name="Email" type="text" />
-            </Paragraph>
+            <FormLabel htmlFor="Email">E-mail</FormLabel>
+            <Textbox {...register('Email')} id="Email" name="Email" type="text" />
           </FormField>
           <FormField type="text">
-            <Paragraph>
-              <FormLabel htmlFor="Beschrijving">Beschrijving sok en/of sokken</FormLabel>
-            </Paragraph>
+            <FormLabel htmlFor="Beschrijving">Beschrijving sok en/of sokken</FormLabel>
             <FormFieldDescription>
               Geef zo goed mogelijk de kenmerken van de sok aan, zodat we hem zo snel mogelijk met zijn vriendje kunnen
               herenigen.
             </FormFieldDescription>
-            <Paragraph>
-              <Textarea {...register('Beschrijving')} id="Beschrijving" name="beschrijving" />
-            </Paragraph>
+            <Textarea {...register('Beschrijving')} id="Beschrijving" name="beschrijving" />
           </FormField>
           <FormField type="text">
-            <Paragraph>
-              <FormLabel htmlFor="Waar-gevonden">Waar heb je de sok gevonden?</FormLabel>
-            </Paragraph>
-            <Paragraph>
-              <Textarea {...register('GevondenLocatie')} id="Waar-gevonden" name="GevondenLocatie" />
-            </Paragraph>
+            <FormLabel htmlFor="Waar-gevonden">Waar heb je de sok gevonden?</FormLabel>
+            <Textarea {...register('GevondenLocatie')} id="Waar-gevonden" name="GevondenLocatie" />
             <FormField type="text">
-              <Paragraph>
-                <FormLabel htmlFor="Plaatsnaam">Plaatsnaam</FormLabel>
-              </Paragraph>
-              <Paragraph>
-                <Textbox {...register('Plaatsnaam')} id="Plaatsnaam" name="Plaatsnaam" type="text" />
-              </Paragraph>
+              <FormLabel htmlFor="Plaatsnaam">Plaatsnaam</FormLabel>
+              <Textbox {...register('Plaatsnaam')} id="Plaatsnaam" name="Plaatsnaam" type="text" />
             </FormField>
           </FormField>
           <ButtonGroup>
