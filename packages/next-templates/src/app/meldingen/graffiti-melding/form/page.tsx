@@ -104,7 +104,7 @@ export default function Home() {
                   {errors.mainCategory?.message}
                 </FormFieldDescription>
               </FormField>
-              <FormField invalid={!!errors.subCategory}>
+              <FormField className="voorbeeld-formField" invalid={!!errors.subCategory}>
                 <FormLabel className="voorbeeld-form-label" htmlFor="subCategory">
                   Subcategorie
                 </FormLabel>
@@ -188,13 +188,13 @@ export default function Home() {
                   Als u iets anoniem meld kunnen we u niet informeren over het verloop van de afhandeling voor deze
                   melding.
                 </FormFieldDescription>
-                <FormField type="radio">
+                <FormField className="voorbeeld-formField" type="radio">
                   <FormLabel className="voorbeeld-radio-button-form-label" htmlFor="anoniem-ja" type="radio">
                     Ja
                   </FormLabel>
                   <RadioButton className="utrecht-form-field__input" id="anoniem-ja" name="anoniem" value="1" />
                 </FormField>
-                <FormField type="radio">
+                <FormField className="voorbeeld-formField" type="radio">
                   <FormLabel className="voorbeeld-radio-button-form-label" htmlFor="anoniem-nee" type="radio">
                     Nee
                   </FormLabel>
