@@ -89,6 +89,7 @@ export default function Home() {
                   </FormLabel>
                 </Paragraph>
                 <Select
+                  defaultValue=""
                   id="mainCategory"
                   {...register('mainCategory', {
                     required: 'Dit is verplicht',
@@ -97,7 +98,7 @@ export default function Home() {
                   invalid={!!errors.mainCategory}
                   className="voorbeeld-svg-arrow"
                 >
-                  <SelectOption selected disabled value="">
+                  <SelectOption disabled value="">
                     Kies een hoofdcategorie
                   </SelectOption>
                   <SelectOption value="1">Option #1</SelectOption>
@@ -116,6 +117,7 @@ export default function Home() {
                   </FormLabel>
                 </Paragraph>
                 <Select
+                  defaultValue=""
                   id="subCategory"
                   {...register('subCategory', {
                     required: 'Dit is verplicht',
@@ -124,7 +126,7 @@ export default function Home() {
                   invalid={!!errors.subCategory}
                   className="voorbeeld-svg-arrow"
                 >
-                  <SelectOption selected disabled value="">
+                  <SelectOption disabled value="">
                     Kies een subcategorie
                   </SelectOption>
                   <SelectOption value="1">Option #1</SelectOption>
