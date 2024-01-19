@@ -137,13 +137,13 @@ export default function Home() {
                 </FormFieldDescription>
               </FormField>
               <FormFieldTextarea
-                {...descriptionField}
                 description="Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden."
                 className="message-textarea"
                 id={`field-${descriptionField.name}`}
                 label="Omschrijving"
                 invalid={!!errors[descriptionField.name]}
                 errorMessage={String(errors[descriptionField.name]?.message)}
+                {...descriptionField}
               ></FormFieldTextarea>
               <div className="voorbeeld-bijlage-flex-container">
                 <Paragraph className="voorbeeld-paragraph-bijlage">Bijlage</Paragraph>
@@ -159,29 +159,29 @@ export default function Home() {
               </div>
               <Heading2 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading2>
               <FormFieldTextbox
-                {...placeField}
                 id={`place-${placeField.name}`}
                 invalid={!!errors[placeField.name]}
                 errorMessage={String(errors[placeField.name]?.message)}
                 label="Plaats"
                 placeholder=""
+                {...placeField}
               ></FormFieldTextbox>
               <FormFieldTextbox
-                {...streetField}
                 id={`street-${streetField.name}`}
                 invalid={!!errors[streetField.name]}
                 errorMessage={String(errors[streetField.name]?.message)}
                 label="Straat"
                 placeholder=""
+                {...streetField}
               ></FormFieldTextbox>
               <FormFieldTextbox
-                {...heightField}
                 id={`height-${heightField.name}`}
                 invalid={!!errors[heightField.name]}
                 description="Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje."
                 errorMessage={String(errors[heightField.name]?.message)}
                 label="Ter hoogte van"
                 placeholder=""
+                {...heightField}
               ></FormFieldTextbox>
               <Heading2 className="voorbeeld-begin-of-block">Hoe kunnen we u bereiken voor meer informatie?</Heading2>
               <Fieldset role="radiogroup">
