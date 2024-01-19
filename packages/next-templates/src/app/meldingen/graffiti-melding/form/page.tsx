@@ -78,11 +78,9 @@ export default function Home() {
             <Paragraph className="voorbeeld-title-paragraph">Kies een categorie die bij uw melding past.</Paragraph>
             <form method="POST" noValidate onSubmit={handleSubmit((data) => {})}>
               <FormField invalid={!!errors.mainCategory}>
-                <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="mainCategory">
-                    Hoofdcategorie
-                  </FormLabel>
-                </Paragraph>
+                <FormLabel className="voorbeeld-form-label" htmlFor="mainCategory">
+                  Hoofdcategorie
+                </FormLabel>
                 <Select
                   aria-label="Hoofdcategorie"
                   defaultValue=""
@@ -107,11 +105,9 @@ export default function Home() {
                 </FormFieldDescription>
               </FormField>
               <FormField invalid={!!errors.subCategory}>
-                <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="subCategory">
-                    Subcategorie
-                  </FormLabel>
-                </Paragraph>
+                <FormLabel className="voorbeeld-form-label" htmlFor="subCategory">
+                  Subcategorie
+                </FormLabel>
                 <Select
                   aria-label="Subcategorie"
                   defaultValue=""
