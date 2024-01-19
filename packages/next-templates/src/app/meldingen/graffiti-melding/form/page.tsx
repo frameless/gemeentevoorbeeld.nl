@@ -204,39 +204,36 @@ export default function Home() {
                 </FormField>
               </Fieldset>
               <FormFieldTextbox
-                {...nameField}
                 id={`name-${nameField.name}`}
                 invalid={!!errors[nameField.name]}
                 required
                 type="name"
                 autoComplete="name"
                 errorMessage={String(errors[nameField.name]?.message)}
-                name="Naam"
                 label="Naam"
                 placeholder=""
+                {...nameField}
               ></FormFieldTextbox>
               <FormFieldTextbox
-                {...emailField}
                 id={`email-${emailField.name}`}
                 invalid={!!errors[emailField.name]}
                 autoComplete="email"
                 type="email"
                 required
                 errorMessage={String(errors[emailField.name]?.message)}
-                name="E-mailadres"
                 label="E-mailadres"
                 placeholder=""
+                {...emailField}
               ></FormFieldTextbox>
               <FormFieldTextbox
-                {...phoneField}
                 id={`phone-${phoneField.name}`}
                 invalid={!!errors[phoneField.name]}
                 type="tel"
                 autoComplete="tel"
                 errorMessage={String(errors[phoneField.name]?.message)}
-                name="Telefoonnummer"
                 label="Telefoonnummer"
                 placeholder=""
+                {...phoneField}
               ></FormFieldTextbox>
               <Button className="voorbeeld-button-spacing" type="submit" appearance="primary-action-button">
                 Versturen
