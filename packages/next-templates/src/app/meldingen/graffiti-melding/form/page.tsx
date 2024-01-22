@@ -76,13 +76,7 @@ export default function Home() {
             </Paragraph>
             <Heading2 utrecht-heading-2>Wat wilt u melden?</Heading2>
             <Paragraph className="voorbeeld-title-paragraph">Kies een categorie die bij uw melding past.</Paragraph>
-            <form
-              method="POST"
-              noValidate
-              onSubmit={handleSubmit((data) => {
-                console.log(data);
-              })}
-            >
+            <form method="POST" noValidate onSubmit={handleSubmit((data) => {})}>
               <FormField invalid={!!errors.mainCategory}>
                 <Paragraph>
                   <FormLabel className="voorbeeld-form-label" htmlFor="mainCategory">
