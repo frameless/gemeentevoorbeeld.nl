@@ -43,23 +43,33 @@ export default function Home() {
         <Heading1>Maak een melding van een gevonden sok</Heading1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormField className="voorbeeld-formField" type="text">
-            <FormLabel htmlFor="Voornaam">Voornaam</FormLabel>
+            <FormLabel className="voorbeeld-formLabel" htmlFor="Voornaam">
+              Voornaam
+            </FormLabel>
             <Textbox {...register('Voornaam')} id="Voornaam" name="Voornaam" type="text" />
           </FormField>
           <FormField className="voorbeeld-formField" type="text">
-            <FormLabel htmlFor="Achternaam">Achternaam</FormLabel>
+            <FormLabel className="voorbeeld-formLabel" htmlFor="Achternaam">
+              Achternaam
+            </FormLabel>
             <Textbox {...register('Achternaam')} id="Achternaam" name="Achternaam" type="text" />
           </FormField>
           <FormField className="voorbeeld-formField" type="text">
-            <FormLabel htmlFor="Telefoon">Telefoon</FormLabel>
+            <FormLabel className="voorbeeld-formLabel" htmlFor="Telefoon">
+              Telefoon
+            </FormLabel>
             <Textbox {...register('Telefoon')} id="Telefoon" name="Telefoon" type="text" />
           </FormField>
           <FormField className="voorbeeld-formField" type="text">
-            <FormLabel htmlFor="Email">E-mail</FormLabel>
+            <FormLabel className="voorbeeld-formLabel" htmlFor="Email">
+              E-mail
+            </FormLabel>
             <Textbox {...register('Email')} id="Email" name="Email" type="text" />
           </FormField>
           <FormField className="voorbeeld-formField" type="text">
-            <FormLabel htmlFor="Beschrijving">Beschrijving sok en/of sokken</FormLabel>
+            <FormLabel className="voorbeeld-formLabel" htmlFor="Beschrijving">
+              Beschrijving sok en/of sokken
+            </FormLabel>
             <FormFieldDescription>
               Geef zo goed mogelijk de kenmerken van de sok aan, zodat we hem zo snel mogelijk met zijn vriendje kunnen
               herenigen.
@@ -67,10 +77,14 @@ export default function Home() {
             <Textarea {...register('Beschrijving')} id="Beschrijving" name="beschrijving" />
           </FormField>
           <FormField className="voorbeeld-formField" type="text">
-            <FormLabel htmlFor="Waar-gevonden">Waar heb je de sok gevonden?</FormLabel>
+            <FormLabel className="voorbeeld-formLabel" htmlFor="Waar-gevonden">
+              Waar heb je de sok gevonden?
+            </FormLabel>
             <Textarea {...register('GevondenLocatie')} id="Waar-gevonden" name="GevondenLocatie" />
             <FormField className="voorbeeld-formField" type="text">
-              <FormLabel htmlFor="Plaatsnaam">Plaatsnaam</FormLabel>
+              <FormLabel className="voorbeeld-formLabel" htmlFor="Plaatsnaam">
+                Plaatsnaam
+              </FormLabel>
               <Textbox {...register('Plaatsnaam')} id="Plaatsnaam" name="Plaatsnaam" type="text" />
             </FormField>
           </FormField>
