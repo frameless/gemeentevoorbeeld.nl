@@ -149,7 +149,7 @@ export default function Home() {
                 invalid={!!errors[descriptionField.name]}
                 errorMessage={String(errors[descriptionField.name]?.message)}
                 {...descriptionField}
-              ></FormFieldTextarea>
+              />
               <div className="voorbeeld-bijlage-flex-container">
                 <Paragraph className="voorbeeld-paragraph-bijlage">Bijlage</Paragraph>
                 <Paragraph>(optioneel)</Paragraph>
@@ -171,7 +171,7 @@ export default function Home() {
                 label="Plaats"
                 placeholder=""
                 {...placeField}
-              ></FormFieldTextbox>
+              />
               <FormFieldTextbox
                 id={`street-${streetField.name}`}
                 invalid={!!errors[streetField.name]}
@@ -180,7 +180,7 @@ export default function Home() {
                 label="Straat"
                 placeholder=""
                 {...streetField}
-              ></FormFieldTextbox>
+              />
               <FormFieldTextbox
                 id={`height-${heightField.name}`}
                 invalid={!!errors[heightField.name]}
@@ -190,7 +190,7 @@ export default function Home() {
                 label="Ter hoogte van"
                 placeholder=""
                 {...heightField}
-              ></FormFieldTextbox>
+              />
               <Heading2 className="voorbeeld-begin-of-block">Hoe kunnen we u bereiken voor meer informatie?</Heading2>
               <Fieldset role="radiogroup">
                 <FieldsetLegend>Anoniem Melden?</FieldsetLegend>
@@ -222,7 +222,7 @@ export default function Home() {
                 label="Naam"
                 placeholder=""
                 {...nameField}
-              ></FormFieldTextbox>
+              />
               <FormFieldTextbox
                 id={`email-${emailField.name}`}
                 invalid={!!errors[emailField.name]}
@@ -234,7 +234,7 @@ export default function Home() {
                 label="E-mailadres"
                 placeholder=""
                 {...emailField}
-              ></FormFieldTextbox>
+              />
               <FormFieldTextbox
                 id={`phone-${phoneField.name}`}
                 invalid={!!errors[phoneField.name]}
@@ -246,7 +246,7 @@ export default function Home() {
                 label="Telefoonnummer"
                 placeholder=""
                 {...phoneField}
-              ></FormFieldTextbox>
+              />
               <Button className="voorbeeld-button-spacing" type="submit" appearance="primary-action-button">
                 Versturen
               </Button>
