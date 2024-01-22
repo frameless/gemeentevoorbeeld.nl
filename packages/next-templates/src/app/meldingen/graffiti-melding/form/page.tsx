@@ -55,7 +55,6 @@ export default function Home() {
   const streetField = register('street', streetValidation);
   const heightField = register('height', {
     required: 'Vul een hoogte in',
-    minLength: { value: 4, message: 'Min length is 4' },
   });
   const nameField = register('name', nameValidation);
   const emailField = register('email', emailValidation);
