@@ -12,6 +12,7 @@ import {
   Textarea,
   Textbox,
 } from '@utrecht/component-library-react';
+import '@/app/styling/css/verloren-sokken.css';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
