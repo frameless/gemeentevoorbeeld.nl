@@ -170,7 +170,6 @@ export default function Home() {
                 errorMessage={String(errors[placeField.name]?.message)}
                 aria-label="Plaats"
                 label="Plaats"
-                placeholder=""
                 {...placeField}
               />
               <FormFieldTextbox
@@ -179,7 +178,6 @@ export default function Home() {
                 errorMessage={String(errors[streetField.name]?.message)}
                 aria-label="Straat"
                 label="Straat"
-                placeholder=""
                 {...streetField}
               />
               <FormFieldTextbox
@@ -190,7 +188,6 @@ export default function Home() {
                 errorMessage={String(errors[heightField.name]?.message)}
                 aria-label="Ter hoogte van"
                 label="Ter hoogte van"
-                placeholder=""
                 {...heightField}
               />
               <Heading2 className="voorbeeld-begin-of-block">Hoe kunnen we u bereiken voor meer informatie?</Heading2>
@@ -223,7 +220,6 @@ export default function Home() {
                 errorMessage={String(errors[nameField.name]?.message)}
                 aria-label="Naam"
                 label="Naam"
-                placeholder=""
                 {...nameField}
               />
               <FormFieldTextbox
@@ -236,7 +232,6 @@ export default function Home() {
                 errorMessage={String(errors[emailField.name]?.message)}
                 aria-label="E-mailadres"
                 label="E-mailadres"
-                placeholder=""
                 {...emailField}
               />
               <FormFieldTextbox
@@ -249,7 +244,6 @@ export default function Home() {
                 errorMessage={String(errors[phoneField.name]?.message)}
                 aria-label="Telefoonnummer"
                 label="Telefoonnummer"
-                placeholder=""
                 {...phoneField}
               />
               <Button className="voorbeeld-button-spacing" type="submit" appearance="primary-action-button">
