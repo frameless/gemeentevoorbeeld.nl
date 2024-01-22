@@ -17,7 +17,7 @@ import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigat
 
 export default function Home() {
   return (
-    <Page>
+    <Page className="voorbeeld-page--flex">
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content--flex">
