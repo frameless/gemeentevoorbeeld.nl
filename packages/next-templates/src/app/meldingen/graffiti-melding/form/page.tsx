@@ -86,7 +86,7 @@ export default function Home() {
             >
               <FormField invalid={!!errors.mainCategory}>
                 <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="mainCategory">
+                  <FormLabel className="voorbeeld-form-label" aria-label="Hoofdcategorie" htmlFor="mainCategory">
                     Hoofdcategorie
                   </FormLabel>
                 </Paragraph>
@@ -114,7 +114,7 @@ export default function Home() {
               </FormField>
               <FormField invalid={!!errors.subCategory}>
                 <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="subCategory">
+                  <FormLabel className="voorbeeld-form-label" aria-label="Subcategorie" htmlFor="subCategory">
                     Subcategorie
                   </FormLabel>
                 </Paragraph>
@@ -144,6 +144,7 @@ export default function Home() {
                 description="Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden."
                 className="message-textarea"
                 id={`field-${descriptionField.name}`}
+                aria-label="Omschrijving"
                 label="Omschrijving"
                 invalid={!!errors[descriptionField.name]}
                 errorMessage={String(errors[descriptionField.name]?.message)}
@@ -166,6 +167,7 @@ export default function Home() {
                 id={`place-${placeField.name}`}
                 invalid={!!errors[placeField.name]}
                 errorMessage={String(errors[placeField.name]?.message)}
+                aria-label="Plaats"
                 label="Plaats"
                 placeholder=""
                 {...placeField}
@@ -174,6 +176,7 @@ export default function Home() {
                 id={`street-${streetField.name}`}
                 invalid={!!errors[streetField.name]}
                 errorMessage={String(errors[streetField.name]?.message)}
+                aria-label="Straat"
                 label="Straat"
                 placeholder=""
                 {...streetField}
@@ -183,6 +186,7 @@ export default function Home() {
                 invalid={!!errors[heightField.name]}
                 description="Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje."
                 errorMessage={String(errors[heightField.name]?.message)}
+                aria-label="Ter hoogte van"
                 label="Ter hoogte van"
                 placeholder=""
                 {...heightField}
@@ -214,6 +218,7 @@ export default function Home() {
                 type="name"
                 autoComplete="name"
                 errorMessage={String(errors[nameField.name]?.message)}
+                aria-label="Naam"
                 label="Naam"
                 placeholder=""
                 {...nameField}
@@ -225,6 +230,7 @@ export default function Home() {
                 type="email"
                 required
                 errorMessage={String(errors[emailField.name]?.message)}
+                aria-label="E-mailadres"
                 label="E-mailadres"
                 placeholder=""
                 {...emailField}
@@ -236,6 +242,7 @@ export default function Home() {
                 autoComplete="tel"
                 description="Niet verplicht."
                 errorMessage={String(errors[phoneField.name]?.message)}
+                aria-label="Telefoonnummer"
                 label="Telefoonnummer"
                 placeholder=""
                 {...phoneField}
