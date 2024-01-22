@@ -85,11 +85,12 @@ export default function Home() {
             >
               <FormField invalid={!!errors.mainCategory}>
                 <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" aria-label="Hoofdcategorie" htmlFor="mainCategory">
+                  <FormLabel className="voorbeeld-form-label" htmlFor="mainCategory">
                     Hoofdcategorie
                   </FormLabel>
                 </Paragraph>
                 <Select
+                  aria-label="Hoofdcategorie"
                   defaultValue=""
                   id="mainCategory"
                   {...register('mainCategory', {
@@ -113,11 +114,12 @@ export default function Home() {
               </FormField>
               <FormField invalid={!!errors.subCategory}>
                 <Paragraph>
-                  <FormLabel className="voorbeeld-form-label" aria-label="Subcategorie" htmlFor="subCategory">
+                  <FormLabel className="voorbeeld-form-label" htmlFor="subCategory">
                     Subcategorie
                   </FormLabel>
                 </Paragraph>
                 <Select
+                  aria-label="Subcategorie"
                   defaultValue=""
                   id="subCategory"
                   {...register('subCategory', {
