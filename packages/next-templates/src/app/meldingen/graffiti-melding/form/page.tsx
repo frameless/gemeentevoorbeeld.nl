@@ -234,6 +234,7 @@ export default function Home() {
                 invalid={!!errors[phoneField.name]}
                 type="tel"
                 autoComplete="tel"
+                description="Niet verplicht."
                 errorMessage={String(errors[phoneField.name]?.message)}
                 label="Telefoonnummer"
                 placeholder=""
