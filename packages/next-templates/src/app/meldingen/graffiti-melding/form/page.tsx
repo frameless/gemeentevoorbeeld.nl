@@ -48,7 +48,9 @@ export default function Home() {
     formState: { errors },
   } = useForm<{ [key: string]: string }>({ reValidateMode: 'onBlur' });
 
-  const descriptionField = register('description', messageValidation);
+  const descriptionField = register('description', {
+    required: 'Vul een omschrijving in',
+  });
   const placeField = register('place', homeTownValidation);
   const streetField = register('street', streetValidation);
   const heightField = register('height', {
