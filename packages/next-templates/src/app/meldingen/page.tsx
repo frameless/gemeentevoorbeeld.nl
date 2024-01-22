@@ -7,7 +7,7 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 export default function Home() {
   return (
-    <Page>
+    <Page className="voorbeeld-page--flex">
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content--flex">
