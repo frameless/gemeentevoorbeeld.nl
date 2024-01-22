@@ -142,7 +142,7 @@ export default function Home() {
               </FormField>
               <FormFieldTextarea
                 description="Beschrijf hier wat er aan de hand is en eventueel wat er aan gedaan kan worden."
-                className="message-textarea"
+                className="voorbeeld-textarea"
                 id={`field-${descriptionField.name}`}
                 aria-label="Omschrijving"
                 label="Omschrijving"
@@ -165,6 +165,7 @@ export default function Home() {
               <Heading2 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading2>
               <FormFieldTextbox
                 id={`place-${placeField.name}`}
+                className="voorbeeld-textbox"
                 invalid={!!errors[placeField.name]}
                 errorMessage={String(errors[placeField.name]?.message)}
                 aria-label="Plaats"
@@ -183,6 +184,7 @@ export default function Home() {
               />
               <FormFieldTextbox
                 id={`height-${heightField.name}`}
+                className="voorbeeld-textbox"
                 invalid={!!errors[heightField.name]}
                 description="Bijvoorbeeld het huisnummer, parkeerplaats of speeltuintje."
                 errorMessage={String(errors[heightField.name]?.message)}
@@ -213,6 +215,7 @@ export default function Home() {
               </Fieldset>
               <FormFieldTextbox
                 id={`name-${nameField.name}`}
+                className="voorbeeld-textbox"
                 invalid={!!errors[nameField.name]}
                 required
                 type="name"
@@ -225,6 +228,7 @@ export default function Home() {
               />
               <FormFieldTextbox
                 id={`email-${emailField.name}`}
+                className="voorbeeld-textbox"
                 invalid={!!errors[emailField.name]}
                 autoComplete="email"
                 type="email"
@@ -237,6 +241,7 @@ export default function Home() {
               />
               <FormFieldTextbox
                 id={`phone-${phoneField.name}`}
+                className="voorbeeld-textbox"
                 invalid={!!errors[phoneField.name]}
                 type="tel"
                 autoComplete="tel"
