@@ -62,9 +62,9 @@ export default function Home() {
         <ExampleHeaderFunnel />
         <PageContent className="voorbeeld-page-content-flex">
           <Article className="voorbeeld-article-space">
-            <Link className="example--back-link" href="./">
+            <Link className="voorbeeld--back-link" href="./">
               <BacklinkIcon />
-              <span className="example--underlined">Terug</span>
+              <span className="voorbeeld--underlined">Terug</span>
             </Link>
             <Heading1 className="utrecht-heading-1">Melding openbare ruimte</Heading1>
             <Paragraph lead className="voorbeeld-paragraph-lead">
