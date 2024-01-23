@@ -22,6 +22,7 @@ body {
   /* HACK: these tokens are not set in voorbeeld-theme */
   --utrecht-form-field-description-margin-block-end: var(--voorbeeld-space-block-beetle);
   --utrecht-space-around: 1;
+  --utrecht-form-field-error-message-margin-block-end: 0;
   --utrecht-button-group-margin-block-end: var(--voorbeeld-space-block-rabbit);
   --utrecht-button-group-margin-block-start: var(--voorbeeld-space-block-rabbit);
   --utrecht-link-icon-size: 18px;
@@ -207,8 +208,16 @@ utrecht-alert
   margin-block-start: var(--voorbeeld-space-block-beetle);
 }
 
+.voorbeeld-button-spacing {
+  margin-block-start: var(--voorbeeld-space-row-cat);
+}
+
 .voorbeeld-section--spacing {
   margin-block-start: var(--voorbeeld-space-row-horse);
+}
+
+.voorbeeld-section--spacing:last-of-type {
+  margin-block-end: var(--voorbeeld-space-row-cat);
 }
 
 utrecht-page-content {
