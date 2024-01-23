@@ -64,7 +64,7 @@ export default function Home() {
           <Article className="voorbeeld-article-space">
             <Link className="example--back-link" href="./">
               <BacklinkIcon />
-              &nbsp;&nbsp;<span className="example--underlined">Terug</span>
+              <span className="example--underlined">Terug</span>
             </Link>
             <Heading1 className="utrecht-heading-1">Melding openbare ruimte</Heading1>
             <Paragraph lead className="voorbeeld-paragraph-lead">
