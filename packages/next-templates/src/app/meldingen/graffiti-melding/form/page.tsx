@@ -66,13 +66,13 @@ export default function Home() {
               <BacklinkIcon />
               <span className="voorbeeld--underlined">Terug</span>
             </Link>
-            <Heading1 className="voorbeeld-heading-1">Melding openbare ruimte</Heading1>
+            <Heading1>Melding openbare ruimte</Heading1>
             <Paragraph lead className="voorbeeld-paragraph-lead">
               Vul alle velden in. Als een veld optioneel is, staat dit erbij
             </Paragraph>
-            <Heading2 utrecht-heading-2>Wat wilt u melden?</Heading2>
-            <Paragraph className="voorbeeld-title-paragraph">Kies een categorie die bij uw melding past.</Paragraph>
             <form method="POST" noValidate onSubmit={handleSubmit((data) => {})}>
+              <Heading2 utrecht-heading-2>Wat wilt u melden?</Heading2>
+              <Paragraph className="voorbeeld-title-paragraph">Kies een categorie die bij uw melding past.</Paragraph>
               <FormField invalid={!!errors.mainCategory}>
                 <FormLabel className="voorbeeld-form-label" htmlFor="mainCategory">
                   Hoofdcategorie
@@ -149,7 +149,7 @@ export default function Home() {
                 <Button appearance="secondary-action-button">Bestand kiezen</Button>
                 <Paragraph className="voorbeeld-paragraph-bijlage">Geen bestand gekozen</Paragraph>
               </div>
-              <Heading2 className="voorbeeld-heading--spacing">Op welke locatie heeft de melding betrekking?</Heading2>
+              <Heading2>Op welke locatie heeft de melding betrekking?</Heading2>
               <FormFieldTextbox
                 id={`place-${placeField.name}`}
                 className="voorbeeld-textbox"
@@ -178,7 +178,7 @@ export default function Home() {
                 label="Ter hoogte van"
                 {...heightField}
               />
-              <Heading2 className="voorbeeld--spacing">Hoe kunnen we u bereiken voor meer informatie?</Heading2>
+              <Heading2>Hoe kunnen we u bereiken voor meer informatie?</Heading2>
               <Fieldset role="radiogroup">
                 <FieldsetLegend>Anoniem Melden?</FieldsetLegend>
                 <FormFieldDescription className="voorbeeld-FormFieldDescription--spacing">
