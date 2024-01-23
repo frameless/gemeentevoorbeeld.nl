@@ -147,9 +147,9 @@ export default function Home() {
               </UnorderedList>
               <div className="voorbeeld-bijlage-flex-container">
                 <Button appearance="secondary-action-button">Bestand kiezen</Button>
-                <Paragraph className="paragraph-space-bijlagen">Geen bestand gekozen</Paragraph>
+                <Paragraph className="voorbeeld-paragraph-bijlage">Geen bestand gekozen</Paragraph>
               </div>
-              <Heading2 className="voorbeeld-begin-of-block">Op welke locatie heeft de melding betrekking?</Heading2>
+              <Heading2 className="voorbeeld-heading--spacing">Op welke locatie heeft de melding betrekking?</Heading2>
               <FormFieldTextbox
                 id={`place-${placeField.name}`}
                 className="voorbeeld-textbox"
@@ -178,10 +178,10 @@ export default function Home() {
                 label="Ter hoogte van"
                 {...heightField}
               />
-              <Heading2 className="voorbeeld-begin-of-block">Hoe kunnen we u bereiken voor meer informatie?</Heading2>
+              <Heading2 className="voorbeeld--spacing">Hoe kunnen we u bereiken voor meer informatie?</Heading2>
               <Fieldset role="radiogroup">
                 <FieldsetLegend>Anoniem Melden?</FieldsetLegend>
-                <FormFieldDescription className="voorbeeld-spacing-FormFieldDescription">
+                <FormFieldDescription className="voorbeeld-FormFieldDescription--spacing">
                   Als u iets anoniem meld kunnen we u niet informeren over het verloop van de afhandeling voor deze
                   melding.
                 </FormFieldDescription>
@@ -234,7 +234,7 @@ export default function Home() {
                 label="Telefoonnummer"
                 {...phoneField}
               />
-              <Button className="voorbeeld-button-spacing" type="submit" appearance="primary-action-button">
+              <Button className="voorbeeld-button--spacing" type="submit" appearance="primary-action-button">
                 Versturen
               </Button>
             </form>
