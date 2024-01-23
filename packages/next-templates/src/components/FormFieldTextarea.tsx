@@ -62,7 +62,9 @@ export const FormFieldTextarea = forwardRef(
 
     return (
       <FormField invalid={invalid} {...props}>
-        <FormLabel htmlFor={inputId}>{label}</FormLabel>
+        <FormLabel className="voorbeeld-form-label" htmlFor={inputId}>
+          {label}
+        </FormLabel>
         {description && <FormFieldDescription id={descriptionId}>{description}</FormFieldDescription>}
         {invalid && errorMessage && (
           <FormFieldErrorMessage className="voorbeeld-form-field__error-message" id={errorMessageId}>
