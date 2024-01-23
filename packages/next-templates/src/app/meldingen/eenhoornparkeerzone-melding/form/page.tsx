@@ -26,7 +26,6 @@ export default function Home() {
     watch,
     formState: { errors },
   } = useForm<{ [key: string]: string }>();
-  console.log(watch());
   return (
     <Document>
       <Page>
