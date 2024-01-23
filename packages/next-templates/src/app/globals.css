@@ -197,6 +197,16 @@ utrecht-alert
   align-self: center;
 }
 
+.voorbeeld-form-label {
+  display: block;
+}
+
+.voorbeeld-textarea,
+.voorbeeld-form-field__input,
+.voorbeeld-select {
+  margin-block-start: var(--voorbeeld-space-block-beetle);
+}
+
 .voorbeeld-section--spacing {
   margin-block-start: var(--voorbeeld-space-row-horse);
 }
