@@ -69,50 +69,46 @@ export const FormFieldTextbox = forwardRef(
 
     return (
       <FormField invalid={invalid} {...props}>
-        <p className="utrecht-form-field__label">
-          <FormLabel htmlFor={inputId}>{label}</FormLabel>
-        </p>
+        <FormLabel htmlFor={inputId}>{label}</FormLabel>
         {description && <FormFieldDescription id={descriptionId}>{description}</FormFieldDescription>}
         {invalid && errorMessage && (
-          <FormFieldErrorMessage className="utrecht-form-field__error-message" id={errorMessageId}>
+          <FormFieldErrorMessage className="voorbeeld-form-field__error-message" id={errorMessageId}>
             {errorMessage}
           </FormFieldErrorMessage>
         )}
-        <p className="utrecht-form-field__input">
-          <Textbox
-            ref={ref}
-            id={inputId}
-            name={name}
-            className="utrecht-form-field__input"
-            type={(type as TextboxTypes) || 'text'}
-            autoComplete={autoComplete}
-            aria-describedby={
-              clsx({
-                [descriptionId]: description,
-                [errorMessageId]: invalid,
-                [statusId]: status,
-              }) || undefined
-            }
-            invalid={invalid}
-            dir="auto"
-            disabled={disabled}
-            min={typeof min === 'number' ? String(min) : typeof min === 'string' ? min : undefined}
-            max={typeof max === 'number' ? String(max) : typeof max === 'string' ? max : undefined}
-            pattern={pattern}
-            placeholder={placeholder}
-            readOnly={readOnly}
-            aria-required={required}
-            value={value}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            onInput={onInput}
-            onChange={onChange}
-            defaultValue={defaultValue}
-          />
-        </p>
+        <Textbox
+          ref={ref}
+          id={inputId}
+          name={name}
+          className="voorbeeld-form-field__input"
+          type={(type as TextboxTypes) || 'text'}
+          autoComplete={autoComplete}
+          aria-describedby={
+            clsx({
+              [descriptionId]: description,
+              [errorMessageId]: invalid,
+              [statusId]: status,
+            }) || undefined
+          }
+          invalid={invalid}
+          dir="auto"
+          disabled={disabled}
+          min={typeof min === 'number' ? String(min) : typeof min === 'string' ? min : undefined}
+          max={typeof max === 'number' ? String(max) : typeof max === 'string' ? max : undefined}
+          pattern={pattern}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          aria-required={required}
+          value={value}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          onInput={onInput}
+          onChange={onChange}
+          defaultValue={defaultValue}
+        />
         {status && (
-          <div className="utrecht-form-field__status" id={statusId}>
-            <div className="utrecht-form-field-description utrecht-form-field-description--status">{status}</div>
+          <div className="voorbeeld-form-field__status" id={statusId}>
+            <div className="voorbeeld-form-field-description voorbeeld-form-field-description--status">{status}</div>
           </div>
         )}
       </FormField>
