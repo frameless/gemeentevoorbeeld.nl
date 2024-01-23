@@ -83,6 +83,7 @@ export default function Home() {
                 </FormLabel>
                 <Select
                   aria-label="Hoofdcategorie"
+                  className="voorbeeld-select"
                   defaultValue=""
                   id="mainCategory"
                   {...register('mainCategory', {
@@ -90,7 +91,6 @@ export default function Home() {
                   })}
                   placeholder="Kies een hoofdcategorie"
                   invalid={!!errors.mainCategory}
-                  className="voorbeeld-svg-arrow"
                 >
                   <SelectOption disabled value="">
                     Kies een hoofdcategorie
@@ -111,13 +111,13 @@ export default function Home() {
                 <Select
                   aria-label="Subcategorie"
                   defaultValue=""
+                  className="voorbeeld-select"
                   id="subCategory"
                   {...register('subCategory', {
                     required: 'Dit is verplicht',
                   })}
                   placeholder="Kies een subcategorie"
                   invalid={!!errors.subCategory}
-                  className="voorbeeld-svg-arrow"
                 >
                   <SelectOption disabled value="">
                     Kies een subcategorie
@@ -165,6 +165,7 @@ export default function Home() {
               />
               <FormFieldTextbox
                 id={`street-${streetField.name}`}
+                className="voorbeeld-textbox"
                 invalid={!!errors[streetField.name]}
                 errorMessage={String(errors[streetField.name]?.message)}
                 aria-label="Straat"
