@@ -46,9 +46,7 @@ export default function Home() {
             })}
           >
             <FormField invalid={!!errors.location}>
-              <Paragraph>
-                <FormLabel htmlFor="location">Locatie:</FormLabel>
-              </Paragraph>
+              <FormLabel htmlFor="location">Locatie:</FormLabel>
               <Textbox
                 id="location"
                 {...register('location', {
@@ -61,9 +59,7 @@ export default function Home() {
               <Paragraph>{errors.location?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.description}>
-              <Paragraph>
-                <FormLabel htmlFor="description">Beschrijving:</FormLabel>
-              </Paragraph>
+              <FormLabel htmlFor="description">Beschrijving:</FormLabel>
               <Textarea
                 id="description"
                 invalid={!!errors.description}
@@ -76,9 +72,7 @@ export default function Home() {
               <Paragraph>{errors.description?.message}</Paragraph>
             </FormField>
             <FormField invalid={!!errors.enclosedAerialView}>
-              <Paragraph>
-                <FormLabel htmlFor="enclosed-aerial-view">Bijgevoegde luchtfoto&apos;s:</FormLabel>
-              </Paragraph>
+              <FormLabel htmlFor="enclosed-aerial-view">Bijgevoegde luchtfoto&apos;s:</FormLabel>
               <Textbox
                 id="enclosed-aerial-view"
                 invalid={!!errors.enclosedAerialView}
@@ -95,56 +89,46 @@ export default function Home() {
                 Hoe snel denkt u dat de eenhoorns en vliegende huisdieren hulp nodig hebben?
               </FieldsetLegend>
               <FormField type="radio" className="radio-field">
-                <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
-                  <FormLabel htmlFor="right-now" type="radio">
-                    <RadioButton
-                      className="utrecht-form-field__input"
-                      id="right-now"
-                      name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                      value="1"
-                    />
-                    Nu meteen
-                  </FormLabel>
-                </Paragraph>
+                <FormLabel htmlFor="right-now" type="radio">
+                  <RadioButton
+                    className="utrecht-form-field__input"
+                    id="right-now"
+                    name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
+                    value="1"
+                  />
+                  Nu meteen
+                </FormLabel>
               </FormField>
               <FormField type="radio" className="radio-field">
-                <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
-                  <FormLabel htmlFor="shortly" type="radio">
-                    <RadioButton
-                      className="utrecht-form-field__input"
-                      id="shortly"
-                      name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                      value="2"
-                    />
-                    Binnenkort
-                  </FormLabel>
-                </Paragraph>
+                <FormLabel htmlFor="shortly" type="radio">
+                  <RadioButton
+                    className="utrecht-form-field__input"
+                    id="shortly"
+                    name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
+                    value="2"
+                  />
+                  Binnenkort
+                </FormLabel>
               </FormField>
               <FormField type="radio" className="radio-field">
-                <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
-                  <FormLabel htmlFor="when-pigs-can-fly" type="radio">
-                    <RadioButton
-                      className="utrecht-form-field__input"
-                      id="when-pigs-can-fly"
-                      name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                      value="3"
-                    />
-                    Wanneer varkens kunnen vliegen
-                  </FormLabel>
-                </Paragraph>
+                <FormLabel htmlFor="when-pigs-can-fly" type="radio">
+                  <RadioButton
+                    className="utrecht-form-field__input"
+                    id="when-pigs-can-fly"
+                    name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
+                    value="3"
+                  />
+                  Wanneer varkens kunnen vliegen
+                </FormLabel>
               </FormField>
             </Fieldset>
-            <Paragraph>
-              <FormLabel>Contactgegevens:</FormLabel>
-            </Paragraph>
+            <FormLabel>Contactgegevens:</FormLabel>
             <Paragraph>
               Laat uw naam en e-mailadres achter, zodat we u op de hoogte kunnen houden van eventuele magische
               ontwikkelingen.
             </Paragraph>
             <FormField invalid={!!errors.fullName}>
-              <Paragraph>
-                <FormLabel htmlFor="fullName">Volledige naam:</FormLabel>
-              </Paragraph>
+              <FormLabel htmlFor="fullName">Volledige naam:</FormLabel>
               <Textbox
                 invalid={!!errors.fullName}
                 {...register('fullName', {
@@ -157,9 +141,7 @@ export default function Home() {
             </FormField>
             <Paragraph>{errors.fullName?.message}</Paragraph>
             <FormField invalid={!!errors.emailAdress}>
-              <Paragraph>
-                <FormLabel htmlFor="emailAdress">E-mailadres:</FormLabel>
-              </Paragraph>
+              <FormLabel htmlFor="emailAdress">E-mailadres:</FormLabel>
               <Textbox
                 invalid={!!errors.emailAdress}
                 {...register('emailAdress', { required: 'Dit is verplicht' })}
