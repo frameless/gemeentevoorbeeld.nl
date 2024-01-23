@@ -8,7 +8,6 @@ import {
   Heading1,
   Page,
   PageContent,
-  Paragraph,
   Textarea,
   Textbox,
 } from '@utrecht/component-library-react';
