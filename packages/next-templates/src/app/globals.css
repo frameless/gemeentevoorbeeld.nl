@@ -202,11 +202,24 @@ utrecht-alert
   display: block;
 }
 
+.voorbeeld-back-link {
+  display: flex;
+  gap: 0.3125em;
+}
+
+.voorbeeld-back-link > svg {
+  align-self: center;
+}
+
 .voorbeeld-textarea,
 .voorbeeld-form-field__input,
 .voorbeeld-select,
 .voorbeeld-bijlage-flex-container {
   margin-block-start: var(--voorbeeld-space-block-beetle);
+}
+
+.voorbeeld-bijlage-flex-container:last-of-type {
+  gap: 1em;
 }
 
 .voorbeeld-button-spacing {
