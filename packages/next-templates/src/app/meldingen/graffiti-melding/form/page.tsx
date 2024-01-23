@@ -66,7 +66,7 @@ export default function Home() {
               <BacklinkIcon />
               <span className="voorbeeld--underlined">Terug</span>
             </Link>
-            <Heading1 className="utrecht-heading-1">Melding openbare ruimte</Heading1>
+            <Heading1 className="voorbeeld-heading-1">Melding openbare ruimte</Heading1>
             <Paragraph lead className="voorbeeld-paragraph-lead">
               Vul alle velden in. Als een veld optioneel is, staat dit erbij
             </Paragraph>
