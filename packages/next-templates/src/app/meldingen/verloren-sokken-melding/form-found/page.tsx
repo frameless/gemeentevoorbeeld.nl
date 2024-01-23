@@ -36,9 +36,9 @@ export default function Home() {
   const onSubmit: SubmitHandler<Inputs> = (data) => data;
 
   return (
-    <Page>
+    <Page className="voorbeeld-page--flex">
       <ExampleHeaderFunnel />
-      <PageContent>
+      <PageContent className="voorbeeld-page-content-flex">
         <Heading1>Maak een melding van een gevonden sok</Heading1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormField className="voorbeeld-formField" type="text">
