@@ -204,7 +204,8 @@ utrecht-alert
 
 .voorbeeld-textarea,
 .voorbeeld-form-field__input,
-.voorbeeld-select {
+.voorbeeld-select,
+.voorbeeld-bijlage-flex-container {
   margin-block-start: var(--voorbeeld-space-block-beetle);
 }
 
