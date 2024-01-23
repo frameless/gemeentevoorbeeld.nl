@@ -8,7 +8,6 @@ import {
   FieldsetLegend,
   FormField,
   FormFieldDescription,
-  FormFieldErrorMessage,
   FormLabel,
   Heading1,
   Heading2,
@@ -19,8 +18,6 @@ import {
   RadioButton,
   Select,
   SelectOption,
-  Textarea,
-  Textbox,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
@@ -32,7 +29,6 @@ import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocu
 import { FormFieldTextarea } from '@/components/FormFieldTextarea';
 import { FormFieldTextbox } from '@/components/FormFieldTextbox';
 import {
-  messageValidation,
   homeTownValidation,
   streetValidation,
   nameValidation,
