@@ -5,7 +5,7 @@ body {
 .example--back-link {
   --utrecht-link-text-decoration: none;
 }
-.example--underlined {
+.voorbeeld-span--underlined {
   text-decoration: underline;
 }
 
