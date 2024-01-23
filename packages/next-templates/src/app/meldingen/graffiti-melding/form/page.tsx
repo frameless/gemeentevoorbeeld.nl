@@ -72,8 +72,8 @@ export default function Home() {
             </Paragraph>
             <form method="POST" noValidate onSubmit={handleSubmit((data) => {})}>
               <section className="voorbeeld-section--spacing">
-                <Heading2 utrecht-heading-2>Wat wilt u melden?</Heading2>
-                <Paragraph className="voorbeeld-title-paragraph">Kies een categorie die bij uw melding past.</Paragraph>
+                <Heading2>Wat wilt u melden?</Heading2>
+                <Paragraph className="voorbeeld-paragraph-title">Kies een categorie die bij uw melding past.</Paragraph>
                 <FormField invalid={!!errors.mainCategory}>
                   <FormLabel className="voorbeeld-form-label" htmlFor="mainCategory">
                     Hoofdcategorie
@@ -138,15 +138,15 @@ export default function Home() {
                   errorMessage={String(errors[descriptionField.name]?.message)}
                   {...descriptionField}
                 />
-                <div className="voorbeeld-bijlage-flex-container">
+                <div className="voorbeeld-container-bijlage--flex">
                   <Paragraph className="voorbeeld-paragraph-bijlage">Bijlage</Paragraph>
                   <Paragraph>(optioneel)</Paragraph>
                 </div>
-                <UnorderedList className="voorbeeld-unordered-list-space">
+                <UnorderedList className="voorbeeld-unordered-list--spacing">
                   <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
                   <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
                 </UnorderedList>
-                <div className="voorbeeld-bijlage-flex-container">
+                <div className="voorbeeld-container-bijlage--flex">
                   <Button appearance="secondary-action-button">Bestand kiezen</Button>
                   <Paragraph className="voorbeeld-paragraph-bijlage">Geen bestand gekozen</Paragraph>
                 </div>
@@ -186,18 +186,18 @@ export default function Home() {
                 <Heading2>Hoe kunnen we u bereiken voor meer informatie?</Heading2>
                 <Fieldset role="radiogroup">
                   <FieldsetLegend>Anoniem Melden?</FieldsetLegend>
-                  <FormFieldDescription className="voorbeeld-FormFieldDescription--spacing">
+                  <FormFieldDescription className="voorbeeld-formField-description--spacing">
                     Als u iets anoniem meld kunnen we u niet informeren over het verloop van de afhandeling voor deze
                     melding.
                   </FormFieldDescription>
                   <FormField className="voorbeeld-formField" type="radio">
-                    <FormLabel className="voorbeeld-radio-button-form-label" htmlFor="anoniem-ja" type="radio">
+                    <FormLabel className="voorbeeld-form-label" htmlFor="anoniem-ja" type="radio">
                       Ja
                     </FormLabel>
                     <RadioButton className="utrecht-form-field__input" id="anoniem-ja" name="anoniem" value="1" />
                   </FormField>
                   <FormField className="voorbeeld-formField" type="radio">
-                    <FormLabel className="voorbeeld-radio-button-form-label" htmlFor="anoniem-nee" type="radio">
+                    <FormLabel className="voorbeeld-form-label" htmlFor="anoniem-nee" type="radio">
                       Nee
                     </FormLabel>
                     <RadioButton className="utrecht-form-field__input" id="anoniem-nee" name="anoniem" value="2" />
