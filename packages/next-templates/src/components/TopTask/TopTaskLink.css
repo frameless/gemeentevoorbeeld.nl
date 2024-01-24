@@ -1,14 +1,22 @@
 .example-toptask-link {
   flex: calc(100% / 3);
+  --utrecht-link-color: var(--voorbeeld-color-white);
   padding: var(--voorbeeld-space-inline-rabbit);
   background-color: var(--voorbeeld-color-violet-700);
   text-decoration: none;
 }
 
 .example-toptask-link:focus-visible {
-  border-radius: 3px;
   box-shadow: 0 0 0 2px var(--voorbeeld-color-white);
-  outline: 3px dotted var(--voorbeeld-color-black);
+  outline: 3px dotted var(--voorbeeld-color-violet-700);
+}
+
+.example-toptask-link:focus {
+  --utrecht-link-focus-color: var(--voorbeeld-color-black);
+}
+
+.example-toptask-link:hover {
+  --utrecht-link-hover-color: var(--voorbeeld-color-white);
 }
 
 .example-toptask-link__icon {
@@ -20,6 +28,5 @@
 
 .example-toptask-link__title {
   padding-block-start: var(--voorbeeld-space-inline-rabbit);
-  color: var(--voorbeeld-color-white);
   font-weight: var(--voorbeeld-typography-font-weight-medium);
 }
