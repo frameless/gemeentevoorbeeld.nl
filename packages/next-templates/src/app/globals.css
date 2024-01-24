@@ -162,7 +162,7 @@ utrecht-alert
   margin-block-end: var(--voorbeeld-space-block-dog);
 }
 
-.voorbeeld-unordered-list-spacing {
+.voorbeeld-unordered-list--spacing {
   margin-block: var(--voorbeeld-space-block-snail);
 }
 
