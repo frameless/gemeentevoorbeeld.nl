@@ -212,7 +212,7 @@ utrecht-alert
 }
 
 .voorbeeld-textarea,
-.voorbeeld-form-field__input,
+.voorbeeld-radio-button,
 .voorbeeld-select,
 .voorbeeld-container-bijlage--flex {
   margin-block-start: var(--voorbeeld-space-block-beetle);
