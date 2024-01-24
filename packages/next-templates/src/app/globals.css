@@ -204,7 +204,7 @@ utrecht-alert
 
 .voorbeeld-back-link {
   display: flex;
-  gap: 5px;
+  gap: var(--voorbeeld-space-inline-snail);
 }
 
 .voorbeeld-back-link > svg {
