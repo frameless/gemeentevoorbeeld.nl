@@ -36,24 +36,6 @@ export const TopTaskLink = forwardRef(
     // Telephone number rendering in React is best achieved using composition
     // of the TelephoneValue component.
     <Link className="example-toptask-link" href={placeholder ? '#' : href}>
-      {/* // <a
-    //   href={placeholder ? '#' : href}
-    //   ref={ref}
-    //   role={role || (placeholder ? 'link' : undefined)}
-    //   className={clsx(
-    //     'example-toptask-link',
-    //     'example-toptask-link--html-a',
-    //     {
-    //       'example-toptask-link--box-content': boxContent,
-    //       'example-toptask-link--external': external,
-    //       'example-toptask-link--placeholder': placeholder,
-    //     },
-    //     className,
-    //   )}
-    //   aria-disabled={placeholder ? 'true' : undefined}
-    //   rel={external ? 'external noopener noreferrer' : undefined}
-    //   {...restProps}
-    // > */}
       {icon && <span className="example-toptask-link__icon">{icon}</span>}
       <span className="example-toptask-link__title">{children}</span>
     </Link>
