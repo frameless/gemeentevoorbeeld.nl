@@ -194,13 +194,13 @@ export default function Home() {
                     <FormLabel className="voorbeeld-form-label" htmlFor="anoniem-ja" type="radio">
                       Ja
                     </FormLabel>
-                    <RadioButton className="voorbeeld-form-field__input" id="anoniem-ja" name="anoniem" value="1" />
+                    <RadioButton className="voorbeeld-radio-button" id="anoniem-ja" name="anoniem" value="1" />
                   </FormField>
                   <FormField className="voorbeeld-form-field" type="radio">
                     <FormLabel className="voorbeeld-form-label" htmlFor="anoniem-nee" type="radio">
                       Nee
                     </FormLabel>
-                    <RadioButton className="voorbeeld-form-field__input" id="anoniem-nee" name="anoniem" value="2" />
+                    <RadioButton className="voorbeeld-radio-button" id="anoniem-nee" name="anoniem" value="2" />
                   </FormField>
                 </Fieldset>
                 <FormFieldTextbox
