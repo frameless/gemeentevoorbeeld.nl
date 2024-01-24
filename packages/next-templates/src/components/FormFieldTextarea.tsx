@@ -99,7 +99,7 @@ export const FormFieldTextarea = forwardRef(
         />
         {status && (
           <div className="voorbeeld-form-field__status" id={statusId}>
-            <div className="voorbeeld-form-field-description utrecht-form-field-description--status">{status}</div>
+            <div className="voorbeeld-form-field-description voorbeeld-form-field-description--status">{status}</div>
           </div>
         )}
       </FormField>
