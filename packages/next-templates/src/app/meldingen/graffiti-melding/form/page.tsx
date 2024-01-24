@@ -138,10 +138,8 @@ export default function Home() {
                   errorMessage={String(errors[descriptionField.name]?.message)}
                   {...descriptionField}
                 />
-                <div className="voorbeeld-container-bijlage--flex">
-                  <FormLabel className="voorbeeld-form-label-bijlage">Bijlage</FormLabel>
-                  <FormFieldDescription>(optioneel)</FormFieldDescription>
-                </div>
+                <FormLabel className="voorbeeld-form-label-bijlage">Bijlage</FormLabel>
+                <FormFieldDescription>(optioneel)</FormFieldDescription>
                 <UnorderedList className="voorbeeld-unordered-list--spacing">
                   <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
                   <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
