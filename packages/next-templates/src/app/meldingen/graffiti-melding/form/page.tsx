@@ -138,7 +138,7 @@ export default function Home() {
                   errorMessage={String(errors[descriptionField.name]?.message)}
                   {...descriptionField}
                 />
-                <FormLabel className="voorbeeld-form-label-bijlage">Bijlage</FormLabel>
+                <FormLabel className="voorbeeld-form-label">Bijlage</FormLabel>
                 <FormFieldDescription>Niet verplicht.</FormFieldDescription>
                 <UnorderedList className="voorbeeld-unordered-list--spacing">
                   <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
