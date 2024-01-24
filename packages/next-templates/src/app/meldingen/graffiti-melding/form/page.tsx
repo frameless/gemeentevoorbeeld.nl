@@ -140,7 +140,7 @@ export default function Home() {
                 />
                 <div className="voorbeeld-container-bijlage--flex">
                   <FormLabel className="voorbeeld-form-label-bijlage">Bijlage</FormLabel>
-                  <FormLabel>(optioneel)</FormLabel>
+                  <FormFieldDescription>(optioneel)</FormFieldDescription>
                 </div>
                 <UnorderedList className="voorbeeld-unordered-list--spacing">
                   <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
