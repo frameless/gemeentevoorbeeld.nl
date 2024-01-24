@@ -139,7 +139,7 @@ export default function Home() {
                   {...descriptionField}
                 />
                 <FormLabel className="voorbeeld-form-label-bijlage">Bijlage</FormLabel>
-                <FormFieldDescription>(optioneel)</FormFieldDescription>
+                <FormFieldDescription>Niet verplicht.</FormFieldDescription>
                 <UnorderedList className="voorbeeld-unordered-list--spacing">
                   <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
                   <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
