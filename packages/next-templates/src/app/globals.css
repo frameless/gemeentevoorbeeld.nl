@@ -218,6 +218,10 @@ utrecht-alert
   margin-block-start: var(--voorbeeld-space-block-beetle);
 }
 
+.voorbeeld-container-bijlage--flex {
+  display: flex;
+}
+
 .voorbeeld-container-bijlage--flex:last-of-type {
   display: flex;
   align-items: baseline;
