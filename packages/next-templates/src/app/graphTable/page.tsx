@@ -1,7 +1,6 @@
 'use client';
 
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
-import './index.style.css';
 
 interface GraphTableProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   children?: any;
