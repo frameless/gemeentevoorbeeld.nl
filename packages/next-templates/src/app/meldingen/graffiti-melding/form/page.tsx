@@ -138,16 +138,18 @@ export default function Home() {
                   errorMessage={String(errors[descriptionField.name]?.message)}
                   {...descriptionField}
                 />
-                <FormLabel className="voorbeeld-form-label">Bijlage</FormLabel>
-                <FormFieldDescription>Niet verplicht.</FormFieldDescription>
-                <UnorderedList className="voorbeeld-unordered-list--spacing">
-                  <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
-                  <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
-                </UnorderedList>
-                <div className="voorbeeld-container-bijlage--flex">
-                  <Button appearance="secondary-action-button">Bestand kiezen</Button>
-                  <Paragraph className="voorbeeld-paragraph-bijlage">Geen bestand gekozen</Paragraph>
-                </div>
+                <FormField className="voorbeeld-form-field">
+                  <FormLabel className="voorbeeld-form-label">Bijlage</FormLabel>
+                  <FormFieldDescription>Niet verplicht.</FormFieldDescription>
+                  <UnorderedList className="voorbeeld-unordered-list--spacing">
+                    <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
+                    <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
+                  </UnorderedList>
+                  <div className="voorbeeld-container-bijlage--flex">
+                    <Button appearance="secondary-action-button">Bestand kiezen</Button>
+                    <Paragraph className="voorbeeld-paragraph-bijlage">Geen bestand gekozen</Paragraph>
+                  </div>
+                </FormField>
               </section>
               <section className="voorbeeld-section--spacing">
                 <Heading2>Op welke locatie heeft de melding betrekking?</Heading2>
