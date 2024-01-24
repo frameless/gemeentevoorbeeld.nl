@@ -202,12 +202,12 @@ utrecht-alert
   display: block;
 }
 
-.voorbeeld-back-link {
+.voorbeeld-link-back {
   display: flex;
   gap: var(--voorbeeld-space-inline-snail);
 }
 
-.voorbeeld-back-link > svg {
+.voorbeeld-link-back > svg {
   align-self: center;
 }
 
