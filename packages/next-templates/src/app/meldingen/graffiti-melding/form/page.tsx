@@ -60,7 +60,7 @@ export default function Home() {
     <Document>
       <Page>
         <ExampleHeaderFunnel />
-        <PageContent className="voorbeeld-page-content-flex">
+        <PageContent className="voorbeeld-page-content--flex">
           <Article className="voorbeeld-article-space">
             <Link className="voorbeeld-link-back" href="./">
               <BacklinkIcon />
