@@ -17,6 +17,7 @@ import {
   Textbox,
 } from '@utrecht/component-library-react';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
+import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 
@@ -165,6 +166,7 @@ export default function Home() {
             </Paragraph>
           </Article>
         </PageContent>
+        <ExampleFooterFocus />
       </Page>
     </Document>
   );
