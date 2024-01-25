@@ -19,6 +19,7 @@
   display: block;
   line-height: var(--line-height, 1.6);
   font-size: var(--voorbeeld-size-icon-2xl);
+  --utrecht-icon-size: var(--voorbeeld-size-sm);
 }
 
 .example-toptask-link__title {
