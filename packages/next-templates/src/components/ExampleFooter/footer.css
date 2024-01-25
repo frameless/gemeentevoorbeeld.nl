@@ -40,9 +40,9 @@
 .voorbeeld-navigation-list {
   padding-inline-start: 0;
 }
-.example-footer-content {
-  margin-block-start: 1em;
-  margin-inline-start: 2.5em;
+.example-footer__content {
+  margin-inline: auto;
+  max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.5);
 }
 
 .voorbeeld-footer-block {
