@@ -6,15 +6,17 @@ import '../footer.css';
 interface ExampleFooterFocusProps extends HTMLAttributes<HTMLDivElement> {}
 export const ExampleFooterFocus = ({ ...props }: ExampleFooterFocusProps) => (
   <PageFooter>
-    <div className="example-link-list-container" {...props}>
-      <Logo className="example--footer-logo" />
-      <section className="example-footer-content">
-        <Heading5>Heading</Heading5>
-        <Paragraph className="utrecht-link-list__item">
-          Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
-        </Paragraph>
-      </section>
-    </div>
+    <section className="example-footer__content">
+      <div className="example-link-list-container" {...props}>
+        <Logo className="example--footer-logo" />
+        <div className="example-container-info">
+          <Heading5>Heading</Heading5>
+          <Paragraph className="utrecht-link-list__item">
+            Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
+          </Paragraph>
+        </div>
+      </div>
+    </section>
   </PageFooter>
 );
 
