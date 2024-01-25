@@ -12,6 +12,7 @@
 
 .example-toptask-link:hover {
   --utrecht-link-hover-color: var(--voorbeeld-color-white);
+  background-color: var(--voorbeeld-color-violet-900);
 }
 
 .example-toptask-link__icon {
