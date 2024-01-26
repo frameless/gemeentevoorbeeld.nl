@@ -109,7 +109,7 @@ export default function Home() {
                   <FormField type="radio" className="radio-field">
                     <FormLabel className="voorbeeld-form-label" htmlFor="right-now" type="radio">
                       <RadioButton
-                        className="utrecht-form-field__input"
+                        className="voorbeeld-form-field__input"
                         id="right-now"
                         name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
                         value="1"
@@ -120,7 +120,7 @@ export default function Home() {
                   <FormField type="radio" className="radio-field">
                     <FormLabel className="voorbeeld-form-label" htmlFor="shortly" type="radio">
                       <RadioButton
-                        className="utrecht-form-field__input"
+                        className="voorbeeld-form-field__input"
                         id="shortly"
                         name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
                         value="2"
@@ -131,7 +131,7 @@ export default function Home() {
                   <FormField type="radio" className="radio-field">
                     <FormLabel className="voorbeeld-form-label" htmlFor="when-pigs-can-fly" type="radio">
                       <RadioButton
-                        className="utrecht-form-field__input"
+                        className="voorbeeld-form-field__input"
                         id="when-pigs-can-fly"
                         name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
                         value="3"
