@@ -154,7 +154,7 @@ export default function Home() {
                 </Fieldset>
               </section>
               <section className="voorbeeld-section--spacing">
-                <FormLabel className="voorbeeld-form-label">Contactgegevens:</FormLabel>
+                <FieldsetLegend>Contactgegevens:</FieldsetLegend>
                 <FormFieldDescription>
                   Laat uw naam en e-mailadres achter, zodat we u op de hoogte kunnen houden van eventuele magische
                   ontwikkelingen.
