@@ -8,6 +8,7 @@ import {
   FieldsetLegend,
   FormField,
   FormLabel,
+  FormFieldDescription,
   Heading1,
   Link,
   Page,
@@ -143,10 +144,10 @@ export default function Home() {
               </section>
               <section className="voorbeeld-section--spacing">
                 <FormLabel className="voorbeeld-form-label">Contactgegevens:</FormLabel>
-                <Paragraph>
+                <FormFieldDescription>
                   Laat uw naam en e-mailadres achter, zodat we u op de hoogte kunnen houden van eventuele magische
                   ontwikkelingen.
-                </Paragraph>
+                </FormFieldDescription>
                 <FormField className="voorbeeld-formField" invalid={!!errors.fullName}>
                   <FormLabel className="voorbeeld-form-label" htmlFor="fullName">
                     Volledige naam:
