@@ -17,6 +17,8 @@ import {
   RadioButton,
   Textarea,
   Textbox,
+  UnorderedList,
+  UnorderedListItem,
 } from '@utrecht/component-library-react';
 import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
@@ -98,21 +100,17 @@ export default function Home() {
                   errorMessage={String(errors[descriptionField.name]?.message)}
                   {...descriptionField}
                 />
-                <FormField className="voorbeeld-formField" invalid={!!errors.enclosedAerialView}>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="enclosed-aerial-view">
-                    Bijgevoegde luchtfoto&apos;s:
-                  </FormLabel>
-                  <Textbox
-                    id="enclosed-aerial-view"
-                    className="voorbeeld-form-field__input"
-                    invalid={!!errors.enclosedAerialView}
-                    {...register('enclosedAerialView', {
-                      required: 'Dit is verplicht',
-                      minLength: { value: 4, message: 'Min length is 4' },
-                    })}
-                    placeholder="Upload hier uw luchtfoto's"
-                  />
-                  <Paragraph>{errors.enclosedAerialView?.message}</Paragraph>
+                <FormField className="voorbeeld-form-field">
+                  <FormLabel className="voorbeeld-form-label">Bijlage van luchtfoto(&apos;s):</FormLabel>
+                  <FormFieldDescription>Niet verplicht.</FormFieldDescription>
+                  <UnorderedList className="voorbeeld-unordered-list--spacing">
+                    <UnorderedListItem>Bestanden moeten kleiner zijn dan 10 MB.</UnorderedListItem>
+                    <UnorderedListItem>Toegestane bestandstypen: gif, jpg, jpeg, png.</UnorderedListItem>
+                  </UnorderedList>
+                  <div className="voorbeeld-container-bijlage--flex">
+                    <Button appearance="secondary-action-button">Bestand kiezen</Button>
+                    <Paragraph className="voorbeeld-paragraph-bijlage">Geen bestand gekozen</Paragraph>
+                  </div>
                 </FormField>
                 <Fieldset id="df861ef1-844a-42df-8365-b54f59474fb8" role="radiogroup">
                   <FieldsetLegend>
