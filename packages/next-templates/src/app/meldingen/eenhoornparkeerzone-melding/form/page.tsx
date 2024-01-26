@@ -108,35 +108,35 @@ export default function Home() {
                     Hoe snel denkt u dat de eenhoorns en vliegende huisdieren hulp nodig hebben?
                   </FieldsetLegend>
                   <FormField type="radio" className="radio-field">
+                    <RadioButton
+                      className="voorbeeld-radio-button"
+                      id="right-now"
+                      name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
+                      value="1"
+                    />
                     <FormLabel className="voorbeeld-form-label" htmlFor="right-now" type="radio">
-                      <RadioButton
-                        className="voorbeeld-radio-button"
-                        id="right-now"
-                        name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                        value="1"
-                      />
                       Nu meteen
                     </FormLabel>
                   </FormField>
                   <FormField type="radio" className="radio-field">
+                    <RadioButton
+                      className="voorbeeld-radio-button"
+                      id="shortly"
+                      name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
+                      value="2"
+                    />
                     <FormLabel className="voorbeeld-form-label" htmlFor="shortly" type="radio">
-                      <RadioButton
-                        className="voorbeeld-radio-button"
-                        id="shortly"
-                        name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                        value="2"
-                      />
                       Binnenkort
                     </FormLabel>
                   </FormField>
                   <FormField type="radio" className="radio-field">
+                    <RadioButton
+                      className="voorbeeld-radio-button"
+                      id="when-pigs-can-fly"
+                      name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
+                      value="3"
+                    />
                     <FormLabel className="voorbeeld-form-label" htmlFor="when-pigs-can-fly" type="radio">
-                      <RadioButton
-                        className="voorbeeld-radio-button"
-                        id="when-pigs-can-fly"
-                        name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3"
-                        value="3"
-                      />
                       Wanneer varkens kunnen vliegen
                     </FormLabel>
                   </FormField>
