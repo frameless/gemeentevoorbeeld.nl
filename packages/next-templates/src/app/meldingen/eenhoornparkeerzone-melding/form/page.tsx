@@ -9,6 +9,7 @@ import {
   FormField,
   FormLabel,
   Heading1,
+  Link,
   Page,
   PageContent,
   Paragraph,
@@ -16,6 +17,7 @@ import {
   Textarea,
   Textbox,
 } from '@utrecht/component-library-react';
+import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
 import { useForm } from 'react-hook-form';
@@ -35,6 +37,10 @@ export default function Home() {
         <ExampleHeaderFunnel />
         <PageContent>
           <Article className="voorbeeld-article-space">
+            <Link className="voorbeeld-back-link" href="./">
+              <BacklinkIcon />
+              <span className="voorbeeld-span--underlined">Terug</span>
+            </Link>
             <Heading1 className="voorbeeld-heading-1">
               Meldpunt om een roze eenhoornparkeerzone op straat te creëren voor inwoners met vliegende huisdieren
             </Heading1>
