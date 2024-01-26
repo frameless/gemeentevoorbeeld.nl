@@ -52,7 +52,9 @@ export default function Home() {
             >
               <section className="voorbeeld-section--spacing">
                 <FormField className="voorbeeld-formField" invalid={!!errors.location}>
-                  <FormLabel htmlFor="location">Locatie:</FormLabel>
+                  <FormLabel className="voorbeeld-form-label" htmlFor="location">
+                    Locatie:
+                  </FormLabel>
                   <Textbox
                     id="location"
                     {...register('location', {
@@ -65,7 +67,9 @@ export default function Home() {
                   <Paragraph>{errors.location?.message}</Paragraph>
                 </FormField>
                 <FormField className="voorbeeld-formField" invalid={!!errors.description}>
-                  <FormLabel htmlFor="description">Beschrijving:</FormLabel>
+                  <FormLabel className="voorbeeld-form-label" htmlFor="description">
+                    Beschrijving:
+                  </FormLabel>
                   <Textarea
                     id="description"
                     invalid={!!errors.description}
@@ -78,7 +82,9 @@ export default function Home() {
                   <Paragraph>{errors.description?.message}</Paragraph>
                 </FormField>
                 <FormField className="voorbeeld-formField" invalid={!!errors.enclosedAerialView}>
-                  <FormLabel htmlFor="enclosed-aerial-view">Bijgevoegde luchtfoto&apos;s:</FormLabel>
+                  <FormLabel className="voorbeeld-form-label" htmlFor="enclosed-aerial-view">
+                    Bijgevoegde luchtfoto&apos;s:
+                  </FormLabel>
                   <Textbox
                     id="enclosed-aerial-view"
                     invalid={!!errors.enclosedAerialView}
@@ -95,7 +101,7 @@ export default function Home() {
                     Hoe snel denkt u dat de eenhoorns en vliegende huisdieren hulp nodig hebben?
                   </FieldsetLegend>
                   <FormField type="radio" className="radio-field">
-                    <FormLabel htmlFor="right-now" type="radio">
+                    <FormLabel className="voorbeeld-form-label" htmlFor="right-now" type="radio">
                       <RadioButton
                         className="utrecht-form-field__input"
                         id="right-now"
@@ -106,7 +112,7 @@ export default function Home() {
                     </FormLabel>
                   </FormField>
                   <FormField type="radio" className="radio-field">
-                    <FormLabel htmlFor="shortly" type="radio">
+                    <FormLabel className="voorbeeld-form-label" htmlFor="shortly" type="radio">
                       <RadioButton
                         className="utrecht-form-field__input"
                         id="shortly"
@@ -117,7 +123,7 @@ export default function Home() {
                     </FormLabel>
                   </FormField>
                   <FormField type="radio" className="radio-field">
-                    <FormLabel htmlFor="when-pigs-can-fly" type="radio">
+                    <FormLabel className="voorbeeld-form-label" htmlFor="when-pigs-can-fly" type="radio">
                       <RadioButton
                         className="utrecht-form-field__input"
                         id="when-pigs-can-fly"
@@ -130,13 +136,15 @@ export default function Home() {
                 </Fieldset>
               </section>
               <section className="voorbeeld-section--spacing">
-                <FormLabel>Contactgegevens:</FormLabel>
+                <FormLabel className="voorbeeld-form-label">Contactgegevens:</FormLabel>
                 <Paragraph>
                   Laat uw naam en e-mailadres achter, zodat we u op de hoogte kunnen houden van eventuele magische
                   ontwikkelingen.
                 </Paragraph>
                 <FormField className="voorbeeld-formField" invalid={!!errors.fullName}>
-                  <FormLabel htmlFor="fullName">Volledige naam:</FormLabel>
+                  <FormLabel className="voorbeeld-form-label" htmlFor="fullName">
+                    Volledige naam:
+                  </FormLabel>
                   <Textbox
                     invalid={!!errors.fullName}
                     {...register('fullName', {
@@ -149,7 +157,9 @@ export default function Home() {
                 </FormField>
                 <Paragraph>{errors.fullName?.message}</Paragraph>
                 <FormField className="voorbeeld-formField" invalid={!!errors.emailAdress}>
-                  <FormLabel htmlFor="emailAdress">E-mailadres:</FormLabel>
+                  <FormLabel className="voorbeeld-form-label" htmlFor="emailAdress">
+                    E-mailadres:
+                  </FormLabel>
                   <Textbox
                     invalid={!!errors.emailAdress}
                     {...register('emailAdress', { required: 'Dit is verplicht' })}
