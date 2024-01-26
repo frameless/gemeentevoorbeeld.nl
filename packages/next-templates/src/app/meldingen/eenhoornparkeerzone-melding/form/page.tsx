@@ -64,6 +64,7 @@ export default function Home() {
                   </FormLabel>
                   <Textbox
                     id="location"
+                    className="voorbeeld-form-field__input"
                     {...register('location', {
                       required: 'Dit is verplicht',
                       minLength: { value: 4, message: 'Min length is 4' },
@@ -79,6 +80,7 @@ export default function Home() {
                   </FormLabel>
                   <Textarea
                     id="description"
+                    className="voorbeeld-form-field__input"
                     invalid={!!errors.description}
                     {...register('description', {
                       required: 'Dit is verplicht',
@@ -94,6 +96,7 @@ export default function Home() {
                   </FormLabel>
                   <Textbox
                     id="enclosed-aerial-view"
+                    className="voorbeeld-form-field__input"
                     invalid={!!errors.enclosedAerialView}
                     {...register('enclosedAerialView', {
                       required: 'Dit is verplicht',
@@ -154,6 +157,7 @@ export default function Home() {
                   </FormLabel>
                   <Textbox
                     invalid={!!errors.fullName}
+                    className="voorbeeld-form-field__input"
                     {...register('fullName', {
                       required: 'Dit is verplicht',
                       minLength: { value: 4, message: 'Min length is 4' },
@@ -169,6 +173,7 @@ export default function Home() {
                   </FormLabel>
                   <Textbox
                     invalid={!!errors.emailAdress}
+                    className="voorbeeld-form-field__input"
                     {...register('emailAdress', { required: 'Dit is verplicht' })}
                     placeholder="Vul hier uw e-mailadres in"
                     id="emailAdress"
