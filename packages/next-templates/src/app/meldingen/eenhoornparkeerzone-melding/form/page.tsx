@@ -27,7 +27,7 @@ import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import { FormFieldTextarea } from '@/components/FormFieldTextarea';
 import { FormFieldTextbox } from '@/components/FormFieldTextbox';
-import { homeTownValidation, streetValidation } from '@/utils/validation';
+import { homeTownValidation, streetValidation, nameValidation, emailValidation } from '@/utils/validation';
 
 export default function Home() {
   const router = useRouter();
@@ -43,6 +43,8 @@ export default function Home() {
   });
   const placeField = register('place', homeTownValidation);
   const streetField = register('street', streetValidation);
+  const nameField = register('name', nameValidation);
+  const emailField = register('email', emailValidation);
 
   return (
     <Document>
@@ -157,34 +159,32 @@ export default function Home() {
                   Laat uw naam en e-mailadres achter, zodat we u op de hoogte kunnen houden van eventuele magische
                   ontwikkelingen.
                 </FormFieldDescription>
-                <FormField className="voorbeeld-formField" invalid={!!errors.fullName}>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="fullName">
-                    Volledige naam:
-                  </FormLabel>
-                  <Textbox
-                    invalid={!!errors.fullName}
-                    className="voorbeeld-form-field__input"
-                    {...register('fullName', {
-                      required: 'Dit is verplicht',
-                      minLength: { value: 4, message: 'Min length is 4' },
-                    })}
-                    placeholder="Vul hier uw volledige naam in"
-                    id="fullName"
-                  />
-                </FormField>
-                <Paragraph>{errors.fullName?.message}</Paragraph>
-                <FormField className="voorbeeld-formField" invalid={!!errors.emailAdress}>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="emailAdress">
-                    E-mailadres:
-                  </FormLabel>
-                  <Textbox
-                    invalid={!!errors.emailAdress}
-                    className="voorbeeld-form-field__input"
-                    {...register('emailAdress', { required: 'Dit is verplicht' })}
-                    placeholder="Vul hier uw e-mailadres in"
-                    id="emailAdress"
-                  />
-                </FormField>
+                <FormFieldTextbox
+                  id={`name-${nameField.name}`}
+                  className="voorbeeld-textbox"
+                  invalid={!!errors[nameField.name]}
+                  placeholder="Vul hier uw volledige naam in"
+                  required
+                  type="name"
+                  autoComplete="name"
+                  errorMessage={String(errors[nameField.name]?.message)}
+                  aria-label="Volledige naam"
+                  label="Volledige naam"
+                  {...nameField}
+                />
+                <FormFieldTextbox
+                  id={`email-${emailField.name}`}
+                  className="voorbeeld-textbox"
+                  invalid={!!errors[emailField.name]}
+                  placeholder="Vul hier uw e-mailadres in"
+                  autoComplete="email"
+                  type="email"
+                  required
+                  errorMessage={String(errors[emailField.name]?.message)}
+                  aria-label="E-mailadres"
+                  label="E-mailadres"
+                  {...emailField}
+                />
                 <Paragraph>{errors.emailAdress?.message}</Paragraph>
                 <Button className="voorbeeld-button--spacing" type="submit" appearance="primary-action-button">
                   Dien uw melding in
