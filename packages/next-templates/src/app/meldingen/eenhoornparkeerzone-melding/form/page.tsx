@@ -157,7 +157,7 @@ export default function Home() {
                 />
               </FormField>
               <Paragraph>{errors.emailAdress?.message}</Paragraph>
-              <Button type="submit" appearance="primary-action-button">
+              <Button className="voorbeeld-button--spacing" type="submit" appearance="primary-action-button">
                 Dien uw melding in
               </Button>
             </form>
