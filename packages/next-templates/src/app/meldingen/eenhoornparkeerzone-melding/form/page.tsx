@@ -51,7 +51,9 @@ export default function Home() {
               })}
             >
               <FormField invalid={!!errors.location}>
-                <FormLabel htmlFor="location">Locatie:</FormLabel>
+                <FormLabel className="voorbeeld-formField" htmlFor="location">
+                  Locatie:
+                </FormLabel>
                 <Textbox
                   id="location"
                   {...register('location', {
@@ -63,7 +65,7 @@ export default function Home() {
                 />
                 <Paragraph>{errors.location?.message}</Paragraph>
               </FormField>
-              <FormField invalid={!!errors.description}>
+              <FormField className="voorbeeld-formField" invalid={!!errors.description}>
                 <FormLabel htmlFor="description">Beschrijving:</FormLabel>
                 <Textarea
                   id="description"
@@ -76,7 +78,7 @@ export default function Home() {
                 />
                 <Paragraph>{errors.description?.message}</Paragraph>
               </FormField>
-              <FormField invalid={!!errors.enclosedAerialView}>
+              <FormField className="voorbeeld-formField" invalid={!!errors.enclosedAerialView}>
                 <FormLabel htmlFor="enclosed-aerial-view">Bijgevoegde luchtfoto&apos;s:</FormLabel>
                 <Textbox
                   id="enclosed-aerial-view"
@@ -132,7 +134,7 @@ export default function Home() {
                 Laat uw naam en e-mailadres achter, zodat we u op de hoogte kunnen houden van eventuele magische
                 ontwikkelingen.
               </Paragraph>
-              <FormField invalid={!!errors.fullName}>
+              <FormField className="voorbeeld-formField" invalid={!!errors.fullName}>
                 <FormLabel htmlFor="fullName">Volledige naam:</FormLabel>
                 <Textbox
                   invalid={!!errors.fullName}
@@ -145,7 +147,7 @@ export default function Home() {
                 />
               </FormField>
               <Paragraph>{errors.fullName?.message}</Paragraph>
-              <FormField invalid={!!errors.emailAdress}>
+              <FormField className="voorbeeld-formField" invalid={!!errors.emailAdress}>
                 <FormLabel htmlFor="emailAdress">E-mailadres:</FormLabel>
                 <Textbox
                   invalid={!!errors.emailAdress}
