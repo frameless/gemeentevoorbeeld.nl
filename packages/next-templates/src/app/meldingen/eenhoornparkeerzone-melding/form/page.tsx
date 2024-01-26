@@ -35,7 +35,7 @@ export default function Home() {
         <ExampleHeaderFunnel />
         <PageContent>
           <Article className="voorbeeld-article-space">
-            <Heading1>
+            <Heading1 className="voorbeeld-heading-1">
               Meldpunt om een roze eenhoornparkeerzone op straat te creëren voor inwoners met vliegende huisdieren
             </Heading1>
             <Paragraph>
