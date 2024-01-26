@@ -23,6 +23,7 @@ import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFun
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
+import { FormFieldTextarea } from '@/components/FormFieldTextarea';
 
 export default function Home() {
   const router = useRouter();
@@ -32,6 +33,11 @@ export default function Home() {
     watch,
     formState: { errors },
   } = useForm<{ [key: string]: string }>();
+
+  const descriptionField = register('description', {
+    required: 'Vul een omschrijving in',
+  });
+
   return (
     <Document>
       <Page>
@@ -74,22 +80,16 @@ export default function Home() {
                   />
                   <Paragraph>{errors.location?.message}</Paragraph>
                 </FormField>
-                <FormField className="voorbeeld-formField" invalid={!!errors.description}>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="description">
-                    Beschrijving:
-                  </FormLabel>
-                  <Textarea
-                    id="description"
-                    className="voorbeeld-form-field__input"
-                    invalid={!!errors.description}
-                    {...register('description', {
-                      required: 'Dit is verplicht',
-                      minLength: { value: 4, message: 'Min length is 4' },
-                    })}
-                    placeholder="Vul hier een beschrijving in"
-                  />
-                  <Paragraph>{errors.description?.message}</Paragraph>
-                </FormField>
+                <FormFieldTextarea
+                  className="voorbeeld-textarea"
+                  id={`field-${descriptionField.name}`}
+                  aria-label="Beschrijving"
+                  label="Beschrijving"
+                  placeholder="Vul hier een beschrijving in"
+                  invalid={!!errors[descriptionField.name]}
+                  errorMessage={String(errors[descriptionField.name]?.message)}
+                  {...descriptionField}
+                />
                 <FormField className="voorbeeld-formField" invalid={!!errors.enclosedAerialView}>
                   <FormLabel className="voorbeeld-form-label" htmlFor="enclosed-aerial-view">
                     Bijgevoegde luchtfoto&apos;s:
