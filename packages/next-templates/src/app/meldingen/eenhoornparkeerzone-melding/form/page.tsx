@@ -24,6 +24,8 @@ import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocu
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import { FormFieldTextarea } from '@/components/FormFieldTextarea';
+import { FormFieldTextbox } from '@/components/FormFieldTextbox';
+import { homeTownValidation, streetValidation } from '@/utils/validation';
 
 export default function Home() {
   const router = useRouter();
@@ -37,6 +39,8 @@ export default function Home() {
   const descriptionField = register('description', {
     required: 'Vul een omschrijving in',
   });
+  const placeField = register('place', homeTownValidation);
+  const streetField = register('street', streetValidation);
 
   return (
     <Document>
@@ -64,22 +68,26 @@ export default function Home() {
               })}
             >
               <section className="voorbeeld-section--spacing">
-                <FormField className="voorbeeld-formField" invalid={!!errors.location}>
-                  <FormLabel className="voorbeeld-form-label" htmlFor="location">
-                    Locatie:
-                  </FormLabel>
-                  <Textbox
-                    id="location"
-                    className="voorbeeld-form-field__input"
-                    {...register('location', {
-                      required: 'Dit is verplicht',
-                      minLength: { value: 4, message: 'Min length is 4' },
-                    })}
-                    placeholder="Vul hier een locatie in"
-                    invalid={!!errors.location}
-                  />
-                  <Paragraph>{errors.location?.message}</Paragraph>
-                </FormField>
+                <FormFieldTextbox
+                  id={`place-${placeField.name}`}
+                  className="voorbeeld-textbox"
+                  placeholder="Vul hier een plaats in"
+                  invalid={!!errors[placeField.name]}
+                  errorMessage={String(errors[placeField.name]?.message)}
+                  aria-label="Plaats"
+                  label="Plaats"
+                  {...placeField}
+                />
+                <FormFieldTextbox
+                  id={`street-${streetField.name}`}
+                  className="voorbeeld-textbox"
+                  placeholder="Vul hier een straat in"
+                  invalid={!!errors[streetField.name]}
+                  errorMessage={String(errors[streetField.name]?.message)}
+                  aria-label="Straat"
+                  label="Straat"
+                  {...streetField}
+                />
                 <FormFieldTextarea
                   className="voorbeeld-textarea"
                   id={`field-${descriptionField.name}`}
