@@ -38,7 +38,7 @@ export default function Home() {
         <ExampleHeaderFunnel />
         <PageContent>
           <Article className="voorbeeld-article-space">
-            <Link className="voorbeeld-back-link" href="./">
+            <Link className="voorbeeld-link-back" href="./">
               <BacklinkIcon />
               <span className="voorbeeld-span--underlined">Terug</span>
             </Link>
