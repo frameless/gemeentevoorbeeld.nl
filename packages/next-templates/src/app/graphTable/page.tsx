@@ -1,5 +1,6 @@
 'use client';
 
+import { PopOverButton } from '@/components/PopOver/PopOverButton';
 import {
   Button,
   Drawer,
@@ -13,29 +14,45 @@ import {
   TableHeaderCell,
   TableRow,
 } from '@utrecht/component-library-react';
-import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import React, { HTMLAttributes, PropsWithChildren, useState } from 'react';
 
-interface GraphTableProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
+interface GraphDrawerProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
+  openButtonText: string;
+  closeButtonText: string;
   children?: any;
-  imageAlt?: string;
 }
 
-export const GraphTable = ({ ...props }: PropsWithChildren<GraphTableProps>) => {
-  const linkRef = React.useRef<HTMLAnchorElement>(null);
+export const GraphDrawer = ({ openButtonText, closeButtonText, children }: PropsWithChildren<GraphDrawerProps>) => {
+  const [open, setOpen] = useState(false);
 
-  //   let card = (
-
-  //   );
-
-  // return card;
+  let graphDrawer = (
+    <div>
+      <Button
+        onClick={() => {
+          setOpen(!open);
+        }}
+      >
+        {openButtonText}
+      </Button>
+      <Drawer open={open}>
+        <Button
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          {closeButtonText}
+        </Button>
+        {children}
+      </Drawer>
+    </div>
+  );
+  return graphDrawer;
 };
 export default function Home() {
   return (
     <Figure>
       <Paragraph>naam van grafiek</Paragraph>
-      <Button>open tabel</Button>
-      <Drawer open>
-        <Button>close</Button>
+      <GraphDrawer openButtonText={'open tabel'} closeButtonText={'close tabel'}>
         <Table>
           <TableHeader>
             <TableRow>
@@ -46,7 +63,7 @@ export default function Home() {
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableHeaderCell scope="col">Item 1</TableHeaderCell>
+              <TableHeaderCell scope="row">Item 1</TableHeaderCell>
               <TableCell>Data</TableCell>
               <TableCell>More data</TableCell>
             </TableRow>
@@ -59,7 +76,7 @@ export default function Home() {
             </TableRow>
           </TableFooter>
         </Table>
-      </Drawer>
+      </GraphDrawer>
     </Figure>
   );
 }
