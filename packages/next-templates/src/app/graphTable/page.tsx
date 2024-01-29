@@ -14,18 +14,18 @@ import {
   TableRow,
 } from '@utrecht/component-library-react';
 import React, { HTMLAttributes, PropsWithChildren, useState } from 'react';
-import './styles/graphTable.css';
+import './styles/FigureDetails.css';
 
-interface GraphDrawerProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
+interface FigureDetailsProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   openButtonText: string;
   closeButtonText: string;
   children?: any;
 }
 
-export const GraphDrawer = ({ openButtonText, closeButtonText, children }: PropsWithChildren<GraphDrawerProps>) => {
+export const FigureDetails = ({ openButtonText, closeButtonText, children }: PropsWithChildren<FigureDetailsProps>) => {
   const [open, setOpen] = useState(false);
 
-  let graphDrawer = (
+  let FigureDetails = (
     <div>
       <Button
         onClick={() => {
@@ -46,13 +46,13 @@ export const GraphDrawer = ({ openButtonText, closeButtonText, children }: Props
       </Drawer>
     </div>
   );
-  return graphDrawer;
+  return FigureDetails;
 };
 export default function Home() {
   return (
     <Figure>
       <Paragraph>naam van grafiek</Paragraph>
-      <GraphDrawer openButtonText={'open tabel'} closeButtonText={'close tabel'}>
+      <FigureDetails openButtonText={'open tabel'} closeButtonText={'close tabel'}>
         <Table>
           <TableHeader>
             <TableRow>
@@ -76,7 +76,7 @@ export default function Home() {
             </TableRow>
           </TableFooter>
         </Table>
-      </GraphDrawer>
+      </FigureDetails>
     </Figure>
   );
 }
