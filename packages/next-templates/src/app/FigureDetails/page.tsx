@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <Figure>
       <Paragraph>naam van grafiek</Paragraph>
-      <FigureDetails openButtonText={'open tabel'} closeButtonText={'close tabel'}>
+      <FigureDetails className="utrecht-figure-details" openButtonText={'open tabel'} closeButtonText={'close tabel'}>
         <Table>
           <TableHeader>
             <TableRow>
