@@ -14,6 +14,7 @@ import {
   TableRow,
 } from '@utrecht/component-library-react';
 import React, { HTMLAttributes, PropsWithChildren, useState } from 'react';
+import './styles/graphTable.css';
 
 interface GraphDrawerProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   openButtonText: string;
