@@ -184,6 +184,10 @@ utrecht-alert
   max-width: 80ch;
 }
 
+.utrecht-paragraph:last-of-type {
+  margin-block-start: var(--voorbeeld-space-block-beetle);
+}
+
 .utrecht-unordered-list {
   max-width: 80ch;
 }
