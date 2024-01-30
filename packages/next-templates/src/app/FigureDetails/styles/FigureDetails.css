@@ -1,5 +1,9 @@
 .utrecht-figure-details {
-  position: relative;
+  block-size: revert;
+  inset-inline-end: revert;
+  padding-inline: 10px;
+  padding-block: 10px;
+  border-radius: 10px;
 }
 
 .utrecht-figure-details::backdrop {
