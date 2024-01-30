@@ -68,7 +68,7 @@ export default function Home() {
               method="POST"
               action="./eenhoornparkeerzone-melding/confirmed"
               onSubmit={handleSubmit((data) => {
-                router.push('./confirmed');
+                window.location.href = './confirmed';
               })}
             >
               <section className="voorbeeld-section--spacing">
