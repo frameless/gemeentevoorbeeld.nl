@@ -14,34 +14,40 @@ import {
   TableRow,
 } from '@utrecht/component-library-react';
 import React, { HTMLAttributes, PropsWithChildren, useState } from 'react';
+import React, { HTMLAttributes, PropsWithChildren, createRef, useState } from 'react';
 import './styles/FigureDetails.css';
 
 interface FigureDetailsProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   openButtonText: string;
   closeButtonText: string;
+  drawerClassName?: string;
   children?: any;
 }
 
-export const FigureDetails = ({ openButtonText, closeButtonText, children }: PropsWithChildren<FigureDetailsProps>) => {
+export const FigureDetails = ({
+  openButtonText,
+  closeButtonText,
+  drawerClassName,
+  children,
+}: PropsWithChildren<FigureDetailsProps>) => {
   const [open, setOpen] = useState(false);
+  const drawer = createRef<HTMLDialogElement>();
+  const showModal = () => {
+    if (drawer.current) {
+      setOpen(true);
+      drawer.current.showModal();
+    }
+  };
+  const closeModal = () => {
+    setOpen(false);
+    drawer.current?.close();
+  };
 
   let FigureDetails = (
     <div>
-      <Button
-        onClick={() => {
-          setOpen(!open);
-        }}
-      >
-        {openButtonText}
-      </Button>
-      <Drawer open={open}>
-        <Button
-          onClick={() => {
-            setOpen(!open);
-          }}
-        >
-          {closeButtonText}
-        </Button>
+      <Button onClick={showModal}>{openButtonText}</Button>
+      <Drawer className={drawerClassName} ref={drawer} open={open}>
+        <Button onClick={closeModal}>{closeButtonText}</Button>
         {children}
       </Drawer>
     </div>
@@ -52,7 +58,11 @@ export default function Home() {
   return (
     <Figure>
       <Paragraph>naam van grafiek</Paragraph>
-      <FigureDetails className="utrecht-figure-details" openButtonText={'open tabel'} closeButtonText={'close tabel'}>
+      <FigureDetails
+        drawerClassName="utrecht-figure-details"
+        openButtonText={'open tabel'}
+        closeButtonText={'close tabel'}
+      >
         <Table>
           <TableHeader>
             <TableRow>
