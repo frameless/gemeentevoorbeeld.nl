@@ -184,7 +184,7 @@ utrecht-alert
   max-width: 80ch;
 }
 
-.utrecht-paragraph:last-of-type {
+.voorbeeld-paragraph--spacing {
   margin-block-start: var(--voorbeeld-space-block-beetle);
 }
 
