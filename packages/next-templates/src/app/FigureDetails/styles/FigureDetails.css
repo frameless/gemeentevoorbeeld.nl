@@ -1,0 +1,8 @@
+.utrecht-figure-details {
+  position: relative;
+}
+
+.utrecht-figure-details::backdrop {
+  --utrecht-backdrop-background-color: black;
+  --utrecht-backdrop-opacity: 0.5;
+}
