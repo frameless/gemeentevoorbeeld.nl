@@ -2,11 +2,13 @@
 
 import { ButtonLink, Document, Heading1, Page, PageContent, Paragraph } from '@utrecht/component-library-react';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 
 export default function Home() {
   return (
     <Document>
       <Page>
+        <ExampleHeader />
         <PageContent>
           <Heading1>Melding ontbreken van een Roze Eenhoornparkeerzone</Heading1>
           <Paragraph>
