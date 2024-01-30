@@ -41,7 +41,7 @@ export default function Home() {
             <ButtonLink appearance="primary-action-button" href="./eenhoornparkeerzone-melding/form">
               Maak melding
             </ButtonLink>
-            <Paragraph>
+            <Paragraph className="voorbeeld-paragraph--spacing">
               <i>
                 Dank u voor uw bijdrage aan ons Absurde Meldpunt. We hopen dat u hebt genoten van deze unieke reis in de
                 wereld van verbeelding.
