@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionProvider, Page, PageContent } from '@utrecht/component-library-react';
+import { Button, Heading2, AccordionProvider, Page, PageContent } from '@utrecht/component-library-react';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
 import {
@@ -35,6 +35,12 @@ export default function Home() {
         </section>
         <section className="voorbeeld-section-page voorbeeld-section--spacing">
           <div className="voorbeeld-section-content">
+            <div className="voorbeeld-container-wrapper">
+              <Heading2 className="voorbeeld-heading-2">Zelf regelen</Heading2>
+              <Button className="voorbeeld-button-more" appearance="primary-action-button">
+                Meer bekijken
+              </Button>
+            </div>
             <AccordionProvider
               sections={[
                 {
@@ -50,7 +56,7 @@ export default function Home() {
                 {
                   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
                   expanded: undefined,
-                  label: 'Info over de gemeente',
+                  label: 'Kentekenwijziging doorgeven',
                 },
               ]}
             />
