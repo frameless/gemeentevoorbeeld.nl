@@ -184,7 +184,7 @@ utrecht-alert
 }
 
 .utrecht-accordion__button {
-  --utrecht-button-min-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.125);
+  --utrecht-button-min-inline-size: 100%;
   --utrecht-button-border-radius: 0px;
   border-bottom: 1px solid var(--voorbeeld-color-gray-200);
 }
@@ -195,8 +195,9 @@ utrecht-alert
 
 .voorbeeld-section-content {
   margin-inline: auto;
-  min-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.125);
   padding-inline: var(--voorbeeld-space-block-cat);
+  max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.125);
+  inline-size: 100%;
 }
 
 .voorbeeld-section-2 {
