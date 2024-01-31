@@ -270,6 +270,11 @@ utrecht-alert
   inline-size: 100%;
 }
 
+.voorbeeld-section-container-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .voorbeeld-form-label {
   display: block;
 }
