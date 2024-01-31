@@ -4,7 +4,6 @@ import {
   Button,
   Drawer,
   Figure,
-  Paragraph,
   Table,
   TableBody,
   TableCell,
@@ -14,7 +13,7 @@ import {
   TableRow,
 } from '@utrecht/component-library-react';
 import { VegaVisualization } from '@utrecht/component-library-react/dist/VegaVisualization';
-import React, { HTMLAttributes, PropsWithChildren, createRef, useState } from 'react';
+import React, { HTMLAttributes, PropsWithChildren, useEffect, useRef, useState } from 'react';
 import './styles/FigureDetails.css';
 
 interface FigureDetailsProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
@@ -31,17 +30,42 @@ export const FigureDetails = ({
   children,
 }: PropsWithChildren<FigureDetailsProps>) => {
   const [open, setOpen] = useState(false);
-  const drawer = createRef<HTMLDialogElement>();
+  const drawer = useRef<HTMLDialogElement>(null);
   const showModal = () => {
     if (drawer.current) {
       setOpen(true);
       drawer.current.showModal();
     }
   };
+
   const closeModal = () => {
     setOpen(false);
     drawer.current?.close();
   };
+
+  // const handleFocus = useCallback<EventListener>(
+  //   (event) => {
+  //     const isInsideDrawer = drawer.current?.contains(event.target as Node);
+  //     if (!isInsideDrawer) {
+  //       setOpen(false);
+  //       drawer.current?.close();
+  //     }
+  //   },
+  //   [drawer],
+  // );
+  useEffect(() => {
+    // close the dialog when someone clicked the backdrop
+    const handleBackdropClick = (event: MouseEvent) => {
+      if (event.target === drawer.current) {
+        closeModal();
+      }
+    };
+    document.addEventListener('click', handleBackdropClick);
+
+    return () => {
+      document.removeEventListener('click', handleBackdropClick);
+    };
+  }, []);
 
   let FigureDetails = (
     <div>
