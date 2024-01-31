@@ -250,6 +250,7 @@ utrecht-alert
   --utrecht-accordion-panel-padding-inline-end: var(--voorbeeld-space-inline-mouse);
   background-color: var(--utrecht-accordion-button-background-color);
   min-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.125);
+  inline-size: calc(var(--utrecht-article-max-inline-size) * 1.125);
   margin-block-end: 1px;
 }
 
