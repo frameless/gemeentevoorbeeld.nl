@@ -79,9 +79,6 @@
   },
   "dependencies": {
     "@hookform/error-message": "2.0.1",
-    "http-server": "14.1.1",
-    "react-vega": "7.6.0",
-    "vega": "5.27.0",
-    "vega-lite": "5.16.3"
+    "http-server": "14.1.1"
   }
 }
