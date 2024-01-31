@@ -229,6 +229,7 @@ utrecht-alert
 }
 
 .utrecht-accordion__button[aria-expanded="true"]::before {
+  /* stylelint-disable declaration-no-important */
   content: "";
   inline-size: 28px;
   block-size: 24px;
@@ -236,6 +237,7 @@ utrecht-alert
 }
 
 .utrecht-accordion__button[aria-expanded="false"]::before {
+  /* stylelint-disable declaration-no-important */
   content: "";
   inline-size: var(--voorbeeld-space-inline-cat);
   block-size: var(--voorbeeld-space-block-rabbit);
