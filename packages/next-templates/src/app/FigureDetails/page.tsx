@@ -43,16 +43,6 @@ export const FigureDetails = ({
     drawer.current?.close();
   };
 
-  // const handleFocus = useCallback<EventListener>(
-  //   (event) => {
-  //     const isInsideDrawer = drawer.current?.contains(event.target as Node);
-  //     if (!isInsideDrawer) {
-  //       setOpen(false);
-  //       drawer.current?.close();
-  //     }
-  //   },
-  //   [drawer],
-  // );
   useEffect(() => {
     // close the dialog when someone clicked the backdrop
     const handleBackdropClick = (event: MouseEvent) => {
