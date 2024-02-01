@@ -3,7 +3,6 @@
   grid-template-columns: 240px 240px 240px;
   gap: var(--voorbeeld-space-block-mouse);
   margin-inline: auto;
-  padding-block: var(--voorbeeld-space-block-rat);
 }
 
 @media (max-width: 800px) {
