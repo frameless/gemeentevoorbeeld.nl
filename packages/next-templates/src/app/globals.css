@@ -40,6 +40,8 @@ body {
   --utrecht-heading-3-margin-block-start: var(--voorbeeld-space-block-rabbit);
   --utrecht-page-content-padding-block-start: var(--voorbeeld-space-block-dog);
   --utrecht-page-content-padding-block-end: var(--voorbeeld-space-block-pig);
+  --utrecht-page-content-padding-inline-start: 0;
+  --utrecht-page-content-padding-inline-end: 0;
   --utrecht-page-padding-inline-start: var(--voorbeeld-space-inline-pig);
   --utrecht-page-padding-inline-end: var(--voorbeeld-space-inline-pig);
   --utrecht-paragraph-lead-font-size: 20px;
