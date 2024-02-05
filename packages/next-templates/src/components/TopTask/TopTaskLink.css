@@ -10,7 +10,7 @@
   --utrecht-link-focus-color: var(--voorbeeld-color-black);
 }
 
-.example-toptask-link:hover {
+.example-toptask-link:any-link:hover {
   --utrecht-link-hover-color: var(--voorbeeld-color-white);
   background-color: var(--voorbeeld-color-violet-900);
 }
