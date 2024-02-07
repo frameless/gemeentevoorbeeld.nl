@@ -54,6 +54,7 @@ export default function Home() {
             <AccordionProvider
               sections={[
                 {
+                  className: 'voorbeeld-accordion__section',
                   headingLevel: 2,
                   body: (
                     <div className="voorbeeld-container-wrapper voorbeeld-container-accordion">
@@ -78,6 +79,7 @@ export default function Home() {
                   label: 'Paspoort, ID-kaart en rijbewijs',
                 },
                 {
+                  className: 'voorbeeld-accordion__section',
                   body: (
                     <div className="voorbeeld-container-wrapper voorbeeld-container-accordion">
                       <LinkList>
@@ -97,6 +99,7 @@ export default function Home() {
                   label: 'Verhuizen',
                 },
                 {
+                  className: 'voorbeeld-accordion__section',
                   body: (
                     <div className="voorbeeld-container-wrapper voorbeeld-container-accordion">
                       <Paragraph>
