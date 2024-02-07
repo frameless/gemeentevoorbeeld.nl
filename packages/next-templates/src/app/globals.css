@@ -183,12 +183,16 @@ utrecht-icon-chevron-right {
   inline-size: 100%;
 }
 
-.voorbeeld-container-accordion .utrecht-paragraph {
+.utrecht-accordion__section:nth-child(1) .utrecht-paragraph {
   inline-size: 65%;
 }
 
-.voorbeeld-container-accordion .utrecht-link-list {
+.utrecht-accordion__section:nth-child(1) .utrecht-link-list {
   inline-size: 30%;
+}
+
+.utrecht-accordion__section:nth-child(2) .utrecht-link-list {
+  inline-size: 100%;
 }
 
 .voorbeeld-article-space {
