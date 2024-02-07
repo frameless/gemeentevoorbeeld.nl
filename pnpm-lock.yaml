@@ -279,8 +279,8 @@ importers:
         specifier: 13.5.6
         version: 13.5.6
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 1.0.0-alpha.100
-        version: 1.0.0-alpha.100
+        specifier: 1.0.0-alpha.122
+        version: 1.0.0-alpha.122
       '@svgr/webpack':
         specifier: 8.1.0
         version: 8.1.0
@@ -288,11 +288,11 @@ importers:
         specifier: 2.42.0
         version: 2.42.0(react@18.2.0)
       '@utrecht/component-library-css':
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 3.0.1-alpha.12
+        version: 3.0.1-alpha.12
       '@utrecht/component-library-react':
-        specifier: 2.0.0
-        version: 2.0.0(react-dom@18.2.0)(react@18.2.0)
+        specifier: 3.0.1-alpha.12
+        version: 3.0.1-alpha.12(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/components':
         specifier: 2.0.0
         version: 2.0.0
@@ -2703,8 +2703,8 @@ packages:
     hasBin: true
     dev: true
 
-  /@nl-design-system-unstable/voorbeeld-design-tokens@1.0.0-alpha.100:
-    resolution: {integrity: sha512-e7GXwI5cfsMQESQbEFSU8jgx5AOhCeKQ1Say33pLwtqZ0jeFehBkY+soT2tRp9sB8x5WROWvNJMusni+29vdcw==}
+  /@nl-design-system-unstable/voorbeeld-design-tokens@1.0.0-alpha.122:
+    resolution: {integrity: sha512-IHaVwqPses1a9ycmycAoY1++vBixAlyM2lxydBmaMWnZcoYINlNaQ5qDYxlOke3J8h17dk0LduZcN18PAkdLAA==}
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -4048,12 +4048,12 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@utrecht/component-library-css@2.0.0:
-    resolution: {integrity: sha512-l5aHqZqD9Lbzb8hbDlgVewmdC0sP13GGMwqJpEloR3kkXYI6PZfIQaH2QzgLqHARF0CCjRhaS+lScAmgYjxCQQ==}
+  /@utrecht/component-library-css@3.0.1-alpha.12:
+    resolution: {integrity: sha512-X/vHfxzfrf72lM5VnHvfEa5DaFFZr00EKUjlA3ZY3vMUQvRujiP3uG1ogkEkjtq7Np4WtuO3rOhEvirviB1dFg==}
     dev: true
 
-  /@utrecht/component-library-react@2.0.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-WiZXgMhoDVRUZdPf9aVWBO1FIBVrY+qCNBHhX31lbUHZL83fMmcke4BFneu8Uk5ZB/ckDG+lFdbA23YuC9h0OA==}
+  /@utrecht/component-library-react@3.0.1-alpha.12(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-h0qQsvtb2n/QwRBn5mAIsp5n9TY70szJH1FFS+RJFm81YP+H7i37ZKORwrsvo8Uovw9z1T2qVvbgR7dhQzjDzQ==}
     peerDependencies:
       date-fns: ^2.30.0
       react: '18'
