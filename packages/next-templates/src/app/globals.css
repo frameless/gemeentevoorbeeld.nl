@@ -275,8 +275,8 @@ utrecht-icon-chevron-right {
   min-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.125);
   inline-size: calc(var(--utrecht-article-max-inline-size) * 1.125);
   margin-block-end: 1px;
-  --utrecht-accordion-panel-padding-inline-start: 2.813em;
-  --utrecht-accordion-panel-padding-inline-end: 2.813em;
+  --utrecht-accordion-panel-padding-inline-start: 3em;
+  --utrecht-accordion-panel-padding-inline-end: 3em;
 }
 
 .voorbeeld-theme .utrecht-page-content {
