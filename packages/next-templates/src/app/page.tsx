@@ -31,7 +31,7 @@ export default function Home() {
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content--flex">
-        <section className="voorbeeld-section-page voorbeeld-section--spacing">
+        <section className="voorbeeld-section voorbeeld-section--spacing">
           <TopTaskNavigation className="grid">
             <TopTaskLink icon={<UtrechtIconPaspoort />}>Paspoort of ID-kaart aanvragen</TopTaskLink>
             <TopTaskLink href="/meldingen/" icon={<UtrechtIconMeldingKlacht />}>
@@ -43,7 +43,7 @@ export default function Home() {
             <TopTaskLink icon={<UtrechtIconAfvalScheiden />}>Afval</TopTaskLink>
           </TopTaskNavigation>
         </section>
-        <section className="voorbeeld-section-page voorbeeld-section--spacing">
+        <section className="voorbeeld-section voorbeeld-section--spacing">
           <div className="voorbeeld-section-content">
             <div className="voorbeeld-container-wrapper">
               <Heading2 className="voorbeeld-heading-2">Zelf regelen</Heading2>
