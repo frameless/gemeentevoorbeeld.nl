@@ -78,7 +78,21 @@ export default function Home() {
                   label: 'Paspoort, ID-kaart en rijbewijs',
                 },
                 {
-                  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
+                  body: (
+                    <div className="voorbeeld-container-wrapper voorbeeld-container-accordion">
+                      <LinkList>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          Verhuizing naar Gemeente voorbeeld
+                        </LinkListLink>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          Verhuizing vanuit het buitenland naar Gemeente voorbeeld doorgeven
+                        </LinkListLink>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          Verhuizing naar het buitenland doorgeven
+                        </LinkListLink>
+                      </LinkList>
+                    </div>
+                  ),
                   expanded: undefined,
                   label: 'Verhuizen',
                 },
