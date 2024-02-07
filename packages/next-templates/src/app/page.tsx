@@ -97,7 +97,34 @@ export default function Home() {
                   label: 'Verhuizen',
                 },
                 {
-                  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
+                  body: (
+                    <div className="voorbeeld-container-wrapper voorbeeld-container-accordion">
+                      <Paragraph>
+                        Wilt u het kenteken aanpassen van uw parkeervergunning, garageabonnement of
+                        gehandicaptenparkeerplaats? Kies hier wat u wilt aanpassen.
+                      </Paragraph>
+                      <LinkList>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          Parkeervergunning bewoner, kenteken aanpassen
+                        </LinkListLink>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          Parkeervergunning huurauto of leenauto, kenteken aanpassen
+                        </LinkListLink>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          Parkeervergunning gehandicapte, kenteken aanpassen
+                        </LinkListLink>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          Parkeervergunning hulpverlener (ga naar Parkeervergunning bewoner, kenteken aanpassen)
+                        </LinkListLink>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          Gehandicaptenparkeerplaats, kenteken aanpassen
+                        </LinkListLink>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          Garageabonnement bewoner (kenteken aanpassen) (pdf, 182 kB)
+                        </LinkListLink>
+                      </LinkList>
+                    </div>
+                  ),
                   expanded: undefined,
                   label: 'Kentekenwijziging doorgeven',
                 },
