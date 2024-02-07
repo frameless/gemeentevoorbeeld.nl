@@ -155,7 +155,7 @@ utrecht-alert
   margin-block-start: var(--voorbeeld-space-block-rabbit);
 }
 
-utrecht-icon-chevron-right {
+.voorbeeld-accordion-chevron--right {
   --utrecht-icon-size: var(--voorbeeld-size-icon-sm);
 }
 
