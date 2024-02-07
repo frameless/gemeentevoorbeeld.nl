@@ -187,11 +187,11 @@ utrecht-alert
   inline-size: 65%;
 }
 
-.utrecht-accordion__section:nth-child(1) .utrecht-link-list {
+.utrecht-accordion__section:nth-child(1) .voorbeeld-link-list {
   inline-size: 30%;
 }
 
-.utrecht-accordion__section:nth-child(2) .utrecht-link-list {
+.utrecht-accordion__section:nth-child(2) .voorbeeld-link-list {
   inline-size: 100%;
 }
 
