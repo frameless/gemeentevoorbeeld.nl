@@ -58,11 +58,11 @@ export default function Home() {
                   headingLevel: 2,
                   body: (
                     <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
-                      <Paragraph>
+                      <Paragraph className="voorbeeld-paragraph">
                         Met een paspoort, identiteitskaart of rijbewijs kunt u zich identificeren en reizen. Onder
                         voorwaarden kunt u de Nederlandse identiteit krijgen.
                       </Paragraph>
-                      <LinkList>
+                      <LinkList className="voorbeeld-link-list">
                         <LinkListLink
                           href="#"
                           icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
@@ -90,7 +90,7 @@ export default function Home() {
                   className: 'voorbeeld-accordion__section',
                   body: (
                     <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
-                      <LinkList>
+                      <LinkList className="voorbeeld-link-list">
                         <LinkListLink
                           href="#"
                           icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
@@ -118,11 +118,11 @@ export default function Home() {
                   className: 'voorbeeld-accordion__section',
                   body: (
                     <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
-                      <Paragraph>
+                      <Paragraph className="voorbeeld-paragraph">
                         Wilt u het kenteken aanpassen van uw parkeervergunning, garageabonnement of
                         gehandicaptenparkeerplaats? Kies hier wat u wilt aanpassen.
                       </Paragraph>
-                      <LinkList>
+                      <LinkList className="voorbeeld-link-list">
                         <LinkListLink
                           href="#"
                           icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
