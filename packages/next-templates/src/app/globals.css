@@ -183,6 +183,14 @@ utrecht-icon-chevron-right {
   inline-size: 100%;
 }
 
+.voorbeeld-container-accordion .utrecht-paragraph {
+  inline-size: 65%;
+}
+
+.voorbeeld-container-accordion .utrecht-link-list {
+  inline-size: 30%;
+}
+
 .voorbeeld-article-space {
   align-self: center;
 }
