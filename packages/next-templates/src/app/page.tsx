@@ -57,7 +57,7 @@ export default function Home() {
                   className: 'voorbeeld-accordion__section',
                   headingLevel: 2,
                   body: (
-                    <div className="voorbeeld-container-wrapper voorbeeld-container-accordion">
+                    <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
                       <Paragraph>
                         Met een paspoort, identiteitskaart of rijbewijs kunt u zich identificeren en reizen. Onder
                         voorwaarden kunt u de Nederlandse identiteit krijgen.
@@ -80,7 +80,7 @@ export default function Home() {
                 {
                   className: 'voorbeeld-accordion__section',
                   body: (
-                    <div className="voorbeeld-container-wrapper voorbeeld-container-accordion">
+                    <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
                       <LinkList>
                         <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
                           Verhuizing naar Gemeente voorbeeld
@@ -99,7 +99,7 @@ export default function Home() {
                 {
                   className: 'voorbeeld-accordion__section',
                   body: (
-                    <div className="voorbeeld-container-wrapper voorbeeld-container-accordion">
+                    <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
                       <Paragraph>
                         Wilt u het kenteken aanpassen van uw parkeervergunning, garageabonnement of
                         gehandicaptenparkeerplaats? Kies hier wat u wilt aanpassen.
