@@ -1,6 +1,15 @@
 'use client';
 
-import { Button, Heading2, AccordionProvider, Page, PageContent } from '@utrecht/component-library-react';
+import {
+  Button,
+  Heading2,
+  LinkList,
+  LinkListLink,
+  Paragraph,
+  AccordionProvider,
+  Page,
+  PageContent,
+} from '@utrecht/component-library-react';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
 import {
@@ -10,6 +19,7 @@ import {
   UtrechtIconPaspoort,
   UtrechtIconVerhuizen,
   UtrechtIconWerken,
+  UtrechtIconChevronRight,
 } from '@utrecht/web-component-library-react';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
@@ -44,7 +54,26 @@ export default function Home() {
             <AccordionProvider
               sections={[
                 {
-                  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
+                  headingLevel: 2,
+                  body: (
+                    <div className="voorbeeld-container-wrapper voorbeeld-container-accordion">
+                      <Paragraph>
+                        Met een paspoort, identiteitskaart of rijbewijs kunt u zich identificeren en reizen. Onder
+                        voorwaarden kunt u de Nederlandse identiteit krijgen.
+                      </Paragraph>
+                      <LinkList>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          Paspoort aanvragen
+                        </LinkListLink>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          ID-kaart aanvragen
+                        </LinkListLink>
+                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                          Rijbewijs aanvragen
+                        </LinkListLink>
+                      </LinkList>
+                    </div>
+                  ),
                   expanded: undefined,
                   label: 'Paspoort, ID-kaart en rijbewijs',
                 },
