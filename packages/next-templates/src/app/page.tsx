@@ -75,7 +75,6 @@ export default function Home() {
                       </LinkList>
                     </div>
                   ),
-                  expanded: undefined,
                   label: 'Paspoort, ID-kaart en rijbewijs',
                 },
                 {
@@ -95,7 +94,6 @@ export default function Home() {
                       </LinkList>
                     </div>
                   ),
-                  expanded: undefined,
                   label: 'Verhuizen',
                 },
                 {
@@ -128,7 +126,6 @@ export default function Home() {
                       </LinkList>
                     </div>
                   ),
-                  expanded: undefined,
                   label: 'Kentekenwijziging doorgeven',
                 },
               ]}
