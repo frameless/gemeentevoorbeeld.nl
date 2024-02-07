@@ -242,7 +242,7 @@ utrecht-alert
 }
 
 .utrecht-accordion {
-  --utrecht-link-list-item-column-gap: 4px;
+  --utrecht-link-list-item-column-gap: var(--voorbeeld-space-column-beetle);
 }
 
 .utrecht-accordion__button[aria-expanded="true"]::after,
