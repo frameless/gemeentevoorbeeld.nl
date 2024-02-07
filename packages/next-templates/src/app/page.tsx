@@ -63,13 +63,22 @@ export default function Home() {
                         voorwaarden kunt u de Nederlandse identiteit krijgen.
                       </Paragraph>
                       <LinkList>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        <LinkListLink
+                          href="#"
+                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                        >
                           Paspoort aanvragen
                         </LinkListLink>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        <LinkListLink
+                          href="#"
+                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                        >
                           ID-kaart aanvragen
                         </LinkListLink>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        <LinkListLink
+                          href="#"
+                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                        >
                           Rijbewijs aanvragen
                         </LinkListLink>
                       </LinkList>
@@ -82,13 +91,22 @@ export default function Home() {
                   body: (
                     <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
                       <LinkList>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        <LinkListLink
+                          href="#"
+                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                        >
                           Verhuizing naar Gemeente voorbeeld
                         </LinkListLink>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        <LinkListLink
+                          href="#"
+                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                        >
                           Verhuizing vanuit het buitenland naar Gemeente voorbeeld doorgeven
                         </LinkListLink>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        <LinkListLink
+                          href="#"
+                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                        >
                           Verhuizing naar het buitenland doorgeven
                         </LinkListLink>
                       </LinkList>
@@ -105,22 +123,37 @@ export default function Home() {
                         gehandicaptenparkeerplaats? Kies hier wat u wilt aanpassen.
                       </Paragraph>
                       <LinkList>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        <LinkListLink
+                          href="#"
+                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                        >
                           Parkeervergunning bewoner, kenteken aanpassen
                         </LinkListLink>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        <LinkListLink
+                          href="#"
+                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                        >
                           Parkeervergunning huurauto of leenauto, kenteken aanpassen
                         </LinkListLink>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        <LinkListLink
+                          href="#"
+                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                        >
                           Parkeervergunning gehandicapte, kenteken aanpassen
                         </LinkListLink>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        <LinkListLink
+                          href="#"
+                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                        >
                           Parkeervergunning hulpverlener (ga naar Parkeervergunning bewoner, kenteken aanpassen)
                         </LinkListLink>
                         <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
                           Gehandicaptenparkeerplaats, kenteken aanpassen
                         </LinkListLink>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        <LinkListLink
+                          href="#"
+                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                        >
                           Garageabonnement bewoner (kenteken aanpassen) (pdf, 182 kB)
                         </LinkListLink>
                       </LinkList>
