@@ -216,10 +216,6 @@ utrecht-alert
   inline-size: 100%;
 }
 
-.voorbeeld-section-2 {
-  background-color: var(--voorbeeld-color-gray-200);
-}
-
 .utrecht-paragraph {
   max-width: 80ch;
 }
