@@ -1,12 +1,13 @@
 'use client';
 
 import {
+  Accordion,
+  AccordionSection,
   Button,
   Heading2,
   LinkList,
   LinkListLink,
   Paragraph,
-  AccordionProvider,
   Page,
   PageContent,
 } from '@utrecht/component-library-react';
@@ -51,118 +52,121 @@ export default function Home() {
                 Meer bekijken
               </Button>
             </div>
-            <AccordionProvider
-              sections={[
-                {
-                  className: 'voorbeeld-accordion__section',
-                  headingLevel: 2,
-                  body: (
-                    <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
-                      <Paragraph className="voorbeeld-paragraph">
-                        Met een paspoort, identiteitskaart of rijbewijs kunt u zich identificeren en reizen. Onder
-                        voorwaarden kunt u de Nederlandse identiteit krijgen.
-                      </Paragraph>
-                      <LinkList className="voorbeeld-link-list">
-                        <LinkListLink
-                          href="#"
-                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
-                        >
-                          Paspoort aanvragen
-                        </LinkListLink>
-                        <LinkListLink
-                          href="#"
-                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
-                        >
-                          ID-kaart aanvragen
-                        </LinkListLink>
-                        <LinkListLink
-                          href="#"
-                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
-                        >
-                          Rijbewijs aanvragen
-                        </LinkListLink>
-                      </LinkList>
-                    </div>
-                  ),
-                  label: 'Paspoort, ID-kaart en rijbewijs',
-                },
-                {
-                  className: 'voorbeeld-accordion__section',
-                  body: (
-                    <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
-                      <LinkList className="voorbeeld-link-list">
-                        <LinkListLink
-                          href="#"
-                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
-                        >
-                          Verhuizing naar Gemeente voorbeeld
-                        </LinkListLink>
-                        <LinkListLink
-                          href="#"
-                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
-                        >
-                          Verhuizing vanuit het buitenland naar Gemeente voorbeeld doorgeven
-                        </LinkListLink>
-                        <LinkListLink
-                          href="#"
-                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
-                        >
-                          Verhuizing naar het buitenland doorgeven
-                        </LinkListLink>
-                      </LinkList>
-                    </div>
-                  ),
-                  label: 'Verhuizen',
-                },
-                {
-                  className: 'voorbeeld-accordion__section',
-                  body: (
-                    <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
-                      <Paragraph className="voorbeeld-paragraph">
-                        Wilt u het kenteken aanpassen van uw parkeervergunning, garageabonnement of
-                        gehandicaptenparkeerplaats? Kies hier wat u wilt aanpassen.
-                      </Paragraph>
-                      <LinkList className="voorbeeld-link-list">
-                        <LinkListLink
-                          href="#"
-                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
-                        >
-                          Parkeervergunning bewoner, kenteken aanpassen
-                        </LinkListLink>
-                        <LinkListLink
-                          href="#"
-                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
-                        >
-                          Parkeervergunning huurauto of leenauto, kenteken aanpassen
-                        </LinkListLink>
-                        <LinkListLink
-                          href="#"
-                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
-                        >
-                          Parkeervergunning gehandicapte, kenteken aanpassen
-                        </LinkListLink>
-                        <LinkListLink
-                          href="#"
-                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
-                        >
-                          Parkeervergunning hulpverlener (ga naar Parkeervergunning bewoner, kenteken aanpassen)
-                        </LinkListLink>
-                        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
-                          Gehandicaptenparkeerplaats, kenteken aanpassen
-                        </LinkListLink>
-                        <LinkListLink
-                          href="#"
-                          icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
-                        >
-                          Garageabonnement bewoner (kenteken aanpassen) (pdf, 182 kB)
-                        </LinkListLink>
-                      </LinkList>
-                    </div>
-                  ),
-                  label: 'Kentekenwijziging doorgeven',
-                },
-              ]}
-            />
+            <Accordion className="voorbeeld-accordion">
+              <AccordionSection
+                className="voorbeeld-accordion__section"
+                headingLevel={2}
+                expanded={false}
+                body={
+                  <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
+                    <Paragraph className="voorbeeld-paragraph">
+                      Met een paspoort, identiteitskaart of rijbewijs kunt u zich identificeren en reizen. Onder
+                      voorwaarden kunt u de Nederlandse identiteit krijgen.
+                    </Paragraph>
+                    <LinkList className="voorbeeld-link-list">
+                      <LinkListLink
+                        href="#"
+                        icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                      >
+                        Paspoort aanvragen
+                      </LinkListLink>
+                      <LinkListLink
+                        href="#"
+                        icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                      >
+                        ID-kaart aanvragen
+                      </LinkListLink>
+                      <LinkListLink
+                        href="#"
+                        icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                      >
+                        Rijbewijs aanvragen
+                      </LinkListLink>
+                    </LinkList>
+                  </div>
+                }
+                label="Paspoort, ID-kaart en rijbewijs"
+              />
+              <AccordionSection
+                className="voorbeeld-accordion__section"
+                headingLevel={2}
+                expanded={false}
+                body={
+                  <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
+                    <LinkList className="voorbeeld-link-list">
+                      <LinkListLink
+                        href="#"
+                        icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                      >
+                        Verhuizing naar Gemeente voorbeeld
+                      </LinkListLink>
+                      <LinkListLink
+                        href="#"
+                        icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                      >
+                        Verhuizing vanuit het buitenland naar Gemeente voorbeeld doorgeven
+                      </LinkListLink>
+                      <LinkListLink
+                        href="#"
+                        icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                      >
+                        Verhuizing naar het buitenland doorgeven
+                      </LinkListLink>
+                    </LinkList>
+                  </div>
+                }
+                label="Verhuizen"
+              />
+              <AccordionSection
+                className="voorbeeld-accordion__section"
+                headingLevel={2}
+                expanded={false}
+                body={
+                  <div className="voorbeeld-container-wrapper voorbeeld-accordion__container">
+                    <Paragraph className="voorbeeld-paragraph">
+                      Wilt u het kenteken aanpassen van uw parkeervergunning, garageabonnement of
+                      gehandicaptenparkeerplaats? Kies hier wat u wilt aanpassen.
+                    </Paragraph>
+                    <LinkList className="voorbeeld-link-list">
+                      <LinkListLink
+                        href="#"
+                        icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                      >
+                        Parkeervergunning bewoner, kenteken aanpassen
+                      </LinkListLink>
+                      <LinkListLink
+                        href="#"
+                        icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                      >
+                        Parkeervergunning huurauto of leenauto, kenteken aanpassen
+                      </LinkListLink>
+                      <LinkListLink
+                        href="#"
+                        icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                      >
+                        Parkeervergunning gehandicapte, kenteken aanpassen
+                      </LinkListLink>
+                      <LinkListLink
+                        href="#"
+                        icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                      >
+                        Parkeervergunning hulpverlener (ga naar Parkeervergunning bewoner, kenteken aanpassen)
+                      </LinkListLink>
+                      <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                        Gehandicaptenparkeerplaats, kenteken aanpassen
+                      </LinkListLink>
+                      <LinkListLink
+                        href="#"
+                        icon={<UtrechtIconChevronRight className=".voorbeeld-accordion-chevron--right" />}
+                      >
+                        Garageabonnement bewoner (kenteken aanpassen) (pdf, 182 kB)
+                      </LinkListLink>
+                    </LinkList>
+                  </div>
+                }
+                label="Kentekenwijziging doorgeven"
+              />
+            </Accordion>
           </div>
         </section>
       </PageContent>
