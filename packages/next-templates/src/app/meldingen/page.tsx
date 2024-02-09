@@ -16,7 +16,7 @@ export default function Home() {
           <TopTaskLink href="/meldingen/eenhoornparkeerzone-melding">Aanvraag eenhoornparkeerzone</TopTaskLink>
           <TopTaskLink href="/meldingen/graffiti-melding">Melding graffiti</TopTaskLink>
           <TopTaskLink href="/meldingen/verloren-sokken-melding">Melding verloren sokken</TopTaskLink>
-          <TopTaskLink href="/meldingen/random">Random</TopTaskLink>
+          <TopTaskLink href="/meldingen/verhuizing-doorgeven">Verhuizing doorgeven</TopTaskLink>
         </TopTaskNavigation>
       </PageContent>
       <ExampleFooter />
