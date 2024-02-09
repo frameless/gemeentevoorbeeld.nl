@@ -2,6 +2,7 @@
 
 import {
   Article,
+  ButtonLink,
   Document,
   Heading1,
   Heading2,
@@ -14,10 +15,11 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react';
 import '@/app/styling/css/detail-page.css';
+import '@utrecht/design-tokens/dist/index.css';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
+import { UtrechtDigidLogo, UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
@@ -120,6 +122,15 @@ export default function Home() {
                 </UnorderedList>
               </UnorderedListItem>
             </UnorderedList>
+
+            <UtrechtDigidLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
+            <ButtonLink
+              className="voorbeeld-button-link"
+              appearance="primary-action-button"
+              href="./verhuizing-doorgeven/form"
+            >
+              Geef verhuizing door
+            </ButtonLink>
           </Article>
         </PageContent>
         <ExampleFooterFocus />

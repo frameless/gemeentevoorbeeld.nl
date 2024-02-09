@@ -29,7 +29,7 @@ import IconChevronRight from '../../../app/styling/assets/chevronRight.svg';
 
 export default function Home() {
   return (
-    <Page>
+    <Page className="voorbeeld-page--flex">
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content-flex">
