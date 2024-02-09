@@ -147,6 +147,12 @@ utrecht-alert
   --utrecht-paragraph-margin-block-end: var(--voorbeeld-space-block-rabbit);
 }
 
+.voorbeeld-digid-logo {
+  --utrecht-icon-size: var(--voorbeeld-size-icon-4xl);
+  --utrecht-icon-inset-block-start: 0.38em;
+  margin-inline-end: 0.4em;
+}
+
 .utrecht-form-fieldset__legend {
   --utrecht-form-fieldset-legend-font-weight: 700;
 }
