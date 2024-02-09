@@ -10,6 +10,8 @@ import {
   Page,
   PageContent,
   SpotlightSection,
+  UnorderedList,
+  UnorderedListItem,
 } from '@utrecht/component-library-react';
 import '@/app/styling/css/detail-page.css';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
@@ -62,6 +64,62 @@ export default function Home() {
               5 dagen na uw verhuizing uw nieuwe adres door? Dan telt de dag waarop u het doorgeeft als uw verhuisdatum.
               Dit kan invloed hebben op bijvoorbeeld uw toeslagen of studiefinanciering.
             </Paragraph>
+
+            <Paragraph>Soms gaat het doorgeven van uw verhuizing net iets anders. Kies uw situatie:</Paragraph>
+            <Heading2>Wie kan de verhuizing doorgeven?</Heading2>
+
+            <UnorderedList>
+              <UnorderedListItem>Iedereen van 16 jaar of ouder.</UnorderedListItem>
+              <UnorderedListItem>Ouders, voogden of verzorgers voor kinderen jonger dan 18 jaar.</UnorderedListItem>
+              <UnorderedListItem>
+                Woont u op hetzelfde adres en verhuist u naar hetzelfde nieuwe adres? Dan kunt u de verhuizing doorgeven
+                voor:
+                <UnorderedList>
+                  <UnorderedListItem>uw ouders en uw meerderjarige kind of kinderen.</UnorderedListItem>
+                  <UnorderedListItem>uw echtgenoot of geregistreerd partner.</UnorderedListItem>
+                </UnorderedList>
+              </UnorderedListItem>
+            </UnorderedList>
+
+            <Heading2>Verhuizing doorgeven</Heading2>
+            <Paragraph>
+              We kunnen uw verhuizing alleen verwerken als uw aanvraag compleet is. Soms mist er nog iets. Dan nemen we
+              contact met u op. Daarom is het handig als u bij uw aanvraag uw telefoonnummer doorgeeft.
+            </Paragraph>
+
+            <Heading2>Online</Heading2>
+            <Paragraph>U hebt nodig:</Paragraph>
+
+            <UnorderedList>
+              <UnorderedListItem>
+                <Link href="https://www.digid.nl/">Uw Digid</Link>
+              </UnorderedListItem>
+              <UnorderedListItem>Als u verhuist naar een huurwoning of koopwoning:</UnorderedListItem>
+              <UnorderedList>
+                <UnorderedListItem>kopie van uw huurcontract of eigendomsbewijs</UnorderedListItem>
+              </UnorderedList>
+              <UnorderedListItem>
+                Als u verhuist naar een instelling:
+                <UnorderedList>
+                  <UnorderedListItem>
+                    uw overeenkomst met de instelling of een verklaring van de instelling
+                  </UnorderedListItem>
+                </UnorderedList>
+                <UnorderedListItem>Als u bij iemand anders gaat wonen:</UnorderedListItem>
+                <UnorderedList>
+                  <UnorderedListItem>
+                    het ingevulde en met pen ondertekende formulier{' '}
+                    <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Verklaring-bewoning-adres.pdf">
+                      Verklaring van inwoning
+                    </Link>{' '}
+                    (pdf, 557 kB).
+                  </UnorderedListItem>
+                  <UnorderedListItem>
+                    kopie van een geldig identiteitsbewijs van de persoon bij wie u gaat wonen.
+                  </UnorderedListItem>
+                </UnorderedList>
+              </UnorderedListItem>
+            </UnorderedList>
           </Article>
         </PageContent>
         <ExampleFooterFocus />
