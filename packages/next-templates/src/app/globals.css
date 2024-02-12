@@ -214,6 +214,7 @@ utrecht-alert
   margin-inline: auto;
   padding-inline: var(--voorbeeld-space-block-cat);
   max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.125);
+  inline-size: 100%;
   box-sizing: border-box;
 }
 
