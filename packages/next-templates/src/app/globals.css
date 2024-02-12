@@ -157,8 +157,8 @@ utrecht-alert
 
 .voorbeeld-accordion-chevron--right {
   --utrecht-icon-size: var(--voorbeeld-size-icon-sm);
-  --utrecht-icon-inset-block-start: 0.38em;
-  margin-inline-end: 0.4em;
+  --utrecht-icon-inset-block-start: 0.14em;
+  margin-inline-end: 0.2em;
 }
 
 .utrecht-ordered-list__item::marker {
