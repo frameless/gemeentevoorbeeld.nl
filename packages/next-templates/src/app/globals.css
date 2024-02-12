@@ -275,6 +275,7 @@ utrecht-alert
   margin-block-end: 1px;
   --utrecht-accordion-panel-padding-inline-start: 3em;
   --utrecht-accordion-panel-padding-inline-end: 3em;
+  box-sizing: border-box;
 }
 
 .voorbeeld-theme .utrecht-page-content {
