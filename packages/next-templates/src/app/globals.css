@@ -182,7 +182,6 @@ utrecht-alert
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  inline-size: 100%;
 }
 
 .voorbeeld-accordion__section:nth-child(1) .voorbeeld-paragraph {
