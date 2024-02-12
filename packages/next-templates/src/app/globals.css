@@ -275,11 +275,9 @@ utrecht-alert
   --utrecht-accordion-panel-padding-inline-start: var(--voorbeeld-space-inline-mouse);
   --utrecht-accordion-panel-padding-inline-end: var(--voorbeeld-space-inline-mouse);
   background-color: var(--utrecht-accordion-button-background-color);
-  min-inline-size: 100%;
   margin-block-end: 1px;
   --utrecht-accordion-panel-padding-inline-start: var(--voorbeeld-space-inline-pig);
   --utrecht-accordion-panel-padding-inline-end: var(--voorbeeld-space-inline-pig);
-  box-sizing: border-box;
 }
 
 .voorbeeld-theme .utrecht-page-content {
