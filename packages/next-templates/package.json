@@ -31,7 +31,7 @@
     "@svgr/webpack": "8.1.0",
     "@tabler/icons-react": "2.42.0",
     "@utrecht/component-library-css": "3.0.1-alpha.12",
-    "@utrecht/component-library-react": "3.0.1-alpha.12",
+    "@utrecht/component-library-react": "3.0.1-alpha.14",
     "@utrecht/components": "2.0.0",
     "@utrecht/design-tokens": "1.0.0-alpha.607",
     "@utrecht/web-component-library-react": "1.0.2",
