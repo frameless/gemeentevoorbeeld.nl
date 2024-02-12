@@ -214,7 +214,6 @@ utrecht-alert
   margin-inline: auto;
   padding-inline: var(--voorbeeld-space-block-cat);
   max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.125);
-  inline-size: 100%;
   box-sizing: border-box;
 }
 
@@ -276,7 +275,6 @@ utrecht-alert
   --utrecht-accordion-panel-padding-inline-end: var(--voorbeeld-space-inline-mouse);
   background-color: var(--utrecht-accordion-button-background-color);
   min-inline-size: 100%;
-  inline-size: 100%;
   margin-block-end: 1px;
   --utrecht-accordion-panel-padding-inline-start: var(--voorbeeld-space-inline-pig);
   --utrecht-accordion-panel-padding-inline-end: var(--voorbeeld-space-inline-pig);
