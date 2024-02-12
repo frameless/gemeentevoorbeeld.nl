@@ -131,6 +131,18 @@ export default function Home() {
             >
               Geef verhuizing door
             </ButtonLink>
+
+            <Heading2>Na het doorgeven van uw verhuizing</Heading2>
+            <Paragraph>
+              Wij passen uw gegevens aan. Dat duurt ongeveer een week vanaf de verhuisdatum die u doorgeeft. Geeft u uw
+              verhuizing van tevoren door? Dan verwerken wij de verhuizing vanaf de verhuisdatum die u doorgeeft. Op{' '}
+              <Link href="https://mijn.overheid.nl/">MijnOverheid</Link> kunt u zien of uw verhuizing al verwerkt is.
+              Wij geven uw verhuizing door aan een aantal organisaties. Op{' '}
+              <Link href="https://www.rijksoverheid.nl/onderwerpen/privacy-en-persoonsgegevens/vraag-en-antwoord/wie-krijgen-mijn-persoonsgegevens-uit-brp">
+                www.wiekrijgtmijngegevens.nl
+              </Link>{' '}
+              ziet u welke organisaties dit zijn.
+            </Paragraph>
           </Article>
         </PageContent>
         <ExampleFooterFocus />
