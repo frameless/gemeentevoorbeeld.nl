@@ -342,6 +342,10 @@ utrecht-alert
   margin-block-end: var(--voorbeeld-space-row-cat);
 }
 
+.example-toptask-nav--grid {
+  padding-inline: var(--voorbeeld-space-block-cat);
+}
+
 utrecht-page-content {
   /* use `auto` margins to center the page */
   margin-inline-start: auto;
