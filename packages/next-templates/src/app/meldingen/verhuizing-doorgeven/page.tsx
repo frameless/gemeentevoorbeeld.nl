@@ -392,7 +392,7 @@ export default function Home() {
 
                       <Paragraph>Hebt u alles ingevuld en ondertekend? Stuur het op naar:</Paragraph>
                       <Paragraph>
-                        Gemeente voorbeeld <br></br> Burgerzaken <br></br> Postbus 1234 <br></br> 1234 AB Utrecht
+                        Gemeente voorbeeld <br/> Burgerzaken <br/> Postbus 1234 <br/> 1234 AB Utrecht
                       </Paragraph>
                     </div>
                   ),
