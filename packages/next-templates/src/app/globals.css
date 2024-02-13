@@ -266,6 +266,11 @@ utrecht-alert
   padding-block: var(--voorbeeld-space-block-cat);
 }
 
+.voorbeeld-section:nth-of-type(3) {
+  background-color: var(--voorbeeld-color-white);
+  padding-block: var(--voorbeeld-space-block-cat);
+}
+
 .voorbeeld-accordion {
   --utrecht-link-list-item-column-gap: var(--voorbeeld-space-column-beetle);
 }
