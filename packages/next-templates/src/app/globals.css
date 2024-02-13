@@ -339,9 +339,22 @@ utrecht-alert
   inline-size: 100%;
 }
 
+.voorbeeld-section:first-child {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-inline-start: var(--voorbeeld-space-inline-cat);
+  margin-inline: auto;
+}
+
 .voorbeeld-section-container-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.voorbeeld-container-info {
+  padding-inline-end: var(--voorbeeld-space-inline-cat);
+  max-inline-size: calc(100% - 752px);
 }
 
 .voorbeeld-form-label {
