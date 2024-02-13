@@ -3,6 +3,7 @@
 import {
   Article,
   ButtonLink,
+  ButtonGroup,
   Document,
   Heading1,
   Heading2,
@@ -123,14 +124,17 @@ export default function Home() {
               </UnorderedListItem>
             </UnorderedList>
 
-            <UtrechtDigidLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
-            <ButtonLink
-              className="voorbeeld-button-link"
-              appearance="primary-action-button"
-              href="./verhuizing-doorgeven/form"
-            >
-              Geef verhuizing door
-            </ButtonLink>
+            <Heading3>Met DigiD</Heading3>
+            <ButtonGroup className="voorbeeld-button-group">
+              <UtrechtDigidLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
+              <ButtonLink
+                className="voorbeeld-button-link"
+                appearance="primary-action-button"
+                href="./verhuizing-doorgeven/form"
+              >
+                Geef verhuizing door
+              </ButtonLink>
+            </ButtonGroup>
 
             <AccordionProvider
               sections={[
