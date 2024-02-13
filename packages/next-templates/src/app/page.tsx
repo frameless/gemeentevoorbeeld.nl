@@ -4,6 +4,7 @@ import {
   AccordionProvider,
   Button,
   Heading2,
+  Heading3,
   LinkList,
   LinkListLink,
   Paragraph,
@@ -181,18 +182,24 @@ export default function Home() {
             </div>
             <ul className="voorbeeld-unordered-list-cards">
               <li>
-                <div className="voorbeeld-container-card">Wijkraadsleden officieel beëdigd</div>
-              </li>
-              <li>
-                <div className="voorbeeld-container-card">Huurteam geeft huurders gratis hulp</div>
-              </li>
-              <li>
                 <div className="voorbeeld-container-card">
-                  Bijzonder beroep: specialist maatschappelijke ontwikkeling
+                  <Heading3>Wijkraadsleden officieel beëdigd</Heading3>
                 </div>
               </li>
               <li>
-                <div className="voorbeeld-container-card">De Tegeltaxi gaat weer rijden!</div>
+                <div className="voorbeeld-container-card">
+                  <Heading3>Huurteam geeft huurders gratis hulp</Heading3>
+                </div>
+              </li>
+              <li>
+                <div className="voorbeeld-container-card">
+                  <Heading3>Bijzonder beroep: specialist maatschappelijke ontwikkeling</Heading3>
+                </div>
+              </li>
+              <li>
+                <div className="voorbeeld-container-card">
+                  <Heading3>De Tegeltaxi gaat weer rijden!</Heading3>
+                </div>
               </li>
             </ul>
           </div>
