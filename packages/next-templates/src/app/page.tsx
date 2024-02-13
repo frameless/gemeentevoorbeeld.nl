@@ -179,22 +179,22 @@ export default function Home() {
                 Meer nieuws
               </Button>
             </div>
-            <UnorderedList className="voorbeeld-unordered-list-cards">
-              <UnorderedListItem>
+            <ul className="voorbeeld-unordered-list-cards">
+              <li>
                 <div className="voorbeeld-container-card">Wijkraadsleden officieel beëdigd</div>
-              </UnorderedListItem>
-              <UnorderedListItem>
+              </li>
+              <li>
                 <div className="voorbeeld-container-card">Huurteam geeft huurders gratis hulp</div>
-              </UnorderedListItem>
-              <UnorderedListItem>
+              </li>
+              <li>
                 <div className="voorbeeld-container-card">
                   Bijzonder beroep: specialist maatschappelijke ontwikkeling
                 </div>
-              </UnorderedListItem>
-              <UnorderedListItem>
+              </li>
+              <li>
                 <div className="voorbeeld-container-card">De Tegeltaxi gaat weer rijden!</div>
-              </UnorderedListItem>
-            </UnorderedList>
+              </li>
+            </ul>
           </div>
         </section>
       </PageContent>

@@ -285,6 +285,10 @@ utrecht-alert
   --utrecht-accordion-panel-padding-inline-end: var(--voorbeeld-space-inline-pig);
 }
 
+.voorbeeld-unordered-list-cards {
+  list-style: none;
+}
+
 .voorbeeld-theme .utrecht-page-content {
   display: flex;
   flex-direction: column;
