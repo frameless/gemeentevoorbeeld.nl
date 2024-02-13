@@ -11,6 +11,8 @@ import {
   Paragraph,
   Page,
   PageContent,
+  UnorderedList,
+  UnorderedListItem,
 } from '@utrecht/component-library-react';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
