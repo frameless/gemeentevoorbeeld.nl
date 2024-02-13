@@ -4,6 +4,7 @@ import {
   Article,
   AccordionProvider,
   ButtonLink,
+  ButtonGroup,
   Document,
   Heading1,
   Heading2,
@@ -217,6 +218,7 @@ export default function Home() {
             </UnorderedList>
 
             <Heading3>Met DigiD</Heading3>
+            <ButtonGroup className="voorbeeld-button-group">
             <UtrechtDigidLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
             <ButtonLink
               className="voorbeeld-button-link"
@@ -225,6 +227,7 @@ export default function Home() {
             >
               Geef verhuizing door
             </ButtonLink>
+            </ButtonGroup>
 
             <AccordionProvider
               sections={[
