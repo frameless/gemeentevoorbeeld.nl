@@ -346,6 +346,112 @@ export default function Home() {
               ]}
             />
 
+            <AccordionProvider
+              sections={[
+                {
+                  className: 'voorbeeld-accordion__section',
+                  headingLevel: 2,
+                  body: (
+                    <div>
+                      <Paragraph className="voorbeeld-paragraph">
+                        U kunt uw verhuizing ook doorgeven per post. U stuurt op:
+                      </Paragraph>
+                      <UnorderedList>
+                        <UnorderedListItem>
+                          Het ingevulde formulier{' '}
+                          <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Aangifte-adreswijziging.pdf">
+                            Adreswijziging{' '}
+                          </Link>{' '}
+                          (pdf, 183 kB).
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                          Kopie van uw geldige identiteitsbewijs (paspoort, ID-kaart of rijbewijs).
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                          Als u verhuist naar een huurwoning of koopwoning:
+                          <UnorderedList>
+                            <UnorderedListItem>kopie van uw huurcontract of eigendomsbewijs</UnorderedListItem>
+                          </UnorderedList>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                          Als u bij iemand anders gaat wonen:
+                          <UnorderedList>
+                            <UnorderedListItem>
+                              het ingevulde en met pen ondertekende formulier{' '}
+                              <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Verklaring-bewoning-adres.pdf">
+                                Verklaring van inwoning
+                              </Link>{' '}
+                              (pdf, 557 kB).
+                            </UnorderedListItem>
+                            <UnorderedListItem>
+                              kopie van een geldig identiteitsbewijs van de persoon bij wie u gaat wonen.
+                            </UnorderedListItem>
+                          </UnorderedList>
+                        </UnorderedListItem>
+                      </UnorderedList>
+
+                      <Paragraph>Hebt u alles ingevuld en ondertekend? Stuur het op naar:</Paragraph>
+                      <Paragraph>
+                        Gemeente voorbeeld <br></br> Burgerzaken <br></br> Postbus 1234 <br></br> 1234 AB Utrecht
+                      </Paragraph>
+                    </div>
+                  ),
+                  label: 'Per post',
+                },
+                {
+                  className: 'voorbeeld-accordion__section',
+                  headingLevel: 2,
+                  body: (
+                    <div>
+                      <Paragraph>
+                        U kunt uw verhuizing ook doorgeven aan de balie. Maak hiervoor online een afspraak of bel naar
+                        12 345.
+                      </Paragraph>
+                      <Paragraph>U neemt mee:</Paragraph>
+
+                      <UnorderedList>
+                        <UnorderedListItem>
+                          Uw geldige identiteitsbewijs (paspoort, ID-kaart of rijbewijs).
+                        </UnorderedListItem>
+                        <UnorderedListItem>Als u verhuist naar een huurwoning of koopwoning:</UnorderedListItem>
+                        <UnorderedList>
+                          <UnorderedListItem>kopie van uw huurcontract of eigendomsbewijs</UnorderedListItem>
+                        </UnorderedList>
+                        <UnorderedListItem>Als u verhuist naar een instelling:</UnorderedListItem>
+                        <UnorderedList>
+                          <UnorderedListItem>
+                            uw overeenkomst met de instelling of een verklaring van de instelling
+                          </UnorderedListItem>
+                        </UnorderedList>
+                        <UnorderedListItem>Als u bij iemand anders gaat wonen:</UnorderedListItem>
+                        <UnorderedList>
+                          <UnorderedListItem>
+                            Het ingevulde en met pen ondertekende formulier{' '}
+                            <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Verklaring-bewoning-adres.pdf">
+                              Verklaring van inwoning
+                            </Link>{' '}
+                            (pdf, 64 kB).
+                          </UnorderedListItem>
+                          <UnorderedListItem>
+                            kopie van een geldig identiteitsbewijs van de persoon bij wie u gaat wonen.
+                          </UnorderedListItem>
+                        </UnorderedList>
+                      </UnorderedList>
+
+                      <ButtonLink
+                        className="voorbeeld-button-link"
+                        appearance="primary-action-button"
+                        href="./verhuizing-doorgeven/maak-een-afspraak"
+                      >
+                        Maak een afspraak
+                      </ButtonLink>
+                    </div>
+                  ),
+                  label: 'Aan de balie',
+                },
+              ]}
+            />
+
             <Heading2>Na het doorgeven van uw verhuizing</Heading2>
             <Paragraph>
               Wij passen uw gegevens aan. Dat duurt ongeveer een week vanaf de verhuisdatum die u doorgeeft. Geeft u uw
