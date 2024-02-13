@@ -9,6 +9,8 @@ import {
   Paragraph,
   Page,
   PageContent,
+  UnorderedList,
+  UnorderedListItem,
 } from '@utrecht/component-library-react';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
@@ -169,11 +171,30 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className="voorbeeld-section voorbeeld-section--spacing">
+        <section className="voorbeeld-section">
           <div className="voorbeeld-section-content">
             <div className="voorbeeld-section-container-wrapper">
               <Heading2 className="voorbeeld-heading-2">Nieuws en inzichten</Heading2>
+              <Button className="voorbeeld-button-more" appearance="primary-action-button">
+                Meer nieuws
+              </Button>
             </div>
+            <UnorderedList className="voorbeeld-unordered-list-cards">
+              <UnorderedListItem>
+                <div className="voorbeeld-container-card">Wijkraadsleden officieel beëdigd</div>
+              </UnorderedListItem>
+              <UnorderedListItem>
+                <div className="voorbeeld-container-card">Huurteam geeft huurders gratis hulp</div>
+              </UnorderedListItem>
+              <UnorderedListItem>
+                <div className="voorbeeld-container-card">
+                  Bijzonder beroep: specialist maatschappelijke ontwikkeling
+                </div>
+              </UnorderedListItem>
+              <UnorderedListItem>
+                <div className="voorbeeld-container-card">De Tegeltaxi gaat weer rijden!</div>
+              </UnorderedListItem>
+            </UnorderedList>
           </div>
         </section>
       </PageContent>
