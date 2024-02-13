@@ -32,16 +32,18 @@ export default function Home() {
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content--flex">
         <section className="voorbeeld-section">
-          <TopTaskNavigation className="grid">
-            <TopTaskLink icon={<UtrechtIconPaspoort />}>Paspoort of ID-kaart aanvragen</TopTaskLink>
-            <TopTaskLink href="/meldingen/" icon={<UtrechtIconMeldingKlacht />}>
-              Meldingen openbare ruimte
-            </TopTaskLink>
-            <TopTaskLink icon={<UtrechtIconVerhuizen />}>Verhuizing doorgeven</TopTaskLink>
-            <TopTaskLink icon={<UtrechtIconWerken />}>Werken bij de gemeente</TopTaskLink>
-            <TopTaskLink icon={<UtrechtIconNummerbord />}>Parkeren: kentekenwijziging doorgeven</TopTaskLink>
-            <TopTaskLink icon={<UtrechtIconAfvalScheiden />}>Afval</TopTaskLink>
-          </TopTaskNavigation>
+          <div className="voorbeeld-section-content">
+            <TopTaskNavigation className="grid">
+              <TopTaskLink icon={<UtrechtIconPaspoort />}>Paspoort of ID-kaart aanvragen</TopTaskLink>
+              <TopTaskLink href="/meldingen/" icon={<UtrechtIconMeldingKlacht />}>
+                Meldingen openbare ruimte
+              </TopTaskLink>
+              <TopTaskLink icon={<UtrechtIconVerhuizen />}>Verhuizing doorgeven</TopTaskLink>
+              <TopTaskLink icon={<UtrechtIconWerken />}>Werken bij de gemeente</TopTaskLink>
+              <TopTaskLink icon={<UtrechtIconNummerbord />}>Parkeren: kentekenwijziging doorgeven</TopTaskLink>
+              <TopTaskLink icon={<UtrechtIconAfvalScheiden />}>Afval</TopTaskLink>
+            </TopTaskNavigation>
+          </div>
         </section>
         <section className="voorbeeld-section voorbeeld-section--spacing">
           <div className="voorbeeld-section-content">

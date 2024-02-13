@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 240px 240px 240px;
   gap: var(--voorbeeld-space-block-mouse);
-  margin-inline: auto;
 }
 
 @media (max-width: 800px) {
