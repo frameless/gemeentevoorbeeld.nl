@@ -195,6 +195,13 @@ export default function Home() {
             />
           </div>
         </section>
+        <section className="voorbeeld-section voorbeeld-section--spacing">
+          <div className="voorbeeld-section-content">
+            <div className="voorbeeld-section-container-wrapper">
+              <Heading2 className="voorbeeld-heading-2">Nieuws en inzichten</Heading2>
+            </div>
+          </div>
+        </section>
       </PageContent>
       <ExampleFooter />
     </Page>
