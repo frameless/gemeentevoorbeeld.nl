@@ -62,6 +62,7 @@ body {
   --utrecht-textbox-read-only-border-color: var(--utrecht-textbox-border-color);
   --voorbeeld-logo-icon-color: var(--voorbeeld-decoration-color);
   --voorbeeld-logo-color: var(--voorbeeld-color-gray-950);
+  --voorbeeld-page-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.6);
 
   --example-page-header-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.5);
 
@@ -221,7 +222,7 @@ utrecht-alert
 .voorbeeld-section-content {
   margin-inline: auto;
   padding-inline: var(--voorbeeld-space-block-cat);
-  max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.6);
+  max-inline-size: var(--voorbeeld-page-content-max-inline-size);
   inline-size: 100%;
   box-sizing: border-box;
 }
