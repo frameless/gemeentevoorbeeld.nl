@@ -289,7 +289,7 @@ utrecht-alert
 }
 
 .voorbeeld-container-card {
-  border-block-start: 0.15em solid var(--voorbeeld-color-gray-200);
+  outline: 0.15em solid var(--voorbeeld-color-gray-200);
 }
 
 .voorbeeld-theme .utrecht-page-content {
