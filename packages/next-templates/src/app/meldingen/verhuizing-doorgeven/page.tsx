@@ -43,9 +43,8 @@ export default function Home() {
         <ExampleNavigation />
         <PageContent>
           <Article className="voorbeeld-article-space">
-            <Link className="voorbeeld-link-back" href="./">
-              <BacklinkIcon />
-              {/* <span>Terug</span> */}
+            <Link href="./">
+              <BacklinkIcon /> Terug
             </Link>
             <Heading1>Verhuizing doorgeven</Heading1>
             <Paragraph>
@@ -71,6 +70,7 @@ export default function Home() {
             </Paragraph>
 
             <Paragraph>Soms gaat het doorgeven van uw verhuizing net iets anders. Kies uw situatie:</Paragraph>
+
             <Heading2>Wie kan de verhuizing doorgeven?</Heading2>
             <AccordionProvider
               sections={[
