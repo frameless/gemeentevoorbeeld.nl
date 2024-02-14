@@ -327,6 +327,16 @@ utrecht-alert
   justify-content: space-between;
 }
 
+.voorbeeld-container-info {
+  --toptask-inline-size-gaps-included: 752px;
+  padding-inline-end: var(--voorbeeld-space-inline-cat);
+  max-inline-size: calc(100% - var(--toptask-inline-size-gaps-included));
+}
+
+.example-toptask-header {
+  gap: var(--voorbeeld-space-inline-cat);
+}
+
 .voorbeeld-form-label {
   display: block;
 }
