@@ -52,10 +52,13 @@ export default function Home() {
               een andere gemeente? Geef dan uw verhuizing door in uw nieuwe gemeente.
             </Paragraph>
 
-            <Link href="https://www.utrecht.nl/city-of-utrecht/moving-to-utrecht-or-moving-within-utrecht">
-              <UtrechtIconArrow />
-              Read this information in English
-            </Link>
+            <Paragraph>
+              <Link href="https://www.utrecht.nl/city-of-utrecht/moving-to-utrecht-or-moving-within-utrecht">
+                <UtrechtIconArrow />
+                Read this information in English
+              </Link>
+            </Paragraph>
+
             <SpotlightSection>
               <Heading2 className="voorbeeld-spotlight-section-heading-style">Verwerking duurt langer</Heading2>
               <Paragraph>
@@ -188,10 +191,13 @@ export default function Home() {
               <UnorderedListItem>
                 <Link href="https://www.digid.nl/">Uw Digid</Link>
               </UnorderedListItem>
-              <UnorderedListItem>Als u verhuist naar een huurwoning of koopwoning:</UnorderedListItem>
-              <UnorderedList>
-                <UnorderedListItem>kopie van uw huurcontract of eigendomsbewijs</UnorderedListItem>
-              </UnorderedList>
+              <UnorderedListItem>
+                Als u verhuist naar een huurwoning of koopwoning:
+                <UnorderedList>
+                  <UnorderedListItem>kopie van uw huurcontract of eigendomsbewijs</UnorderedListItem>
+                </UnorderedList>
+              </UnorderedListItem>
+
               <UnorderedListItem>
                 Als u verhuist naar een instelling:
                 <UnorderedList>
@@ -199,7 +205,10 @@ export default function Home() {
                     uw overeenkomst met de instelling of een verklaring van de instelling
                   </UnorderedListItem>
                 </UnorderedList>
-                <UnorderedListItem>Als u bij iemand anders gaat wonen:</UnorderedListItem>
+              </UnorderedListItem>
+
+              <UnorderedListItem>
+                Als u bij iemand anders gaat wonen:
                 <UnorderedList>
                   <UnorderedListItem>
                     het ingevulde en met pen ondertekende formulier{' '}
