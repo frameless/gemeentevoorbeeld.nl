@@ -244,6 +244,12 @@ utrecht-page-content {
   flex-direction: column;
 }
 
+@media (prefers-contrast: more) {
+  .voorbeeld-container-card {
+    outline: 0.15em solid var(--voorbeeld-color-gray-500);
+  }
+}
+
 @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
   .voorbeeld-theme {
     --voorbeeld-logo-icon-color: currentColor;
