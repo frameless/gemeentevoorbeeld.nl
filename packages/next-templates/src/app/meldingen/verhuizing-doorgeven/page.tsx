@@ -43,9 +43,8 @@ export default function Home() {
         <ExampleNavigation />
         <PageContent>
           <Article className="voorbeeld-article-space">
-            <Link className="voorbeeld-link-back" href="./">
-              <BacklinkIcon />
-              {/* <span>Terug</span> */}
+            <Link href="./">
+              <BacklinkIcon /> Terug
             </Link>
             <Heading1>Verhuizing doorgeven</Heading1>
             <Paragraph>
@@ -77,7 +76,7 @@ export default function Home() {
                   className: 'voorbeeld-accordion__section',
                   headingLevel: 2,
                   body: (
-                    <div>
+                    <>
                       <Paragraph className="voorbeeld-paragraph">
                         U hebt toestemming nodig van de persoon bij wie u gaat wonen. Dit is een bewoner van het adres
                         van 18 jaar of ouder. Bijvoorbeeld een van uw ouders of uw partner.
@@ -101,7 +100,7 @@ export default function Home() {
                           moet overeenkomen met de handtekening op het identiteitsbewijs.
                         </UnorderedListItem>
                       </UnorderedList>
-                    </div>
+                    </>
                   ),
                   label: 'U gaat bij iemand anders wonen',
                 },
