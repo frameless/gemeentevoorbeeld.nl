@@ -48,7 +48,7 @@ export default function Home() {
         <section className="voorbeeld-section voorbeeld-section--spacing">
           <div className="voorbeeld-section-content">
             <div className="voorbeeld-section-container-wrapper">
-              <Heading2 className="voorbeeld-heading-2">Zelf regelen</Heading2>
+              <Heading2>Zelf regelen</Heading2>
               <Button className="voorbeeld-button-more" appearance="primary-action-button">
                 Meer bekijken
               </Button>
