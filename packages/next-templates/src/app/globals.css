@@ -237,12 +237,10 @@ utrecht-alert
 
 .voorbeeld-section:nth-of-type(2) {
   background-color: var(--voorbeeld-color-gray-200);
-  padding-block: var(--voorbeeld-space-block-cat);
 }
 
 .voorbeeld-section:nth-of-type(3) {
   background-color: var(--voorbeeld-color-white);
-  padding-block: var(--voorbeeld-space-block-cat);
 }
 
 .voorbeeld-accordion {
@@ -310,6 +308,7 @@ utrecht-alert
   display: flex;
   flex-direction: column;
   inline-size: 100%;
+  padding-block: var(--voorbeeld-space-block-cat);
 }
 
 .voorbeeld-section:first-child {
