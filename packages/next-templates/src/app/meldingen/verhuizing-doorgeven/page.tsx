@@ -45,9 +45,9 @@ export default function Home() {
           <Article className="voorbeeld-article-space">
             <Link className="voorbeeld-link-back" href="./">
               <BacklinkIcon />
-              <span className="voorbeeld-span--underlined">Terug</span>
+              {/* <span>Terug</span> */}
             </Link>
-            <Heading1 className="voorbeeld-heading-1">Verhuizing doorgeven</Heading1>
+            <Heading1>Verhuizing doorgeven</Heading1>
             <Paragraph>
               Als u verhuist naar Utrecht of binnen Utrecht, geeft u uw adres aan ons door. Verhuist u van Utrecht naar
               een andere gemeente? Geef dan uw verhuizing door in uw nieuwe gemeente.
@@ -57,7 +57,7 @@ export default function Home() {
               <UtrechtIconArrow />
               Read this information in English
             </Link>
-            <SpotlightSection className="voorbeeld-spotlight-section">
+            <SpotlightSection>
               <Heading2 className="voorbeeld-spotlight-section-heading-style">Verwerking duurt langer</Heading2>
               <Paragraph>
                 Door extra drukte en onderbezetting van personeel kan de verwerking van uw verhuizing 14 dagen duren.
@@ -219,14 +219,10 @@ export default function Home() {
 
             <Heading3>Met DigiD</Heading3>
             <ButtonGroup className="voorbeeld-button-group">
-            <UtrechtDigidLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
-            <ButtonLink
-              className="voorbeeld-button-link"
-              appearance="primary-action-button"
-              href="./verhuizing-doorgeven/form"
-            >
-              Geef verhuizing door
-            </ButtonLink>
+              <UtrechtDigidLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
+              <ButtonLink appearance="primary-action-button" href="./verhuizing-doorgeven/form">
+                Geef verhuizing door
+              </ButtonLink>
             </ButtonGroup>
 
             <AccordionProvider
@@ -275,7 +271,7 @@ export default function Home() {
 
                       <Paragraph>Hebt u alles ingevuld en ondertekend? Stuur het op naar:</Paragraph>
                       <Paragraph>
-                        Gemeente voorbeeld <br/> Burgerzaken <br/> Postbus 1234 <br/> 1234 AB Utrecht
+                        Gemeente voorbeeld <br /> Burgerzaken <br /> Postbus 1234 <br /> 1234 AB Utrecht
                       </Paragraph>
                     </div>
                   ),
@@ -321,11 +317,7 @@ export default function Home() {
                         </UnorderedList>
                       </UnorderedList>
 
-                      <ButtonLink
-                        className="voorbeeld-button-link"
-                        appearance="primary-action-button"
-                        href="./verhuizing-doorgeven/maak-een-afspraak"
-                      >
+                      <ButtonLink appearance="primary-action-button" href="./verhuizing-doorgeven/maak-een-afspraak">
                         Maak een afspraak
                       </ButtonLink>
                     </div>
