@@ -333,6 +333,7 @@ utrecht-alert
   flex-direction: column;
   inline-size: 100%;
   padding-block: var(--voorbeeld-space-block-cat);
+  box-sizing: border-box;
 }
 
 .voorbeeld-section:first-child {
