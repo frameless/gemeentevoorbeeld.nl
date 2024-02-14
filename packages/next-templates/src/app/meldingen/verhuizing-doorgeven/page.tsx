@@ -45,9 +45,9 @@ export default function Home() {
           <Article className="voorbeeld-article-space">
             <Link className="voorbeeld-link-back" href="./">
               <BacklinkIcon />
-              <span className="voorbeeld-span--underlined">Terug</span>
+              {/* <span>Terug</span> */}
             </Link>
-            <Heading1 className="voorbeeld-heading-1">Verhuizing doorgeven</Heading1>
+            <Heading1>Verhuizing doorgeven</Heading1>
             <Paragraph>
               Als u verhuist naar Utrecht of binnen Utrecht, geeft u uw adres aan ons door. Verhuist u van Utrecht naar
               een andere gemeente? Geef dan uw verhuizing door in uw nieuwe gemeente.
@@ -57,7 +57,7 @@ export default function Home() {
               <UtrechtIconArrow />
               Read this information in English
             </Link>
-            <SpotlightSection className="voorbeeld-spotlight-section">
+            <SpotlightSection>
               <Heading2 className="voorbeeld-spotlight-section-heading-style">Verwerking duurt langer</Heading2>
               <Paragraph>
                 Door extra drukte en onderbezetting van personeel kan de verwerking van uw verhuizing 14 dagen duren.
