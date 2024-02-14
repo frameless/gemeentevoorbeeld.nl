@@ -52,10 +52,12 @@ export default function Home() {
               een andere gemeente? Geef dan uw verhuizing door in uw nieuwe gemeente.
             </Paragraph>
 
-            <Link href="https://www.utrecht.nl/city-of-utrecht/moving-to-utrecht-or-moving-within-utrecht">
-              <UtrechtIconArrow />
-              Read this information in English
-            </Link>
+            <Paragraph>
+              <Link href="https://www.utrecht.nl/city-of-utrecht/moving-to-utrecht-or-moving-within-utrecht">
+                <UtrechtIconArrow />
+                Read this information in English
+              </Link>
+            </Paragraph>
 
             <SpotlightSection>
               <Heading2 className="voorbeeld-spotlight-section-heading-style">Verwerking duurt langer</Heading2>
@@ -192,29 +194,37 @@ export default function Home() {
               <UnorderedListItem>
                 <Link href="https://www.digid.nl/">Uw Digid</Link>
               </UnorderedListItem>
-              <UnorderedListItem>Als u verhuist naar een huurwoning of koopwoning:</UnorderedListItem>
-              <UnorderedList>
-                <UnorderedListItem>kopie van uw huurcontract of eigendomsbewijs</UnorderedListItem>
-              </UnorderedList>
-              <UnorderedListItem>Als u verhuist naar een instelling:</UnorderedListItem>
-              <UnorderedList>
-                <UnorderedListItem>
-                  uw overeenkomst met de instelling of een verklaring van de instelling
-                </UnorderedListItem>
-              </UnorderedList>
-              <UnorderedListItem>Als u bij iemand anders gaat wonen:</UnorderedListItem>
-              <UnorderedList>
-                <UnorderedListItem>
-                  het ingevulde en met pen ondertekende formulier{' '}
-                  <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Verklaring-bewoning-adres.pdf">
-                    Verklaring van inwoning
-                  </Link>{' '}
-                  (pdf, 557 kB).
-                </UnorderedListItem>
-                <UnorderedListItem>
-                  kopie van een geldig identiteitsbewijs van de persoon bij wie u gaat wonen.
-                </UnorderedListItem>
-              </UnorderedList>
+              <UnorderedListItem>
+                Als u verhuist naar een huurwoning of koopwoning:
+                <UnorderedList>
+                  <UnorderedListItem>kopie van uw huurcontract of eigendomsbewijs</UnorderedListItem>
+                </UnorderedList>
+              </UnorderedListItem>
+
+              <UnorderedListItem>
+                Als u verhuist naar een instelling:
+                <UnorderedList>
+                  <UnorderedListItem>
+                    uw overeenkomst met de instelling of een verklaring van de instelling
+                  </UnorderedListItem>
+                </UnorderedList>
+              </UnorderedListItem>
+
+              <UnorderedListItem>
+                Als u bij iemand anders gaat wonen:
+                <UnorderedList>
+                  <UnorderedListItem>
+                    het ingevulde en met pen ondertekende formulier{' '}
+                    <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Verklaring-bewoning-adres.pdf">
+                      Verklaring van inwoning
+                    </Link>{' '}
+                    (pdf, 557 kB).
+                  </UnorderedListItem>
+                  <UnorderedListItem>
+                    kopie van een geldig identiteitsbewijs van de persoon bij wie u gaat wonen.
+                  </UnorderedListItem>
+                </UnorderedList>
+              </UnorderedListItem>
             </UnorderedList>
 
             <Heading3>Met DigiD</Heading3>
@@ -292,29 +302,38 @@ export default function Home() {
                         <UnorderedListItem>
                           Uw geldige identiteitsbewijs (paspoort, ID-kaart of rijbewijs).
                         </UnorderedListItem>
-                        <UnorderedListItem>Als u verhuist naar een huurwoning of koopwoning:</UnorderedListItem>
-                        <UnorderedList>
-                          <UnorderedListItem>kopie van uw huurcontract of eigendomsbewijs</UnorderedListItem>
-                        </UnorderedList>
-                        <UnorderedListItem>Als u verhuist naar een instelling:</UnorderedListItem>
-                        <UnorderedList>
-                          <UnorderedListItem>
-                            uw overeenkomst met de instelling of een verklaring van de instelling
-                          </UnorderedListItem>
-                        </UnorderedList>
-                        <UnorderedListItem>Als u bij iemand anders gaat wonen:</UnorderedListItem>
-                        <UnorderedList>
-                          <UnorderedListItem>
-                            Het ingevulde en met pen ondertekende formulier{' '}
-                            <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Verklaring-bewoning-adres.pdf">
-                              Verklaring van inwoning
-                            </Link>{' '}
-                            (pdf, 64 kB).
-                          </UnorderedListItem>
-                          <UnorderedListItem>
-                            kopie van een geldig identiteitsbewijs van de persoon bij wie u gaat wonen.
-                          </UnorderedListItem>
-                        </UnorderedList>
+
+                        <UnorderedListItem>
+                          Als u verhuist naar een huurwoning of koopwoning:
+                          <UnorderedList>
+                            <UnorderedListItem>kopie van uw huurcontract of eigendomsbewijs</UnorderedListItem>
+                          </UnorderedList>
+                        </UnorderedListItem>
+
+                        <UnorderedListItem>
+                          Als u verhuist naar een instelling:
+                          <UnorderedList>
+                            <UnorderedListItem>
+                              uw overeenkomst met de instelling of een verklaring van de instelling
+                            </UnorderedListItem>
+                          </UnorderedList>
+                        </UnorderedListItem>
+
+                        <UnorderedListItem>
+                          Als u bij iemand anders gaat wonen:
+                          <UnorderedList>
+                            <UnorderedListItem>
+                              Het ingevulde en met pen ondertekende formulier{' '}
+                              <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Verklaring-bewoning-adres.pdf">
+                                Verklaring van inwoning
+                              </Link>{' '}
+                              (pdf, 64 kB).
+                            </UnorderedListItem>
+                            <UnorderedListItem>
+                              kopie van een geldig identiteitsbewijs van de persoon bij wie u gaat wonen.
+                            </UnorderedListItem>
+                          </UnorderedList>
+                        </UnorderedListItem>
                       </UnorderedList>
 
                       <ButtonLink appearance="primary-action-button" href="./verhuizing-doorgeven/maak-een-afspraak">
