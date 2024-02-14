@@ -235,7 +235,7 @@ utrecht-alert
   max-width: 80ch;
 }
 
-.voorbeeld-section:nth-of-type(2) {
+.voorbeeld-section--alternate {
   background-color: var(--voorbeeld-color-gray-200);
 }
 
