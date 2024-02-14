@@ -283,7 +283,7 @@ utrecht-alert
 .voorbeeld-unordered-list-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
+  grid-gap: var(--voorbeeld-space-row-rat);
   list-style: none;
   padding-inline-start: 0;
 }
