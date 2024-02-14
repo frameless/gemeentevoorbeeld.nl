@@ -84,7 +84,7 @@ export default function Home() {
             </TopTaskCard>
           </div>
         </section>
-        <section className="voorbeeld-section voorbeeld-section--spacing">
+        <section className="voorbeeld-section voorbeeld-section--alternate voorbeeld-section--spacing">
           <div className="voorbeeld-section-content">
             <div className="voorbeeld-section-container-wrapper">
               <Heading2>Zelf regelen</Heading2>
