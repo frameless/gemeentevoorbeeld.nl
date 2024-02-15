@@ -181,18 +181,24 @@ export default function Home() {
             </div>
             <ul className="voorbeeld-unordered-list-cards">
               <li>
-                <div className="voorbeeld-container-card">Wijkraadsleden officieel beëdigd</div>
-              </li>
-              <li>
-                <div className="voorbeeld-container-card">Huurteam geeft huurders gratis hulp</div>
-              </li>
-              <li>
                 <div className="voorbeeld-container-card">
-                  Bijzonder beroep: specialist maatschappelijke ontwikkeling
+                  <Heading4>Wijkraadsleden officieel beëdigd</Heading4>
                 </div>
               </li>
               <li>
-                <div className="voorbeeld-container-card">De Tegeltaxi gaat weer rijden!</div>
+                <div className="voorbeeld-container-card">
+                  <Heading4>Huurteam geeft huurders gratis hulp</Heading4>
+                </div>
+              </li>
+              <li>
+                <div className="voorbeeld-container-card">
+                  <Heading4>Bijzonder beroep: specialist maatschappelijke ontwikkeling</Heading4>
+                </div>
+              </li>
+              <li>
+                <div className="voorbeeld-container-card">
+                  <Heading4>De Tegeltaxi gaat weer rijden!</Heading4>
+                </div>
               </li>
             </ul>
           </div>
