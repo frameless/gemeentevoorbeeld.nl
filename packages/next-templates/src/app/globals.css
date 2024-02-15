@@ -337,6 +337,11 @@ utrecht-alert
   gap: var(--voorbeeld-space-inline-cat);
 }
 
+.example-toptask-header svg {
+  color: var(--voorbeeld-color-violet-800);
+  scale: 1.6;
+}
+
 .voorbeeld-form-label {
   display: block;
 }
