@@ -317,6 +317,7 @@ utrecht-alert
 
 .voorbeeld-container-card {
   outline: 0.15em solid var(--voorbeeld-color-gray-200);
+  padding: var(--voorbeeld-space-inline-snail);
 }
 
 .voorbeeld-theme .utrecht-page-content {
