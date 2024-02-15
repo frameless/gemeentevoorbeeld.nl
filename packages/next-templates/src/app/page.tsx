@@ -4,6 +4,8 @@ import {
   AccordionProvider,
   Button,
   Heading2,
+  Heading3,
+  Heading4,
   LinkList,
   LinkListLink,
   Paragraph,
@@ -13,6 +15,7 @@ import {
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
 import { TopTaskHeader } from '@/components/TopTask/TopTaskHeader';
+import { IconClock } from '@tabler/icons-react';
 import {
   UtrechtIconAfvalScheiden,
   UtrechtIconMeldingKlacht,
@@ -44,7 +47,19 @@ export default function Home() {
               <TopTaskLink icon={<UtrechtIconNummerbord />}>Parkeren: kentekenwijziging doorgeven</TopTaskLink>
               <TopTaskLink icon={<UtrechtIconAfvalScheiden />}>Afval</TopTaskLink>
             </TopTaskNavigation>
-            <TopTaskHeader>Openingstijden</TopTaskHeader>
+            <TopTaskHeader>
+              <IconClock />
+              <Heading3>Openingstijden</Heading3>
+              <Heading4>Openingstijden Gemeentehuis</Heading4>
+              <Paragraph className="voorbeeld-paragraph-opening-times">
+                Vandaag:
+                <br />
+                08.30 - 17.00
+                <br />
+                18.00 - 20.00
+              </Paragraph>
+              <Button appearance="secondary-action-button">Contact</Button>
+            </TopTaskHeader>
           </div>
         </section>
         <section className="voorbeeld-section voorbeeld-section--spacing">
