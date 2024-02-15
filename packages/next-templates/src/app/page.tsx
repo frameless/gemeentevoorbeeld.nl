@@ -213,6 +213,10 @@ export default function Home() {
                     <IconCalendar />
                     <Paragraph>donderdag 15 februari 2024</Paragraph>
                   </div>
+                  <Paragraph>
+                    Burgemeester Pos heeft 273 wijkraadsleden officieel beëdigd. Ze hebben allemaal de eed afgelegd of
+                    een belofte gedaan op het stadhuis van gemeente Voorbeeld.
+                  </Paragraph>
                 </div>
               </li>
               <li>
@@ -222,6 +226,10 @@ export default function Home() {
                     <IconCalendar />
                     <Paragraph>donderdag 15 februari 2024</Paragraph>
                   </div>
+                  <Paragraph>
+                    Alle huurders in Lenteveld die een woning, appartement of kamer huren van een particuliere
+                    verhuurder kunnen gratis gebruikmaken van de hulp van het Huurteam.
+                  </Paragraph>
                 </div>
               </li>
               <li>
@@ -231,16 +239,22 @@ export default function Home() {
                     <IconCalendar />
                     <Paragraph>donderdag 15 februari 2024</Paragraph>
                   </div>
+                  <Paragraph>
+                    De medewerkers van de gemeente doen van alles in de stad. Sommige beroepen zijn bekend, andere
+                    minder.
+                  </Paragraph>
                 </div>
               </li>
               <li>
                 <div className="voorbeeld-container-card">
                   <Heading4>De Tegeltaxi gaat weer rijden!</Heading4>
-                  <IconCalendar />
                   <div className="voorbeeld-container-date">
                     <IconCalendar />
                     <Paragraph>donderdag 15 februari 2024</Paragraph>
                   </div>
+                  <Paragraph>
+                    Na het succes van de pilot vorig jaar, gaat de TegelTaxi weer in Lenteveld rijden!
+                  </Paragraph>
                 </div>
               </li>
             </ul>
