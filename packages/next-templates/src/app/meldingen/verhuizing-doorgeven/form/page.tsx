@@ -3,13 +3,14 @@
 import {
   Article,
   Button,
+  ButtonGroup,
   Document,
   Fieldset,
-  FieldsetLegend,
   FormField,
   FormLabel,
   Heading1,
   Heading2,
+  Textbox,
   Page,
   PageContent,
   Paragraph,
@@ -52,21 +53,18 @@ export default function Home() {
                   Ik ben eigenaar van de woning
                 </FormLabel>
               </FormField>
-
               <FormField type="radio">
                 <RadioButton id="shortly" name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3" value="2" />
                 <FormLabel htmlFor="shortly" type="radio">
                   Ik heb een huurcontract en ik huur het gehele woning
                 </FormLabel>
               </FormField>
-
               <FormField type="radio">
                 <RadioButton id="when-pigs-can-fly" name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3" value="3" />
                 <FormLabel htmlFor="when-pigs-can-fly" type="radio">
                   Ik heb een huurcontract en ik huur een deel van de woning
                 </FormLabel>
               </FormField>
-
               <FormField type="radio">
                 <RadioButton id="when-pigs-can-fly" name="828aa90e-0e99-4db9-a5e5-d39f689cf7b3" value="4" />
                 <FormLabel htmlFor="when-pigs-can-fly" type="radio">
@@ -74,6 +72,18 @@ export default function Home() {
                 </FormLabel>
               </FormField>
             </Fieldset>
+
+            <Heading2>Verhuizing</Heading2>
+            <FormField type="text">
+              <Paragraph>
+                <FormLabel htmlFor="2222">Datum verhuizing</FormLabel>
+              </Paragraph>
+              <Paragraph>
+                <Textbox id="2222" name="datums beschikbaarheid" type="date" autoComplete="off" required />
+              </Paragraph>
+            </FormField>
+
+            <Heading2>Uw Nieuwe Adres</Heading2>
           </Article>
         </PageContent>
         <ExampleFooterFocus />
