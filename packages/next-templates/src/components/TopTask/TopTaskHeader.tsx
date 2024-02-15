@@ -13,7 +13,7 @@ export type DivProps = HTMLAttributes<HTMLDivElement>;
 export const TopTaskHeader = forwardRef(
   ({ children, className, ...restProps }: PropsWithChildren<DivProps>, ref: ForwardedRef<HTMLDivElement>) => {
     return (
-      <div ref={ref} className={clsx('example-toptask-header', `example-toptask-header--${className}`)} {...restProps}>
+      <div ref={ref} className={clsx('example-toptask-header', className)} {...restProps}>
         {children}
       </div>
     );
