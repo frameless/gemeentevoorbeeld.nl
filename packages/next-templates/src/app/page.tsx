@@ -183,21 +183,38 @@ export default function Home() {
               <li>
                 <div className="voorbeeld-container-card">
                   <Heading4>Wijkraadsleden officieel beëdigd</Heading4>
+                  <div className="voorbeeld-container-date">
+                    <IconCalendar />
+                    <Paragraph>donderdag 15 februari 2024</Paragraph>
+                  </div>
                 </div>
               </li>
               <li>
                 <div className="voorbeeld-container-card">
                   <Heading4>Huurteam geeft huurders gratis hulp</Heading4>
+                  <div className="voorbeeld-container-date">
+                    <IconCalendar />
+                    <Paragraph>donderdag 15 februari 2024</Paragraph>
+                  </div>
                 </div>
               </li>
               <li>
                 <div className="voorbeeld-container-card">
                   <Heading4>Bijzonder beroep: specialist maatschappelijke ontwikkeling</Heading4>
+                  <div className="voorbeeld-container-date">
+                    <IconCalendar />
+                    <Paragraph>donderdag 15 februari 2024</Paragraph>
+                  </div>
                 </div>
               </li>
               <li>
                 <div className="voorbeeld-container-card">
                   <Heading4>De Tegeltaxi gaat weer rijden!</Heading4>
+                  <IconCalendar />
+                  <div className="voorbeeld-container-date">
+                    <IconCalendar />
+                    <Paragraph>donderdag 15 februari 2024</Paragraph>
+                  </div>
                 </div>
               </li>
             </ul>
