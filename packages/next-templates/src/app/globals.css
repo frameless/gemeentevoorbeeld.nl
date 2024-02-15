@@ -218,6 +218,11 @@ utrecht-alert
   box-sizing: border-box;
 }
 
+.voorbeeld-toptask-layout {
+  display: flex;
+  gap: var(--voorbeeld-space-block-rabbit);
+}
+
 .utrecht-paragraph {
   max-width: 80ch;
 }

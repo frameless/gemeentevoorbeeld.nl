@@ -33,7 +33,7 @@ export default function Home() {
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content--flex">
         <section className="voorbeeld-section">
-          <div className="voorbeeld-section-content">
+          <div className="voorbeeld-section-content voorbeeld-toptask-layout">
             <TopTaskNavigation className="grid">
               <TopTaskLink icon={<UtrechtIconPaspoort />}>Paspoort of ID-kaart aanvragen</TopTaskLink>
               <TopTaskLink href="/meldingen/" icon={<UtrechtIconMeldingKlacht />}>
