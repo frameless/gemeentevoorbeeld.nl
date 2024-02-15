@@ -122,6 +122,18 @@ body {
   --utrecht-heading-1-margin-block-end: var(--voorbeeld-space-block-rabbit);
 }
 
+.utrecht-heading-1,
+.utrecht-heading-2,
+.utrecht-heading-3,
+.utrecht-heading-4,
+.utrecht-heading-5,
+.utrecht-heading-6 {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  hyphenate-limit-chars: 12 8 4;
+}
+
 utrecht-alert
   > :is(
     .utrecht-heading-1,
