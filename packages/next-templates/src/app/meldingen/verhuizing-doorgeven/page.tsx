@@ -59,8 +59,8 @@ export default function Home() {
               </Link>
             </Paragraph>
 
-            <SpotlightSection>
-              <Heading2 className="voorbeeld-spotlight-section-heading-style">Verwerking duurt langer</Heading2>
+            <SpotlightSection className="voorbeeld-utrecht-spotlight-section">
+              <Heading2>Verwerking duurt langer</Heading2>
               <Paragraph>
                 Door extra drukte en onderbezetting van personeel kan de verwerking van uw verhuizing 14 dagen duren.
               </Paragraph>
