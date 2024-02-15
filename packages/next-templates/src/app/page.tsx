@@ -12,6 +12,7 @@ import {
 } from '@utrecht/component-library-react';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
+import { TopTaskHeader } from '@/components/TopTask/TopTaskHeader';
 import {
   UtrechtIconAfvalScheiden,
   UtrechtIconMeldingKlacht,
@@ -43,6 +44,7 @@ export default function Home() {
               <TopTaskLink icon={<UtrechtIconNummerbord />}>Parkeren: kentekenwijziging doorgeven</TopTaskLink>
               <TopTaskLink icon={<UtrechtIconAfvalScheiden />}>Afval</TopTaskLink>
             </TopTaskNavigation>
+            <TopTaskHeader>Openingstijden</TopTaskHeader>
           </div>
         </section>
         <section className="voorbeeld-section voorbeeld-section--spacing">
