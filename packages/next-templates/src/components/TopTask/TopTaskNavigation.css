@@ -1,17 +1,17 @@
-.example-toptask-nav--grid {
+.example-toptask-nav {
   display: grid;
   grid-template-columns: 240px 240px 240px;
   gap: var(--voorbeeld-space-block-mouse);
 }
 
 @media (max-width: 800px) {
-  .example-toptask-nav--grid {
+  .example-toptask-nav {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 430px) {
-  .example-toptask-nav--grid {
+  .example-toptask-nav {
     grid-template-columns: repeat(1, 1fr);
   }
 }
