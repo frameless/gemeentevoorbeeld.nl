@@ -3,6 +3,7 @@
 import {
   AccordionProvider,
   Button,
+  ButtonGroup,
   Heading2,
   Heading3,
   Heading4,
@@ -197,12 +198,12 @@ export default function Home() {
         </section>
         <section className="voorbeeld-section">
           <div className="voorbeeld-section-content">
-            <div className="voorbeeld-section-container-wrapper">
+            <ButtonGroup className="voorbeeld-button-group">
               <Heading2 className="voorbeeld-heading-2">Nieuws en inzichten</Heading2>
               <Button className="voorbeeld-button-more" appearance="primary-action-button">
                 Meer nieuws
               </Button>
-            </div>
+            </ButtonGroup>
             <ul className="voorbeeld-unordered-list-cards">
               <li>
                 <Link className="voorbeeld-link-card" href="#">
