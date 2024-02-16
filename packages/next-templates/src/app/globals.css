@@ -327,11 +327,6 @@ utrecht-alert
   justify-content: space-between;
 }
 
-.example-toptask-card {
-  gap: var(--voorbeeld-space-inline-cat);
-  --utrecht-heading-3-margin-block-start: -5px;
-}
-
 .voorbeeld-form-label {
   display: block;
 }
