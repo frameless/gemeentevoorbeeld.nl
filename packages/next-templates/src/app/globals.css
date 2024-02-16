@@ -327,13 +327,11 @@ utrecht-alert
   justify-content: space-between;
 }
 
-.example-toptask-header {
+.example-toptask-card {
   gap: var(--voorbeeld-space-inline-cat);
-  block-size: 100%;
-  max-inline-size: 100%;
 }
 
-.example-toptask-header .voorbeeld-icon-clock {
+.example-toptask-card .voorbeeld-icon-clock {
   --utrecht-icon-color: var(--voorbeeld-color-violet-800);
   --utrecht-icon-size: var(--voorbeeld-size-icon-3xl);
   --utrecht-heading-3-margin-block-start: -5px;
