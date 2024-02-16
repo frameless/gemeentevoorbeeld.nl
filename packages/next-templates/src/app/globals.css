@@ -222,8 +222,8 @@ utrecht-alert
 .voorbeeld-toptask-layout {
   display: flex;
   gap: var(--voorbeeld-space-block-rabbit);
-  --utrecht-heading-3-margin-block-start: 0;
-  --utrecht-heading-3-margin-block-end: var(--voorbeeld-space-block-rabbit);
+  --utrecht-heading-3-margin-block-start: -5px;
+  --utrecht-heading-3-margin-block-end: var(--voorbeeld-space-block-rat);
 }
 
 .voorbeeld-paragraph-opening-times {
@@ -321,9 +321,11 @@ utrecht-alert
   gap: var(--voorbeeld-space-inline-cat);
 }
 
-.example-toptask-header svg {
-  color: var(--voorbeeld-color-violet-800);
-  scale: 1.6;
+.example-toptask-header .voorbeeld-icon-clock {
+  --utrecht-icon-color: var(--voorbeeld-color-violet-800);
+  --utrecht-icon-size: var(--voorbeeld-size-icon-3xl);
+  --utrecht-heading-3-margin-block-start: -5px;
+  margin-inline-start: -4px;
 }
 
 .voorbeeld-form-label {

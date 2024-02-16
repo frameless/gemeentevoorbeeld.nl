@@ -49,7 +49,7 @@ export default function Home() {
               <TopTaskLink icon={<UtrechtIconAfvalScheiden />}>Afval</TopTaskLink>
             </TopTaskNavigation>
             <TopTaskHeader>
-              <UtrechtIcon>
+              <UtrechtIcon className="voorbeeld-icon-clock">
                 <IconClock />
               </UtrechtIcon>
               <Heading3>Openingstijden</Heading3>
