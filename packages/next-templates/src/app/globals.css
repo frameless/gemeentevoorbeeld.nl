@@ -131,7 +131,6 @@ body {
   word-break: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
-  hyphenate-limit-chars: 12 8 4;
 }
 
 utrecht-alert
@@ -259,6 +258,9 @@ utrecht-page-content {
 @media (prefers-contrast: more) {
   .voorbeeld-container-card {
     outline: 0.15em solid var(--voorbeeld-color-gray-500);
+  }
+  .voorbeeld-link-card:hover .voorbeeld-container-card {
+    background-color: var(--voorbeeld-color-gray-500);
   }
 }
 
