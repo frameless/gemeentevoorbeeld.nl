@@ -1,7 +1,6 @@
 .example-toptask-header {
-  --toptask-grid-block-size: calc(294.4px + var(--voorbeeld-space-block-mouse));
-  inline-size: calc(100% / 3);
-  block-size: var(--toptask-grid-block-size);
   padding: var(--voorbeeld-space-inline-rabbit);
   background-color: var(--voorbeeld-color-violet-200);
+  block-size: 100%;
+  max-inline-size: 100%;
 }
