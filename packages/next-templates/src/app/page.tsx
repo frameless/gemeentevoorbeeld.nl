@@ -17,6 +17,7 @@ import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
 import { TopTaskHeader } from '@/components/TopTask/TopTaskHeader';
 import { IconClock } from '@tabler/icons-react';
 import {
+  UtrechtIcon,
   UtrechtIconAfvalScheiden,
   UtrechtIconMeldingKlacht,
   UtrechtIconNummerbord,
@@ -48,7 +49,9 @@ export default function Home() {
               <TopTaskLink icon={<UtrechtIconAfvalScheiden />}>Afval</TopTaskLink>
             </TopTaskNavigation>
             <TopTaskHeader>
-              <IconClock />
+              <UtrechtIcon>
+                <IconClock />
+              </UtrechtIcon>
               <Heading3>Openingstijden</Heading3>
               <Heading4>Openingstijden Gemeentehuis</Heading4>
               <Paragraph className="voorbeeld-paragraph-opening-times">
