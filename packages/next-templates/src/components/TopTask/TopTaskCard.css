@@ -4,3 +4,9 @@
   block-size: 100%;
   inline-size: 100%;
 }
+
+.example-toptask-card__icon .voorbeeld-icon-clock {
+  --utrecht-icon-color: var(--voorbeeld-color-violet-800);
+  --utrecht-icon-size: var(--voorbeeld-size-icon-3xl);
+  margin-inline-start: -4px;
+}

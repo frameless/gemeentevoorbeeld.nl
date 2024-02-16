@@ -5,15 +5,21 @@
  */
 
 import clsx from 'clsx';
-import { HTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
+import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import './TopTaskCard.css';
 
-export type TopTaskCardProps = HTMLAttributes<HTMLDivElement>;
+export interface TopTaskCardProps extends HTMLAttributes<HTMLDivElement> {
+  icon?: ReactNode;
+}
 
 export const TopTaskHeader = forwardRef(
-  ({ children, className, ...restProps }: PropsWithChildren<TopTaskCardProps>, ref: ForwardedRef<HTMLDivElement>) => {
+  (
+    { children, className, icon, ...restProps }: PropsWithChildren<TopTaskCardProps>,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => {
     return (
       <div ref={ref} className={clsx('example-toptask-card', className)} {...restProps}>
+        {icon && <span className="example-toptask-card__icon">{icon}</span>}
         {children}
       </div>
     );
