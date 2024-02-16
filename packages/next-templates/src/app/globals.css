@@ -329,13 +329,7 @@ utrecht-alert
 
 .example-toptask-card {
   gap: var(--voorbeeld-space-inline-cat);
-}
-
-.example-toptask-card .voorbeeld-icon-clock {
-  --utrecht-icon-color: var(--voorbeeld-color-violet-800);
-  --utrecht-icon-size: var(--voorbeeld-size-icon-3xl);
   --utrecht-heading-3-margin-block-start: -5px;
-  margin-inline-start: -4px;
 }
 
 .voorbeeld-form-label {
