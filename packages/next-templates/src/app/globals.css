@@ -221,6 +221,7 @@ utrecht-alert
 
 .voorbeeld-toptask-layout {
   display: flex;
+  justify-content: space-between;
   gap: var(--voorbeeld-space-block-rabbit);
   --utrecht-heading-3-margin-block-start: -5px;
   --utrecht-heading-3-margin-block-end: var(--voorbeeld-space-block-rat);
@@ -309,11 +310,6 @@ utrecht-alert
 .voorbeeld-section-container-wrapper {
   display: flex;
   justify-content: space-between;
-}
-
-.example-toptask-card {
-  gap: var(--voorbeeld-space-inline-cat);
-  --utrecht-heading-3-margin-block-start: -5px;
 }
 
 .voorbeeld-form-label {
