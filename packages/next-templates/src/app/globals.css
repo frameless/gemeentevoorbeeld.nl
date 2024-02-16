@@ -131,7 +131,6 @@ body {
   word-break: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
-  hyphenate-limit-chars: 12 8 4;
 }
 
 utrecht-alert
@@ -328,11 +327,40 @@ utrecht-alert
 }
 
 .voorbeeld-container-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   outline: 0.15em solid var(--voorbeeld-color-gray-200);
   padding: var(--voorbeeld-space-inline-snail);
   --utrecht-heading-4-color: var(--voorbeeld-color-gray-800);
   word-break: break-word;
   overflow-wrap: break-word;
+  min-block-size: 204px;
+}
+
+.voorbeeld-container-icon {
+  display: flex;
+  justify-content: end;
+}
+
+.voorbeeld-container-icon .voorbeeld-accordion-chevron--right {
+  --utrecht-icon-inset-block-start: -10px;
+}
+
+.voorbeeld-link-card {
+  --utrecht-link-text-decoration: none;
+}
+
+.voorbeeld-link-card:hover .voorbeeld-container-card {
+  background-color: var(--voorbeeld-color-gray-200);
+}
+
+.voorbeeld-container-date {
+  display: flex;
+  justify-content: left;
+  gap: 0.2em;
+  --utrecht-paragraph-line-height: var(--voorbeeld-space-inline-cat);
+  --utrecht-paragraph-color: var(--voorbeeld-color-violet-700);
 }
 
 .voorbeeld-theme .utrecht-page-content {
@@ -446,6 +474,9 @@ utrecht-page-content {
 @media (prefers-contrast: more) {
   .voorbeeld-container-card {
     outline: 0.15em solid var(--voorbeeld-color-gray-500);
+  }
+  .voorbeeld-link-card:hover .voorbeeld-container-card {
+    background-color: var(--voorbeeld-color-gray-500);
   }
 }
 
