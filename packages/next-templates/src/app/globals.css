@@ -315,14 +315,10 @@ utrecht-alert
   justify-content: space-between;
 }
 
-.voorbeeld-container-info {
-  --voorbeeld-toptask-inline-size-gaps-included: 752px;
-  padding-inline-end: var(--voorbeeld-space-inline-cat);
-  max-inline-size: calc(100% - var(--voorbeeld-toptask-inline-size-gaps-included));
-}
-
 .example-toptask-header {
   gap: var(--voorbeeld-space-inline-cat);
+  block-size: 100%;
+  max-inline-size: 100%;
 }
 
 .example-toptask-header .voorbeeld-icon-clock {
