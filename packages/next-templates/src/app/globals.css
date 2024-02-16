@@ -408,8 +408,6 @@ utrecht-alert
 
 .example-toptask-header {
   gap: var(--voorbeeld-space-inline-cat);
-  block-size: 100%;
-  max-inline-size: 100%;
 }
 
 .voorbeeld-form-label {
