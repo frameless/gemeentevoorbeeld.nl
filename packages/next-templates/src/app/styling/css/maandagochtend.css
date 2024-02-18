@@ -27,7 +27,7 @@
 }
 
 path {
-  fill: var(--voorbeeld-color-violet-700);
+  fill: var(--voorbeeld-decoration-color);
 }
 
 @media only screen and (max-width: 387px) {

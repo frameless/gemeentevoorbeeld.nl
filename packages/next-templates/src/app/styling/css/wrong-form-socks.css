@@ -8,9 +8,9 @@
   --utrecht-textbox-focus-border-color: var(--voorbeeld-color-gray-500);
   --utrecht-textarea-focus-border-color: var(--voorbeeld-color-gray-500);
   --utrecht-button-secondary-action-focus-background-color: transparent;
-  --utrecht-button-secondary-action-focus-border-color: var(--voorbeeld-color-violet-700);
-  --utrecht-button-secondary-action-focus-color: var(--voorbeeld-color-violet-700);
-  --utrecht-button-primary-action-focus-background-color: var(--voorbeeld-color-violet-700);
+  --utrecht-button-secondary-action-focus-border-color: var(--voorbeeld-decoration-color);
+  --utrecht-button-secondary-action-focus-color: var(--voorbeeld-decoration-color);
+  --utrecht-button-primary-action-focus-background-color: var(--voorbeeld-decoration-background-color);
   --utrecht-button-primary-action-focus-color: var(--voorbeeld-color-white);
   --utrecht-focus-outline-color: transparent;
 }
