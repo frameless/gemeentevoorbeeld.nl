@@ -21,6 +21,7 @@ export default function Home() {
       <PageContent>
         <div>
           <Heading1>Font size scale</Heading1>
+          <Paragraph>Tip: you can use 1: when you choose 19px or large as your minimum font-size</Paragraph>
           <hr />
           <div className="frameless-font-scale frameless-font-size-scale-figure">
             <Heading1>The quick brown fox</Heading1>

@@ -4,12 +4,11 @@ import { Heading1, Page, Icon, PageContent } from '@utrecht/component-library-re
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import {
-  IconColorPicker,
   IconColorSwatch,
+  IconCrosshair,
   IconFocusCentered,
   IconForms,
   IconLineHeight,
-  IconMouse,
   IconPalette,
   IconPointer,
   IconTextSize,
@@ -91,6 +90,16 @@ export default function Home() {
             href="/design/hover"
           >
             Pointer hover effect
+          </TopTaskLink>
+          <TopTaskLink
+            icon={
+              <Icon>
+                <IconCrosshair />
+              </Icon>
+            }
+            href="/design/pointer-target-size"
+          >
+            Pointer target size
           </TopTaskLink>
         </TopTaskNavigation>
       </PageContent>

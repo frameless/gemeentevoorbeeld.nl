@@ -6,3 +6,18 @@
 .utrecht-heading-6 {
   --utrecht-icon-size: 1em;
 }
+
+.frameless-example-target-size {
+  border-width: var(--utrecht-radio-button-border-width);
+  border-style: dashed;
+  border-color: var(--utrecht-radio-button-border-color);
+  display: inline-block;
+  inline-size: var(--frameless-size);
+  block-size: var(--frameless-size);
+  box-sizing: border-box;
+}
+
+label .frameless-example-target-size:hover {
+  border-color: var(--utrecht-radio-button-checked-border-color, var(--utrecht-radio-button-border-color));
+  background-color: var(--utrecht-radio-button-checked-background-color), var(--utrecht-radio-button-background-color);
+}
