@@ -27,13 +27,13 @@
 }
 
 .mijn-omgeving {
-  color: var(--voorbeeld-color-violet-700);
+  color: var(--utrecht-interaction-color);
   text-decoration: underline;
 }
 
 .link {
   text-decoration: underline;
-  text-decoration-color: var(--voorbeeld-color-violet-700);
+  text-decoration-color: var(--utrecht-interaction-color);
   padding: 12px;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -1,6 +1,6 @@
 .example--header-home-page {
   align-items: center;
-  border-bottom: solid 4px var(--voorbeeld-color-violet-700);
+  border-bottom: solid 4px var(--voorbeeld-decoration-color);
   display: flex;
   justify-content: space-between;
   margin-block-start: 1em;

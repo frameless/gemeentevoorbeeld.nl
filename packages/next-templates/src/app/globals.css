@@ -20,6 +20,8 @@ body {
 
 .voorbeeld-theme {
   /* HACK: these tokens are not set in voorbeeld-theme */
+  --voorbeeld-decoration-background-color: var(--voorbeeld-color-violet-700);
+  --voorbeeld-decoration-color: var(--voorbeeld-color-violet-700);
   --utrecht-form-field-description-margin-block-end: var(--voorbeeld-space-block-beetle);
   --utrecht-space-around: 1;
   --utrecht-form-field-error-message-margin-block-end: 0;
@@ -31,7 +33,7 @@ body {
   --utrecht-form-field-margin-block-start: var(--voorbeeld-space-block-rabbit);
   --utrecht-form-field-label-margin-block-end: var(--voorbeeld-space-block-beetle);
   --utrecht-paragraph-margin-block-end: var(--voorbeeld-space-block-rabbit);
-  --utrecht-page-footer-background-color: var(--voorbeeld-color-violet-700);
+  --utrecht-page-footer-background-color: var(--voorbeeld-decoration-background-color);
   --utrecht-spotlight-section-background-color: var(--voorbeeld-color-violet-100);
   --utrecht-spotlight-section-color: var(--voorbeeld-color-gray-900);
   --utrecht-heading-1-margin-block-start: 0;
@@ -55,10 +57,10 @@ body {
   --utrecht-radio-button-icon-size: 0%;
   --utrecht-radio-button-size: 1.5em;
   --utrecht-radio-button-checked-border-width: 0.6em;
-  --utrecht-radio-button-checked-border-color: var(--voorbeeld-color-violet-700);
+  --utrecht-radio-button-checked-border-color: var(--utrecht-interaction-color);
   --utrecht-radio-button-border-color: var(--voorbeeld-color-gray-500);
   --utrecht-textbox-read-only-border-color: var(--utrecht-textbox-border-color);
-  --voorbeeld-logo-icon-color: var(--voorbeeld-color-violet-700);
+  --voorbeeld-logo-icon-color: var(--voorbeeld-decoration-color);
   --voorbeeld-logo-color: var(--voorbeeld-color-gray-950);
 
   --example-page-header-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.5);
@@ -72,7 +74,7 @@ body {
   --example-nav-bar-link-padding-block-start: var(--voorbeeld-space-block-mouse);
   --example-nav-bar-link-padding-inline-end: var(--voorbeeld-space-inline-rabbit);
   --example-nav-bar-link-padding-inline-start: var(--voorbeeld-space-inline-rabbit);
-  --example-nav-bar-background-color: var(--voorbeeld-color-violet-700);
+  --example-nav-bar-background-color: var(--voorbeeld-decoration-background-color);
   --example-nav-bar-color: var(--voorbeeld-color-white);
 
   /* alert */
