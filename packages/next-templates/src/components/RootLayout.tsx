@@ -33,12 +33,19 @@ interface DesignToken {
   path: string[];
 }
 
+interface DesignTokenMap {
+  [index: string]: DesignToken;
+}
+interface DesignTokenValueMap {
+  [index: string]: string | number | undefined;
+}
+
 interface UseTokenArgs {
   token: string;
   transformValue?: (value: string) => string;
 }
 
-const designTokensMap: { [index: string]: DesignToken } = designTokens.reduce(
+const designTokensMap: DesignTokenMap = designTokens.reduce(
   (tokens, token) => ({ ...tokens, [token.path.join('.')]: token }),
   {},
 );
@@ -93,12 +100,35 @@ const fallbackTokens: { [index: string]: string } = {
   'utrecht.textbox.font-family': 'utrecht.document.font-family',
   'utrecht.paragraph.font-family': 'utrecht.document.font-family',
   'utrecht.heading.font-family': 'utrecht.document.font-family',
-  'utrecht.heading-1.font-family': 'utrecht.document.font-family',
-  'utrecht.heading-2.font-family': 'utrecht.document.font-family',
-  'utrecht.heading-3.font-family': 'utrecht.document.font-family',
-  'utrecht.heading-4.font-family': 'utrecht.document.font-family',
-  'utrecht.heading-5.font-family': 'utrecht.document.font-family',
-  'utrecht.heading-6.font-family': 'utrecht.document.font-family',
+  'utrecht.heading-1.font-family': 'utrecht.heading.font-family',
+  'utrecht.heading-2.font-family': 'utrecht.heading.font-family',
+  'utrecht.heading-3.font-family': 'utrecht.heading.font-family',
+  'utrecht.heading-4.font-family': 'utrecht.heading.font-family',
+  'utrecht.heading-5.font-family': 'utrecht.heading.font-family',
+  'utrecht.heading-6.font-family': 'utrecht.heading.font-family',
+
+  'utrecht.accordion.button.color': 'utrecht.interaction.color',
+  'utrecht.accordion.button.expanded.color': 'utrecht.interaction.color',
+  'utrecht.button.subtle.color': 'utrecht.interaction.color',
+  'utrecht.button.secondary-action.color': 'utrecht.interaction.color',
+  'utrecht.button.secondary-action.border-color': 'utrecht.interaction.color',
+  'utrecht.button.primary-action.background-color': 'utrecht.interaction.color',
+  'utrecht.checkbox.indeterminate.background-color': 'utrecht.interaction.color',
+  'utrecht.checkbox.checked.background-color': 'utrecht.interaction.color',
+  'utrecht.link.visited.color': 'utrecht.interaction.color',
+  'utrecht.link.text-decoration.color': 'utrecht.interaction.color',
+  'utrecht.link.color': 'utrecht.interaction.color',
+  'utrecht.radio.checked.background-color': 'utrecht.interaction.color',
+  'denhaag.sidenav.link.color': 'utrecht.interaction.color',
+  'todo.breadcrumb.link.color': 'utrecht.interaction.color',
+  'todo.pagination.page-link.color': 'utrecht.interaction.color',
+  'todo.pagination.relative.link.color': 'utrecht.interaction.color',
+  'utrecht.focus.outline.color': 'utrecht.interaction.color',
+  'utrecht.form-control.accent-color': 'utrecht.interaction.color',
+
+  'utrecht.link.text-decoration-color': 'utrecht.link.color',
+
+  'todo.avatar.background-color': 'voorbeeld.decoration.background-color', // FIXME
 };
 
 console.log(Object.keys(fallbackTokens).filter((token) => !designTokensMap[token]));
@@ -138,10 +168,32 @@ const resetCssVariables = Object.entries(fallbackTokens)
     };
   }, {});
 
+const designTokensMapToCssVariables = (tokens: DesignTokenValueMap) =>
+  Object.entries(tokens).reduce((obj, [tokenName, value]) => {
+    return {
+      ...obj,
+      [toCustomProperty(tokenName)]: value,
+    };
+  }, {});
+
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
-  const [tokens, setTokens] = useState<{ [index: string]: string }>({});
+  const forcedColors = {
+    'utrecht.document.color': 'CanvasText',
+    'utrecht.focus.background-color': 'Highlight',
+    'utrecht.focus.color': 'HighlightText',
+    'utrecht.focus.outline-color': 'HighlightText',
+    'utrecht.interaction.color': 'ButtonText',
+    'utrecht.link.color': 'LinkText',
+    'voorbeeld.decoration.background-color': 'AccentColor',
+  };
+  const [tokens, setTokens] = useState<DesignTokenValueMap>({
+    'voorbeeld.decoration.background-color': '#5315F6',
+    'voorbeeld.decoration.color': '#5315F6',
+  });
+
   const [cssVariables, setCssVariables] = useState({
     ...resetCssVariables,
+    ...designTokensMapToCssVariables(tokens),
   });
 
   const useToken = ({
@@ -169,7 +221,11 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
   };
 
   const useColorSample = (token: string) => ({
-    color: tokens[token] || (designTokensMap[token] ? designTokensMap[token]?.value : undefined),
+    color: tokens[token]
+      ? String(tokens[token])
+      : designTokensMap[token]
+        ? String(designTokensMap[token]?.value)
+        : undefined,
   });
 
   return (
@@ -205,9 +261,21 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
           {/* TODO: "Action accent color" should change a common token, not a component token */}
           <FormFieldTextbox
             label="Action accent color"
-            {...useToken({ token: 'utrecht.button.color' })}
+            {...useToken({ token: 'utrecht.interaction.color' })}
           ></FormFieldTextbox>
-          <ColorSample {...useColorSample('utrecht.button.color')}></ColorSample>
+          <ColorSample {...useColorSample('utrecht.interaction.color')}></ColorSample>
+
+          <FormFieldTextbox
+            label="Decoration background color"
+            {...useToken({ token: 'voorbeeld.decoration.background-color' })}
+          ></FormFieldTextbox>
+          <ColorSample {...useColorSample('voorbeeld.decoration.background-color')}></ColorSample>
+
+          <FormFieldTextbox
+            label="Decoration color"
+            {...useToken({ token: 'voorbeeld.decoration.color' })}
+          ></FormFieldTextbox>
+          <ColorSample {...useColorSample('voorbeeld.decoration.color')}></ColorSample>
 
           {/* TODO: "Primary action accent color" should change a common token, not a component token */}
           <FormFieldTextbox
@@ -225,11 +293,6 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
         <details open>
           <summary>Font</summary>
           <div>
-            <FormFieldTextbox
-              list="font-family-values"
-              label="Font"
-              {...useToken({ token: 'utrecht.document.font-family' })}
-            ></FormFieldTextbox>
             <datalist id="font-family-values">
               <option value="Arial"></option>
               <option value="Helvetica"></option>
@@ -244,6 +307,16 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
               <option value="Source Serif Pro"></option>
               <option value="Work Sans"></option>
             </datalist>
+            <FormFieldTextbox
+              list="font-family-values"
+              label="Font"
+              {...useToken({ token: 'utrecht.document.font-family' })}
+            ></FormFieldTextbox>
+            <FormFieldTextbox
+              list="font-family-values"
+              label="Heading font"
+              {...useToken({ token: 'utrecht.heading.font-family' })}
+            ></FormFieldTextbox>
             <FormField>
               <FormLabel>Font size scale</FormLabel>
               <Select
@@ -301,8 +374,8 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
         </details>
       </ThemeBuilderSidebar>
       <ThemeBuilderCanvas>
-        <VoorbeeldTheme>
-          <div style={cssVariables}>
+        <VoorbeeldTheme style={cssVariables}>
+          <div>
             <Surface>
               <Document>
                 <SkipLink href="#main">Naar inhoud</SkipLink>
