@@ -1,14 +1,126 @@
-import { PropsWithChildren } from 'react';
+'use client';
+
+import { HTMLAttributes, PropsWithChildren, RefObject, useRef, useState } from 'react';
 import { VoorbeeldTheme } from './VoorbeeldTheme';
-import { Document, SkipLink } from '@utrecht/component-library-react/dist/css-module';
+import { Document, SkipLink, Surface } from '@utrecht/component-library-react/dist/css-module';
+import { ThemeBuilder, ThemeBuilderCanvas, ThemeBuilderSidebar } from './ThemeBuilder';
+import { FormFieldTextbox } from './FormFieldTextbox';
+
+interface UseTokenArgs {
+  token: string;
+  transformValue?: (value: string) => string;
+}
 
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
+  const [tokens, setTokens] = useState({});
+  const [cssVariables, setCssVariables] = useState({});
+
+  const useToken = ({ token, transformValue }: UseTokenArgs): Pick<HTMLAttributes<HTMLDivElement>, 'onInput'> => {
+    return {
+      onInput: (evt) => {
+        const inputElement = evt.target as HTMLInputElement;
+        if (inputElement) {
+          let value = inputElement.value;
+          if (transformValue) {
+            value = transformValue(value);
+          }
+          const cssVariable = `--${token.replace(/\./g, '-')}`;
+          console.log(cssVariable, value);
+          setTokens({ ...tokens, [token]: value });
+          setCssVariables({ ...cssVariables, [cssVariable]: value });
+        }
+      },
+    };
+  };
+
   return (
-    <VoorbeeldTheme>
-      <Document>
-        <SkipLink href="#main">Naar inhoud</SkipLink>
-        {children}
-      </Document>
-    </VoorbeeldTheme>
+    <ThemeBuilder>
+      <ThemeBuilderSidebar lang="en" className="frameless-theme">
+        <h1>Theme builder</h1>
+        <details open>
+          <summary>Color</summary>
+          {/* Changing utrecht.document.color color does not work great because of more specific component tokens,
+           such as utrecht.paragraph.color */}
+          <FormFieldTextbox label="Text" {...useToken({ token: 'utrecht.document.color' })}></FormFieldTextbox>
+          <FormFieldTextbox
+            label="Document background color"
+            description="The background for most text."
+            {...useToken({ token: 'utrecht.surface.background-color' })}
+          ></FormFieldTextbox>
+          <FormFieldTextbox
+            label="Surface color"
+            description="The background color that covers the browser canvas from edge to edge."
+            {...useToken({ token: 'utrecht.surface.background-color' })}
+          ></FormFieldTextbox>
+          {/* Changing utrecht.link.color color does not work great when more specific component tokens are set,
+           such as utrecht.link.hover.color and utrecht.link.underline.color */}
+          <FormFieldTextbox label="Link color" {...useToken({ token: 'utrecht.link.color' })}></FormFieldTextbox>
+
+          {/* TODO: "Action accent color" should change a common token, not a component token */}
+          <FormFieldTextbox
+            label="Action accent color"
+            {...useToken({ token: 'utrecht.button.color' })}
+          ></FormFieldTextbox>
+
+          {/* TODO: "Primary action accent color" should change a common token, not a component token */}
+          <FormFieldTextbox
+            label="Primary action color"
+            {...useToken({ token: 'utrecht.button.primary-action.background-color' })}
+          ></FormFieldTextbox>
+        </details>
+        <details open>
+          <summary>Font</summary>
+          <div>
+            <FormFieldTextbox
+              list="font-family-values"
+              label="Font"
+              {...useToken({ token: 'utrecht.document.font-family' })}
+            ></FormFieldTextbox>
+            <datalist id="font-family-values">
+              <option value="Arial"></option>
+              <option value="Helvetica"></option>
+              <option value="Verdana"></option>
+              <option value="Times New Roman"></option>
+              <option value="Fira Sans"></option>
+              <option value="Open Sans"></option>
+              <option value="IBM Plex Serif"></option>
+              <option value="Roboto Serif"></option>
+              <option value="Source Sans Pro"></option>
+              <option value="Source Serif Pro"></option>
+              <option value="Work Sans"></option>
+            </datalist>
+          </div>
+        </details>
+        <details open>
+          <summary>Space</summary>
+          <div></div>
+        </details>
+        <details open>
+          <summary>Rounded corners</summary>
+          <div>
+            {/* TODO: "Border radius" should change a common token, not a component token */}
+            <FormFieldTextbox
+              label="Border radius"
+              min={0}
+              max={16}
+              type="range"
+              {...useToken({ token: 'utrecht.button.border-radius', transformValue: (value) => `${value}px` })}
+            ></FormFieldTextbox>
+          </div>
+        </details>
+      </ThemeBuilderSidebar>
+      <ThemeBuilderCanvas>
+        <VoorbeeldTheme>
+          <div style={cssVariables}>
+            <Surface>
+              <Document>
+                <SkipLink href="#main">Naar inhoud</SkipLink>
+                {children}
+              </Document>
+            </Surface>
+          </div>
+        </VoorbeeldTheme>
+      </ThemeBuilderCanvas>
+    </ThemeBuilder>
   );
 }

@@ -1,0 +1,22 @@
+.frameless-theme-builder {
+  display: flex;
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.frameless-theme-builder-sidebar {
+  block-size: 100%;
+  background-color: black;
+  max-inline-size: 300px;
+  inline-size: 100%;
+  color: white;
+}
+
+.frameless-theme-builder-canvas {
+  /* TODO: Use checkerboard pattern */
+  background-color: white;
+  overflow: auto;
+  inline-size: 100%;
+}
