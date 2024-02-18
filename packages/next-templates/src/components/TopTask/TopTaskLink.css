@@ -2,7 +2,7 @@
   flex: calc(100% / 3);
   --utrecht-link-color: var(--voorbeeld-color-white);
   padding: var(--voorbeeld-space-inline-rabbit);
-  background-color: var(--voorbeeld-color-violet-700);
+  background-color: var(--voorbeeld-decoration-background-color);
   text-decoration: none;
 }
 
