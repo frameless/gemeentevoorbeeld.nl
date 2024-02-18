@@ -1,0 +1,99 @@
+.basis-theme {
+  /* good default */
+  --utrecht-form-control-border-width: 1px;
+
+  /* good default */
+  --utrecht-form-label-font-weight: 600;
+
+  /* todo: common token value */
+  --utrecht-form-control-border-color: black;
+
+  /* todo: common token value */
+  --utrecht-form-control-background-color: white;
+
+  /* todo: common token value */
+  --utrecht-form-control-color: black;
+}
+
+.frameless-font-scale {
+  --utrecht-heading-1-font-size: var(--frameless-font-scale-8-font-size);
+  --utrecht-heading-2-font-size: var(--frameless-font-scale-7-font-size);
+  --utrecht-heading-3-font-size: var(--frameless-font-scale-6-font-size);
+  --utrecht-heading-4-font-size: var(--frameless-font-scale-5-font-size);
+  --utrecht-heading-5-font-size: var(--frameless-font-scale-4-font-size);
+  --utrecht-heading-6-font-size: var(--frameless-font-scale-3-font-size);
+  --utrecht-paragraph-lead-font-size: var(--frameless-font-scale-2-font-size);
+  --utrecht-paragraph-font-size: var(--frameless-font-scale-1-font-size);
+  --utrecht-document-font-size: var(--frameless-font-scale-1-font-size);
+}
+.frameless-font-size-scale-figure {
+  --utrecht-space-around: 0;
+}
+
+.font-size-exponential-scale {
+  /*
+   * pow() browser support is terrible (2024-02-18)
+   * https://drafts.csswg.org/css-values/#exponent-funcs
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/pow
+   */
+  --frameless-font-size-1: calc(pow(var(--frameless-font-size-minimum, 1rem), var(--font-size-exponent, 1)));
+  --frameless-font-size-2: calc(pow(var(--frameless-font-size-minimum, 1rem), var(--font-size-exponent, 2)));
+  --frameless-font-size-3: calc(pow(var(--frameless-font-size-minimum, 1rem), var(--font-size-exponent, 3)));
+  --frameless-font-size-4: calc(pow(var(--frameless-font-size-minimum, 1rem), var(--font-size-exponent, 4)));
+  --frameless-font-size-5: calc(pow(var(--frameless-font-size-minimum, 1rem), var(--font-size-exponent, 5)));
+  --frameless-font-size-6: calc(pow(var(--frameless-font-size-minimum, 1rem), var(--font-size-exponent, 6)));
+  --frameless-font-size-7: calc(pow(var(--frameless-font-size-minimum, 1rem), var(--font-size-exponent, 7)));
+  --frameless-font-size-8: calc(pow(var(--frameless-font-size-minimum, 1rem), var(--font-size-exponent, 8)));
+  --frameless-font-size-9: calc(pow(var(--frameless-font-size-minimum, 1rem), var(--font-size-exponent, 9)));
+}
+
+.minor-second {
+  --frameless-font-size-exponent: 1.067;
+}
+.major-second {
+  --frameless-font-size-exponent: 1.125;
+}
+.minor-third {
+  --frameless-font-size-exponent: 1.2;
+}
+.major-third {
+  --frameless-font-size-exponent: 1.25;
+}
+.perfect-fourth {
+  --frameless-font-size-exponent: 1.333;
+}
+.augmented-fourth {
+  --frameless-font-size-exponent: 1.444;
+}
+.perfect-fifth {
+  --frameless-font-size-exponent: 1.5;
+}
+.golden-ratio {
+  --frameless-font-size-exponent: 1.618;
+}
+
+.frameless-theme {
+  @extend .basis-theme;
+
+  /* minimum space between inline border and text */
+  --frameless-space-inline-border: 8px;
+
+  /* minimum space between block border and text */
+  --frameless-space-block-border: 8px;
+
+  --frameless-space-block-besties: 8px;
+  --frameless-space-block-friend: 16px;
+
+  --utrecht-document-font-family: "Fira Sans";
+  --utrecht-form-control-padding-inline-start: var(--frameless-space-block-border);
+  --utrecht-form-control-padding-inline-end: var(--frameless-space-block-border);
+  --utrecht-form-control-padding-block-end: var(--frameless-space-block-border);
+  --utrecht-form-control-padding-block-start: var(--frameless-space-block-border);
+
+  --utrecht-form-field-margin-block-end: var(--frameless-space-block-friend, 1);
+}
+
+.frameless-theme--dark {
+  --utrecht-surface-background-color: black;
+  --utrecht-surface-color: white;
+}

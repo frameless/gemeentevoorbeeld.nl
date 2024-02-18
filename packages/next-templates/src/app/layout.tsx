@@ -5,6 +5,7 @@ import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/index.css';
 import './globals.css';
+import './frameless-theme.scss';
 import './font';
 
 export const metadata: Metadata = {

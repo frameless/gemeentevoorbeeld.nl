@@ -14,6 +14,13 @@
   color: white;
 }
 
+.frameless-theme-builder-sidebar {
+  padding-inline: var(--frameless-space-inline-border);
+  padding-block: var(--frameless-space-block-border);
+
+  --utrecht-space-around: 1;
+}
+
 .frameless-theme-builder-canvas {
   /* TODO: Use checkerboard pattern */
   background-color: white;

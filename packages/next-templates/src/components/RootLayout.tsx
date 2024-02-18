@@ -1,22 +1,64 @@
 'use client';
 
-import { HTMLAttributes, PropsWithChildren, RefObject, useRef, useState } from 'react';
+import { FormEvent, HTMLAttributes, PropsWithChildren, RefObject, useRef, useState } from 'react';
 import { VoorbeeldTheme } from './VoorbeeldTheme';
-import { Document, SkipLink, Surface } from '@utrecht/component-library-react/dist/css-module';
+import {
+  Document,
+  FormLabel,
+  Heading1,
+  Select,
+  SelectOption,
+  SkipLink,
+  Surface,
+} from '@utrecht/component-library-react/dist/css-module';
 import { ThemeBuilder, ThemeBuilderCanvas, ThemeBuilderSidebar } from './ThemeBuilder';
 import { FormFieldTextbox } from './FormFieldTextbox';
+import { FormField } from '@utrecht/component-library-react';
 
 interface UseTokenArgs {
   token: string;
   transformValue?: (value: string) => string;
 }
 
+const fontSizeRatios = [
+  { exponent: 1.067, label: 'Minor second' },
+  { exponent: 1.125, label: 'Major second' },
+  { exponent: 1.2, label: 'Minor third' },
+  { exponent: 1.25, label: 'Major third' },
+  { exponent: 1.333, label: 'Perfect fourth' },
+  { exponent: 1.444, label: 'Augmented fourth' },
+  { exponent: 1.5, label: 'Perfect fifth' },
+  { exponent: 1.618, label: 'Golden Ratio' },
+];
+
+const fontSizeRatioCssVariables = fontSizeRatios.map((obj) => {
+  const { exponent } = obj;
+
+  const cssVariables = Array(10)
+    .fill(0)
+    .map((_, index) => ({
+      [`--frameless-font-scale-${index + 1}-number`]: Math.pow(exponent, index + 1),
+      [`--frameless-font-scale-${index + 1}-font-size`]:
+        `calc(var(--frameless-font-minimum-font-size, 1rem) * ${Math.pow(exponent, index + 1)})`,
+    }))
+    .reduce((obj, item) => ({ ...obj, ...item }), {});
+
+  return {
+    ...obj,
+    cssVariables,
+  };
+});
+
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   const [tokens, setTokens] = useState({});
   const [cssVariables, setCssVariables] = useState({});
 
-  const useToken = ({ token, transformValue }: UseTokenArgs): Pick<HTMLAttributes<HTMLDivElement>, 'onInput'> => {
+  const useToken = ({
+    token,
+    transformValue,
+  }: UseTokenArgs): { defaultValue?: string } & Pick<HTMLAttributes<HTMLDivElement>, 'onInput'> => {
     return {
+      defaultValue: '',
       onInput: (evt) => {
         const inputElement = evt.target as HTMLInputElement;
         if (inputElement) {
@@ -35,8 +77,8 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
 
   return (
     <ThemeBuilder>
-      <ThemeBuilderSidebar lang="en" className="frameless-theme">
-        <h1>Theme builder</h1>
+      <ThemeBuilderSidebar lang="en" className="frameless-theme frameless-theme--dark">
+        <Heading1>Theme builder</Heading1>
         <details open>
           <summary>Color</summary>
           {/* Changing utrecht.document.color color does not work great because of more specific component tokens,
@@ -67,6 +109,11 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
             label="Primary action color"
             {...useToken({ token: 'utrecht.button.primary-action.background-color' })}
           ></FormFieldTextbox>
+
+          <FormFieldTextbox
+            label="Focus background color"
+            {...useToken({ token: 'utrecht.focus.background-color' })}
+          ></FormFieldTextbox>
         </details>
         <details open>
           <summary>Font</summary>
@@ -89,6 +136,26 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
               <option value="Source Serif Pro"></option>
               <option value="Work Sans"></option>
             </datalist>
+            <FormField>
+              <FormLabel>Font size scale</FormLabel>
+              <Select
+                onInput={(evt: FormEvent<HTMLSelectElement>) => {
+                  const ratioValue = parseFloat((evt.target as HTMLSelectElement)?.value);
+
+                  const scale = fontSizeRatioCssVariables.find(({ exponent }) => exponent === ratioValue);
+                  console.log(evt.target, ratioValue, scale);
+                  if (scale) {
+                    setCssVariables(scale.cssVariables);
+                  }
+                }}
+              >
+                {fontSizeRatios.map(({ exponent, label }) => (
+                  <SelectOption key={exponent} value={String(exponent)}>
+                    {label}
+                  </SelectOption>
+                ))}
+              </Select>
+            </FormField>
           </div>
         </details>
         <details open>

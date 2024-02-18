@@ -5,6 +5,8 @@
 
 import { ForwardedRef, HTMLAttributes, PropsWithChildren, forwardRef } from 'react';
 import './ThemeBuilder.scss';
+import clsx from 'clsx';
+import { Document, Surface } from '@utrecht/component-library-react/dist/css-module';
 
 export interface ThemeBuilderProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -20,10 +22,18 @@ ThemeBuilder.displayName = 'ThemeBuilder';
 
 export interface ThemeBuilderSidebarProps extends HTMLAttributes<HTMLDivElement> {}
 
-export const ThemeBuilderSidebar = ({ children, ...restProps }: PropsWithChildren<ThemeBuilderSidebarProps>) => {
+export const ThemeBuilderSidebar = ({
+  children,
+  className,
+  ...restProps
+}: PropsWithChildren<ThemeBuilderSidebarProps>) => {
   return (
-    <div className="frameless-theme-builder-sidebar" {...restProps}>
-      {children}
+    <div className={clsx('frameless-theme-builder-sidebar', className)} {...restProps}>
+      <Surface>
+        <Document>
+          <div className="frameless-theme-builder-sidebar__content">{children}</div>
+        </Document>
+      </Surface>
     </div>
   );
 };
