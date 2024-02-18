@@ -22,6 +22,7 @@ export interface FormFieldTextboxProps extends FormFieldProps {
   placeholder?: string;
   min?: number | string;
   max?: number | string;
+  step?: number | string;
   autoComplete?: string;
   pattern?: string;
   type?: string;
@@ -50,6 +51,7 @@ export const FormFieldTextbox = forwardRef(
       list,
       min,
       max,
+      step,
       placeholder,
       pattern,
       required,
@@ -110,6 +112,7 @@ export const FormFieldTextbox = forwardRef(
           onChange={onChange}
           defaultValue={defaultValue}
           list={list}
+          step={step}
         />
         {status && (
           <div className="voorbeeld-form-field__status" id={statusId}>
