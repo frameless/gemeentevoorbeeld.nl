@@ -57,7 +57,7 @@ export default function Home() {
             >
               <Heading3>Openingstijden</Heading3>
               <Heading4>Openingstijden Gemeentehuis</Heading4>
-              <Paragraph className="voorbeeld-paragraph-opening-times">
+              <Paragraph className="voorbeeld-paragraph--opening-times">
                 Vandaag:
                 <br />
                 08.30 - 17.00

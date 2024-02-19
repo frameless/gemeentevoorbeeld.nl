@@ -227,7 +227,7 @@ utrecht-alert
   --utrecht-heading-3-margin-block-end: var(--voorbeeld-space-block-rat);
 }
 
-.voorbeeld-paragraph-opening-times {
+.voorbeeld-paragraph--opening-times {
   --utrecht-paragraph-font-size: var(--voorbeeld-typography-font-size-lg);
 }
 
