@@ -22,14 +22,26 @@ import { useForm } from 'react-hook-form';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
+import { FormFieldTextbox } from '@/components/FormFieldTextbox';
+import { homeTownValidation, streetValidation, nameValidation, emailValidation } from '@/utils/validation';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<{ [key: string]: string }>({ reValidateMode: 'onBlur' });
+  } = useForm<{ [key: string]: string }>();
+
+  const descriptionField = register('description', {
+    required: 'Vul een omschrijving in',
+  });
+  const placeField = register('place', homeTownValidation);
+  const streetField = register('street', streetValidation);
+  const nameField = register('name', nameValidation);
+  const emailField = register('email', emailValidation);
 
   return (
     <Document>
@@ -41,9 +53,40 @@ export default function Home() {
             <Heading1>Verhuizing doorgeven</Heading1>
 
             <Heading2>Uw Gegevens</Heading2>
-            <Paragraph>Naam</Paragraph>
-            <Paragraph>Geboren</Paragraph>
-            <Paragraph>Adress</Paragraph>
+            <Paragraph>Naam: Laura Naaldijk</Paragraph>
+            <Paragraph>Geboren: 10/03/1998 </Paragraph>
+            <Paragraph>Adress: St.Kitts weg 6</Paragraph>
+
+            <form
+              method="POST"
+              action="./verhuizing-doorgeven/confirmed"
+              onSubmit={handleSubmit((data) => {
+                window.location.href = './confirmed';
+              })}
+            >
+              <section>
+                <FormFieldTextbox
+                  id={`place-${placeField.name}`}
+                  className="voorbeeld-textbox"
+                  placeholder="Vul hier uw telefoonnummer"
+                  invalid={!!errors[placeField.name]}
+                  errorMessage={String(errors[placeField.name]?.message)}
+                  aria-label="telefoonnummer"
+                  label="Telefoonnummer"
+                  {...placeField}
+                />
+                <FormFieldTextbox
+                  id={`place-${placeField.name}`}
+                  className="voorbeeld-textbox"
+                  placeholder="Vul hier uw email"
+                  invalid={!!errors[placeField.name]}
+                  errorMessage={String(errors[placeField.name]?.message)}
+                  aria-label="Email"
+                  label="Email"
+                  {...placeField}
+                />
+              </section>
+            </form>
 
             <Heading2>Uw Situatie</Heading2>
             <Fieldset id="df861ef1-844a-42df-8365-b54f59474fb8" role="radiogroup">
@@ -84,6 +127,36 @@ export default function Home() {
             </FormField>
 
             <Heading2>Uw Nieuwe Adres</Heading2>
+            <form
+              method="POST"
+              action="./verhuizing-doorgeven/confirmed"
+              onSubmit={handleSubmit((data) => {
+                window.location.href = './confirmed';
+              })}
+            >
+              <section>
+                <FormFieldTextbox
+                  id={`place-${placeField.name}`}
+                  className="voorbeeld-textbox"
+                  placeholder=""
+                  invalid={!!errors[placeField.name]}
+                  errorMessage={String(errors[placeField.name]?.message)}
+                  aria-label="Adres"
+                  label="Postcode en huisnummer"
+                  {...placeField}
+                />
+                <FormFieldTextbox
+                  id={`place-${placeField.name}`}
+                  className="voorbeeld-textbox"
+                  placeholder=""
+                  invalid={!!errors[placeField.name]}
+                  errorMessage={String(errors[placeField.name]?.message)}
+                  aria-label="Aantal inwoners"
+                  label="Hoeveel personen wonen er op het nieuwe adres na het verhuizing"
+                  {...placeField}
+                />
+              </section>
+            </form>
           </Article>
         </PageContent>
         <ExampleFooterFocus />
