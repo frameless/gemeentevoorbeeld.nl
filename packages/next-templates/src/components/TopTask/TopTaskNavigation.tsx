@@ -6,7 +6,7 @@
 
 import clsx from 'clsx';
 import { HTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-import './TopTaskNavigation.css';
+import './TopTaskNavigation.scss';
 
 export type DivProps = HTMLAttributes<HTMLDivElement>;
 
