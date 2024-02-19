@@ -7,6 +7,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import './TopTaskCard.css';
+import { UtrechtIcon } from '@utrecht/web-component-library-react';
 
 export interface TopTaskCardProps extends HTMLAttributes<HTMLDivElement> {
   icon?: ReactNode;
@@ -19,7 +20,7 @@ export const TopTaskHeader = forwardRef(
   ) => {
     return (
       <div ref={ref} className={clsx('example-toptask-card', className)} {...restProps}>
-        {icon && <span className="example-toptask-card__icon">{icon}</span>}
+        {icon && <UtrechtIcon className="example-toptask-card__icon">{icon}</UtrechtIcon>}
         {children}
       </div>
     );
