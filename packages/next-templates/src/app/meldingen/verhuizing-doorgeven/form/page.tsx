@@ -3,7 +3,7 @@
 import {
   Article,
   Button,
-  ButtonGroup,
+  ButtonLink,
   Document,
   Fieldset,
   FormField,
@@ -51,12 +51,10 @@ export default function Home() {
         <PageContent>
           <Article className="voorbeeld-article-space">
             <Heading1>Verhuizing doorgeven</Heading1>
-
             <Heading2>Uw Gegevens</Heading2>
             <Paragraph>Naam: Laura Naaldijk</Paragraph>
             <Paragraph>Geboren: 10/03/1998 </Paragraph>
             <Paragraph>Adress: St.Kitts weg 6</Paragraph>
-
             <form
               method="POST"
               action="./verhuizing-doorgeven/confirmed"
@@ -87,7 +85,6 @@ export default function Home() {
                 />
               </section>
             </form>
-
             <Heading2>Uw Situatie</Heading2>
             <Fieldset id="df861ef1-844a-42df-8365-b54f59474fb8" role="radiogroup">
               <FormField type="radio">
@@ -115,7 +112,6 @@ export default function Home() {
                 </FormLabel>
               </FormField>
             </Fieldset>
-
             <Heading2>Verhuizing</Heading2>
             <FormField type="text">
               <Paragraph>
@@ -125,7 +121,6 @@ export default function Home() {
                 <Textbox id="2222" name="datums beschikbaarheid" type="date" autoComplete="off" required />
               </Paragraph>
             </FormField>
-
             <Heading2>Uw Nieuwe Adres</Heading2>
             <form
               method="POST"
@@ -157,6 +152,16 @@ export default function Home() {
                 />
               </section>
             </form>
+
+            <Heading2>Bijlage</Heading2>
+            <div>
+              <Paragraph className="voorbeeld-paragraph-bijlage">
+                Eigendomsbewijs (bijv. koopcontract of akte van levering)*
+              </Paragraph>
+              <Button appearance="secondary-action-button">Bestand kiezen</Button>
+              <Paragraph className="voorbeeld-paragraph-bijlage">Extra bijlagen</Paragraph>
+              <Button appearance="secondary-action-button">Bestand kiezen</Button>
+            </div>
           </Article>
         </PageContent>
         <ExampleFooterFocus />
