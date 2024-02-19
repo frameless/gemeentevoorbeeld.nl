@@ -388,7 +388,7 @@ utrecht-alert
   margin-inline: auto;
 }
 
-.voorbeeld-section-container-wrapper {
+.voorbeeld-button-group {
   display: flex;
   justify-content: space-between;
 }

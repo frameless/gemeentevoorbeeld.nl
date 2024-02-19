@@ -3,7 +3,6 @@
 import {
   AccordionProvider,
   Button,
-  ButtonGroup,
   Heading2,
   Heading3,
   Heading4,
@@ -13,6 +12,8 @@ import {
   Paragraph,
   Page,
   PageContent,
+  UnorderedList,
+  UnorderedListItem,
 } from '@utrecht/component-library-react';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
