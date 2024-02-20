@@ -7,11 +7,11 @@ import {
   ButtonLink,
   Document,
   Fieldset,
-  FieldsetLegend,
   FormField,
   FormLabel,
   Heading1,
   Heading2,
+  Link,
   Textbox,
   Page,
   PageContent,
@@ -26,6 +26,7 @@ import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocu
 import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { FormFieldTextbox } from '@/components/FormFieldTextbox';
+import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 import { homeTownValidation, streetValidation, nameValidation, emailValidation } from '@/utils/validation';
 import { useRouter } from 'next/navigation';
 
@@ -53,17 +54,20 @@ export default function Home() {
         <ExampleNavigation />
         <PageContent>
           <Article className="voorbeeld-article-space">
+            <Link href="./">
+              <BacklinkIcon /> Terug
+            </Link>
             <Heading1>Verhuizing doorgeven</Heading1>
-            <Heading2>Uw Gegevens</Heading2>
 
+            <Heading2>Uw Gegevens</Heading2>
             <Paragraph>
-              <Strong>Naam:</Strong> Laura Naaldijk
+              <Strong>Naam:</Strong> Laura Maria Naaldijk
             </Paragraph>
             <Paragraph>
               <Strong>Geboren:</Strong> 10/03/1998
             </Paragraph>
             <Paragraph>
-              <Strong>Adres:</Strong> St.Kitts weg 6
+              <Strong>Adres:</Strong> Barbadosstraat 166
             </Paragraph>
             <form
               method="POST"
@@ -79,7 +83,7 @@ export default function Home() {
                   placeholder="Vul hier uw telefoonnummer"
                   invalid={!!errors[placeField.name]}
                   errorMessage={String(errors[placeField.name]?.message)}
-                  aria-label="telefoonnummer"
+                  aria-label="Telefoonnummer"
                   label="Telefoonnummer"
                   {...placeField}
                 />
@@ -164,14 +168,13 @@ export default function Home() {
             </form>
 
             <Heading2>Bijlage</Heading2>
-
             <Paragraph className="voorbeeld-paragraph-bijlage">
               Eigendomsbewijs (bijv. koopcontract of akte van levering)*
             </Paragraph>
             <Button appearance="secondary-action-button">Bestand kiezen</Button>
 
             <ButtonGroup>
-              <ButtonLink appearance="primary-action-button" href="./aanhanger-of-bakfiets-melding/form">
+              <ButtonLink appearance="primary-action-button" href="./verhuizing-doorgeven/confirmed">
                 Afronden <UtrechtIconArrow></UtrechtIconArrow>
               </ButtonLink>
             </ButtonGroup>
