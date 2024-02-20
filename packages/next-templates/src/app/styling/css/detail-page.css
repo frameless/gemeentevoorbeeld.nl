@@ -3,6 +3,7 @@ https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliothee
 
 .voorbeeld-button-group {
   --utrecht-button-group-inline-gap: 0;
+  --utrecht-button-group-margin-block-start: 0;
 }
 
 .voorbeeld-spotlight-section {
