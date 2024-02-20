@@ -3,9 +3,11 @@
 import {
   Article,
   Button,
+  ButtonGroup,
   ButtonLink,
   Document,
   Fieldset,
+  FieldsetLegend,
   FormField,
   FormLabel,
   Heading1,
@@ -15,12 +17,13 @@ import {
   PageContent,
   Paragraph,
   RadioButton,
+  Strong,
 } from '@utrecht/component-library-react';
 import '@/app/styling/css/form-page.css';
-import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 import { useForm } from 'react-hook-form';
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
 import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
+import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { FormFieldTextbox } from '@/components/FormFieldTextbox';
 import { homeTownValidation, streetValidation, nameValidation, emailValidation } from '@/utils/validation';
@@ -52,9 +55,16 @@ export default function Home() {
           <Article className="voorbeeld-article-space">
             <Heading1>Verhuizing doorgeven</Heading1>
             <Heading2>Uw Gegevens</Heading2>
-            <Paragraph>Naam: Laura Naaldijk</Paragraph>
-            <Paragraph>Geboren: 10/03/1998 </Paragraph>
-            <Paragraph>Adress: St.Kitts weg 6</Paragraph>
+
+            <Paragraph>
+              <Strong>Naam:</Strong> Laura Naaldijk
+            </Paragraph>
+            <Paragraph>
+              <Strong>Geboren:</Strong> 10/03/1998
+            </Paragraph>
+            <Paragraph>
+              <Strong>Adres:</Strong> St.Kitts weg 6
+            </Paragraph>
             <form
               method="POST"
               action="./verhuizing-doorgeven/confirmed"
@@ -154,14 +164,17 @@ export default function Home() {
             </form>
 
             <Heading2>Bijlage</Heading2>
-            <div>
-              <Paragraph className="voorbeeld-paragraph-bijlage">
-                Eigendomsbewijs (bijv. koopcontract of akte van levering)*
-              </Paragraph>
-              <Button appearance="secondary-action-button">Bestand kiezen</Button>
-              <Paragraph className="voorbeeld-paragraph-bijlage">Extra bijlagen</Paragraph>
-              <Button appearance="secondary-action-button">Bestand kiezen</Button>
-            </div>
+
+            <Paragraph className="voorbeeld-paragraph-bijlage">
+              Eigendomsbewijs (bijv. koopcontract of akte van levering)*
+            </Paragraph>
+            <Button appearance="secondary-action-button">Bestand kiezen</Button>
+
+            <ButtonGroup>
+              <ButtonLink appearance="primary-action-button" href="./aanhanger-of-bakfiets-melding/form">
+                Afronden <UtrechtIconArrow></UtrechtIconArrow>
+              </ButtonLink>
+            </ButtonGroup>
           </Article>
         </PageContent>
         <ExampleFooterFocus />
