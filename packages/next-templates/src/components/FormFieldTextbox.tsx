@@ -32,6 +32,7 @@ export interface FormFieldTextboxProps extends FormFieldProps {
   onChange?: any;
   onFocus?: any;
   onBlur?: any;
+  list?: string;
 }
 
 export const FormFieldTextbox = forwardRef(
@@ -46,6 +47,7 @@ export const FormFieldTextbox = forwardRef(
       readOnly,
       status,
       autoComplete,
+      list,
       min,
       max,
       placeholder,
@@ -107,6 +109,7 @@ export const FormFieldTextbox = forwardRef(
           onInput={onInput}
           onChange={onChange}
           defaultValue={defaultValue}
+          list={list}
         />
         {status && (
           <div className="voorbeeld-form-field__status" id={statusId}>
