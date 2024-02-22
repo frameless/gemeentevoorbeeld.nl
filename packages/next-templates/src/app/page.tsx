@@ -4,6 +4,8 @@ import {
   AccordionProvider,
   Button,
   Heading2,
+  Heading3,
+  Heading4,
   LinkList,
   LinkListLink,
   Paragraph,
@@ -12,7 +14,10 @@ import {
 } from '@utrecht/component-library-react';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
+import { TopTaskCard } from '@/components/TopTask/TopTaskCard';
+import { IconClock } from '@tabler/icons-react';
 import {
+  UtrechtIcon,
   UtrechtIconAfvalScheiden,
   UtrechtIconMeldingKlacht,
   UtrechtIconNummerbord,
@@ -32,8 +37,8 @@ export default function Home() {
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content--flex">
         <section className="voorbeeld-section">
-          <div className="voorbeeld-section-content">
-            <TopTaskNavigation className="grid">
+          <div className="voorbeeld-section-content voorbeeld-toptask-layout">
+            <TopTaskNavigation>
               <TopTaskLink icon={<UtrechtIconPaspoort />}>Paspoort of ID-kaart aanvragen</TopTaskLink>
               <TopTaskLink href="/meldingen/" icon={<UtrechtIconMeldingKlacht />}>
                 Meldingen openbare ruimte
@@ -43,12 +48,30 @@ export default function Home() {
               <TopTaskLink icon={<UtrechtIconNummerbord />}>Parkeren: kentekenwijziging doorgeven</TopTaskLink>
               <TopTaskLink icon={<UtrechtIconAfvalScheiden />}>Afval</TopTaskLink>
             </TopTaskNavigation>
+            <TopTaskCard
+              icon={
+                <UtrechtIcon className="voorbeeld-icon-clock">
+                  <IconClock />
+                </UtrechtIcon>
+              }
+            >
+              <Heading3>Openingstijden</Heading3>
+              <Heading4>Openingstijden Gemeentehuis</Heading4>
+              <Paragraph className="voorbeeld-paragraph--opening-times">
+                Vandaag:
+                <br />
+                08.30 - 17.00
+                <br />
+                18.00 - 20.00
+              </Paragraph>
+              <Button appearance="secondary-action-button">Contact</Button>
+            </TopTaskCard>
           </div>
         </section>
         <section className="voorbeeld-section voorbeeld-section--spacing">
           <div className="voorbeeld-section-content">
             <div className="voorbeeld-section-container-wrapper">
-              <Heading2 className="voorbeeld-heading-2">Zelf regelen</Heading2>
+              <Heading2>Zelf regelen</Heading2>
               <Button className="voorbeeld-button-more" appearance="primary-action-button">
                 Meer bekijken
               </Button>
