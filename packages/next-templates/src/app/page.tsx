@@ -3,13 +3,18 @@
 import {
   AccordionProvider,
   Button,
+  ButtonGroup,
   Heading2,
+  Heading3,
+  Heading4,
+  Link,
   LinkList,
   LinkListLink,
   Paragraph,
   Page,
   PageContent,
 } from '@utrecht/component-library-react';
+import { IconCalendar } from '@tabler/icons-react';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
 import {
@@ -45,14 +50,14 @@ export default function Home() {
             </TopTaskNavigation>
           </div>
         </section>
-        <section className="voorbeeld-section voorbeeld-section--spacing">
+        <section className="voorbeeld-section voorbeeld-section--alternate voorbeeld-section--spacing">
           <div className="voorbeeld-section-content">
-            <div className="voorbeeld-section-container-wrapper">
-              <Heading2 className="voorbeeld-heading-2">Zelf regelen</Heading2>
+            <ButtonGroup className="voorbeeld-button-group">
+              <Heading2>Zelf regelen</Heading2>
               <Button className="voorbeeld-button-more" appearance="primary-action-button">
                 Meer bekijken
               </Button>
-            </div>
+            </ButtonGroup>
             <AccordionProvider
               sections={[
                 {
@@ -167,6 +172,89 @@ export default function Home() {
                 },
               ]}
             />
+          </div>
+        </section>
+        <section className="voorbeeld-section">
+          <div className="voorbeeld-section-content">
+            <ButtonGroup className="voorbeeld-button-group">
+              <Heading2 className="voorbeeld-heading-2">Nieuws en inzichten</Heading2>
+              <Button className="voorbeeld-button-more" appearance="primary-action-button">
+                Meer nieuws
+              </Button>
+            </ButtonGroup>
+            <ul className="voorbeeld-unordered-list-cards">
+              <li>
+                <Link className="voorbeeld-link-card" href="#">
+                  <div className="voorbeeld-container-card">
+                    <Heading4>Wijkraadsleden officieel beëdigd</Heading4>
+                    <div className="voorbeeld-container-date">
+                      <IconCalendar />
+                      <Paragraph>donderdag 15 februari 2024</Paragraph>
+                    </div>
+                    <Paragraph>
+                      Burgemeester Pos heeft 273 wijkraadsleden officieel beëdigd. Ze hebben allemaal de eed afgelegd of
+                      een belofte gedaan op het stadhuis van gemeente Voorbeeld.
+                    </Paragraph>
+                    <div className="voorbeeld-container-icon">
+                      <UtrechtIconChevronRight className="voorbeeld-accordion-chevron--right" />
+                    </div>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link className="voorbeeld-link-card" href="#">
+                  <div className="voorbeeld-container-card">
+                    <Heading4>Huurteam geeft huurders gratis hulp</Heading4>
+                    <div className="voorbeeld-container-date">
+                      <IconCalendar />
+                      <Paragraph>donderdag 15 februari 2024</Paragraph>
+                    </div>
+                    <Paragraph>
+                      Alle huurders in Lenteveld die een woning, appartement of kamer huren van een particuliere
+                      verhuurder kunnen gratis gebruikmaken van de hulp van het Huurteam.
+                    </Paragraph>
+                    <div className="voorbeeld-container-icon">
+                      <UtrechtIconChevronRight className="voorbeeld-accordion-chevron--right" />
+                    </div>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link className="voorbeeld-link-card" href="#">
+                  <div className="voorbeeld-container-card">
+                    <Heading4>Bijzonder beroep: specialist maatschappelijke ontwikkeling</Heading4>
+                    <div className="voorbeeld-container-date">
+                      <IconCalendar />
+                      <Paragraph>donderdag 15 februari 2024</Paragraph>
+                    </div>
+                    <Paragraph>
+                      De medewerkers van de gemeente doen van alles in de stad. Sommige beroepen zijn bekend, andere
+                      minder.
+                    </Paragraph>
+                    <div className="voorbeeld-container-icon">
+                      <UtrechtIconChevronRight className="voorbeeld-accordion-chevron--right" />
+                    </div>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link className="voorbeeld-link-card" href="#">
+                  <div className="voorbeeld-container-card">
+                    <Heading4>De Tegeltaxi gaat weer rijden!</Heading4>
+                    <div className="voorbeeld-container-date">
+                      <IconCalendar />
+                      <Paragraph>donderdag 15 februari 2024</Paragraph>
+                    </div>
+                    <Paragraph>
+                      Na het succes van de pilot vorig jaar, gaat de TegelTaxi weer in gemeente Voorbeeld rijden!
+                    </Paragraph>
+                    <div className="voorbeeld-container-icon">
+                      <UtrechtIconChevronRight className="voorbeeld-accordion-chevron--right" />
+                    </div>
+                  </div>
+                </Link>
+              </li>
+            </ul>
           </div>
         </section>
       </PageContent>

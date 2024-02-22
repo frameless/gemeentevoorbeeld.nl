@@ -62,6 +62,7 @@ body {
   --utrecht-textbox-read-only-border-color: var(--utrecht-textbox-border-color);
   --voorbeeld-logo-icon-color: var(--voorbeeld-decoration-color);
   --voorbeeld-logo-color: var(--voorbeeld-color-gray-950);
+  --voorbeeld-page-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.6);
 
   --example-page-header-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.5);
 
@@ -119,6 +120,17 @@ body {
   --utrecht-heading-2-margin-block-end: var(--voorbeeld-space-block-rabbit);
   --utrecht-heading-1-margin-block-start: var(--voorbeeld-space-block-rabbit);
   --utrecht-heading-1-margin-block-end: var(--voorbeeld-space-block-rabbit);
+}
+
+.utrecht-heading-1,
+.utrecht-heading-2,
+.utrecht-heading-3,
+.utrecht-heading-4,
+.utrecht-heading-5,
+.utrecht-heading-6 {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 utrecht-alert
@@ -215,7 +227,7 @@ utrecht-alert
 .voorbeeld-section-content {
   margin-inline: auto;
   padding-inline: var(--voorbeeld-space-block-cat);
-  max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.2);
+  max-inline-size: var(--voorbeeld-page-content-max-inline-size);
   inline-size: 100%;
   box-sizing: border-box;
 }
@@ -236,9 +248,8 @@ utrecht-alert
   max-width: 80ch;
 }
 
-.voorbeeld-section:nth-of-type(2) {
+.voorbeeld-section--alternate {
   background-color: var(--voorbeeld-color-gray-200);
-  padding-block: var(--voorbeeld-space-block-cat);
 }
 
 .voorbeeld-accordion {
@@ -282,6 +293,51 @@ utrecht-alert
   --utrecht-accordion-panel-padding-inline-end: var(--voorbeeld-space-inline-pig);
 }
 
+.voorbeeld-unordered-list-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: var(--voorbeeld-space-row-rat);
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.voorbeeld-container-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  outline: 0.15em solid var(--voorbeeld-color-gray-200);
+  padding: var(--voorbeeld-space-inline-snail);
+  --utrecht-heading-4-color: var(--voorbeeld-color-gray-800);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  min-block-size: 204px;
+}
+
+.voorbeeld-container-icon {
+  display: flex;
+  justify-content: end;
+}
+
+.voorbeeld-container-icon .voorbeeld-accordion-chevron--right {
+  --utrecht-icon-inset-block-start: -10px;
+}
+
+.voorbeeld-link-card {
+  --utrecht-link-text-decoration: none;
+}
+
+.voorbeeld-link-card:hover .voorbeeld-container-card {
+  background-color: var(--voorbeeld-color-gray-200);
+}
+
+.voorbeeld-container-date {
+  display: flex;
+  justify-content: left;
+  gap: 0.2em;
+  --utrecht-paragraph-line-height: var(--voorbeeld-space-inline-cat);
+  --utrecht-paragraph-color: var(--voorbeeld-color-violet-700);
+}
+
 .voorbeeld-theme .utrecht-page-content {
   display: flex;
   flex-direction: column;
@@ -294,11 +350,28 @@ utrecht-alert
   display: flex;
   flex-direction: column;
   inline-size: 100%;
+  padding-block: var(--voorbeeld-space-block-cat);
+  box-sizing: border-box;
 }
 
-.voorbeeld-section-container-wrapper {
+.voorbeeld-section:first-child {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  padding-inline-start: var(--voorbeeld-space-inline-cat);
+  margin-inline: auto;
+}
+
+.voorbeeld-button-group {
+  display: flex;
+  justify-content: space-between;
+  --utrecht-button-group-margin-block-start: 0;
+  --utrecht-button-group-margin-block-end: 0;
+}
+
+.voorbeeld-container-info {
+  padding-inline-end: var(--voorbeeld-space-inline-cat);
+  max-inline-size: calc(100% - 752px);
 }
 
 .voorbeeld-form-label {
@@ -372,6 +445,15 @@ utrecht-page-content {
 
 .utrecht-button-group--example-column {
   flex-direction: column;
+}
+
+@media (prefers-contrast: more) {
+  .voorbeeld-container-card {
+    outline: 0.15em solid var(--voorbeeld-color-gray-500);
+  }
+  .voorbeeld-link-card:hover .voorbeeld-container-card {
+    background-color: var(--voorbeeld-color-gray-500);
+  }
 }
 
 @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
