@@ -15,7 +15,6 @@
     }
   },
   "rules": {
-    "react/forbid-elements": ["error", { "forbid": [{ "element": "br" }] }],
     "react/no-unknown-property": "off",
     "react/prop-types": "off",
     "react/jsx-key": "off",
