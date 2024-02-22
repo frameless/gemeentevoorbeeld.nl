@@ -279,8 +279,8 @@ importers:
         specifier: 13.5.6
         version: 13.5.6
       '@nl-design-system-unstable/voorbeeld-design-tokens':
-        specifier: 1.0.0-alpha.122
-        version: 1.0.0-alpha.122
+        specifier: 1.0.0-alpha.125
+        version: 1.0.0-alpha.125
       '@svgr/webpack':
         specifier: 8.1.0
         version: 8.1.0
@@ -2703,8 +2703,8 @@ packages:
     hasBin: true
     dev: true
 
-  /@nl-design-system-unstable/voorbeeld-design-tokens@1.0.0-alpha.122:
-    resolution: {integrity: sha512-IHaVwqPses1a9ycmycAoY1++vBixAlyM2lxydBmaMWnZcoYINlNaQ5qDYxlOke3J8h17dk0LduZcN18PAkdLAA==}
+  /@nl-design-system-unstable/voorbeeld-design-tokens@1.0.0-alpha.125:
+    resolution: {integrity: sha512-aW3JZtdeLENMqTsoTkq04HMSXSIu4NOhac99tWk9SMGkeKy2QsNT4oXcZi49zVHLh3inD/DPVR84KSQx3YpMEw==}
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:

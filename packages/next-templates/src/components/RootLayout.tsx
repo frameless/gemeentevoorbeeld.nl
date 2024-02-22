@@ -129,6 +129,16 @@ const fallbackTokens: { [index: string]: string } = {
   'utrecht.link.text-decoration-color': 'utrecht.link.color',
 
   'todo.avatar.background-color': 'voorbeeld.decoration.background-color', // FIXME
+
+  'utrecht.paragraph.color': 'utrecht.document.color',
+  'utrecht.paragraph.lead.color': 'utrecht.paragraph.color',
+  'utrecht.heading.color': 'utrecht.document.color',
+  'utrecht.heading-1.color': 'utrecht.heading.color',
+  'utrecht.heading-2.color': 'utrecht.heading.color',
+  'utrecht.heading-3.color': 'utrecht.heading.color',
+  'utrecht.heading-4.color': 'utrecht.heading.color',
+  'utrecht.heading-5.color': 'utrecht.heading.color',
+  'utrecht.heading-6.color': 'utrecht.heading.color',
 };
 
 console.log(Object.keys(fallbackTokens).filter((token) => !designTokensMap[token]));
@@ -220,6 +230,21 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
     };
   };
 
+  const fontFamilies = [
+    'Arial',
+    'Helvetica',
+    'Verdana',
+    'Times New Roman',
+    'Fira Sans',
+    'Open Sans',
+    'IBM Plex Serif',
+    'Roboto Serif',
+    'Comic Sans MS',
+    'Source Sans Pro',
+    'Source Serif Pro',
+    'Work Sans',
+  ];
+
   const useColorSample = (token: string) => ({
     color: tokens[token]
       ? String(tokens[token])
@@ -294,18 +319,11 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
           <summary>Font</summary>
           <div>
             <datalist id="font-family-values">
-              <option value="Arial"></option>
-              <option value="Helvetica"></option>
-              <option value="Verdana"></option>
-              <option value="Times New Roman"></option>
-              <option value="Fira Sans"></option>
-              <option value="Open Sans"></option>
-              <option value="IBM Plex Serif"></option>
-              <option value="Roboto Serif"></option>
-              <option value="Comic Sans MS"></option>
-              <option value="Source Sans Pro"></option>
-              <option value="Source Serif Pro"></option>
-              <option value="Work Sans"></option>
+              {fontFamilies.map((font) => (
+                <option key={font} value={font}>
+                  {font}
+                </option>
+              ))}
             </datalist>
             <FormFieldTextbox
               list="font-family-values"
