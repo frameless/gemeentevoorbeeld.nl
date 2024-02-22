@@ -60,9 +60,9 @@ export default function Home() {
               <Paragraph className="voorbeeld-paragraph--opening-times">
                 Vandaag:
                 <br />
-                08.30 - 17.00
+                <time dateTime="08:30">08.30</time> - <time dateTime="17:30">17:30</time>
                 <br />
-                18.00 - 20.00
+                <time dateTime="18:00">18.00</time> - <time dateTime="20:00">20:00</time>
               </Paragraph>
               <Button appearance="secondary-action-button">Contact</Button>
             </TopTaskCard>
@@ -192,6 +192,7 @@ export default function Home() {
             />
           </div>
         </section>
+        <section className="voorbeeld-section voorbeeld-section--alternate"></section>
       </PageContent>
       <ExampleFooter />
     </Page>
