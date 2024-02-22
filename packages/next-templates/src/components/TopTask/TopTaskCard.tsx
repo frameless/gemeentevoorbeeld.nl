@@ -13,7 +13,7 @@ export interface TopTaskCardProps extends HTMLAttributes<HTMLDivElement> {
   icon?: ReactNode;
 }
 
-export const TopTaskHeader = forwardRef(
+export const TopTaskCard = forwardRef(
   (
     { children, className, icon, ...restProps }: PropsWithChildren<TopTaskCardProps>,
     ref: ForwardedRef<HTMLDivElement>,
@@ -27,4 +27,4 @@ export const TopTaskHeader = forwardRef(
   },
 );
 
-TopTaskHeader.displayName = 'TopTaskCard';
+TopTaskCard.displayName = 'TopTaskCard';

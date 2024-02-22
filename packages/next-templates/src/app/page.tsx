@@ -14,7 +14,7 @@ import {
 } from '@utrecht/component-library-react';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
-import { TopTaskHeader } from '@/components/TopTask/TopTaskCard';
+import { TopTaskCard } from '@/components/TopTask/TopTaskCard';
 import { IconClock } from '@tabler/icons-react';
 import {
   UtrechtIcon,
@@ -48,7 +48,7 @@ export default function Home() {
               <TopTaskLink icon={<UtrechtIconNummerbord />}>Parkeren: kentekenwijziging doorgeven</TopTaskLink>
               <TopTaskLink icon={<UtrechtIconAfvalScheiden />}>Afval</TopTaskLink>
             </TopTaskNavigation>
-            <TopTaskHeader
+            <TopTaskCard
               icon={
                 <UtrechtIcon className="voorbeeld-icon-clock">
                   <IconClock />
@@ -65,7 +65,7 @@ export default function Home() {
                 18.00 - 20.00
               </Paragraph>
               <Button appearance="secondary-action-button">Contact</Button>
-            </TopTaskHeader>
+            </TopTaskCard>
           </div>
         </section>
         <section className="voorbeeld-section voorbeeld-section--spacing">
