@@ -299,6 +299,7 @@ utrecht-alert
   align-self: center;
   inline-size: 100%;
   padding-inline: 0;
+  --utrecht-page-content-padding-block-end: 0;
 }
 
 .voorbeeld-section {
