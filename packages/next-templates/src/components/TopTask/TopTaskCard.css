@@ -3,6 +3,7 @@
   background-color: var(--voorbeeld-color-violet-200);
   block-size: 100%;
   inline-size: 100%;
+  box-sizing: border-box;
 }
 
 .example-toptask-card__icon .voorbeeld-icon-clock {
