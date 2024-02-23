@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, HTMLAttributes, PropsWithChildren, RefObject, useRef, useState } from 'react';
+import { FormEvent, InputHTMLAttributes, PropsWithChildren, RefObject, useRef, useState } from 'react';
 import { VoorbeeldTheme } from './VoorbeeldTheme';
 import {
   Document,
@@ -16,19 +16,27 @@ import { FormFieldTextbox } from './FormFieldTextbox';
 import { ColorSample, FormField } from '@utrecht/component-library-react';
 import designTokens from '@nl-design-system-unstable/voorbeeld-design-tokens/dist/index.json';
 
+interface BoxShadowValue {
+  x: number;
+  y: number;
+  blur: number;
+  spread: number;
+  color: string;
+  type: string;
+}
 interface DesignToken {
   type: string;
-  value: string;
+  value: string | number | BoxShadowValue;
   filePath: string;
   isSource: boolean;
   original: object;
   name: string;
   attributes: {
     category: string;
-    type: string;
-    item: string;
-    subitem: string;
-    state: string;
+    type?: string;
+    item?: string;
+    subitem?: string;
+    state?: string;
   };
   path: string[];
 }
@@ -209,11 +217,10 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
   const useToken = ({
     token,
     transformValue,
-  }: UseTokenArgs): { defaultValue?: string } & Pick<HTMLAttributes<HTMLDivElement>, 'onInput'> => {
+  }: UseTokenArgs): { defaultValue?: string } & Pick<InputHTMLAttributes<HTMLInputElement>, 'onInput' | 'list'> => {
+    const tokenObj = Object.prototype.hasOwnProperty.call(designTokensMap, token) ? designTokensMap[token] : undefined;
     return {
-      defaultValue: Object.prototype.hasOwnProperty.call(designTokensMap, token)
-        ? designTokensMap[token].value
-        : undefined,
+      defaultValue: tokenObj ? String(tokenObj.value) : undefined,
       onInput: (evt) => {
         const inputElement = evt.target as HTMLInputElement;
         if (inputElement) {
@@ -227,6 +234,10 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
           setCssVariables({ ...cssVariables, [cssVariable]: value });
         }
       },
+      list:
+        tokenObj && ['color', 'border-color', 'background-color'].includes(tokenObj.path[tokenObj.path.length - 1])
+          ? 'color-tokens'
+          : undefined,
     };
   };
 
@@ -253,12 +264,26 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
         : undefined,
   });
 
+  const commonColorTokens = designTokens
+    .filter(({ name }) => name.startsWith('voorbeeldColor'))
+    .map(({ path, value }) => ({
+      name: path.join('.'),
+      value,
+    }));
+
   return (
     <ThemeBuilder>
       <ThemeBuilderSidebar lang="en" className="frameless-theme frameless-theme--dark">
         <Heading1>Theme builder</Heading1>
         <details open>
           <summary>Color</summary>
+          <datalist id="color-tokens">
+            {commonColorTokens.map(({ name, value }) => (
+              <option key={name} value={String(value)}>
+                {String(name)}
+              </option>
+            ))}
+          </datalist>
           {/* Changing utrecht.document.color color does not work great because of more specific component tokens,
            such as utrecht.paragraph.color */}
           <FormFieldTextbox label="Text" {...useToken({ token: 'utrecht.document.color' })}></FormFieldTextbox>
@@ -326,14 +351,14 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
               ))}
             </datalist>
             <FormFieldTextbox
-              list="font-family-values"
               label="Font"
               {...useToken({ token: 'utrecht.document.font-family' })}
+              list="font-family-values"
             ></FormFieldTextbox>
             <FormFieldTextbox
-              list="font-family-values"
               label="Heading font"
               {...useToken({ token: 'utrecht.heading.font-family' })}
+              list="font-family-values"
             ></FormFieldTextbox>
             <FormField>
               <FormLabel>Font size scale</FormLabel>
