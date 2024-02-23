@@ -1,6 +1,8 @@
 .example-toptask-nav {
   display: grid;
-  grid-template-columns: 240px 240px 240px;
+  --voorbeeld-column-inline-size: calc(100% / 3 - var(--voorbeeld-space-block-mouse) * 0.7);
+  grid-template-columns: repeat(3, var(--voorbeeld-column-inline-size));
+  inline-size: 100%;
   gap: var(--voorbeeld-space-block-mouse);
 
   @media (max-width: 800px) {
