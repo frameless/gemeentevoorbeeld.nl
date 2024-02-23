@@ -5,6 +5,7 @@ import { VoorbeeldTheme } from './VoorbeeldTheme';
 import {
   Button,
   ButtonGroup,
+  Code,
   Document,
   FormLabel,
   Heading1,
@@ -279,12 +280,12 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
     ...resetCssVariables,
     ...designTokensMapToCssVariables(tokens),
   });
-  console.log(
-    'variables',
-    Object.entries(cssVariables)
-      .map(([key, value]) => `${key}: ${value};`)
-      .join('\n'),
-  );
+  // console.log(
+  //   'variables',
+  //   Object.entries(cssVariables)
+  //     .map(([key, value]) => `${key}: ${value};`)
+  //     .join('\n'),
+  // );
   // useEffect(() => {
   //   console.log(42, tokens);
   // }, [cssVariables]);
@@ -441,6 +442,17 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
               {...useToken({ token: 'utrecht.heading.font-family' })}
               list="font-family-values"
             ></FormFieldTextbox>
+            <FormFieldTextbox
+              label="Minimum font size"
+              min={10}
+              max={64}
+              step={1}
+              type="range"
+              {...useToken({ token: 'frameless.font.minimum-font-size', transformValue: (px) => `${px}px` })}
+            ></FormFieldTextbox>
+            <div>
+              <Code>{userTokens['frameless.font.minimum-font-size'] || ''}</Code>
+            </div>
             <FormField>
               <FormLabel>Font size scale</FormLabel>
               <Select
@@ -495,6 +507,9 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
               {...useToken({ token: 'utrecht.button.border-radius', transformValue: (value) => `${value}px` })}
             ></FormFieldTextbox>
           </div>
+          <div>
+            <Code>{userTokens['utrecht.button.border-radius'] || ''}</Code>
+          </div>
         </details>
         <ButtonGroup>
           <Button
@@ -523,7 +538,7 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
         )}
       </ThemeBuilderSidebar>
       <ThemeBuilderCanvas>
-        <VoorbeeldTheme style={cssVariables}>
+        <VoorbeeldTheme style={cssVariables} className="frameless-font-scale">
           <div>
             <Surface>
               <Document>
