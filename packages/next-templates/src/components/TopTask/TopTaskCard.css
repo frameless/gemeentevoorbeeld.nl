@@ -4,6 +4,7 @@
   --voorbeeld-toptask-inline-size-gaps-included: 550px;
   block-size: 100%;
   inline-size: calc(100% - var(--voorbeeld-toptask-inline-size-gaps-included));
+  box-sizing: border-box;
 }
 
 .example-toptask-card__icon .voorbeeld-icon-clock {
