@@ -57,7 +57,10 @@ export default function Home() {
               }
             >
               <Heading3>Openingstijden</Heading3>
-              <Heading4>Openingstijden Gemeentehuis</Heading4>
+              <Heading4>
+                Openingstijden <br />
+                Gemeentehuis
+              </Heading4>
               <div itemScope itemType="https://schema.org/Pharmacy">
                 <Paragraph className="voorbeeld-paragraph--opening-times">
                   Vandaag:
