@@ -384,7 +384,7 @@ utrecht-alert
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding-inline-start: var(--voorbeeld-space-inline-cat);
+  padding-inline: var(--voorbeeld-space-inline-cat);
   margin-inline: auto;
 }
 
