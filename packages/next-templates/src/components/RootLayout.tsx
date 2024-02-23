@@ -1,8 +1,10 @@
 'use client';
 
-import { FormEvent, InputHTMLAttributes, PropsWithChildren, RefObject, useRef, useState } from 'react';
+import { FormEvent, InputHTMLAttributes, PropsWithChildren, RefObject, useEffect, useRef, useState } from 'react';
 import { VoorbeeldTheme } from './VoorbeeldTheme';
 import {
+  Button,
+  ButtonGroup,
   Document,
   FormLabel,
   Heading1,
@@ -13,8 +15,9 @@ import {
 } from '@utrecht/component-library-react/dist/css-module';
 import { ThemeBuilder, ThemeBuilderCanvas, ThemeBuilderSidebar } from './ThemeBuilder';
 import { FormFieldTextbox } from './FormFieldTextbox';
-import { ColorSample, FormField } from '@utrecht/component-library-react';
+import { ColorSample, FormField, Paragraph } from '@utrecht/component-library-react';
 import designTokens from '@nl-design-system-unstable/voorbeeld-design-tokens/dist/index.json';
+import { useSearchParams, useRouter } from 'next/navigation';
 
 interface BoxShadowValue {
   x: number;
@@ -24,6 +27,7 @@ interface BoxShadowValue {
   color: string;
   type: string;
 }
+
 interface DesignToken {
   type: string;
   value: string | number | BoxShadowValue;
@@ -53,7 +57,30 @@ interface UseTokenArgs {
   transformValue?: (value: string) => string;
 }
 
-const designTokensMap: DesignTokenMap = designTokens.reduce(
+const defaultToken: DesignToken = {
+  type: '',
+  value: '',
+  filePath: '',
+  name: '',
+  original: {},
+  isSource: false,
+  attributes: { category: '' },
+  path: [],
+};
+
+const themeBuilderTokens: DesignToken[] = [
+  {
+    ...defaultToken,
+    path: ['voorbeeld', 'decoration', 'background-color'],
+    attributes: { category: 'voorbeeld' },
+  },
+  {
+    ...defaultToken,
+    path: ['voorbeeld', 'decoration', 'color'],
+  },
+];
+
+const designTokensMap: DesignTokenMap = [...themeBuilderTokens, ...designTokens].reduce(
   (tokens, token) => ({ ...tokens, [token.path.join('.')]: token }),
   {},
 );
@@ -69,7 +96,7 @@ const fontSizeRatios = [
   { exponent: 1.618, label: 'Golden Ratio' },
 ];
 
-const fallbackTokens: { [index: string]: string } = {
+const fallbackTokens: { [index: string]: string | string[] } = {
   'denhaag.sidenav.link.font-family': 'utrecht.document.font-family',
   'todo.avatar.text.font-family': 'utrecht.document.font-family',
   'todo.breadcrumb.font-family': 'utrecht.document.font-family',
@@ -147,9 +174,21 @@ const fallbackTokens: { [index: string]: string } = {
   'utrecht.heading-4.color': 'utrecht.heading.color',
   'utrecht.heading-5.color': 'utrecht.heading.color',
   'utrecht.heading-6.color': 'utrecht.heading.color',
+  'utrecht.button.primary-action.focus.background-color': [
+    'utrecht.button.focus.background-color',
+    'utrecht.focus.background-color',
+  ],
+  'utrecht.button.secondary-action.focus.background-color': [
+    'utrecht.button.focus.background-color',
+    'utrecht.focus.background-color',
+  ],
+  'utrecht.button.subtle.focus.background-color': [
+    'utrecht.button.focus.background-color',
+    'utrecht.focus.background-color',
+  ],
+  'utrecht.button.focus.background-color': 'utrecht.focus.background-color',
+  'utrecht.link.focus.background-color': 'utrecht.focus.background-color',
 };
-
-console.log(Object.keys(fallbackTokens).filter((token) => !designTokensMap[token]));
 
 const createFontSizeScaleTokens = (exponent: number) =>
   Array(10)
@@ -172,17 +211,23 @@ const fontSizeRatioCssVariables = fontSizeRatios.map((obj) => {
 
 const toCustomProperty = (tokenName: string): string => `--${tokenName.replace(/\./g, '-')}`;
 
+const getFallbackToken = (fallback: string | string[]) =>
+  Array.isArray(fallback) ? fallback[fallback.length - 1] : fallback;
+
 const resetCssVariables = Object.entries(fallbackTokens)
-  .filter(
-    ([tokenName, fallbackTokenName]) =>
+  .filter(([tokenName, fallback]) => {
+    // FIXME: Prefer the first, not the last token
+    const fallbackTokenName = getFallbackToken(fallback);
+    return (
       designTokensMap[tokenName] &&
       designTokensMap[fallbackTokenName] &&
-      designTokensMap[tokenName].value === designTokensMap[fallbackTokenName].value,
-  )
+      designTokensMap[tokenName].value === designTokensMap[fallbackTokenName].value
+    );
+  })
   .reduce((obj, [tokenName, fallbackTokenName]) => {
     return {
       ...obj,
-      [toCustomProperty(tokenName)]: `var(${toCustomProperty(fallbackTokenName)})`,
+      [toCustomProperty(tokenName)]: `var(${toCustomProperty(getFallbackToken(fallbackTokenName))})`,
     };
   }, {});
 
@@ -194,7 +239,23 @@ const designTokensMapToCssVariables = (tokens: DesignTokenValueMap) =>
     };
   }, {});
 
+const isDesignToken = (designTokensMap: DesignTokenMap, key: string) =>
+  Object.prototype.hasOwnProperty.call(designTokensMap, key);
+
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
+  const url = useRouter();
+  const searchParamsTokens = Array.from(useSearchParams()?.entries() || [])
+    .filter(([searchParamKey]) => {
+      return isDesignToken(designTokensMap, searchParamKey);
+    })
+    .reduce(
+      (map, [key, value]) => ({
+        ...map,
+        [key]: value,
+      }),
+      {},
+    );
+
   const forcedColors = {
     'utrecht.document.color': 'CanvasText',
     'utrecht.focus.background-color': 'Highlight',
@@ -204,23 +265,40 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
     'utrecht.link.color': 'LinkText',
     'voorbeeld.decoration.background-color': 'AccentColor',
   };
+
+  const [userTokens, setUserTokens] = useState<DesignTokenValueMap>({});
+
   const [tokens, setTokens] = useState<DesignTokenValueMap>({
     'voorbeeld.decoration.background-color': '#5315F6',
     'voorbeeld.decoration.color': '#5315F6',
+    ...searchParamsTokens,
+    ...userTokens,
   });
 
   const [cssVariables, setCssVariables] = useState({
     ...resetCssVariables,
     ...designTokensMapToCssVariables(tokens),
   });
+  console.log(
+    'variables',
+    Object.entries(cssVariables)
+      .map(([key, value]) => `${key}: ${value};`)
+      .join('\n'),
+  );
+  // useEffect(() => {
+  //   console.log(42, tokens);
+  // }, [cssVariables]);
 
   const useToken = ({
     token,
     transformValue,
   }: UseTokenArgs): { defaultValue?: string } & Pick<InputHTMLAttributes<HTMLInputElement>, 'onInput' | 'list'> => {
+    const presetValue = Object.prototype.hasOwnProperty.call(tokens, token) ? tokens[token] : undefined;
     const tokenObj = Object.prototype.hasOwnProperty.call(designTokensMap, token) ? designTokensMap[token] : undefined;
     return {
-      defaultValue: tokenObj ? String(tokenObj.value) : undefined,
+      // Use the preset value (from query params, or from a saved session, for example)
+      // If no preset value exists, then use the value from the base theme.
+      defaultValue: (presetValue ? String(presetValue) : undefined) || (tokenObj ? String(tokenObj.value) : undefined),
       onInput: (evt) => {
         const inputElement = evt.target as HTMLInputElement;
         if (inputElement) {
@@ -230,7 +308,7 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
           }
           const cssVariable = toCustomProperty(token);
 
-          setTokens({ ...tokens, [token]: value });
+          setUserTokens({ ...userTokens, [token]: value });
           setCssVariables({ ...cssVariables, [cssVariable]: value });
         }
       },
@@ -270,6 +348,9 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
       name: path.join('.'),
       value,
     }));
+
+  const [copyActivated, setCopyActivated] = useState(false);
+  const [copyActivatedTimeout, setCopyActivatedTimeout] = useState(false);
 
   return (
     <ThemeBuilder>
@@ -415,6 +496,31 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
             ></FormFieldTextbox>
           </div>
         </details>
+        <ButtonGroup>
+          <Button
+            appearance="secondary-action-button"
+            onClick={() => {
+              const params = new URLSearchParams({
+                ...Object.fromEntries(Object.entries(userTokens).map(([key, value]) => [key, String(value)])),
+              }).toString();
+              const shareURL = `${location.href}?${params}`;
+              navigator.clipboard.writeText(shareURL);
+              setCopyActivated(true);
+              setCopyActivatedTimeout(false);
+              setTimeout(() => {
+                setCopyActivated(true);
+                setCopyActivatedTimeout(true);
+              }, 3000);
+            }}
+          >
+            Share link
+          </Button>
+        </ButtonGroup>
+        {copyActivated && !copyActivatedTimeout && (
+          <div role="alert">
+            <Paragraph>URL is gekopieerd!</Paragraph>
+          </div>
+        )}
       </ThemeBuilderSidebar>
       <ThemeBuilderCanvas>
         <VoorbeeldTheme style={cssVariables}>
