@@ -60,9 +60,23 @@ export default function Home() {
               <Paragraph className="voorbeeld-paragraph--opening-times">
                 Vandaag:
                 <br />
-                <time dateTime="08:30">08.30</time> - <time dateTime="17:30">17:30</time>
-                <br />
-                <time dateTime="18:00">18.00</time> - <time dateTime="20:00">20:00</time>
+                <div itemScope itemType="https://schema.org/Pharmacy">
+                  <time itemProp="openingHours" dateTime="08:30">
+                    08.30
+                  </time>{' '}
+                  -{' '}
+                  <time itemProp="openingHours" dateTime="17:30">
+                    17:30
+                  </time>
+                  <br />
+                  <time itemProp="openingHours" dateTime="18:00">
+                    18.00
+                  </time>{' '}
+                  -{' '}
+                  <time itemProp="openingHours" dateTime="20:00">
+                    20:00
+                  </time>
+                </div>
               </Paragraph>
               <Button appearance="secondary-action-button">Contact</Button>
             </TopTaskCard>
