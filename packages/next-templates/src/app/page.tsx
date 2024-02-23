@@ -3,6 +3,7 @@
 import {
   AccordionProvider,
   Button,
+  ButtonGroup,
   Heading2,
   Heading3,
   Heading4,
@@ -88,10 +89,12 @@ export default function Home() {
         <section className="voorbeeld-section voorbeeld-section--alternate voorbeeld-section--spacing">
           <div className="voorbeeld-section-content">
             <div className="voorbeeld-section-container-wrapper">
-              <Heading2>Zelf regelen</Heading2>
-              <Button className="voorbeeld-button-more" appearance="primary-action-button">
-                Meer bekijken
-              </Button>
+              <ButtonGroup className="voorbeeld-button-group">
+                <Heading2>Zelf regelen</Heading2>
+                <Button className="voorbeeld-button-more" appearance="primary-action-button">
+                  Meer bekijken
+                </Button>
+              </ButtonGroup>
             </div>
             <AccordionProvider
               sections={[
@@ -212,10 +215,12 @@ export default function Home() {
         <section className="voorbeeld-section">
           <div className="voorbeeld-section-content">
             <div className="voorbeeld-section-container-wrapper">
-              <Heading2 className="voorbeeld-heading-2">Nieuws en inzichten</Heading2>
-              <Button className="voorbeeld-button-more" appearance="primary-action-button">
-                Meer nieuws
-              </Button>
+              <ButtonGroup className="voorbeeld-button-group">
+                <Heading2 className="voorbeeld-heading-2">Nieuws en inzichten</Heading2>
+                <Button className="voorbeeld-button-more" appearance="primary-action-button">
+                  Meer nieuws
+                </Button>
+              </ButtonGroup>
             </div>
             <ul className="voorbeeld-unordered-list-cards">
               <li>
