@@ -58,10 +58,10 @@ export default function Home() {
             >
               <Heading3>Openingstijden</Heading3>
               <Heading4>Openingstijden Gemeentehuis</Heading4>
-              <Paragraph className="voorbeeld-paragraph--opening-times">
-                Vandaag:
-                <br />
-                <div itemScope itemType="https://schema.org/Pharmacy">
+              <div itemScope itemType="https://schema.org/Pharmacy">
+                <Paragraph className="voorbeeld-paragraph--opening-times">
+                  Vandaag:
+                  <br />
                   <time itemProp="openingHours" dateTime="08:30">
                     08.30
                   </time>{' '}
@@ -77,8 +77,8 @@ export default function Home() {
                   <time itemProp="openingHours" dateTime="20:00">
                     20:00
                   </time>
-                </div>
-              </Paragraph>
+                </Paragraph>
+              </div>
               <Button appearance="secondary-action-button">Contact</Button>
             </TopTaskCard>
           </div>
