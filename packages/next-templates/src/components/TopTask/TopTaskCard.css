@@ -2,7 +2,7 @@
   padding: var(--voorbeeld-space-inline-rabbit);
   background-color: var(--voorbeeld-color-violet-200);
   block-size: 100%;
-  inline-size: 100%;
+  min-inline-size: fit-content;
   box-sizing: border-box;
 }
 
