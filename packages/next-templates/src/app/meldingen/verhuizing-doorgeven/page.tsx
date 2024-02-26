@@ -81,7 +81,7 @@ export default function Home() {
                   className: 'voorbeeld-accordion__section',
                   headingLevel: 2,
                   body: (
-                    <div>
+                    <>
                       <Paragraph>Voeg deze bijlagen toe als u uw verhuizing online doorgeeft:</Paragraph>
                       <UnorderedList>
                         <UnorderedListItem>
@@ -100,7 +100,7 @@ export default function Home() {
                           moet overeenkomen met de handtekening op het identiteitsbewijs.
                         </UnorderedListItem>
                       </UnorderedList>
-                    </div>
+                    </>
                   ),
                   label: 'U gaat bij iemand anders wonen',
                 },
@@ -108,7 +108,7 @@ export default function Home() {
                   className: 'voorbeeld-accordion__section',
                   headingLevel: 2,
                   body: (
-                    <div>
+                    <>
                       <Paragraph>
                         U geeft het adres van de zorginstelling door als uw nieuwe adres. U hebt een kopie van het
                         verzorgingscontract of een verklaring van het verzorgingshuis nodig.
@@ -117,7 +117,7 @@ export default function Home() {
                         Iemand anders kan de verhuizing ook voor u doorgeven. Hij of zij heeft daarvoor ook het
                         verzorgingscontract of een verklaring van het verzorgingshuis nodig.
                       </Paragraph>
-                    </div>
+                    </>
                   ),
                   label: 'U verhuist naar een zorginstelling',
                 },
@@ -125,13 +125,13 @@ export default function Home() {
                   className: 'voorbeeld-accordion__section',
                   headingLevel: 2,
                   body: (
-                    <div>
+                    <>
                       <Paragraph>
                         Bijvoorbeeld naar een adres van het COA, het Leger des Heils, de Tussenvoorziening of het Kamer
                         Trainingscentrum. U geeft zelf uw verhuizing door. U hebt een verklaring van de instelling of
                         een kopie van uw overeenkomst met de instelling nodig.
                       </Paragraph>
-                    </div>
+                    </>
                   ),
                   label: 'U verhuist naar opvang of een andere instelling',
                 },
@@ -139,11 +139,11 @@ export default function Home() {
                   className: 'voorbeeld-accordion__section',
                   headingLevel: 2,
                   body: (
-                    <div>
+                    <>
                       <Paragraph>
                         U geeft dit tegelijk door met uw verhuizing. U hebt geen toestemming van de andere ouder nodig.
                       </Paragraph>
-                    </div>
+                    </>
                   ),
                   label: 'Uw kind(eren) onder de 18 jaar verhuizen met u mee',
                 },
@@ -151,13 +151,13 @@ export default function Home() {
                   className: 'voorbeeld-accordion__section',
                   headingLevel: 2,
                   body: (
-                    <div>
+                    <>
                       <Paragraph>
                         Geef de verhuizing door per post. Of maak een afspraak om langs te komen bij de balie. Zorg dat
                         u ook schriftelijke toestemming heeft van de andere ouder. De andere ouder ondertekent dit. Ook
                         hebt u een kopie nodig van het identiteitsbewijs van de andere ouder.
                       </Paragraph>
-                    </div>
+                    </>
                   ),
                   label: 'Uw kind(eren) onder de 18 jaar verhuizen van de andere ouder naar u',
                 },
