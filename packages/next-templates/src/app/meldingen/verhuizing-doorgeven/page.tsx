@@ -223,6 +223,7 @@ export default function Home() {
                 </UnorderedList>
               </UnorderedListItem>
             </UnorderedList>
+            <Heading3>Met DigiD</Heading3>
             <ButtonGroup className="voorbeeld-button-group">
               <UtrechtDigidLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
               <ButtonLink
