@@ -8,6 +8,7 @@ import {
   Document,
   Heading1,
   Heading2,
+  Heading3,
   Link,
   Paragraph,
   Page,
@@ -160,6 +161,7 @@ export default function Home() {
               ]}
             />
 
+            <Heading2>Wie kan de verhuizing doorgeven?</Heading2>
             <UnorderedList>
               <UnorderedListItem>Iedereen van 16 jaar of ouder.</UnorderedListItem>
               <UnorderedListItem>Ouders, voogden of verzorgers voor kinderen jonger dan 18 jaar.</UnorderedListItem>
@@ -178,6 +180,8 @@ export default function Home() {
               We kunnen uw verhuizing alleen verwerken als uw aanvraag compleet is. Soms mist er nog iets. Dan nemen we
               contact met u op. Daarom is het handig als u bij uw aanvraag uw telefoonnummer doorgeeft.
             </Paragraph>
+
+            <Heading3>Online</Heading3>
             <Paragraph>U hebt nodig:</Paragraph>
 
             <UnorderedList>
