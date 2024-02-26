@@ -44,7 +44,8 @@ export default function Home() {
         <PageContent>
           <Article className="voorbeeld-article-space">
             <Link href="./">
-              <BacklinkIcon /> Terug
+              <BacklinkIcon />
+              Terug
             </Link>
             <Heading1>Verhuizing doorgeven</Heading1>
             <Paragraph>
