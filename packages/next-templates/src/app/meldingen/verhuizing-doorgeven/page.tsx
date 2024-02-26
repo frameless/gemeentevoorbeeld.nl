@@ -2,6 +2,7 @@
 
 import {
   Article,
+  AccordionProvider,
   ButtonLink,
   ButtonGroup,
   Document,
@@ -70,6 +71,94 @@ export default function Home() {
 
             <Paragraph>Soms gaat het doorgeven van uw verhuizing net iets anders. Kies uw situatie:</Paragraph>
             <Heading2>Wie kan de verhuizing doorgeven?</Heading2>
+            <AccordionProvider
+              sections={[
+                {
+                  className: 'voorbeeld-accordion__section',
+                  headingLevel: 2,
+                  body: (
+                    <div>
+                      <Paragraph>Voeg deze bijlagen toe als u uw verhuizing online doorgeeft:</Paragraph>
+                      <UnorderedList>
+                        <UnorderedListItem>
+                          Het ingevulde en met pen ondertekende formulier Verklaring van inwoning (pdf, 557 kB). Een
+                          meerderjarige bewoner van het adres vult dit formulier in.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                          Een foto of een kopie van een geldig identiteitsbewijs van de persoon die toestemming geeft.
+                          Dat kan een paspoort, ID-kaart of rijbewijs zijn.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                          De handtekening op de
+                          <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Verklaring-bewoning-adres.pdf">
+                            Verklaring van inwoning
+                          </Link>
+                          moet overeenkomen met de handtekening op het identiteitsbewijs.
+                        </UnorderedListItem>
+                      </UnorderedList>
+                    </div>
+                  ),
+                  label: 'U gaat bij iemand anders wonen',
+                },
+                {
+                  className: 'voorbeeld-accordion__section',
+                  headingLevel: 2,
+                  body: (
+                    <div>
+                      <Paragraph>
+                        U geeft het adres van de zorginstelling door als uw nieuwe adres. U hebt een kopie van het
+                        verzorgingscontract of een verklaring van het verzorgingshuis nodig.
+                      </Paragraph>
+                      <Paragraph>
+                        Iemand anders kan de verhuizing ook voor u doorgeven. Hij of zij heeft daarvoor ook het
+                        verzorgingscontract of een verklaring van het verzorgingshuis nodig.
+                      </Paragraph>
+                    </div>
+                  ),
+                  label: 'U verhuist naar een zorginstelling',
+                },
+                {
+                  className: 'voorbeeld-accordion__section',
+                  headingLevel: 2,
+                  body: (
+                    <div>
+                      <Paragraph>
+                        Bijvoorbeeld naar een adres van het COA, het Leger des Heils, de Tussenvoorziening of het Kamer
+                        Trainingscentrum. U geeft zelf uw verhuizing door. U hebt een verklaring van de instelling of
+                        een kopie van uw overeenkomst met de instelling nodig.
+                      </Paragraph>
+                    </div>
+                  ),
+                  label: 'U verhuist naar opvang of een andere instelling',
+                },
+                {
+                  className: 'voorbeeld-accordion__section',
+                  headingLevel: 2,
+                  body: (
+                    <div>
+                      <Paragraph>
+                        U geeft dit tegelijk door met uw verhuizing. U hebt geen toestemming van de andere ouder nodig.
+                      </Paragraph>
+                    </div>
+                  ),
+                  label: 'Uw kind(eren) onder de 18 jaar verhuizen met u mee',
+                },
+                {
+                  className: 'voorbeeld-accordion__section',
+                  headingLevel: 2,
+                  body: (
+                    <div>
+                      <Paragraph>
+                        Geef de verhuizing door per post. Of maak een afspraak om langs te komen bij de balie. Zorg dat
+                        u ook schriftelijke toestemming heeft van de andere ouder. De andere ouder ondertekent dit. Ook
+                        hebt u een kopie nodig van het identiteitsbewijs van de andere ouder.
+                      </Paragraph>
+                    </div>
+                  ),
+                  label: 'Uw kind(eren) onder de 18 jaar verhuizen van de andere ouder naar u',
+                },
+              ]}
+            />
 
             <UnorderedList>
               <UnorderedListItem>Iedereen van 16 jaar of ouder.</UnorderedListItem>
@@ -89,8 +178,6 @@ export default function Home() {
               We kunnen uw verhuizing alleen verwerken als uw aanvraag compleet is. Soms mist er nog iets. Dan nemen we
               contact met u op. Daarom is het handig als u bij uw aanvraag uw telefoonnummer doorgeeft.
             </Paragraph>
-
-            <Heading2>Online</Heading2>
             <Paragraph>U hebt nodig:</Paragraph>
 
             <UnorderedList>
@@ -123,8 +210,6 @@ export default function Home() {
                 </UnorderedList>
               </UnorderedListItem>
             </UnorderedList>
-
-            <Heading3>Met DigiD</Heading3>
             <ButtonGroup className="voorbeeld-button-group">
               <UtrechtDigidLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
               <ButtonLink
@@ -142,16 +227,16 @@ export default function Home() {
                   className: 'voorbeeld-accordion__section',
                   headingLevel: 2,
                   body: (
-                    <div>
+                    <>
                       <Paragraph className="voorbeeld-paragraph">
                         U kunt uw verhuizing ook doorgeven per post. U stuurt op:
                       </Paragraph>
                       <UnorderedList>
                         <UnorderedListItem>
-                          Het ingevulde formulier{' '}
+                          Het ingevulde formulier
                           <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Aangifte-adreswijziging.pdf">
-                            Adreswijziging{' '}
-                          </Link>{' '}
+                            Adreswijziging
+                          </Link>
                           (pdf, 183 kB).
                         </UnorderedListItem>
                         <UnorderedListItem>
@@ -167,10 +252,10 @@ export default function Home() {
                           Als u bij iemand anders gaat wonen:
                           <UnorderedList>
                             <UnorderedListItem>
-                              het ingevulde en met pen ondertekende formulier{' '}
+                              het ingevulde en met pen ondertekende formulier
                               <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Verklaring-bewoning-adres.pdf">
                                 Verklaring van inwoning
-                              </Link>{' '}
+                              </Link>
                               (pdf, 557 kB).
                             </UnorderedListItem>
                             <UnorderedListItem>
@@ -184,7 +269,7 @@ export default function Home() {
                       <Paragraph>
                         Gemeente voorbeeld <br /> Burgerzaken <br /> Postbus 1234 <br /> 1234 AB Utrecht
                       </Paragraph>
-                    </div>
+                    </>
                   ),
                   label: 'Per post',
                 },
@@ -192,7 +277,7 @@ export default function Home() {
                   className: 'voorbeeld-accordion__section',
                   headingLevel: 2,
                   body: (
-                    <div>
+                    <>
                       <Paragraph>
                         U kunt uw verhuizing ook doorgeven aan de balie. Maak hiervoor online een afspraak of bel naar
                         12 345.
@@ -203,39 +288,44 @@ export default function Home() {
                         <UnorderedListItem>
                           Uw geldige identiteitsbewijs (paspoort, ID-kaart of rijbewijs).
                         </UnorderedListItem>
-                        <UnorderedListItem>Als u verhuist naar een huurwoning of koopwoning:</UnorderedListItem>
-                        <UnorderedList>
-                          <UnorderedListItem>kopie van uw huurcontract of eigendomsbewijs</UnorderedListItem>
-                        </UnorderedList>
-                        <UnorderedListItem>Als u verhuist naar een instelling:</UnorderedListItem>
-                        <UnorderedList>
-                          <UnorderedListItem>
-                            uw overeenkomst met de instelling of een verklaring van de instelling
-                          </UnorderedListItem>
-                        </UnorderedList>
-                        <UnorderedListItem>Als u bij iemand anders gaat wonen:</UnorderedListItem>
-                        <UnorderedList>
-                          <UnorderedListItem>
-                            Het ingevulde en met pen ondertekende formulier{' '}
-                            <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Verklaring-bewoning-adres.pdf">
-                              Verklaring van inwoning
-                            </Link>{' '}
-                            (pdf, 64 kB).
-                          </UnorderedListItem>
-                          <UnorderedListItem>
-                            kopie van een geldig identiteitsbewijs van de persoon bij wie u gaat wonen.
-                          </UnorderedListItem>
-                        </UnorderedList>
+
+                        <UnorderedListItem>
+                          Als u verhuist naar een huurwoning of koopwoning:
+                          <UnorderedList>
+                            <UnorderedListItem>kopie van uw huurcontract of eigendomsbewijs</UnorderedListItem>
+                          </UnorderedList>
+                        </UnorderedListItem>
+
+                        <UnorderedListItem>
+                          Als u verhuist naar een instelling:
+                          <UnorderedList>
+                            <UnorderedListItem>
+                              uw overeenkomst met de instelling of een verklaring van de instelling
+                            </UnorderedListItem>
+                          </UnorderedList>
+                        </UnorderedListItem>
+
+                        <UnorderedListItem>
+                          Als u bij iemand anders gaat wonen:
+                          <UnorderedList>
+                            <UnorderedListItem>
+                              Het ingevulde en met pen ondertekende formulier
+                              <Link href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Verklaring-bewoning-adres.pdf">
+                                Verklaring van inwoning
+                              </Link>
+                              (pdf, 64 kB).
+                            </UnorderedListItem>
+                            <UnorderedListItem>
+                              kopie van een geldig identiteitsbewijs van de persoon bij wie u gaat wonen.
+                            </UnorderedListItem>
+                          </UnorderedList>
+                        </UnorderedListItem>
                       </UnorderedList>
 
-                      <ButtonLink
-                        className="voorbeeld-button-link"
-                        appearance="primary-action-button"
-                        href="./verhuizing-doorgeven/maak-een-afspraak"
-                      >
+                      <ButtonLink appearance="primary-action-button" href="./verhuizing-doorgeven/maak-een-afspraak">
                         Maak een afspraak
                       </ButtonLink>
-                    </div>
+                    </>
                   ),
                   label: 'Aan de balie',
                 },
