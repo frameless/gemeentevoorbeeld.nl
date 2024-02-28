@@ -43,7 +43,7 @@ export default function Home() {
         <ExampleNavigation />
         <PageContent>
           <Article className="voorbeeld-article-space">
-            <Link href="./">
+            <Link className="voorbeeld-link-back" href="./">
               <BacklinkIcon />
               Terug
             </Link>
