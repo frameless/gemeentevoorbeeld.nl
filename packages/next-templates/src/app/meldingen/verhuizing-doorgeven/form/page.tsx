@@ -44,7 +44,6 @@ export default function Home() {
   });
   const placeField = register('place', homeTownValidation);
   const streetField = register('street', streetValidation);
-  const nameField = register('name', nameValidation);
   const emailField = register('email', emailValidation);
 
   return (
@@ -88,7 +87,7 @@ export default function Home() {
                   {...placeField}
                 />
                 <FormFieldTextbox
-                  id={`place-${placeField.name}`}
+                  id={`email-${emailField.name}`}
                   className="voorbeeld-textbox"
                   placeholder="Vul hier uw email"
                   invalid={!!errors[placeField.name]}
@@ -145,9 +144,9 @@ export default function Home() {
             >
               <section>
                 <FormFieldTextbox
-                  id={`place-${placeField.name}`}
+                  id={`street-${streetField.name}`}
                   className="voorbeeld-textbox"
-                  placeholder=""
+                  placeholder="Vul hier uw postcode en huisnummer"
                   invalid={!!errors[placeField.name]}
                   errorMessage={String(errors[placeField.name]?.message)}
                   aria-label="Adres"
@@ -157,7 +156,7 @@ export default function Home() {
                 <FormFieldTextbox
                   id={`place-${placeField.name}`}
                   className="voorbeeld-textbox"
-                  placeholder=""
+                  placeholder="Vul hier het aantal personen"
                   invalid={!!errors[placeField.name]}
                   errorMessage={String(errors[placeField.name]?.message)}
                   aria-label="Aantal inwoners"
