@@ -70,7 +70,7 @@ export default function Home() {
             </Paragraph>
             <form
               method="POST"
-              action="./verhuizing-doorgeven/confirmed"
+              action="./confirmed"
               onSubmit={handleSubmit((data) => {
                 window.location.href = './confirmed';
               })}
@@ -137,7 +137,7 @@ export default function Home() {
             <Heading2>Uw Nieuwe Adres</Heading2>
             <form
               method="POST"
-              action="./verhuizing-doorgeven/confirmed"
+              action="./confirmed"
               onSubmit={handleSubmit((data) => {
                 window.location.href = './confirmed';
               })}
@@ -173,7 +173,7 @@ export default function Home() {
             <Button appearance="secondary-action-button">Bestand kiezen</Button>
 
             <ButtonGroup>
-              <ButtonLink appearance="primary-action-button" href="./verhuizing-doorgeven/confirmed">
+              <ButtonLink appearance="primary-action-button" href="./confirmed">
                 Afronden <UtrechtIconArrow></UtrechtIconArrow>
               </ButtonLink>
             </ButtonGroup>
