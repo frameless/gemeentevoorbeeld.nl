@@ -1,7 +1,11 @@
 /* HACK  should be a component 
 https://www.figma.com/file/gX3fq7k0uUKC45AJbuItDv/Local---Voorbeeld---Bibliotheek?type=design&node-id=13-254&mode=dev */
 
-.voorbeeld-spotlight-section-heading-style {
+.voorbeeld-button-group {
+  --utrecht-button-group-inline-gap: 0;
+}
+
+.voorbeeld-utrecht-spotlight-section {
   --utrecht-heading-2-margin-block-end: var(--voorbeeld-space-block-rabbit);
   --utrecht-heading-2-margin-block-start: var(--voorbeeld-space-block-rabbit);
   --utrecht-heading-2-font-size: 24px;
