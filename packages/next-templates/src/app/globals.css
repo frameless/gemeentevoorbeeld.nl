@@ -152,7 +152,7 @@ utrecht-alert
 .voorbeeld-digid-logo {
   --utrecht-icon-size: var(--voorbeeld-size-icon-4xl);
   --utrecht-icon-inset-block-start: 18px;
-  margin-inline-end: 0.4em;
+  margin-inline-end: var(--voorbeeld-space-inline-beetle);
 }
 
 .utrecht-form-fieldset__legend {
