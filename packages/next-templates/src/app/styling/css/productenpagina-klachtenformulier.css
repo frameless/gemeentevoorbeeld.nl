@@ -1,0 +1,17 @@
+/* .utrecht-spotlight-section-klachtenformulier {
+    --utrecht-spotlight-section-padding-inline-end: var(--voorbeeld-space-inline-rabbit);
+    --utrecht-spotlight-section-padding-inline-start: var(--voorbeeld-space-inline-rabbit);
+    --utrecht-spotlight-section-padding-block-end: var(--voorbeeld-space-block-rabbit);
+    --utrecht-spotlight-section-margin-block-start: var(--voorbeeld-space-block-rabbit);
+    --utrecht-spotlight-section-margin-block-end: var(--voorbeeld-space-block-rabbit);
+    --utrecht-spotlight-section-background-color: var(--voorbeeld-color-green-100);
+    --utrecht-spotlight-section-color: var(--voorbeeld-color-gray-900);
+    --utrecht-spotlight-section-border-color: var(--voorbeeld-color-green-600);
+    --utrecht-spotlight-section-border-width: 2px;
+} */
+
+.voorbeeld-button-group {
+  --utrecht-button-group-inline-gap: 0;
+  --utrecht-button-group-margin-block-start: 0;
+  --utrecht-button-group-margin-block-end: var(--voorbeeld-space-block-rabbit);
+}
