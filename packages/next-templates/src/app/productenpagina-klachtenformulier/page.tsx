@@ -17,17 +17,33 @@ import {
 } from '@utrecht/web-component-library-react';
 
 //importeert COMPONENTS uit Utrecht library
-import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
+import {
+  Article,
+  ButtonLink,
+  ButtonGroup,
+  Button,
+  Document,
+  Heading1,
+  Heading2,
+  Heading3,
+  Link,
+  Paragraph,
+  Page,
+  PageContent,
+  SpotlightSection,
+  UnorderedList,
+  UnorderedListItem,
+} from '@utrecht/component-library-react';
 
 //importeert LOKALE components (snowflakes?)
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
-import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader'; //welke header nodig?
 import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import { IconArrowLeft } from '@tabler/icons-react';
 import { IconChevronRight } from '@tabler/icons-react';
-import '@/app/styling/css/wmebv.css'; //importeert css styling -> moet nog aangepast worden naar styling voor productenpagina-klachtenform!
+import '@utrecht/design-tokens/dist/index.css'; //importeert ?
+import '@/app/styling/css/productenpagina-klachtenformulier.css'; //importeert css styling -> moet nog aangepast worden naar styling voor productenpagina-klachtenform!
 import { useEffect } from 'react'; //importeert ?
 
 export default function home() {
@@ -46,30 +62,30 @@ export default function home() {
       <ExampleNavigation />
 
       <UtrechtPageContent className="voorbeeld-page-content-flex">
-        <UtrechtArticle id="main" className="voorbeeld-article-space ">
+        <Article id="main" className="voorbeeld-article-space ">
           <BreadcrumbNav label="Kruimelpad">
             <BreadcrumbNavLink href="/wmebv#">Terug</BreadcrumbNavLink>
           </BreadcrumbNav>
-          <UtrechtHeading1>{pageTitle}</UtrechtHeading1>
-          <UtrechtParagraph lead>
+          <Heading1>{pageTitle}</Heading1>
+          <Paragraph lead>
             Vindt u dat u niet netjes bent behandeld door een ambtenaar of bestuurder? U kunt dan online een klacht
             doorgeven. Een klacht handelen wij meestal binnen 6 weken af.
-          </UtrechtParagraph>
-          <UtrechtSpotlightSection>
-            <UtrechtHeading2>Is het een klacht of een melding?</UtrechtHeading2>
-            <UtrechtParagraph>
+          </Paragraph>
+          <SpotlightSection>
+            <Heading2>Is het een klacht of een melding?</Heading2>
+            <Paragraph>
               Gaat uw klacht over iets dat kapot is op straat, ziet u vervuiling of merkt u overlast? Doe dan een
               melding. Meldingen gaan bijvoorbeeld over afval, vervuiling, groen, obstakels op de weg, kapotte
               lantaarnpalen, verkeer, overlast, graffiti, woonfraude of bedrijven die zich niet aan milieuregels houden.
-            </UtrechtParagraph>
-            <UtrechtParagraph>
-              U laat ons via een melding weten wat er aan de hand is en op welke plek dit is.
-            </UtrechtParagraph>
-            <UtrechtButtonGroup>
-              <UtrechtButton>Doe een melding</UtrechtButton>
-            </UtrechtButtonGroup>
-          </UtrechtSpotlightSection>
-          <UtrechtHeading2>Waarover kunt u een klacht doorgeven?</UtrechtHeading2>
+            </Paragraph>
+            <Paragraph>U laat ons via een melding weten wat er aan de hand is en op welke plek dit is.</Paragraph>
+            <ButtonGroup>
+              <Button>
+                Doe een melding<IconChevronRight></IconChevronRight>
+              </Button>
+            </ButtonGroup>
+          </SpotlightSection>
+          <Heading2>Waarover kunt u een klacht doorgeven?</Heading2>
           <UnorderedList>
             <UnorderedListItem>De persoonlijke behandeling door medewerkers of bestuurders.</UnorderedListItem>
             <UnorderedListItem>Het krijgen van te weinig of onjuiste informatie.</UnorderedListItem>
@@ -80,11 +96,13 @@ export default function home() {
               gegevens.
             </UnorderedListItem>
           </UnorderedList>
-          <UtrechtButton>Ga naar het klachtenformulier</UtrechtButton>
-          <UtrechtHeading2>Geen klacht maar wel bezwaar maken?</UtrechtHeading2>
-          <UtrechtParagraph>Bent u het niet eens met een beslissing? Maak dan bezwaar.</UtrechtParagraph>
+          <Button>
+            Ga naar het klachtenformulier<IconChevronRight></IconChevronRight>
+          </Button>
+          <Heading2>Geen klacht maar wel bezwaar maken?</Heading2>
+          <Paragraph>Bent u het niet eens met een beslissing? Maak dan bezwaar.</Paragraph>
           {/* bezwaar = link? (niet in Figma, wel op Utrecht website) */}
-          <UtrechtHeading2>Waarover kunt u geen klacht doorgeven?</UtrechtHeading2>
+          <Heading2>Waarover kunt u geen klacht doorgeven?</Heading2>
           <UnorderedList>
             <UnorderedListItem>Over iets wat meer dan 1 jaar geleden gebeurde.</UnorderedListItem>
             <UnorderedListItem>Over onze regels.</UnorderedListItem>
@@ -94,7 +112,7 @@ export default function home() {
             </UnorderedListItem>
             <UnorderedListItem>Over gedrag dat Justitie al onderzoekt.</UnorderedListItem>
           </UnorderedList>
-          <UtrechtHeading2>Behandeling van uw klacht</UtrechtHeading2>
+          <Heading2>Behandeling van uw klacht</Heading2>
           <UnorderedList>
             <UnorderedListItem>
               Wij laten u na het doorgeven van uw klacht weten dat wij deze hebben gekregen.
@@ -119,21 +137,24 @@ export default function home() {
               Voorbeeld Stad (geen postzegel nodig)
             </UnorderedListItem>
           </UnorderedList>
-          <UtrechtHeading2>Niet eens met de uitspraak?</UtrechtHeading2>
-          <UtrechtParagraph>
+          <Heading2>Niet eens met de uitspraak?</Heading2>
+          <Paragraph>
             Bent u niet tevreden over de manier waarop uw klacht is opgelost? Neem dan contact op met de Nationale
             ombudsman.
-          </UtrechtParagraph>
-          <UtrechtHeading2>Klachtenrapportage</UtrechtHeading2> {/* is deze section relevant voor GV? */}
-          <UtrechtParagraph>
+          </Paragraph>
+          <Heading2>Klachtenrapportage</Heading2> {/* is deze section relevant voor GV? */}
+          <Paragraph>
             {/* klachtenrapportage t/m raadsbrief = link? (niet in Figma, wel op Utrecht website) */}
             Meer weten over de klachtenafhandeling in 2021? Lees dan de Klachtenrapportage 2021 en de raadsbrief.
-          </UtrechtParagraph>
+          </Paragraph>
           {/* in Figma staat deze section in = <UtrechtPreFooterNavLink> deze is niet importeerbaar vanuit Utrecht Library */}
-          <IconChevronRight></IconChevronRight>
-          <UtrechtLink href="">Wat vindt u van deze pagina</UtrechtLink>
-          {/* lege link - bestemmingspagina bestaat nog niet */}
-        </UtrechtArticle>
+          <ButtonLink href="">
+            <IconChevronRight></IconChevronRight>
+            Wat vindt u van deze pagina
+            {/* lege link - bestemmingspagina bestaat nog niet */}
+            {/* styling: border weg  */}
+          </ButtonLink>
+        </Article>
       </UtrechtPageContent>
 
       <ExampleFooterWmebv />

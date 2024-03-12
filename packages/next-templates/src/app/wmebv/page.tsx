@@ -53,7 +53,7 @@ export default function home() {
           <UtrechtHeading2>Klacht</UtrechtHeading2>
           <UtrechtParagraph>Gebruik het klachtenformulier om een klacht in te dienen.</UtrechtParagraph>
           <UtrechtButtonGroup>
-            <UtrechtLink href="/wmebv/productenpagina-klachtenformulier"> Start klachtenformulier</UtrechtLink>
+            <UtrechtLink href="/productenpagina-klachtenformulier">Start klachtenformulier</UtrechtLink>
           </UtrechtButtonGroup>
           <UtrechtHeading2>Melding openbare ruimte en overlast</UtrechtHeading2>
           <UtrechtParagraph>
