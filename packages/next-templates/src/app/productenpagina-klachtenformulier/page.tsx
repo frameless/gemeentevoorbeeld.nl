@@ -1,20 +1,10 @@
 'use client';
 
 //importeert WEB COMPONENTS uit Utrecht library
-import {
-  UtrechtArticle,
-  UtrechtButton,
-  UtrechtButtonGroup,
-  UtrechtDigidLogo,
-  UtrechtHeading1,
-  UtrechtHeading2,
-  UtrechtIcon,
-  UtrechtLink,
-  UtrechtSpotlightSection,
-  UtrechtPage,
-  UtrechtPageContent,
-  UtrechtParagraph,
-} from '@utrecht/web-component-library-react';
+// import {
+//   UtrechtPage,
+//   UtrechtPageContent,
+// } from '@utrecht/web-component-library-react';
 
 //importeert COMPONENTS uit Utrecht library
 import {
@@ -43,7 +33,7 @@ import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-rea
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { IconChevronRight } from '@tabler/icons-react';
 import '@utrecht/design-tokens/dist/index.css'; //importeert ?
-import '@/app/styling/css/productenpagina-klachtenformulier.css'; //importeert css styling -> moet nog aangepast worden naar styling voor productenpagina-klachtenform!
+import '@/app/styling/css/detail-page.css'; //importeert css styling -> moet nog aangepast worden naar styling voor productenpagina-klachtenform!
 import { useEffect } from 'react'; //importeert ?
 
 export default function home() {
@@ -57,11 +47,11 @@ export default function home() {
   }, []);
 
   return (
-    <UtrechtPage>
+    <Page>
       <ExampleHeaderFunnelWmebv />
       <ExampleNavigation />
 
-      <UtrechtPageContent className="voorbeeld-page-content-flex">
+      <PageContent className="voorbeeld-page-content-flex">
         <Article id="main" className="voorbeeld-article-space ">
           <BreadcrumbNav label="Kruimelpad">
             <BreadcrumbNavLink href="/wmebv#">Terug</BreadcrumbNavLink>
@@ -71,7 +61,7 @@ export default function home() {
             Vindt u dat u niet netjes bent behandeld door een ambtenaar of bestuurder? U kunt dan online een klacht
             doorgeven. Een klacht handelen wij meestal binnen 6 weken af.
           </Paragraph>
-          <SpotlightSection>
+          <SpotlightSection className="utrecht-spotlight-section">
             <Heading2>Is het een klacht of een melding?</Heading2>
             <Paragraph>
               Gaat uw klacht over iets dat kapot is op straat, ziet u vervuiling of merkt u overlast? Doe dan een
@@ -128,7 +118,7 @@ export default function home() {
               brief daarover. Hoort uw klacht niet bij ons thuis? Dan proberen wij deze door te sturen.
             </UnorderedListItem>
           </UnorderedList>
-          <UtrechtHeading2>Klacht schriftelijk of telefonisch doorgeven</UtrechtHeading2>
+          <Heading2>Klacht schriftelijk of telefonisch doorgeven</Heading2>
           <UnorderedList>
             <UnorderedListItem>Telefonisch: via 00 000.</UnorderedListItem>
             <UnorderedListItem>
@@ -152,12 +142,12 @@ export default function home() {
             <IconChevronRight></IconChevronRight>
             Wat vindt u van deze pagina
             {/* lege link - bestemmingspagina bestaat nog niet */}
-            {/* styling: border weg  */}
+            {/* styling: border weg = in Figma */}
           </ButtonLink>
         </Article>
-      </UtrechtPageContent>
+      </PageContent>
 
       <ExampleFooterWmebv />
-    </UtrechtPage>
+    </Page>
   );
 }
