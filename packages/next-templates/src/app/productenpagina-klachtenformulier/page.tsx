@@ -70,9 +70,9 @@ export default function home() {
             </Paragraph>
             <Paragraph>U laat ons via een melding weten wat er aan de hand is en op welke plek dit is.</Paragraph>
             <ButtonGroup>
-              <Button>
+              <ButtonLink href="/meldingen">
                 Doe een melding<IconChevronRight></IconChevronRight>
-              </Button>
+              </ButtonLink>
             </ButtonGroup>
           </SpotlightSection>
           <Heading2>Waarover kunt u een klacht doorgeven?</Heading2>
