@@ -16,4 +16,21 @@ export default function home() {
       document.title = `${stepLabel} - ${websiteLabel}`;
     }
   }, []);
+
+  return (
+    <Page>
+      <PageContent>
+        <Article id="main" className="voorbeeld-article-space">
+          <Heading1 id={formHeadingId}>{stepLabel}</Heading1>
+          <form action="./ingelogd/stap1" method="get" aria-labelledby={formHeadingId}>
+            <ButtonGroup>
+              <Button type="submit" appearance="primary-action-button">
+                Inloggen
+              </Button>
+            </ButtonGroup>
+          </form>
+        </Article>
+      </PageContent>
+    </Page>
+  );
 }
