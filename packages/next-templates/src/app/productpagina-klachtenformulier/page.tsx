@@ -21,12 +21,14 @@ import {
 } from '@utrecht/component-library-react';
 
 //importeert LOKALE components (?)
-import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
+import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { IconChevronRight } from '@tabler/icons-react';
+
 import '@utrecht/design-tokens/dist/index.css'; //importeert ?
-import '@/app/styling/css/productpagina-klachtenformulier.css'; //importeert css styling -> moet nog aangepast worden naar styling voor productenpagina-klachtenform!
+import '@/app/styling/css/productpagina-klachtenformulier.css';
+
 import { useEffect } from 'react'; //importeert react functie maar wat is het precies?
 
 export default function home() {
@@ -140,7 +142,7 @@ export default function home() {
         </Article>
       </PageContent>
 
-      <ExampleFooterWmebv />
+      <ExampleFooter />
     </Page>
   );
 }
