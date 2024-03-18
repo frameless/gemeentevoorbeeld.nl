@@ -1,5 +1,57 @@
-.voorbeeld-button-group {
-  --utrecht-button-group-inline-gap: 0;
-  --utrecht-button-group-margin-block-start: 0;
-  --utrecht-button-group-margin-block-end: var(--voorbeeld-space-block-rabbit);
-}
+/*  ALL COMPONENTS ON PRODUCT PAGINA KLACHTEN FORMULIER
+- Article
+- BreadcrumbNav
+- BreadcrumbNavLink
+- ButtonLink
+- ButtonGroup
+- Heading1
+- Heading2
+- Paragraph
+- Page
+- PageContent
+- SpotlightSection
+- UnorderedList
+- UnorderedListItem
+
+- ExampleHeader
+- ExampleNavigation
+- ExampleFooter
+
+- IconChevronRight
+
+
+ */
+
+/* COMPONENTS THAT HAVE (SOME) STYLING IN globals.css  
+- PageContent
+- Paragraph
+- UnorderedList
+
+- ExampleHeader 
+- ExampleFooter
+
+- ChevronRight
+*/
+
+/* COMPONENTS THAT NEED ADDITIONAL STYLING IN globals.css 
+-
+-
+-
+*/
+
+/* COMPONENTS THAT NEED STYLING REMOVED/CHANGES IN globals.css 
+-
+-
+-
+*/
+
+/* COMPONENTS THAT NEED STYLING IN productpagina-klachtenformulier.css 
+-
+-
+-
+*/
+
+/*  COMPONENTS THAT GET STYLING FROM SOMEWHERE ELSE (+ FROM WHERE)
+-
+-
+ */
