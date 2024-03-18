@@ -1,22 +1,19 @@
 'use client';
 
 //importeert WEB COMPONENTS uit Utrecht library
-// import {
-//   UtrechtPage,
-//   UtrechtPageContent,
 // } from '@utrecht/web-component-library-react';
 
 //importeert COMPONENTS uit Utrecht library
 import {
   Article,
+  BreadcrumbNav,
+  BreadcrumbNavLink,
   ButtonLink,
   ButtonGroup,
   Button,
   Document,
   Heading1,
   Heading2,
-  Heading3,
-  Link,
   Paragraph,
   Page,
   PageContent,
@@ -25,16 +22,15 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react';
 
-//importeert LOKALE components (snowflakes?)
+//importeert LOKALE components (?)
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
-import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader'; //welke header nodig?
-import { BreadcrumbNav, BreadcrumbNavLink } from '@utrecht/component-library-react';
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader'; //welke header nodig? (funnelwmebv of deze?)
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { IconChevronRight } from '@tabler/icons-react';
 import '@utrecht/design-tokens/dist/index.css'; //importeert ?
 import '@/app/styling/css/detail-page.css'; //importeert css styling -> moet nog aangepast worden naar styling voor productenpagina-klachtenform!
-import { useEffect } from 'react'; //importeert ?
+import { useEffect } from 'react'; //importeert react functie maar wat is het precies?
 
 export default function home() {
   const pageTitle = 'Klacht over de gemeente doorgeven';
@@ -122,7 +118,7 @@ export default function home() {
           <UnorderedList>
             <UnorderedListItem>Telefonisch: via 00 000.</UnorderedListItem>
             <UnorderedListItem>
-              {/* hier moet een flex oid opkomen: 6 regels onder elkaar */}
+              {/* styling: hier moet een flex oid opkomen: in ontwerp is 6 regels onder elkaar */}
               Schriftelijk: stuur een brief naar Gemeente Voorbeeld Klachtenbehandeling Antwoordnummer 00000 0000 AB
               Voorbeeld Stad (geen postzegel nodig)
             </UnorderedListItem>
@@ -141,8 +137,8 @@ export default function home() {
           <ButtonLink href="">
             <IconChevronRight></IconChevronRight>
             Wat vindt u van deze pagina
-            {/* lege link - bestemmingspagina bestaat nog niet */}
-            {/* styling: border weg = in Figma */}
+            {/* is nu een lege link - bestemmingspagina bestaat nog niet */}
+            {/* styling: geen border in Figma */}
           </ButtonLink>
         </Article>
       </PageContent>
