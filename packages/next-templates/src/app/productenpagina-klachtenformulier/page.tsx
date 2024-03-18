@@ -86,9 +86,9 @@ export default function home() {
               gegevens.
             </UnorderedListItem>
           </UnorderedList>
-          <Button>
+          <ButtonLink href="/productenpagina-klachtenformulier/step-1">
             Ga naar het klachtenformulier<IconChevronRight></IconChevronRight>
-          </Button>
+          </ButtonLink>
           <Heading2>Geen klacht maar wel bezwaar maken?</Heading2>
           <Paragraph>Bent u het niet eens met een beslissing? Maak dan bezwaar.</Paragraph>
           {/* bezwaar = link? (niet in Figma, wel op Utrecht website) */}
