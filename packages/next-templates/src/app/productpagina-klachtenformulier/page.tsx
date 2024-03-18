@@ -10,8 +10,6 @@ import {
   BreadcrumbNavLink,
   ButtonLink,
   ButtonGroup,
-  Button,
-  Document,
   Heading1,
   Heading2,
   Paragraph,
@@ -23,13 +21,12 @@ import {
 } from '@utrecht/component-library-react';
 
 //importeert LOKALE components (?)
-import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
-import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader'; //welke header nodig? (funnelwmebv of deze?)
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { IconChevronRight } from '@tabler/icons-react';
 import '@utrecht/design-tokens/dist/index.css'; //importeert ?
-import '@/app/styling/css/detail-page.css'; //importeert css styling -> moet nog aangepast worden naar styling voor productenpagina-klachtenform!
+import '@/app/styling/css/productpagina-klachtenformulier.css'; //importeert css styling -> moet nog aangepast worden naar styling voor productenpagina-klachtenform!
 import { useEffect } from 'react'; //importeert react functie maar wat is het precies?
 
 export default function home() {
@@ -44,7 +41,7 @@ export default function home() {
 
   return (
     <Page>
-      <ExampleHeaderFunnelWmebv />
+      <ExampleHeader />
       <ExampleNavigation />
 
       <PageContent className="voorbeeld-page-content-flex">
