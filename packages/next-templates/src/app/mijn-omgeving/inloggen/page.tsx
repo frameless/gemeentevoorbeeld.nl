@@ -54,6 +54,13 @@ export default function home() {
               Dankzij uw DigiD kunt u overal makkelijk en veilig inloggen. Uw persoonlijke gegevens blijven goed
               beschermd. Wanneer u inlogt worden uw persoonlijke gegevens automatisch ingevuld.
             </Paragraph>
+
+            <ButtonGroup>
+              <Button type="submit" appearance="primary-action-button">
+                Doorgaan
+              </Button>{' '}
+              {/* Why does this button send me to the next step in wmebv and not in mijn-omgeving? */}
+            </ButtonGroup>
           </form>
         </Article>
       </PageContent>
