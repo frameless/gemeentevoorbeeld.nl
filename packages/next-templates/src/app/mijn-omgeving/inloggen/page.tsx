@@ -37,7 +37,26 @@ export default function home() {
   return (
     <Page>
       <ExampleHeaderFunnelWmebv /> {/* use wmebv nav header or standard? */}
-      <PageContent></PageContent>
+      <PageContent>
+        <Article id="main" className="voorbeeld-article-space ">
+          <form method="POST" action="/api/wmebv/choose-form">
+            <ButtonGroup>
+              <Link href="./">
+                <Icon>
+                  <IconArrowLeft />
+                </Icon>
+                Terug
+              </Link>
+            </ButtonGroup>
+            <Heading1>Vraag aan de gemeente</Heading1>
+            <Heading2>Inloggen</Heading2>
+            <Paragraph className="paragraph_digid">
+              Dankzij uw DigiD kunt u overal makkelijk en veilig inloggen. Uw persoonlijke gegevens blijven goed
+              beschermd. Wanneer u inlogt worden uw persoonlijke gegevens automatisch ingevuld.
+            </Paragraph>
+          </form>
+        </Article>
+      </PageContent>
       <ExampleFooterWmebv />
     </Page>
   );
