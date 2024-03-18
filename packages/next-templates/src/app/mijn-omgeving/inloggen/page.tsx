@@ -54,7 +54,44 @@ export default function home() {
               Dankzij uw DigiD kunt u overal makkelijk en veilig inloggen. Uw persoonlijke gegevens blijven goed
               beschermd. Wanneer u inlogt worden uw persoonlijke gegevens automatisch ingevuld.
             </Paragraph>
-
+            <UtrechtDigidLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
+            <Fieldset id="df861ef1-844a-42df-8365-b54f59474fb8" role="radiogroup">
+              <FieldsetLegend className="fieldlabel_inloggen">Wilt u inloggen?</FieldsetLegend>
+              <FormField type="radio">
+                <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                  <FormLabel
+                    className="voorbeeld-radio-button-form-label"
+                    htmlFor="800b7f3f-5048-4dcc-8f23-d04fa6ca4199"
+                    type="radio"
+                  >
+                    <RadioButton
+                      className="utrecht-form-field__input"
+                      id="800b7f3f-5048-4dcc-8f23-d04fa6ca4199"
+                      name="loggedIn"
+                      value="true"
+                    />
+                    Ja
+                  </FormLabel>
+                </Paragraph>
+              </FormField>
+              <FormField type="radio">
+                <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                  <FormLabel
+                    className="voorbeeld-radio-button-form-label"
+                    htmlFor="fbc03e63-42c2-46e3-9acc-183fa64c6dcd"
+                    type="radio"
+                  >
+                    <RadioButton
+                      className="utrecht-form-field__input"
+                      id="fbc03e63-42c2-46e3-9acc-183fa64c6dcd"
+                      name="loggedIn"
+                      value="false"
+                    />
+                    Nee
+                  </FormLabel>
+                </Paragraph>
+              </FormField>
+            </Fieldset>
             <ButtonGroup>
               <Button type="submit" appearance="primary-action-button">
                 Doorgaan
