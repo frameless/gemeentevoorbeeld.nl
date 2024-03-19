@@ -6,29 +6,31 @@ import {
   ButtonGroup,
   BreadcrumbNav,
   BreadcrumbNavLink,
+  Fieldset,
+  FieldsetLegend,
   FormField,
+  FormFieldDescription,
+  FormLabel,
   Heading1,
   Heading2,
-  HeadingGroup,
-  Icon,
   Link,
   Page,
   PageContent,
   Paragraph,
-  PreHeading,
   RadioButton,
+  Textbox,
+  Textarea,
   UnorderedList,
   UnorderedListItem,
-  LinkButton,
 } from '@utrecht/component-library-react';
-
-// import { ContactFormSessionData, FORM_SESSION_KEY, useSessionState } from '../../SessionData';
 
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { IconChevronUp, IconChevronRight, IconX } from '@tabler/icons-react';
 
 import '@/app/styling/css/wmebv.css';
+import '@utrecht/design-tokens/dist/index.css';
 
 import { useEffect } from 'react';
 
@@ -50,56 +52,102 @@ export default function home() {
       <PageContent className="voorbeeld-page-content-flex">
         <Article id="main" className="voorbeeld-article-space ">
           <BreadcrumbNav label="Kruimelpad">
-            <BreadcrumbNavLink href="/productpagina-klachtenformulier">Terug</BreadcrumbNavLink>
+            <BreadcrumbNavLink href="/">Home</BreadcrumbNavLink>
+            <IconChevronRight></IconChevronRight>
+            <BreadcrumbNavLink href="/productpagina-klachtenformulier">Product pagina</BreadcrumbNavLink>
           </BreadcrumbNav>
-          <Heading1>Klacht over de gemeente doorgeven</Heading1>
-          {/* Stap 1 van 4 (moet hier nog komen te staan) */}
-          <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
-          <Heading2>Uw klacht </Heading2>
-          <form>
-            <label id="radioButtenGroupWelkOnderdeel">Weet u voor welke afdeling de medewerker werkt?</label>
-            <fieldset id="radioButtenGroupWelkOnderdeel">
-              {/* legend gebruiken zoals hieronder of label zoals hierboven? */}
-              {/* <legend>Weet u voor welke afdeling de medewerker werkt?</legend> */}
-              <span>
-                <input id="welkOnderdeel0" type="radio" value=""></input>
-                <label id="welkOnderdeel0">
-                  Publiekzaken: bijvoorbeeld paspoort of trouwen of de wachttijd als u ons belt.
-                </label>
-              </span>
-              <span>
-                <input id="welkOnderdeel1" type="radio" value=""></input>
-                <label id="welkOnderdeel1">
-                  Stadsbedrijven: bijvoorbeeld ophalen afval, parken en bomen of sportplekken.
-                </label>
-              </span>
-              <span>
-                <input id="welkOnderdeel2" type="radio" value=""></input>
-                <label id="welkOnderdeel2">
-                  Ruimte: bijvoorbeeld verkeer, bouwen, energie en klimaat of speelruimte.
-                </label>
-              </span>
-              <span>
-                <input id="welkOnderdeel3" type="radio" value=""></input>
-                <label id="welkOnderdeel3">Werk en Inkomen: bijvoorbeeld bijstand, schulddienstverlening of Wmo.</label>
-              </span>
-              <span>
-                <input id="welkOnderdeel4" type="radio" value=""></input>
-                <label id="welkOnderdeel4">
-                  Vergunningen, Toezicht en Handhaving: bijvoorbeeld handhavers (boa’s) parkeerboetes, of vergunningen.
-                </label>
-              </span>
-              <span>
-                <input id="welkOnderdeel5" type="radio" value=""></input>
-                <label id="welkOnderdeel5">Anders of ik weet het niet</label>
-              </span>
-            </fieldset>
 
-            <label id="tekstFieldOverWie">Over wie gaat uw klacht?</label>
-            <fieldset id="tekstFieldOverWie">
-              <input type="text"></input>
-            </fieldset>
+          <Heading1>Klacht over de gemeente doorgeven</Heading1>
+          <Paragraph>Stap 1 van 4</Paragraph>
+          <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
+          {/* In het figma ontwerp heeft geen enkel vakje op deze pagina heeft *?  */}
+
+          <form>
+            <FormLabel>
+              <Heading2>Uw klacht </Heading2>
+            </FormLabel>
+            <Fieldset>
+              {/* styling: radiobutton + tekst naast elkaar */}
+              <FormField>
+                <FieldsetLegend>Weet u voor welke afdeling de medewerker werkt?</FieldsetLegend>
+                <RadioButton></RadioButton>
+                <Paragraph>Publiekzaken: bijvoorbeeld paspoort of trouwen of de wachttijd als u ons belt.</Paragraph>
+                {/* alleen radiobutton klikbaar of ook paragraph? */}
+                <RadioButton></RadioButton>
+                <Paragraph>Stadsbedrijven: bijvoorbeeld ophalen afval, parken en bomen of sportplekken.</Paragraph>
+                <RadioButton></RadioButton>
+                <Paragraph>Ruimte: bijvoorbeeld verkeer, bouwen, energie en klimaat of speelruimte.</Paragraph>
+                <RadioButton></RadioButton>
+                <Paragraph>Werk en Inkomen: bijvoorbeeld bijstand, schulddienstverlening of Wmo.</Paragraph>
+                <RadioButton></RadioButton>
+                <Paragraph>
+                  Vergunningen, Toezicht en Handhaving: bijvoorbeeld handhavers (boa’s) parkeerboetes, of vergunningen.
+                </Paragraph>
+                <RadioButton></RadioButton>
+                <Paragraph>Anders of ik weet het niet</Paragraph>
+              </FormField>
+
+              <FormField>
+                <FieldsetLegend>Over wie gaat uw klacht?</FieldsetLegend>
+                <FormFieldDescription>Bijvoorbeeld de naam van een medewerker of een afdeling.</FormFieldDescription>
+                <Textbox></Textbox>
+              </FormField>
+
+              <FormField>
+                <FieldsetLegend>Wat is uw klacht?</FieldsetLegend>
+                {/* <FormFieldDescription></FormFieldDescription> */}
+                {/* Deze staat er in het ontwerp niet bij, is die niet nodig? 
+                Wellicht een hint voor de gebruiker: omschrijf uw klacht in maximaal 140 karakters */}
+                <Textarea></Textarea>
+              </FormField>
+
+              <FormField>
+                <FieldsetLegend>Wanneer gebeurde dit?</FieldsetLegend>
+                <FormFieldDescription>Geef de datum(s) door waarover uw klacht gaat.</FormFieldDescription>
+                <Textarea></Textarea>
+              </FormField>
+
+              <FormField>
+                <FieldsetLegend>Hoe laat?</FieldsetLegend>
+                <FormFieldDescription>Geef het tijdstip(en) door waarover uw klacht gaat.</FormFieldDescription>
+                <Textarea></Textarea>
+              </FormField>
+
+              <FormField>
+                <FieldsetLegend>Wat wilt u dat wij doen om uw klacht op te lossen?</FieldsetLegend>
+                {/* <FormFieldDescription></FormFieldDescription> */}
+                {/* Deze staat er in het ontwerp niet bij, is die niet nodig? 
+                Wellicht een hint voor de gebruiker: omschrijf de gewenste oplossing in maximaal 140 karakters */}
+                <Textarea></Textarea>
+              </FormField>
+            </Fieldset>
           </form>
+          <Button>
+            Volgende stap
+            <IconChevronRight />
+          </Button>
+
+          <Link>
+            <IconChevronRight /> Opslaan en later verder
+          </Link>
+
+          <Link>
+            <IconX />
+            Stoppen met het formulier
+          </Link>
+
+          <Link>
+            <IconChevronUp /> Naar boven
+          </Link>
+
+          <Heading2>Voortgang</Heading2>
+          <UnorderedList>
+            <UnorderedListItem>Uw klacht</UnorderedListItem>
+            {/* deze moet dikgedrukt worden (als hint voor gebruiker op welke stap deze zich bevindt) */}
+            <UnorderedListItem>Uw gegevens</UnorderedListItem>
+            <UnorderedListItem>Bijlage toevoegen</UnorderedListItem>
+            <UnorderedListItem>Overzicht</UnorderedListItem>
+          </UnorderedList>
         </Article>
       </PageContent>
       <ExampleFooter />
