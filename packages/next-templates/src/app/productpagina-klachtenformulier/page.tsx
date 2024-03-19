@@ -1,9 +1,5 @@
 'use client';
 
-//importeert WEB COMPONENTS uit Utrecht library
-// } from '@utrecht/web-component-library-react';
-
-//importeert COMPONENTS uit Utrecht library
 import {
   Article,
   BreadcrumbNav,
@@ -12,6 +8,7 @@ import {
   ButtonGroup,
   Heading1,
   Heading2,
+  Link,
   Paragraph,
   Page,
   PageContent,
@@ -20,16 +17,17 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react';
 
-//importeert LOKALE components (?)
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { IconChevronRight } from '@tabler/icons-react';
+import { IconChevronRight, IconChevronUp } from '@tabler/icons-react';
 
-import '@utrecht/design-tokens/dist/index.css'; //importeert ?
+import '@utrecht/design-tokens/dist/index.css';
 import '@/app/styling/css/productpagina-klachtenformulier.css';
+import '@/app/styling/css/wmebv.css';
+import '@/app/styling/css/detail-page.css';
 
-import { useEffect } from 'react'; //importeert react functie maar wat is het precies?
+import { useEffect } from 'react';
 
 export default function home() {
   const pageTitle = 'Klacht over de gemeente doorgeven';
@@ -76,7 +74,7 @@ export default function home() {
             <UnorderedListItem>Het krijgen van te weinig of onjuiste informatie.</UnorderedListItem>
             <UnorderedListItem>Het niet reageren op vragen.</UnorderedListItem>
             <UnorderedListItem>
-              {/* uw privacy = link? (niet in Figma, wel op Utrecht website) */}
+              {/* uw privacy = link? (not in Figma design but it is on Utrecht website) */}
               Het niet juist omgaan met uw privacy. Bijvoorbeeld het zonder uw toestemming doorgeven van uw medische
               gegevens.
             </UnorderedListItem>
@@ -86,7 +84,7 @@ export default function home() {
           </ButtonLink>
           <Heading2>Geen klacht maar wel bezwaar maken?</Heading2>
           <Paragraph>Bent u het niet eens met een beslissing? Maak dan bezwaar.</Paragraph>
-          {/* bezwaar = link? (niet in Figma, wel op Utrecht website) */}
+          {/* bezwaar = link? (not in Figma design but it is on Utrecht website) */}
           <Heading2>Waarover kunt u geen klacht doorgeven?</Heading2>
           <UnorderedList>
             <UnorderedListItem>Over iets wat meer dan 1 jaar geleden gebeurde.</UnorderedListItem>
@@ -117,7 +115,6 @@ export default function home() {
           <UnorderedList>
             <UnorderedListItem>Telefonisch: via 00 000.</UnorderedListItem>
             <UnorderedListItem>
-              {/* styling: hier moet een flex oid opkomen: in ontwerp is 6 regels onder elkaar */}
               Schriftelijk: stuur een brief naar Gemeente Voorbeeld Klachtenbehandeling Antwoordnummer 00000 0000 AB
               Voorbeeld Stad (geen postzegel nodig)
             </UnorderedListItem>
@@ -127,18 +124,22 @@ export default function home() {
             Bent u niet tevreden over de manier waarop uw klacht is opgelost? Neem dan contact op met de Nationale
             ombudsman.
           </Paragraph>
-          <Heading2>Klachtenrapportage</Heading2> {/* is deze section relevant voor GV? */}
+          <Heading2>Klachtenrapportage</Heading2> {/* is this section relevant for GV? */}
           <Paragraph>
-            {/* klachtenrapportage t/m raadsbrief = link? (niet in Figma, wel op Utrecht website) */}
+            {/* klachtenrapportage - raadsbrief = link? (not in Figma design but it is on Utrecht website) */}
             Meer weten over de klachtenafhandeling in 2021? Lees dan de Klachtenrapportage 2021 en de raadsbrief.
           </Paragraph>
-          {/* in Figma staat deze section in = <UtrechtPreFooterNavLink> deze is niet importeerbaar vanuit Utrecht Library */}
-          <ButtonLink href="">
+          {/* in Figma this section is in <UtrechtPreFooterNavLink> : cant find this component, does it exist? */}
+          <Link href="#">
             <IconChevronRight></IconChevronRight>
             Wat vindt u van deze pagina
-            {/* is nu een lege link - bestemmingspagina bestaat nog niet */}
-            {/* styling: geen border in Figma */}
-          </ButtonLink>
+            {/* empty link - page doesnt exist yet */}
+          </Link>
+          <Link href="#">
+            {/* naar boven: should smooth scroll to top of page */}
+            <IconChevronUp></IconChevronUp>
+            Naar boven
+          </Link>
         </Article>
       </PageContent>
 
