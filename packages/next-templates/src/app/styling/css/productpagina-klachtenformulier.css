@@ -1,57 +1,31 @@
-/*  ALL COMPONENTS ON PRODUCT PAGINA KLACHTEN FORMULIER
-- Article
-- BreadcrumbNav
-- BreadcrumbNavLink
-- ButtonLink
-- ButtonGroup
-- Heading1
-- Heading2
-- Paragraph
-- Page
-- PageContent
-- SpotlightSection
-- UnorderedList
-- UnorderedListItem
+/* ----- COMPONENT STYLING ----- */
 
-- ExampleHeader
-- ExampleNavigation
-- ExampleFooter
-
-- IconChevronRight
-
-
+/*  ALL COMPONENTS @ product pagina klachtenformulier 
+/*  Article, BreadcrumbNav, BreadcrumbNavLink, ButtonLink, ButtonGroup, Heading1, 
+/*    Heading2, Link, Paragraph, Page, PageContent, SpotlightSection, UnorderedList, 
+/*    UnorderedListItem, ExampleHeader, ExampleNavigation, ExampleFooter, IconChevronRight,
+/*   IconChevronUp
  */
 
-/* COMPONENTS THAT HAVE (SOME) STYLING IN globals.css  
-- PageContent
-- Paragraph
-- UnorderedList
-
-- ExampleHeader 
-- ExampleFooter
-
-- ChevronRight
+/* GET STYLING FROM globals.css 
+/* PageContent, Paragraph, UnorderedList, ExampleHeader, ExampleFooter,
+/* IconChevronRight, IconChevronUp
 */
-
-/* COMPONENTS THAT NEED ADDITIONAL STYLING IN globals.css 
--
--
--
+/* NEED (ADDITIONAL) STYLING IN globals.css */
+/* NEED STYLING REMOVED/CHANGES IN globals.css */
+/* GET STYLING FROM page.module.css */
+/* GET STYLING FROM detail-page.css 
+/* SpotlightSection 
 */
+/* GET STYLING FROM SOMEWHERE ELSE (+ FROM WHERE) */
+/* NEED STYLING IN productpagina-klachtenformulier.css */
 
-/* COMPONENTS THAT NEED STYLING REMOVED/CHANGES IN globals.css 
--
--
--
-*/
+/* ----- STYLING TO-DO'S ----- */
 
-/* COMPONENTS THAT NEED STYLING IN productpagina-klachtenformulier.css 
--
--
--
-*/
+/* UNORDERED LIST */
+/* Klacht schriftelijk of telefonisch doorgeven: needs flex? is 6 rows in Figma */
 
-/*  COMPONENTS THAT GET STYLING FROM SOMEWHERE ELSE (+ FROM WHERE)
--
--
- */
+/* LINK */
+/* text + icon inline */
+
+/* naar boven: on the bottom right of the page */
