@@ -20,7 +20,7 @@ import {
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { IconChevronRight, IconChevronUp } from '@tabler/icons-react';
+import { IconChevronLeft, IconChevronRight, IconChevronUp } from '@tabler/icons-react';
 
 import '@utrecht/design-tokens/dist/index.css';
 import '@/app/styling/css/productpagina-klachtenformulier.css';
@@ -43,12 +43,18 @@ export default function home() {
     <Page>
       <ExampleHeader />
       <ExampleNavigation />
+      <BreadcrumbNav label="Kruimelpad">
+        <BreadcrumbNavLink href="/" index={0} rel="home" className="breadcrumNav-link">
+          Home
+          <IconChevronRight />
+        </BreadcrumbNavLink>
+        <BreadcrumbNavLink href="/wmebv#" index={1} rel="contact">
+          Contact
+        </BreadcrumbNavLink>
+      </BreadcrumbNav>
 
       <PageContent className="voorbeeld-page-content-flex">
-        <Article id="main" className="voorbeeld-article-space ">
-          <BreadcrumbNav label="Kruimelpad">
-            <BreadcrumbNavLink href="/wmebv#">Terug</BreadcrumbNavLink>
-          </BreadcrumbNav>
+        <Article id="main" className="voorbeeld-article-space">
           <Heading1>{pageTitle}</Heading1>
           <Paragraph lead>
             Vindt u dat u niet netjes bent behandeld door een ambtenaar of bestuurder? U kunt dan online een klacht
