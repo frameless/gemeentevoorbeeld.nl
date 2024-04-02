@@ -39,4 +39,10 @@ export default function Home() {
     watch,
     formState: { errors },
   } = useForm<{ [key: string]: string }>();
+
+  return (
+    <Page>
+      <PageContent></PageContent>
+    </Page>
+  );
 }
