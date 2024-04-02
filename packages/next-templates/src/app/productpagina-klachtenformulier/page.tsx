@@ -130,8 +130,15 @@ export default function home() {
           <UnorderedList>
             <UnorderedListItem>Telefonisch: via 00 000.</UnorderedListItem>
             <UnorderedListItem>
-              Schriftelijk: stuur een brief naar Gemeente Voorbeeld Klachtenbehandeling Antwoordnummer 00000 0000 AB
-              Voorbeeld Stad (geen postzegel nodig)
+              <span className="unordered-list-item-schriftelijk">
+                <span>Schriftelijk: stuur een brief naar</span>
+                <span>Gemeente Voorbeeld </span>
+                <span>Klachtenbehandeling</span>
+                <span>Antwoordnummer 00000</span>
+                <span>0000 AB</span>
+                <span>Voorbeeld Stad</span>
+                <span>(geen postzegel nodig)</span>
+              </span>
             </UnorderedListItem>
           </UnorderedList>
           <Heading2>Niet eens met de uitspraak?</Heading2>
