@@ -59,3 +59,9 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none; */
+
+.pre-footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
