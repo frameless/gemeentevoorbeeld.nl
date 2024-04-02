@@ -4,6 +4,7 @@ import {
   Article,
   BreadcrumbNav,
   BreadcrumbNavLink,
+  BreadcrumbNavSeparator,
   ButtonLink,
   ButtonGroup,
   Heading1,
@@ -20,7 +21,8 @@ import {
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { IconChevronLeft, IconChevronRight, IconChevronUp } from '@tabler/icons-react';
+import { IconChevronRight, IconChevronUp } from '@tabler/icons-react';
+import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 
 import '@utrecht/design-tokens/dist/index.css';
 import '@/app/styling/css/productpagina-klachtenformulier.css';
@@ -43,13 +45,21 @@ export default function home() {
     <Page>
       <ExampleHeader />
       <ExampleNavigation />
-      <BreadcrumbNav label="Kruimelpad">
+      <BreadcrumbNav label="Kruimelpad" className="utrecht-breadcrumb-nav__list">
         <BreadcrumbNavLink href="/" index={0} rel="home" className="breadcrumNav-link">
           Home
-          <IconChevronRight />
         </BreadcrumbNavLink>
+        <BreadcrumbNavSeparator className="utrecht-breadcrumb-nav__separator" />
+        <IconChevronRight className="voorbeeld-chevron-right-space" />
+        <BreadcrumbNavSeparator />
         <BreadcrumbNavLink href="/wmebv#" index={1} rel="contact">
           Contact
+        </BreadcrumbNavLink>
+        <BreadcrumbNavSeparator />
+        <IconChevronRight className="voorbeeld-chevron-right-space" />
+        <BreadcrumbNavSeparator />
+        <BreadcrumbNavLink href="" index={2} rel="up">
+          Producten
         </BreadcrumbNavLink>
       </BreadcrumbNav>
 
@@ -137,12 +147,11 @@ export default function home() {
           </Paragraph>
           {/* in Figma this section is in <UtrechtPreFooterNavLink> : cant find this component, does it exist? */}
           <Link href="#">
+            {/* empty link - page doesnt exist yet */}
             <IconChevronRight></IconChevronRight>
             Wat vindt u van deze pagina
-            {/* empty link - page doesnt exist yet */}
           </Link>
           <Link href="#">
-            {/* naar boven: should smooth scroll to top of page */}
             <IconChevronUp></IconChevronUp>
             Naar boven
           </Link>
