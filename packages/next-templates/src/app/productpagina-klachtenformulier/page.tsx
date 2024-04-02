@@ -79,7 +79,7 @@ export default function home() {
             </Paragraph>
             <Paragraph>U laat ons via een melding weten wat er aan de hand is en op welke plek dit is.</Paragraph>
             <ButtonGroup>
-              <ButtonLink href="/meldingen">
+              <ButtonLink href="/meldingen" appearance="secondary-action-button">
                 Doe een melding<IconChevronRight></IconChevronRight>
               </ButtonLink>
             </ButtonGroup>
@@ -95,7 +95,7 @@ export default function home() {
               gegevens.
             </UnorderedListItem>
           </UnorderedList>
-          <ButtonLink href="/productenpagina-klachtenformulier/step-1">
+          <ButtonLink href="/productenpagina-klachtenformulier/step-1" appearance="primary-action-button">
             Ga naar het klachtenformulier<IconChevronRight></IconChevronRight>
           </ButtonLink>
           <Heading2>Geen klacht maar wel bezwaar maken?</Heading2>
@@ -143,8 +143,8 @@ export default function home() {
           <Paragraph>
             Meer weten over de klachtenafhandeling in 2021? Lees dan de Klachtenrapportage en de raadsbrief.
           </Paragraph>
-          {/* in Figma this section is in <UtrechtPreFooterNavLink> : cant find this component, does it exist? */}
         </Article>
+        {/* in Figma this section is in <UtrechtPreFooterNavLink> : cant find this component, does it exist? */}
         <span className="pre-footer-container">
           <Link href="#">
             {/* empty link - page doesnt exist yet */}
