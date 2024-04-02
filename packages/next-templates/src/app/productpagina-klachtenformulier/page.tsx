@@ -26,7 +26,7 @@ import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 
 import '@utrecht/design-tokens/dist/index.css';
 import '@/app/styling/css/productpagina-klachtenformulier.css';
-import '@/app/styling/css/wmebv.css';
+// import '@/app/styling/css/wmebv.css';
 import '@/app/styling/css/detail-page.css';
 
 import { useEffect } from 'react';
@@ -100,7 +100,6 @@ export default function home() {
           </ButtonLink>
           <Heading2>Geen klacht maar wel bezwaar maken?</Heading2>
           <Paragraph>Bent u het niet eens met een beslissing? Maak dan bezwaar.</Paragraph>
-          {/* bezwaar = link? (not in Figma design but it is on Utrecht website) */}
           <Heading2>Waarover kunt u geen klacht doorgeven?</Heading2>
           <UnorderedList>
             <UnorderedListItem>Over iets wat meer dan 1 jaar geleden gebeurde.</UnorderedListItem>
@@ -140,22 +139,23 @@ export default function home() {
             Bent u niet tevreden over de manier waarop uw klacht is opgelost? Neem dan contact op met de Nationale
             ombudsman.
           </Paragraph>
-          <Heading2>Klachtenrapportage</Heading2> {/* is this section relevant for GV? */}
+          <Heading2>Klachtenrapportage</Heading2>
           <Paragraph>
-            {/* klachtenrapportage - raadsbrief = link? (not in Figma design but it is on Utrecht website) */}
-            Meer weten over de klachtenafhandeling in 2021? Lees dan de Klachtenrapportage 2021 en de raadsbrief.
+            Meer weten over de klachtenafhandeling in 2021? Lees dan de Klachtenrapportage en de raadsbrief.
           </Paragraph>
           {/* in Figma this section is in <UtrechtPreFooterNavLink> : cant find this component, does it exist? */}
+        </Article>
+        <span className="pre-footer-container">
           <Link href="#">
             {/* empty link - page doesnt exist yet */}
-            <IconChevronRight></IconChevronRight>
+            <IconChevronRight />
             Wat vindt u van deze pagina
           </Link>
           <Link href="#">
-            <IconChevronUp></IconChevronUp>
             Naar boven
+            <IconChevronUp />
           </Link>
-        </Article>
+        </span>
       </PageContent>
 
       <ExampleFooter />
