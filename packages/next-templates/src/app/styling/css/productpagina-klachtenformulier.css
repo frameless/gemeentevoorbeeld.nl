@@ -34,4 +34,28 @@
 /* LINK */
 /* text + icon inline */
 
-/* naar boven: on the bottom right of the page */
+/* naar boven link: on the bottom right of the page */
+/* naar boven link: should smooth scroll to top of page */
+
+/* .utrecht-breadcrumb-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  min-block-size: var(--utrecht-breadcrumb-nav-min-block-size);
+}
+
+.voorbeeld.-chevron-right-space {
+  margin-inline-start: var(--voorbeeld-space-inline-beetle);
+}
+
+.utrecht-breadcrumb-nav__separator, .utrecht-breadcrumb-nav__separator--html-li {
+    --_utrecht-breadcrumb-nav-separator-display: inline-flex;
+    --utrecht-icon-size: var(--utrecht-breadcrumb-nav-separator-icon-size);
+    align-items: center;
+    color: var(--utrecht-breadcrumb-nav-separator-color);
+    cursor: var(--utrecht-action-inert-cursor, default);
+    display: var(--_utrecht-breadcrumb-nav-separator-display);
+    inline-size: -moz-fit-content;
+    inline-size: fit-content;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none; */
