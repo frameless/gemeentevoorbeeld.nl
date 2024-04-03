@@ -43,7 +43,7 @@
   min-block-size: var(--utrecht-breadcrumb-nav-min-block-size);
 }
 
-.voorbeeld.-chevron-right-space {
+.voorbeeld-chevron-right-space {
   margin-inline-start: var(--voorbeeld-space-inline-beetle);
 }
 
@@ -60,13 +60,8 @@
     -moz-user-select: none;
     user-select: none; */
 
-.pre-footer-container {
+.voorbeeld-pre-footer {
   display: flex;
   justify-content: space-between;
   padding: 2em;
-}
-
-.unordered-list-item-schriftelijk {
-  display: flex;
-  flex-direction: column;
 }
