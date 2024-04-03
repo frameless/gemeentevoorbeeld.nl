@@ -59,9 +59,3 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none; */
-
-.voorbeeld-pre-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 2em;
-}
