@@ -22,11 +22,9 @@ import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { IconChevronRight, IconChevronUp } from '@tabler/icons-react';
-import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 
 import '@utrecht/design-tokens/dist/index.css';
 import '@/app/styling/css/productpagina-klachtenformulier.css';
-// import '@/app/styling/css/wmebv.css';
 import '@/app/styling/css/detail-page.css';
 
 import { useEffect } from 'react';
@@ -45,7 +43,7 @@ export default function home() {
     <Page>
       <ExampleHeader />
       <ExampleNavigation />
-      <BreadcrumbNav label="Kruimelpad" className="utrecht-breadcrumb-nav__list">
+      <BreadcrumbNav label="Kruimelpad">
         <BreadcrumbNavLink href="/" index={0} rel="home" className="breadcrumNav-link">
           Home
         </BreadcrumbNavLink>
@@ -80,7 +78,8 @@ export default function home() {
             <Paragraph>U laat ons via een melding weten wat er aan de hand is en op welke plek dit is.</Paragraph>
             <ButtonGroup>
               <ButtonLink href="/meldingen" appearance="secondary-action-button">
-                Doe een melding<IconChevronRight></IconChevronRight>
+                Doe een melding
+                <IconChevronRight />
               </ButtonLink>
             </ButtonGroup>
           </SpotlightSection>
@@ -90,16 +89,18 @@ export default function home() {
             <UnorderedListItem>Het krijgen van te weinig of onjuiste informatie.</UnorderedListItem>
             <UnorderedListItem>Het niet reageren op vragen.</UnorderedListItem>
             <UnorderedListItem>
-              {/* uw privacy = link? (not in Figma design but it is on Utrecht website) */}
-              Het niet juist omgaan met uw privacy. Bijvoorbeeld het zonder uw toestemming doorgeven van uw medische
-              gegevens.
+              Het niet juist omgaan met <Link href="">uw privacy</Link>. Bijvoorbeeld het zonder uw toestemming
+              doorgeven van uw medische gegevens.
             </UnorderedListItem>
           </UnorderedList>
           <ButtonLink href="/productenpagina-klachtenformulier/step-1" appearance="primary-action-button">
-            Ga naar het klachtenformulier<IconChevronRight></IconChevronRight>
+            Ga naar het klachtenformulier
+            <IconChevronRight />
           </ButtonLink>
           <Heading2>Geen klacht maar wel bezwaar maken?</Heading2>
-          <Paragraph>Bent u het niet eens met een beslissing? Maak dan bezwaar.</Paragraph>
+          <Paragraph>
+            Bent u het niet eens met een beslissing? <Link href="">Maak dan bezwaar</Link>.
+          </Paragraph>
           <Heading2>Waarover kunt u geen klacht doorgeven?</Heading2>
           <UnorderedList>
             <UnorderedListItem>Over iets wat meer dan 1 jaar geleden gebeurde.</UnorderedListItem>
@@ -130,15 +131,17 @@ export default function home() {
           <UnorderedList>
             <UnorderedListItem>Telefonisch: via 00 000.</UnorderedListItem>
             <UnorderedListItem>
-              <span className="unordered-list-item-schriftelijk">
-                <span>Schriftelijk: stuur een brief naar</span>
-                <span>Gemeente Voorbeeld </span>
-                <span>Klachtenbehandeling</span>
-                <span>Antwoordnummer 00000</span>
-                <span>0000 AB</span>
-                <span>Voorbeeld Stad</span>
-                <span>(geen postzegel nodig)</span>
-              </span>
+              <Paragraph>
+                Schriftelijk: stuur een brief naar (geen postzegel nodig):
+                <br />
+                Gemeente Voorbeeld
+                <br />
+                Klachtenbehandeling
+                <br />
+                Antwoordnummer 00000
+                <br />
+                Voorbeeld Stad
+              </Paragraph>
             </UnorderedListItem>
           </UnorderedList>
           <Heading2>Niet eens met de uitspraak?</Heading2>
@@ -148,11 +151,12 @@ export default function home() {
           </Paragraph>
           <Heading2>Klachtenrapportage</Heading2>
           <Paragraph>
-            Meer weten over de klachtenafhandeling in 2021? Lees dan de Klachtenrapportage en de raadsbrief.
+            Meer weten over de klachtenafhandeling in 2021? Lees dan de{' '}
+            <Link href="">Klachtenrapportage en de raadsbrief</Link>.
           </Paragraph>
         </Article>
-        {/* in Figma this section is in <UtrechtPreFooterNavLink> : cant find this component, does it exist? */}
-        <span className="pre-footer-container">
+
+        <div className="voorbeeld-pre-footer">
           <Link href="#">
             {/* empty link - page doesnt exist yet */}
             <IconChevronRight />
@@ -162,7 +166,7 @@ export default function home() {
             Naar boven
             <IconChevronUp />
           </Link>
-        </span>
+        </div>
       </PageContent>
 
       <ExampleFooter />
