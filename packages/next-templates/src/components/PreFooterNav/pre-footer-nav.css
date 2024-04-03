@@ -3,3 +3,16 @@
   justify-content: space-between;
   padding: 2em;
 }
+
+@media screen and (max-width: 600px) {
+  .voorbeeld-pre-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .voorbeeld-pre-footer-link:nth-of-type(2) {
+    padding-block: 2em;
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+}
