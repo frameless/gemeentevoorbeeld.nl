@@ -21,7 +21,8 @@ import {
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { IconChevronRight, IconChevronUp } from '@tabler/icons-react';
+import { PreFooterNav } from '@/components/PreFooterNav/PreFooterNav';
+import { IconChevronRight } from '@tabler/icons-react';
 
 import '@utrecht/design-tokens/dist/index.css';
 import '@/app/styling/css/productpagina-klachtenformulier.css';
@@ -156,17 +157,7 @@ export default function home() {
           </Paragraph>
         </Article>
 
-        <div className="voorbeeld-pre-footer">
-          <Link href="#">
-            {/* empty link - page doesnt exist yet */}
-            <IconChevronRight />
-            Wat vindt u van deze pagina
-          </Link>
-          <Link href="#">
-            Naar boven
-            <IconChevronUp />
-          </Link>
-        </div>
+        <PreFooterNav />
       </PageContent>
 
       <ExampleFooter />
