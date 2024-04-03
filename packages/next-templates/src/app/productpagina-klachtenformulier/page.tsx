@@ -62,7 +62,7 @@ export default function home() {
         </BreadcrumbNavLink>
       </BreadcrumbNav>
 
-      <PageContent className="voorbeeld-page-content-flex">
+      <PageContent>
         <Article id="main" className="voorbeeld-article-space">
           <Heading1>{pageTitle}</Heading1>
           <Paragraph lead>
@@ -156,10 +156,8 @@ export default function home() {
             <Link href="">Klachtenrapportage en de raadsbrief</Link>.
           </Paragraph>
         </Article>
-
         <PreFooterNav />
       </PageContent>
-
       <ExampleFooter />
     </Page>
   );
