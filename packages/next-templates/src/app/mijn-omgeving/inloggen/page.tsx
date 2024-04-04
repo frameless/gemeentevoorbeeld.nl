@@ -49,7 +49,6 @@ export default function home() {
                 Terug
               </Link>
             </ButtonGroup>
-            {/* <Heading1>Vraag aan de gemeente</Heading1> */}
             <Heading1>Inloggen</Heading1>
             <Paragraph className="paragraph_digid">
               Dankzij uw DigiD kunt u overal makkelijk en veilig inloggen. Uw persoonlijke gegevens blijven goed
@@ -96,8 +95,7 @@ export default function home() {
             <ButtonGroup>
               <Button type="submit" appearance="primary-action-button">
                 Doorgaan
-              </Button>{' '}
-              {/* Why does this button send me to the next step in wmebv and not in mijn-omgeving? */}
+              </Button>
             </ButtonGroup>
           </form>
         </Article>
