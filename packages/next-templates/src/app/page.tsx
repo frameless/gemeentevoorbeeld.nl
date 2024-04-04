@@ -199,12 +199,12 @@ export default function Home() {
         </section>
         <section className="voorbeeld-section">
           <div className="voorbeeld-section-content">
-            <ButtonGroup className="voorbeeld-button-group">
+            <div className="voorbeeld-container-group">
               <Heading2 className="voorbeeld-heading-2">Nieuws en inzichten</Heading2>
               <Button className="voorbeeld-button-more" appearance="primary-action-button">
                 Meer nieuws
               </Button>
-            </ButtonGroup>
+            </div>
             <ul className="voorbeeld-unordered-list-cards">
               <li>
                 <Link className="voorbeeld-link-card" href="#">
