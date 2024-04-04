@@ -182,154 +182,6 @@ utrecht-alert
   margin-block: var(--voorbeeld-space-block-snail);
 }
 
-.voorbeeld-chevron-right-space {
-  margin-inline-start: var(--voorbeeld-space-inline-beetle);
-}
-
-.voorbeeld-page--flex {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.voorbeeld-accordion__section:nth-child(1) .voorbeeld-paragraph {
-  inline-size: 65%;
-}
-
-.voorbeeld-accordion__section:nth-child(1) .voorbeeld-link-list {
-  inline-size: 30%;
-}
-
-.voorbeeld-accordion__section:nth-child(2) .voorbeeld-link-list {
-  inline-size: 100%;
-}
-
-.voorbeeld-article-space {
-  align-self: center;
-}
-
-.voorbeeld-accordion__section .utrecht-accordion__button {
-  --utrecht-button-min-inline-size: 100%;
-  --utrecht-button-border-radius: 0px;
-  border-bottom: 1px solid var(--voorbeeld-color-gray-200);
-}
-
-.voorbeeld-accordion__section .utrecht-accordion__header {
-  block-size: calc(var(--utrecht-button-min-block-size) + 3px);
-}
-
-.voorbeeld-section-content {
-  margin-inline: auto;
-  padding-inline: var(--voorbeeld-space-block-cat);
-  max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.2);
-  inline-size: 100%;
-  box-sizing: border-box;
-}
-
-.voorbeeld-toptask-layout {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--voorbeeld-space-block-rabbit);
-  --utrecht-heading-3-margin-block-start: -5px;
-  --utrecht-heading-3-margin-block-end: var(--voorbeeld-space-block-rat);
-}
-
-.voorbeeld-paragraph--opening-times {
-  --utrecht-paragraph-font-size: var(--voorbeeld-typography-font-size-lg);
-}
-
-.utrecht-paragraph {
-  max-width: 80ch;
-}
-
-.voorbeeld-paragraph--spacing {
-  margin-block-start: var(--voorbeeld-space-block-beetle);
-}
-
-.utrecht-unordered-list {
-  max-width: 80ch;
-}
-
-.utrecht-form-field-description {
-  max-width: 80ch;
-}
-
-.voorbeeld-section:nth-of-type(2) {
-  background-color: var(--voorbeeld-color-gray-200);
-  padding-block: var(--voorbeeld-space-block-cat);
-}
-
-.voorbeeld-accordion {
-  --utrecht-link-list-item-column-gap: var(--voorbeeld-space-column-beetle);
-}
-
-.voorbeeld-accordion__section .utrecht-accordion__button[aria-expanded="true"]::after,
-.voorbeeld-accordion__section .utrecht-accordion__button[aria-expanded="false"]::after {
-  display: none;
-}
-
-.voorbeeld-accordion__section .utrecht-accordion__button[aria-expanded="true"]::before {
-  /* stylelint-disable declaration-no-important */
-  content: "";
-  inline-size: 28px;
-  block-size: 24px;
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.7071 15.7071C18.3166 16.0976 17.6834 16.0976 17.2929 15.7071L12 10.4142L6.70711 15.7071C6.31658 16.0976 5.68342 16.0976 5.29289 15.7071C4.90237 15.3166 4.90237 14.6834 5.29289 14.2929L11.2929 8.29289C11.6834 7.90237 12.3166 7.90237 12.7071 8.29289L18.7071 14.2929C19.0976 14.6834 19.0976 15.3166 18.7071 15.7071Z' fill='%233F10BC'/%3E%3C/svg%3E%0A") !important;
-}
-
-.voorbeeld-accordion__section .utrecht-accordion__button[aria-expanded="false"]::before {
-  content: "";
-  inline-size: var(--voorbeeld-space-inline-cat);
-  block-size: var(--voorbeeld-space-block-rabbit);
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z' fill='%233F10BC'/%3E%3C/svg%3E%0A") !important;
-}
-
-.voorbeeld-accordion__section:nth-child(1) .voorbeeld-accordion__container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.voorbeeld-accordion__section .utrecht-accordion__panel--expanded {
-  --utrecht-accordion-panel-border-width: 0;
-  --utrecht-accordion-panel-padding-block-start: var(--voorbeeld-space-block-mouse);
-  --utrecht-accordion-panel-padding-block-end: var(--voorbeeld-space-block-mouse);
-  --utrecht-accordion-panel-padding-inline-start: var(--voorbeeld-space-inline-mouse);
-  --utrecht-accordion-panel-padding-inline-end: var(--voorbeeld-space-inline-mouse);
-  background-color: var(--utrecht-accordion-button-background-color);
-  margin-block-end: 1px;
-  --utrecht-accordion-panel-padding-inline-start: var(--voorbeeld-space-inline-pig);
-  --utrecht-accordion-panel-padding-inline-end: var(--voorbeeld-space-inline-pig);
-}
-
-.voorbeeld-theme .utrecht-page-content {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  inline-size: 100%;
-  padding-inline: 0;
-  --utrecht-page-content-padding-block-end: 0;
-}
-
-.voorbeeld-section {
-  display: flex;
-  flex-direction: column;
-  inline-size: 100%;
-}
-
-.voorbeeld-section-container-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.voorbeeld-container-group {
-  display: flex;
-  justify-content: space-between;
-  inline-size: 100%;
-}
-
-.voorbeeld-form-label {
-  display: block;
-}
-
 .voorbeeld-link-back {
   display: flex;
   gap: var(--voorbeeld-space-inline-snail);
@@ -337,6 +189,10 @@ utrecht-alert
 
 .voorbeeld-link-back > svg {
   align-self: center;
+}
+
+.voorbeeld-form-label {
+  display: block;
 }
 
 .voorbeeld-textarea,
@@ -355,18 +211,6 @@ utrecht-alert
   display: flex;
   align-items: baseline;
   gap: var(--voorbeeld-space-inline-mouse);
-}
-
-.voorbeeld-button-spacing {
-  margin-block-start: var(--voorbeeld-space-row-cat);
-}
-
-.voorbeeld-section--spacing {
-  margin-block-start: var(--voorbeeld-space-row-horse);
-}
-
-.voorbeeld-section--spacing:last-of-type {
-  margin-block-end: var(--voorbeeld-space-row-cat);
 }
 
 utrecht-page-content {
@@ -453,6 +297,7 @@ utrecht-data-list {
 }
 
 .sr-only {
+  /* stylelint-disable declaration-no-important */
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
   -webkit-clip-path: inset(50%) !important;
