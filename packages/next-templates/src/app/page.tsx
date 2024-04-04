@@ -12,6 +12,7 @@ import {
   Page,
   PageContent,
 } from '@utrecht/component-library-react';
+import '@/app/styling/css/homepage.css';
 import { TopTaskLink } from '@/components/TopTask/TopTaskLink';
 import { TopTaskNavigation } from '@/components/TopTask/TopTaskNavigation';
 import { TopTaskCard } from '@/components/TopTask/TopTaskCard';
