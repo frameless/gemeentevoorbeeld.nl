@@ -15,7 +15,7 @@ import {
 import { UtrechtDigidLogo } from '@utrecht/web-component-library-react';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { Fieldset, FieldsetLegend, FormField, FormLabel, RadioButton } from '@utrecht/component-library-react';
-import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
+
 import { IconArrowLeft } from '@tabler/icons-react';
 import '@/app/styling/css/wmebv.css';
 import '@/app/styling/css/detail-page.css';
