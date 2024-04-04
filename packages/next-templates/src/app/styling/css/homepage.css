@@ -139,6 +139,26 @@
   margin-inline: auto;
 }
 
+.voorbeeld-unordered-list-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: var(--voorbeeld-space-row-rat);
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.voorbeeld-container-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  outline: 0.15em solid var(--voorbeeld-color-gray-200);
+  padding: var(--voorbeeld-space-inline-snail);
+  --utrecht-heading-4-color: var(--voorbeeld-color-gray-800);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  min-block-size: 204px;
+}
+
 .voorbeeld-container-group {
   display: flex;
   justify-content: space-between;
