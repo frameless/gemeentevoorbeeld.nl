@@ -323,6 +323,7 @@ utrecht-alert
 .voorbeeld-container-group {
   display: flex;
   justify-content: space-between;
+  inline-size: 100%;
 }
 
 .voorbeeld-form-label {
