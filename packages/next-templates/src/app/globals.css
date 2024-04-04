@@ -320,6 +320,11 @@ utrecht-alert
   justify-content: space-between;
 }
 
+.voorbeeld-container-group {
+  display: flex;
+  justify-content: space-between;
+}
+
 .voorbeeld-form-label {
   display: block;
 }
