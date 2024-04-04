@@ -388,11 +388,9 @@ utrecht-alert
   margin-inline: auto;
 }
 
-.voorbeeld-button-group {
+.voorbeeld-container-group {
   display: flex;
   justify-content: space-between;
-  --utrecht-button-group-margin-block-start: 0;
-  --utrecht-button-group-margin-block-end: 0;
 }
 
 .voorbeeld-container-info {
