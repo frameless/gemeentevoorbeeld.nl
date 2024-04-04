@@ -13,8 +13,6 @@ import {
   Paragraph,
 } from '@utrecht/component-library-react';
 import { UtrechtDigidLogo } from '@utrecht/web-component-library-react';
-import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
-import { ExampleFooterWmebv } from '@/components/wmebv/Footer/ExampleFooterWmebv';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { Fieldset, FieldsetLegend, FormField, FormLabel, RadioButton } from '@utrecht/component-library-react';
 import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
@@ -23,6 +21,9 @@ import '@/app/styling/css/wmebv.css';
 import '@/app/styling/css/detail-page.css';
 import '@utrecht/design-tokens/dist/index.css';
 import { useEffect } from 'react';
+
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 
 export default function home() {
   const stepLabel = 'Vraag aan de gemeente';
@@ -36,7 +37,7 @@ export default function home() {
 
   return (
     <Page>
-      <ExampleHeaderFunnelWmebv /> {/* use wmebv nav header or standard? */}
+      <ExampleHeader />
       <PageContent>
         <Article id="main" className="voorbeeld-article-space ">
           <form method="POST" action="/api/wmebv/choose-form">
@@ -101,7 +102,7 @@ export default function home() {
           </form>
         </Article>
       </PageContent>
-      <ExampleFooterWmebv />
+      <ExampleFooter />
     </Page>
   );
 }
