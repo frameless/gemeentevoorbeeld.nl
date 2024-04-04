@@ -49,8 +49,8 @@ export default function home() {
                 Terug
               </Link>
             </ButtonGroup>
-            <Heading1>Vraag aan de gemeente</Heading1>
-            <Heading2>Inloggen</Heading2>
+            {/* <Heading1>Vraag aan de gemeente</Heading1> */}
+            <Heading1>Inloggen</Heading1>
             <Paragraph className="paragraph_digid">
               Dankzij uw DigiD kunt u overal makkelijk en veilig inloggen. Uw persoonlijke gegevens blijven goed
               beschermd. Wanneer u inlogt worden uw persoonlijke gegevens automatisch ingevuld.
