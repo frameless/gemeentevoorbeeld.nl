@@ -26,7 +26,7 @@ import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 
 export default function home() {
-  const stepLabel = 'Vraag aan de gemeente';
+  const stepLabel = 'Inloggen mijn omgeving';
   const websiteLabel = 'gemeente Voorbeeld';
 
   useEffect(() => {
