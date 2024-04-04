@@ -41,8 +41,40 @@ export default function Home() {
   } = useForm<{ [key: string]: string }>();
 
   return (
-    <Page>
-      <PageContent></PageContent>
-    </Page>
+    <Document>
+      <Page>
+        <ExampleHeader />
+        <ExampleNavigation />
+
+        <PageContent>
+          <BreadcrumbNav label="Kruimelpad">
+            <BreadcrumbNavLink href="" index={0} rel="home">
+              Home
+            </BreadcrumbNavLink>
+            <BreadcrumbNavSeparator>
+              <IconChevronRight className="voorbeeld-chevron-right-space" />
+            </BreadcrumbNavSeparator>
+            <BreadcrumbNavLink href="" index={1}>
+              Mijn Omgeving{' '}
+            </BreadcrumbNavLink>
+          </BreadcrumbNav>
+
+          <Article className="voorbeeld-article-space">
+            <Heading1>Hallo Jeroen van Drouwen</Heading1>
+            <Paragraph>
+              In ‘Mijn omgeving’ kunt u zelf uw persoonlijke zaken regelen wanneer het u uitkomt. U kunt bijvoorbeeld uw
+              rekeningen betalen en zien wanneer uw aanvraag klaar is.
+            </Paragraph>
+
+            <Heading2>Wat moet ik regelen?</Heading2>
+            <Paragraph>U hoeft op dit moment niets te regelen.</Paragraph>
+
+            <Heading2>Mijn zaken</Heading2>
+          </Article>
+        </PageContent>
+
+        <ExampleFooter />
+      </Page>
+    </Document>
   );
 }
