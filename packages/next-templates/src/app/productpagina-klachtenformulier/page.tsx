@@ -69,8 +69,8 @@ export default function home() {
             Vindt u dat u niet netjes bent behandeld door een ambtenaar of bestuurder? U kunt dan online een klacht
             doorgeven. Een klacht handelen wij meestal binnen 6 weken af.
           </Paragraph>
-          <SpotlightSection className="utrecht-spotlight-section, voorbeeld-spotlight-section">
-            <Heading2>Is het een klacht of een melding?</Heading2>
+          <SpotlightSection className="utrecht-spotlight-section">
+            <Heading2 className="voorbeeld-spotlight-section">Is het een klacht of een melding?</Heading2>
             <Paragraph>
               Gaat uw klacht over iets dat kapot is op straat, ziet u vervuiling of merkt u overlast? Doe dan een
               melding. Meldingen gaan bijvoorbeeld over afval, vervuiling, groen, obstakels op de weg, kapotte
