@@ -1,4 +1,4 @@
-import { Link } from '@utrecht/component-library-react';
+import { Link, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
 import { IconChevronRight, IconChevronUp } from '@tabler/icons-react';
 import './pre-footer-nav.css';
 
