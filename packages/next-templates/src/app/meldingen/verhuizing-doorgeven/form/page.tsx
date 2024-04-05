@@ -174,7 +174,7 @@ export default function Home() {
 
             <ButtonGroup>
               <ButtonLink appearance="primary-action-button" href="./confirmed">
-                Afronden <UtrechtIconArrow></UtrechtIconArrow>
+                Afronden <UtrechtIconArrow />
               </ButtonLink>
             </ButtonGroup>
           </Article>
