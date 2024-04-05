@@ -44,19 +44,19 @@ export default function home() {
     <Page>
       <ExampleHeader />
       <ExampleNavigation />
-      <BreadcrumbNav label="Kruimelpad">
-        <BreadcrumbNavLink href="/" index={0} rel="home" className="breadcrumNav-link">
+      <BreadcrumbNav label="Kruimelpad" className="breadcrumb-nav">
+        <BreadcrumbNavLink href="/" index={0} rel="home">
           Home
         </BreadcrumbNavLink>
-        <BreadcrumbNavSeparator className="utrecht-breadcrumb-nav__separator">
-          <IconChevronRight className="voorbeeld-chevron-right-space" />
+        <BreadcrumbNavSeparator>
+          <IconChevronRight className="icon-chevron-right" />
         </BreadcrumbNavSeparator>
         <BreadcrumbNavLink href="/wmebv#" index={1} rel="contact">
           Contact
         </BreadcrumbNavLink>
-        <BreadcrumbNavSeparator />
-        <IconChevronRight className="voorbeeld-chevron-right-space" />
-        <BreadcrumbNavSeparator />
+        <BreadcrumbNavSeparator>
+          <IconChevronRight className="icon-chevron-right" />
+        </BreadcrumbNavSeparator>
         <BreadcrumbNavLink href="/404" index={2} rel="up">
           Producten
         </BreadcrumbNavLink>

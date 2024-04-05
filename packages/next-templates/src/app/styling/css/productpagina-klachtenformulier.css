@@ -1,61 +1,8 @@
-/* ----- COMPONENT STYLING ----- */
-
-/*  ALL COMPONENTS @ product pagina klachtenformulier 
-/*  Article, BreadcrumbNav, BreadcrumbNavLink, ButtonLink, ButtonGroup, Heading1, 
-/*    Heading2, Link, Paragraph, Page, PageContent, SpotlightSection, UnorderedList, 
-/*    UnorderedListItem, ExampleHeader, ExampleNavigation, ExampleFooter, IconChevronRight,
-/*   IconChevronUp
- */
-
-/* GET STYLING FROM globals.css 
-/* PageContent, Paragraph, UnorderedList, ExampleHeader, ExampleFooter,
-/* IconChevronRight, IconChevronUp
-*/
-/* NEED (ADDITIONAL) STYLING IN globals.css */
-/* NEED STYLING REMOVED/CHANGES IN globals.css */
-/* GET STYLING FROM page.module.css */
-/* GET STYLING FROM detail-page.css 
-/* SpotlightSection 
-*/
-/* GET STYLING FROM SOMEWHERE ELSE (+ FROM WHERE) */
-/* NEED STYLING IN productpagina-klachtenformulier.css */
-
-/* ----- STYLING TO-DO'S ----- */
-
 /* BREADCRUMNAV */
-/* flex/fix chevron  */
-
-/* SPOTLIGHTSECTION */ /* styling from detail-page.css */
-/* needs padding top? */
-
-/* UNORDERED LIST */
-/* Klacht schriftelijk of telefonisch doorgeven: needs flex? is 6 rows in Figma */
-
-/* LINK */
-/* text + icon inline */
-
-/* naar boven link: on the bottom right of the page */
-/* naar boven link: should smooth scroll to top of page */
-
-/* .utrecht-breadcrumb-nav__list {
-  display: flex;
-  flex-wrap: wrap;
-  min-block-size: var(--utrecht-breadcrumb-nav-min-block-size);
+.breadcrumb-nav {
+  padding: var(--voorbeeld-space-block-rabbit);
 }
 
-.voorbeeld-chevron-right-space {
-  margin-inline-start: var(--voorbeeld-space-inline-beetle);
+.icon-chevron-right {
+  color: var(--voorbeeld-color-violet-700);
 }
-
-.utrecht-breadcrumb-nav__separator, .utrecht-breadcrumb-nav__separator--html-li {
-    --_utrecht-breadcrumb-nav-separator-display: inline-flex;
-    --utrecht-icon-size: var(--utrecht-breadcrumb-nav-separator-icon-size);
-    align-items: center;
-    color: var(--utrecht-breadcrumb-nav-separator-color);
-    cursor: var(--utrecht-action-inert-cursor, default);
-    display: var(--_utrecht-breadcrumb-nav-separator-display);
-    inline-size: -moz-fit-content;
-    inline-size: fit-content;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none; */
