@@ -275,6 +275,9 @@ importers:
       '@fontsource/source-serif-pro':
         specifier: 5.0.8
         version: 5.0.8
+      '@gemeente-denhaag/sidenav':
+        specifier: 0.1.0-alpha.201
+        version: 0.1.0-alpha.201(react@18.2.0)
       '@next/eslint-plugin-next':
         specifier: 13.5.6
         version: 13.5.6
@@ -8601,7 +8604,21 @@ snapshots:
 
   '@fontsource/source-serif-pro@5.0.8': {}
 
-  '@hookform/error-message@2.0.1': {}
+  /@gemeente-denhaag/sidenav@0.1.0-alpha.201(react@18.2.0):
+    resolution: {integrity: sha512-ttE6U8eO4/TRH3+RwLDRsj41P94GSUEXLUb6W+MPWfIAtcMsrVVtrCYWzn9z0+jRQvDVCAjgtKWX2ZCJehQkWg==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: true
+
+  /@hookform/error-message@2.0.1:
+    resolution: {integrity: sha512-U410sAr92xgxT1idlu9WWOVjndxLdgPUHEB8Schr27C9eh7/xUnITWpCMF93s+lGiG++D4JnbSnrb5A21AdSNg==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      react-hook-form: ^7.0.0
+    dev: false
 
   '@html-validate/stylish@4.1.0':
     dependencies:
