@@ -57,7 +57,7 @@ export default function home() {
         <BreadcrumbNavSeparator />
         <IconChevronRight className="voorbeeld-chevron-right-space" />
         <BreadcrumbNavSeparator />
-        <BreadcrumbNavLink href="" index={2} rel="up">
+        <BreadcrumbNavLink href="/404" index={2} rel="up">
           Producten
         </BreadcrumbNavLink>
       </BreadcrumbNav>
@@ -90,7 +90,7 @@ export default function home() {
             <UnorderedListItem>Het krijgen van te weinig of onjuiste informatie.</UnorderedListItem>
             <UnorderedListItem>Het niet reageren op vragen.</UnorderedListItem>
             <UnorderedListItem>
-              Het niet juist omgaan met <Link href="">uw privacy</Link>. Bijvoorbeeld het zonder uw toestemming
+              Het niet juist omgaan met <Link href="/404">uw privacy</Link>. Bijvoorbeeld het zonder uw toestemming
               doorgeven van uw medische gegevens.
             </UnorderedListItem>
           </UnorderedList>
@@ -100,7 +100,7 @@ export default function home() {
           </ButtonLink>
           <Heading2>Geen klacht maar wel bezwaar maken?</Heading2>
           <Paragraph>
-            Bent u het niet eens met een beslissing? <Link href="">Maak dan bezwaar</Link>.
+            Bent u het niet eens met een beslissing? <Link href="/404">Maak dan bezwaar</Link>.
           </Paragraph>
           <Heading2>Waarover kunt u geen klacht doorgeven?</Heading2>
           <UnorderedList>
@@ -153,7 +153,7 @@ export default function home() {
           <Heading2>Klachtenrapportage</Heading2>
           <Paragraph>
             Meer weten over de klachtenafhandeling in 2021? Lees dan de{' '}
-            <Link href="">Klachtenrapportage en de raadsbrief</Link>.
+            <Link href="/404">Klachtenrapportage en de raadsbrief</Link>.
           </Paragraph>
         </Article>
         <PreFooterNav />
