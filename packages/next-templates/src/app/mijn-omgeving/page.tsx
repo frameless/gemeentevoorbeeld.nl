@@ -19,6 +19,7 @@ import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocu
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { UtrechtDigidLogo, UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
+import { Sidenav, SidenavItem, SidenavLink, SidenavList } from '@gemeente-denhaag/sidenav';
 
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
@@ -58,6 +59,49 @@ export default function Home() {
               Mijn Omgeving{' '}
             </BreadcrumbNavLink>
           </BreadcrumbNav>
+
+          <Article>
+            <Sidenav>
+              <SidenavList>
+                <SidenavItem>
+                  <SidenavLink current href="/#">
+                    Overzicht
+                  </SidenavLink>
+                </SidenavItem>
+                <SidenavItem>
+                  <SidenavLink href="/#">Berichten</SidenavLink>
+                </SidenavItem>
+                <SidenavItem>
+                  <SidenavLink href="/#">Mijn zaken</SidenavLink>
+                </SidenavItem>
+              </SidenavList>
+            </Sidenav>
+
+            <Sidenav>
+              <SidenavList>
+                <SidenavItem>
+                  <SidenavLink href="/#">Belastingzaken</SidenavLink>
+                </SidenavItem>
+                <SidenavItem>
+                  <SidenavLink href="/#">WOZ</SidenavLink>
+                </SidenavItem>
+                <SidenavItem>
+                  <SidenavLink href="/#">Parkeren</SidenavLink>
+                </SidenavItem>
+                <SidenavItem>
+                  <SidenavLink href="/#">Erfpacht</SidenavLink>
+                </SidenavItem>
+              </SidenavList>
+            </Sidenav>
+
+            <Sidenav>
+              <SidenavList>
+                <SidenavItem>
+                  <SidenavLink href="/#">Account</SidenavLink>
+                </SidenavItem>
+              </SidenavList>
+            </Sidenav>
+          </Article>
 
           <Article className="voorbeeld-article-space">
             <Heading1>Hallo Jeroen van Drouwen</Heading1>
