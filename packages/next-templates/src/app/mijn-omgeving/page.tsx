@@ -48,18 +48,23 @@ export default function Home() {
         <ExampleNavigation />
 
         <PageContent>
-          <BreadcrumbNav label="Kruimelpad">
-            <BreadcrumbNavLink href="" index={0} rel="home">
-              Home
-            </BreadcrumbNavLink>
-            <BreadcrumbNavSeparator>
-              <IconChevronRight className="voorbeeld-chevron-right-space" />
-            </BreadcrumbNavSeparator>
-            <BreadcrumbNavLink href="" index={1}>
-              Mijn Omgeving{' '}
-            </BreadcrumbNavLink>
-          </BreadcrumbNav>
-
+          <section>
+            <div className="voorbeeld-section-content voorbeeld-toptask-layout">
+              <Article>
+                <BreadcrumbNav label="Kruimelpad">
+                  <BreadcrumbNavLink href="" index={0} rel="home">
+                    Home
+                  </BreadcrumbNavLink>
+                  <BreadcrumbNavSeparator>
+                    <IconChevronRight className="voorbeeld-chevron-right-space" />
+                  </BreadcrumbNavSeparator>
+                  <BreadcrumbNavLink href="" index={1}>
+                    Mijn Omgeving{' '}
+                  </BreadcrumbNavLink>
+                </BreadcrumbNav>
+              </Article>
+            </div>
+          </section>
           <section>
             <div className="voorbeeld-section-content voorbeeld-toptask-layout">
               <Article>
