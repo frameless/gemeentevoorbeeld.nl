@@ -1,0 +1,8 @@
+/* BREADCRUMNAV */
+.breadcrumb-nav {
+  padding: var(--voorbeeld-space-block-rabbit);
+}
+
+.icon-chevron-right {
+  color: var(--voorbeeld-color-violet-700);
+}

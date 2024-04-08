@@ -1,0 +1,31 @@
+.voorbeeld-pre-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--voorbeeld-space-block-pig); /* might need adjustments after homepage padding is fixed */
+}
+
+.voorbeeld-pre-footer-link {
+  display: flex;
+  gap: var(--voorbeeld-space-inline-beetle);
+}
+
+.voorbeeld-pre-footer-link:nth-of-type(2) {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .voorbeeld-pre-footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--voorbeeld-space-row-pig);
+    padding: var(--voorbeeld-space-block-rabbit);
+  }
+
+  .voorbeeld-pre-footer-link:nth-of-type(2) {
+    align-self: flex-end;
+    justify-self: flex-end;
+    gap: var(--voorbeeld-space-inline-mouse);
+  }
+}
