@@ -60,59 +60,63 @@ export default function Home() {
             </BreadcrumbNavLink>
           </BreadcrumbNav>
 
-          <Article>
-            <Sidenav>
-              <SidenavList>
-                <SidenavItem>
-                  <SidenavLink current href="/#">
-                    Overzicht
-                  </SidenavLink>
-                </SidenavItem>
-                <SidenavItem>
-                  <SidenavLink href="/#">Berichten</SidenavLink>
-                </SidenavItem>
-                <SidenavItem>
-                  <SidenavLink href="/#">Mijn zaken</SidenavLink>
-                </SidenavItem>
-              </SidenavList>
-            </Sidenav>
+          <section>
+            <div className="voorbeeld-section-content voorbeeld-toptask-layout">
+              <Article>
+                <Sidenav>
+                  <SidenavList>
+                    <SidenavItem>
+                      <SidenavLink current href="/#">
+                        Overzicht
+                      </SidenavLink>
+                    </SidenavItem>
+                    <SidenavItem>
+                      <SidenavLink href="/#">Berichten</SidenavLink>
+                    </SidenavItem>
+                    <SidenavItem>
+                      <SidenavLink href="/#">Mijn zaken</SidenavLink>
+                    </SidenavItem>
+                  </SidenavList>
+                </Sidenav>
 
-            <Sidenav>
-              <SidenavList>
-                <SidenavItem>
-                  <SidenavLink href="/#">Belastingzaken</SidenavLink>
-                </SidenavItem>
-                <SidenavItem>
-                  <SidenavLink href="/#">WOZ</SidenavLink>
-                </SidenavItem>
-                <SidenavItem>
-                  <SidenavLink href="/#">Parkeren</SidenavLink>
-                </SidenavItem>
-                <SidenavItem>
-                  <SidenavLink href="/#">Erfpacht</SidenavLink>
-                </SidenavItem>
-              </SidenavList>
-            </Sidenav>
+                <Sidenav>
+                  <SidenavList>
+                    <SidenavItem>
+                      <SidenavLink href="/#">Belastingzaken</SidenavLink>
+                    </SidenavItem>
+                    <SidenavItem>
+                      <SidenavLink href="/#">WOZ</SidenavLink>
+                    </SidenavItem>
+                    <SidenavItem>
+                      <SidenavLink href="/#">Parkeren</SidenavLink>
+                    </SidenavItem>
+                    <SidenavItem>
+                      <SidenavLink href="/#">Erfpacht</SidenavLink>
+                    </SidenavItem>
+                  </SidenavList>
+                </Sidenav>
 
-            <Sidenav>
-              <SidenavList>
-                <SidenavItem>
-                  <SidenavLink href="/#">Account</SidenavLink>
-                </SidenavItem>
-              </SidenavList>
-            </Sidenav>
-          </Article>
+                <Sidenav>
+                  <SidenavList>
+                    <SidenavItem>
+                      <SidenavLink href="/#">Account</SidenavLink>
+                    </SidenavItem>
+                  </SidenavList>
+                </Sidenav>
+              </Article>
 
-          <Article className="voorbeeld-article-space">
-            <Heading1>Hallo Jeroen van Drouwen</Heading1>
-            <Paragraph>
-              In ‘Mijn omgeving’ kunt u zelf uw persoonlijke zaken regelen wanneer het u uitkomt. U kunt bijvoorbeeld uw
-              rekeningen betalen en zien wanneer uw aanvraag klaar is.
-            </Paragraph>
+              <Article>
+                <Heading1>Hallo Jeroen van Drouwen</Heading1>
+                <Paragraph>
+                  In ‘Mijn omgeving’ kunt u zelf uw persoonlijke zaken regelen wanneer het u uitkomt. U kunt
+                  bijvoorbeeld uw rekeningen betalen en zien wanneer uw aanvraag klaar is.
+                </Paragraph>
 
-            <Heading2>Wat moet ik regelen?</Heading2>
-            <Paragraph>U hoeft op dit moment niets te regelen.</Paragraph>
-          </Article>
+                <Heading2>Wat moet ik regelen?</Heading2>
+                <Paragraph>U hoeft op dit moment niets te regelen.</Paragraph>
+              </Article>
+            </div>
+          </section>
         </PageContent>
 
         <ExampleFooter />
