@@ -112,8 +112,6 @@ export default function Home() {
 
             <Heading2>Wat moet ik regelen?</Heading2>
             <Paragraph>U hoeft op dit moment niets te regelen.</Paragraph>
-
-            <Heading2>Mijn zaken</Heading2>
           </Article>
         </PageContent>
 
