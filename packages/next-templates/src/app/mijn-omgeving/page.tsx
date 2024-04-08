@@ -14,21 +14,22 @@ import {
   Page,
   PageContent,
 } from '@utrecht/component-library-react';
-import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
-import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
-import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import { UtrechtDigidLogo, UtrechtIconArrow } from '@utrecht/web-component-library-react';
-import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { Sidenav, SidenavItem, SidenavLink, SidenavList } from '@gemeente-denhaag/sidenav';
 
+import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
+import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
+import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 
+import { UtrechtDigidLogo, UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 import IconChevronRight from '../../app/styling/assets/chevronRight.svg';
+
 import '@/app/styling/css/detail-page.css';
 import '@utrecht/design-tokens/dist/index.css';
 
@@ -65,6 +66,7 @@ export default function Home() {
               </Article>
             </div>
           </section>
+
           <section>
             <div className="voorbeeld-section-content voorbeeld-toptask-layout">
               <Article>
