@@ -207,7 +207,7 @@ export default function Home() {
             </div>
             <ul className="voorbeeld-unordered-list-cards">
               <li>
-                <Link className="voorbeeld-link-card" href="#">
+                <Link className="voorbeeld-link-card" href="/404">
                   <div className="voorbeeld-container-card">
                     <Heading4>Wijkraadsleden officieel beëdigd</Heading4>
                     <div className="voorbeeld-container-date">
@@ -225,7 +225,7 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <Link className="voorbeeld-link-card" href="#">
+                <Link className="voorbeeld-link-card" href="/404">
                   <div className="voorbeeld-container-card">
                     <Heading4>Huurteam geeft huurders gratis hulp</Heading4>
                     <div className="voorbeeld-container-date">
@@ -243,7 +243,7 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <Link className="voorbeeld-link-card" href="#">
+                <Link className="voorbeeld-link-card" href="/404">
                   <div className="voorbeeld-container-card">
                     <Heading4>Bijzonder beroep: specialist maatschappelijke ontwikkeling</Heading4>
                     <div className="voorbeeld-container-date">
@@ -261,7 +261,7 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <Link className="voorbeeld-link-card" href="#">
+                <Link className="voorbeeld-link-card" href="/404">
                   <div className="voorbeeld-container-card">
                     <Heading4>De Tegeltaxi gaat weer rijden!</Heading4>
                     <div className="voorbeeld-container-date">
