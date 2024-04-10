@@ -9,7 +9,7 @@ export const PreFooterNav = () => (
       <IconChevronRight />
       Wat vindt u van deze pagina
     </Link>
-    <Link className="voorbeeld-pre-footer-link" href="/404">
+    <Link className="voorbeeld-pre-footer-link" href="#naar-boven">
       Naar boven
       <IconChevronUp />
     </Link>

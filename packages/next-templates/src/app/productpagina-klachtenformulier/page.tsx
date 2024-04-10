@@ -64,7 +64,7 @@ export default function home() {
 
       <PageContent>
         <Article id="main" className="voorbeeld-article-space">
-          <Heading1>{pageTitle}</Heading1>
+          <Heading1 id="naar-boven">{pageTitle}</Heading1>
           <Paragraph lead>
             Vindt u dat u niet netjes bent behandeld door een ambtenaar of bestuurder? U kunt dan online een klacht
             doorgeven. Een klacht handelen wij meestal binnen 6 weken af.
