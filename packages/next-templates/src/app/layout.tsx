@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: PropsWithChildren<{}>) {
   return (
-    <html lang="nl">
+    <html id="top-of-page-link" lang="nl">
       <body>
         <RootLayout>{children}</RootLayout>
       </body>
