@@ -1,0 +1,8 @@
+.voorbeeld-button-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.voorbeeld-digid-logo {
+  --utrecht-icon-size: 46px;
+}
