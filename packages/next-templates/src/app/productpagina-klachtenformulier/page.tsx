@@ -94,7 +94,7 @@ export default function home() {
               doorgeven van uw medische gegevens.
             </UnorderedListItem>
           </UnorderedList>
-          <ButtonLink href="/productenpagina-klachtenformulier/step-1" appearance="primary-action-button">
+          <ButtonLink href="/404" appearance="primary-action-button">
             Ga naar het klachtenformulier
             <IconChevronRight />
           </ButtonLink>
