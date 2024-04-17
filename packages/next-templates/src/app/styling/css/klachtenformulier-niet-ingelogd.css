@@ -1,26 +1,16 @@
-/* BREADCRUM */
-/* IconChevronRight inline met de twee BreadcrumNavLinks eromheen */
-
 /* FORM */
 
 /* RADIOBUTTON */
-/* tekst rechts naast radiobutton */
+.voorbeeld-radio-button {
+  display: flex;
+  gap: var(--voorbeeld-space-block-beetle);
+}
 
-/* FORMFIELDDESCRIPTION */
-/* grijs zoals in figma ontwerp? of check/aanpassen naar styling GV */
-
-/* LINKS */
-/* 3 links onder volgende stap button moeten onder elkaar ipv naast elkaar */
-/* naar boven link moet rechts op pagina staan */
-/* icon en tekst inline */
+.voorbeeld-link-stoppen {
+  display: flex;
+}
 
 /* VOORTGANG */
 /* moet rechts boven in op pagina */
 /* lijntjes tussen unordered list items*/
 /* stap 1 (uw klacht) moet dikgedrukt (als hint dat gebruiker zich hier bevindt */
-
-/* WELKE STYLING KOMT WAAR VANDAAN? */
-/* page.module.css? */
-/* globals.css */
-/* wmebv.css */
-/* klachtenformulier.css -> nog aanmaken of productpagina-klachtenformulier.css aanpassen */
