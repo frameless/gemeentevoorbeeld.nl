@@ -275,9 +275,12 @@ importers:
       '@fontsource/source-serif-pro':
         specifier: 5.0.8
         version: 5.0.8
+      '@gemeente-denhaag/button':
+        specifier: 0.2.3-alpha.384
+        version: 0.2.3-alpha.384(react@18.2.0)
       '@gemeente-denhaag/sidenav':
-        specifier: 0.1.0-alpha.201
-        version: 0.1.0-alpha.201(react@18.2.0)
+        specifier: link:/Users/frameless/denhaag/components/Sidenav
+        version: link:../../../denhaag/components/Sidenav
       '@next/eslint-plugin-next':
         specifier: 13.5.6
         version: 13.5.6
@@ -8604,8 +8607,17 @@ snapshots:
 
   '@fontsource/source-serif-pro@5.0.8': {}
 
-  /@gemeente-denhaag/sidenav@0.1.0-alpha.201(react@18.2.0):
-    resolution: {integrity: sha512-ttE6U8eO4/TRH3+RwLDRsj41P94GSUEXLUb6W+MPWfIAtcMsrVVtrCYWzn9z0+jRQvDVCAjgtKWX2ZCJehQkWg==}
+  /@gemeente-denhaag/button@0.2.3-alpha.384(react@18.2.0):
+    resolution: {integrity: sha512-2cUmrdrAIIc4wqnNK783BbZ/SJwzSDkUv042mOuxuRD+DoEk/qZPIeoJfqhBT3sgou/NELlE9d82qm6pPBcEEg==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      '@gemeente-denhaag/icons': 0.2.3-alpha.384(react@18.2.0)
+      react: 18.2.0
+    dev: true
+
+  /@gemeente-denhaag/icons@0.2.3-alpha.384(react@18.2.0):
+    resolution: {integrity: sha512-0jH/8pTOqs0pv1cxWRTp04UKEKN3DqTglwJHzNhhqkEyCqxwy1FZ5QPR3ShA9JJs+cAk+99WCoY7nfFIKrtPtA==}
     peerDependencies:
       react: ^18.0.0
     dependencies:
