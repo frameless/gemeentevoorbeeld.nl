@@ -2,7 +2,9 @@
 
 import {
   Article,
-  Button,
+  ButtonLink,
+  BreadcrumbNav,
+  BreadcrumbNavLink,
   Fieldset,
   FieldsetLegend,
   FormField,
@@ -15,6 +17,7 @@ import {
   PageContent,
   Paragraph,
   RadioButton,
+  Separator,
   Textbox,
   Textarea,
   UnorderedList,
@@ -24,7 +27,7 @@ import {
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { IconChevronRight, IconX } from '@tabler/icons-react';
+import { IconX, IconArrowLeft, IconChevronRight } from '@tabler/icons-react';
 
 import '@/app/styling/css/wmebv.css';
 import '@/app/styling/css/klachtenformulier-niet-ingelogd.css';
@@ -33,8 +36,8 @@ import '@utrecht/design-tokens/dist/index.css';
 import { useEffect } from 'react';
 
 export default function home() {
-  const stepProgressLabel = 'Stap 1 van 3';
-  const stepLabel = 'Klacht over de gemeente doorgeven';
+  const stepProgressLabel = 'Stap 1 van 4';
+  const stepLabel = 'Uw klacht';
   const websiteLabel = 'gemeente voorbeeld';
 
   useEffect(() => {
@@ -48,15 +51,20 @@ export default function home() {
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content-flex">
+        <BreadcrumbNav label="Kruimelpad">
+          <BreadcrumbNavLink href="/productpagina-klachtenformulier">
+            <IconArrowLeft></IconArrowLeft>Terug
+          </BreadcrumbNavLink>
+        </BreadcrumbNav>
+
         <Article id="main" className="voorbeeld-article-space ">
           <Heading1>Klacht over de gemeente doorgeven</Heading1>
-          <Paragraph lead>Stap 1 van 3</Paragraph>
+          <Paragraph lead>Stap 1 van 4</Paragraph>
           <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
 
+          <Heading2>Uw klacht</Heading2>
           <form>
-            <FormLabel>
-              <Heading2>Uw klacht </Heading2>
-            </FormLabel>
+            <FormLabel></FormLabel>
             <Fieldset>
               <FormField className="voorbeeld-formfield-radio-button">
                 <FieldsetLegend>Weet u voor welke afdeling de medewerker werkt? *</FieldsetLegend>
@@ -132,12 +140,12 @@ export default function home() {
             </Fieldset>
           </form>
 
-          <Button appearance="primary-action-button">
+          <ButtonLink href="/klachtenformulier-niet-ingelogd/stap2" appearance="primary-action-button">
             Volgende stap
             <IconChevronRight />
-          </Button>
+          </ButtonLink>
 
-          <Link className="voorbeeld-link-stoppen">
+          <Link href="/404" className="voorbeeld-link-stoppen">
             <IconX />
             Stoppen met het formulier
           </Link>
@@ -148,7 +156,7 @@ export default function home() {
           <div className="voorbeeld-side-content">
             <Heading2>Voortgang</Heading2>
             <UnorderedList>
-              <UnorderedListItem>Uw klacht</UnorderedListItem>
+              <UnorderedListItem>Uw klacht</UnorderedListItem> {/* Current step (1/4) */}
               <UnorderedListItem>Uw gegevens</UnorderedListItem>
               <UnorderedListItem>Bijlage toevoegen</UnorderedListItem>
               <UnorderedListItem>Overzicht</UnorderedListItem>

@@ -10,6 +10,10 @@
   display: flex;
 }
 
+.voorbeeld-paragraph-spotlight {
+  display: flex;
+  gap: var(--voorbeeld-space-block-beetle);
+}
 /* VOORTGANG */
 /* moet rechts boven in op pagina */
 /* lijntjes tussen unordered list items*/

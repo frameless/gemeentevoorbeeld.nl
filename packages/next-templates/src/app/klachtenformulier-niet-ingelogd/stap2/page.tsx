@@ -2,7 +2,7 @@
 
 import {
   Article,
-  Button,
+  ButtonLink,
   BreadcrumbNav,
   BreadcrumbNavLink,
   Fieldset,
@@ -12,11 +12,13 @@ import {
   FormLabel,
   Heading1,
   Heading2,
+  Heading3,
   Link,
   Page,
   PageContent,
   Paragraph,
   RadioButton,
+  Separator,
   Textbox,
   Textarea,
   UnorderedList,
@@ -26,16 +28,18 @@ import {
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { IconChevronUp, IconChevronRight, IconX } from '@tabler/icons-react';
+import { IconChevronRight, IconX, IconArrowLeft } from '@tabler/icons-react';
 
 import '@/app/styling/css/wmebv.css';
+import '@/app/styling/css/klachtenformulier-niet-ingelogd.css';
 import '@utrecht/design-tokens/dist/index.css';
 
 import { useEffect } from 'react';
+import { SP } from 'next/dist/shared/lib/utils';
 
 export default function home() {
-  const stepProgressLabel = 'Stap 1 van 4';
-  const stepLabel = 'Uw klacht';
+  const stepProgressLabel = 'Stap 2 van 4';
+  const stepLabel = 'Uw gegevens';
   const websiteLabel = 'gemeente voorbeeld';
 
   useEffect(() => {
@@ -49,104 +53,72 @@ export default function home() {
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content-flex">
+        <BreadcrumbNav label="Kruimelpad">
+          <BreadcrumbNavLink href="/klachtenformulier-niet-ingelogd/stap1">
+            <IconArrowLeft></IconArrowLeft>Vorige Stap
+          </BreadcrumbNavLink>
+        </BreadcrumbNav>
+
         <Article id="main" className="voorbeeld-article-space ">
-          <BreadcrumbNav label="Kruimelpad">
-            <BreadcrumbNavLink href="/">Home</BreadcrumbNavLink>
-            <IconChevronRight></IconChevronRight>
-            <BreadcrumbNavLink href="/productpagina-klachtenformulier">Product pagina</BreadcrumbNavLink>
-          </BreadcrumbNav>
-
-          <Heading1>Klacht over de gemeente doorgeven</Heading1>
-          <Paragraph>Stap 1 van 4</Paragraph>
+          <Heading1>Klacht over de gemeente doorgeven </Heading1>
+          <Paragraph>Stap 2 van 4</Paragraph>
           <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
-          {/* In het figma ontwerp heeft geen enkel vakje op deze pagina heeft *?  */}
 
+          <Heading2>Uw gegevens</Heading2>
           <form>
-            <FormLabel>
-              <Heading2>Uw klacht </Heading2>
-            </FormLabel>
-            <Fieldset>
-              {/* styling: radiobutton + tekst naast elkaar */}
-              <FormField>
-                <FieldsetLegend>Weet u voor welke afdeling de medewerker werkt?</FieldsetLegend>
+            <FormField>
+              <FieldsetLegend>Bent u een persoon of een bedrijf?</FieldsetLegend>
+              <div className="voorbeeld-radio-button">
                 <RadioButton></RadioButton>
-                <Paragraph>Publiekzaken: bijvoorbeeld paspoort of trouwen of de wachttijd als u ons belt.</Paragraph>
-                {/* alleen radiobutton klikbaar of ook paragraph? */}
+                <Paragraph>Persoon</Paragraph>
+              </div>
+              <div className="voorbeeld-radio-button">
                 <RadioButton></RadioButton>
-                <Paragraph>Stadsbedrijven: bijvoorbeeld ophalen afval, parken en bomen of sportplekken.</Paragraph>
-                <RadioButton></RadioButton>
-                <Paragraph>Ruimte: bijvoorbeeld verkeer, bouwen, energie en klimaat of speelruimte.</Paragraph>
-                <RadioButton></RadioButton>
-                <Paragraph>Werk en Inkomen: bijvoorbeeld bijstand, schulddienstverlening of Wmo.</Paragraph>
-                <RadioButton></RadioButton>
-                <Paragraph>
-                  Vergunningen, Toezicht en Handhaving: bijvoorbeeld handhavers (boa’s) parkeerboetes, of vergunningen.
-                </Paragraph>
-                <RadioButton></RadioButton>
-                <Paragraph>Anders of ik weet het niet</Paragraph>
-              </FormField>
+                <Paragraph>Bedrijf</Paragraph>
+              </div>
+            </FormField>
 
-              <FormField>
-                <FieldsetLegend>Over wie gaat uw klacht?</FieldsetLegend>
-                <FormFieldDescription>Bijvoorbeeld de naam van een medewerker of een afdeling.</FormFieldDescription>
-                <Textbox></Textbox>
-              </FormField>
+            <Heading3>Persoonsgegevens</Heading3>
 
-              <FormField>
-                <FieldsetLegend>Wat is uw klacht?</FieldsetLegend>
-                {/* <FormFieldDescription></FormFieldDescription> */}
-                {/* Deze staat er in het ontwerp niet bij, is die niet nodig? 
-                Wellicht een hint voor de gebruiker: omschrijf uw klacht in maximaal 140 karakters */}
-                <Textarea></Textarea>
-              </FormField>
+            <FormField>
+              <FieldsetLegend>Voorletter(s)</FieldsetLegend>
+              <Textbox></Textbox>
+            </FormField>
 
-              <FormField>
-                <FieldsetLegend>Wanneer gebeurde dit?</FieldsetLegend>
-                <FormFieldDescription>Geef de datum(s) door waarover uw klacht gaat.</FormFieldDescription>
-                <Textarea></Textarea>
-              </FormField>
+            <FormField>
+              <FieldsetLegend>Tussenvoegsel(s) (niet verplicht)</FieldsetLegend>
+              <Textbox></Textbox>
+            </FormField>
 
-              <FormField>
-                <FieldsetLegend>Hoe laat?</FieldsetLegend>
-                <FormFieldDescription>Geef het tijdstip(en) door waarover uw klacht gaat.</FormFieldDescription>
-                <Textarea></Textarea>
-              </FormField>
+            <FormField>
+              <FieldsetLegend>Achternaam</FieldsetLegend>
+              <Textbox></Textbox>
+            </FormField>
 
-              <FormField>
-                <FieldsetLegend>Wat wilt u dat wij doen om uw klacht op te lossen?</FieldsetLegend>
-                {/* <FormFieldDescription></FormFieldDescription> */}
-                {/* Deze staat er in het ontwerp niet bij, is die niet nodig? 
-                Wellicht een hint voor de gebruiker: omschrijf de gewenste oplossing in maximaal 140 karakters */}
-                <Textarea></Textarea>
-              </FormField>
-            </Fieldset>
+            <Heading3>Adresgegevens</Heading3>
           </form>
-          <Button>
+          <ButtonLink href="/klachtenformulier-niet-ingelogd/stap2" appearance="primary-action-button">
             Volgende stap
             <IconChevronRight />
-          </Button>
+          </ButtonLink>
 
-          <Link>
-            <IconChevronRight /> Opslaan en later verder
-          </Link>
-
-          <Link>
+          <Link href="/404" className="voorbeeld-link-stoppen">
             <IconX />
             Stoppen met het formulier
           </Link>
 
-          <Link>
-            <IconChevronUp /> Naar boven
-          </Link>
+          {/* TODO: <PreFooterNav/> */}
 
-          <Heading2>Voortgang</Heading2>
-          <UnorderedList>
-            <UnorderedListItem>Uw klacht</UnorderedListItem>
-            {/* deze moet dikgedrukt worden (als hint voor gebruiker op welke stap deze zich bevindt) */}
-            <UnorderedListItem>Uw gegevens</UnorderedListItem>
-            <UnorderedListItem>Bijlage toevoegen</UnorderedListItem>
-            <UnorderedListItem>Overzicht</UnorderedListItem>
-          </UnorderedList>
+          {/* TODO: sidenav */}
+          <div className="voorbeeld-side-content">
+            <Heading2>Voortgang</Heading2>
+            <UnorderedList>
+              <UnorderedListItem>Uw klacht</UnorderedListItem>
+              <UnorderedListItem>Uw gegevens</UnorderedListItem> {/* Current step (2/4) */}
+              <UnorderedListItem>Bijlage toevoegen</UnorderedListItem>
+              <UnorderedListItem>Overzicht</UnorderedListItem>
+            </UnorderedList>
+          </div>
         </Article>
       </PageContent>
       <ExampleFooter />

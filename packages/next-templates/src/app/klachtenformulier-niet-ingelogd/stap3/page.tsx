@@ -2,7 +2,7 @@
 
 import {
   Article,
-  Button,
+  ButtonLink,
   BreadcrumbNav,
   BreadcrumbNavLink,
   Fieldset,
@@ -12,30 +12,36 @@ import {
   FormLabel,
   Heading1,
   Heading2,
+  Heading3,
   Link,
   Page,
   PageContent,
   Paragraph,
   RadioButton,
+  Separator,
+  SpotlightSection,
   Textbox,
   Textarea,
   UnorderedList,
   UnorderedListItem,
+  Button,
 } from '@utrecht/component-library-react';
 
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { IconChevronUp, IconChevronRight, IconX } from '@tabler/icons-react';
+import { IconAlertTriangleFilled, IconArrowLeft, IconChevronRight, IconX } from '@tabler/icons-react';
 
 import '@/app/styling/css/wmebv.css';
+import '@/app/styling/css/detail-page.css';
+import '@/app/styling/css/klachtenformulier-niet-ingelogd.css';
 import '@utrecht/design-tokens/dist/index.css';
 
 import { useEffect } from 'react';
 
 export default function home() {
-  const stepProgressLabel = 'Stap 1 van 4';
-  const stepLabel = 'Uw klacht';
+  const stepProgressLabel = 'Stap 3 van 4';
+  const stepLabel = 'Bestanden toevoegen';
   const websiteLabel = 'gemeente voorbeeld';
 
   useEffect(() => {
@@ -49,100 +55,94 @@ export default function home() {
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content-flex">
+        <BreadcrumbNav label="Kruimelpad">
+          <BreadcrumbNavLink href="//klachtenformulier-niet-ingelogd/stap2">
+            <IconArrowLeft></IconArrowLeft>Vorige Stap
+          </BreadcrumbNavLink>
+        </BreadcrumbNav>
+
         <Article id="main" className="voorbeeld-article-space ">
-          <BreadcrumbNav label="Kruimelpad">
-            <BreadcrumbNavLink href="/">Home</BreadcrumbNavLink>
-            <IconChevronRight></IconChevronRight>
-            <BreadcrumbNavLink href="/productpagina-klachtenformulier">Product pagina</BreadcrumbNavLink>
-          </BreadcrumbNav>
-
           <Heading1>Klacht over de gemeente doorgeven</Heading1>
-          <Paragraph>Stap 1 van 4</Paragraph>
+          <Paragraph>Stap 3 van 4</Paragraph>
           <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
-          {/* In het figma ontwerp heeft geen enkel vakje op deze pagina heeft *?  */}
 
+          <Heading2>Bestanden toevoegen</Heading2>
           <form>
-            <FormLabel>
-              <Heading2>Uw klacht </Heading2>
-            </FormLabel>
-            <Fieldset>
-              {/* styling: radiobutton + tekst naast elkaar */}
-              <FormField>
-                <FieldsetLegend>Weet u voor welke afdeling de medewerker werkt?</FieldsetLegend>
+            <FormField>
+              <FieldsetLegend>Wilt u een bestand meesturen? </FieldsetLegend>
+              <div className="voorbeeld-radio-button">
                 <RadioButton></RadioButton>
-                <Paragraph>Publiekzaken: bijvoorbeeld paspoort of trouwen of de wachttijd als u ons belt.</Paragraph>
-                {/* alleen radiobutton klikbaar of ook paragraph? */}
+                <Paragraph>Ja, ik wil een bestand meesturen</Paragraph>
+              </div>
+              <div className="voorbeeld-radio-button">
                 <RadioButton></RadioButton>
-                <Paragraph>Stadsbedrijven: bijvoorbeeld ophalen afval, parken en bomen of sportplekken.</Paragraph>
-                <RadioButton></RadioButton>
-                <Paragraph>Ruimte: bijvoorbeeld verkeer, bouwen, energie en klimaat of speelruimte.</Paragraph>
-                <RadioButton></RadioButton>
-                <Paragraph>Werk en Inkomen: bijvoorbeeld bijstand, schulddienstverlening of Wmo.</Paragraph>
-                <RadioButton></RadioButton>
-                <Paragraph>
-                  Vergunningen, Toezicht en Handhaving: bijvoorbeeld handhavers (boa’s) parkeerboetes, of vergunningen.
+                <Paragraph>Nee, geen bestand meesturen</Paragraph>
+              </div>
+
+              <SpotlightSection className="utrecht-spotlight-section voorbeeld-spotlight-section">
+                <Heading2>Bestanden per post</Heading2>
+                <Paragraph className="voorbeeld-paragraph-spotlight">
+                  Hebt u bestanden die u niet digitaal kunt versturen? Stuur het formulier en de bijlagen dan per post
+                  naar Gemeente Voorbeeld (geen postzegel nodig). Zet op elke bijlage het zaaknummer.
+                  {/* optie: tot nu toe ingevulde klacht printen? */}
+                  {/* aangeven dat gebruiker kan stoppen met dit formulier? */}
+                  {/* buttonlink naar adresgegevens? */}
+                  {/* deze melding aan het begin van het formulier */}
                 </Paragraph>
-                <RadioButton></RadioButton>
-                <Paragraph>Anders of ik weet het niet</Paragraph>
-              </FormField>
+                {/* eventueel adresgegevens hier al neerzetten? */}
+                {/* <Paragraph>
+                  Gemeente Voorbeeld
+                  <br />
+                  Klachtenbehandeling
+                  <br />
+                  Antwoordnummer 00000
+                  <br />
+                  Voorbeeld Stad
+                </Paragraph> */}
+              </SpotlightSection>
 
-              <FormField>
-                <FieldsetLegend>Over wie gaat uw klacht?</FieldsetLegend>
-                <FormFieldDescription>Bijvoorbeeld de naam van een medewerker of een afdeling.</FormFieldDescription>
-                <Textbox></Textbox>
-              </FormField>
+              <FieldsetLegend>Bestanden toevoegen </FieldsetLegend>
+              <UnorderedList>
+                <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
+                <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
+                <UnorderedListItem>
+                  Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bmp en gif.
+                </UnorderedListItem>
+              </UnorderedList>
+            </FormField>
 
-              <FormField>
-                <FieldsetLegend>Wat is uw klacht?</FieldsetLegend>
-                {/* <FormFieldDescription></FormFieldDescription> */}
-                {/* Deze staat er in het ontwerp niet bij, is die niet nodig? 
-                Wellicht een hint voor de gebruiker: omschrijf uw klacht in maximaal 140 karakters */}
-                <Textarea></Textarea>
-              </FormField>
+            <ButtonLink href="/404" appearance="secondary-action-button">
+              <FieldsetLegend>Bestanden kiezen</FieldsetLegend>
+            </ButtonLink>
 
-              <FormField>
-                <FieldsetLegend>Wanneer gebeurde dit?</FieldsetLegend>
-                <FormFieldDescription>Geef de datum(s) door waarover uw klacht gaat.</FormFieldDescription>
-                <Textarea></Textarea>
-              </FormField>
-
-              <FormField>
-                <FieldsetLegend>Hoe laat?</FieldsetLegend>
-                <FormFieldDescription>Geef het tijdstip(en) door waarover uw klacht gaat.</FormFieldDescription>
-                <Textarea></Textarea>
-              </FormField>
-
-              <FormField>
-                <FieldsetLegend>Wat wilt u dat wij doen om uw klacht op te lossen?</FieldsetLegend>
-                {/* <FormFieldDescription></FormFieldDescription> */}
-                {/* Deze staat er in het ontwerp niet bij, is die niet nodig? 
-                Wellicht een hint voor de gebruiker: omschrijf de gewenste oplossing in maximaal 140 karakters */}
-                <Textarea></Textarea>
-              </FormField>
-            </Fieldset>
+            <FieldsetLegend>
+              Ik wil na behandeling van mijn klacht meewerken aan een tevredenheidsonderzoek.  
+            </FieldsetLegend>
+            <div className="voorbeeld-radio-button">
+              <RadioButton></RadioButton>
+              <Paragraph>Ja, ik doe mee met een tevredenheidsonderzoek</Paragraph>
+            </div>
+            <div className="voorbeeld-radio-button">
+              <RadioButton></RadioButton>
+              <Paragraph>Nee, ik doe niet mee met een tevredenheidsonderzoek</Paragraph>
+            </div>
           </form>
-          <Button>
+
+          <ButtonLink href="/klachtenformulier-niet-ingelogd/stap2" appearance="primary-action-button">
             Volgende stap
             <IconChevronRight />
-          </Button>
+          </ButtonLink>
 
-          <Link>
-            <IconChevronRight /> Opslaan en later verder
-          </Link>
-
-          <Link>
+          <Link href="/404" className="voorbeeld-link-stoppen">
             <IconX />
             Stoppen met het formulier
           </Link>
+          {/* TODO: <PreFooterNav/> */}
 
-          <Link>
-            <IconChevronUp /> Naar boven
-          </Link>
-
+          {/* TODO: sidenav */}
           <Heading2>Voortgang</Heading2>
           <UnorderedList>
             <UnorderedListItem>Uw klacht</UnorderedListItem>
-            {/* deze moet dikgedrukt worden (als hint voor gebruiker op welke stap deze zich bevindt) */}
             <UnorderedListItem>Uw gegevens</UnorderedListItem>
             <UnorderedListItem>Bijlage toevoegen</UnorderedListItem>
             <UnorderedListItem>Overzicht</UnorderedListItem>
