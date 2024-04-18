@@ -26,7 +26,6 @@ import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 
 import { UtrechtDigidLogo, UtrechtIconArrow } from '@utrecht/web-component-library-react';
-import BacklinkIcon from '@/app/styling/assets/backlink-icon.svg';
 import IconChevronRight from '../../app/styling/assets/chevronRight.svg';
 
 import '@/app/styling/css/detail-page.css';
