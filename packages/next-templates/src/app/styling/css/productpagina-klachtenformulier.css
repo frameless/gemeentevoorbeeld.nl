@@ -1,6 +1,6 @@
 /* BREADCRUMNAV */
-.breadcrumb-nav {
-  padding: var(--voorbeeld-space-block-rabbit);
+.voorbeeld-breadcrumb-nav {
+  margin: var(--voorbeeld-space-block-rabbit);
 }
 
 .icon-chevron-right {
