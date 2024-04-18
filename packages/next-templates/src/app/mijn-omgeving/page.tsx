@@ -121,7 +121,7 @@ export default function Home() {
                 <Paragraph>U hoeft op dit moment niets te regelen.</Paragraph>
                 <Heading2>Mijn zaken</Heading2>
                 <Paragraph>Vraag aan de gemeente</Paragraph>
-                <Link href="/#">Mijn zaken</Link>
+                <Link href="./mijn-omgeving/mijn-zaken">Mijn zaken</Link>
               </Article>
             </div>
           </section>
