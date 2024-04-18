@@ -17,7 +17,6 @@ import {
 import { Sidenav, SidenavItem, SidenavLink, SidenavList } from '@gemeente-denhaag/sidenav';
 
 import { ExampleHeaderFunnel } from '@/components/ExampleHeader/ExampleHeaderFunnel/ExampleHeaderFunnel';
-import { ExampleFooterFocus } from '@/components/ExampleFooter/ExampleFooterFocus/ExampleFooterFocus';
 import { ExampleHeaderFunnelWmebv } from '@/components/wmebv/Header/ExampleHeaderFunnelWmebv';
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
@@ -59,8 +58,8 @@ export default function Home() {
                   <BreadcrumbNavSeparator>
                     <IconChevronRight className="voorbeeld-chevron-right-space" />
                   </BreadcrumbNavSeparator>
-                  <BreadcrumbNavLink href="" index={1}>
-                    Mijn Omgeving{' '}
+                  <BreadcrumbNavLink href="" index={1} rel="mijn-omgeving">
+                    Mijn Omgeving
                   </BreadcrumbNavLink>
                 </BreadcrumbNav>
               </Article>
