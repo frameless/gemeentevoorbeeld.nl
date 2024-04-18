@@ -24,11 +24,11 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { PreFooterNav } from '@/components/PreFooterNav/PreFooterNav';
 import { IconChevronRight } from '@tabler/icons-react';
 
+import { useEffect } from 'react';
+
 import '@utrecht/design-tokens/dist/index.css';
 import '@/app/styling/css/productpagina-klachtenformulier.css';
 import '@/app/styling/css/detail-page.css';
-
-import { useEffect } from 'react';
 
 export default function home() {
   const pageTitle = 'Klacht over de gemeente doorgeven';
