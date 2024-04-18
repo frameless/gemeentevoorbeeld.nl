@@ -44,7 +44,7 @@ export default function home() {
     <Page>
       <ExampleHeader />
       <ExampleNavigation />
-      <BreadcrumbNav label="Kruimelpad" className="breadcrumb-nav">
+      <BreadcrumbNav label="Kruimelpad" className="voorbeeld-breadcrumb-nav">
         <BreadcrumbNavLink href="/" index={0} rel="home">
           Home
         </BreadcrumbNavLink>
