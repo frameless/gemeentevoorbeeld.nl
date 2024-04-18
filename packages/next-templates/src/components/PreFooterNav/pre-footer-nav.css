@@ -4,7 +4,7 @@
   padding: var(--voorbeeld-space-block-pig); /* might need adjustments after homepage padding is fixed */
 }
 
-.voorbeeld-pre-footer-link {
+.voorbeeld-pre-footer__link {
   display: flex;
   gap: var(--voorbeeld-space-inline-beetle);
 }
