@@ -162,7 +162,6 @@ export default function home() {
             {/* TODO: import <PreFooterNav/>  */}
           </div>
 
-          {/* TODO: sidenav? or make a FormNav Component?*/}
           <FormNav></FormNav>
         </Article>
       </PageContent>
