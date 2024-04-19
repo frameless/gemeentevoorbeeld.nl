@@ -53,7 +53,7 @@ export default function home() {
       <ExampleHeader />
       <ExampleNavigation />
       <PageContent className="voorbeeld-page-content-flex">
-        <BreadcrumbNav label="Kruimelpad">
+        <BreadcrumbNav className="voorbeeld-breadcrumb-nav" label="Kruimelpad">
           <BreadcrumbNavLink href="/klachtenformulier-niet-ingelogd/stap1">
             <IconArrowLeft></IconArrowLeft>Vorige Stap
           </BreadcrumbNavLink>
