@@ -1,0 +1,29 @@
+/* .voorbeeld-form-nav__link {
+  text-decoration: none;
+  color: red;
+} */
+
+/* .voorbeeld-form-nav__list-item {
+  text-decoration: none;
+  color: orange;
+} */
+
+.voorbeeld-separator {
+  color: red;
+}
+
+.voorbeeld-form-nav__list-item .voorbeeld-form-nav__link {
+  text-decoration: none;
+}
+
+.voorbeeld-form-nav__list-item:nth-child(1)::marker {
+  color: var(--voorbeeld-color-violet-700);
+}
+
+.voorbeeld-form-nav__list-item::marker {
+  color: var(--voorbeeld-color-violet-300);
+}
+
+.voorbeeld-form-nav__list-item:nth-child(1) {
+  font-weight: bold;
+}

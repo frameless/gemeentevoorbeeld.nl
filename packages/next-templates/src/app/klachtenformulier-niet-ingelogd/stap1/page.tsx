@@ -26,6 +26,7 @@ import {
 
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
+import { FormNav } from '@/components/FormNav/FormNav';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { IconX, IconArrowLeft, IconChevronRight } from '@tabler/icons-react';
 
@@ -162,24 +163,7 @@ export default function home() {
           </div>
 
           {/* TODO: sidenav? or make a FormNav Component?*/}
-          <div className="voorbeeld-side-content">
-            <Separator>
-              <Heading2>Voortgang</Heading2>
-            </Separator>
-            <UnorderedList>
-              <UnorderedListItem>Uw klacht</UnorderedListItem> {/* Current step (1/4) - Bulletpoint dark */}
-              <Separator></Separator>
-              <UnorderedListItem>Uw gegevens</UnorderedListItem>
-              {/* Bulletpoint grey */}
-              <Separator></Separator>
-              <UnorderedListItem>Bijlage toevoegen</UnorderedListItem>
-              {/* Bulletpoint grey */}
-              <Separator></Separator>
-              <UnorderedListItem>Overzicht</UnorderedListItem>
-              {/* Bulletpoint grey */}
-              <Separator></Separator>
-            </UnorderedList>
-          </div>
+          <FormNav></FormNav>
         </Article>
       </PageContent>
       <ExampleFooter />
