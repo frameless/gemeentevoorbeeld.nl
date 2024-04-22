@@ -27,11 +27,6 @@ details p {
   gap: var(--voorbeeld-space-block-beetle);
 }
 
-/* Formfield */
-/* .utrecht-form-field-description-color {
-  color: var(--voorbeeld-color-gray-500);
-} */
-
 /* Radiobuttons */
 .voorbeeld-radio-buttons {
   display: flex;
