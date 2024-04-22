@@ -1,19 +1,53 @@
-.voorbeeld-separator {
+/* .voorbeeld-separator {
   color: red;
-}
+} */
 
-.voorbeeld-form-nav__list-item .voorbeeld-form-nav__link {
+/* .voorbeeld-form-nav__list-item .voorbeeld-form-nav__link {
+  text-decoration: none;
+} */
+
+/* .voorbeeld-form-nav__list-item:nth-child(1)::marker {
+  color: var(--voorbeeld-color-violet-700);
+} */
+
+/* .voorbeeld-form-nav__list-item::marker {
+  color: var(--voorbeeld-color-violet-300);
+} */
+
+/* .voorbeeld-form-nav__list-item:nth-child(1) {
+  font-weight: bold;
+} */
+
+/* Stap 1 */
+.voorbeeld-formnav__stap1 .voorbeeld-form-nav__list-item .voorbeeld-form-nav__link {
   text-decoration: none;
 }
 
-.voorbeeld-form-nav__list-item:nth-child(1)::marker {
+.voorbeeld-formnav__stap1 .voorbeeld-form-nav__list-item:nth-child(1)::marker {
   color: var(--voorbeeld-color-violet-700);
 }
 
-.voorbeeld-form-nav__list-item::marker {
+.voorbeeld-formnav__stap1 .voorbeeld-form-nav__list-item::marker {
   color: var(--voorbeeld-color-violet-300);
 }
 
-.voorbeeld-form-nav__list-item:nth-child(1) {
+.voorbeeld-formnav__stap1 .voorbeeld-form-nav__list-item:nth-child(1) {
+  font-weight: bold;
+}
+
+/* Stap 2 */
+.voorbeeld-formnav__stap2 .voorbeeld-form-nav__list-item .voorbeeld-form-nav__link {
+  text-decoration: none;
+}
+
+.voorbeeld-formnav__stap2 .voorbeeld-form-nav__list-item:nth-of-type(2)::marker {
+  color: var(--voorbeeld-color-violet-700);
+}
+
+.voorbeeld-formnav__stap2 .voorbeeld-form-nav__list-item::marker {
+  color: var(--voorbeeld-color-violet-300);
+}
+
+.voorbeeld-formnav__stap2 .voorbeeld-form-nav__list-item:nth-of-type(2) {
   font-weight: bold;
 }

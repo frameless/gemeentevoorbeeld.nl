@@ -28,14 +28,15 @@ import {
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { FormNav } from '@/components/FormNav/FormNav';
 import { IconChevronRight, IconX, IconArrowLeft } from '@tabler/icons-react';
+
+import { useEffect } from 'react';
+// import { SP } from 'next/dist/shared/lib/utils';
 
 import '@/app/styling/css/wmebv.css';
 import '@/app/styling/css/klachtenformulier-niet-ingelogd.css';
 import '@utrecht/design-tokens/dist/index.css';
-
-import { useEffect } from 'react';
-import { SP } from 'next/dist/shared/lib/utils';
 
 export default function home() {
   const stepProgressLabel = 'Stap 2 van 4';
@@ -59,65 +60,59 @@ export default function home() {
           </BreadcrumbNavLink>
         </BreadcrumbNav>
 
-        <Article id="main" className="voorbeeld-article-space ">
-          <Heading1>Klacht over de gemeente doorgeven </Heading1>
-          <Paragraph>Stap 2 van 4</Paragraph>
-          <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
+        <Article id="main" className="voorbeeld-article-space voorbeeld-main-layout">
+          <div>
+            <Heading1>Klacht over de gemeente doorgeven </Heading1>
+            <Paragraph>Stap 2 van 4</Paragraph>
+            <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
 
-          <Heading2>Uw gegevens</Heading2>
-          <form>
-            <FormField>
-              <FieldsetLegend>Bent u een persoon of een bedrijf?</FieldsetLegend>
-              <div className="voorbeeld-radio-button">
-                <RadioButton></RadioButton>
-                <Paragraph>Persoon</Paragraph>
-              </div>
-              <div className="voorbeeld-radio-button">
-                <RadioButton></RadioButton>
-                <Paragraph>Bedrijf</Paragraph>
-              </div>
-            </FormField>
+            <Heading2>Uw gegevens</Heading2>
+            <form>
+              <FormField>
+                <FieldsetLegend>Bent u een persoon of een bedrijf?</FieldsetLegend>
+                <div className="voorbeeld-radio-button">
+                  <RadioButton></RadioButton>
+                  <Paragraph>Persoon</Paragraph>
+                </div>
+                <div className="voorbeeld-radio-button">
+                  <RadioButton></RadioButton>
+                  <Paragraph>Bedrijf</Paragraph>
+                </div>
+              </FormField>
 
-            <Heading3>Persoonsgegevens</Heading3>
+              <Heading3>Persoonsgegevens</Heading3>
 
-            <FormField>
-              <FieldsetLegend>Voorletter(s)</FieldsetLegend>
-              <Textbox></Textbox>
-            </FormField>
+              <FormField>
+                <FieldsetLegend>Voorletter(s)</FieldsetLegend>
+                <Textbox></Textbox>
+              </FormField>
 
-            <FormField>
-              <FieldsetLegend>Tussenvoegsel(s) (niet verplicht)</FieldsetLegend>
-              <Textbox></Textbox>
-            </FormField>
+              <FormField>
+                <FieldsetLegend>Tussenvoegsel(s) (niet verplicht)</FieldsetLegend>
+                <Textbox></Textbox>
+              </FormField>
 
-            <FormField>
-              <FieldsetLegend>Achternaam</FieldsetLegend>
-              <Textbox></Textbox>
-            </FormField>
+              <FormField>
+                <FieldsetLegend>Achternaam</FieldsetLegend>
+                <Textbox></Textbox>
+              </FormField>
 
-            <Heading3>Adresgegevens</Heading3>
-          </form>
-          <ButtonLink href="/klachtenformulier-niet-ingelogd/stap2" appearance="primary-action-button">
-            Volgende stap
-            <IconChevronRight />
-          </ButtonLink>
+              <Heading3>Adresgegevens</Heading3>
+            </form>
+            <ButtonLink href="/klachtenformulier-niet-ingelogd/stap2" appearance="primary-action-button">
+              Volgende stap
+              <IconChevronRight />
+            </ButtonLink>
 
-          <Link href="/404" className="voorbeeld-link-stoppen">
-            <IconX />
-            Stoppen met het formulier
-          </Link>
+            <Link href="/404" className="voorbeeld-link-stoppen">
+              <IconX />
+              Stoppen met het formulier
+            </Link>
 
-          {/* TODO: <PreFooterNav/> */}
-
-          {/* TODO: sidenav */}
-          <div className="voorbeeld-side-content">
-            <Heading2>Voortgang</Heading2>
-            <UnorderedList>
-              <UnorderedListItem>Uw klacht</UnorderedListItem>
-              <UnorderedListItem>Uw gegevens</UnorderedListItem> {/* Current step (2/4) */}
-              <UnorderedListItem>Bijlage toevoegen</UnorderedListItem>
-              <UnorderedListItem>Overzicht</UnorderedListItem>
-            </UnorderedList>
+            {/* TODO: <PreFooterNav/> */}
+          </div>
+          <div className="voorbeeld-formnav__stap2">
+            <FormNav></FormNav>
           </div>
         </Article>
       </PageContent>

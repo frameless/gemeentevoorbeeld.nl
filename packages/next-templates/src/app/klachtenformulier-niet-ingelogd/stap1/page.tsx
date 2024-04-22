@@ -158,8 +158,9 @@ export default function home() {
 
             {/* TODO: import <PreFooterNav/>  */}
           </div>
-
-          <FormNav></FormNav>
+          <div className="voorbeeld-formnav__stap1">
+            <FormNav></FormNav>
+          </div>
         </Article>
       </PageContent>
       <ExampleFooter />
