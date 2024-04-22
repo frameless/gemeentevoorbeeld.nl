@@ -2,9 +2,7 @@
 
 import { Separator, Heading2, Link, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import React from 'react';
-// import clsx from 'clsx';
 import './formnav.css';
-// import Search from '../../app/styling/assets/searchbar-icon.svg';
 
 export const FormNav = () => (
   <div>

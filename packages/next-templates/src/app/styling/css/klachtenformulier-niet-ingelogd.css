@@ -36,5 +36,5 @@
 /*  */
 .voorbeeld-link-stoppen {
   display: flex;
-  margin: var(--voorbeeld-space-row-rat);
+  margin-block-start: var(--voorbeeld-space-row-dog);
 }

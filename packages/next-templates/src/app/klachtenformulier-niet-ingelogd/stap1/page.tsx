@@ -17,11 +17,8 @@ import {
   PageContent,
   Paragraph,
   RadioButton,
-  Separator,
   Textbox,
   Textarea,
-  UnorderedList,
-  UnorderedListItem,
 } from '@utrecht/component-library-react';
 
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
@@ -30,11 +27,11 @@ import { FormNav } from '@/components/FormNav/FormNav';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { IconX, IconArrowLeft, IconChevronRight } from '@tabler/icons-react';
 
+import { useEffect } from 'react';
+
 import '@/app/styling/css/wmebv.css';
 import '@/app/styling/css/klachtenformulier-niet-ingelogd.css';
 import '@utrecht/design-tokens/dist/index.css';
-
-import { useEffect } from 'react';
 
 export default function home() {
   const stepProgressLabel = 'Stap 1 van 4';
