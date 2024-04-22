@@ -8,6 +8,17 @@
   margin: var(--voorbeeld-space-block-rabbit);
 }
 
+/* DETAILS */
+details {
+  color: var(--utrecht-paragraph-color);
+  cursor: pointer;
+}
+
+details p {
+  border: 1px solid var(--voorbeeld-color-gray-400);
+  padding: var(--voorbeeld-space-block-rat);
+}
+
 /* FORM */
 
 /* Step 3 */

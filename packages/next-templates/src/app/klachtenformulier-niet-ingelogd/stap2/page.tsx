@@ -63,7 +63,7 @@ export default function home() {
         <Article id="main" className="voorbeeld-article-space voorbeeld-main-layout">
           <div>
             <Heading1>Klacht over de gemeente doorgeven </Heading1>
-            <Paragraph>Stap 2 van 4</Paragraph>
+            <Paragraph lead>Stap 2 van 4</Paragraph>
             <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
 
             <Heading2>Uw gegevens</Heading2>
@@ -88,7 +88,7 @@ export default function home() {
               </FormField>
 
               <FormField>
-                <FieldsetLegend>Tussenvoegsel(s) (niet verplicht)</FieldsetLegend>
+                <FieldsetLegend>Tussenvoegsel(s)</FieldsetLegend>
                 <Textbox></Textbox>
               </FormField>
 
