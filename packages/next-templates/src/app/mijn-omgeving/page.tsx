@@ -30,6 +30,7 @@ import IconChevronRight from '../../app/styling/assets/chevronRight.svg';
 
 import '@/app/styling/css/detail-page.css';
 import '@utrecht/design-tokens/dist/index.css';
+// import { Main } from 'next/document';
 
 export default function Home() {
   const router = useRouter();
@@ -47,84 +48,76 @@ export default function Home() {
         <ExampleNavigation />
 
         <PageContent>
-          <section>
-            <div className="voorbeeld-section-content voorbeeld-toptask-layout">
-              <Article>
-                <BreadcrumbNav label="Kruimelpad">
-                  <BreadcrumbNavLink href="" index={0} rel="home">
-                    Home
-                  </BreadcrumbNavLink>
-                  <BreadcrumbNavSeparator>
-                    <IconChevronRight className="voorbeeld-chevron-right-space" />
-                  </BreadcrumbNavSeparator>
-                  <BreadcrumbNavLink href="" index={1} rel="mijn-omgeving">
-                    Mijn Omgeving
-                  </BreadcrumbNavLink>
-                </BreadcrumbNav>
-              </Article>
+          <BreadcrumbNav label="Kruimelpad">
+            <BreadcrumbNavLink href="" index={0} rel="home">
+              Home
+            </BreadcrumbNavLink>
+            <BreadcrumbNavSeparator>
+              <IconChevronRight className="voorbeeld-chevron-right-space" />
+            </BreadcrumbNavSeparator>
+            <BreadcrumbNavLink href="" index={1} rel="mijn-omgeving">
+              Mijn Omgeving
+            </BreadcrumbNavLink>
+          </BreadcrumbNav>
+
+          <Article id="main" className="voorbeeld-section-content voorbeeld-toptask-layout">
+            <div>
+              <Sidenav>
+                <SidenavList>
+                  <SidenavItem>
+                    <SidenavLink current href="/#">
+                      Overzicht
+                    </SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Berichten</SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Mijn zaken</SidenavLink>
+                  </SidenavItem>
+                </SidenavList>
+              </Sidenav>
+
+              <Sidenav>
+                <SidenavList>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Belastingzaken</SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="/#">WOZ</SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Parkeren</SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Erfpacht</SidenavLink>
+                  </SidenavItem>
+                </SidenavList>
+              </Sidenav>
+
+              <Sidenav>
+                <SidenavList>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Account</SidenavLink>
+                  </SidenavItem>
+                </SidenavList>
+              </Sidenav>
             </div>
-          </section>
 
-          <section>
-            <div className="voorbeeld-section-content voorbeeld-toptask-layout">
-              <Article>
-                <Sidenav>
-                  <SidenavList>
-                    <SidenavItem>
-                      <SidenavLink current href="/#">
-                        Overzicht
-                      </SidenavLink>
-                    </SidenavItem>
-                    <SidenavItem>
-                      <SidenavLink href="/#">Berichten</SidenavLink>
-                    </SidenavItem>
-                    <SidenavItem>
-                      <SidenavLink href="/#">Mijn zaken</SidenavLink>
-                    </SidenavItem>
-                  </SidenavList>
-                </Sidenav>
+            <div>
+              <Heading1>Hallo Jeroen van Drouwen</Heading1>
+              <Paragraph>
+                In ‘Mijn omgeving’ kunt u zelf uw persoonlijke zaken regelen wanneer het u uitkomt. U kunt bijvoorbeeld
+                uw rekeningen betalen en zien wanneer uw aanvraag klaar is.
+              </Paragraph>
 
-                <Sidenav>
-                  <SidenavList>
-                    <SidenavItem>
-                      <SidenavLink href="/#">Belastingzaken</SidenavLink>
-                    </SidenavItem>
-                    <SidenavItem>
-                      <SidenavLink href="/#">WOZ</SidenavLink>
-                    </SidenavItem>
-                    <SidenavItem>
-                      <SidenavLink href="/#">Parkeren</SidenavLink>
-                    </SidenavItem>
-                    <SidenavItem>
-                      <SidenavLink href="/#">Erfpacht</SidenavLink>
-                    </SidenavItem>
-                  </SidenavList>
-                </Sidenav>
-
-                <Sidenav>
-                  <SidenavList>
-                    <SidenavItem>
-                      <SidenavLink href="/#">Account</SidenavLink>
-                    </SidenavItem>
-                  </SidenavList>
-                </Sidenav>
-              </Article>
-
-              <Article>
-                <Heading1>Hallo Jeroen van Drouwen</Heading1>
-                <Paragraph>
-                  In ‘Mijn omgeving’ kunt u zelf uw persoonlijke zaken regelen wanneer het u uitkomt. U kunt
-                  bijvoorbeeld uw rekeningen betalen en zien wanneer uw aanvraag klaar is.
-                </Paragraph>
-
-                <Heading2>Wat moet ik regelen?</Heading2>
-                <Paragraph>U hoeft op dit moment niets te regelen.</Paragraph>
-                <Heading2>Mijn zaken</Heading2>
-                <Paragraph>Vraag aan de gemeente</Paragraph>
-                <Link href="./mijn-omgeving/mijn-zaken">Mijn zaken</Link>
-              </Article>
+              <Heading2>Wat moet ik regelen?</Heading2>
+              <Paragraph>U hoeft op dit moment niets te regelen.</Paragraph>
+              <Heading2>Mijn zaken</Heading2>
+              <Paragraph>Vraag aan de gemeente</Paragraph>
+              <Link href="./mijn-omgeving/mijn-zaken">Mijn zaken</Link>
             </div>
-          </section>
+          </Article>
         </PageContent>
 
         <ExampleFooter />
