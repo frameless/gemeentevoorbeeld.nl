@@ -18,7 +18,7 @@ import { Sidenav, SidenavItem, SidenavLink, SidenavList } from '@gemeente-denhaa
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
-import { InlogHeader } from '@/components/ExampleHeader/InlogHeader/InlogHeader';
+// import { HeaderIngelogd } from '@/components/ExampleHeader/HeaderIngelogd/HeaderIngelogd';
 
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
@@ -42,7 +42,7 @@ export default function Home() {
     <Document>
       <Page>
         <ExampleHeader />
-        <InlogHeader />
+        {/* <HeaderIngelogd /> */}
         <ExampleNavigation />
 
         <PageContent>
