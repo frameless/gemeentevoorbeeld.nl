@@ -1,6 +1,10 @@
 'use client';
 
-import { Article, Document, Page } from '@utrecht/component-library-react';
+import { Article, Document, Page, PageContent } from '@utrecht/component-library-react';
+
+import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
@@ -19,7 +23,14 @@ export default function Home() {
 
   return (
     <Document>
-      <Page></Page>
+      <Page>
+        <ExampleHeader />
+        <ExampleNavigation />
+
+        <PageContent></PageContent>
+
+        <ExampleFooter />
+      </Page>
     </Document>
   );
 }
