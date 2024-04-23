@@ -2,6 +2,9 @@
 
 import {
   Article,
+  BreadcrumbNavLink,
+  BreadcrumbNav,
+  BreadcrumbNavSeparator,
   Document,
   Heading1,
   Heading2,
@@ -16,6 +19,7 @@ import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 
+import IconChevronRight from '../../../app/styling/assets/chevronRight.svg';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 
@@ -38,6 +42,18 @@ export default function Home() {
         <ExampleNavigation />
 
         <PageContent>
+          <BreadcrumbNav label="Kruimelpad">
+            <BreadcrumbNavLink href="" index={0} rel="home">
+              Home
+            </BreadcrumbNavLink>
+            <BreadcrumbNavSeparator>
+              <IconChevronRight className="voorbeeld-chevron-right-space" />
+            </BreadcrumbNavSeparator>
+            <BreadcrumbNavLink href="" index={1} rel="mijn-omgeving">
+              Mijn Omgeving
+            </BreadcrumbNavLink>
+          </BreadcrumbNav>
+
           <Article id="main" className="voorbeeld-section-content voorbeeld-toptask-layout">
             <div>
               <Sidenav>
