@@ -1,6 +1,7 @@
 'use client';
 
 import { Article, Document, Page, PageContent } from '@utrecht/component-library-react';
+import { Sidenav, SidenavItem, SidenavLink, SidenavList } from '@gemeente-denhaag/sidenav';
 
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
@@ -27,7 +28,52 @@ export default function Home() {
         <ExampleHeader />
         <ExampleNavigation />
 
-        <PageContent></PageContent>
+        <PageContent>
+          <Article id="main" className="voorbeeld-section-content voorbeeld-toptask-layout">
+            <div>
+              <Sidenav>
+                <SidenavList>
+                  <SidenavItem>
+                    <SidenavLink current href="/#">
+                      Overzicht
+                    </SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Berichten</SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Mijn zaken</SidenavLink>
+                  </SidenavItem>
+                </SidenavList>
+              </Sidenav>
+
+              <Sidenav>
+                <SidenavList>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Belastingzaken</SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="/#">WOZ</SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Parkeren</SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Erfpacht</SidenavLink>
+                  </SidenavItem>
+                </SidenavList>
+              </Sidenav>
+
+              <Sidenav>
+                <SidenavList>
+                  <SidenavItem>
+                    <SidenavLink href="/#">Account</SidenavLink>
+                  </SidenavItem>
+                </SidenavList>
+              </Sidenav>
+            </div>
+          </Article>
+        </PageContent>
 
         <ExampleFooter />
       </Page>
