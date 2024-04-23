@@ -1,6 +1,15 @@
 'use client';
 
-import { Article, Document, Page, PageContent } from '@utrecht/component-library-react';
+import {
+  Article,
+  Document,
+  Heading1,
+  Heading2,
+  Link,
+  Paragraph,
+  Page,
+  PageContent,
+} from '@utrecht/component-library-react';
 import { Sidenav, SidenavItem, SidenavLink, SidenavList } from '@gemeente-denhaag/sidenav';
 
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
@@ -71,6 +80,14 @@ export default function Home() {
                   </SidenavItem>
                 </SidenavList>
               </Sidenav>
+            </div>
+
+            <div>
+              <Heading1>Mijn zaken</Heading1>
+
+              <Paragraph>Vraag aan de gemeente</Paragraph>
+              <Link href="./mijn-omgeving/mijn-zaken">Bekijk zaak</Link>
+              <Heading2></Heading2>
             </div>
           </Article>
         </PageContent>
