@@ -87,7 +87,6 @@ export default function Home() {
 
               <Paragraph>Vraag aan de gemeente</Paragraph>
               <Link href="./mijn-omgeving/mijn-zaken">Bekijk zaak</Link>
-              <Heading2></Heading2>
             </div>
           </Article>
         </PageContent>
