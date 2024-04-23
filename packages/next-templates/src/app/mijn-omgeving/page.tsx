@@ -19,6 +19,7 @@ import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 // import { HeaderIngelogd } from '@/components/ExampleHeader/HeaderIngelogd/HeaderIngelogd';
+// import { SearchBar } from './SearchBar';
 
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
