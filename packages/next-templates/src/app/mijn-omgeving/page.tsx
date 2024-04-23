@@ -8,7 +8,6 @@ import {
   Document,
   Heading1,
   Heading2,
-  Heading3,
   Link,
   Paragraph,
   Page,
