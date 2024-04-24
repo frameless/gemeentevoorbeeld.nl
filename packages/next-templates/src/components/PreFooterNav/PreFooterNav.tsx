@@ -4,7 +4,7 @@ import './pre-footer-nav.css';
 
 export const PreFooterNav = () => (
   <div className="voorbeeld-pre-footer">
-    <Link className="voorbeeld-pre-footer-link" href="/404">
+    <Link className="voorbeeld-pre-footer__link" href="/404">
       {/* empty link - page doesnt exist yet */}
       <IconChevronRight />
       Wat vindt u van deze pagina
