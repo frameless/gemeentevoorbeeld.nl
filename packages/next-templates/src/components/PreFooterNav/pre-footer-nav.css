@@ -9,7 +9,7 @@
   gap: var(--voorbeeld-space-inline-beetle);
 }
 
-.voorbeeld-pre-footer-link:nth-of-type(2) {
+.voorbeeld-pre-footer__link:nth-of-type(2) {
   align-self: flex-end;
   justify-self: flex-end;
 }
