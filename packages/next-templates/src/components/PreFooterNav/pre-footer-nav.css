@@ -1,7 +1,7 @@
 .voorbeeld-pre-footer {
   display: flex;
   justify-content: space-between;
-  padding: var(--voorbeeld-space-block-pig); /* might need adjustments after homepage padding is fixed */
+  margin: var(--voorbeeld-space-block-pig); /* might need adjustments after homepage layout is fixed */
 }
 
 .voorbeeld-pre-footer__link {
@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--voorbeeld-space-row-pig);
-    padding: var(--voorbeeld-space-block-rabbit);
+    margin: var(--voorbeeld-space-block-cat); /* might need adjustments after homepage layout is fixed */
   }
 
   .voorbeeld-pre-footer-link:nth-of-type(2) {
