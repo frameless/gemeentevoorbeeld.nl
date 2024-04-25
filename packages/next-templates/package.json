@@ -27,7 +27,7 @@
     "@fontsource/fira-sans": "5.0.18",
     "@fontsource/source-serif-pro": "5.0.8",
     "@gemeente-denhaag/button": "0.2.3-alpha.384",
-    "@gemeente-denhaag/sidenav": "0.1.0-alpha.201",
+    "@gemeente-denhaag/sidenav": "0.1.0-alpha.205",
     "@next/eslint-plugin-next": "13.5.6",
     "@nl-design-system-unstable/voorbeeld-design-tokens": "1.0.0-alpha.122",
     "@svgr/webpack": "8.1.0",

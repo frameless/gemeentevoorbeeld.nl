@@ -279,8 +279,8 @@ importers:
         specifier: 0.2.3-alpha.384
         version: 0.2.3-alpha.384(react@18.2.0)
       '@gemeente-denhaag/sidenav':
-        specifier: link:/Users/frameless/denhaag/components/Sidenav
-        version: link:../../../denhaag/components/Sidenav
+        specifier: 0.1.0-alpha.205
+        version: 0.1.0-alpha.205(react@18.2.0)
       '@next/eslint-plugin-next':
         specifier: 13.5.6
         version: 13.5.6
@@ -8618,6 +8618,14 @@ snapshots:
 
   /@gemeente-denhaag/icons@0.2.3-alpha.384(react@18.2.0):
     resolution: {integrity: sha512-0jH/8pTOqs0pv1cxWRTp04UKEKN3DqTglwJHzNhhqkEyCqxwy1FZ5QPR3ShA9JJs+cAk+99WCoY7nfFIKrtPtA==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: true
+
+  /@gemeente-denhaag/sidenav@0.1.0-alpha.205(react@18.2.0):
+    resolution: {integrity: sha512-v+uwh6U176BjVvxll9cUGEDeemgx5o65dx9atyeNfhIoje6SgAonLoVJ/wN+pdnsk2h8atLxBpIMUxy1KWXG5w==}
     peerDependencies:
       react: ^18.0.0
     dependencies:
