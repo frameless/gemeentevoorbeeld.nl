@@ -29,7 +29,6 @@ import IconChevronRight from '../../app/styling/assets/chevronRight.svg';
 import '@/app/styling/css/detail-page.css';
 import '@utrecht/design-tokens/dist/index.css';
 import '@/app/styling/css/mijn-omgeving.css';
-// import { Main } from 'next/document';
 
 export default function Home() {
   const router = useRouter();
