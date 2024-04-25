@@ -28,6 +28,7 @@ import IconChevronRight from '../../app/styling/assets/chevronRight.svg';
 
 import '@/app/styling/css/detail-page.css';
 import '@utrecht/design-tokens/dist/index.css';
+import '@/app/styling/css/mijn-omgeving.css';
 // import { Main } from 'next/document';
 
 export default function Home() {
@@ -59,8 +60,8 @@ export default function Home() {
             </BreadcrumbNavLink>
           </BreadcrumbNav>
 
-          <Article id="main" className="voorbeeld-section-content voorbeeld-toptask-layout">
-            <div>
+          <Article id="main" className="voorbeeld-main-layout voorbeeld-toptask-layout">
+            <div className="voorbeeld-sidenav-layout">
               <Sidenav>
                 <SidenavList>
                   <SidenavItem>
@@ -103,7 +104,7 @@ export default function Home() {
               </Sidenav>
             </div>
 
-            <div>
+            <div className="voorbeeld-content">
               <Heading1>Hallo Jeroen van Drouwen</Heading1>
               <Paragraph>
                 In ‘Mijn omgeving’ kunt u zelf uw persoonlijke zaken regelen wanneer het u uitkomt. U kunt bijvoorbeeld
