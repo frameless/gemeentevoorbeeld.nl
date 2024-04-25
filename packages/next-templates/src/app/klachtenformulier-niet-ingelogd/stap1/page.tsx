@@ -24,6 +24,7 @@ import {
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { FormNav } from '@/components/FormNav/FormNav';
+import { PreFooterNav } from '@/components/PreFooterNav/PreFooterNav';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { IconX, IconArrowLeft, IconChevronRight } from '@tabler/icons-react';
 
@@ -62,88 +63,118 @@ export default function home() {
             <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
 
             <Heading2>Uw klacht</Heading2>
+
             <form>
-              <FormLabel></FormLabel>
-              <Fieldset>
-                <FormField>
-                  <FieldsetLegend>Weet u voor welke afdeling de medewerker werkt? *</FieldsetLegend>
-                  {/* TODO: should only the radiobutton be clickable? Or paragraph as well? */}
-                  <div className="voorbeeld-radio-buttons">
-                    <div className="voorbeeld-radio-button">
-                      <RadioButton></RadioButton>
-                      <Paragraph>
-                        Publiekzaken: bijvoorbeeld paspoort of trouwen of de wachttijd als u ons belt.
-                      </Paragraph>
-                    </div>
-
-                    <div className="voorbeeld-radio-button">
-                      <RadioButton></RadioButton>
-                      <Paragraph>
-                        Stadsbedrijven: bijvoorbeeld ophalen afval, parken en bomen of sportplekken.
-                      </Paragraph>
-                    </div>
-
-                    <div className="voorbeeld-radio-button">
-                      <RadioButton></RadioButton>
-                      <Paragraph>Ruimte: bijvoorbeeld verkeer, bouwen, energie en klimaat of speelruimte.</Paragraph>
-                    </div>
-
-                    <div className="voorbeeld-radio-button">
-                      <RadioButton></RadioButton>
-                      <Paragraph>Werk en Inkomen: bijvoorbeeld bijstand, schulddienstverlening of Wmo.</Paragraph>
-                    </div>
-
-                    <div className="voorbeeld-radio-button">
-                      <RadioButton></RadioButton>
-                      <Paragraph>
-                        Vergunningen, Toezicht en Handhaving: bijvoorbeeld handhavers (boa’s) parkeerboetes, of
-                        vergunningen.
-                      </Paragraph>
-                    </div>
-
-                    <div className="voorbeeld-radio-button">
-                      <RadioButton></RadioButton>
-                      <Paragraph>Anders of ik weet het niet</Paragraph>
-                    </div>
-                  </div>
+              <Fieldset role="radiogroup">
+                <FieldsetLegend>Weet u voor welke afdeling de medewerker werkt? *</FieldsetLegend>
+                <FormField type="radio">
+                  <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                    <FormLabel htmlFor="publiekzaken" type="radio">
+                      <RadioButton
+                        name="afdeling"
+                        id="publiekzaken"
+                        className="utrecht-form-field__input"
+                      ></RadioButton>
+                      Publiekzaken: bijvoorbeeld paspoort of trouwen of de wachttijd als u ons belt.
+                    </FormLabel>
+                  </Paragraph>
                 </FormField>
 
-                <FormField>
-                  <FieldsetLegend>Over wie gaat uw klacht?</FieldsetLegend>
-                  <FormFieldDescription className="utrecht-form-field-description-color">
-                    Bijvoorbeeld de naam van een medewerker of een afdeling.
-                  </FormFieldDescription>
-                  <Textbox></Textbox>
+                <FormField type="radio">
+                  <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                    <FormLabel htmlFor="stadsbedrijven" type="radio">
+                      <RadioButton
+                        name="afdeling"
+                        id="stadsbedrijven"
+                        className="utrecht-form-field__input"
+                      ></RadioButton>
+                      Stadsbedrijven: bijvoorbeeld ophalen afval, parken en bomen of sportplekken.
+                    </FormLabel>
+                  </Paragraph>
                 </FormField>
 
-                <FormField>
-                  <FieldsetLegend>Wat is uw klacht? *</FieldsetLegend>
-                  {/* <FormFieldDescription></FormFieldDescription> */}
-                  {/* Deze staat er in het ontwerp niet bij, is die niet nodig? 
-                Wellicht een hint voor de gebruiker: omschrijf uw klacht in maximaal 140 karakters */}
-                  <Textarea></Textarea>
+                <FormField type="radio">
+                  <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                    <FormLabel htmlFor="ruimte" type="radio">
+                      <RadioButton name="afdeling" id="ruimte" className="utrecht-form-field__input"></RadioButton>
+                      Ruimte: bijvoorbeeld verkeer, bouwen, energie en klimaat of speelruimte.
+                    </FormLabel>
+                  </Paragraph>
                 </FormField>
 
-                <FormField>
-                  <FieldsetLegend>Wanneer gebeurde dit? *</FieldsetLegend>
-                  <FormFieldDescription>Geef de datum(s) door waarover uw klacht gaat.</FormFieldDescription>
-                  <Textarea></Textarea>
+                <FormField type="radio">
+                  <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                    <FormLabel htmlFor="werk-en-inkomen" type="radio">
+                      <RadioButton
+                        name="afdeling"
+                        id="werk-en-inkomen"
+                        className="utrecht-form-field__input"
+                      ></RadioButton>
+                      Werk en Inkomen: bijvoorbeeld bijstand, schulddienstverlening of Wmo.
+                    </FormLabel>
+                  </Paragraph>
                 </FormField>
 
-                <FormField>
-                  <FieldsetLegend>Hoe laat?</FieldsetLegend>
-                  <FormFieldDescription>Geef het tijdstip(en) door waarover uw klacht gaat.</FormFieldDescription>
-                  <Textarea></Textarea>
+                <FormField type="radio">
+                  <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                    <FormLabel htmlFor="vergunning-toezicht-handhaving" type="radio">
+                      <RadioButton
+                        name="afdeling"
+                        id="vergunning-toezicht-handhaving"
+                        className="utrecht-form-field__input"
+                      ></RadioButton>
+                      Vergunningen, Toezicht en Handhaving: bijvoorbeeld handhavers (boa’s) parkeerboetes, of
+                      vergunningen.
+                    </FormLabel>
+                  </Paragraph>
                 </FormField>
 
-                <FormField>
-                  <FieldsetLegend>Wat wilt u dat wij doen om uw klacht op te lossen? *</FieldsetLegend>
-                  {/* <FormFieldDescription></FormFieldDescription> */}
-                  {/* Deze staat er in het ontwerp niet bij, is die niet nodig? 
-                Wellicht een hint voor de gebruiker: omschrijf de gewenste oplossing in maximaal 140 karakters */}
-                  <Textarea></Textarea>
+                <FormField type="radio">
+                  <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                    <FormLabel htmlFor="anders-ik-weet-het-niet" type="radio">
+                      <RadioButton
+                        name="afdeling"
+                        id="anders-ik-weet-het-niet"
+                        className="utrecht-form-field__input"
+                      ></RadioButton>
+                      Anders of ik weet het niet
+                    </FormLabel>
+                  </Paragraph>
                 </FormField>
               </Fieldset>
+
+              <FormField>
+                <FormLabel htmlFor="over-wie">Over wie gaat uw klacht?</FormLabel>
+
+                <FormFieldDescription>Bijvoorbeeld de naam van een medewerker of een afdeling.</FormFieldDescription>
+                <Textbox id="over-wie"></Textbox>
+              </FormField>
+
+              <FormField>
+                <FormLabel htmlFor="uw-klacht">Wat is uw klacht? *</FormLabel>
+                <FormFieldDescription>Beschrijf uw klacht in maximaal 140 karakters.</FormFieldDescription>
+                {/* Deze staat er in het ontwerp niet bij, hint voor gebruiker is prettig (check: 140?)*/}
+                <Textarea id="uw-klacht"></Textarea>
+              </FormField>
+
+              <FormField>
+                <FormLabel htmlFor="wanneer">Wanneer gebeurde dit? *</FormLabel>
+                <FormFieldDescription>Geef de datum(s) door waarover uw klacht gaat.</FormFieldDescription>
+                <Textarea id="wanneer"></Textarea>
+              </FormField>
+
+              <FormField>
+                <FormLabel htmlFor="hoe-laat">Hoe laat?</FormLabel>
+                <FormFieldDescription>Geef het tijdstip(en) door waarover uw klacht gaat.</FormFieldDescription>
+                <Textarea id="hoe-laat"></Textarea>
+              </FormField>
+
+              <FormField>
+                <FormLabel htmlFor="gewenste-oplossing">Wat wilt u dat wij doen om uw klacht op te lossen? *</FormLabel>
+                <FormFieldDescription>Beschrijf de gewenste oplossing in maximaal 140 karakters.</FormFieldDescription>
+                {/* Deze staat er in het ontwerp niet bij, hint voor gebruiker is prettig (check: 140?)*/}
+                <Textarea id="gewenste-oplossing"></Textarea>
+              </FormField>
             </form>
 
             <ButtonLink href="/klachtenformulier-niet-ingelogd/stap2" appearance="primary-action-button">
@@ -156,7 +187,8 @@ export default function home() {
               Stoppen met het formulier
             </Link>
 
-            {/* TODO: import <PreFooterNav/>  */}
+            {/* TODO: import <PreFooterNav/> : werkt niet (styling + wat vind u van deze pagina moet eruit) */}
+            {/* TODO: variant PreFooterNav voor formulier maken? */}
           </div>
           <div className="voorbeeld-formnav__stap1">
             <FormNav></FormNav>
