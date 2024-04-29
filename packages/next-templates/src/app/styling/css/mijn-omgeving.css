@@ -15,5 +15,5 @@
 .voorbeeld-toptask-layout {
   display: flex;
   justify-content: space-between;
-  gap: var(--voorbeeld-space-block-dog);
+  gap: var(--voorbeeld-space-column-elephant);
 }
