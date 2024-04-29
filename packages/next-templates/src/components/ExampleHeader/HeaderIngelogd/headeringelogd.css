@@ -1,0 +1,193 @@
+.utrecht-page-header {
+  display: flex;
+  justify-content: center;
+  --utrecht-page-padding-inline-start: 0;
+  --utrecht-page-padding-inline-end: 0;
+}
+
+.example-page-header__content {
+  inline-size: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  padding-inline: var(--voorbeeld-space-inline-mouse);
+  padding-block: var(--voorbeeld-space-block-mouse);
+  max-inline-size: var(--example-page-header-content-max-inline-size);
+}
+
+.example--logo {
+  text-align: center;
+}
+
+/* block-size moet nog voor het search component toegevoegd worden */
+.example--header-items {
+  display: flex;
+  height: 48px;
+  justify-content: center;
+}
+.example--search-box {
+  display: flex;
+}
+.example--header-links-container {
+  align-items: center;
+  display: flex;
+}
+
+.example--header-links {
+  align-items: center;
+  display: flex;
+  margin-inline-end: var(--voorbeeld-space-inline-dog);
+  text-decoration-skip-ink: none;
+}
+.example--header-user-icon {
+  margin-inline-end: var(--voorbeeld-space-inline-ant);
+}
+
+.example--header-text-box {
+  margin-inline: 8px;
+}
+
+.example--header-burger-menu-button {
+  background-color: transparent;
+  border-width: 0;
+  color: var(--utrecht-interaction-color);
+  cursor: pointer;
+  display: none;
+}
+.example--header-burger-menu-button:focus-visible {
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px var(--voorbeeld-color-white);
+  outline: 3px dotted var(--voorbeeld-color-black);
+}
+
+.example--header-bar {
+  background-color: var(--voorbeeld-decoration-background-color);
+  border-radius: 10px;
+  display: block;
+  height: 2px;
+  margin-block: 5px;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+  width: 25px;
+}
+
+.example--header-search-subtle-button {
+  display: none;
+}
+
+.example--header-popover-menu {
+  --utrecht-backdrop-opacity: 0.5%;
+
+  border: none;
+  height: 100%;
+  margin-block: 0;
+  max-height: 100%;
+  padding-inline: 0;
+  right: 50%;
+  width: 50%;
+}
+
+.example--header-popover-menu::backdrop {
+  --utrecht-backdrop-background-color: rgb(0 0 0 / 50%);
+}
+
+.example--popover-close {
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--voorbeeld-color-white);
+  font-size: 1em;
+  margin-block: var(--voorbeeld-space-block-mouse);
+  margin-inline: var(--voorbeeld-space-inline-mouse);
+}
+
+.example--popover-close:hover {
+  --_utrecht-button-hover-color: var(--voorbeeld-color-white);
+  --_utrecht-button-hover-background-color: var(--voorbeeld-color-violet-900);
+}
+
+.example--header-xlogo {
+  margin-inline-end: var(--voorbeeld-space-inline-beetle);
+}
+.example--header-popover-container-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (width <= 1185px) {
+  .example-page-header__content {
+    border-bottom: solid 4px var(--voorbeeld-decoration-color);
+    margin-inline: auto;
+    padding-inline: var(--voorbeeld-space-inline-beetle);
+    padding-block: var(--voorbeeld-space-block-beetle);
+  }
+
+  .example--header-popover-menu {
+    background-color: var(--voorbeeld-decoration-background-color);
+  }
+
+  .example--header-links {
+    --utrecht-link-visited-color: var(--voorbeeld-color-white);
+
+    color: var(--voorbeeld-color-white);
+    margin-inline: 0;
+    padding-block: var(--voorbeeld-space-block-snail);
+    padding-inline: var(--voorbeeld-space-inline-mouse);
+  }
+
+  .example--header-links:hover {
+    background-color: var(--voorbeeld-color-violet-900);
+    color: var(--voorbeeld-color-white);
+  }
+
+  .example--header-popover-container-links .example--header-links {
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .example--header-user {
+    margin-block: 1.5em;
+  }
+
+  .example--header-search-secondary-button {
+    display: none;
+  }
+
+  .example--header-search-subtle-button {
+    display: flex;
+  }
+
+  .example-nav-bar,
+  .example--header-links-container,
+  .example--header-text-box {
+    /* stylelint-disable-next-line declaration-no-important */
+    display: none !important;
+  }
+
+  .example--header-burger-menu-button {
+    align-items: center;
+    display: flex;
+    font-size: var(--voorbeeld-space-inline-mouse);
+  }
+
+  .example--header-burger-bar-container {
+    margin-inline-end: 4px;
+  }
+
+  .example--header-burger-menu-button.example--header-active .example--header-bar:nth-child(2) {
+    opacity: 0%;
+  }
+  .example--header-burger-menu-button.example--header-active .example--header-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .example--header-burger-menu-button.example--header-active .example--header-burger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media (width <= 400px) {
+  .example--header-popover-menu {
+    width: 75%;
+  }
+}
