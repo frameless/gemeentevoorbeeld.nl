@@ -1,15 +1,8 @@
-/* .voorbeeld-sidenav-layout {
-  display: flex;
-  flex-direction: column;
-  margin-right: var(--voorbeeld-space-block-rabbit);
-} */
-
 .voorbeeld-main-layout {
   margin-inline: auto;
   padding-inline: var(--voorbeeld-space-block-cat);
   max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.2);
   inline-size: 100%;
-  /* box-sizing: border-box; */
 }
 
 .voorbeeld-toptask-layout {
