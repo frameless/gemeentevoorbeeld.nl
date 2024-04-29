@@ -9,6 +9,10 @@
   margin: var(--voorbeeld-space-block-rabbit);
 }
 
+.icon-chevron-right {
+  color: var(--voorbeeld-decoration-color);
+}
+
 /* DETAILS */
 details {
   color: var(--utrecht-paragraph-color);
@@ -50,6 +54,11 @@ details p {
 .voorbeeld-link-stoppen {
   display: flex;
   margin-block-start: var(--voorbeeld-space-row-dog);
+}
+
+.voorbeeld-buttongroup-flex {
+  display: flex;
+  flex-direction: column;
 }
 
 /* MEDIA QUERIES */

@@ -1,17 +1,20 @@
 'use client';
 
 import {
+  Alert,
   Article,
   ButtonLink,
+  ButtonGroup,
   BreadcrumbNav,
   BreadcrumbNavLink,
+  BreadcrumbNavSeparator,
   Heading1,
   Heading2,
+  Icon,
   Link,
   Page,
   PageContent,
   Paragraph,
-  SpotlightSection,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
@@ -19,7 +22,7 @@ import {
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { IconCircleCheck, IconChevronRight, IconX } from '@tabler/icons-react';
+import { IconCircleCheck, IconChevronRight, IconChevronUp, IconDownload, IconPrinter } from '@tabler/icons-react';
 
 import { useEffect } from 'react';
 
@@ -43,18 +46,29 @@ export default function home() {
       <ExampleNavigation />
 
       <PageContent className="voorbeeld-page-content-flex">
-        <BreadcrumbNav label="Kruimelpad">
-          <BreadcrumbNavLink href="/">Home</BreadcrumbNavLink>
-          <IconChevronRight></IconChevronRight>
-          <BreadcrumbNavLink href="/productpagina-klachtenformulier">Product pagina</BreadcrumbNavLink>
+        <BreadcrumbNav label="Kruimelpad" className="voorbeeld-breadcrumb-nav">
+          <BreadcrumbNavLink href="/" index={0} rel="home">
+            Home
+          </BreadcrumbNavLink>
+          <BreadcrumbNavSeparator>
+            <IconChevronRight className="icon-chevron-right" />
+          </BreadcrumbNavSeparator>
+          <BreadcrumbNavLink href="/productpagina-klachtenformulier" index={1} rel="up">
+            Producten
+          </BreadcrumbNavLink>
         </BreadcrumbNav>
 
         <Article id="main" className="voorbeeld-article-space ">
-          <SpotlightSection>
-            <IconCircleCheck />
-            <Heading1>Formulier is succesvol verstuurd</Heading1>
+          <Alert type="ok">
+            <Heading1>
+              <Icon>
+                <IconCircleCheck />
+              </Icon>
+              Formulier is succesvol verstuurd
+            </Heading1>
             <Paragraph>Referentienummer OF-3V3RGM</Paragraph>
-          </SpotlightSection>
+            {/* Zaaknummer: {storedData?.code} */}
+          </Alert>
 
           <Heading2>Wat gaat er nu gebeuren?</Heading2>
 
@@ -63,11 +77,33 @@ export default function home() {
             <UnorderedListItem>U krijgt een e-mail als er nieuws is. Dit kan X dagen duren</UnorderedListItem>
           </UnorderedList>
 
-          <Link href="/404">Download een kopie met ingevulde gegevens over deze klacht (pdf, 314kB) </Link>
-          <Link href="/404">Print uw aanvraag</Link>
+          <ButtonGroup className="voorbeeld-buttongroup-flex">
+            <Link href="/404">
+              <Icon>
+                <IconDownload />
+              </Icon>
+              Download een kopie met ingevulde gegevens over deze klacht (pdf, 314kB){' '}
+            </Link>
+            <Link href="/404">
+              <Icon>
+                <IconPrinter />
+              </Icon>
+              Print uw aanvraag
+            </Link>
+          </ButtonGroup>
 
-          <ButtonLink href="/">Formulier afsluiten</ButtonLink>
+          <ButtonGroup>
+            <ButtonLink href="/" appearance="primary-action-button">
+              Formulier afsluiten
+            </ButtonLink>
+          </ButtonGroup>
 
+          <Link>
+            <Icon>
+              <IconChevronUp />
+            </Icon>
+            Naar boven
+          </Link>
           {/* PreFooterNav variant? */}
         </Article>
       </PageContent>
