@@ -13,7 +13,6 @@ import {
   Paragraph,
 } from '@utrecht/component-library-react';
 import { UtrechtDigidLogo } from '@utrecht/web-component-library-react';
-import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { Fieldset, FieldsetLegend, FormField, FormLabel, RadioButton } from '@utrecht/component-library-react';
 
 import { IconArrowLeft } from '@tabler/icons-react';
