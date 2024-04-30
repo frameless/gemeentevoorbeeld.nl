@@ -175,12 +175,16 @@ export default function home() {
                 {/* Deze staat er in het ontwerp niet bij, hint voor gebruiker is prettig (check: 140?)*/}
                 <Textarea id="gewenste-oplossing"></Textarea>
               </FormField>
-            </form>
 
-            <ButtonLink href="/klachtenformulier-niet-ingelogd/stap2" appearance="primary-action-button">
-              Volgende stap
-              <IconChevronRight />
-            </ButtonLink>
+              <ButtonLink
+                type="submit"
+                href="/klachtenformulier-niet-ingelogd/stap2"
+                appearance="primary-action-button"
+              >
+                Volgende stap
+                <IconChevronRight />
+              </ButtonLink>
+            </form>
 
             <Link href="/404" className="voorbeeld-link-stoppen">
               <IconX />
