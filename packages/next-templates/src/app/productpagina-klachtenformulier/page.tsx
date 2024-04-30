@@ -51,13 +51,13 @@ export default function home() {
         <BreadcrumbNavSeparator>
           <IconChevronRight className="icon-chevron-right" />
         </BreadcrumbNavSeparator>
-        <BreadcrumbNavLink href="/wmebv#" index={1} rel="contact">
+        <BreadcrumbNavLink href="/wmebv" index={1} rel="contact">
           Contact
         </BreadcrumbNavLink>
         <BreadcrumbNavSeparator>
           <IconChevronRight className="icon-chevron-right" />
         </BreadcrumbNavSeparator>
-        <BreadcrumbNavLink href="/404" index={2} rel="up">
+        <BreadcrumbNavLink href="/productpagina-klachtenformulier" index={2} rel="up">
           Producten
         </BreadcrumbNavLink>
       </BreadcrumbNav>
@@ -94,7 +94,7 @@ export default function home() {
               doorgeven van uw medische gegevens.
             </UnorderedListItem>
           </UnorderedList>
-          <ButtonLink href="/404" appearance="primary-action-button">
+          <ButtonLink href="/klachtenformulier-inloggen" appearance="primary-action-button">
             Ga naar het klachtenformulier
             <IconChevronRight />
           </ButtonLink>
