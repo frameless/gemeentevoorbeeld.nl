@@ -29,7 +29,7 @@ export const FormNav = () => (
       </UnorderedListItem>
       <Separator></Separator>
       <UnorderedListItem className="voorbeeld-form-nav__list-item">
-        <Link className="voorbeeld-form-nav__link" href="/404">
+        <Link className="voorbeeld-form-nav__link" href="/klachtenformulier-niet-ingelogd/stap4">
           Overzicht
         </Link>
       </UnorderedListItem>
