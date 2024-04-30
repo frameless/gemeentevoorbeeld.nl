@@ -1,8 +1,7 @@
 'use client';
 
-import { Heading2, Paragraph, LinkList } from '@utrecht/component-library-react';
-
-import '././card.css';
+import { Paragraph, LinkList } from '@utrecht/component-library-react';
+import './card.css';
 
 export const Card = () => (
   <section className="example-section">
