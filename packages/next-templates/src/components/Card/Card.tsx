@@ -9,7 +9,7 @@ export const Card = () => (
     <div className="example-card-group">
       <div className="example-card">
         <Paragraph>Vraag aan de gemeente</Paragraph>
-        <LinkList links={[{ href: './mijn-omgeving/mijn-zaken', children: 'Bekijk zaken' }]} />
+        <LinkList links={[{ href: './mijn-omgeving/mijn-zaken', children: 'Bekijk zaak' }]} />
       </div>
     </div>
   </section>
