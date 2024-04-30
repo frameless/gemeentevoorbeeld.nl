@@ -63,32 +63,15 @@ export default function Home() {
               <Sidenav>
                 <SidenavList>
                   <SidenavItem>
-                    <SidenavLink current href="/#">
+                    <SidenavLink current href="#">
                       Overzicht
                     </SidenavLink>
                   </SidenavItem>
                   <SidenavItem>
-                    <SidenavLink href="/#">Berichten</SidenavLink>
+                    <SidenavLink href="#">Berichten</SidenavLink>
                   </SidenavItem>
                   <SidenavItem>
-                    <SidenavLink href="/#">Mijn zaken</SidenavLink>
-                  </SidenavItem>
-                </SidenavList>
-              </Sidenav>
-
-              <Sidenav>
-                <SidenavList>
-                  <SidenavItem>
-                    <SidenavLink href="/#">Belastingzaken</SidenavLink>
-                  </SidenavItem>
-                  <SidenavItem>
-                    <SidenavLink href="/#">WOZ</SidenavLink>
-                  </SidenavItem>
-                  <SidenavItem>
-                    <SidenavLink href="/#">Parkeren</SidenavLink>
-                  </SidenavItem>
-                  <SidenavItem>
-                    <SidenavLink href="/#">Erfpacht</SidenavLink>
+                    <SidenavLink href="#">Mijn zaken</SidenavLink>
                   </SidenavItem>
                 </SidenavList>
               </Sidenav>
@@ -96,7 +79,24 @@ export default function Home() {
               <Sidenav>
                 <SidenavList>
                   <SidenavItem>
-                    <SidenavLink href="/#">Account</SidenavLink>
+                    <SidenavLink href="#">Belastingzaken</SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="#">WOZ</SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="#">Parkeren</SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="#">Erfpacht</SidenavLink>
+                  </SidenavItem>
+                </SidenavList>
+              </Sidenav>
+
+              <Sidenav>
+                <SidenavList>
+                  <SidenavItem>
+                    <SidenavLink href="#">Account</SidenavLink>
                   </SidenavItem>
                 </SidenavList>
               </Sidenav>
