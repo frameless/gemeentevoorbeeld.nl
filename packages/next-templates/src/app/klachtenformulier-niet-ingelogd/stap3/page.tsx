@@ -143,12 +143,12 @@ export default function home() {
                 <RadioButton></RadioButton>
                 <Paragraph>Nee, ik doe niet mee met een tevredenheidsonderzoek</Paragraph>
               </div>
-            </form>
 
-            <ButtonLink href="/klachtenformulier-niet-ingelogd/stap2" appearance="primary-action-button">
-              Volgende stap
-              <IconChevronRight />
-            </ButtonLink>
+              <ButtonLink type="submit" href="/404" appearance="primary-action-button">
+                Volgende stap
+                <IconChevronRight />
+              </ButtonLink>
+            </form>
 
             <Link href="/404" className="voorbeeld-link-stoppen">
               <IconX />
