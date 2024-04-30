@@ -73,7 +73,7 @@ export default function home() {
           <Heading2>Inloggen met DigiD</Heading2>
           <Paragraph>Log in met uw DigiD om verder te gaan.</Paragraph>
 
-          <div className="voorbeeld-button-group">
+          <div className="voorbeeld-buttonlink">
             <UtrechtDigidLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
             <ButtonLink href="/404" appearance="primary-action-button">
               Doe een klacht met DigiD
@@ -84,7 +84,7 @@ export default function home() {
           <Heading2>Inloggen met eHerkenning</Heading2>
           <Paragraph>Bent u ondernemer? Log dan in met uw eHerkenning om verder te gaan.</Paragraph>
 
-          <div className="voorbeeld-button-group">
+          <div className="voorbeeld-buttonlink">
             <UtrechtEherkenningLogo className="voorbeeld-digid-logo" aria-label="DigiD logo" role="img" />
             <ButtonLink href="/404" appearance="primary-action-button">
               Doe een klacht met eHerkenning
