@@ -149,9 +149,7 @@ export default function Home() {
               <Heading2>Mijn zaken</Heading2>
               <Card />
 
-              <ButtonGroup>
-                <Link href="./mijn-omgeving/mijn-zaken">Bekijk alle zaken</Link>
-              </ButtonGroup>
+              <Link href="./mijn-omgeving/mijn-zaken">Bekijk alle zaken</Link>
             </div>
           </Article>
         </PageContent>
