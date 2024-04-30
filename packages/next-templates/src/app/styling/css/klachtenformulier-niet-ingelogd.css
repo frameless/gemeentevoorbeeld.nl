@@ -56,9 +56,4 @@ details p {
   margin-block-start: var(--voorbeeld-space-row-dog);
 }
 
-.voorbeeld-buttongroup-flex {
-  display: flex;
-  flex-direction: column;
-}
-
 /* MEDIA QUERIES */
