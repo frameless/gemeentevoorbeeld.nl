@@ -19,7 +19,7 @@ export default function home() {
 
   return (
     <Page>
-      <PageContent>
+      <PageContent className="voorbeeld-page-content-flex">
         <Article id="main" className="voorbeeld-article-space">
           <Heading1 id={formHeadingId}>{stepLabel}</Heading1>
           <form action="./ingelogd/stap1" method="get" aria-labelledby={formHeadingId}>

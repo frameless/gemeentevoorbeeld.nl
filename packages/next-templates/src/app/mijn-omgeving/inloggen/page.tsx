@@ -37,7 +37,7 @@ export default function home() {
   return (
     <Page>
       <ExampleHeader />
-      <PageContent>
+      <PageContent className="voorbeeld-page-content-flex">
         <Article id="main" className="voorbeeld-article-space ">
           <form method="POST" action="/api/wmebv/choose-form">
             <ButtonGroup>
