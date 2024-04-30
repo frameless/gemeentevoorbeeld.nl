@@ -1,0 +1,22 @@
+.example-section {
+  margin-block-start: var(--voorbeeld-space-block-rabbit);
+}
+
+.example-card-group {
+  --example-card-border-width: var(--voorbeeld-border-width-sm,);
+  --example-card-border-color: var(--voorbeeld-color-dark-alpha-100);
+  --example-card-title-font-size: var(--voorbeeld-typography-font-size-xl);
+  --example-card-title-line-height: var(--voorbeeld-typography-line-height-lg);
+}
+
+.example-card {
+  border: var(--example-card-border-width) solid var(--example-card-border-color);
+  flex: 1 1 calc(50% - 64px);
+  padding-block-end: calc(2rem - var(--example-card-border-width));
+  padding-block-start: calc(1.5rem - var(--example-card-border-width));
+  padding-inline-end: calc(1.5rem - var(--example-card-border-width));
+  padding-inline-start: calc(1.5rem - var(--example-card-border-width));
+
+  border-radius: var(--voorbeeld-border-radius-md);
+  font-weight: var(--voorbeeld-typography-font-weight-bold);
+}
