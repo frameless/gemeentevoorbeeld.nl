@@ -147,7 +147,7 @@
   }
 
   .example--header-user {
-    margin-block: 1.5em;
+    margin-block: var(voorbeeld-space-block-rabbit);
   }
 
   .example--header-search-secondary-button {
@@ -172,7 +172,7 @@
   }
 
   .example--header-burger-bar-container {
-    margin-inline-end: 4px;
+    margin-inline-end: var(voorbeeld-space-inline-ant);
   }
 
   .example--header-burger-menu-button.example--header-active .example--header-bar:nth-child(2) {
