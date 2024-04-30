@@ -10,3 +10,7 @@
   justify-content: space-between;
   gap: var(--voorbeeld-space-column-elephant);
 }
+
+.voorbeeld-sidenav-spacing {
+  margin-bottom: var(--voorbeeld-space-row-rat);
+}
