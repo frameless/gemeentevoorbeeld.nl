@@ -77,7 +77,7 @@ export default function home() {
             <UnorderedListItem>U krijgt een e-mail als er nieuws is. Dit kan X dagen duren</UnorderedListItem>
           </UnorderedList>
 
-          <ButtonGroup className="voorbeeld-buttongroup-flex">
+          <ButtonGroup direction="column">
             <Link href="/404">
               <Icon>
                 <IconDownload />
@@ -90,21 +90,19 @@ export default function home() {
               </Icon>
               Print uw aanvraag
             </Link>
-          </ButtonGroup>
 
-          <ButtonGroup>
             <ButtonLink href="/" appearance="primary-action-button">
               Formulier afsluiten
             </ButtonLink>
-          </ButtonGroup>
 
-          <Link>
-            <Icon>
-              <IconChevronUp />
-            </Icon>
-            Naar boven
-          </Link>
-          {/* PreFooterNav variant? */}
+            {/* deze moet nog naar rechts op de pagina */}
+            <Link>
+              <Icon>
+                <IconChevronUp />
+              </Icon>
+              Naar boven
+            </Link>
+          </ButtonGroup>
         </Article>
       </PageContent>
       <ExampleFooter />

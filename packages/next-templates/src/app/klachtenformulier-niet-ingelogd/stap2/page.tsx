@@ -3,6 +3,7 @@
 import {
   Article,
   ButtonLink,
+  ButtonGroup,
   BreadcrumbNav,
   BreadcrumbNavLink,
   Fieldset,
@@ -13,6 +14,7 @@ import {
   Heading1,
   Heading2,
   Heading3,
+  Icon,
   Link,
   Page,
   PageContent,
@@ -25,7 +27,7 @@ import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { FormNav } from '@/components/FormNav/FormNav';
-import { IconChevronRight, IconX, IconArrowLeft } from '@tabler/icons-react';
+import { IconChevronUp, IconChevronRight, IconX, IconArrowLeft } from '@tabler/icons-react';
 
 import { useEffect } from 'react';
 // import { SP } from 'next/dist/shared/lib/utils';
@@ -174,23 +176,29 @@ export default function home() {
                 </FormField>
               </Fieldset>
 
-              <ButtonLink
-                type="submit"
-                href="/klachtenformulier-niet-ingelogd/stap3"
-                appearance="primary-action-button"
-              >
-                Volgende stap
-                <IconChevronRight />
-              </ButtonLink>
+              <ButtonGroup direction="column">
+                <ButtonLink
+                  type="submit"
+                  href="/klachtenformulier-niet-ingelogd/stap3"
+                  appearance="primary-action-button"
+                >
+                  Volgende stap
+                  <IconChevronRight />
+                </ButtonLink>
+
+                <Link href="/404" className="voorbeeld-link-stoppen">
+                  <IconX></IconX>
+                  Stoppen met het formulier
+                </Link>
+              </ButtonGroup>
             </form>
 
-            <Link href="/404" className="voorbeeld-link-stoppen">
-              <IconX />
-              Stoppen met het formulier
+            <Link href="#">
+              <IconChevronUp></IconChevronUp>
+              Naar boven
             </Link>
-
-            {/* TODO: <PreFooterNav/> */}
           </div>
+
           <div className="voorbeeld-formnav__stap2">
             <FormNav></FormNav>
           </div>

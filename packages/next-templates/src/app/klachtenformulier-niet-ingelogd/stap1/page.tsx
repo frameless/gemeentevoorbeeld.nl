@@ -3,6 +3,7 @@
 import {
   Article,
   ButtonLink,
+  ButtonGroup,
   BreadcrumbNav,
   BreadcrumbNavLink,
   Fieldset,
@@ -26,7 +27,7 @@ import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigat
 import { FormNav } from '@/components/FormNav/FormNav';
 import { PreFooterNav } from '@/components/PreFooterNav/PreFooterNav';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { IconX, IconArrowLeft, IconChevronRight } from '@tabler/icons-react';
+import { IconChevronUp, IconX, IconArrowLeft, IconChevronRight } from '@tabler/icons-react';
 
 import { useEffect } from 'react';
 
@@ -176,24 +177,29 @@ export default function home() {
                 <Textarea id="gewenste-oplossing"></Textarea>
               </FormField>
 
-              <ButtonLink
-                type="submit"
-                href="/klachtenformulier-niet-ingelogd/stap2"
-                appearance="primary-action-button"
-              >
-                Volgende stap
-                <IconChevronRight />
-              </ButtonLink>
+              <ButtonGroup direction="column">
+                <ButtonLink
+                  type="submit"
+                  href="/klachtenformulier-niet-ingelogd/stap2"
+                  appearance="primary-action-button"
+                >
+                  Volgende stap
+                  <IconChevronRight />
+                </ButtonLink>
+
+                <Link href="/404" className="voorbeeld-link-stoppen">
+                  <IconX></IconX>
+                  Stoppen met het formulier
+                </Link>
+              </ButtonGroup>
             </form>
 
-            <Link href="/404" className="voorbeeld-link-stoppen">
-              <IconX />
-              Stoppen met het formulier
+            <Link href="#">
+              <IconChevronUp></IconChevronUp>
+              Naar boven
             </Link>
-
-            {/* TODO: import <PreFooterNav/> : werkt niet (styling + wat vind u van deze pagina moet eruit) */}
-            {/* TODO: variant PreFooterNav voor formulier maken? */}
           </div>
+
           <div className="voorbeeld-formnav__stap1">
             <FormNav></FormNav>
           </div>
