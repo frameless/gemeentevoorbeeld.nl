@@ -18,6 +18,7 @@ import { Sidenav, SidenavItem, SidenavLink, SidenavList } from '@gemeente-denhaa
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
+import { Card } from '@/components/Card/Card';
 // import { HeaderIngelogd } from '@/components/ExampleHeader/HeaderIngelogd/HeaderIngelogd';
 
 import {
@@ -79,6 +80,7 @@ export default function Home() {
                       Overzicht
                     </SidenavLink>
                   </SidenavItem>
+
                   <SidenavItem>
                     <SidenavLink href="#">
                       <IconInbox />
@@ -144,12 +146,9 @@ export default function Home() {
               <Heading2>Wat moet ik regelen?</Heading2>
               <Paragraph>U hoeft op dit moment niets te regelen.</Paragraph>
               <Heading2>Mijn zaken</Heading2>
-              <Paragraph>
-                <strong>Vraag aan de gemeente</strong>
-              </Paragraph>
-              <Link href="./mijn-omgeving/mijn-zaken">Bekijk zaken</Link>
 
-              <Link href="./mijn-omgeving/mijn-zaken">Bekijk alle zaken</Link>
+              <Card />
+              {/* <Link href="./mijn-omgeving/mijn-zaken">Bekijk alle zaken</Link> */}
             </div>
           </Article>
         </PageContent>
