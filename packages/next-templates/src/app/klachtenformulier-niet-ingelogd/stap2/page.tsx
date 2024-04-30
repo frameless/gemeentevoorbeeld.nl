@@ -18,11 +18,7 @@ import {
   PageContent,
   Paragraph,
   RadioButton,
-  Separator,
   Textbox,
-  Textarea,
-  UnorderedList,
-  UnorderedListItem,
 } from '@utrecht/component-library-react';
 
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
@@ -67,42 +63,126 @@ export default function home() {
             <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
 
             <Heading2>Uw gegevens</Heading2>
+
             <form>
-              <FormField>
+              <Fieldset>
                 <FieldsetLegend>Bent u een persoon of een bedrijf?</FieldsetLegend>
-                <div className="voorbeeld-radio-button">
-                  <RadioButton></RadioButton>
-                  <Paragraph>Persoon</Paragraph>
-                </div>
-                <div className="voorbeeld-radio-button">
-                  <RadioButton></RadioButton>
-                  <Paragraph>Bedrijf</Paragraph>
-                </div>
-              </FormField>
+                <FormField type="radio">
+                  <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                    <FormLabel htmlFor="persoon" type="radio">
+                      <RadioButton
+                        name="persoon-of-bedrijf"
+                        id="persoon"
+                        className="utrecht-form-field__input"
+                      ></RadioButton>
+                      Persoon
+                    </FormLabel>
+                  </Paragraph>
+                </FormField>
 
-              <Heading3>Persoonsgegevens</Heading3>
+                <FormField type="radio">
+                  <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
+                    <FormLabel htmlFor="bedrijf" type="radio">
+                      <RadioButton
+                        name="persoon-of-bedrijf"
+                        id="bedrijf"
+                        className="utrecht-form-field__input"
+                      ></RadioButton>
+                      Bedrijf
+                    </FormLabel>
+                  </Paragraph>
+                </FormField>
+              </Fieldset>
 
-              <FormField>
-                <FieldsetLegend>Voorletter(s)</FieldsetLegend>
-                <Textbox></Textbox>
-              </FormField>
+              {/* staat in figma niet in fieldset - wel gedaan want h3 per sectie in form - h3 in fieldsetlegend */}
+              <Fieldset>
+                <FieldsetLegend>
+                  <Heading3>Persoonsgegevens</Heading3>
+                </FieldsetLegend>
+                <FormField>
+                  <FormLabel htmlFor="voorletter">Voorletter(s)</FormLabel>
+                  <FormFieldDescription></FormFieldDescription>
+                  {/* zonder formfielddescription komt textbox naast formlabel te staan, met descrpt. eronder?  */}
+                  <Textbox id="voorletter"></Textbox>
+                  {/* is in Figma een korte textbox, bestaat die optie? */}
+                </FormField>
 
-              <FormField>
-                <FieldsetLegend>Tussenvoegsel(s)</FieldsetLegend>
-                <Textbox></Textbox>
-              </FormField>
+                <FormField>
+                  <FormLabel htmlFor="tussenvoegsel">Tussenvoegsel(s)</FormLabel>
+                  <FormFieldDescription></FormFieldDescription>
+                  <Textbox id="tussenvoegsel"></Textbox>
+                </FormField>
 
-              <FormField>
-                <FieldsetLegend>Achternaam</FieldsetLegend>
-                <Textbox></Textbox>
-              </FormField>
+                <FormField>
+                  <FormLabel htmlFor="achternaam">Achternaam</FormLabel>
+                  <FormFieldDescription></FormFieldDescription>
+                  <Textbox id="achternaam"></Textbox>
+                </FormField>
+              </Fieldset>
 
-              <Heading3>Adresgegevens</Heading3>
+              <Fieldset>
+                <FieldsetLegend>
+                  <Heading3>Adresgegevens</Heading3>
+                </FieldsetLegend>
+
+                <FormField>
+                  <FormLabel htmlFor="postcode">Postcode</FormLabel>
+                  <FormFieldDescription></FormFieldDescription>
+                  <Textbox id="postcode"></Textbox>
+                </FormField>
+
+                <FormField>
+                  <FormLabel htmlFor="huisnummer">Huisnummer</FormLabel>
+                  <FormFieldDescription></FormFieldDescription>
+                  <Textbox id="huisnummer"></Textbox>
+                </FormField>
+
+                <FormField>
+                  <FormLabel htmlFor="huisletter">Huisletter</FormLabel>
+                  <FormFieldDescription></FormFieldDescription>
+                  <Textbox id="huisletter"></Textbox>
+                </FormField>
+
+                <FormField>
+                  <FormLabel htmlFor="straatnaam">Straatnaam</FormLabel>
+                  <FormFieldDescription></FormFieldDescription>
+                  <Textbox id="straatnaam"></Textbox>
+                </FormField>
+
+                <FormField>
+                  <FormLabel htmlFor="woonplaats">Woonplaats</FormLabel>
+                  <FormFieldDescription></FormFieldDescription>
+                  <Textbox id="woonplaats"></Textbox>
+                </FormField>
+              </Fieldset>
+
+              <Fieldset>
+                <FieldsetLegend>
+                  <Heading3>Contactgegevens</Heading3>
+                </FieldsetLegend>
+
+                <FormField>
+                  <FormLabel htmlFor="telefoonnummer">Telefoonnummer</FormLabel>
+                  <FormFieldDescription></FormFieldDescription>
+                  <Textbox id="woonplaats"></Textbox>
+                </FormField>
+
+                <FormField>
+                  <FormLabel htmlFor="emailadres">E-mailadres</FormLabel>
+                  <FormFieldDescription></FormFieldDescription>
+                  <Textbox id="emailadres"></Textbox>
+                </FormField>
+              </Fieldset>
+
+              <ButtonLink
+                type="submit"
+                href="/klachtenformulier-niet-ingelogd/stap3"
+                appearance="primary-action-button"
+              >
+                Volgende stap
+                <IconChevronRight />
+              </ButtonLink>
             </form>
-            <ButtonLink href="/klachtenformulier-niet-ingelogd/stap2" appearance="primary-action-button">
-              Volgende stap
-              <IconChevronRight />
-            </ButtonLink>
 
             <Link href="/404" className="voorbeeld-link-stoppen">
               <IconX />
