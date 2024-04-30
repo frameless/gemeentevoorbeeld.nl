@@ -5,24 +5,14 @@ import IconChevronRight from '../../app/styling/assets/chevronRight.svg';
 // import clsx from 'clsx';
 // import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 // import { UtrechtIcon } from '@utrecht/web-component-library-react';
-// import './pre-footer-nav.css';
+import '././card.css';
 
 export const Card = () => (
   <section className="example-section">
-    <Heading2>Zelf regelen</Heading2>
     <div className="example-card-group">
       <div className="example-card">
-        <div className="example-card__icon">
-          <IconChevronRight />
-        </div>
-        <Paragraph className="example-card__title">Pasport vernieuwen of aanvragen</Paragraph>
-        <LinkList
-          icon={() => <IconChevronRight />}
-          links={[
-            { href: '#', children: 'Direct regelen' },
-            { href: '#', children: 'Meer informatie op Rotterdam.nl' },
-          ]}
-        />
+        <Paragraph>Vraag aan de gemeente</Paragraph>
+        <LinkList links={[{ href: './mijn-omgeving/mijn-zaken', children: 'Bekijk zaken' }]} />
       </div>
     </div>
   </section>
