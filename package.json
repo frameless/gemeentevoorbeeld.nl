@@ -10,7 +10,7 @@
   "private": true,
   "engines": {
     "node": "20",
-    "pnpm": "8"
+    "pnpm": "8 || 9"
   },
   "workspaces": [
     "./packages/*",
