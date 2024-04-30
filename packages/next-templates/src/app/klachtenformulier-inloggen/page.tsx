@@ -18,6 +18,7 @@ import { UtrechtDigidLogo, UtrechtEherkenningLogo } from '@utrecht/web-component
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
+import { PreFooterNav } from '@/components/PreFooterNav/PreFooterNav';
 import { IconChevronRight } from '@tabler/icons-react';
 
 import '@utrecht/design-tokens/dist/index.css';
@@ -48,19 +49,19 @@ export default function home() {
         <BreadcrumbNavSeparator>
           <IconChevronRight className="icon-chevron-right" />
         </BreadcrumbNavSeparator>
-        <BreadcrumbNavLink href="/wmebv#" index={1} rel="contact">
+        <BreadcrumbNavLink href="/wmebv" index={1} rel="contact">
           Contact
         </BreadcrumbNavLink>
         <BreadcrumbNavSeparator>
           <IconChevronRight className="icon-chevron-right" />
         </BreadcrumbNavSeparator>
-        <BreadcrumbNavLink href="/404" index={2} rel="up">
+        <BreadcrumbNavLink href="/productpagina-klachtenformulier" index={2} rel="up">
           Producten
         </BreadcrumbNavLink>
         <BreadcrumbNavSeparator>
           <IconChevronRight className="icon-chevron-right" />
         </BreadcrumbNavSeparator>
-        <BreadcrumbNavLink href="/404" index={3} rel="up">
+        <BreadcrumbNavLink href="/klachtenformulier-inloggen" index={3} rel="up">
           Inloggen
         </BreadcrumbNavLink>
       </BreadcrumbNav>
@@ -96,12 +97,12 @@ export default function home() {
             Heeft u geen DigiD, eHerkenning of wilt u liever niet inloggen? Ga dan verder zonder inloggen.
           </Paragraph>
 
-          <ButtonLink href="/404" appearance="primary-action-button">
+          <ButtonLink href="/klachtenformulier-niet-ingelogd/stap1" appearance="primary-action-button">
             Doe een klacht zonder inloggen
             <IconChevronRight />
           </ButtonLink>
         </Article>
-        {/* After PR #450 <PreFooterNav/> should be placed here */}
+        <PreFooterNav></PreFooterNav>
       </PageContent>
       <ExampleFooter />
     </Page>
