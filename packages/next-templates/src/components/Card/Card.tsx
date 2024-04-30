@@ -7,7 +7,7 @@ export const Card = () => (
   <section className="example-section">
     <div className="example-card-group">
       <div className="example-card">
-        <Paragraph>Vraag aan de gemeente</Paragraph>
+        <Paragraph className="example-card-title">Vraag aan de gemeente</Paragraph>
         <LinkList links={[{ href: './mijn-omgeving/mijn-zaken', children: 'Bekijk zaak' }]} />
       </div>
     </div>
