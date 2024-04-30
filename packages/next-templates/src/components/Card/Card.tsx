@@ -1,10 +1,7 @@
 'use client';
 
 import { Heading2, Paragraph, LinkList } from '@utrecht/component-library-react';
-import IconChevronRight from '../../app/styling/assets/chevronRight.svg';
-// import clsx from 'clsx';
-// import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
-// import { UtrechtIcon } from '@utrecht/web-component-library-react';
+
 import '././card.css';
 
 export const Card = () => (
