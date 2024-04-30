@@ -102,7 +102,7 @@ export default function home() {
             <IconChevronRight />
           </ButtonLink>
         </Article>
-        <PreFooterNav></PreFooterNav>
+        <PreFooterNav />
       </PageContent>
       <ExampleFooter />
     </Page>
