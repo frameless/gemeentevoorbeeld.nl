@@ -75,7 +75,7 @@ export default function Home() {
             <div className="voorbeeld-sidenav-layout">
               <Sidenav>
                 <SidenavList>
-                  <SidenavItem>
+                  <SidenavItem className="voorbeeld-sidenav-spacing">
                     <SidenavLink current href="#">
                       <IconLayoutGrid />
                       Overzicht
@@ -88,7 +88,7 @@ export default function Home() {
                       Berichten
                     </SidenavLink>
                   </SidenavItem>
-                  <SidenavItem>
+                  <SidenavItem className="voorbeeld-sidenav-spacing">
                     <SidenavLink href="#">
                       <IconArchive />
                       Mijn zaken
@@ -116,7 +116,7 @@ export default function Home() {
                       Parkeren
                     </SidenavLink>
                   </SidenavItem>
-                  <SidenavItem>
+                  <SidenavItem className="voorbeeld-sidenav-spacing">
                     <SidenavLink href="#">
                       <IconBuildingCommunity />
                       Erfpacht
