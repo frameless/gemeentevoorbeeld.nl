@@ -12,10 +12,9 @@
 .example-card {
   border: var(--example-card-border-width) solid var(--example-card-border-color);
   flex: 1 1 calc(50% - 64px);
-  padding-block-end: calc(2rem - var(--example-card-border-width));
-  padding-block-start: calc(1.5rem - var(--example-card-border-width));
-  padding-inline-end: calc(1.5rem - var(--example-card-border-width));
-  padding-inline-start: calc(1.5rem - var(--example-card-border-width));
+  padding-block-end: calc(2rem - var(--voorbeeld-space-block-ant));
+  padding-block-start: calc(1.5rem - var(--voorbeeld-space-block-ant));
+  padding-inline-start: calc(1.5rem - var(--voorbeeld-space-inline-ant));
 
   border-radius: var(--voorbeeld-border-radius-md);
   font-weight: var(--voorbeeld-typography-font-weight-bold);
