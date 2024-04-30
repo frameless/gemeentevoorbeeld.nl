@@ -25,7 +25,6 @@ import {
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { FormNav } from '@/components/FormNav/FormNav';
-import { PreFooterNav } from '@/components/PreFooterNav/PreFooterNav';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { IconChevronUp, IconX, IconArrowLeft, IconChevronRight } from '@tabler/icons-react';
 
