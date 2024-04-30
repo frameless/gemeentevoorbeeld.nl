@@ -17,5 +17,9 @@
   padding-inline-start: calc(1.5rem - var(--voorbeeld-space-inline-ant));
 
   border-radius: var(--voorbeeld-border-radius-md);
+}
+
+.example-card-title {
+  font-size: var(--voorbeeld-typography-font-size-lg);
   font-weight: var(--voorbeeld-typography-font-weight-bold);
 }
