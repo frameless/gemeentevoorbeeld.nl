@@ -20,6 +20,17 @@ import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 // import { HeaderIngelogd } from '@/components/ExampleHeader/HeaderIngelogd/HeaderIngelogd';
 
+import {
+  IconCurrencyEuro,
+  IconLayoutGrid,
+  IconInbox,
+  IconArchive,
+  IconHome,
+  IconParking,
+  IconBuildingCommunity,
+  IconUser,
+} from '@tabler/icons-react';
+
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 
@@ -64,31 +75,21 @@ export default function Home() {
                 <SidenavList>
                   <SidenavItem>
                     <SidenavLink current href="#">
+                      <IconLayoutGrid />
                       Overzicht
                     </SidenavLink>
                   </SidenavItem>
                   <SidenavItem>
-                    <SidenavLink href="#">Berichten</SidenavLink>
+                    <SidenavLink href="#">
+                      <IconInbox />
+                      Berichten
+                    </SidenavLink>
                   </SidenavItem>
                   <SidenavItem>
-                    <SidenavLink href="#">Mijn zaken</SidenavLink>
-                  </SidenavItem>
-                </SidenavList>
-              </Sidenav>
-
-              <Sidenav>
-                <SidenavList>
-                  <SidenavItem>
-                    <SidenavLink href="#">Belastingzaken</SidenavLink>
-                  </SidenavItem>
-                  <SidenavItem>
-                    <SidenavLink href="#">WOZ</SidenavLink>
-                  </SidenavItem>
-                  <SidenavItem>
-                    <SidenavLink href="#">Parkeren</SidenavLink>
-                  </SidenavItem>
-                  <SidenavItem>
-                    <SidenavLink href="#">Erfpacht</SidenavLink>
+                    <SidenavLink href="#">
+                      <IconArchive />
+                      Mijn zaken
+                    </SidenavLink>
                   </SidenavItem>
                 </SidenavList>
               </Sidenav>
@@ -96,7 +97,38 @@ export default function Home() {
               <Sidenav>
                 <SidenavList>
                   <SidenavItem>
-                    <SidenavLink href="#">Account</SidenavLink>
+                    <SidenavLink href="#">
+                      <IconCurrencyEuro />
+                      Belastingzaken
+                    </SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="#">
+                      <IconHome /> WOZ
+                    </SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="#">
+                      <IconParking />
+                      Parkeren
+                    </SidenavLink>
+                  </SidenavItem>
+                  <SidenavItem>
+                    <SidenavLink href="#">
+                      <IconBuildingCommunity />
+                      Erfpacht
+                    </SidenavLink>
+                  </SidenavItem>
+                </SidenavList>
+              </Sidenav>
+
+              <Sidenav>
+                <SidenavList>
+                  <SidenavItem>
+                    <SidenavLink href="#">
+                      <IconUser />
+                      Account
+                    </SidenavLink>
                   </SidenavItem>
                 </SidenavList>
               </Sidenav>
