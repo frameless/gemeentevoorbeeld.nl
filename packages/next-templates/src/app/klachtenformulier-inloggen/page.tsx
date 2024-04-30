@@ -23,6 +23,7 @@ import { IconChevronRight } from '@tabler/icons-react';
 
 import '@utrecht/design-tokens/dist/index.css';
 import '@/app/styling/css/detail-page.css';
+import '@/app/styling/css/productpagina-klachtenformulier.css';
 
 import { useEffect } from 'react';
 
@@ -41,8 +42,7 @@ export default function home() {
       <ExampleHeader />
       <ExampleNavigation />
 
-      {/* TODO: change /404 to correct links */}
-      <BreadcrumbNav label="Kruimelpad" className="breadcrumb-nav">
+      <BreadcrumbNav label="Kruimelpad" className="voorbeeld-breadcrumb-nav">
         <BreadcrumbNavLink href="/" index={0} rel="home">
           Home
         </BreadcrumbNavLink>
