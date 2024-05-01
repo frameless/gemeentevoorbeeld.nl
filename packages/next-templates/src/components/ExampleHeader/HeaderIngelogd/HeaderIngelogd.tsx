@@ -3,14 +3,9 @@
 import { Button, Link, PageHeader, Textbox } from '@utrecht/component-library-react';
 import { PopOverButton } from '../../PopOver/PopOverButton';
 import { PopOverDialog } from '../../PopOver/PopOverDialog';
-import Search from '../app/styling/assets/searchbar-icon.svg';
-import Xbold from '../app/styling/assets/x-bold.svg';
-import User from '../app/styling/assets/user-icon.svg';
+
 import React, { HTMLAttributes } from 'react';
 import { PageHeaderLogo } from '../../PageHeaderLogo';
-import '@utrecht/component-library-css';
-import './header.css';
-import './header.scss';
 
 import { IconSearch, IconUser } from '@tabler/icons-react';
 
