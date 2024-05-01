@@ -76,6 +76,11 @@
   display: none;
 }
 
+.example--header-search {
+  /* padding-inline: var(voorbeeld-space-inline-snail); */
+  min-inline-size: var(--utrecht-button-min-inline-size, 0px);
+}
+
 .example--header-popover-menu {
   --utrecht-backdrop-opacity: 0.5%;
 
