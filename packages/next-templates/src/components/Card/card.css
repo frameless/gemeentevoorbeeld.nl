@@ -17,6 +17,7 @@
   padding-inline-start: calc(1.5rem - var(--voorbeeld-space-inline-ant));
 
   border-radius: var(--voorbeeld-border-radius-md);
+  margin-bottom: var(--voorbeeld-space-block-rabbit);
 }
 
 .example-card-title {
