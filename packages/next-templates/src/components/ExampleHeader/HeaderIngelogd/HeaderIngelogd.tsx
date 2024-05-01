@@ -12,6 +12,8 @@ import '@utrecht/component-library-css';
 import './header.css';
 import './header.scss';
 
+import { IconSearch, IconUser } from '@tabler/icons-react';
+
 interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {
   search?: boolean;
 }
@@ -40,17 +42,17 @@ export const HeaderIngelogd = ({ search }: ExampleHeaderProps) => (
             Contact
           </Link>
           <Link className="example--header-links" href="/mijn-omgeving/">
-            <User className="example--header-user-icon" /> Mijn omgeving
+            <IconUser className="example--header-user-icon" /> Mijn omgeving
           </Link>
         </div>
         {search && (
           <div className="example--search-box">
             <Textbox className="example--header-text-box" placeholder="Bijvoorbeeld zwembad of grofvuil" />
             <Button className="example--header-search-secondary-button" appearance="secondary-action-button">
-              <Search /> Zoeken
+              <IconSearch /> Zoeken
             </Button>
             <Button className="example--header-search-subtle-button" appearance="subtle-button">
-              <Search /> Zoeken
+              <IconSearch /> Zoeken
             </Button>
           </div>
         )}
@@ -69,8 +71,8 @@ export const HeaderIngelogd = ({ search }: ExampleHeaderProps) => (
             popoverTarget="popovermenu"
             popoverTargetAction="hide"
           >
-            <Xbold className="example--header-xlogo" />
-            Sluiten
+            {/* <UserXbold className="example--header-xlogo" />
+            Sluiten */}
           </PopOverButton>
         </div>
         <div className="example--header-popover-container-links">
@@ -92,7 +94,7 @@ export const HeaderIngelogd = ({ search }: ExampleHeaderProps) => (
             Contact
           </Link>
           <Link href="#" className="example--header-links">
-            <User className="example--header-user-icon" /> Mijn omgeving
+            <IconUser className="example--header-user-icon" /> Mijn omgeving
           </Link>
         </div>
       </PopOverDialog>
