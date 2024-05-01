@@ -55,7 +55,7 @@ export default function Home() {
       <Page>
         {/* <ExampleHeader /> */}
         <HeaderIngelogd />
-        <ExampleNavigation />
+        {/* <ExampleNavigation /> */}
 
         <PageContent>
           <BreadcrumbNav label="Kruimelpad">
