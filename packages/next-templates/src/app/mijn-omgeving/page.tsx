@@ -16,11 +16,11 @@ import {
 } from '@utrecht/component-library-react';
 import { Sidenav, SidenavItem, SidenavLink, SidenavList } from '@gemeente-denhaag/sidenav';
 
-import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+// import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
+import { HeaderIngelogd } from '@/components/ExampleHeader/HeaderIngelogd/HeaderIngelogd';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
 import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { Card } from '@/components/Card/Card';
-// import { HeaderIngelogd } from '@/components/ExampleHeader/HeaderIngelogd/HeaderIngelogd';
 
 import {
   IconCurrencyEuro,
@@ -54,8 +54,8 @@ export default function Home() {
   return (
     <Document>
       <Page>
-        <ExampleHeader />
-        {/* <HeaderIngelogd /> */}
+        {/* <ExampleHeader /> */}
+        <HeaderIngelogd />
         <ExampleNavigation />
 
         <PageContent>
@@ -149,7 +149,9 @@ export default function Home() {
               <Heading2>Mijn zaken</Heading2>
               <Card />
 
-              <Link href="./mijn-omgeving/mijn-zaken">Bekijk alle zaken</Link>
+              <Link className="example--back-link" href="./mijn-omgeving/mijn-zaken">
+                Bekijk alle zaken
+              </Link>
             </div>
           </Article>
         </PageContent>
