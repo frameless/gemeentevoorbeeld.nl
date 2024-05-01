@@ -4,10 +4,11 @@ import { Button, Link, PageHeader, Textbox } from '@utrecht/component-library-re
 import { PopOverButton } from '../../PopOver/PopOverButton';
 import { PopOverDialog } from '../../PopOver/PopOverDialog';
 
+import { FormFieldTextbox } from '@/components/FormFieldTextbox';
 import React, { HTMLAttributes } from 'react';
 import { PageHeaderLogo } from '../../PageHeaderLogo';
 import '@/components/ExampleHeader/HeaderIngelogd/HeaderIngelogd.css';
-import { IconSearch, IconUser } from '@tabler/icons-react';
+import { IconSearch, IconUser, IconChevronDown } from '@tabler/icons-react';
 
 interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {
   search?: boolean;
@@ -37,8 +38,13 @@ export const HeaderIngelogd = ({ search }: ExampleHeaderProps) => (
             Contact
           </Link>
           <Link className="example--header-links" href="/mijn-omgeving/">
-            <IconUser className="example--header-user-icon" /> Mijn omgeving
+            J. van Drouwen <IconChevronDown />
           </Link>
+
+          {/* Bijvoorbeeld zwembad of grofvuil</FormFieldTextbox> */}
+
+          <Textbox className="example--header-text-box" />
+          <Button className="">Zoeken</Button>
         </div>
         {search && (
           <div className="example--search-box">
@@ -84,6 +90,7 @@ export const HeaderIngelogd = ({ search }: ExampleHeaderProps) => (
             Portfolio
           </Link>
         </div>
+
         <div className="example--header-user">
           <Link href="#" className="example--header-links">
             Contact
