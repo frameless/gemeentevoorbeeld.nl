@@ -15,10 +15,8 @@ import {
 } from '@utrecht/component-library-react';
 import { Sidenav, SidenavItem, SidenavLink, SidenavList } from '@gemeente-denhaag/sidenav';
 
-// import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
 import { HeaderIngelogd } from '@/components/ExampleHeader/HeaderIngelogd/HeaderIngelogd';
 import { ExampleFooter } from '@/components/ExampleFooter/ExampleFooter';
-import { ExampleNavigation } from '@/components/ExampleNavigation/ExampleNavigation';
 import { Card } from '@/components/Card/Card';
 
 import {
@@ -53,10 +51,7 @@ export default function Home() {
   return (
     <Document>
       <Page>
-        {/* <ExampleHeader /> */}
         <HeaderIngelogd />
-        <ExampleNavigation />
-
         <PageContent>
           <BreadcrumbNav label="Kruimelpad">
             <BreadcrumbNavLink href="" index={0} rel="home">
