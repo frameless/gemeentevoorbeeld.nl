@@ -16,6 +16,16 @@
   max-inline-size: var(--example-page-header-content-max-inline-size);
 }
 
+.example--header-home-page {
+  align-items: center;
+  border-bottom: solid 56px var(--voorbeeld-decoration-color);
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 1em;
+  padding-block-end: 1em;
+  padding-inline-start: 2em;
+}
+
 .example--logo {
   text-align: center;
 }
