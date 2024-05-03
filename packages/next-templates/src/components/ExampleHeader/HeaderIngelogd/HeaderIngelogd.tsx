@@ -41,7 +41,10 @@ export const HeaderIngelogd = ({ search }: ExampleHeaderProps) => (
           </Link>
 
           <Textbox className="example--header-text-box" />
-          <Button className="">Zoeken</Button>
+          <Button appearance="secondary-action-button">
+            <IconSearch />
+            Zoeken
+          </Button>
         </div>
         {search && (
           <div className="example--search-box">
