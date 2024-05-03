@@ -71,10 +71,7 @@ export const HeaderIngelogd = ({ search }: ExampleHeaderProps) => (
             className="example--popover-close"
             popoverTarget="popovermenu"
             popoverTargetAction="hide"
-          >
-            {/* <UserXbold className="example--header-xlogo" />
-            Sluiten */}
-          </PopOverButton>
+          ></PopOverButton>
         </div>
         <div className="example--header-popover-container-links">
           <Link href="#" className="example--header-links">
