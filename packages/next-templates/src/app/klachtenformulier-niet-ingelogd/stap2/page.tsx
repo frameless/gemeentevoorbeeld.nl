@@ -14,10 +14,12 @@ import {
   Heading1,
   Heading2,
   Heading3,
+  HeadingGroup,
   Link,
   Page,
   PageContent,
   Paragraph,
+  PreHeading,
   RadioButton,
   Textbox,
 } from '@utrecht/component-library-react';
@@ -61,10 +63,12 @@ export default function home() {
         <Article id="main" className="voorbeeld-article-space voorbeeld-main-layout">
           <div>
             <Heading1>Klacht over de gemeente doorgeven </Heading1>
-            <Paragraph lead>Stap 2 van 4</Paragraph>
-            <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
 
-            <Heading2>Uw gegevens</Heading2>
+            <HeadingGroup className="voorbeeld-headinggroup">
+              <PreHeading>{stepProgressLabel}</PreHeading>
+              <Heading2>{stepLabel}</Heading2>
+              <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
+            </HeadingGroup>
 
             <form>
               <Fieldset>

@@ -13,6 +13,12 @@
   color: var(--voorbeeld-decoration-color);
 }
 
+.voorbeeld-headinggroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--voorbeeld-space-block-rabbit);
+}
+
 /* DETAILS */
 details {
   color: var(--utrecht-paragraph-color);

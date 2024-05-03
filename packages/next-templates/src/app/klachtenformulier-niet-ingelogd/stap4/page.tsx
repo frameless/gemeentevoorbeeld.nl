@@ -13,12 +13,14 @@ import {
   Heading1,
   Heading2,
   Heading3,
+  HeadingGroup,
   Link,
   LinkButton,
   MultilineData,
   Page,
   PageContent,
   Paragraph,
+  PreHeading,
   PreserveData,
   //   UrlData,
 } from '@utrecht/component-library-react';
@@ -63,10 +65,11 @@ export default function home() {
         <Article id="main" className="voorbeeld-article-space voorbeeld-main-layout">
           <div>
             <Heading1>Klacht over de gemeente doorgeven</Heading1>
-            <Paragraph lead>Stap 4 van 4</Paragraph>
-            <Paragraph>Vul de vakjes met een * altijd in. Anders kunt u niet verder.</Paragraph>
 
-            <Heading2>Overzicht ingevulde gegevens</Heading2>
+            <HeadingGroup className="voorbeeld-headinggroup">
+              <PreHeading>{stepProgressLabel}</PreHeading>
+              <Heading2>{stepLabel}</Heading2>
+            </HeadingGroup>
 
             <form>
               <Heading3>Uw klacht</Heading3>
