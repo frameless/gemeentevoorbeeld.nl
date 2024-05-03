@@ -4,7 +4,6 @@ import { Button, Link, PageHeader, Textbox } from '@utrecht/component-library-re
 import { PopOverButton } from '../../PopOver/PopOverButton';
 import { PopOverDialog } from '../../PopOver/PopOverDialog';
 
-import { FormFieldTextbox } from '@/components/FormFieldTextbox';
 import React, { HTMLAttributes } from 'react';
 import { PageHeaderLogo } from '../../PageHeaderLogo';
 import '@/components/ExampleHeader/HeaderIngelogd/HeaderIngelogd.css';
