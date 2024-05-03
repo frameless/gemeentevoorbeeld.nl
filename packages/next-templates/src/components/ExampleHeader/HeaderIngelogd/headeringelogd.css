@@ -55,7 +55,7 @@
 }
 
 .example--header-text-box {
-  margin-inline: 8px;
+  margin-inline: var(--voorbeeld-space-column-snail);
 }
 
 .example--header-burger-menu-button {
