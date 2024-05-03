@@ -7,33 +7,32 @@ import './formnav.css';
 export const FormNav = () => (
   <div>
     <Heading2>Voortgang</Heading2>
-    <Separator className="voorbeeld-separator"></Separator>
+    <Separator className="voorbeeld-separator" />
     <UnorderedList>
       <UnorderedListItem className="voorbeeld-form-nav__list-item">
-        {/* Current step (1/4) - Bulletpoint = dark */}
         <Link className="voorbeeld-form-nav__link" href="/klachtenformulier-niet-ingelogd/stap1">
-          Uw klacht {/* Current step (1/4) - Text = Bold */}
+          Uw klacht
         </Link>
       </UnorderedListItem>
-      <Separator></Separator>
+      <Separator />
       <UnorderedListItem className="voorbeeld-form-nav__list-item">
         <Link className="voorbeeld-form-nav__link" href="/klachtenformulier-niet-ingelogd/stap2">
           Uw gegevens
         </Link>
       </UnorderedListItem>
-      <Separator></Separator>
+      <Separator />
       <UnorderedListItem className="voorbeeld-form-nav__list-item">
         <Link className="voorbeeld-form-nav__link" href="/klachtenformulier-niet-ingelogd/stap3">
           Bijlage toevoegen
         </Link>
       </UnorderedListItem>
-      <Separator></Separator>
+      <Separator />
       <UnorderedListItem className="voorbeeld-form-nav__list-item">
         <Link className="voorbeeld-form-nav__link" href="/klachtenformulier-niet-ingelogd/stap4">
           Overzicht
         </Link>
       </UnorderedListItem>
-      <Separator></Separator>
+      <Separator />
     </UnorderedList>
   </div>
 );

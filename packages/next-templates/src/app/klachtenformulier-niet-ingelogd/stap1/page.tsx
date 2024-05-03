@@ -52,7 +52,8 @@ export default function home() {
       <PageContent className="voorbeeld-page-content-flex">
         <BreadcrumbNav className="voorbeeld-breadcrumb-nav" label="Kruimelpad">
           <BreadcrumbNavLink href="/productpagina-klachtenformulier">
-            <IconArrowLeft></IconArrowLeft>Terug
+            <IconArrowLeft />
+            Terug
           </BreadcrumbNavLink>
         </BreadcrumbNav>
 
@@ -187,14 +188,14 @@ export default function home() {
                 </ButtonLink>
 
                 <Link href="/404" className="voorbeeld-link-stoppen">
-                  <IconX></IconX>
+                  <IconX />
                   Stoppen met het formulier
                 </Link>
               </ButtonGroup>
             </form>
 
             <Link href="#">
-              <IconChevronUp></IconChevronUp>
+              <IconChevronUp />
               Naar boven
             </Link>
           </div>

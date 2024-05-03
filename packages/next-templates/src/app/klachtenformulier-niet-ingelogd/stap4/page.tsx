@@ -3,7 +3,6 @@
 import {
   Article,
   Button,
-  ButtonLink,
   ButtonGroup,
   BreadcrumbNav,
   BreadcrumbNavLink,
@@ -56,7 +55,8 @@ export default function home() {
       <PageContent className="voorbeeld-page-content-flex">
         <BreadcrumbNav className="voorbeeld-breadcrumb-nav" label="Kruimelpad">
           <BreadcrumbNavLink href="/klachtenformulier-niet-ingelogd/stap3">
-            <IconArrowLeft></IconArrowLeft>Vorige Stap
+            <IconArrowLeft />
+            Vorige Stap
           </BreadcrumbNavLink>
         </BreadcrumbNav>
 
@@ -140,14 +140,14 @@ export default function home() {
                 </Button>
 
                 <LinkButton>
-                  <IconX></IconX>
+                  <IconX />
                   Stoppen met formulier
                 </LinkButton>
               </ButtonGroup>
             </form>
 
             <Link href="#">
-              <IconChevronUp></IconChevronUp>
+              <IconChevronUp />
               Naar boven
             </Link>
           </div>

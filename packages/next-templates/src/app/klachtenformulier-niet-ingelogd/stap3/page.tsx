@@ -9,23 +9,17 @@ import {
   Fieldset,
   FieldsetLegend,
   FormField,
-  FormFieldDescription,
   FormLabel,
   Heading1,
   Heading2,
-  Heading3,
   Link,
   Page,
   PageContent,
   Paragraph,
   RadioButton,
-  Separator,
   SpotlightSection,
-  Textbox,
-  Textarea,
   UnorderedList,
   UnorderedListItem,
-  Button,
 } from '@utrecht/component-library-react';
 
 import { ExampleHeader } from '@/components/ExampleHeader/ExampleHeader';
@@ -60,7 +54,8 @@ export default function home() {
       <PageContent className="voorbeeld-page-content-flex">
         <BreadcrumbNav className="voorbeeld-breadcrumb-nav" label="Kruimelpad">
           <BreadcrumbNavLink href="/klachtenformulier-niet-ingelogd/stap2">
-            <IconArrowLeft></IconArrowLeft>Vorige Stap
+            <IconArrowLeft />
+            Vorige Stap
           </BreadcrumbNavLink>
         </BreadcrumbNav>
 
@@ -180,20 +175,20 @@ export default function home() {
                 </ButtonLink>
 
                 <Link href="/404" className="voorbeeld-link-stoppen">
-                  <IconX></IconX>
+                  <IconX />
                   Stoppen met het formulier
                 </Link>
               </ButtonGroup>
 
               <Link href="#">
-                <IconChevronUp></IconChevronUp>
+                <IconChevronUp />
                 Naar boven
               </Link>
             </form>
           </div>
 
           <div className="voorbeeld-formnav__stap3">
-            <FormNav></FormNav>
+            <FormNav />
           </div>
         </Article>
       </PageContent>
