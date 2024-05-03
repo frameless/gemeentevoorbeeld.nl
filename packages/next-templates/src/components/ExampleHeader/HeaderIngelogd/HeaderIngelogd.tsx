@@ -40,8 +40,6 @@ export const HeaderIngelogd = ({ search }: ExampleHeaderProps) => (
             J. van Drouwen <IconChevronDown />
           </Link>
 
-          {/* Bijvoorbeeld zwembad of grofvuil</FormFieldTextbox> */}
-
           <Textbox className="example--header-text-box" />
           <Button className="">Zoeken</Button>
         </div>
