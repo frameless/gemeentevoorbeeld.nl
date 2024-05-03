@@ -6,7 +6,7 @@ import { PopOverDialog } from '../../PopOver/PopOverDialog';
 
 import React, { HTMLAttributes } from 'react';
 import { PageHeaderLogo } from '../../PageHeaderLogo';
-import '@/components/ExampleHeader/HeaderIngelogd/HeaderIngelogd.css';
+import '@/components/ExampleHeader/HeaderIngelogd/headerIngelogd.css';
 import { IconSearch, IconUser, IconChevronDown } from '@tabler/icons-react';
 
 interface ExampleHeaderProps extends HTMLAttributes<HTMLDivElement> {
