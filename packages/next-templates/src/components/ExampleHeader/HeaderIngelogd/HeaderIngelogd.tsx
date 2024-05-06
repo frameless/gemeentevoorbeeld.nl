@@ -18,7 +18,7 @@ export const HeaderIngelogd = ({ search }: ExampleHeaderProps) => (
     <div className="example-page-header__content">
       <PopOverButton
         aria-label="collapse menu navigation"
-        className="example--header-burger-menu-button"
+        className="voorbeeld-header__burger-menu-button"
         popoverTarget="popovermenu"
       >
         <div className="example--header-burger-bar-container">
