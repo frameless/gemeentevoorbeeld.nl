@@ -275,6 +275,12 @@ importers:
       '@fontsource/source-serif-pro':
         specifier: 5.0.8
         version: 5.0.8
+      '@gemeente-denhaag/button':
+        specifier: 0.2.3-alpha.384
+        version: 0.2.3-alpha.384(react@18.2.0)
+      '@gemeente-denhaag/sidenav':
+        specifier: 0.1.0-alpha.205
+        version: 0.1.0-alpha.205(react@18.2.0)
       '@next/eslint-plugin-next':
         specifier: 13.5.6
         version: 13.5.6
@@ -8601,7 +8607,38 @@ snapshots:
 
   '@fontsource/source-serif-pro@5.0.8': {}
 
-  '@hookform/error-message@2.0.1': {}
+  /@gemeente-denhaag/button@0.2.3-alpha.384(react@18.2.0):
+    resolution: {integrity: sha512-2cUmrdrAIIc4wqnNK783BbZ/SJwzSDkUv042mOuxuRD+DoEk/qZPIeoJfqhBT3sgou/NELlE9d82qm6pPBcEEg==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      '@gemeente-denhaag/icons': 0.2.3-alpha.384(react@18.2.0)
+      react: 18.2.0
+    dev: true
+
+  /@gemeente-denhaag/icons@0.2.3-alpha.384(react@18.2.0):
+    resolution: {integrity: sha512-0jH/8pTOqs0pv1cxWRTp04UKEKN3DqTglwJHzNhhqkEyCqxwy1FZ5QPR3ShA9JJs+cAk+99WCoY7nfFIKrtPtA==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: true
+
+  /@gemeente-denhaag/sidenav@0.1.0-alpha.205(react@18.2.0):
+    resolution: {integrity: sha512-v+uwh6U176BjVvxll9cUGEDeemgx5o65dx9atyeNfhIoje6SgAonLoVJ/wN+pdnsk2h8atLxBpIMUxy1KWXG5w==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: true
+
+  /@hookform/error-message@2.0.1:
+    resolution: {integrity: sha512-U410sAr92xgxT1idlu9WWOVjndxLdgPUHEB8Schr27C9eh7/xUnITWpCMF93s+lGiG++D4JnbSnrb5A21AdSNg==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      react-hook-form: ^7.0.0
+    dev: false
 
   '@html-validate/stylish@4.1.0':
     dependencies:

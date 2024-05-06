@@ -1,0 +1,16 @@
+.voorbeeld-main-layout {
+  margin-inline: auto;
+  padding-inline: var(--voorbeeld-space-block-cat);
+  max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.2);
+  inline-size: 100%;
+}
+
+.voorbeeld-toptask-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--voorbeeld-space-column-elephant);
+}
+
+.voorbeeld-sidenav-spacing {
+  margin-bottom: var(--voorbeeld-space-row-rat);
+}
