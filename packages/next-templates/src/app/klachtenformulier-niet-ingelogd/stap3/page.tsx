@@ -94,20 +94,6 @@ export default function home() {
                   Voorbeeld Stad
                 </p>
               </details>
-              {/* optie: tot nu toe ingevulde klacht printen? */}
-              {/* aangeven dat gebruiker kan stoppen met dit formulier? */}
-              {/* buttonlink naar adresgegevens? */}
-              {/* deze melding aan het begin van het formulier */}
-              {/* eventueel adresgegevens hier al neerzetten? */}
-              {/* <Paragraph>
-                  Gemeente Voorbeeld
-                  <br />
-                  Klachtenbehandeling
-                  <br />
-                  Antwoordnummer 00000
-                  <br />
-                  Voorbeeld Stad
-                </Paragraph> */}
             </SpotlightSection>
             <form>
               <Fieldset role="radiogroup">
@@ -119,7 +105,7 @@ export default function home() {
                         name="bestand-meesturen"
                         id="ja-bestand-meesturen"
                         className="utrecht-form-field__input"
-                      ></RadioButton>
+                      />
                       Ja, ik wil een bestand meesturen
                     </FormLabel>
                   </Paragraph>
@@ -132,7 +118,7 @@ export default function home() {
                         name="bestand-meesturen"
                         id="nee-bestand-meesturen"
                         className="utrecht-form-field__input"
-                      ></RadioButton>
+                      />
                       Nee, geen bestand meesturen
                     </FormLabel>
                   </Paragraph>
@@ -155,17 +141,17 @@ export default function home() {
                   </>
                 }
                 status={<Paragraph>Geen bestand gekozen</Paragraph>}
-              ></FormFieldFile>
+              />
 
               <FieldsetLegend>
                 Ik wil na behandeling van mijn klacht meewerken aan een tevredenheidsonderzoek.  
               </FieldsetLegend>
               <div className="voorbeeld-radio-button">
-                <RadioButton></RadioButton>
+                <RadioButton />
                 <Paragraph>Ja, ik doe mee met een tevredenheidsonderzoek</Paragraph>
               </div>
               <div className="voorbeeld-radio-button">
-                <RadioButton></RadioButton>
+                <RadioButton />
                 <Paragraph>Nee, ik doe niet mee met een tevredenheidsonderzoek</Paragraph>
               </div>
 

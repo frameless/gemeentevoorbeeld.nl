@@ -75,11 +75,7 @@ export default function home() {
                 <FormField type="radio">
                   <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
                     <FormLabel htmlFor="publiekzaken" type="radio">
-                      <RadioButton
-                        name="afdeling"
-                        id="publiekzaken"
-                        className="utrecht-form-field__input"
-                      ></RadioButton>
+                      <RadioButton name="afdeling" id="publiekzaken" className="utrecht-form-field__input" />
                       Publiekzaken: bijvoorbeeld paspoort of trouwen of de wachttijd als u ons belt.
                     </FormLabel>
                   </Paragraph>
@@ -88,11 +84,7 @@ export default function home() {
                 <FormField type="radio">
                   <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
                     <FormLabel htmlFor="stadsbedrijven" type="radio">
-                      <RadioButton
-                        name="afdeling"
-                        id="stadsbedrijven"
-                        className="utrecht-form-field__input"
-                      ></RadioButton>
+                      <RadioButton name="afdeling" id="stadsbedrijven" className="utrecht-form-field__input" />
                       Stadsbedrijven: bijvoorbeeld ophalen afval, parken en bomen of sportplekken.
                     </FormLabel>
                   </Paragraph>
@@ -101,7 +93,7 @@ export default function home() {
                 <FormField type="radio">
                   <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
                     <FormLabel htmlFor="ruimte" type="radio">
-                      <RadioButton name="afdeling" id="ruimte" className="utrecht-form-field__input"></RadioButton>
+                      <RadioButton name="afdeling" id="ruimte" className="utrecht-form-field__input" />
                       Ruimte: bijvoorbeeld verkeer, bouwen, energie en klimaat of speelruimte.
                     </FormLabel>
                   </Paragraph>
@@ -110,11 +102,7 @@ export default function home() {
                 <FormField type="radio">
                   <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
                     <FormLabel htmlFor="werk-en-inkomen" type="radio">
-                      <RadioButton
-                        name="afdeling"
-                        id="werk-en-inkomen"
-                        className="utrecht-form-field__input"
-                      ></RadioButton>
+                      <RadioButton name="afdeling" id="werk-en-inkomen" className="utrecht-form-field__input" />
                       Werk en Inkomen: bijvoorbeeld bijstand, schulddienstverlening of Wmo.
                     </FormLabel>
                   </Paragraph>
@@ -127,7 +115,7 @@ export default function home() {
                         name="afdeling"
                         id="vergunning-toezicht-handhaving"
                         className="utrecht-form-field__input"
-                      ></RadioButton>
+                      />
                       Vergunningen, Toezicht en Handhaving: bijvoorbeeld handhavers (boa’s) parkeerboetes, of
                       vergunningen.
                     </FormLabel>
@@ -137,11 +125,7 @@ export default function home() {
                 <FormField type="radio">
                   <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
                     <FormLabel htmlFor="anders-ik-weet-het-niet" type="radio">
-                      <RadioButton
-                        name="afdeling"
-                        id="anders-ik-weet-het-niet"
-                        className="utrecht-form-field__input"
-                      ></RadioButton>
+                      <RadioButton name="afdeling" id="anders-ik-weet-het-niet" className="utrecht-form-field__input" />
                       Anders of ik weet het niet
                     </FormLabel>
                   </Paragraph>
@@ -152,33 +136,33 @@ export default function home() {
                 <FormLabel htmlFor="over-wie">Over wie gaat uw klacht?</FormLabel>
 
                 <FormFieldDescription>Bijvoorbeeld de naam van een medewerker of een afdeling.</FormFieldDescription>
-                <Textbox id="over-wie"></Textbox>
+                <Textbox id="over-wie" />
               </FormField>
 
               <FormField>
                 <FormLabel htmlFor="uw-klacht">Wat is uw klacht? *</FormLabel>
                 <FormFieldDescription>Beschrijf uw klacht in maximaal 140 karakters.</FormFieldDescription>
                 {/* Deze staat er in het ontwerp niet bij, hint voor gebruiker is prettig (check: 140?)*/}
-                <Textarea id="uw-klacht"></Textarea>
+                <Textarea id="uw-klacht" />
               </FormField>
 
               <FormField>
                 <FormLabel htmlFor="wanneer">Wanneer gebeurde dit? *</FormLabel>
                 <FormFieldDescription>Geef de datum(s) door waarover uw klacht gaat.</FormFieldDescription>
-                <Textarea id="wanneer"></Textarea>
+                <Textarea id="wanneer" />
               </FormField>
 
               <FormField>
                 <FormLabel htmlFor="hoe-laat">Hoe laat?</FormLabel>
                 <FormFieldDescription>Geef het tijdstip(en) door waarover uw klacht gaat.</FormFieldDescription>
-                <Textarea id="hoe-laat"></Textarea>
+                <Textarea id="hoe-laat" />
               </FormField>
 
               <FormField>
                 <FormLabel htmlFor="gewenste-oplossing">Wat wilt u dat wij doen om uw klacht op te lossen? *</FormLabel>
                 <FormFieldDescription>Beschrijf de gewenste oplossing in maximaal 140 karakters.</FormFieldDescription>
                 {/* Deze staat er in het ontwerp niet bij, hint voor gebruiker is prettig (check: 140?)*/}
-                <Textarea id="gewenste-oplossing"></Textarea>
+                <Textarea id="gewenste-oplossing" />
               </FormField>
 
               <ButtonGroup direction="column">
@@ -205,7 +189,7 @@ export default function home() {
           </div>
 
           <div className="voorbeeld-formnav__stap1">
-            <FormNav></FormNav>
+            <FormNav />
           </div>
         </Article>
       </PageContent>

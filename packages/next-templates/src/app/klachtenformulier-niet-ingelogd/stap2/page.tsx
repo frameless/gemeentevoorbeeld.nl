@@ -31,7 +31,6 @@ import { FormNav } from '@/components/FormNav/FormNav';
 import { IconChevronUp, IconChevronRight, IconX, IconArrowLeft } from '@tabler/icons-react';
 
 import { useEffect } from 'react';
-// import { SP } from 'next/dist/shared/lib/utils';
 
 import '@/app/styling/css/wmebv.css';
 import '@/app/styling/css/klachtenformulier-niet-ingelogd.css';
@@ -76,11 +75,7 @@ export default function home() {
                 <FormField type="radio">
                   <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
                     <FormLabel htmlFor="persoon" type="radio">
-                      <RadioButton
-                        name="persoon-of-bedrijf"
-                        id="persoon"
-                        className="utrecht-form-field__input"
-                      ></RadioButton>
+                      <RadioButton name="persoon-of-bedrijf" id="persoon" className="utrecht-form-field__input" />
                       Persoon
                     </FormLabel>
                   </Paragraph>
@@ -89,11 +84,7 @@ export default function home() {
                 <FormField type="radio">
                   <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
                     <FormLabel htmlFor="bedrijf" type="radio">
-                      <RadioButton
-                        name="persoon-of-bedrijf"
-                        id="bedrijf"
-                        className="utrecht-form-field__input"
-                      ></RadioButton>
+                      <RadioButton name="persoon-of-bedrijf" id="bedrijf" className="utrecht-form-field__input" />
                       Bedrijf
                     </FormLabel>
                   </Paragraph>
@@ -204,7 +195,7 @@ export default function home() {
           </div>
 
           <div className="voorbeeld-formnav__stap2">
-            <FormNav></FormNav>
+            <FormNav />
           </div>
         </Article>
       </PageContent>

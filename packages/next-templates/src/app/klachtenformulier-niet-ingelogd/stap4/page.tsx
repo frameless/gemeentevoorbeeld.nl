@@ -82,9 +82,7 @@ export default function home() {
               <DataList>
                 <DataListItem>
                   <DataListKey>De klacht omschrijving</DataListKey>
-                  <DataListValue>
-                    <MultilineData></MultilineData>
-                  </DataListValue>
+                  <DataListValue></DataListValue>
                 </DataListItem>
               </DataList>
               <Heading3>Uw gegevens</Heading3>
@@ -156,7 +154,7 @@ export default function home() {
           </div>
 
           <div className="voorbeeld-formnav__stap4">
-            <FormNav></FormNav>
+            <FormNav />
           </div>
         </Article>
       </PageContent>
