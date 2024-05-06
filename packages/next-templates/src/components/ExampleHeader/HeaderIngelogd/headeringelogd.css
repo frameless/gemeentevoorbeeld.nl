@@ -155,7 +155,7 @@
   }
 
   .example--header-popover-container-links .example--header-links {
-    font-weight: 700;
+    font-weight: var(--voorbeeld-typography-font-weight-bold);
     text-decoration: none;
   }
 
