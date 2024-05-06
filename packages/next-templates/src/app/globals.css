@@ -64,7 +64,7 @@ body {
   --voorbeeld-logo-color: var(--voorbeeld-color-gray-950);
   --utrecht-pre-heading-font-family: var(--voorbeeld-typography-font-family-secondary);
   --voorbeeld-page-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.6);
-
+  --utrecht-form-label-radio-font-weight: normal;
   --example-page-header-content-max-inline-size: calc(var(--utrecht-article-max-inline-size) * 1.5);
 
   --utrecht-action-submit-cursor: pointer;

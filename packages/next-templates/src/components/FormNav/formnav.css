@@ -1,0 +1,43 @@
+.voorbeeld-form-nav__list-item .voorbeeld-form-nav__link {
+  text-decoration: none;
+}
+
+.voorbeeld-form-nav__list-item::marker {
+  color: var(--voorbeeld-color-violet-300);
+}
+
+/* Stap 1 */
+.voorbeeld-formnav__stap1 .voorbeeld-form-nav__list-item:nth-child(1)::marker {
+  color: var(--voorbeeld-decoration-background-color);
+}
+
+.voorbeeld-formnav__stap1 .voorbeeld-form-nav__list-item:nth-child(1) {
+  font-weight: var(--voorbeeld-typography-font-weight-bold);
+}
+
+/* Stap 2 */
+.voorbeeld-formnav__stap2 .voorbeeld-form-nav__list-item:nth-of-type(2)::marker {
+  color: var(--voorbeeld-decoration-background-color);
+}
+
+.voorbeeld-formnav__stap2 .voorbeeld-form-nav__list-item:nth-of-type(2) {
+  font-weight: var(--voorbeeld-typography-font-weight-bold);
+}
+
+/* Stap 3 */
+.voorbeeld-formnav__stap3 .voorbeeld-form-nav__list-item:nth-of-type(3)::marker {
+  color: var(--voorbeeld-decoration-background-color);
+}
+
+.voorbeeld-formnav__stap3 .voorbeeld-form-nav__list-item:nth-of-type(3) {
+  font-weight: var(--voorbeeld-typography-font-weight-bold);
+}
+
+/* Stap 4 */
+.voorbeeld-formnav__stap4 .voorbeeld-form-nav__list-item:nth-of-type(4)::marker {
+  color: var(--voorbeeld-decoration-background-color);
+}
+
+.voorbeeld-formnav__stap4 .voorbeeld-form-nav__list-item:nth-of-type(4) {
+  font-weight: var(--voorbeeld-typography-font-weight-bold);
+}

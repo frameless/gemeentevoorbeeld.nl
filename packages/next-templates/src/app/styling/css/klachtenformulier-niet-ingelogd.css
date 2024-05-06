@@ -1,0 +1,65 @@
+/* LAYOUT */
+.voorbeeld-main-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+/* BREADCRUMB */
+.voorbeeld-breadcrumb-nav {
+  margin: var(--voorbeeld-space-block-rabbit);
+}
+
+.icon-chevron-right {
+  color: var(--voorbeeld-decoration-color);
+}
+
+.voorbeeld-headinggroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--voorbeeld-space-block-rabbit);
+}
+
+/* DETAILS */
+details {
+  color: var(--utrecht-paragraph-color);
+  cursor: pointer;
+}
+
+details p {
+  border: 1px solid var(--voorbeeld-color-gray-400);
+  padding: var(--voorbeeld-space-block-rat);
+}
+
+/* FORM */
+
+/* Radiobuttons */
+.voorbeeld-radio-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.voorbeeld-radio-button {
+  display: flex;
+  gap: var(--voorbeeld-space-block-beetle);
+}
+
+/* Stap 1 */
+
+/* Stap 2 */
+
+/* Stap 3 : Spotlight */
+.voorbeeld-paragraph-spotlight {
+  display: flex;
+  gap: var(--voorbeeld-space-block-beetle);
+}
+
+/* Stap 4 */
+
+/*  */
+.voorbeeld-link-stoppen {
+  display: flex;
+  margin-block-start: var(--voorbeeld-space-row-dog);
+}
+
+/* MEDIA QUERIES */
